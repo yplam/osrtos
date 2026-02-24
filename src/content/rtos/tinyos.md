@@ -6,7 +6,7 @@ codeUrl: https://github.com/tinyos/tinyos-main
 siteUrl: http://webs.cs.berkeley.edu/tos/
 date: '2019-02-12'
 lastUpdated: '2025-10-30'
-star: 1477
+star: 1475
 components: []
 libraries: []
 licenses:
@@ -18,7 +18,7 @@ summary: TinyOS is an open source, BSD-licensed operating system designed for lo
   wireless devices, such as those used in sensor networks, ubiquitous computing, personal
   area networks, smart buildings, and smart meters.
 createdAt: '2025-10-30'
-updatedAt: '2026-02-14'
+updatedAt: '2026-02-24'
 ---
 
 ### Features

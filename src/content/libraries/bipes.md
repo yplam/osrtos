@@ -8,7 +8,7 @@ summary: BIPES is a web-based, block-based visual programming platform designed 
   both online and offline workflows.
 codeUrl: https://github.com/BIPES/BIPES
 siteUrl: https://bipes.net.br/
-star: 178
+star: 179
 version: v0.2.3-beta
 lastUpdated: '2024-11-04'
 components:
@@ -39,7 +39,7 @@ platforms:
 - RP2040
 libraryType: Language
 createdAt: '2024-11-04'
-updatedAt: '2026-01-12'
+updatedAt: '2026-02-24'
 ---
 
 ### Features

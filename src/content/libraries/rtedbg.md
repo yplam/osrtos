@@ -7,14 +7,14 @@ summary: RTEdbg is a lightweight, minimally intrusive binary data logging and tr
   execution.
 slug: rtedbg-rtedbg
 codeUrl: https://github.com/RTEdbg/RTEdbg
-star: 116
+star: 121
 version: v1.02.00
-lastUpdated: '2026-01-02'
+lastUpdated: '2026-02-16'
 licenses:
 - MIT
 libraryType: Tracing
 createdAt: '2026-01-05'
-updatedAt: '2026-02-14'
+updatedAt: '2026-02-24'
 ---
 
 ### Features
