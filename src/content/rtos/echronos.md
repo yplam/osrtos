@@ -6,7 +6,7 @@ codeUrl: https://github.com/echronos/echronos
 siteUrl: https://github.com/echronos/echronos
 date: '2017-06-25'
 lastUpdated: '2019-06-12'
-star: 178
+star: 177
 components: []
 libraries: []
 licenses:
@@ -19,7 +19,7 @@ summary: The eChronos RTOS is a real-time operating system (RTOS) originally dev
   by NICTA and Breakaway Consulting Pty. Ltd. It is intended for tightly resource-constrained
   devices without memory protection.
 createdAt: '2019-06-12'
-updatedAt: '2026-02-14'
+updatedAt: '2026-03-01'
 ---
 
 ### Features
