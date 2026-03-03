@@ -10,7 +10,7 @@ codeUrl: https://github.com/embox/embox
 siteUrl: https://github.com/embox/embox
 star: 1545
 version: v0.7.0
-lastUpdated: '2026-02-27'
+lastUpdated: '2026-03-02'
 components:
 - Shell
 - Network
@@ -56,7 +56,7 @@ libraries:
 - Python
 - Lua
 createdAt: '2025-12-22'
-updatedAt: '2026-03-01'
+updatedAt: '2026-03-03'
 ---
 
 ### Features

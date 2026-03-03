@@ -6,7 +6,7 @@ codeUrl: https://github.com/SiliconLabs/uC-OS2
 siteUrl: https://doc.micrium.com/display/ucos/
 date: '2020-05-04'
 lastUpdated: '2023-01-05'
-star: 700
+star: 702
 components:
 - FileSystem
 - Network
@@ -32,7 +32,7 @@ platforms:
 summary: μC/OS-II is a portable, ROMable, scalable, preemptive, real-time deterministic
   multitasking kernel for microprocessors, microcontrollers and DSPs.
 createdAt: '2023-01-05'
-updatedAt: '2026-03-01'
+updatedAt: '2026-03-03'
 ---
 
 ### Features

@@ -7,7 +7,7 @@ summary: Frosted (Free POSIX OS for Tiny Embedded Devices) is a POSIX-compliant 
   executables.
 slug: frosted
 codeUrl: https://github.com/insane-adding-machines/frosted
-star: 221
+star: 222
 version: old_hal_lpc
 lastUpdated: '2019-06-14'
 components:
@@ -43,7 +43,7 @@ libraries:
 - FatFS
 - unicore-mx
 createdAt: '2025-12-29'
-updatedAt: '2025-12-29'
+updatedAt: '2026-03-03'
 ---
 
 ### Features
