@@ -6,12 +6,14 @@ interface Props {
   title?: string;
   description?: string;
   canonicalUrl?: string;
+  image?: string;
 }
 
 const {
   title = 'OSRTOS - Top Open Source Real-Time Operating Systems (RTOS)',
   description = 'List of open source real-time operating systems. Dive deep into features, comparisons, and use-cases to choose the perfect real-time operating system for your project. Stay updated with the latest in the RTOS world.',
-  canonicalUrl
+  canonicalUrl,
+  image
 } = Astro.props;
 
 const canonicalURL = canonicalUrl || new URL(Astro.url.pathname, Astro.site).href;
@@ -28,6 +30,13 @@ const canonicalURL = canonicalUrl || new URL(Astro.url.pathname, Astro.site).hre
   <title>{title}</title>
   <link rel="sitemap" href="/sitemap-index.xml" />
   <link rel="canonical" href={canonicalURL} />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:type" content="website" />
+  {image && <meta property="og:image" content={new URL(image, Astro.site).href} />}
 
   <!-- Initialize theme before render to prevent flash -->
   <script is:inline>

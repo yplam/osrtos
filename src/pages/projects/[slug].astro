@@ -27,7 +27,7 @@ const libraryEntries = await Promise.all(
 ).then(entries => entries.filter((l): l is NonNullable<typeof l> => !!l));
 ---
 
-<Layout title={`${entry.data.title} - Open Source Embedded Project`} description={entry.data.summary}>
+<Layout title={`${entry.data.title} - Open Source Embedded Project`} description={entry.data.summary} image={entry.data.image}>
   <article class="max-w-full">
     <div class="breadcrumb mb-8">
       <div class="breadcrumb-path">
