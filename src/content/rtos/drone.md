@@ -6,7 +6,7 @@ codeUrl: https://github.com/drone-os/drone-core
 siteUrl: https://www.drone-os.com/
 date: '2020-02-25'
 lastUpdated: '2022-11-20'
-star: 493
+star: 494
 components: []
 libraries: []
 licenses:
@@ -17,7 +17,7 @@ platforms:
 summary: Drone is an Embedded Operating System for writing real-time applications
   in Rust.
 createdAt: '2022-11-20'
-updatedAt: '2026-02-24'
+updatedAt: '2026-03-08'
 ---
 
 ### Features
