@@ -19,7 +19,7 @@ topics:
 - stm32h7
 - threadx
 isShow: true
-image: /images/202512/H747-Test.webp
+image: /202512/H747-Test.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
 ---

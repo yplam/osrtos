@@ -32,7 +32,7 @@ topics:
 - webinterface
 - websockets
 isShow: true
-image: /images/202512/ui_complete.webp
+image: /202512/ui_complete.webp
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
 ---

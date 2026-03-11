@@ -6,7 +6,7 @@ summary: A comprehensive handheld OS-like application for the LilyGO T-Deck, lev
   for audio and brightness.
 codeUrl: https://github.com/0015/ESP32Berry
 isShow: true
-image: /images/202512/t-deck.webp
+image: /202512/t-deck.webp
 rtos: freertos
 libraries:
 - lvgl

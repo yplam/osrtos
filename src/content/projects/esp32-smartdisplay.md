@@ -6,7 +6,7 @@ summary: A specialized driver library for Sunton 'Cheap Yellow Display' (CYD) bo
   touch and peripheral control.
 codeUrl: https://github.com/rzeldent/esp32-smartdisplay
 isShow: true
-image: /images/202512/PXL_20231130_225143662.webp
+image: /202512/PXL_20231130_225143662.webp
 rtos: freertos
 libraries:
 - lvgl

@@ -23,7 +23,7 @@ topics:
 - spi
 - ssd1306
 isShow: true
-image: /images/202512/ThingPulse-ESP8266-Weather-Station.webp
+image: /202512/ThingPulse-ESP8266-Weather-Station.webp
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
 ---

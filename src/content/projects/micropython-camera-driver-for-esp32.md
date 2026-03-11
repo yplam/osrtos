@@ -19,7 +19,7 @@ topics:
 - m5camera
 - micropython
 isShow: true
-image: /images/202512/ai-thinker-esp32-cam.webp
+image: /202512/ai-thinker-esp32-cam.webp
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
 ---

@@ -25,7 +25,7 @@ topics:
 - motion-logger
 - sony-camera
 isShow: true
-image: /images/202512/flowshutter.webp
+image: /202512/flowshutter.webp
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
 ---

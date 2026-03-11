@@ -18,7 +18,7 @@ topics:
 - python
 - python3
 isShow: true
-image: /images/202512/micropy-gps.webp
+image: /202512/micropy-gps.webp
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
 ---

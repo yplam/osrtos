@@ -24,7 +24,7 @@ topics:
 - rs485
 - rtl8710bn
 isShow: true
-image: /images/202512/solis-esp8266-wiring.webp
+image: /202512/solis-esp8266-wiring.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
 ---

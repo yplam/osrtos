@@ -27,7 +27,7 @@ topics:
 - wifi-manager
 - wifimanager
 isShow: true
-image: /images/202512/esp-fs-webserver.webp
+image: /202512/esp-fs-webserver.webp
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
 ---

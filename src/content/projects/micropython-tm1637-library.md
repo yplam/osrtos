@@ -20,7 +20,7 @@ topics:
 - tm1637
 - wemos-d1-mini
 isShow: true
-image: /images/202512/tm1637.webp
+image: /202512/tm1637.webp
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
 ---

@@ -7,7 +7,7 @@ summary: ESP32 MPY-Jama is a cross-platform desktop IDE and management tool desi
   'Jama Funcs' for rapid testing of peripherals like sensors, LEDs, and displays.
 codeUrl: https://github.com/jczic/ESP32-MPY-Jama
 isShow: true
-image: /images/202512/screen-system.webp
+image: /202512/screen-system.webp
 rtos: ''
 libraries:
 - micropython

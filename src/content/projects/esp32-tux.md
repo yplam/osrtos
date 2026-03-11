@@ -7,7 +7,7 @@ summary: ESP32-TUX is a comprehensive Touch UX template for ESP32 and ESP32-S3 m
 codeUrl: https://github.com/sukesh-ak/ESP32-TUX
 siteUrl: https://tux.sukesh.me
 isShow: true
-image: /images/202512/tux-design.webp
+image: /202512/tux-design.webp
 rtos: freertos
 libraries:
 - lvgl

@@ -25,7 +25,7 @@ topics:
 - lua-rtos
 - rtos
 isShow: true
-image: /images/202512/lua-rtos-esp32.webp
+image: /202512/lua-rtos-esp32.webp
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
 ---

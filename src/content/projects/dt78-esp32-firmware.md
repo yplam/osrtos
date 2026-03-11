@@ -6,7 +6,7 @@ summary: A custom firmware and hardware redesign for the DT78 smartwatch, replac
   and weather data.
 codeUrl: https://github.com/fbiego/dt78-esp32-firmware
 isShow: true
-image: /images/202512/dt78-esp32-firmware.webp
+image: /202512/dt78-esp32-firmware.webp
 rtos: freertos
 libraries:
 - lvgl

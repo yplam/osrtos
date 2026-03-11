@@ -18,7 +18,7 @@ topics:
 - pentesting
 - python3
 isShow: true
-image: /images/202512/honeypots.webp
+image: /202512/honeypots.webp
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
 ---

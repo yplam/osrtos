@@ -22,7 +22,7 @@ topics:
 - stm32f401
 - usb-msc
 isShow: true
-image: /images/202512/gps-tracker.webp
+image: /202512/gps-tracker.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
 ---

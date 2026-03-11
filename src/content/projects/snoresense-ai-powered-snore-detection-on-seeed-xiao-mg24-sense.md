@@ -6,7 +6,7 @@ summary: SnoreSense is a TinyML application designed for the Seeed XIAO MG24 Sen
   low-power sleep monitoring solution.
 codeUrl: https://github.com/rjrishabh/Snore-detection-MG24
 isShow: true
-image: /images/202512/SnoreSense.webp
+image: /202512/SnoreSense.webp
 rtos: ''
 libraries:
 - tensorflow-micro

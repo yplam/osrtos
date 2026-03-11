@@ -26,7 +26,7 @@ topics:
 - tensorflow-micro
 - trill
 isShow: true
-image: /images/202512/Gesture-Detecting-Macro-Keyboard.webp
+image: /202512/Gesture-Detecting-Macro-Keyboard.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
 ---

@@ -23,7 +23,7 @@ topics:
 - raspberry-pi-pico
 - synthesiser
 isShow: true
-image: /images/202512/europi.webp
+image: /202512/europi.webp
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
 ---

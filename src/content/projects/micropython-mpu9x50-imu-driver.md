@@ -20,7 +20,7 @@ topics:
 - mpu9250
 - sensor
 isShow: true
-image: /images/202512/9DoF_IMU_Breakout.webp
+image: /202512/9DoF_IMU_Breakout.webp
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
 ---

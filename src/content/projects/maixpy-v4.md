@@ -22,7 +22,7 @@ topics:
 - maixpy
 - monitor
 isShow: true
-image: /images/202512/maixpy.webp
+image: /202512/maixpy.webp
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
 ---

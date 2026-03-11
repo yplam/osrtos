@@ -29,7 +29,7 @@ topics:
 - nfc-reader
 - stm32
 isShow: true
-image: /images/202512/HydraFW_Default_PinAssignment.webp
+image: /202512/HydraFW_Default_PinAssignment.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
 ---

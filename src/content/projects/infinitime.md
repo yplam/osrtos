@@ -26,7 +26,7 @@ topics:
 - pinetime
 - smartwatch
 isShow: true
-image: /images/202512/watchface_collage.webp
+image: /202512/watchface_collage.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
 ---

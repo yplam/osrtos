@@ -27,7 +27,7 @@ topics:
 - samd51
 - stm32
 isShow: true
-image: /images/202512/12640-01a.webp
+image: /202512/12640-01a.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
 ---

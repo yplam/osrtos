@@ -15,7 +15,7 @@ topics:
 - arduino
 - micropython
 isShow: true
-image: /images/202512/Arduino-Lab4MPy-screenshot.webp
+image: /202512/Arduino-Lab4MPy-screenshot.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
 ---
