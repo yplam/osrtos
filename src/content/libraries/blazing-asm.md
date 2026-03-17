@@ -6,13 +6,13 @@ summary: Blazing ASM is a lightweight, C++20 header-only assembler library desig
   making it particularly suitable for shellcode development and low-level system programming.
 slug: blazing-asm
 codeUrl: https://github.com/0x1c1101/blazing_asm
-star: 141
+star: 142
 lastUpdated: '2025-08-13'
 licenses:
 - GPL-3.0
 libraryType: Language
 createdAt: '2026-01-13'
-updatedAt: '2026-03-01'
+updatedAt: '2026-03-17'
 ---
 
 ### Features

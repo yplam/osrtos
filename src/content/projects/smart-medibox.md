@@ -26,7 +26,8 @@ topics:
 - nodered
 - smart
 - smart-medibox
-isShow: false
+isShow: true
+image: /202603/medibox.webp
 createdAt: '2026-03-15'
 updatedAt: '2026-03-15'
 ---

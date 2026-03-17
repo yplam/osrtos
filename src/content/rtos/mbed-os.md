@@ -7,7 +7,7 @@ summary: Arm Mbed OS is an open-source real-time operating system specifically d
   and extensive connectivity stacks for wireless and wired networking.
 codeUrl: https://github.com/ARMmbed/mbed-os
 siteUrl: https://www.mbed.com/
-star: 4835
+star: 4836
 version: mbed-os-6.17.0
 lastUpdated: '2024-10-08'
 components:
@@ -56,7 +56,7 @@ libraries:
 - Cordio
 - LittleFS
 createdAt: '2024-10-08'
-updatedAt: '2026-03-08'
+updatedAt: '2026-03-17'
 ---
 
 ### Features

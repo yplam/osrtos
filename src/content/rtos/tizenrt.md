@@ -11,7 +11,7 @@ codeUrl: https://github.com/Samsung/TizenRT
 siteUrl: https://github.com/Samsung/TizenRT
 star: 643
 version: 3.0_GBM
-lastUpdated: '2026-03-06'
+lastUpdated: '2026-03-11'
 components:
 - FileSystem
 - Shell
@@ -53,7 +53,7 @@ libraries:
 - Protobuf
 - TinyAlsa
 createdAt: '2025-12-24'
-updatedAt: '2026-03-08'
+updatedAt: '2026-03-17'
 ---
 
 ### Features

@@ -7,7 +7,7 @@ summary: TobudOS (formerly TencentOS Tiny) is a highly tailorable, open-source r
   management, and integrated connectivity stacks for seamless cloud integration.
 codeUrl: https://github.com/Tencent/TencentOS-tiny
 siteUrl: https://cloud.tencent.com/product/tos-tiny
-star: 5968
+star: 5966
 version: v2.5.0
 lastUpdated: '2024-02-02'
 components:
@@ -26,7 +26,7 @@ platforms:
 - ARM Cortex-M
 - STM32
 createdAt: '2024-02-02'
-updatedAt: '2026-03-08'
+updatedAt: '2026-03-17'
 ---
 
 ### Features
