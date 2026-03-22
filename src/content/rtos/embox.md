@@ -8,9 +8,9 @@ summary: Embox is a highly modular and configurable real-time operating system d
 slug: embox
 codeUrl: https://github.com/embox/embox
 siteUrl: https://github.com/embox/embox
-star: 1549
+star: 1554
 version: v0.7.0
-lastUpdated: '2026-03-16'
+lastUpdated: '2026-03-21'
 components:
 - Shell
 - Network
@@ -56,7 +56,7 @@ libraries:
 - Python
 - Lua
 createdAt: '2025-12-22'
-updatedAt: '2026-03-17'
+updatedAt: '2026-03-22'
 ---
 
 ### Features

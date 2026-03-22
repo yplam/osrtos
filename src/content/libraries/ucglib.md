@@ -8,7 +8,7 @@ summary: Ucglib is a high-performance color graphics library designed for microc
   resource-constrained environments like Arduino.
 codeUrl: https://github.com/olikraus/ucglib
 siteUrl: https://github.com/olikraus/ucglib
-star: 288
+star: 290
 version: v1.00
 lastUpdated: '2020-01-22'
 components:
@@ -24,7 +24,7 @@ licenses:
 - BSD 2-Clause
 libraryType: Graphics
 createdAt: '2020-01-22'
-updatedAt: '2026-02-24'
+updatedAt: '2026-03-22'
 ---
 
 ### Features
