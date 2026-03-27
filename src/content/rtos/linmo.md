@@ -6,7 +6,7 @@ summary: Linmo is a lightweight, preemptive multi-tasking RTOS kernel designed a
   RISC-V architecture and QEMU emulation.
 slug: sysprog21-linmo
 codeUrl: https://github.com/sysprog21/linmo
-star: 109
+star: 110
 lastUpdated: '2026-02-04'
 components:
 - Scheduler
@@ -19,7 +19,7 @@ platforms:
 licenses:
 - MIT
 createdAt: '2026-01-28'
-updatedAt: '2026-03-17'
+updatedAt: '2026-03-27'
 ---
 
 ### Features

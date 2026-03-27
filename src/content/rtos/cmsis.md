@@ -6,7 +6,7 @@ codeUrl: https://github.com/ARM-software/CMSIS_5
 siteUrl: https://github.com/ARM-software/CMSIS_5
 date: '2023-08-20'
 lastUpdated: '2024-09-03'
-star: 1582
+star: 1583
 components: []
 libraries: []
 licenses:
@@ -20,7 +20,7 @@ summary: CMSIS is a set of tools, APIs, frameworks, and workflows designed to si
   entry-level Arm Cortex-A based processors. CMSIS aims to provide a consistent approach
   to interface with peripherals, real-time operating systems, and middleware components.
 createdAt: '2024-09-03'
-updatedAt: '2026-03-22'
+updatedAt: '2026-03-27'
 ---
 
 ### Features

@@ -7,9 +7,9 @@ summary: seL4 is a high-assurance, high-performance microkernel that is the firs
 slug: sel4
 codeUrl: https://github.com/seL4/seL4
 siteUrl: http://sel4.systems/
-star: 5374
+star: 5385
 version: 14.0.0
-lastUpdated: '2026-03-19'
+lastUpdated: '2025-08-15'
 components:
 - Scheduler
 - Memory Management
@@ -36,7 +36,7 @@ licenses:
 libraries:
 - libsel4
 createdAt: '2025-12-14'
-updatedAt: '2026-03-22'
+updatedAt: '2026-03-27'
 ---
 
 ### Features

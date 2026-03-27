@@ -8,9 +8,9 @@ summary: littlefs is a fail-safe filesystem specifically designed for microcontr
   strictly bounded memory footprint.
 codeUrl: https://github.com/geky/littlefs
 siteUrl: https://github.com/geky/littlefs
-star: 6508
-version: v2.11.2
-lastUpdated: '2025-09-29'
+star: 6528
+version: v2.11.3
+lastUpdated: '2026-03-24'
 components:
 - FileSystem
 - Storage
@@ -24,7 +24,7 @@ licenses:
 - BSD 3-Clause
 libraryType: FileSystem
 createdAt: '2025-09-29'
-updatedAt: '2026-03-22'
+updatedAt: '2026-03-27'
 ---
 
 ### Features
