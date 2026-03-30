@@ -8,7 +8,7 @@ summary: EasyFlash is an open-source, lightweight embedded flash memory library 
   reliable data persistence without a full file system.
 codeUrl: https://github.com/armink/EasyFlash
 siteUrl: https://github.com/armink/EasyFlash
-star: 2286
+star: 2285
 version: 4.1.0
 lastUpdated: '2025-03-14'
 components:

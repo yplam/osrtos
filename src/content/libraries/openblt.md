@@ -10,7 +10,7 @@ codeUrl: https://github.com/feaser/openblt
 siteUrl: https://www.feaser.com
 star: 872
 version: openblt_v012101
-lastUpdated: '2026-03-23'
+lastUpdated: '2026-03-26'
 components:
 - Bootloader
 - GUI

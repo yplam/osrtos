@@ -8,7 +8,7 @@ summary: EasyLogger is an ultra-lightweight, high-performance C/C++ logging libr
   plugins for Flash storage and file rotation.
 codeUrl: https://github.com/armink/EasyLogger
 siteUrl: https://github.com/armink/EasyLogger
-star: 4514
+star: 4513
 version: 2.2.0
 lastUpdated: '2024-12-26'
 components:

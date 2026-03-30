@@ -11,7 +11,7 @@ codeUrl: https://github.com/Samsung/TizenRT
 siteUrl: https://github.com/Samsung/TizenRT
 star: 643
 version: 3.0_GBM
-lastUpdated: '2026-03-26'
+lastUpdated: '2026-03-27'
 components:
 - FileSystem
 - Shell
