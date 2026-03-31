@@ -32,7 +32,7 @@ const libraryEntries = await Promise.all(
     <div class="breadcrumb mb-8">
       <div class="breadcrumb-path">
         <a href="/">Home</a> / <a href="/rtos/">RTOS</a> /
-        {rtosEntry && <a href={`/rtos/${rtosEntry.data.slug}/`}>{rtosEntry.data.title}</a>} /
+        {rtosEntry && <><a href={`/rtos/${rtosEntry.data.slug}/`}>{rtosEntry.data.title}</a> / </>}
         <span>{entry.data.title}</span>
       </div>
       {entry.data.createdAt && (

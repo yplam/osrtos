@@ -1,0 +1,55 @@
+---
+import {getCollection} from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import ProjectsList from "../../components/ProjectsList.astro";
+import Pagination from "../../components/Pagination.astro";
+
+export async function getStaticPaths() {
+  const PROJECTS_PER_PAGE = 36;
+
+  const allProjects = await getCollection('projects');
+  const filteredProjects = allProjects.filter(project => project.data.isShow === true);
+  const sortedProjects = filteredProjects.sort((a, b) =>
+    b.data.createdAt.getTime() - a.data.createdAt.getTime()
+  );
+
+  const totalPages = Math.ceil(sortedProjects.length / PROJECTS_PER_PAGE);
+  const paths = [];
+
+  for (let i = 2; i <= totalPages; i++) {
+    paths.push({
+      params: { page: i.toString() },
+      props: {
+        projects: sortedProjects,
+        currentPage: i,
+        totalPages,
+      },
+    });
+  }
+
+  return paths;
+}
+
+const { projects, currentPage, totalPages } = Astro.props;
+const PROJECTS_PER_PAGE = 36;
+const startIndex = (currentPage - 1) * PROJECTS_PER_PAGE;
+const paginatedProjects = projects.slice(startIndex, startIndex + PROJECTS_PER_PAGE);
+---
+
+<Layout
+  title={`All Open Source Embedded Projects - Page ${currentPage} - OSRTOS`}
+  description="Browse all open source embedded projects"
+>
+  <section class="mb-12 text-center pb-8 border-b border-gray-200 dark:border-gray-700">
+    <h1 class="text-2xl font-extrabold mb-4 m-0 text-gray-800 dark:text-gray-100">
+      Open Source Embedded Projects
+    </h1>
+    <p class="text-sm text-gray-600 dark:text-gray-400 m-0">
+      Page {currentPage} of {totalPages} — {projects.length} projects total
+    </p>
+  </section>
+
+  <ProjectsList projects={paginatedProjects} isHorizontal={true} />
+
+  <Pagination currentPage={currentPage} totalPages={totalPages} baseUrl="/projects" />
+</Layout>

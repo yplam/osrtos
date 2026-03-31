@@ -1,8 +1,10 @@
 ---
 import {getCollection} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import ProjectsListHorizontal from '../../components/ProjectsListHorizontal.astro';
 import ProjectsList from "../../components/ProjectsList.astro";
+import Pagination from "../../components/Pagination.astro";
+
+const PROJECTS_PER_PAGE = 36;
 
 const allProjects = await getCollection('projects');
 
@@ -15,6 +17,9 @@ const filteredProjects = import.meta.env.DEV
 const sortedProjects = filteredProjects.sort((a, b) =>
   b.data.createdAt.getTime() - a.data.createdAt.getTime()
 );
+
+const totalPages = Math.ceil(sortedProjects.length / PROJECTS_PER_PAGE);
+const paginatedProjects = sortedProjects.slice(0, PROJECTS_PER_PAGE);
 ---
 
 <Layout title="All Open Source Embedded Projects - OSRTOS" description="Browse all open source embedded projects">
@@ -34,5 +39,7 @@ const sortedProjects = filteredProjects.sort((a, b) =>
     )}
   </section>
 
-  <ProjectsList projects={sortedProjects} isHorizontal={true} />
+  <ProjectsList projects={paginatedProjects} isHorizontal={true} />
+
+  <Pagination currentPage={1} totalPages={totalPages} baseUrl="/projects" />
 </Layout>
