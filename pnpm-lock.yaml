@@ -17,6 +17,9 @@ importers:
       astro:
         specifier: ^5.18.1
         version: 5.18.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.60.0)(typescript@5.9.3)
+      astro-social-share:
+        specifier: ^2.2.0
+        version: 2.2.0
       tailwindcss:
         specifier: ^4.2.1
         version: 4.2.1
@@ -849,6 +852,9 @@ packages:
 
   array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
+
+  astro-social-share@2.2.0:
+    resolution: {integrity: sha512-Z5ebhO6Yw4GLggw7wsTahdpS0f4pf/XuVjQlBpWZ0zyt0cKaVrlG/+u6RzrzN9B2t27wxp90XiosZNwvBZqA+Q==}
 
   astro@5.18.1:
     resolution: {integrity: sha512-m4VWilWZ+Xt6NPoYzC4CgGZim/zQUO7WFL0RHCH0AiEavF1153iC3+me2atDvXpf/yX4PyGUeD8wZLq1cirT3g==}
@@ -2466,6 +2472,8 @@ snapshots:
   aria-query@5.3.2: {}
 
   array-iterate@2.0.1: {}
+
+  astro-social-share@2.2.0: {}
 
   astro@5.18.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.60.0)(typescript@5.9.3):
     dependencies:

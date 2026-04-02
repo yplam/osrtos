@@ -3,6 +3,9 @@ import {getCollection, getEntry, render} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import ProjectMetadataDisplay from '../../components/ProjectMetadataDisplay.astro';
 import '../../styles/prose.css';
+import { FacebookShareButton, TwitterShareButton, RedditShareButton, SocialShare } from "astro-social-share";
+
+const BUTTONS = [TwitterShareButton, FacebookShareButton, RedditShareButton];
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -35,11 +38,18 @@ const libraryEntries = await Promise.all(
         {rtosEntry && <><a href={`/rtos/${rtosEntry.data.slug}/`}>{rtosEntry.data.title}</a> / </>}
         <span>{entry.data.title}</span>
       </div>
-      {entry.data.createdAt && (
-        <div class="breadcrumb-date">
-          Published: {new Date(entry.data.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-        </div>
-      )}
+      <div class="breadcrumb-right">
+        {entry.data.createdAt && (
+          <div class="breadcrumb-date">
+            Published: {new Date(entry.data.createdAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </div>
+        )}
+        <SocialShare
+          buttons={BUTTONS}
+          description={entry.data.summary}
+          title={entry.data.title}
+        />
+      </div>
     </div>
 
     <h1 class="text-4xl md:text-5xl font-extrabold m-0 mb-8 text-gray-800 dark:text-gray-200">
@@ -87,6 +97,13 @@ const libraryEntries = await Promise.all(
     .breadcrumb-path {
         flex: 1;
         min-width: fit-content;
+    }
+
+    .breadcrumb-right {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex-shrink: 0;
     }
 
     .breadcrumb-date {
