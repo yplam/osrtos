@@ -7,14 +7,14 @@ summary: LevelX is a specialized flash wear leveling library for embedded system
   interruptions.
 slug: eclipse-threadx-levelx
 codeUrl: https://github.com/eclipse-threadx/levelx
-star: 149
+star: 151
 version: v6.5.0.202601_rel
 lastUpdated: '2026-03-06'
 licenses:
 - MIT
 libraryType: FileSystem
 createdAt: '2025-12-29'
-updatedAt: '2026-03-27'
+updatedAt: '2026-04-07'
 ---
 
 ### Features

@@ -8,9 +8,9 @@ summary: SQLite is a C-language library that implements a small, fast, self-cont
   in the world.
 codeUrl: https://github.com/sqlite/sqlite
 siteUrl: https://sqlite.org/
-star: 9260
+star: 9332
 version: vesion-3.45.1
-lastUpdated: '2026-03-26'
+lastUpdated: '2026-04-06'
 components:
 - Database
 - FileSystem
@@ -29,7 +29,7 @@ licenses:
 - Public Domain
 libraryType: Database
 createdAt: '2025-12-24'
-updatedAt: '2026-03-27'
+updatedAt: '2026-04-07'
 ---
 
 ### Features
