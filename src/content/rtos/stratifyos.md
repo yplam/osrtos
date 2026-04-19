@@ -6,7 +6,7 @@ codeUrl: https://github.com/StratifyLabs/StratifyOS
 siteUrl: https://stratifylabs.co/
 date: '2016-11-29'
 lastUpdated: '2024-06-07'
-star: 148
+star: 147
 components: []
 libraries: []
 licenses:
@@ -15,7 +15,7 @@ platforms:
 - ARM
 summary: StratifyOS is a powerful embedded RTOS for the ARM Cortex M microcontrollers.
 createdAt: '2024-06-07'
-updatedAt: '2026-03-17'
+updatedAt: '2026-04-19'
 ---
 
 ### Features

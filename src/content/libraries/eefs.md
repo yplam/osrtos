@@ -8,7 +8,7 @@ summary: The EEPROM File System (EEFS) is a lightweight, non-block oriented file
   target deployment.
 codeUrl: https://github.com/nasa/eefs
 siteUrl: https://github.com/nasa/eefs
-star: 288
+star: 287
 version: eefs-2.0
 lastUpdated: '2014-04-23'
 components:
@@ -25,7 +25,7 @@ licenses:
 - Unknown
 libraryType: FileSystem
 createdAt: '2014-04-23'
-updatedAt: '2026-03-27'
+updatedAt: '2026-04-19'
 ---
 
 ### Features

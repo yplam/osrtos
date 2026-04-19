@@ -10,13 +10,13 @@ codeUrl: https://github.com/tuxera/reliance-edge
 siteUrl: https://www.tuxera.com/products/tuxera-edge-fs/
 star: 118
 version: v2.6
-lastUpdated: '2025-11-11'
+lastUpdated: '2026-04-17'
 licenses:
 - GPL-2.0
 - Commercial
 libraryType: FileSystem
 createdAt: '2026-01-04'
-updatedAt: '2026-01-14'
+updatedAt: '2026-04-19'
 ---
 
 ### Features

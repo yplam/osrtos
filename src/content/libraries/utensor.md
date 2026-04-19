@@ -8,7 +8,7 @@ summary: uTensor is a lightweight machine learning inference framework optimized
   integration.
 codeUrl: https://github.com/uTensor/uTensor
 siteUrl: https://github.com/uTensor/uTensor
-star: 1918
+star: 1922
 version: v0.0.1
 lastUpdated: '2024-09-06'
 components:
@@ -23,7 +23,7 @@ platforms:
 - POSIX
 libraryType: MachineLearning
 createdAt: '2024-09-06'
-updatedAt: '2026-04-07'
+updatedAt: '2026-04-19'
 ---
 
 ### Features

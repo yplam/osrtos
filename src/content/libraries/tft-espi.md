@@ -6,7 +6,7 @@ summary: TFT_eSPI is a high-performance graphics and font library optimized for 
   a robust Sprite system for flicker-free updates and advanced anti-aliasing for both
   vector graphics and typography across multiple display interfaces.
 codeUrl: https://github.com/Bodmer/TFT_eSPI
-star: 4676
+star: 4698
 version: V2.5.43
 lastUpdated: '2026-04-03'
 components:
@@ -20,7 +20,7 @@ platforms:
 - RISC-V
 libraryType: Graphics
 createdAt: '2024-07-06'
-updatedAt: '2026-04-07'
+updatedAt: '2026-04-19'
 ---
 
 ### Features

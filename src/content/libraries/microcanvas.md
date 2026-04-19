@@ -7,14 +7,14 @@ summary: MicroCanvas is a 2D retained-mode graphics engine designed for microcon
   rather than managing manual redraw loops.
 slug: naitiksanas-microcanvas
 codeUrl: https://github.com/NaitikSanas/MicroCanvas
-star: 56
+star: 57
 version: v1.0.0-beta
 lastUpdated: '2026-02-14'
 licenses:
 - MIT
 libraryType: Graphics
 createdAt: '2026-02-28'
-updatedAt: '2026-02-28'
+updatedAt: '2026-04-19'
 ---
 
 ### Features
