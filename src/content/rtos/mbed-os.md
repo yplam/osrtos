@@ -59,6 +59,9 @@ createdAt: '2024-10-08'
 updatedAt: '2026-04-19'
 ---
 
+**Note: Arm has announced an End of Life (EOL) timeline for Mbed OS**, with the project and its associated websites scheduled for archiving in July 2026. Developers starting new projects should consider the long-term maintenance implications and review the official announcement on the Mbed blog.
+
+
 ### Features
 
 
@@ -121,5 +124,3 @@ This RTOS is ideal for:
 ### Getting Started
 
 Developers can begin by choosing between three primary development environments: **Keil Studio Cloud** for a zero-installation web-based IDE, **Mbed Studio** for a dedicated desktop experience with integrated debugging, or **Mbed CLI** for command-line flexibility and automation. The official documentation at [os.mbed.com/docs](https://os.mbed.com/docs) provides comprehensive Doxygen-generated API references, step-by-step tutorials, and detailed porting guides for custom hardware. 
-
-Note: Arm has announced an End of Life (EOL) timeline for Mbed OS, with the project and its associated websites scheduled for archiving in July 2026. Developers starting new projects should consider the long-term maintenance implications and review the official announcement on the Mbed blog.
