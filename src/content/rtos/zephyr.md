@@ -8,9 +8,9 @@ summary: Zephyr is a scalable, security-focused real-time operating system (RTOS
   and a robust device driver model.
 codeUrl: https://github.com/zephyrproject-rtos/zephyr
 siteUrl: https://www.zephyrproject.org
-star: 15025
+star: 15154
 version: v4.4.0
-lastUpdated: '2026-04-02'
+lastUpdated: '2026-03-27'
 components:
 - Network
 - Wireless
@@ -71,7 +71,7 @@ libraries:
 - mbedTLS
 - TinyCrypt
 createdAt: '2025-12-02'
-updatedAt: '2026-04-19'
+updatedAt: '2026-05-06'
 ---
 
 ### Features

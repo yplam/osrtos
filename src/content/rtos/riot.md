@@ -8,9 +8,9 @@ summary: RIOT is a modular, open-source real-time operating system specifically 
   cross-platform development and code reuse.
 codeUrl: https://github.com/RIOT-OS/RIOT
 siteUrl: http://riot-os.org/
-star: 5712
+star: 5718
 version: '2026.01'
-lastUpdated: '2026-04-17'
+lastUpdated: '2026-05-05'
 components:
 - FileSystem
 - Network
@@ -54,7 +54,7 @@ libraries:
 - MicroPython
 - WebAssembly
 createdAt: '2025-12-24'
-updatedAt: '2026-04-19'
+updatedAt: '2026-05-06'
 ---
 
 ### Features

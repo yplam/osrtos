@@ -6,7 +6,7 @@ codeUrl: https://github.com/DuinOS/DuinOS
 siteUrl: https://github.com/DuinOS/DuinOS
 date: '2016-11-29'
 lastUpdated: '2020-07-10'
-star: 74
+star: 73
 components: []
 libraries: []
 licenses:
@@ -16,7 +16,7 @@ platforms:
 summary: DuinOS is a small multithreading real time operating system (RTOS), based
   on the FreeRTOS kernel, for Arduino compatible boards.
 createdAt: '2020-07-10'
-updatedAt: '2020-07-10'
+updatedAt: '2026-05-06'
 ---
 
 ### Features

@@ -8,14 +8,14 @@ summary: esp-nimble-cpp is a high-performance, thread-safe C++ wrapper for the A
 slug: h2zero-esp-nimble-cpp
 codeUrl: https://github.com/h2zero/esp-nimble-cpp
 siteUrl: https://h2zero.github.io/esp-nimble-cpp/
-star: 276
+star: 277
 version: 2.5.0
-lastUpdated: '2026-04-01'
+lastUpdated: '2026-04-24'
 licenses:
 - Apache-2.0
 libraryType: Wireless
 createdAt: '2025-12-29'
-updatedAt: '2026-04-07'
+updatedAt: '2026-05-06'
 ---
 
 ### Features

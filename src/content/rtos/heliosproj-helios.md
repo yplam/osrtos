@@ -7,7 +7,7 @@ summary: HeliOS is a lightweight, multitasking kernel designed for low-power emb
   for Arduino and ARM Cortex-M platforms.
 slug: heliosproj-helios
 codeUrl: https://github.com/heliosproj/HeliOS
-star: 411
+star: 409
 version: 0.4.1
 lastUpdated: '2023-03-28'
 components:
@@ -25,7 +25,7 @@ licenses:
 libraries:
 - CMSIS
 createdAt: '2025-12-29'
-updatedAt: '2026-04-07'
+updatedAt: '2026-05-06'
 ---
 
 ### Features

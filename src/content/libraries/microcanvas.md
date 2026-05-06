@@ -9,12 +9,12 @@ slug: naitiksanas-microcanvas
 codeUrl: https://github.com/NaitikSanas/MicroCanvas
 star: 57
 version: v1.0.0-beta
-lastUpdated: '2026-02-14'
+lastUpdated: '2026-04-22'
 licenses:
 - MIT
 libraryType: Graphics
 createdAt: '2026-02-28'
-updatedAt: '2026-04-19'
+updatedAt: '2026-05-06'
 ---
 
 ### Features
