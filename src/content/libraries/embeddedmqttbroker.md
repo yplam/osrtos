@@ -6,7 +6,7 @@ summary: EmbeddedMqttBroker is a high-performance, asynchronous MQTT 3.1.1 broke
   non-blocking architecture and FreeRTOS tasks to manage concurrent TCP and WebSocket
   connections with minimal CPU overhead and high scalability.
 codeUrl: https://github.com/alexCajas/EmbeddedMqttBroker
-star: 105
+star: 106
 version: v2.1.12-qos0
 lastUpdated: '2026-04-11'
 components:
@@ -20,7 +20,7 @@ platforms:
 - Xtensa
 libraryType: Network
 createdAt: '2025-12-27'
-updatedAt: '2026-04-19'
+updatedAt: '2026-06-03'
 ---
 
 ### Features

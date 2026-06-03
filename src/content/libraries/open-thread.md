@@ -8,9 +8,9 @@ summary: OpenThread is an open-source, OS-agnostic implementation of the Thread 
   (RCP) designs while maintaining a small memory footprint.
 codeUrl: https://github.com/openthread/openthread
 siteUrl: https://openthread.io/
-star: 3932
-version: thread-reference-20250612
-lastUpdated: '2026-05-05'
+star: 3950
+version: v2026.06.0
+lastUpdated: '2026-06-02'
 components:
 - Network
 - Wireless
@@ -35,7 +35,7 @@ licenses:
 - BSD 3-Clause
 libraryType: Wireless
 createdAt: '2025-12-25'
-updatedAt: '2026-05-06'
+updatedAt: '2026-06-03'
 ---
 
 ### Features

@@ -6,7 +6,7 @@ codeUrl: https://github.com/SiliconLabs/uC-OS3
 siteUrl: https://doc.micrium.com/display/ucos/
 date: '2020-05-04'
 lastUpdated: '2022-12-02'
-star: 1058
+star: 1067
 components:
 - FileSystem
 - Network
@@ -32,7 +32,7 @@ platforms:
 summary: µC/OS-III is a highly portable, ROMable, scalable, preemptive, real-time,
   deterministic, multitasking kernel for microprocessors, microcontrollers and DSPs.
 createdAt: '2022-12-02'
-updatedAt: '2026-05-06'
+updatedAt: '2026-06-03'
 ---
 
 ### Features

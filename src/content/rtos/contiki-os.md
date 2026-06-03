@@ -7,7 +7,7 @@ summary: Contiki is a lightweight, open-source operating system designed for res
   while maintaining an extremely small memory footprint.
 codeUrl: https://github.com/contiki-os/contiki
 siteUrl: http://www.contiki-os.org/
-star: 3795
+star: 3799
 version: '3.0'
 lastUpdated: '2018-11-03'
 components:
@@ -37,7 +37,7 @@ libraries:
 - uIP
 - Rime
 createdAt: '2018-11-03'
-updatedAt: '2026-05-06'
+updatedAt: '2026-06-03'
 ---
 
 ### Features

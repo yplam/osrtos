@@ -7,9 +7,9 @@ summary: Nanopb is a lightweight, ANSI C implementation of Google Protocol Buffe
   static memory allocation to eliminate the need for dynamic memory management.
 codeUrl: https://github.com/nanopb/nanopb
 siteUrl: https://jpa.kapsi.fi/nanopb/
-star: 5361
+star: 5423
 version: nanopb-0.4.9.1
-lastUpdated: '2026-03-03'
+lastUpdated: '2026-05-22'
 components:
 - gRPC
 platforms:
@@ -26,7 +26,7 @@ licenses:
 - Zlib
 libraryType: Middleware
 createdAt: '2025-11-30'
-updatedAt: '2026-05-06'
+updatedAt: '2026-06-03'
 ---
 
 ### Features

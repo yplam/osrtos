@@ -6,13 +6,13 @@ summary: This library provides a comprehensive Modbus implementation for STM32 m
   Master and Slave instances across various hardware transport layers.
 slug: alejoseb-modbus-stm32-hal-freertos
 codeUrl: https://github.com/alejoseb/Modbus-STM32-HAL-FreeRTOS
-star: 764
-lastUpdated: '2026-04-30'
+star: 782
+lastUpdated: '2026-05-21'
 licenses:
 - LGPL-2.1
 libraryType: Middleware
 createdAt: '2025-12-31'
-updatedAt: '2026-05-06'
+updatedAt: '2026-06-03'
 ---
 
 ### Features

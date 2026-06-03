@@ -8,7 +8,7 @@ summary: Belay is a Python library and command-line tool that bridges the gap be
   codebase.
 codeUrl: https://github.com/BrianPugh/belay
 siteUrl: https://belay.readthedocs.io
-star: 268
+star: 269
 version: v0.30.1
 lastUpdated: '2026-03-03'
 components:
@@ -26,7 +26,7 @@ platforms:
 - POSIX
 libraryType: Middleware
 createdAt: '2025-12-13'
-updatedAt: '2026-04-19'
+updatedAt: '2026-06-03'
 ---
 
 ### Features
