@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-04-06T00:34:16+00:00'
 updatedAt: '2026-04-06T00:34:16+00:00'
+relatedProjects:
+- energy-consumption-monitor-energymon-c
+- energy-consumption-monitor
+- ofmon-offline-first-smart-energy-monitoring
+- power-pico
+- cyberboard-v2
+- ch32v003-usb-meter
 ---
 
 Ambient noise levels in populated areas, particularly in North America, often exceed safe thresholds. Prolonged exposure to this excess noise can lead to lasting impacts on health, yet many people remain unaware of the noise levels in their immediate environment. NoiseCard is a specialized tool designed to solve this problem by providing a simple, accessible way to monitor ambient decibels.

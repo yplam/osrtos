@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-04-02T23:24:33+00:00'
 updatedAt: '2026-04-02T23:24:33+00:00'
+relatedProjects:
+- uc-modbus-for-rt-thread
+- modbus-tcp-for-stm32f407
+- esphome-modbus-tcp-to-rtu-bridge
+- riden-dongle
+- mqtt-viewer
+- flipper-rs485-modbus-plugin
 ---
 
 Modbus is one of the most ubiquitous protocols in industrial automation, yet it remains a frequent source of frustration during commissioning and development. Misaligned register offsets, endianness confusion, and documentation discrepancies often lead to hours of troubleshooting. Modbux was developed to solve these specific pain points, providing a modern, high-level interface for interacting with Modbus devices.

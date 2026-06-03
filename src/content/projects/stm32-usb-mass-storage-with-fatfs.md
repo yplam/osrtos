@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- raspberry-pi-pico-littlefs-usb-flash-memory-interface
+- stm32-fatfs-and-freertos-integration
+- practice-project-for-stm32f746g-discovery
+- stm32-fatfs-on-sd-card-using-freertos
+- stm32f407vg-freertos-fatfs-sdio-sd-card-demo
+- stm32h5-classic-core-middleware-coremw-mcu-firmware-package
 ---
 
 The STM32_USB_FATFS project is a technical exploration into implementing USB peripherals on high-performance microcontrollers. Specifically, it targets the STM32F765, a member of the ARM Cortex-M7 family, to create a USB Mass Storage Class (MSC) device. This allows the microcontroller to act as a standard USB flash drive when connected to a host computer.

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-configuration-data-v2
+- settings-manager
+- esp8266-web-server-and-spiffs-integration
+- esp8266-dht22-spiffs-web-server
+- esp8266-littlefs-file-handler
+- easyini
 ---
 
 Managing configuration data in embedded projects often presents a challenge: how to store sensitive information like WiFi credentials or API keys without hardcoding them into the source code. The ESP8266-config-data project provides a practical solution for ESP8266 developers by leveraging the Serial Peripheral Interface Flash File System (SPIFFS) and the ArduinoJson library.

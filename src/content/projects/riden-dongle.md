@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-05-07T00:42:56+00:00'
 updatedAt: '2026-05-07T00:42:56+00:00'
+relatedProjects:
+- iot-esp8266-serial-forwarder
+- esp8266-wifi-relay
+- dtugateway-for-hoymiles-hms-inverters
+- sonoff-http-firmware
+- esp8266-wifi-relay-and-bahtinov-masks-controller
+- esp32-bus-expander
 ---
 
 Riden Dongle is an alternative firmware designed for the Riden WiFi module, transforming it into a versatile communication bridge for RD-series power supplies. It moves beyond the limitations of the original mobile app, offering Modbus TCP and SCPI support to allow for seamless integration with standard laboratory automation tools and a custom web interface.

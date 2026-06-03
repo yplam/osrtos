@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtems-ec-cli-command-line-interface-for-embedded-controllers
+- lua2rtt
+- flexiblebutton
+- jsonx-lightweight-embedded-json-serializer
+- termbox-for-rt-thread
+- pycopy
 ---
 
 ## Overview

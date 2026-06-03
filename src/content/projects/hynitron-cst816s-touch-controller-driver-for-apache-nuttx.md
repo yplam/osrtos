@@ -22,6 +22,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- bl602-gpio-expander-for-apache-nuttx
+- apache-nuttx-driver-for-bosch-bme280-sensor
+- pinephone-usb-driver-for-apache-nuttx-rtos
+- rust-i2c-driver-for-bosch-bme280-on-apache-nuttx
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
+- pinedio-stack-bl604-on-apache-nuttx-rtos
 ---
 
 The Hynitron CST816S is a popular touch controller found in various embedded devices, including the PineDio Stack BL604 and the PineTime smartwatch. This repository provides a dedicated driver for the CST816S, specifically tailored for the Apache NuttX RTOS. By integrating this driver, developers can enable touch capabilities on RISC-V and ESP32-based hardware using standard NuttX input device interfaces.

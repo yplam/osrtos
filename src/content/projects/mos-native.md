@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- mongoose-os-docker-image
+- mongoose-os-docker-action
+- nuttx-esp32-environment-for-wsl2
+- homebrew-tinyos-for-msp430
+- m5stack-esphome-integrations
+- xenomai-installation-and-configuration-scripts
 ---
 
 ## Overview

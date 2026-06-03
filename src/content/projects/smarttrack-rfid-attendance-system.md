@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-04-05T01:04:24+00:00'
 updatedAt: '2026-04-05T01:04:24+00:00'
+relatedProjects:
+- freebees-access-control-for-esp32
+- esp32-sniffer
+- espmonitor-iot-environmental-monitoring-system
+- espmonitor-iot-environment-monitoring-system
+- esp32-weatherstationrtc
+- smart-beehive-monitoring-system
 ---
 
 Automating attendance tracking is a common challenge in educational and corporate environments. SmartTrack offers a streamlined solution by leveraging the ESP32's Wi-Fi capabilities and RFID technology to create a connected logging system that eliminates manual paperwork.

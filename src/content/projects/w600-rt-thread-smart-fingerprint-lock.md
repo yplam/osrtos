@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- wanderingplan
+- w601-rt-thread-alarm-clock
+- smartlock-for-disco-l475vg-iot01a
+- freebees-access-control-for-esp32
+- maixface
+- watchbot-system
 ---
 
 ## Overview

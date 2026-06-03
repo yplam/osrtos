@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- tinyos-for-msp430
+- tinyos-nesc-telosb-programs
+- tinyos-role-for-ansible
+- tinyos-apps-for-msp430f5529
+- mos-native
+- tinyos-english-documentation
 ---
 
 ## Overview

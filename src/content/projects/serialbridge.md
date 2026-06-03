@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- spirit-motor-driver-library
+- arduino-serial-ble
+- esp32-ble-uart-mx
+- arduino-dronecan
+- spektrum-receiver-library-for-mbed
+- uart-communication-between-nrf52840-and-stm32f401-nucleo
 ---
 
 ## Overview

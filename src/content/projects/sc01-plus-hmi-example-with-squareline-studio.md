@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lvgl-8-on-wt32-sc01-with-arduino
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- jc3248w535-lvgl-v9-test-project
+- jc4827w543-lvgl-v9-implementation
+- rp2040-lvgl-8-demo-with-ili9488-and-xpt2046
+- lilygo-t-display-s3-boilerplate
 ---
 
 The SC01 Plus HMI Example repository is a practical guide for developers looking to leverage the power of the SC01 Plus display module. This hardware, often featuring the ESP32-S3 SoC, is a popular choice for embedded systems that require a compact yet capable touch interface. By combining the visual design capabilities of SquareLine Studio with the robust LVGL graphics library, this project demonstrates a modern workflow for embedded UI development.

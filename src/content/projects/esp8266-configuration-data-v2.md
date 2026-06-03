@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-config-data-management
+- settings-manager
+- esp8266-web-server-and-spiffs-integration
+- esp8266-littlefs-file-handler
+- arduino-esp-utils
+- esp-fs-webserver
 ---
 
 ## Overview

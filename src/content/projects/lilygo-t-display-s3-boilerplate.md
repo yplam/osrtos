@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lvgl-8-on-wt32-sc01-with-arduino
+- jc3248w535-lvgl-v9-test-project
+- rp2040-lvgl-8-demo-with-ili9488-and-xpt2046
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- jc4827w543-lvgl-v9-implementation
+- esp32-lvgl-8-x-sdspi-template
 ---
 
 The T-Display-S3 boilerplate provides a robust starting point for developing applications on LILYGO's ESP32-S3 based display module. By integrating the Arduino framework with the LVGL graphics library, it abstracts the complexities of hardware initialization and display management, allowing developers to focus on application logic.

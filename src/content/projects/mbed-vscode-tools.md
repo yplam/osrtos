@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mbed-tools
+- micropy-cli
+- smart-home-device-configurator
+- mbed-support-for-clion
+- kconfig-for-the-zephyr-project
+- mbed-vim
 ---
 
 ## Overview

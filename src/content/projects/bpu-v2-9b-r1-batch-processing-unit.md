@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-03-15'
 updatedAt: '2026-03-15'
+relatedProjects:
+- esp32-uart-bridge
+- esp32-usb-over-ip
+- lorawan-end-device-with-freertos-and-esp32
+- broccoli
+- strong-apa-scheduler-for-rtems
+- bathhouseos-core-control-panel
 ---
 
 BPU (Batch Processing Unit) is a specialized scheduling core designed for embedded systems where data output pipelines must remain stable even under significant resource pressure. Unlike general-purpose RTOS schedulers, BPU focuses specifically on the runtime behavior of data streams, providing mechanisms for backpressure handling, budget-based degradation, and observable recovery.

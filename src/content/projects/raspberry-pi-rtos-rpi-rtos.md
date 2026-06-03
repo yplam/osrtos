@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- xenomai-3-for-raspberry-pi-2-and-3
+- xenomai-3-for-raspberry-pi-4
+- xenomai-3-for-raspberry-pi-0-1-linux-kernel-4-1-21
+- raspberry-pi-4-xenomai-3-patch
+- xenomai-on-raspberry-pi
+- freertos-for-raspberry-pi-3-64-bit
 ---
 
 ## Overview

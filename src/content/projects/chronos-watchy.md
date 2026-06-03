@@ -26,6 +26,13 @@ isShow: true
 image: /202601/chronos-watchy.webp
 createdAt: '2026-01-22'
 updatedAt: '2026-01-22'
+relatedProjects:
+- dt78-esp32-firmware
+- inkwatchy
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
+- chrz-watch-firmware
+- lvgl-watch-firmware-for-open-smartwatch
+- zephyrwatch
 ---
 
 Chronos Watchy represents a significant evolution for the Watchy open-source e-ink smartwatch ecosystem. Designed as a modern, feature-complete alternative firmware, it transforms the ESP32-based wearable into a highly functional companion device. By leveraging the LVGL (Light and Versatile Graphics Library), Chronos Watchy provides a polished user interface that defies the typical limitations of e-ink displays.

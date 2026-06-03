@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- protoflight
+- project-shadow-flight
+- prust-pus-c-implementation-in-rust
+- catpilot-autopilot-software-stack
+- nuttx-real-time-operating-system
+- bitcraze-crazyflie-2-0-2-1-mbed-os-firmware
 ---
 
 The SUCHAI Flight Software is a robust, modular framework originally developed for the SUCHAI (Satellite of the University of Chile for Aerospace Investigation) project. Launched in June 2017, this 1U CubeSat demonstrated the effectiveness of a software architecture designed specifically for the challenges of nanosatellite missions. The framework is built to be highly extensible, allowing large, heterogeneous teams to develop and integrate payloads and functionalities with minimal friction.

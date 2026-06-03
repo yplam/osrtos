@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- stm32-cmsis-libraries
+- lpc1115-libraries-and-drivers
+- bluepill-board-support-for-mbed-os-6
+- stm32-prototyping-libraries
+- stm32f103-cmsis-libraries-and-projects
+- spektrum-receiver-library-for-mbed
 ---
 
 The `mbed-libs` repository serves as a centralized collection of libraries specifically tailored for ARM Mbed OS. Targeting version 5 of the Mbed OS platform, these libraries are designed to extend the capabilities of the RTOS, providing developers with reusable components for their embedded projects.

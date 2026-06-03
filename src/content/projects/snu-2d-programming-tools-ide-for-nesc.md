@@ -31,6 +31,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- dsml4tinyos-a-domain-specific-language-for-tinyos
+- tinyos-nesc-telosb-programs
+- mcr-ide-design-environment-for-medical-capsule-robots
+- learning-nesc
+- cse160-network-protocols-project-skeleton
+- visual-programming-for-zig-with-nuttx-sensors
 ---
 
 ## Overview

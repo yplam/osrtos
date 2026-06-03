@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- ds3231-rtc-driver-for-rt-thread
+- hdc1000-sensor-driver-for-rt-thread
+- tmp1075-temperature-sensor-driver-for-rt-thread
+- ds3231-rtc-driver-for-mongoose-os
+- vl53l0x-tof-sensor-driver-for-rt-thread
+- bme680-sensor-package-for-rt-thread
 ---
 
 ## Overview

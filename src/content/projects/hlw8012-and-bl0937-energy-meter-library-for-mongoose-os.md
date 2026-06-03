@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- hlw811x-power-metering-library
+- energy-consumption-monitor
+- ltc68xx-battery-monitoring-library-for-mongoose-os
+- energy-consumption-monitor-energymon-c
+- sgp30-gas-sensor-library-for-mongoose-os
+- hx711-library-for-mongoose-os
 ---
 
 ## Overview

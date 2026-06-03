@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- wifimanager-rp2040w-lite
+- wifimanager-rp2040w
+- esp32-wi-fi-provision-care
+- rtkrovermanager
+- ayreswifimanager-awm
+- rtkbasemanager
 ---
 
 ## Overview

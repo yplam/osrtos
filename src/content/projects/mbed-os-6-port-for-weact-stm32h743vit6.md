@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- blackpill-stm32f401ce-support-for-mbed-os-6
+- mbed-os-6-support-for-weact-black-pill-stm32f411ce
+- mbed-os-6-support-for-weact-black-pill-stm32f401cc
+- bluepill-board-support-for-mbed-os-6
+- rt-thread-bsp-for-stm32f407vet6
+- mcudev-black-stm32f407vet6-micropython-support
 ---
 
 ## Overview

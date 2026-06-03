@@ -14,6 +14,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- low-power-wireless-networking-for-iot-lpiot
+- 6lbr-on-telecontrolli-devices-x-ip4t-x-ip5
+- nrf24-driver-for-contiki-os
+- loadng-implementation-on-contiki-os
+- thingbot-subghz
+- apache-mynewt-sensor-network-for-stm32-blue-pill
 ---
 
 The 6LoWPAN BLE Bridge project is a specialized implementation of the Contiki Operating System, designed to connect low-power wireless sensor networks with the broader Internet and Bluetooth-enabled devices. Contiki is a premier open-source OS for the Internet of Things, providing a robust environment for microcontrollers with limited memory and power resources.

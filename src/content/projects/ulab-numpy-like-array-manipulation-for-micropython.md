@@ -30,6 +30,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- sparkfun-micropython-opencv
+- ncnn-mp-neural-network-inference-for-micropython
+- semito-v-micropython-compatibility-layer-mcl
+- pycopy
+- pycopy-standard-library-pycopy-lib
+- micropython-lib
 ---
 
 ## Overview

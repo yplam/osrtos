@@ -22,6 +22,13 @@ isShow: true
 image: /202601/Atom_EchoS3R_01.webp
 createdAt: '2026-01-24'
 updatedAt: '2026-01-24'
+relatedProjects:
+- esphome-components-for-miot-devices
+- micropython-kitchen-sink-for-m5stack
+- esp32-p4-home-assistant-display
+- esp32-repo
+- openhasp-firmware
+- homey-smart-home-controllers
 ---
 
 ## Overview

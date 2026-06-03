@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-webserver-chat
+- wifi-manager-for-micropython
+- esp32-wi-fi-provision-care
+- autonetwork-library
+- esp32-mesh-control
+- vortex-cannon-esp32-access-point-controller
 ---
 
 ## Overview

@@ -21,6 +21,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- mos-rtos
+- rust-support-for-rt-thread
+- freertos-port-for-teensy-3-6-4-0-4-1
+- cmsis-rtos2-compatibility-layer-for-rt-thread
+- stateos-c-11
+- freertos-wrapper-for-rt-thread
 ---
 
 R3v2 is a sophisticated real-time operating system (RTOS) specifically engineered for ARM Cortex-M microcontrollers. Developed by Anatoly Georgievski, this kernel distinguishes itself by prioritizing non-blocking execution through lock-free and wait-free synchronization primitives. Whether you are working with legacy CMSIS-RTOS code or modern C11 threads, R3v2 provides a robust foundation for high-performance embedded applications.

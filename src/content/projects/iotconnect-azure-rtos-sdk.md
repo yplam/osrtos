@@ -32,6 +32,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- x-cube-azrtos-l4-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-g4-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-h7-azure-rtos-software-expansion
+- x-cube-azrtos-wl-azure-rtos-software-expansion-for-stm32wl
+- x-cube-azrtos-l5-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-wb-azure-rtos-software-expansion-for-stm32cube
 ---
 
 The IoTConnect Azure RTOS SDK is a specialized development kit designed to facilitate the integration of embedded devices with Avnet’s IoTConnect cloud platform. By leveraging the industrial-grade capabilities of Microsoft Azure RTOS (formerly ThreadX), this SDK provides a robust foundation for building secure, scalable, and efficient IoT applications across a diverse range of hardware architectures.

@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-samples-and-drivers
+- sparkfun-python-examples
+- maixpy-scripts
+- mbot2-and-cyberpi-programming-examples
+- micropython-i2s-examples
+- esp-lvgl
 ---
 
 The MicroPython Examples repository by 01Studio serves as a central resource for developers using 01Studio's ecosystem of development boards. MicroPython has become a premier choice for rapid prototyping in the embedded world, and this collection provides the necessary building blocks to interface with various hardware peripherals across multiple silicon architectures.

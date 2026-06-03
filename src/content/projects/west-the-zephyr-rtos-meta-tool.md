@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pinnacle-100-out-of-box-demo-manifest
+- mbed-tools
+- zephyr-sdk
+- vs-code-zephyr-development-environment
+- kconfig-for-the-zephyr-project
+- breeze
 ---
 
 ## Overview

@@ -33,6 +33,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- asynchttprequest-esp32-ethernet
+- asynchttpsrequest-generic
+- asyncwebserver-ethernet
+- https-server-generic-library
+- asyncwebserver-esp32-w5500
+- asyncwebserver-esp32-sc-w5500
 ---
 
 In the world of embedded systems, blocking operations can be the enemy of a responsive application. When an ESP32 needs to perform an HTTPS request, standard libraries often halt execution until the server responds. The **AsyncHTTPSRequest_ESP32_Ethernet** library changes this paradigm for Ethernet-connected devices, offering a fully asynchronous way to handle secure web requests.

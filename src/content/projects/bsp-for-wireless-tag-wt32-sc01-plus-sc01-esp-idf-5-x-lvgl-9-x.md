@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-04-05T01:00:03+00:00'
 updatedAt: '2026-04-05T01:00:03+00:00'
+relatedProjects:
+- lvgl-display-and-touchpad-drivers-for-esp32
+- esp32-lvgl-8-x-sdspi-template
+- lvgl-port-for-esp32
+- wt32-sqln-wt32-sc01-plus-with-squareline-studio-and-lvgl
+- esp32-smartdisplay
+- esp32-tux
 ---
 
 Developing sophisticated graphical user interfaces on embedded hardware often requires navigating the complexities of display drivers, touch controllers, and graphics libraries. This project simplifies that process for the Wireless Tag WT32-SC01 and WT32-SC01 Plus boards by providing a robust Board Support Package (BSP) built on the latest ESP-IDF 5.x framework and the LVGL 9.x graphics library.

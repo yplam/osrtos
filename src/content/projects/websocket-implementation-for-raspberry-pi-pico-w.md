@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rp2040-hat-lwip-c
+- asynchttprequest-rp2040w-library
+- pico-w-connection-manager-demo
+- websocket-client-for-mongoose-os
+- picoosc
+- rp2040-pico-w-esp8285-wifi-library
 ---
 
 ## Overview

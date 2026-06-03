@@ -20,6 +20,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- low-power-wireless-networking-for-iot-lpiot
+- iot-labs-with-contiki-os
+- 6lbr-on-telecontrolli-devices-x-ip4t-x-ip5
+- home-automation-simulation-using-contiki-os
+- testbed-tsch-firmware
+- mtds-projects-iot-and-distributed-systems
 ---
 
 The Constrained Application Protocol (CoAP) has become a cornerstone of the Internet of Things (IoT), providing a RESTful web transfer protocol specifically designed for constrained nodes and networks. However, understanding how CoAP behaves under various network conditions—especially regarding congestion control—is critical for building reliable IoT systems. The **Analysis-of-CoAP-using-FlockLab** project provides a framework and a set of experimental results aimed at evaluating these performance metrics.

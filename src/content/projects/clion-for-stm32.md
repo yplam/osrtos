@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- stm32-cmake-cmsis-project-skeleton
+- stm32-base-project-template
+- stm32f030-cmake-cmsis-project-skeleton
+- enterprise-stm32-platform-development
+- stm32-starter-project-for-arch-max
+- stm32h743-cmake-template
 ---
 
 ## Modernizing STM32 Development

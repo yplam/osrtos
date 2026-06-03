@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- telegram-bot-api-for-mongoose-os
+- arduino-ir-for-mongoose-os
+- mongoose-os-ir-protocol-library
+- lis3dh-accelerometer-library-for-mongoose-os
+- adafruit-e-paper-e-ink-library-for-mongoose-os
+- mongoose-os-programs-and-examples
 ---
 
 ## Overview

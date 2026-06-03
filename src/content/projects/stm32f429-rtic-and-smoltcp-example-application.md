@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32h743zi-rust-playground
+- stm32f429-mqtt-client-with-rtic-and-smoltcp
+- stm32f4-rtic-playground
+- rust-embedded-examples
+- sk-mstm32f107-demo-board-example
+- b-l475e-iot01a-discovery-board-support-crate
 ---
 
 ## Overview

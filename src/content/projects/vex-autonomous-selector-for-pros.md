@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- taproot
+- lvgl-demo-embarcadores
+- fluxgarage-roboeyes-library
+- lvgl-joystick-library
+- texas-aimbots-embedded-development
+- visual-programming-for-zig-with-nuttx-sensors
 ---
 
 ## Overview

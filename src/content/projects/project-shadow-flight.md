@@ -19,6 +19,13 @@ topics:
 isShow: true
 createdAt: '2026-04-28T23:32:27+00:00'
 updatedAt: '2026-04-28T23:32:27+00:00'
+relatedProjects:
+- suchai-flight-software
+- floripasat-obdh-on-board-data-handling
+- prust-pus-c-implementation-in-rust
+- move-on-helium-sensors
+- avem
+- filtered-inertial-rotation-module-firm
 ---
 
 Project Shadow Flight is a homemade 1U CubeSat developed to demonstrate Earth Observation (EO) technology using accessible components. Built on the STM32 framework and powered by FreeRTOS, the project utilizes Commercial Off-The-Shelf (COTS) components to create a functional satellite bus capable of capturing geo-referenced low-resolution imagery from Low Earth Orbit (LEO).

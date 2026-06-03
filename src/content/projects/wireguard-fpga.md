@@ -26,6 +26,13 @@ isShow: true
 image: /202603/wireguard-fpga.webp
 createdAt: '2026-03-15'
 updatedAt: '2026-03-15'
+relatedProjects:
+- rt-thread-for-picorv32-on-lichee-tang
+- fwrisc-featherweight-risc-v-core
+- picorv32-rt-thread-on-lichee-tang-eg4s20
+- fazyrv-a-scalable-risc-v-core
+- microlink-tailscale-vpn-for-esp32
+- hbird-e203-rt-thread-on-lichee-tang
 ---
 
 ## Overview

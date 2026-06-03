@@ -26,6 +26,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp32-repo
+- oficina-de-circuitpython
+- rapid-embedded-systems-design-education-kit
+- learning-stm32
+- development-of-real-time-systems-assignments
+- arduino-osek-with-erika-enterprise-ee
 ---
 
 ArduRTOS serves as a comprehensive guide for developers looking to transition from simple sequential Arduino sketches to the world of Real-Time Operating Systems (RTOS). Created by Furkan Türkal, this repository is structured as a learning path that gradually introduces the core concepts of FreeRTOS using the familiar Arduino ecosystem.

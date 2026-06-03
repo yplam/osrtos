@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- devfsuploadesp
+- esp32-ota-firmware-update-and-file-management
+- esp-fs-webserver
+- easy-iot-file-system
+- esp32-monaco-editor-spiffs
+- multiftpserver-library
 ---
 
 ## Overview

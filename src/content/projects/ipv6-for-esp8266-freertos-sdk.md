@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- lwip-for-esp8266
+- esp8266-rtos-software-development-kit-sdk
+- rtos-wot
+- esp8266-rtos-homekit-accessory
+- esp-open-rtos
+- stm32duino-lwip
 ---
 
 ## Enabling IPv6 on the ESP8266

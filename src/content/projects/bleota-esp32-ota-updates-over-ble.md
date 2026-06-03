@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-03-24'
 updatedAt: '2026-03-24'
+relatedProjects:
+- nimble-ota
+- esp32-ble-ota-arduino
+- arduino-serial-ble
+- multi-firmware-esp
+- esp32-ota-firmware-update-and-file-management
+- esp32-targz
 ---
 
 ## Overview

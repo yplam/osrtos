@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- stm32l475-pandora-board-bsp-for-rt-thread
+- rust-for-arduino-portenta-h7
+- rust-embedded-examples
+- stm32-rtic-project-template
+- stm32f4-rtic-playground
+- rt-thread-bsp-for-stm32f407vet6
 ---
 
 The `b-l475e-iot01a-discovery` crate is a dedicated Board Support Package (BSP) designed for developers working with the STMicroelectronics B-L475E-IOT01A Discovery kit, also known as the IoT Node. This board is a popular choice for prototyping Internet of Things (IoT) applications, featuring an STM32L475 microcontroller and a variety of sensors and connectivity options.

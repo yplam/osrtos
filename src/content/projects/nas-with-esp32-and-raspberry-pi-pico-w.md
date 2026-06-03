@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- espxwebflmgr
+- raspberry-pi-pico-web-server-control
+- wi-fi-setup-for-raspberry-pi-pico-w-via-usb-mass-storage
+- esp32-ota-firmware-update-and-file-management
+- multiftpserver-library
+- esp32-web-server-using-spiffs
 ---
 
 ## Overview

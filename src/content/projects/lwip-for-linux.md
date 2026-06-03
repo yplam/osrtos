@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lwip-contrib-unix-port
+- udp-ping-pong-on-lwip-and-dpdk
+- lwip-kcp-integration
+- tinyhttpd-lwip-dpdk
+- lwip-ptp-precision-time-protocol-for-lwip
+- lwip-tcp-ip-stack-on-stm32-microcontroller
 ---
 
 ## Overview

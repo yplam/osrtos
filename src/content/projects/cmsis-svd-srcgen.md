@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- cmsis-parser
+- stm32-bare-metal-code-generator
+- svdsuite
+- development-utils
+- rtduino-pinout-generator
+- torch2cmsis
 ---
 
 ### Bridging the Gap Between Hardware Specs and Source Code

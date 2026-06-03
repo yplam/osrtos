@@ -26,6 +26,13 @@ isShow: true
 image: /202512/eez_bb3_chassis.webp
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- tinycore-esp32-s3-learning-platform
+- objex-link
+- mpython-board
+- esp32-lab-power-supply
+- openmmc
+- nrf52840-m-2-developer-kit
 ---
 
 ## Overview

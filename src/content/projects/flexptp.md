@@ -27,6 +27,13 @@ isShow: true
 image: /202603/flexptp.webp
 createdAt: '2026-03-22'
 updatedAt: '2026-03-22'
+relatedProjects:
+- lwip-ptp-precision-time-protocol-for-lwip
+- stm32duino-lwip
+- qfplib-m0-tiny
+- lptim-tick-freertos-tickless-idle-via-stm32-lptim
+- timezone-generic-library
+- simple-open-ethercat-master-library-rtnet-version
 ---
 
 ## Overview

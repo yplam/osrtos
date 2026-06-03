@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- cmsis-rtos1-compatibility-layer-for-rt-thread
+- rt-thread-art-arduino-rt-thread
+- rtduino-pinout-generator
+- arduino-rt-thread-library
+- cmsis-rtos2-compatibility-layer-for-rt-thread
+- arduino-freertos-library
 ---
 
 ## Bridging Arduino and RT-Thread

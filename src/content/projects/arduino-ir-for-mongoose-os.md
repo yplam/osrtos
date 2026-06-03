@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- mongoose-os-ir-protocol-library
+- arduino-rf24-for-mongoose-os
+- mongoose-os-relay-library
+- telegram-bot-api-for-mongoose-os
+- lis3dh-accelerometer-library-for-mongoose-os
+- mel-ac-library-for-mongoose-os
 ---
 
 ## Bringing Infrared Control to Mongoose OS

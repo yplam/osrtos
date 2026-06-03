@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- apache-mynewt-sensor-network-for-stm32-blue-pill
+- project-shadow-flight
+- freevario
+- mbed-os-treasure-data-example
+- mqtt-demo-for-stm32-iot-discovery-board-with-thingsboard
+- pv-curve-tracer
 ---
 
 ## Overview

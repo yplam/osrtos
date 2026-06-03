@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- cooja-using-contiki
+- internet-of-things-home-challenges
+- computer-network-with-contiki-ng
+- building-wireless-sensor-networks-with-openthread
+- mtds-projects-iot-and-distributed-systems
+- low-power-wireless-networking-for-iot-lpiot
 ---
 
 The IoT-Labs repository is a comprehensive collection of academic exercises and coursework focused on the development of Internet of Things (IoT) applications. Developed primarily in C, these labs leverage the Contiki operating system, a popular open-source OS specifically designed for the Internet of Things, targeting low-power wireless devices.

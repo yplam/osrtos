@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2026-01-31'
 updatedAt: '2026-01-31'
+relatedProjects:
+- espai-unified-ai-api-client-for-esp32
+- openrouter-esp-idf-client
+- xiaomi-cybergear-arduino-library
+- supladevice-library
+- autonetwork-library
+- blynk-async-esp32-bt-wf
 ---
 
 ## Overview

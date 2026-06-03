@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- stm32-event-triggered-finite-state-machine-framework
+- mos-rtos
+- minios-esp
+- nuttx-real-time-operating-system
+- seeed-arduino-freertos
+- micropython-encoder-menu
 ---
 
 ## Overview

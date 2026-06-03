@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- iot-labs-with-contiki-os
+- home-automation-simulation-using-contiki-os
+- crypto-implementations-example-for-contiki-os
+- tinyos-cooja-simulator-application
+- computer-network-with-contiki-ng
+- homeiot-smart-home-automation-system
 ---
 
 ## Getting Started with Cooja and Contiki

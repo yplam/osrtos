@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- kendryte-k210-freertos-sdk
+- ameba-rtos-sdk
+- ameba-freertos-pro2-sdk
+- nuclei-software-development-kit-nuclei-sdk
+- eclipse-threadx-iot-devkit-starter-application
+- esp8266-rtos-software-development-kit-sdk
 ---
 
 ## Overview

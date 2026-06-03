@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- raspberry-pi-pico-freertos-sample-application
+- pico-rtic-template
+- pico-zephyr-project
+- rp2040-projects-by-armstrong-subero
+- cmsis-rp2040
+- wiznet-freertos-sdk-for-raspberry-pi-pico-ethernet
 ---
 
 The RP2040-FreeRTOS project serves as a robust starting point for developers looking to leverage the power of a Real-Time Operating System on the Raspberry Pi RP2040 microcontroller. By integrating the FreeRTOS kernel with the Raspberry Pi Pico SDK, this repository provides a ready-to-use template that simplifies the initial setup of multi-threaded embedded applications.

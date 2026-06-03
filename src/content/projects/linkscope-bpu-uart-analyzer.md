@@ -27,6 +27,13 @@ topics:
 isShow: true
 createdAt: '2026-04-19T23:01:58+00:00'
 updatedAt: '2026-04-19T23:01:58+00:00'
+relatedProjects:
+- esp32-uart-bridge
+- xiao-debug-mate
+- esp-can-analyzer
+- esp-scope
+- m5cardputer-audio-spectrum-display
+- esp32webscope
 ---
 
 ## Visualizing the Invisible: Real-Time UART Analysis

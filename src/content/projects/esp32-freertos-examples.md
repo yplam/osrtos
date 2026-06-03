@@ -20,6 +20,13 @@ star: 497
 lastUpdated: '2024-04-02'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp32-repo
+- mongoose-os-samples-for-esp32
+- unipg-mbed-os-samples
+- freertos-coremqtt-agent-demos
+- super-mini-esp32-c3-arduino-and-platformio-sketches
+- raspberry-pi-pico-freertos-sample-application
 ---
 
 The ESP32 has established itself as a powerhouse in the IoT and embedded systems landscape, largely due to its dual-core Xtensa LX6 microprocessor and integrated wireless capabilities. However, to truly unlock its potential, developers often turn to FreeRTOS, the real-time operating system integrated into the ESP-IDF (Espressif IoT Development Framework). The **ESP32-freeRTOS** repository by Diego Paez serves as a structured educational resource, providing a wide array of examples that bridge the gap between theoretical RTOS concepts and practical hardware implementation.

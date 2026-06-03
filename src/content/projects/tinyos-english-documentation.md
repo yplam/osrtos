@@ -13,6 +13,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- wireless-sensor-network-and-tinyos-documentation
+- tinyos-nesc-telosb-programs
+- homebrew-tinyos-for-msp430
+- tinyos-installation-guide-for-windows
+- lennyos-tinyos
+- blinker-iot-documentation
 ---
 
 ## Overview

@@ -34,6 +34,13 @@ topics:
 isShow: true
 createdAt: '2026-04-18T01:31:55+00:00'
 updatedAt: '2026-04-18T01:31:55+00:00'
+relatedProjects:
+- unigeek-firmware
+- infiltra-firmware
+- esp32-bit-pirate
+- esp32-2-4ghz-jammer
+- esp-graber
+- bruce-firmware
 ---
 
 ESP-HACK FW is a powerful universal firmware developed for the ESP32, specifically tailored for RF research and pentesting across various wireless spectrums. It serves as a comprehensive tool for enthusiasts and security researchers interested in exploring radio frequencies, Bluetooth Low Energy (BLE), infrared signals, and direct GPIO integrations. While the firmware is stable for its primary functions, it remains an active project with several experimental features in development.

@@ -36,6 +36,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- smolos
+- picoshell
+- raspberry-pi-pico-freertos-shell
+- minios-esp
+- micropython-port-for-rt-thread
+- esp32-bitlashtbp
 ---
 
 ## Overview

@@ -21,6 +21,13 @@ isShow: true
 image: /202602/7color-epaper.webp
 createdAt: '2026-02-08'
 updatedAt: '2026-02-08'
+relatedProjects:
+- readmepaper-esp32-7-color-e-paper-display-project
+- esp-e-paper-component
+- paperlesspaper-e-paper-photo-frame-hardware
+- espframe-for-immich
+- tibber-price-e-ink-display
+- relive
 ---
 
 The 7-Color E-Paper Digital Photo Frame is a sophisticated DIY project that combines low-power embedded hardware with automated image processing to create a vibrant, energy-efficient display. By leveraging the unique capabilities of a 7-color E-Paper screen and the processing power of the ESP32S3, this project transforms standard digital photos into stylized, dithered art pieces that persist on-screen without consuming power.

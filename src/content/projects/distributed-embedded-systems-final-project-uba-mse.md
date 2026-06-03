@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- esp32-webserver-with-firebase-integration
+- esp32-wifi-logger
+- embedded-proto-mbed-os-to-server-example
+- micropython-and-lvgl-firmware-for-esp32
+- esp32-freertos-examples
 ---
 
 ## Overview

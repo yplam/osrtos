@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- ds3231-rtc-driver-for-rt-thread
+- rx8900-high-precision-rtc-driver-for-rt-thread
+- mongoose-os-ws2812b-driver
+- sgm706-independent-watchdog-driver-for-rt-thread
+- rtems-i2c-driver-for-max961x
+- ds323x-generic
 ---
 
 ## Overview

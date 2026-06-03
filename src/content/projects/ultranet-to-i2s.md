@@ -19,6 +19,13 @@ isShow: true
 image: /202604/ultranet-to-i2s.webp
 createdAt: '2026-04-28T23:52:56+00:00'
 updatedAt: '2026-04-28T23:52:56+00:00'
+relatedProjects:
+- pico2dexed
+- picosound-audio-library-for-rp2040
+- usbsid-pico
+- oscilloscope-rp2040
+- esp32-i2s-microphone-stream
+- elk-audio-rtdm-driver-for-raspberry-pi
 ---
 
 Decoding professional digital audio protocols often requires specialized hardware, but the Ultranet-to-I2S project demonstrates how the Raspberry Pi Pico's unique architecture can bridge this gap. By leveraging the RP2040’s Programmable I/O (PIO) and dual-core capabilities, this project provides a cost-effective way to extract eight channels of analog audio from a Behringer Ultranet stream.

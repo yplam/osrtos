@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- apache-nuttx-rtos-for-pinephone
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
+- apache-nuttx-rtos-for-pine64-star64
+- zig-on-risc-v-bl602-with-apache-nuttx-rtos
+- lvgl-test-app-for-apache-nuttx
+- rust-test-app-for-apache-nuttx-os
 ---
 
 ## Overview

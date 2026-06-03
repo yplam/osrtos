@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- bluetooth-mesh-sensor-network
+- apache-mynewt-sensor-network-for-stm32-blue-pill
+- espmonitor-iot-environmental-monitoring-system
+- smart-dc-maintenance
+- mqtt-demo-for-stm32-iot-discovery-board-with-thingsboard
+- espmonitor-iot-environment-monitoring-system
 ---
 
 ## Overview

@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sel4twinkle-alloc-rs
+- selfe-sys-rust-bindings-for-sel4
+- freertos-port-for-raspberry-pi
+- freertos-rust
+- stm32f4-rtic-playground
+- ferros
 ---
 
 The rpi3-rust-fel4-workspace project provides a comprehensive environment for developing secure, high-performance applications in Rust on the seL4 microkernel. Targeting the Raspberry Pi 3 (BCM2837), this workspace bridges the gap between the formal security guarantees of seL4 and the memory safety of the Rust programming language.

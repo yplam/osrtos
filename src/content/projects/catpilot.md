@@ -31,6 +31,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- catpilot-autopilot-software-stack
+- protoflight
+- avem
+- drone-stm32f1
+- arduino-dronecan
+- fpv-drone-stm32f411-flight-controller
 ---
 
 CatPilot is a sophisticated open-source library designed specifically for drone autopilot systems. It serves as a foundational component of the broader `uas-catpilot` project, offering a modular and platform-independent approach to flight control software. At its heart, CatPilot leverages the `c-atom` framework, which provides the structural backbone for building complex embedded systems.

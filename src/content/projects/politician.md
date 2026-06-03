@@ -36,6 +36,13 @@ topics:
 isShow: false
 createdAt: '2026-04-09T23:47:15+00:00'
 updatedAt: '2026-04-09T23:47:15+00:00'
+relatedProjects:
+- wifiphisher-for-esp32
+- wifi-nightmare
+- marauder-centauri
+- minigotchi-esp32
+- ghostesp
+- autonetwork-library
 ---
 
 Politician is an embedded C++ library built for the ESP32 platform that transforms the microcontroller into a powerful tool for WiFi security auditing. Unlike legacy tools that rely heavily on disruptive deauthentication attacks, Politician implements modern techniques designed to navigate the complexities of contemporary wireless security, including WPA3 and Protected Management Frames (PMF).

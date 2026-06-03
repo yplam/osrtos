@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-03-31T23:30:57+00:00'
 updatedAt: '2026-03-31T23:30:57+00:00'
+relatedProjects:
+- esp32-smartdisplay
+- esp32-cheap-yellow-display-micropython-lvgl
+- micropython-kitchen-sink-for-m5stack
+- micropython-human-interface-device-library
+- micropython-waveshare-e-paper-drivers
+- micropython-tm1637-library
 ---
 
 The ESP32-2432S028R, affectionately dubbed the "Cheap Yellow Display" (CYD) by the maker community, has become a go-to platform for developers seeking an affordable, all-in-one ESP32 touch-screen module. While the hardware is impressive for its price, setting up the various drivers for the display, touch sensor, and peripherals in MicroPython can often be a repetitive task. This library aims to streamline that process by providing a high-level abstraction layer specifically for this board.

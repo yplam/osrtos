@@ -16,6 +16,13 @@ isShow: true
 image: /202603/modbus-over-matter-with-esp32.webp
 createdAt: '2026-03-30'
 updatedAt: '2026-03-30'
+relatedProjects:
+- usb-keyboard-and-mouse-bluetooth-adapter-esp32
+- everblu-cyble-enhanced-rf-meter-reader
+- m5stack-atoms3-nanoc6-btproxy
+- esphome-deye-inverter
+- esphome-modbus-tcp-to-rtu-bridge
+- zigbee-gas-counter
 ---
 
 ## Overview

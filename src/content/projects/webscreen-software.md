@@ -30,6 +30,13 @@ isShow: true
 image: /202602/webscreen_black_1_500.webp
 createdAt: '2026-02-24'
 updatedAt: '2026-02-24'
+relatedProjects:
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
+- sha2017-badge-firmware
+- bitclock
+- bruce-firmware
+- unigeek-firmware
+- openhasp-firmware
 ---
 
 WebScreen is a hackable, open-source gadget designed for gamers, makers, and creators who want a distraction-free way to stay in the zone. Built on the powerful ESP32-S3 platform, the WebScreen Software provides a complete ecosystem for running custom JavaScript applications on a high-resolution AMOLED display. The project emphasizes modularity, allowing users to easily bridge the gap between high-level scripting and low-level hardware control.

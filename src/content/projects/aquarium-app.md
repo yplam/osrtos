@@ -17,6 +17,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- coral-reef-monitoring-system
+- borneoiot-professional-aquarium-lighting-platform
+- iot-project-on-hvac
+- esp8266-mlx90614-temperature-monitor
+- aquarios-project-aquarius
+- esp-temperature-to-losant-using-mongoose-os
 ---
 
 Managing a home aquarium requires constant attention to temperature and equipment status. The **Aquarium App** project provides a robust, DIY solution for remote fish tank monitoring and control, leveraging the power of the ESP8266 microcontroller and the Mongoose OS framework.

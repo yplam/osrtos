@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- picoweb
+- tinyweb
+- uht-micro-http-toolkit
+- microwebsrv
+- raspberry-pi-pico-web-server-control
+- pycopy-standard-library-pycopy-lib
 ---
 
 ## The Impossibly Small Web Framework

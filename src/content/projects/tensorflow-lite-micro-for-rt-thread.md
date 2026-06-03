@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- edgeai-utensor-embedded-rtos-for-arm-processors
+- pruning-deep-learning-models-for-arm-cortex-m
+- stm32n6-getting-started-for-audio-ai
+- micro-ros-for-rt-thread
+- speech-recognition-on-stm32-using-machine-learning
+- magic-wand-on-mbed
 ---
 
 ## Introduction to Tensorflow Lite Micro on RT-Thread

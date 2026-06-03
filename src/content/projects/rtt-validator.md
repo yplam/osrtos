@@ -14,6 +14,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- c-crc-for-rt-thread
+- rtt-math-mathematics-library-for-rt-thread
+- rtt-libfilter-digital-filter-library-for-rt-thread
+- rust-support-for-rt-thread
+- rust-stub-library-for-apache-nuttx
+- rt-thread-package-list
 ---
 
 RTT-Validator is a specialized library designed for the RT-Thread real-time operating system, focusing on providing robust validation algorithms for embedded development. In the context of resource-constrained systems, ensuring data integrity during transmission or storage is critical, and this library offers a standardized way to implement these checks within the RT-Thread ecosystem.

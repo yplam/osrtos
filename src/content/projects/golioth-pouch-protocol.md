@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-03-24'
 updatedAt: '2026-03-24'
+relatedProjects:
+- golioth-zephyr-sdk
+- golden-gate
+- anjay-zephyr
+- pyrinas-zephyr
+- sentrius-mg100-gateway-firmware
+- golioth-firmware-sdk
 ---
 
 ## Overview

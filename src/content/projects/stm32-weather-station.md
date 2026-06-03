@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- erikaos-online-weather-station
+- wt32-sc01-plus-smart-desk-companion
+- stm32f407-weather-clock-cmake-development-template
+- stm32l476g-discovery-rtos-sensor-project
+- desk-weather-clock-geekmagic-s3
+- stm32f4-display-and-ethernet-example
 ---
 
 The STM32 Weather Station is a sophisticated embedded project that transforms an STM32F746G-Discovery board into a functional desktop weather monitoring system. By combining local sensor data with real-time information from the Open Weather Map API, the station provides a detailed view of both indoor and outdoor environmental conditions through a professional-grade graphical interface.

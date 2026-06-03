@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-24'
 updatedAt: '2026-01-24'
+relatedProjects:
+- iot-industrial-operation-and-room-condition-monitor
+- pulse
+- smart-plant-monitoring-system
+- pulse-real-time-vibration-anomaly-detection
+- esp32-cam-yolo-object-and-animal-detection
+- light-watcher
 ---
 
 ## Overview

@@ -21,6 +21,13 @@ isShow: true
 image: /202602/gps-tft.webp
 createdAt: '2026-02-28'
 updatedAt: '2026-02-28'
+relatedProjects:
+- james-rocket-controller
+- plane-radar
+- nearplane-adsb-tracker
+- protoflight
+- freevario
+- bbn-m5stack-tough-sailing-instruments
 ---
 
 ## Overview

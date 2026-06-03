@@ -39,6 +39,13 @@ isShow: true
 image: /202604/clawputer.webp
 createdAt: '2026-04-27T00:35:51+00:00'
 updatedAt: '2026-04-27T00:35:51+00:00'
+relatedProjects:
+- ghost-esp
+- ghostesp
+- esp-hack-fw
+- marauder-centauri
+- mbed-ble-gap-scanner
+- bluehound
 ---
 
 ## Navigating the BLE Landscape with GhostBLE

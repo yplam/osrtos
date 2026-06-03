@@ -18,6 +18,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- arduino-littlefs-spimemory-wrapper
+- spiffs-for-esp8266-non-os-sdk
+- littlefs-for-esp-idf
+- 107-arduino-littlefs
+- arduino-freertos-library
+- littlefs-mbed-rp2040
 ---
 
 Integrating a reliable file system into resource-constrained microcontrollers can be a challenge, especially when dealing with external SPI flash memory. The **avr_spiffs** project addresses this by providing a streamlined port of the SPIFFS (SPI Flash File System) specifically for the AVR architecture, with a focus on the Arduino Mega 2560.

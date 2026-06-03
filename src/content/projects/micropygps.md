@@ -21,6 +21,13 @@ isShow: true
 image: /202512/micropy-gps.webp
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- cardputer-gps-info
+- esp32-gps-gateway-with-rtk-ntrip-support
+- micropython-mpu9x50-imu-driver
+- ubxgpsi2c
+- micropython-lib
+- semito-v-micropython-compatibility-layer-mcl
 ---
 
 ## Overview

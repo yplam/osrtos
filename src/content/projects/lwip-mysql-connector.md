@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- littledb-sql-like-database-for-esp32
+- w5500-lwip-binding-for-freertos
+- sqlite-for-raspberry-pi-pico
+- ip-over-usb
+- d21rndis-usb-rndis-for-samd21
+- lwirax
 ---
 
 ## Overview

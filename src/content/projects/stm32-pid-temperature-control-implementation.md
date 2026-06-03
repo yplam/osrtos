@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lal-control-for-mbed-os
+- embedded-graphical-interface-for-pid-control
+- stm32f103-thermometer-and-data-logger
+- kompressorklock
+- reflow-oven-with-micropython-lvgl
+- stm32l476g-discovery-rtos-sensor-project
 ---
 
 ## Overview

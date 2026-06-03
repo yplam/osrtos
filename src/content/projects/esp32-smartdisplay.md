@@ -36,6 +36,13 @@ version: 2.1.0
 lastUpdated: '2025-12-15'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- lvgl-display-and-touchpad-drivers-for-esp32
+- micropython-library-for-the-cheap-yellow-display-cyd
+- lvgl-port-for-esp32
+- esp-lvgl
+- esp32-cheap-yellow-display-micropython-lvgl
+- bsp-for-wireless-tag-wt32-sc01-plus-sc01-esp-idf-5-x-lvgl-9-x
 ---
 
 The world of low-cost ESP32-based smart displays, often referred to as 'Cheap Yellow Displays' (CYD) from Sunton, has long been a double-edged sword for developers. While the hardware is affordable and capable, the software ecosystem has historically been fragmented. Developers often found themselves juggling disparate examples, struggling with complex configurations in libraries like TFT_eSPI, or dealing with touch drivers that didn't quite align with their display rotation. The **esp32-smartdisplay** library was created to solve these exact pain points by providing a cohesive, modern driver layer built specifically for these boards.

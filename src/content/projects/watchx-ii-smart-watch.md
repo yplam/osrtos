@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- watchx-open-source-smartwatch
+- ov-watch
+- leta
+- opentimewatch-os
+- zswatch
+- zephyrwatch
 ---
 
 ## Overview

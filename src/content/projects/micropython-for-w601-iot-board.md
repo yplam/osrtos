@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-for-pandora-iot-board
+- micropython-for-sparrow-one-board
+- micropython-port-for-rt-thread
+- esp8266-micropython-development
+- micropython-for-kendryte-k210-lobo-port
+- semito-v-micropython-compatibility-layer-mcl
 ---
 
 ## Bringing Python to the W601 IoT Board

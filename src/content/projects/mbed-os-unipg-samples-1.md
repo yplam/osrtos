@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- unipg-mbed-os-samples
+- arm-kl25z-mbed-ide-example-programs
+- stm32f4-cmsis-lessons
+- chibios-rt-examples-for-stm32f401re-nucleo
+- esp32-repo
+- mongoose-os-samples-for-esp32
 ---
 
 ## Overview

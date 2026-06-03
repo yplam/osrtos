@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-04-07T23:30:42+00:00'
 updatedAt: '2026-04-07T23:30:42+00:00'
+relatedProjects:
+- melody-machine
+- esp32-s3-soundfont-sf2-sampler-synthesizer
+- high-fidelity-esp32-bluetooth-audio-sink-with-premium-codecs
+- esp32-a2dp-sink-with-ldac-aptx-hd-and-aac-support
+- radiojkk32-multifunctional-internet-radio-player
+- tinyradio9-for-wt32-sc01-plus
 ---
 
 The ESPer CDP project bridges the gap between vintage optical media and modern microcontroller capabilities. At its core, it is a DIY CD player built around the ESP32, specifically designed to interface with standard IDE-based CD-ROM drives. This isn't just a simple controller; it's a full-featured audio playback system that leverages the ESP32’s processing power to handle digital audio streams with high fidelity.

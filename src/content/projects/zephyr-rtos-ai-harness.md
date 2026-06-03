@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-05-05T23:29:23+00:00'
 updatedAt: '2026-05-05T23:29:23+00:00'
+relatedProjects:
+- tenstorrent-zephyr-platforms
+- bridle
+- zbot
+- swedish-embedded-platform-sdk
+- swedish-embedded-workstation
+- tenstorrent-system-firmware
 ---
 
 ## Bridging AI and Embedded Development

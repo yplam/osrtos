@@ -20,6 +20,13 @@ isShow: true
 image: /202602/t_glass_v2.webp
 createdAt: '2026-02-08'
 updatedAt: '2026-02-08'
+relatedProjects:
+- esp32-tux
+- develop-your-own-bluetooth-low-energy-applications
+- ameba-freertos-pro2-sdk
+- twatch-v3-firmware-for-esp32
+- echolens-ai-powered-smart-glasses
+- esp-e-paper-component
 ---
 
 The T-Glass v2 project offers a specialized ecosystem for developers looking to build and deploy applications on an affordable, ESP32-S3-based smart glasses platform. Priced at a fraction of high-end wearables, it provides a feature-rich environment for exploring IoT, wearable interfaces, and sensor integration.

@@ -15,6 +15,13 @@ topics:
 isShow: true
 createdAt: '2026-05-12T01:14:58+00:00'
 updatedAt: '2026-05-12T01:14:58+00:00'
+relatedProjects:
+- openscope-2c53t
+- retrofit-electronic-clock-with-raspberry-pi-pico-w
+- ev2400-reimplementation-for-raspberry-pi-pico
+- dt78-esp32-firmware
+- holy-stone-h120d-drone-protocol-reverse-engineering
+- esp-hack-fw
 ---
 
 ## Hacking a USB-C Multimeter

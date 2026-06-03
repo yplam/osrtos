@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-30'
 updatedAt: '2026-01-30'
+relatedProjects:
+- livekit-esp32-sdk
+- espai-unified-ai-api-client-for-esp32
+- kendryte-k210-freertos-sdk
+- openrouter-esp-idf-client
+- elatoai-realtime-voice-ai-on-esp32
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
 ---
 
 OneSDK is a comprehensive integrated development kit designed to bring advanced AI capabilities to client-side and embedded devices. Developed by Volcengine, it provides a unified interface for accessing Large Language Models (LLMs), enabling features like real-time voice conversations, streaming text chats, and intelligent agents directly on edge hardware.

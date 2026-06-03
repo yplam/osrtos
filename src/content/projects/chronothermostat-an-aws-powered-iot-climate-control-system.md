@@ -22,6 +22,13 @@ star: 1
 lastUpdated: '2019-10-02'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- iot-project-on-hvac
+- bluetooth-mesh-sensor-network
+- pellet-stove-aws-iot-bridge-for-esp32
+- mongoose-os-environmental-sensors-application
+- smart-farming-iot-system
+- smart-heating-iot-system
 ---
 
 Building a modern climate control system requires more than just a simple thermostat; it demands a distributed architecture capable of handling multiple rooms, remote access, and robust data logging. The **Chronothermostat** project is a sophisticated implementation of this concept, leveraging the ESP32 microcontroller and Raspberry Pi 3 to create a seamless IoT environment powered by Amazon Web Services (AWS).

@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rttrust-rust-wrapper-for-rt-thread
+- freertos-rust
+- cmsis-rtos2-compatibility-layer-for-rt-thread
+- rust-stub-library-for-apache-nuttx
+- arduino-rt-thread-library
+- micro-ros-for-rt-thread
 ---
 
 ## Overview

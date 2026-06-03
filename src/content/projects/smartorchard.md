@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- smart-orchard
+- smart-heating-iot-system
+- smart-dc-maintenance
+- homeiot-smart-home-automation-system
+- low-power-wireless-networking-for-iot-lpiot
+- coral-reef-monitoring-system
 ---
 
 SmartOrchard is an integrated IoT project designed to modernize orchard management through automated monitoring and control. The system is divided into two primary components: a Low Power and Lossy Network (LLN) consisting of various "mote" devices and a centralized cloud application for data visualization and device interaction.

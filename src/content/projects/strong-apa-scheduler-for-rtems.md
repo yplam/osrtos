@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- freertos-wrapper-for-rt-thread
+- str-xenomai-real-time-systems-practices
+- rl-tsch-implementation-for-contiki-ng
+- development-of-real-time-systems-assignments
+- freertos-cell-for-the-jailhouse-hypervisor
+- freertos-port-for-renesas-rh850
 ---
 
 ## Overview

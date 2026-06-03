@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- deep-analysis-of-rt-thread-operating-system
+- zig-on-risc-v-bl602-with-apache-nuttx-rtos
+- building-wireless-sensor-networks-with-openthread
+- spotflow-observability-device-sdk
+- awesome-zephyr-rtos
+- zephyr-lvgl-sample-for-nrf52840-mdk
 ---
 
 ## Overview

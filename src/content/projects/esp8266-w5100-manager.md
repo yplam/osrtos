@@ -37,6 +37,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-w5500-manager
+- asyncesp8266-w5100-manager
+- esp8266-enc-manager
+- esp32-w5500-manager
+- asyncesp8266-w5500-manager
+- asyncesp8266-enc-manager
 ---
 
 The ESP8266_W5100_Manager library is a specialized tool designed for developers using the ESP8266 platform with wired Ethernet connectivity via Wiznet W5100 or W5100S controllers. While the ESP8266 is primarily known for its WiFi capabilities, many industrial and stable IoT applications require the reliability of a wired connection. This library bridges the gap by providing a robust 'WiFiManager-style' experience for Ethernet, allowing users to configure network credentials and static IP settings at runtime without hardcoding them into the firmware.

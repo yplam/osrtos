@@ -17,6 +17,13 @@ star: 0
 lastUpdated: '2017-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- stm32f1-rtos-example-project
+- stm32l475-freertos-iot-project
+- chibios-rt-examples-for-stm32f401re-nucleo
+- sk-mstm32f107-demo-board-example
+- rt-thread-bsp-for-stm32f407vet6
+- stm32f429-nucleo-lwip-and-freertos-template
 ---
 
 ## Bringing eChronos to the STM32F4 Nucleo

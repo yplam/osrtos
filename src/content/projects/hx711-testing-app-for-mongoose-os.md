@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- hx711-library-for-mongoose-os
+- max17263-test-app-for-mongoose-os
+- mcp2515-can-testing-app-for-mongoose-os
+- max17263-library-for-mongoose-os
+- ds18b20-mgos-test
+- lis3dh-accelerometer-library-for-mongoose-os
 ---
 
 ## Overview

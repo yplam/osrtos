@@ -31,6 +31,13 @@ isShow: true
 image: /202601/esp32_cyd_weather_station_01_600h.webp
 createdAt: '2026-01-13'
 updatedAt: '2026-01-13'
+relatedProjects:
+- weather-micro-station-for-t-display-s3
+- esp8266-esp32-spotify-oled-display
+- stm32-weather-station
+- wt32-sc01-plus-smart-desk-companion
+- erikaos-online-weather-station
+- desk-weather-clock-geekmagic-s3
 ---
 
 The ESP32 Cheap Yellow Display (CYD) has emerged as a versatile platform for rapid prototyping, combining a powerful ESP32 microcontroller with a 2.8-inch color TFT display, touch capabilities, and an SD card reader. This project transforms the CYD into a sophisticated internet-connected weather station, capable of displaying current conditions and a three-day forecast. By pulling data from the OpenWeatherMap API, the station provides real-time meteorological information in a compact, desktop-friendly form factor.

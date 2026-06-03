@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- bc28-mqtt-package-for-rt-thread
+- cicada-iot-communications-module-for-energy-access
+- esp32-pppos-client-example
+- iotsharp-for-rt-thread
+- quectel-gsm-lte-modem-driver
+- pppos-example-for-mongoose-os
 ---
 
 ## Overview

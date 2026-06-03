@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- apache-nuttx-rtos-on-64-bit-risc-v
+- apache-nuttx-rtos-for-pinephone
+- pinedio-stack-bl604-on-apache-nuttx-rtos
+- pinephone-usb-driver-for-apache-nuttx-rtos
+- mbed-os-6-port-for-weact-stm32h743vit6
+- micropython-for-kendryte-k210-lobo-port
 ---
 
 The Pine64 Star64 is a high-performance 64-bit RISC-V single-board computer powered by the StarFive JH7110 SoC. This repository documents the ongoing effort to port and optimize the Apache NuttX Real-Time Operating System (RTOS) for the Star64, offering a lightweight, POSIX-compliant alternative to Linux for developers working on RISC-V hardware.

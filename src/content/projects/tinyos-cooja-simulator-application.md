@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- contiki-simple-traffic-light
+- tinyos-social-distancing-application
+- cooja-using-contiki
+- networked-embedded-systems-nes-project
+- rbo-protocol-simulation-for-tinyos
+- home-automation-simulation-using-contiki-os
 ---
 
 The TinyOS Cooja Simulator project provides a practical implementation of a wireless sensor network (WSN) application designed to run within the Cooja simulation environment. This application demonstrates the fundamental concepts of TinyOS development, including component-based architecture, event-driven programming, and radio communication between multiple motes.

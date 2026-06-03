@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32-lvgl-8-x-sdspi-template
+- bsp-for-wireless-tag-wt32-sc01-plus-sc01-esp-idf-5-x-lvgl-9-x
+- sc01-plus-hmi-example-with-squareline-studio
+- jc2432w328-microcontroller-board-documentation
+- esp32-tux
+- lvgl-8-on-wt32-sc01-with-arduino
 ---
 
 ## Overview

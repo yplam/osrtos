@@ -28,6 +28,13 @@ isShow: true
 image: /202601/pico_rgbw_rgb.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lvgl-for-raspberry-pi-pico-hub75-led-matrix
+- neoled
+- hub75-dma-based-driver-for-raspberry-pi-pico
+- fastled-idf
+- mongoose-os-ws2812b-driver
+- rgblight-iot-rgb-led-controller
 ---
 
 ## Overview

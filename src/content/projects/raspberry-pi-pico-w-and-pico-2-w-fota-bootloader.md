@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-02-26'
 updatedAt: '2026-02-26'
+relatedProjects:
+- raspberry-pi-pico-w-fota-example-application
+- yaota8266-ota-bootloader
+- mbed-bootloader
+- sdcard-boot-with-ota-for-micropython
+- bleota-esp32-ota-updates-over-ble
+- stm32-bootloader
 ---
 
 ## Overview

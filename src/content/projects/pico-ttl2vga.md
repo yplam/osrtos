@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-04-03T05:39:36+00:00'
 updatedAt: '2026-04-03T05:39:36+00:00'
+relatedProjects:
+- picoave
+- picogamepadconverter
+- pc-6001mkii-emulator-for-raspberry-pi-pico
+- msx1-emulator-for-raspberry-pi-pico
+- serial-vga-controller
+- pico-cec
 ---
 
 PICO TTL2VGA is a hardware and software solution designed to bridge the gap between legacy computing hardware and modern displays. By utilizing the Raspberry Pi Pico (RP2040), this project converts TTL-level video signals—specifically MDA, CGA, and EGA—into a standard VGA output format of 720x400 at 70Hz.

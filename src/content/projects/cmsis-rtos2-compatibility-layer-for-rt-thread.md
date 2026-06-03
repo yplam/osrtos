@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- cmsis-rtos1-compatibility-layer-for-rt-thread
+- c-os-ii-compatibility-layer-for-rt-thread
+- freertos-wrapper-for-rt-thread
+- c-os-iii-compatibility-layer-for-rt-thread
+- c-common-for-rt-thread
+- rtduino
 ---
 
 ## Bridging the Gap: CMSIS-RTOS2 on RT-Thread

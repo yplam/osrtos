@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- texas-aimbots-embedded-development
+- aruw-main-control-board-mcb
+- breeze
+- spirit-motor-driver-library
+- arm-control-framework-acorns-rover
+- xiaomi-cybergear-arduino-library
 ---
 
 ## Overview

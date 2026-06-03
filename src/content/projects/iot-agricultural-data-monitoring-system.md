@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- espmonitor-iot-environmental-monitoring-system
+- smart-farming-iot-system
+- smart-plant-monitoring-system
+- espmonitor-iot-environment-monitoring-system
+- esp8266-dht22-spiffs-web-server
+- iot-industrial-operation-and-room-condition-monitor
 ---
 
 ## Overview

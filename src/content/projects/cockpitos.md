@@ -31,6 +31,13 @@ topics:
 isShow: false
 createdAt: '2026-01-31'
 updatedAt: '2026-01-31'
+relatedProjects:
+- hyperk
+- esp32-p4-home-assistant-display
+- deck
+- fastled-idf
+- klipper-esp32
+- pixlpal-m1-firmware
 ---
 
 CockpitOS is a specialized firmware project designed for flight simulation enthusiasts who build physical cockpit panels for DCS World. Built natively for the ESP32 family—including the Classic, S2, S3, C3, C6, and P4 variants—it acts as a high-performance bridge between physical hardware and the simulator using the DCS-BIOS protocol. While inspired by the original DCS-BIOS Arduino Library, CockpitOS is reimagined for modern hardware, offering native USB support, wireless connectivity, and a robust architecture suited for complex multi-panel setups.

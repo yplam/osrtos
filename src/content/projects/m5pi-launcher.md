@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-demo-printer-for-raspberry-pi-3
+- tab5-launcher
+- lvgl-android-style-launcher
+- lvgl-game-boy-advance-emulator
+- lvgl-for-embedded-linux
+- lvgl-terminal-for-pinephone-on-apache-nuttx
 ---
 
 ## Overview

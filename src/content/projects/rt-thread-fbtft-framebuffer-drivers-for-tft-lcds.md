@@ -13,6 +13,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lvgl-display-and-touchpad-drivers
+- lvgl-display-and-touchpad-drivers-for-esp32
+- rtt-ssd1306-oled-driver-package
+- littlevgl2rtt
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
+- lvgl-for-embedded-linux
 ---
 
 ## Bringing Standardized Display Support to RT-Thread

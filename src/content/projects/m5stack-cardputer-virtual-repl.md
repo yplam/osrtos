@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-03-02'
 updatedAt: '2026-03-02'
+relatedProjects:
+- jupyter-micropython-kernel
+- micropython-for-flipper-zero
+- tulip-creative-computer
+- micropython-kitchen-sink-for-m5stack
+- micro-repl
+- deskpet-for-m5stack-cardputer
 ---
 
 The `cardputer_repl` project provides a specialized Virtual REPL (Read-Eval-Print Loop) environment tailored for the M5Stack Cardputer. The Cardputer is a portable computing device powered by the M5StampS3, featuring a built-in keyboard and display. While CircuitPython typically provides a REPL over a serial USB connection, this project enables a standalone interactive experience directly on the device's hardware, allowing users to write and test code without a host computer.

@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rt-thread-full-featured-vsnprintf-package
+- ppool-for-rt-thread
+- freertos-wrapper-for-rt-thread
+- ff-iso-stm32-multitasking-fatfs-sdio
+- rt-thread-smart-porting-for-risc-v-qemu-and-k210
+- rust-support-for-rt-thread
 ---
 
 ## Overview

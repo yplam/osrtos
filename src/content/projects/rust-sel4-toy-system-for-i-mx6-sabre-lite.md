@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- fel4-test-project
+- solox-amp-rust
+- advanced-operating-system-2017-sos
+- sel4twinkle-alloc-rs
+- ferros
+- sel4-hobd-prototype-system
 ---
 
 ## Overview

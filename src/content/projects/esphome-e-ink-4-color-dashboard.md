@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-30'
 updatedAt: '2026-01-30'
+relatedProjects:
+- esp32-p4-home-assistant-display
+- lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
+- esp32-s3-smart-home-control-panel
+- home-assistant-epaper-remote
+- 42-smart-cluster-sign
+- e-ink-assist-screen
 ---
 
 ## Overview

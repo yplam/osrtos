@@ -19,6 +19,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- patient-monitoring-system-using-96boards
+- apache-mynewt-sensor-network-for-stm32-blue-pill
+- home-smart-mesh-sdk-for-thingy53
+- chronothermostat-an-aws-powered-iot-climate-control-system
+- swarmsense-iot-platform-with-mongoose-os
+- espmonitor-iot-environmental-monitoring-system
 ---
 
 The Bluetooth Mesh Sensor Network project is a sophisticated IoT implementation designed for environmental monitoring. Developed as a group project at TU Wien, it demonstrates a full-stack approach to IoT, spanning from low-power embedded firmware to cloud-based data visualization. The system is built to monitor temperature, humidity, pressure, and CO2 levels across multiple rooms while providing a secure, asynchronous, and energy-efficient communication architecture.

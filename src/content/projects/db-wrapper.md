@@ -23,6 +23,13 @@ star: 21
 lastUpdated: '2021-05-25'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- csvql
+- lwip-mysql-connector
+- qdbm-library-for-mongoose-os
+- sqlite-for-raspberry-pi-pico
+- nesper-nim-wrappers-for-esp-idf
+- bloom
 ---
 
 In the Nim ecosystem, database interaction is often handled by standard libraries that, while functional, sometimes lack advanced features like native connection pooling. This can lead to performance bottlenecks or synchronization errors when attempting to run multiple queries in parallel. **db_wrapper** is designed to solve these issues by providing an intuitive, high-speed interface for MySQL, PostgreSQL, and SQLite with built-in connection management.

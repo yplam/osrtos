@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- losant-mqtt-example-for-mongoose-os
+- swarmsense-iot-platform-with-mongoose-os
+- mongoose-os-programs-and-examples
+- mongoose-os-samples-for-esp32
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- esp-temperature-to-losant-using-mongoose-os
 ---
 
 ## Overview

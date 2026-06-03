@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pomia-rs
+- modular-music-cv-gate-sequencer-for-stm32
+- stm32f103-thermometer-and-data-logger
+- stm32f4-digital-synthesizer
+- midi-player-for-nucleo-f446re
+- pixlpal-m1-firmware
 ---
 
 RyAttn is a specialized firmware project designed for high-quality audio attenuation using a relay-based ladder network. Built for the popular STM32F103 "BluePill" development board, it provides a sophisticated control interface for audio enthusiasts and DIY builders looking for precise, transparent volume control.

@@ -32,6 +32,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- mbed-to-aws-iot-example
+- mbed-to-ibm-watson-iot-platform
+- mbed-to-google-cloud-iot
+- mqtt-demo-for-stm32-iot-discovery-board-with-thingsboard
+- mbed-to-azure-iot-hub
+- smartlock-for-disco-l475vg-iot01a
 ---
 
 The L475VG-IOT01A-Mbed-AWS-IoT project provides a robust starting point for developers looking to integrate the STMicroelectronics STM32L4 Discovery Kit IoT Node with the Amazon Web Services (AWS) IoT ecosystem. Built on the ARM Mbed OS platform, this application bridges the gap between embedded hardware and cloud-based device management.

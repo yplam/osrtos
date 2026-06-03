@@ -19,6 +19,13 @@ isShow: true
 image: /202602/taller-pocket-gone.webp
 createdAt: '2026-02-06'
 updatedAt: '2026-02-06'
+relatedProjects:
+- ghost-esp
+- nrfbluenullifier
+- ghostble
+- esp32-bluejammer
+- pathshield
+- esp32-ble-ota-arduino
 ---
 
 Pocket Gone is a specialized diagnostic tool designed for analyzing and managing Bluetooth speaker environments. Developed primarily for the ESP32 platform, it offers a range of features from identifying congested RF channels to a specific silencing mode intended for use with the user's own equipment.

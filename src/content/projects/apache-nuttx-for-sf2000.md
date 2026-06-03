@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- apache-nuttx-rtos
+- nuttx-real-time-operating-system
+- apache-nuttx-rtos-for-pinephone
+- apache-nuttx-rtos-for-pine64-star64
+- phoenix-rtos-project
+- rt-thread-smart-porting-for-risc-v-qemu-and-k210
 ---
 
 ## Overview

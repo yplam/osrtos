@@ -37,6 +37,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp-doubleresetdetector-library
+- multiresetdetector-generic-library
+- doubleresetdetector-generic
+- bleeper
+- espsavecrashspiffs
+- rtcmemory
 ---
 
 The ESP_MultiResetDetector library is a specialized tool for developers working with ESP8266 and ESP32 microcontrollers, particularly in the IoT space. It addresses a common challenge in embedded systems: providing a user-friendly way to trigger a "factory reset" or "configuration mode" on devices that may lack physical buttons or complex user interfaces.

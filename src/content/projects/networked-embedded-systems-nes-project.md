@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- low-power-wireless-networking-for-iot-lpiot
+- tinyos-cooja-simulator-application
+- iot-labs-with-contiki-os
+- knu-usn-automatic-ventilation-system
+- motesync
+- apache-mynewt-sensor-network-for-stm32-blue-pill
 ---
 
 ## Overview

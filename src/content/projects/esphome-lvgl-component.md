@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- lvgl-port-for-esp32
+- lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
+- lvgl-display-and-touchpad-drivers-for-esp32
+- openhasp-firmware
+- esp-lvgl
+- esp-e-paper-component
 ---
 
 ## Overview

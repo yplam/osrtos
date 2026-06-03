@@ -38,6 +38,13 @@ isShow: true
 image: /202602/DeautherX.webp
 createdAt: '2026-02-11'
 updatedAt: '2026-02-11'
+relatedProjects:
+- madwifi
+- wifiphisher-for-esp32
+- evil-bw16-webui
+- wifi-nightmare
+- minigotchi-esp32
+- infiltra-firmware
 ---
 
 DeautherX is a specialized firmware for the ESP8266 microcontroller, engineered to facilitate 802.11 network testing and security auditing. As an evolution of the popular ESP8266 Deauther project, it introduces several advanced features, including a customizable Evil Twin attack module and a WiFi signal strength checker. The project is primarily used to demonstrate vulnerabilities in the 2.4GHz WiFi spectrum, specifically targeting the deauthentication frame mechanism used in older wireless standards.

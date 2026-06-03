@@ -17,6 +17,13 @@ star: 2
 lastUpdated: '2025-10-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- speech-recognition-on-stm32-using-machine-learning
+- bruxism-detector
+- stm32n6-getting-started-for-audio-ai
+- fashion-mnist-on-esp32-with-tensorflow-lite-micro
+- mongoose-os-esp8266-pir-monitor
+- tensorflow-lite-micro-for-rt-thread
 ---
 
 SnoreSense is an innovative TinyML project designed to tackle a common health and lifestyle issue: snoring. While often dismissed as a mere nuisance, snoring can be a symptom of more serious conditions like sleep apnea. Traditional monitoring solutions often rely on cloud-based processing, which raises privacy concerns, or expensive specialized hardware. SnoreSense addresses these challenges by performing real-time snore detection entirely on the edge using the Seeed XIAO MG24 Sense.

@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-smarthome-node-pysmartnode
+- mqboard-micropython-mqtt-micro-framework
+- homerpc
+- embeddedmqttbroker
+- thing-simplified-mqtt-framework-for-esp8266-and-esp32
+- iot-framework-for-nodemcu
 ---
 
 Microhomie is a specialized MicroPython framework designed to implement the Homie convention, a lightweight MQTT-based communication standard for the Internet of Things. By providing a structured way for IoT devices to describe themselves and their capabilities over MQTT, Microhomie simplifies the integration of microcontrollers like the ESP8266 and ESP32 into home automation systems and IoT dashboards.

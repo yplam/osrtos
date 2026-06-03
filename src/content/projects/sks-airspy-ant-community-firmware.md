@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- ruuvitag-firmware-for-zephyr-os
+- twatch-v3-firmware-for-esp32
+- esp32-ble-ota-arduino
+- openhaystack-zephyr-firmware
+- bleota-esp32-ota-updates-over-ble
+- opensleep
 ---
 
 ## Overview

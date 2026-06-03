@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f4-digital-synthesizer
+- stm32-pid-temperature-control-implementation
+- esphome-deye-inverter
+- kompressorklock
+- infrared-remote-control-repeater
+- ryattn-audio-relay-attenuator
 ---
 
 ## Overview

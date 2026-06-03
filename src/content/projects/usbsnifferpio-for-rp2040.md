@@ -33,6 +33,13 @@ isShow: true
 image: /boards/raspberry-pi-pico.webp
 createdAt: '2026-04-28T02:39:25+00:00'
 updatedAt: '2026-04-28T02:39:25+00:00'
+relatedProjects:
+- oscilloscope-rp2040
+- mcp2518fd-can-fd-logger-for-raspberry-pi-pico
+- pico-fft-fft-library-for-raspberry-pi-pico
+- ultranet-to-i2s
+- arduino-pico
+- piokmbox-high-performance-usb-hid-passthrough-for-rp2350
 ---
 
 Understanding the inner workings of USB communication often requires expensive protocol analyzers or complex software setups. USBSnifferPIO_RP2040 changes this by turning a standard Raspberry Pi Pico into a high-impedance, passive USB 1.1 sniffer. By offloading timing-critical signal sampling to the RP2040’s unique PIO (Programmable I/O) blocks, this project achieves robust packet capture without interfering with the host or device.

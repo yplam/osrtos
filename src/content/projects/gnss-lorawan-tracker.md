@@ -25,6 +25,13 @@ isShow: true
 image: /202604/gnss_lorawan_tracker.webp
 createdAt: '2026-04-02T12:00:42+00:00'
 updatedAt: '2026-04-02T12:00:42+00:00'
+relatedProjects:
+- zephyr-rtos-lorawan-node
+- lorawan-test-app-for-apache-nuttx
+- lorawan-end-device-with-freertos-and-esp32
+- zephyr-lorawan-lora-examples
+- gps-tracker
+- esp32-watch-for-openhaystack
 ---
 
 The GNSS LoRaWAN Tracker is a specialized embedded project designed for asset tracking and telemetry. By combining the precision of Global Navigation Satellite Systems (GNSS) with the long-range, low-power capabilities of LoRaWAN, this project provides a robust solution for monitoring vehicles or remote equipment. Built on the Zephyr RTOS, the application leverages a modular architecture to manage positioning, connectivity, and hardware state monitoring.

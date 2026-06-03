@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-prototyping-libraries
+- stm32cubeh7rs-mcu-firmware-package
+- stm32f107-makefile-freertos-template
+- stm32-base-project-template
+- stm32-makefile-freertos-project-template
+- enterprise-stm32-platform-development
 ---
 
 ## Overview

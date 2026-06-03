@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- uht-micro-http-toolkit
+- microdot
+- picoweb
+- microwebsrv2
+- microwebsrv
+- nanofish
 ---
 
 TinyWeb is a simple and lightweight HTTP server designed specifically for resource-constrained devices running MicroPython, such as the ESP8266 and ESP32. By providing a modern, asynchronous foundation, TinyWeb allows developers to create sophisticated web interfaces and RESTful APIs for IoT devices without the overhead of traditional web servers.

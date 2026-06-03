@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-makefile-freertos-project-template
+- stm32-base-project-template
+- stm32f429-nucleo-lwip-and-freertos-template
+- air32f103-template-project
+- stm32l475-freertos-iot-project
+- micro-ros-stm32-template
 ---
 
 ## Overview

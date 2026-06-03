@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mcumanager-android
+- mcumgr-dart
+- pelion-device-management-client-example-for-mbed-os
+- mender-ota-example-for-stm32l4-and-zephyr-rtos
+- anjay-zephyr
+- nimble-ota
 ---
 
 ## Overview

@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- littledb-sql-like-database-for-esp32
+- sd-h-and-fs-h-port-for-mongoose-os
+- sqlite3-for-esp-idf
+- sqlite-for-raspberry-pi-pico
+- ltc68xx-battery-monitoring-library-for-mongoose-os
+- max17263-library-for-mongoose-os
 ---
 
 ## Overview

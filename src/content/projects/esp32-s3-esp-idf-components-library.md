@@ -31,6 +31,13 @@ topics:
 isShow: false
 createdAt: '2026-01-17'
 updatedAt: '2026-01-17'
+relatedProjects:
+- icm-20948-component-for-esp-idf
+- stm32-cmsis-libraries
+- esp32-repo
+- mpu6050-interfacing-library-for-esp32-esp-idf
+- esp32-freertos-examples
+- lvgl-display-and-touchpad-drivers-for-esp32
 ---
 
 ## Overview

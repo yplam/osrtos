@@ -13,6 +13,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mbed-cellular-boilerplate
+- zephyr-wi-fi-and-tcp-udp-connection-demo
+- aws-iot-with-the-l475vg-iot01a-on-mbed-os
+- pppos-example-for-mongoose-os
+- mbed-os-client-example
+- embedded-proto-mbed-os-to-server-example
 ---
 
 ## Overview

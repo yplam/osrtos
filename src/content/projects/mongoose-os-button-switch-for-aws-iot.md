@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- losant-mqtt-example-for-mongoose-os
+- losant-mqtt-mongoose-os-example
+- iot-framework-for-nodemcu
+- mongoose-os-aws-iot-uart-and-thing-shadow-example
+- mqtt-wake-on-lan-for-esp8266
+- mongoose-os-configurable-sensor-node
 ---
 
 The Mongoose OS Button Switch project is a streamlined implementation of an IoT edge device using the ESP8266 platform. Specifically targeting the NodeMCU board, this application demonstrates how to bridge physical inputs—like the onboard flash button—to cloud-based services via the MQTT protocol.

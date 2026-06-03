@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-framework
+- arm-control-framework-acorns-rover
+- stm32-rtic-project-template
+- iot-framework-for-nodemcu
+- chibios
+- mbed-os-6-stm32-iot-ethernet-controller
 ---
 
 ## Overview

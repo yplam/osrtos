@@ -20,6 +20,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- la-marzocco-round-controller
+- espgaggia-smart-coffee-machine-controller
+- gaggimate
+- smart-flask-thermos-with-round-display-and-esp32-c3
+- coffee-bin-mqtt
+- esphome-cosori-kettle-ble-component
 ---
 
 For coffee enthusiasts and home baristas, precision is everything. The DIY Smart Coffee and Espresso Scale project bridges the gap between high-end commercial smart scales and DIY hardware, providing a robust ecosystem for tracking espresso extractions in real-time. This project consists of two main components: a high-performance Rust-based firmware for the ESP32 microcontroller and a modern Svelte-powered Progressive Web App (PWA).

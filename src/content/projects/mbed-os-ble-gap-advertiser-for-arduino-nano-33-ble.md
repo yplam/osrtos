@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mbed-ble-gap-scanner
+- arduino-serial-ble
+- develop-your-own-bluetooth-low-energy-applications
+- nano33blesensor
+- esp32-ble-uart-mx
+- nimble-arduino
 ---
 
 ## Overview

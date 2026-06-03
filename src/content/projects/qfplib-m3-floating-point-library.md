@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- qfplib-m0-full-floating-point-library
+- qfplib-m0-tiny
+- stm32-prototyping-libraries
+- rt-memcpy-cortex-m-assembly-accelerated-version
+- arm-cortex-m-hilbert-transform
+- flexptp
 ---
 
 ## High-Performance Floating-Point Arithmetic for Cortex-M3

@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- minimal-mbed-os-template-for-stm32f103
+- stm32f1xx-bare-metal-template
+- stm32-libopencm3-freertos-platformio-template
+- uglystm32
+- stm32duino-lwip
+- stm32f103-cmsis-libraries-and-projects
 ---
 
 ## Overview

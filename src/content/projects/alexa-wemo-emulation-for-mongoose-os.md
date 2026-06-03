@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- arduino-ir-for-mongoose-os
+- telegram-bot-api-for-mongoose-os
+- mongoose-os-relay-library
+- mel-ac-library-for-mongoose-os
+- mongoose-os-aws-iot-uart-and-thing-shadow-example
 ---
 
 ## Overview

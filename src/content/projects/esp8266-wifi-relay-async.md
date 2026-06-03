@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-wifi-relay
+- esp8266-wifi-relay-and-bahtinov-masks-controller
+- esp-async-http-update-server
+- esp8266-mywidget
+- blynk-async-wm
+- esp32-async-web-server-with-spiffs-and-ota
 ---
 
 The ESP8266-WiFi-Relay-Async project provides a robust, asynchronous solution for controlling hardware relays over a WiFi network. Built specifically for the ESP8266 microcontroller, this project leverages the power of non-blocking web services to ensure the device remains responsive even during heavy network traffic or complex state changes.

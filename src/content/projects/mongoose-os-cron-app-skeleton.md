@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- mongoose-os-app-skeleton
+- mongoose-os-app-on-stm32f446re
+- websocket-client-for-mongoose-os
+- empty-mongoose-os-app
+- esp8266-electronic-timekeeper
+- mongoose-os-library-skeleton
 ---
 
 Mongoose OS is a specialized framework designed for the development of IoT firmware, specifically targeting microcontrollers like the ESP32 and ESP8266. The `mongoose-cron-app` project serves as a comprehensive skeleton for developers who need to implement time-based task scheduling—commonly known as cron jobs—within their embedded applications.

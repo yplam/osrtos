@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- opentimewatch-os
+- zephyrwatch
+- wasp-os
+- zswatch
+- leta
+- lvgl-watch-firmware-for-open-smartwatch
 ---
 
 WatchTronome is an open-source application specifically designed for the Huawei Watch GT2 Pro. It transforms the smartwatch into a discreet, tactile metronome by leveraging the device's internal vibration motor. Unlike traditional metronomes that rely on audible clicks or visual cues, WatchTronome allows musicians to feel the tempo directly on their wrist, making it an ideal tool for live performances or practice sessions where audio clarity or silence is paramount.

@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-02-08'
 updatedAt: '2026-02-08'
+relatedProjects:
+- ameba-rtos-sdk
+- kendryte-k210-freertos-sdk
+- esp8266-rtos-software-development-kit-sdk
+- sony-spresense-sdk
+- nuclei-software-development-kit-nuclei-sdk
+- golioth-firmware-sdk
 ---
 
 The Ameba FreeRTOS Pro2 SDK (ameba-rtos-pro2) is the primary software development platform for Realtek's high-performance Ameba Pro2 series microcontrollers. Built upon the FreeRTOS real-time operating system, this SDK is designed for developers building sophisticated IoT devices that require a balance of low power consumption and high-performance multimedia capabilities.

@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- losant-temperature-sensor-for-mongoose-os
+- esp-temperature-to-losant-using-mongoose-os
+- coffee-bin-mqtt
+- ulp-temperature-logging-iot-node
+- mongoose-os-mlx90614-ir-temperature-monitor
+- mqtt-wake-on-lan-for-esp8266
 ---
 
 The PIR-Monitor project is a specialized firmware implementation for the ESP8266 microcontroller, designed to create a highly efficient motion detection system. Built on the Mongoose OS (MOS) framework, the application leverages the ESP8266's low-power capabilities to provide a battery-friendly solution for IoT security and automation.

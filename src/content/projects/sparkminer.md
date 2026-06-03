@@ -38,6 +38,13 @@ isShow: true
 image: /202601/sparkminer.webp
 createdAt: '2026-01-19'
 updatedAt: '2026-01-19'
+relatedProjects:
+- ultrafastsecp256k1
+- fastled-idf
+- sha2017-badge-firmware
+- colibri-wallet
+- bitcoin-card-wallet
+- micropython-for-esp32-with-psram-support-lobo-port
 ---
 
 ## Overview

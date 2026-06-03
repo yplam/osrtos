@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f429-nucleo-lwip-and-freertos-template
+- stm32-cortex-m4-code-examples
+- rp2040-freertos-template
+- stm32f103rb-templates-and-examples
+- eclipse-threadx-iot-devkit-starter-application
+- pico-zephyr-project
 ---
 
 ## Overview

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-02-03'
 updatedAt: '2026-02-03'
+relatedProjects:
+- custom-5x7-dactyl-manuform-with-integrated-trackball
+- clawtype
+- aw-1-keyboard
+- gesture-detecting-macro-keyboard
+- m5-keyboard-and-mouse-emulator
+- polymath-studio-one-handed-keyboard-ps-ohk
 ---
 
 ## Overview

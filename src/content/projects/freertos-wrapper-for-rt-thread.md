@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- cmsis-rtos1-compatibility-layer-for-rt-thread
+- c-os-ii-compatibility-layer-for-rt-thread
+- cmsis-rtos2-compatibility-layer-for-rt-thread
+- c-os-iii-compatibility-layer-for-rt-thread
+- c-common-for-rt-thread
+- rtduino
 ---
 
 The FreeRTOS Wrapper for RT-Thread is a specialized Application Compatibility Layer (ACL) designed to bridge the gap between two popular real-time operating systems. By providing a FreeRTOS-compatible API on top of the RT-Thread kernel, it enables developers to migrate existing FreeRTOS codebases to RT-Thread with minimal modifications. This is particularly useful for teams looking to leverage RT-Thread's extensive software component ecosystem while maintaining their investment in FreeRTOS-based application logic.

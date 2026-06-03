@@ -20,6 +20,13 @@ isShow: true
 image: /202601/clawtype.webp
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- smart-keymap
+- m5-keyboard-and-mouse-emulator
+- rust-ir-thermometer-firmware
+- pomia-rs
+- puntero34-pointer-peripheral
+- nimble-hid-keyboard-and-mouse-example-for-esp32
 ---
 
 ## Overview

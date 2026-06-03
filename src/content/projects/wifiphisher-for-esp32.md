@@ -34,6 +34,13 @@ isShow: true
 image: /202602/esp32wifi-phisher.webp
 createdAt: '2026-02-08'
 updatedAt: '2026-02-08'
+relatedProjects:
+- evil-bw16-webui
+- wifi-nightmare
+- deautherx
+- madwifi
+- marauder-centauri
+- wifiexe-esp32-s3-based-badusb
 ---
 
 ## Overview

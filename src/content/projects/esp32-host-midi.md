@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-27'
 updatedAt: '2026-01-27'
+relatedProjects:
+- esp32-s3-soundfont-sf2-sampler-synthesizer
+- esp32-nimble-hid-client
+- esp32-smartdisplay
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- lilygo-t-display-s3-boilerplate
+- esp32-tux
 ---
 
 ## Overview

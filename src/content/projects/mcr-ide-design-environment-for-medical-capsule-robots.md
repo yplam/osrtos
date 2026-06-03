@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- snu-2d-programming-tools-ide-for-nesc
+- dsml4tinyos-a-domain-specific-language-for-tinyos
+- micropython-plugin-for-pycharm-and-intellij
+- iotjs-plus-tizenrt
+- embedded-medical-devices-bme554l
+- swedish-embedded-workstation
 ---
 
 ## Overview

@@ -36,6 +36,13 @@ version: v1.8.1
 lastUpdated: '2022-12-05'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- multiresetdetector-generic-library
+- esp-doubleresetdetector-library
+- esp-multiresetdetector
+- flexiblebutton
+- onewireng
+- ds323x-generic
 ---
 
 In the world of embedded systems, providing a user-friendly way to enter a configuration mode—such as setting up WiFi credentials or MQTT parameters—can be a challenge, especially on devices with limited physical buttons. The **DoubleResetDetector_Generic** library offers an elegant solution to this problem by detecting when a user presses the reset button twice in quick succession.

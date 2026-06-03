@@ -33,6 +33,13 @@ isShow: true
 image: /202605/m5-paper-buddy.webp
 createdAt: '2026-05-07T23:34:05+00:00'
 updatedAt: '2026-05-07T23:34:05+00:00'
+relatedProjects:
+- deskpet-for-m5stack-cardputer
+- clawy
+- deskpet
+- claude-buddy-pico
+- nebaura-labs-mote
+- bitclock
 ---
 
 ## Your AI Coding Partner in Physical Form

@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- max17263-library-for-mongoose-os
+- ltc68xx-battery-monitoring-library-for-mongoose-os
+- ds248x-1-wire-library
+- max17263-test-app-for-mongoose-os
+- hlw8012-and-bl0937-energy-meter-library-for-mongoose-os
+- onewireng
 ---
 
 Managing primary (non-rechargeable) batteries in embedded systems presents unique challenges compared to standard Li-ion packs. The TI BQ35100 is a dedicated fuel gauge designed specifically for these chemistries, providing accurate state-of-health and remaining capacity information. The **BQ35100 Mbed library** by pilotak provides a robust interface for this chip, specifically tailored for the Mbed OS ecosystem.

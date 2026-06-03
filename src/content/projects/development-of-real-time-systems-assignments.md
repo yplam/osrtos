@@ -17,6 +17,13 @@ star: 22
 lastUpdated: '2019-05-28'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- str-xenomai-real-time-systems-practices
+- xenomai-3-exercises-for-raspberry-pi-4
+- xenomai-3-exercises
+- freertos-emulator
+- ardurtos
+- unipg-mbed-os-samples
 ---
 
 Developing real-time systems often requires a deep understanding of how tasks interact with a scheduler and how timing constraints affect system stability. This repository, created by Ragu Manjegowda, serves as a practical companion to the Coursera course on Real-Time Systems, providing a structured environment to experiment with these concepts using FreeRTOS.

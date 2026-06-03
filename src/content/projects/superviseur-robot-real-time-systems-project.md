@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- xenomai-3-exercises-for-raspberry-pi-4
+- str-xenomai-real-time-systems-practices
+- cuybot-v1-opensource-smartcar-project
+- xenomai-3-exercises
+- development-of-real-time-systems-assignments
+- rtai-ros
 ---
 
 ## Overview

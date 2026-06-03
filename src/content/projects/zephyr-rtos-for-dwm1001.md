@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zephyr-lorawan-lora-examples
+- anjay-zephyr-client
+- openhaystack-zephyr-firmware
+- zephyr-rtos-driver-for-hc-sr04-ultrasonic-sensor
+- zephyr-rtos-lorawan-node
+- ruuvitag-firmware-for-zephyr-os
 ---
 
 ## Overview

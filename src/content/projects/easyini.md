@@ -20,6 +20,13 @@ star: 1
 lastUpdated: '2020-04-18'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- effortless-spiffs
+- esp8266-littlefs-file-handler
+- configassist-esp32-esp8266
+- settings-manager
+- esp8266-config-data-management
+- spiffs-for-esp8266-non-os-sdk
 ---
 
 Managing configuration settings on microcontrollers like the ESP8266 can often be a cumbersome task. Developers frequently resort to hardcoding values or implementing custom parsing logic for simple key-value pairs. **EasyINI** is a utility library specifically designed to streamline this process for the ESP8266 and ESP32 ecosystems by providing a simple interface for reading and writing `.ini` files stored on the SPIFFS (Serial Peripheral Interface Flash File System).

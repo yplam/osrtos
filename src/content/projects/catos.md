@@ -26,6 +26,13 @@ isShow: true
 image: /202601/catos.webp
 createdAt: '2026-01-14'
 updatedAt: '2026-01-14'
+relatedProjects:
+- cardputer-game-station
+- esp32berry
+- esp32-s3-nes-emulator
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
+- esp32-p4-home-assistant-display
+- xterminal-esp32-handheld
 ---
 
 # CatOS: A Versatile Firmware for ESP32 Handheld Consoles

@@ -28,6 +28,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- zephyr-rtos-ai-harness
+- ameba-rtos-sdk
+- esp8266-rtos-software-development-kit-sdk
+- infuse-iot-sdk
+- stm32-framework
+- breeze
 ---
 
 Bridle is an open-source application framework designed to streamline the development of embedded systems using the Zephyr Real-Time Operating System (RTOS). Developed by TiaC Systems, Bridle acts as the "bridle and kite line" that helps developers steer the power of Zephyr (the "kite") toward specific hardware targets and application use cases. It is particularly focused on connected low-power products and safety-critical environments.

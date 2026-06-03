@@ -24,6 +24,13 @@ isShow: true
 image: /202603/nrf24_jammer.webp
 createdAt: '2026-03-06'
 updatedAt: '2026-03-06'
+relatedProjects:
+- cc1101-jammer
+- espnrf24-jammer
+- esp32-2-4ghz-jammer
+- fz-nrf24-jammer
+- esp32-bluejammer
+- esp32-bluetooth-signal-jammer
 ---
 
 The nRF24 Jammer is a specialized firmware for the ESP32 microcontroller designed to explore and demonstrate RF interference in the 2.4GHz spectrum. By leveraging the capabilities of nRF24L01+PA+LNA modules, this project can effectively disrupt various wireless technologies, including Bluetooth, Wi-Fi, Zigbee, and drone control signals. It serves as a powerful tool for security researchers and hobbyists interested in radio frequency behavior and signal integrity.

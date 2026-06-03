@@ -32,6 +32,13 @@ isShow: true
 image: /202603/xiao_mg24.webp
 createdAt: '2026-03-03'
 updatedAt: '2026-03-03'
+relatedProjects:
+- n-able-arduino-core
+- arduino-pico
+- microchip-cmsis-modules-for-arduino
+- supladevice-library
+- arduino-serial-ble
+- hijelhid-blekeyboard
 ---
 
 ## Overview

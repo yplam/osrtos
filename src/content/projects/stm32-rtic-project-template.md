@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pico-rtic-template
+- stm32h743zi-rust-playground
+- stm32-makefile-freertos-project-template
+- stm32-base-project-template
+- rust-for-arduino-portenta-h7
+- stm32f030-cmake-cmsis-project-skeleton
 ---
 
 ## Overview

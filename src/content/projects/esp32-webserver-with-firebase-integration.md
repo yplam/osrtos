@@ -21,6 +21,13 @@ star: 0
 lastUpdated: '2021-02-03'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp-datalogger-with-firebase-and-spiffs
+- esp32-async-web-server-with-spiffs-and-ota
+- esp32-web-server-using-spiffs
+- esp8266-dht22-spiffs-web-server
+- esp32cam-pir-mqtt-spiffs-webserver
+- esp-fs-webserver
 ---
 
 ## Building a Connected Environmental Monitor with ESP32

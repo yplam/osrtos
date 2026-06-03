@@ -18,6 +18,13 @@ isShow: true
 image: /202603/micro-com.webp
 createdAt: '2026-03-24'
 updatedAt: '2026-03-24'
+relatedProjects:
+- esp32-uart-bridge
+- cardputer-gps-info
+- arduino-lab-for-micropython
+- micro-repl
+- esp32-ble-uart-mx
+- linkscope-bpu-uart-analyzer
 ---
 
 MicroCOM is a dedicated serial communication utility tailored for the M5Cardputer, a compact portable computer based on the ESP32-S3. This application transforms the M5Cardputer into a handheld serial terminal, allowing developers and hardware hackers to interface with external microcontrollers, sensors, or any UART-compatible hardware directly from the device's keyboard and screen.

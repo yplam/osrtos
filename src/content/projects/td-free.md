@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-04-01T01:23:02+00:00'
 updatedAt: '2026-04-01T01:23:02+00:00'
+relatedProjects:
+- advanced-filament-sensor-for-elegoo-carbon-centauri
+- openspool
+- bitclock
+- project-aura
+- tinycore-esp32-s3-learning-platform
+- noninvasive-glucometer
 ---
 
 Td-Free is an innovative open-source solution for 3D printing enthusiasts who need to accurately determine the Transmission Distance (td) of their filaments. In the world of "filament painting" and tools like HueForge, knowing exactly how much light passes through a specific material is crucial for achieving predictable color blending and layering results. While commercial solutions exist, Td-Free offers a DIY, cost-effective, and transparent alternative.

@@ -34,6 +34,13 @@ topics:
 isShow: false
 createdAt: '2026-03-07'
 updatedAt: '2026-03-07'
+relatedProjects:
+- stm32-event-triggered-finite-state-machine-framework
+- hsmcpp-hierarchical-state-machine-c-library
+- embedmcp-embedded-mcp-server-library
+- mos-rtos
+- pycopy
+- picoweb
 ---
 
 ## Overview

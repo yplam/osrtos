@@ -22,6 +22,13 @@ isShow: true
 image: /202601/one-rom.webp
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- msx1-emulator-for-raspberry-pi-pico
+- pc-6001mkii-emulator-for-raspberry-pi-pico
+- retrojam-multi-retro-game-console-emulator
+- japi-base
+- t-hmi-c64-emulator
+- pico-smsplus-sega-master-system-and-game-gear-emulator
 ---
 
 One ROM (formerly known as Software Defined Retro ROM or SDRR) is a versatile hardware and firmware solution designed to replace obsolete or failing ROM chips in vintage computers. By leveraging modern microcontrollers, One ROM provides a highly configurable alternative to traditional EPROMs, offering features that were impossible with original hardware, such as software-defined chip selects and multi-image serving.

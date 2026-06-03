@@ -34,6 +34,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- wifimanager-rp2040w
+- wifi-manager-for-micropython
+- esp8266-w5500-manager
+- pico-w-connection-manager-demo
+- esp8266-w5100-manager
+- rtkrovermanager
 ---
 
 ## Overview

@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- mongoose-os
+- sonoff-http-firmware
+- homeiot-smart-home-automation-system
+- mongoose-os-configurable-sensor-node
+- sonoff-basic-firmware-for-openhab
+- openhasp-firmware
 ---
 
 Cloudhome is an emerging home automation system designed to provide a robust firmware foundation for smart devices. While currently a work-in-progress, the project leverages the Mongoose OS framework to handle the complexities of IoT development, such as networking, security, and over-the-air updates.

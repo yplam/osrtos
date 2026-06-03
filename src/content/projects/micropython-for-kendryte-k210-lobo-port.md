@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-for-esp32-with-psram-support-lobo-port
+- kendryte-k210-freertos-sdk
+- rt-thread-board-support-package-for-kendryte-k210
+- micropython-for-pandora-iot-board
+- rt-thread-smart-porting-for-risc-v-qemu-and-k210
+- arduino-pico
 ---
 
 ## Overview

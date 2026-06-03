@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- microdot
+- tinyweb
+- uht-micro-http-toolkit
+- pycopy
+- raspberry-pi-pico-web-server-control
+- pikapython
 ---
 
 picoweb is a "micro" web micro-framework—or "pico-framework"—specifically engineered for radically unbloated web applications. It is built to run on Pycopy, a minimalist and resource-efficient Python implementation, making it an ideal choice for embedded systems where memory and storage are at a premium.

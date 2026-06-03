@@ -18,6 +18,13 @@ topics:
 isShow: true
 createdAt: '2026-04-28T02:36:37+00:00'
 updatedAt: '2026-04-28T02:36:37+00:00'
+relatedProjects:
+- micropygps
+- m5cardputer-gps-logger
+- i2c-scanner-for-m5cardputer
+- papersat
+- esp32-sdr-gps-receiver
+- esp32-gps-gateway-with-rtk-ntrip-support
 ---
 
 Cardputer GPS Info serves as a dedicated utility for the M5Stack Cardputer, transforming the compact handheld into a functional GPS receiver and diagnostic terminal. By reading NMEA data through a serial connection, the tool provides a comprehensive overview of location, speed, and satellite health directly on the integrated display.

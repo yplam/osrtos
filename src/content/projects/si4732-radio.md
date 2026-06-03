@@ -18,6 +18,13 @@ isShow: true
 image: /202601/si4732-radio.webp
 createdAt: '2026-01-23'
 updatedAt: '2026-01-23'
+relatedProjects:
+- tinyradio9-for-wt32-sc01-plus
+- esp32fmradio
+- espri-esp-radio-interface
+- elekstube-ips-custom-firmware
+- qn8066-fm-dsp-rx-tx-arduino-library
+- esp32-web-radio-evo3
 ---
 
 ## Overview

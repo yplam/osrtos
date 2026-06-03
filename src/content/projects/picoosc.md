@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- asyncudp-rp2040w
+- rp2040-hat-lwip-c
+- rp2040-pico-w-esp8285-wifi-library
+- wiznet-freertos-sdk-for-raspberry-pi-pico-ethernet
+- websocket-implementation-for-raspberry-pi-pico-w
+- picoshell
 ---
 
 ## Overview

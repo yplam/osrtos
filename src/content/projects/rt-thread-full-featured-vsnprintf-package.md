@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- thread-safe-rt-kprintf-for-rt-thread
+- arduino-rt-thread-library
+- qfplib-m0-full-floating-point-library
+- freertos-wrapper-for-rt-thread
+- rt-u8g2-u8g2-graphics-library-for-rt-thread
+- c-common-for-rt-thread
 ---
 
 ## Overview

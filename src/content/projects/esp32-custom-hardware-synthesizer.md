@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-30'
 updatedAt: '2026-01-30'
+relatedProjects:
+- esp32-64-band-audio-spectrum-analyser
+- esp32-sd-sampler
+- esp32-s3-soundfont-sf2-sampler-synthesizer
+- esp32-soundfont-sf2-sampler-synthesizer
+- stm32f4-digital-synthesizer
+- xterminal-esp32-handheld
 ---
 
 The ESP32 Custom Hardware Synthesizer project demonstrates how to transform a standard ESP32 microcontroller into a functional digital audio synthesizer. By combining the processing power of the ESP32 with external digital-to-analog conversion hardware, this project provides a foundation for creating custom electronic musical instruments.

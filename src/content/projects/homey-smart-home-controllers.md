@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- esp8266-home-automation
+- esphome-components-for-miot-devices
+- nodemcu-device-lua-modules
+- mongoose-os-samples-for-esp32
+- mongoose-os-programs-and-examples
+- m5stack-esphome-integrations
 ---
 
 ## Overview

@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-04-08T23:40:06+00:00'
 updatedAt: '2026-04-08T23:40:06+00:00'
+relatedProjects:
+- pico-ttl2vga
+- picopeanutgb-game-boy-emulator-for-rp2350
+- pico-cec
+- msx1-emulator-for-raspberry-pi-pico
+- pc-6001mkii-emulator-for-raspberry-pi-pico
+- pico-smsplus-sega-master-system-and-game-gear-emulator
 ---
 
 For retro gaming enthusiasts, bringing classic consoles into the modern era usually involves expensive FPGA-based HDMI modifications. picoAVE changes this dynamic by utilizing the versatile Raspberry Pi RP2040 microcontroller to handle high-speed video processing for the Nintendo Wii. By leveraging the unique hardware features of the RP2040—specifically its Programmable I/O (PIO) blocks and dual-core architecture—this project provides a high-quality digital video output at a fraction of the cost of traditional solutions.

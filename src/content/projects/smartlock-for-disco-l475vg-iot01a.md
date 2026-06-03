@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- aws-iot-with-the-l475vg-iot01a-on-mbed-os
+- open-authenticator-app
+- esp32-mfa-authenticator
+- mbed-to-google-cloud-iot
+- opensk
+- stm32l476g-discovery-rtos-sensor-project
 ---
 
 The SmartLock project is a sophisticated embedded security application designed for the ST DISCO-L475VG-IOT01A board. Leveraging the Mbed OS ecosystem, it provides a robust mechanism for controlling physical access through a combination of Time-based One-Time Passwords (TOTP) and Bluetooth Low Energy (BLE) communication.

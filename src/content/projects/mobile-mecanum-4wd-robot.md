@@ -33,6 +33,13 @@ isShow: true
 image: /202603/Mecanumrobot.webp
 createdAt: '2026-03-04'
 updatedAt: '2026-03-04'
+relatedProjects:
+- andino-open-source-ros-2-educational-robot
+- openrover-robotic-platform
+- quadruped-robot
+- cybergear-ros2-controller
+- stm32f103-quadruped-robot
+- pyespcar-micropython-esp32-wifi-car
 ---
 
 ## Overview

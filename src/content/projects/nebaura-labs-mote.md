@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-02-01'
 updatedAt: '2026-02-01'
+relatedProjects:
+- starmoon-open-source-conversational-ai-device
+- opentoys
+- diy-ai-voice-assistant-for-esp32-s3
+- stackchan-minimal
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- kalo-esp32-voice-chat-ai-friends
 ---
 
 ## Bringing AI to Life with Mote

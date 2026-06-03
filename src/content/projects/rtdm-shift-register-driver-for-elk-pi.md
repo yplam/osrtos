@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- elk-audio-rtdm-driver-for-raspberry-pi
+- real-time-spi-on-xenomai-3
+- soem-w5500-ethercat-master-for-raspberry-pi
+- raspa-realtime-audio-driver-access-library
+- gpio-device-driver-for-beaglebone-black
+- hub75-dma-based-driver-for-raspberry-pi-pico
 ---
 
 The `rpi-shiftreg-rtdm-driver` is a specialized Linux kernel driver designed for the Xenomai real-time framework. Its primary purpose is to manage shift registers on Raspberry Pi-based hardware, specifically targeting the Elk Pi boards used in high-performance audio applications. By leveraging the Real-Time Driver Model (RTDM), this driver ensures that I/O operations remain deterministic and low-latency, which is critical for real-time audio processing environments.

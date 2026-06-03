@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-04-22T00:32:45+00:00'
 updatedAt: '2026-04-22T00:32:45+00:00'
+relatedProjects:
+- tinycore-esp32-s3-learning-platform
+- espuno-pi-zero
+- hail-iot-development-module
+- stm32l476g-discovery-rtos-sensor-project
+- micropython-for-pandora-iot-board
+- nrf54l15-connect-kit
 ---
 
 Cyberboard V2 is a specialized development board that brings the capabilities of the STM32WB55 series to the popular Raspberry Pi Pico form factor. Unlike its predecessor, V2 is a complete redesign focused on providing reliable functionality for environmental and motion sensing projects that require wireless connectivity.

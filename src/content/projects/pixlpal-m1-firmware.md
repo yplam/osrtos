@@ -24,6 +24,13 @@ isShow: true
 image: /202601/pixpal.webp
 createdAt: '2026-01-18'
 updatedAt: '2026-01-18'
+relatedProjects:
+- svitrix-firmware
+- esp32-a2dp-sink-with-ldac-aptx-hd-and-aac-support
+- wt32-sc01-plus-smart-desk-companion
+- echokit-firmware
+- highboy-firmware
+- lumifur-controller
 ---
 
 ## Overview

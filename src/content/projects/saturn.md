@@ -27,6 +27,13 @@ topics:
 isShow: true
 createdAt: '2026-03-31'
 updatedAt: '2026-03-31'
+relatedProjects:
+- unigeek-firmware
+- poseidon
+- bruce-firmware
+- infiltra-firmware
+- esp-hack-fw
+- m5-crystal
 ---
 
 ## Overview

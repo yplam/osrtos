@@ -19,6 +19,13 @@ star: 3
 lastUpdated: '2025-08-09'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- freertos-cpp
+- cmsis-for-stm32-development
+- stm32f1xx-bare-metal-template
+- svdsuite
+- microchip-cmsis-modules-for-arduino
+- single-stm32-header
 ---
 
 Managing hardware registers in embedded C++ development often involves a trade-off between the safety of high-level abstractions and the performance of low-level pointer manipulation. The `development-utils` repository by nakane1chome provides a modern solution to this problem, offering a suite of C++ MMIO (Memory-Mapped I/O) register access classes and SVD-based generation templates.

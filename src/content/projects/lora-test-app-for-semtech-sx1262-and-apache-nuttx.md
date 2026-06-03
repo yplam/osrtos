@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lorawan-test-app-for-apache-nuttx
+- rust-test-app-for-apache-nuttx-os
+- lvgl-test-app-for-apache-nuttx
+- bl602-adc-and-temperature-sensor-test-app
+- tinycbor-test-app-for-apache-nuttx
+- zephyr-lorawan-lora-examples
 ---
 
 ## Overview

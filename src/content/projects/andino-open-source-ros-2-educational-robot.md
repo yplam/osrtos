@@ -26,6 +26,13 @@ isShow: true
 image: /202601/andino.webp
 createdAt: '2026-01-15'
 updatedAt: '2026-01-15'
+relatedProjects:
+- pyespcar-micropython-esp32-wifi-car
+- mobile-mecanum-4wd-robot
+- cuybot-v1-opensource-smartcar-project
+- openrover-robotic-platform
+- korobo-2-1-gen
+- tny-360-quadruped-robot
 ---
 
 # Andino: A Complete Open-Source Platform for ROS 2 Robotics

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-library-for-the-cheap-yellow-display-cyd
+- micropython-stm-lib
+- micropython-lib
+- awesome-micropython
+- micropython-samples-and-drivers
+- m5stack-esphome-integrations
 ---
 
 The MicroPython Kitchen Sink for M5Stack is a specialized repository providing a set of abstractions and helper libraries for developers working with the M5Stack development kit. Built upon the Loboris fork of MicroPython, which is optimized for ESP32 with psRAM, this project aims to jumpstart development by simplifying common hardware tasks and providing a unified interface for the device's peripherals.

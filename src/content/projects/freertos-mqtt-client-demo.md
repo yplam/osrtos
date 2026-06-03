@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- stm32-lwip-mqtt-demo
+- mqtt-client-and-https-server-using-mbedtls
+- stm32h750b-dk-touchgfx-freertos-mqtt-example
+- freertos-coremqtt-agent-demos
+- stm32f429-mqtt-client-with-rtic-and-smoltcp
+- lwip-tcp-ip-stack-on-stm32-microcontroller
 ---
 
 ## Overview

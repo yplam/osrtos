@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- stm32-m-nuttx-custom-board-mod
+- stm32f103-low-power-library-for-mbed-os
+- lwip-ptp-precision-time-protocol-for-lwip
+- flexptp
+- cmsis-drivers-for-efm32-and-stm32
+- tock-for-stm32
 ---
 
 ## Overview

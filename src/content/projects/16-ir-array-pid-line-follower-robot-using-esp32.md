@@ -20,6 +20,13 @@ isShow: true
 image: /202602/16ir_pid_lfr.webp
 createdAt: '2026-02-08'
 updatedAt: '2026-02-08'
+relatedProjects:
+- human-following-robot
+- stm32f103-quadruped-robot
+- reflow-oven-with-micropython-lvgl
+- eva-rt-robotracer
+- cuybot-v1-opensource-smartcar-project
+- pyespcar-micropython-esp32-wifi-car
 ---
 
 ## Overview

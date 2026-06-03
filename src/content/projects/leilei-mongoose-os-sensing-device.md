@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- mongoose-os-configurable-sensor-node
+- iot-framework-for-nodemcu
+- mongoose-os-mlx90614-ir-temperature-monitor
+- losant-mqtt-example-for-mongoose-os
+- coffee-bin-mqtt
+- mongoose-os-programs-and-examples
 ---
 
 ## Overview

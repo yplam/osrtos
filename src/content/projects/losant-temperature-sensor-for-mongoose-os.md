@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- esp-temperature-to-losant-using-mongoose-os
+- mongoose-os-esp8266-pir-monitor
+- mongoose-os-mlx90614-ir-temperature-monitor
+- mongoose-os-environment-logger
+- ulp-temperature-logging-iot-node
+- coffee-bin-mqtt
 ---
 
 The `losant-temp-sensor` project is a practical implementation of an IoT edge device designed to monitor environmental conditions and report them to a cloud-based dashboard. Built using Mongoose OS, this application is specifically tailored for the ESP32, leveraging its internal sensors and low-power capabilities to create a functional temperature monitoring node with minimal external hardware.

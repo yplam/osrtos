@@ -19,6 +19,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- cmsis-for-stm32-development
+- stm32cube-cmsis-core
+- cmsis-drivers-for-efm32-and-stm32
+- modm-devices-curated-microcontroller-device-data
+- stm32-prototyping-libraries
+- stm32f103-cmsis-peripheral-configuration
 ---
 
 ## Understanding CMSIS: The Standard for Cortex-M Development

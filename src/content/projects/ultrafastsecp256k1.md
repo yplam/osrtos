@@ -39,6 +39,13 @@ topics:
 isShow: false
 createdAt: '2026-04-24T09:31:22+00:00'
 updatedAt: '2026-04-24T09:31:22+00:00'
+relatedProjects:
+- sparkminer
+- arduino-pico
+- awtk-toolkit-anywhere
+- pikapython
+- qfplib-m0-full-floating-point-library
+- asyncmqtt-esp32
 ---
 
 UltrafastSecp256k1 is a high-performance cryptographic engine designed to push the limits of secp256k1 operations across a vast array of hardware. While many libraries focus on a single platform, this project provides a unified C++20 core that scales from the massive parallel processing power of modern GPUs down to the resource-constrained environments of microcontrollers like the ESP32 and STM32. It is built for modern workloads including blockchain infrastructure, high-throughput signature verification, and zero-knowledge proof pipelines.

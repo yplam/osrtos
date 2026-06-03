@@ -22,6 +22,13 @@ isShow: true
 image: /202603/smart-beehive.webp
 createdAt: '2026-03-19'
 updatedAt: '2026-03-19'
+relatedProjects:
+- smart-farming-iot-system
+- espmonitor-iot-environmental-monitoring-system
+- espmonitor-iot-environment-monitoring-system
+- smart-plant-monitoring-system
+- iot-industrial-operation-and-room-condition-monitor
+- iot-agricultural-data-monitoring-system
 ---
 
 ## Overview

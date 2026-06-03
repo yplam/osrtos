@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-17'
 updatedAt: '2026-01-17'
+relatedProjects:
+- esp-dl-micropython-binding
+- maixpy-v4
+- freebees-access-control-for-esp32
+- esp32-cam-mcp-server
+- watchbot-system
+- smarttrack-rfid-attendance-system
 ---
 
 ## Overview

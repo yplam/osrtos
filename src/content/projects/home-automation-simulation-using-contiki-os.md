@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- homeiot-smart-home-automation-system
+- rpl-network-authentication-simulation
+- cooja-using-contiki
+- smart-heating-iot-system
+- 6lbr-on-telecontrolli-devices-x-ip4t-x-ip5
+- smart-orchard
 ---
 
 ## Overview

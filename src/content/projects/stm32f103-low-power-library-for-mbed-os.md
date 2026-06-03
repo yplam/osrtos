@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- minimal-mbed-os-template-for-stm32f103
+- lptim-tick-freertos-tickless-idle-via-stm32-lptim
+- minimal-mbed-os-template-for-stm32f030
+- stm32-uid-helper-for-mbed
+- stm32f103-cmsis-libraries-and-projects
+- bq35100-mbed-library
 ---
 
 The STM32F103 series of microcontrollers is widely used in embedded systems, but achieving ultra-low power consumption often requires direct interaction with hardware registers and specific power modes. This library provides a streamlined interface for Mbed OS users to leverage the STM32F103's standby mode, significantly reducing power draw for battery-operated devices.

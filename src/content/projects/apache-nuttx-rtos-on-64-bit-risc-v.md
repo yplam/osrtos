@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- apache-nuttx-rtos-for-pine64-star64
+- rt-thread-smart-porting-for-risc-v-qemu-and-k210
+- unicorn-emulator-for-apache-nuttx-on-avaota-a1-arm64-sbc
+- apache-nuttx-nsh-task-demo
+- freertos-port-for-risc-v
+- freertos-for-raspberry-pi-3-64-bit
 ---
 
 ## Overview

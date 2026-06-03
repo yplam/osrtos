@@ -20,6 +20,13 @@ topics:
 isShow: true
 createdAt: '2026-04-21T05:22:42+00:00'
 updatedAt: '2026-04-21T05:22:42+00:00'
+relatedProjects:
+- 7-color-e-paper-digital-photo-frame
+- pixlpal-m1-firmware
+- pixel-frame
+- readmepaper-esp32-7-color-e-paper-display-project
+- esp32-p4-home-assistant-display
+- epd-nrf5-e-paper-display-calendar-and-photo-frame
 ---
 
 Modern digital photo frames often come with strings attached—proprietary cloud subscriptions, privacy concerns, or the need for a central home automation hub to manage the logic. Espframe takes a different approach by providing a completely standalone firmware for the Guition ESP32-P4 touchscreen that communicates directly with your Immich photo library over a local network.

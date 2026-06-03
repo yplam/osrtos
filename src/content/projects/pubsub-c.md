@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- ppool-for-rt-thread
+- libwebsockets
+- flexiblebutton
+- embeddedmqttbroker
+- embedmcp-embedded-mcp-server-library
+- coremqtt-agent-library
 ---
 
 ## Overview

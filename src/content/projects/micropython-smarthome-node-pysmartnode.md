@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- microhomie
+- mongoose-os-configurable-sensor-node
+- mqboard-micropython-mqtt-micro-framework
+- iot-framework-for-nodemcu
+- nodemcu-device-lua-modules
+- seeed-home-assistant-discovery
 ---
 
 ## Overview

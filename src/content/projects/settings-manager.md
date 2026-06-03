@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp8266-configuration-data-v2
+- esp8266-littlefs-file-handler
+- esp8266-config-data-management
+- effortless-spiffs
+- easyini
+- bleeper
 ---
 
 ## Overview

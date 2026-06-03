@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-mpu9x50-imu-driver
+- icm-20948-component-for-esp-idf
+- esp32-i2c-mpu6050-driver
+- micropython-sensor-fusion
+- mpu6050-interfacing-library-for-esp32-esp-idf
+- apache-nuttx-driver-for-bosch-bme280-sensor
 ---
 
 ## Overview

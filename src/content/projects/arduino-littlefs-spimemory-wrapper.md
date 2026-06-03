@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- 107-arduino-littlefs
+- littlefs-mbed-rp2040
+- esp8266-littlefs-file-handler
+- spiffs-for-esp8266-non-os-sdk
+- littlefs-portenta-h7-library
+- fs-nano33ble
 ---
 
 Managing files on external SPI flash memory in the Arduino ecosystem can be a challenge, especially when looking for a filesystem that is both lightweight and resilient to power failures. The **Arduino-LittleFS-SpiMemory-Wrapper** project provides a straightforward solution by bridging the gap between the high-integrity [LittleFS](https://github.com/ARMmbed/littlefs) and the versatile [SPIMemory](https://github.com/Marzogh/SPIMemory) library.

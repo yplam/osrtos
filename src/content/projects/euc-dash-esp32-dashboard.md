@@ -36,6 +36,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- lvgl-watch-firmware-for-open-smartwatch
+- bbmonitor
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
+- esp32-remote-for-victron
+- alfa-romeo-giulia-dashboard-info-display-for-esp32-s3
+- esphome-tesla-ble
 ---
 
 ## Overview

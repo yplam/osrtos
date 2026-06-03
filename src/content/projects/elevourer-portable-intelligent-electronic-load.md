@@ -37,6 +37,13 @@ isShow: true
 image: /202601/electronic-load.webp
 createdAt: '2026-01-28'
 updatedAt: '2026-01-28'
+relatedProjects:
+- esp32-s3-smart-home-control-panel
+- esp32-lab-power-supply
+- embedded-graphical-interface-for-pid-control
+- reflow-oven-with-micropython-lvgl
+- esp32-remote-for-victron
+- project-aura
 ---
 
 ## Overview

@@ -17,6 +17,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- devfsuploadesp
+- arduino-esp-utils
+- espxwebflmgr
+- esp-fs-webserver
+- esp8266-arduino-serial-uploader
+- esp32-ota-firmware-update-and-file-management
 ---
 
 Managing files on an ESP8266 can often be a cumbersome process, especially when dealing with the SPIFFS (Serial Peripheral Interface Flash File System). The **arduino-esp8266-spiffs-utils** project provides a streamlined solution for developers needing to back up or archive data from their IoT devices without physical access or serial connections.

@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-04-05T00:58:31+00:00'
 updatedAt: '2026-04-05T00:58:31+00:00'
+relatedProjects:
+- stm32n6-getting-started-for-audio-ai
+- tensorflow-lite-micro-for-rt-thread
+- magic-wand-on-mbed
+- fashion-mnist-on-esp32-with-tensorflow-lite-micro
+- image-classification-getting-started-for-stm32n6
+- utensor-mnist-handwriting-recognition-demo
 ---
 
 This project implements keyword recognition on the STM32L475VGT (B-L745E-IOT01A2) development board, enabling the detection of spoken commands like "yes", "no", "up", "down", "left", and "right". By leveraging the TensorFlow Lite for Microcontrollers framework, the system brings machine learning capabilities to a resource-constrained embedded environment. The model is trained on the widely recognized speech_commands dataset by P. Warden.

@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- iot-labs-with-contiki-os
+- cooja-using-contiki
+- home-automation-simulation-using-contiki-os
+- rl-tsch-implementation-for-contiki-ng
+- rpl-network-authentication-simulation
+- loadng-implementation-on-contiki-os
 ---
 
 The **Computer-Network-with-ContikiNG** project is a practical implementation of networking concepts developed for the BIL401 Computer Networks course. Built on top of the **Contiki-NG** operating system, the project focuses on simulating and analyzing low-power wireless networks using the **Cooja** emulator. It serves as a hands-on exploration of how modern IoT routing protocols function in constrained environments.

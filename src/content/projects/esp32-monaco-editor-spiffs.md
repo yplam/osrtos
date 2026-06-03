@@ -22,6 +22,13 @@ star: 1
 lastUpdated: '2023-08-20'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp32-web-server-using-spiffs
+- esp8266-web-server-and-spiffs-integration
+- esp32-remote-control-with-websocket
+- esp32-async-web-server-with-spiffs-and-ota
+- esp-fs-webserver
+- espxwebflmgr
 ---
 
 Bringing a modern development experience to embedded systems can be a challenge, but the **ESP32-monaco-editor-spiffs** project demonstrates that it is entirely possible to host a VSCode-like editor directly on an ESP32. By leveraging the power of Microsoft's **Monaco Editor**, this project provides a sophisticated web-based interface for managing and editing files stored on the ESP32's internal flash memory.

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- micropython-for-w601-iot-board
+- micropython-for-sparrow-one-board
+- micropython-samples-and-drivers
+- micropython-and-lvgl-firmware-for-esp32
+- micropython-for-pandora-iot-board
+- esp8266-rtos-software-development-kit-sdk
 ---
 
 The ESP8266 has revolutionized the world of low-cost IoT development. This codebase focuses on the ESP8266 platform, with a specific emphasis on the MicroPython runtime.

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32-custom-hardware-synthesizer
+- esp32-soundfont-sf2-sampler-synthesizer
+- esp32-s3-soundfont-sf2-sampler-synthesizer
+- digital-synth-pra32-u2
+- pico2dexed
+- esp32-s3-sd-sampler
 ---
 
 ## Overview

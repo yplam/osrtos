@@ -18,6 +18,13 @@ isShow: true
 image: /202605/blu-button.webp
 createdAt: '2026-05-04T03:47:06+00:00'
 updatedAt: '2026-05-04T03:47:06+00:00'
+relatedProjects:
+- bleota-esp32-ota-updates-over-ble
+- ruuvitag-firmware-for-zephyr-os
+- esp32-ble-ota-arduino
+- nimble-ota
+- buttfinity
+- everblu-cyble-enhanced-rf-meter-reader
 ---
 
 ## Overview

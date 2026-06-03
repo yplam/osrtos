@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zj-ble-rt-thread-and-nimble-for-nordic-nrf52
+- zj-tek-rt-thread-nimble-littlevgl-nordic-project
+- golioth-zephyr-sdk
+- nuclei-software-development-kit-nuclei-sdk
+- kendryte-k210-freertos-sdk
+- ameba-rtos-sdk
 ---
 
 ## Overview

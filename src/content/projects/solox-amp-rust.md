@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sel4twinkle-alloc-rs
+- rust-sel4-toy-system-for-i-mx6-sabre-lite
+- fel4-test-project
+- cortex-m33-trustzone-experiments-on-qemu-an505
+- azurertos-dual-core-implementation-for-stm32h747
+- rust-test-app-for-apache-nuttx-os
 ---
 
 ## Overview

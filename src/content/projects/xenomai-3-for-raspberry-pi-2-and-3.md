@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- xenomai-3-for-raspberry-pi-0-1-linux-kernel-4-1-21
+- xenomai-3-for-raspberry-pi-4
+- raspberry-pi-rtos-rpi-rtos
+- raspberry-pi-4-xenomai-3-patch
+- xenomai-on-raspberry-pi
+- soem-w5500-ethercat-master-for-raspberry-pi
 ---
 
 ## Real-Time Linux on Raspberry Pi

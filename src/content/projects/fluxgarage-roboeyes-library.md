@@ -23,6 +23,13 @@ isShow: true
 image: /202602/roboeyes.webp
 createdAt: '2026-02-19'
 updatedAt: '2026-02-19'
+relatedProjects:
+- ani-emo-eye
+- thingpulse-oled-ssd1306-driver
+- lilygo-t-display-s3-boilerplate
+- xiaomi-cybergear-arduino-library
+- lvgl-kawaii-face
+- mochi-esp32-client
 ---
 
 ## Bringing Personality to Robots with RoboEyes

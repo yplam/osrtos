@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- selfe-sys-rust-bindings-for-sel4
+- freertos-rust
+- sel4twinkle-alloc-rs
+- rttrust-rust-wrapper-for-rt-thread
+- rust-fel4-workspace-for-raspberry-pi-3
+- rust-support-for-rt-thread
 ---
 
 ## Overview

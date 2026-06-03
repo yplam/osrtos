@@ -16,6 +16,13 @@ isShow: true
 image: /202602/CircuitESP32.webp
 createdAt: '2026-02-24'
 updatedAt: '2026-02-24'
+relatedProjects:
+- engineering-diy-esp32-sensors-cameras-for-home-assistant
+- esp32cam-pir-mqtt-spiffs-webserver
+- esp32-laser-range
+- esphome-ikea-vindriktning
+- esp32-thermal-camera-viewer
+- esp32-cam-mcp-server
 ---
 
 ## Overview

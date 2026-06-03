@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-05-05T23:25:23+00:00'
 updatedAt: '2026-05-05T23:25:23+00:00'
+relatedProjects:
+- quadruped-robot
+- tny-360-quadruped-robot
+- hexapod
+- pyespcar-micropython-esp32-wifi-car
+- 16-ir-array-pid-line-follower-robot-using-esp32
+- sesame-robot-micro
 ---
 
 This quadruped crawling robot is designed as a comprehensive embedded systems project, utilizing the STM32F103C8T6 as the primary controller. By integrating an ESP32-CAM and MQTT protocols, the system achieves real-time image backhaul and remote command execution. The control architecture is split into cloud-based and local solutions, offering flexibility in how the robot is operated.

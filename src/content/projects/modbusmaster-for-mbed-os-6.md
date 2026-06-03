@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- ubxgpsi2c
+- uc-modbus-for-rt-thread
+- spektrum-receiver-library-for-mbed
+- embeddedmqttbroker
+- spirit-motor-driver-library
+- asynchttpsrequest-esp32-ethernet
 ---
 
 ## Overview

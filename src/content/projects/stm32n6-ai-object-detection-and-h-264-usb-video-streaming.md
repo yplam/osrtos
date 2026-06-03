@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-04-26T06:34:07+00:00'
 updatedAt: '2026-04-26T06:34:07+00:00'
+relatedProjects:
+- stm32n6-camera-capture-application
+- stm32n6-getting-started-for-object-detection
+- image-classification-getting-started-for-stm32n6
+- edge-ai-on-embedded-linux-i-mx-8m-plus
+- usb-video-class-uvc-for-raspberry-pi-pico
+- stm32n6-getting-started-for-audio-ai
 ---
 
 ## Real-Time Computer Vision on the Edge

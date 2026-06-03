@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- usb-cdc-ecm-for-stm32f072
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- stm32-bluepill-rndis-device-with-lwip
+- stm32h745-ethernet-with-lwip-and-freertos
+- d21eem-usb-cdc-eem-for-samd21
+- d21rndis-usb-rndis-for-samd21
 ---
 
 ## Overview

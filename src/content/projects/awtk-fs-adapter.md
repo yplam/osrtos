@@ -17,6 +17,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- oofatfs-object-oriented-fatfs
+- pico-vfs-a-virtual-file-system-for-raspberry-pi-pico
+- stm32-fatfs-and-freertos-integration
+- arduino-littlefs-spimemory-wrapper
+- esp32-fatfs-image-tool-and-example
+- ff-iso-stm32-multitasking-fatfs-sdio
 ---
 
 ### Bridging the Gap in Embedded File Systems

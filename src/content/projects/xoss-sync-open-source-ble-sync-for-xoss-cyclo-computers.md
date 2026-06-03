@@ -36,6 +36,13 @@ topics:
 isShow: false
 createdAt: '2026-03-22'
 updatedAt: '2026-03-22'
+relatedProjects:
+- sks-airspy-ant-community-firmware
+- uble-lightweight-bluetooth-low-energy-driver-for-micropython
+- esphome-treadmill-ftms
+- x-track-open-source-gps-bicycle-computer
+- develop-your-own-bluetooth-low-energy-applications
+- herald-for-c
 ---
 
 ## Overview

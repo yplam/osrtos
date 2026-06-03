@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-25'
 updatedAt: '2026-01-25'
+relatedProjects:
+- esp32-ble-uart-mx
+- micropygps
+- esp32-uart-bridge
+- esp32-sdr-gps-receiver
+- esp32-portapack-esp32pp
+- micropython-for-esp32-with-psram-support-lobo-port
 ---
 
 ## Overview

@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pmsxx-sensor-driver-for-rt-thread
+- sgp30-gas-sensor-driver-for-rt-thread
+- ccs811-digital-gas-sensor-driver-for-rt-thread
+- bme680-sensor-package-for-rt-thread
+- dhtxx-sensor-driver-for-rt-thread
+- hdc1000-sensor-driver-for-rt-thread
 ---
 
 The rtt-gp2y10 package provides a comprehensive driver solution for the Sharp GP2Y10 series of optical dust sensors, specifically the GP2Y1010AU0F and GP2Y1014AU0F models. These sensors are widely used in air quality monitoring systems to detect particulate matter concentration. This driver is built for the RT-Thread ecosystem, offering seamless integration with the RT-Thread sensor device framework while maintaining a flexible standalone API.

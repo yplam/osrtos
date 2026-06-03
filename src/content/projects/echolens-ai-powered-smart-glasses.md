@@ -27,6 +27,13 @@ isShow: true
 image: /202602/echolens.webp
 createdAt: '2026-02-14'
 updatedAt: '2026-02-14'
+relatedProjects:
+- smart-sign-language-glove-translator
+- nebaura-labs-mote
+- esp32-voice-assistant
+- diy-ai-voice-assistant-for-esp32-s3
+- stackchan-minimal
+- starmoon-open-source-conversational-ai-device
 ---
 
 ## Overview

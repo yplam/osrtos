@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- mongoose-os-docker-image
+- mongoose-os-create-bin-file-action
+- mgos-combine
+- tock-os-docker-build-environment
+- nrf-connect-sdk-docker-environment
+- mos-native
 ---
 
 ## Streamlining Mongoose OS Development with GitHub Actions

@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lvgl-watch-firmware-for-open-smartwatch
+- zephyrwatch
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
+- chrz-watch-firmware
+- dt78-esp32-firmware
+- pinetime-zephyr-firmware
 ---
 
 ## Overview

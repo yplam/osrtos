@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-26'
 updatedAt: '2026-01-26'
+relatedProjects:
+- tinyweb
+- microwebsrv
+- microdot
+- picoweb
+- raspberry-pi-pico-web-server-control
+- microwebsrv2
 ---
 
 ## Overview

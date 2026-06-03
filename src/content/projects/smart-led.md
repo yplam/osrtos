@@ -18,6 +18,13 @@ isShow: true
 image: /202603/SmartLED_5v.webp
 createdAt: '2026-03-06'
 updatedAt: '2026-03-06'
+relatedProjects:
+- rgblight-iot-rgb-led-controller
+- esp8266-home-automation
+- moonlight-8266
+- smart-lighting-system-using-esp32
+- svitrix-firmware
+- quntis-led-controller
 ---
 
 Smart LED is a comprehensive firmware solution designed to transform addressable LED strips into dynamic, music-reactive visualizers. Built on the ESP8266 platform, specifically the WeMos D1 Mini, the project combines audio-reactive animations with static lighting modes, all while providing seamless integration into modern smart home ecosystems via the MQTT protocol.

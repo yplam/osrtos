@@ -16,6 +16,13 @@ libraries:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-rtos-software-development-kit-sdk
+- rtos-wot
+- openthread-rtos
+- ameba-rtos-sdk
+- onps-open-net-protocol-stack
+- esp8266-mywidget
 ---
 
 ## Overview

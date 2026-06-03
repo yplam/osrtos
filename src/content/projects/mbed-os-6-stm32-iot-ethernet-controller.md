@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- mqtt-demo-for-stm32-iot-discovery-board-with-thingsboard
+- apache-mynewt-sensor-network-for-stm32-blue-pill
+- stm32-lwip-mqtt-demo
+- 6lbr-on-telecontrolli-devices-x-ip4t-x-ip5
+- stm32-bluepill-rndis-device-with-lwip
 ---
 
 The Mbed OS 6 STM32 IoT Ethernet Controller is a robust firmware solution designed for the STM32F103C8, commonly known as the BluePill. By integrating the Wiznet W5500 Ethernet controller, this project transforms a standard microcontroller into a networked IoT node capable of communicating via the MQTT protocol.

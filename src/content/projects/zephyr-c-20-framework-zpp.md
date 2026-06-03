@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- freertos-modern-c-wrappers
+- freertos-cpp
+- lv-modern-c-20-bindings-for-lvgl
+- xf-extension-to-freertos
+- herald-for-c
+- micropython-wrap
 ---
 
 ## Modernizing Zephyr Development with ZPP

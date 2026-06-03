@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2025-12-27'
 updatedAt: '2025-12-29'
+relatedProjects:
+- zephyr-lorawan-lora-examples
+- anjay-zephyr-client
+- nicenano-and-nrf52-supermini-platformio-support
+- fctc-art-pi-code-iot-from-chip-to-cloud
+- nrf52840-m-2-developer-kit
+- zephyr-lvgl-sample-for-nrf52840-mdk
 ---
 
 The Lemon IoT LTE nRF9160 is a specialized development platform designed for low-power cellular IoT applications. At its core is the Nordic Semiconductor nRF9160 System-in-Package (SiP), which integrates an ARM Cortex-M33 application processor with a full LTE-M/NB-IoT modem and GNSS capabilities. This repository serves as the central hub for board support files, documentation, and example projects required to develop firmware for the hardware using the Zephyr RTOS and the nRF Connect SDK.

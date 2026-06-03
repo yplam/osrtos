@@ -26,6 +26,13 @@ isShow: true
 image: /202602/esp32c6-wifi-sensor.webp
 createdAt: '2026-02-11'
 updatedAt: '2026-02-11'
+relatedProjects:
+- q-sensor-multi-functional-zigbee-air-quality-sensor
+- esphome-ikea-vindriktning
+- mongoose-os-environmental-sensors-application
+- seeed-home-assistant-discovery
+- zigbee-gas-counter
+- project-aura
 ---
 
 The Smart IoT Sensor is a versatile environmental monitoring device designed for high efficiency and seamless smart home integration. Built around the compact XIAO ESP32C6 board, this project leverages the RISC-V based SoC to provide a robust platform for sensing temperature, humidity, pressure, and air quality. It is specifically optimized for low-power operation, making it suitable for battery-powered deployments in a variety of indoor environments.

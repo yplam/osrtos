@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-05-03T02:19:55+00:00'
 updatedAt: '2026-05-03T02:19:55+00:00'
+relatedProjects:
+- drv8833-micropython-driver
+- cybergear-ros2-controller
+- rp2040-dac-amp
+- foc-pocket
+- hub75-dma-based-driver-for-raspberry-pi-pico
+- robomaster-supercap-controller-adernal
 ---
 
 OpenDualMotorDriver is a compact (50x60 mm) and capable dual H-bridge brushed DC motor driver designed as an all-in-one solution for robotics projects. Built around the Raspberry Pi RP2350 (Pico 2) and the Texas Instruments DRV8412, it successfully manages two motors with a wide input voltage range of 4V to 40V. The board is designed to handle 3A per motor continuously, with peaks up to 6A, and features integrated hall-effect current sensors for precise monitoring.

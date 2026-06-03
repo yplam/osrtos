@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- nimble-hid-keyboard-and-mouse-example-for-esp32
+- hijelhid-blekeyboard
+- esp32-nimble-hid-client
+- micropython-library-for-the-cheap-yellow-display-cyd
+- uble-lightweight-bluetooth-low-energy-driver-for-micropython
+- semito-v-micropython-compatibility-layer-mcl
 ---
 
 ## Overview

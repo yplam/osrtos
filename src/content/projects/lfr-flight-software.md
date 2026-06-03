@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- filtered-inertial-rotation-module-firm
+- alturia-firmware
+- project-shadow-flight
+- floripasat-obdh-on-board-data-handling
+- suchai-flight-software
+- pv-curve-tracer
 ---
 
 ## Overview

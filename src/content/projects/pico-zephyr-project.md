@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- rp2040-freertos-template
+- raspberry-pi-pico-freertos-sample-application
+- rp2040-projects-by-armstrong-subero
+- cmsis-rp2040
+- micropico-visual-studio-code-extension
+- wiznet-freertos-sdk-for-raspberry-pi-pico-ethernet
 ---
 
 The Pico Zephyr project provides a streamlined entry point for developers looking to leverage the power of the Zephyr Real-Time Operating System (RTOS) on Raspberry Pi's silicon. While Zephyr has long-standing support for the RP2040, this repository simplifies the setup and development experience by providing pre-configured build scripts and environment tools tailored specifically for the Pico and the newer Pico 2 (RP2350).

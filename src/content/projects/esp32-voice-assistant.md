@@ -24,6 +24,13 @@ isShow: true
 image: /202601/arpy8_assistant.webp
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- elatoai-realtime-voice-ai-on-esp32
+- kalo-esp32-voice-assistant
+- diy-ai-voice-assistant-for-esp32-s3
+- starmoon-open-source-conversational-ai-device
+- kalo-esp32-voice-chat-ai-friends
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
 ---
 
 The ESP32 Voice Assistant is a sophisticated integration of low-power embedded hardware and modern AI inference. By offloading heavy computation to a Python-based server, the project enables an ESP32 to function as a fully conversational AI agent, capable of understanding speech and responding with a natural neural voice.

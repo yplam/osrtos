@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- micropython-and-lvgl-firmware-for-esp32
+- klipper-esp32
+- openrouter-esp-idf-client
+- zig-language-toolchain-for-esp-idf
+- lua-rtos-for-esp32
+- r2p2-esp32-ruby-rapid-portable-platform-for-esp32
 ---
 
 Nesper is a library designed to bring the power and elegance of the Nim programming language to the ESP32 ecosystem. By building on top of the official `esp-idf` SDK, Nesper allows developers to leverage Nim's modern features—such as the ARC garbage collector, async/await support, and powerful macros—while maintaining full compatibility with the underlying FreeRTOS and LwIP stacks.

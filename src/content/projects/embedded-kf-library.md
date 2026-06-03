@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-04-04T00:41:55+00:00'
 updatedAt: '2026-04-04T00:41:55+00:00'
+relatedProjects:
+- swedish-embedded-control-systems-toolbox
+- rtt-libfilter-digital-filter-library-for-rt-thread
+- flexptp
+- embedmcp-embedded-mcp-server-library
+- jsonx-lightweight-embedded-json-serializer
+- mpu6050-interfacing-library-for-esp32-esp-idf
 ---
 
 Implementing Kalman filters on microcontrollers often presents a significant challenge for embedded developers. The complexity of matrix mathematics, the risks of dynamic memory allocation, and the need to synchronize data from sensors with varying sample rates can quickly complicate a project. The **embedded-kf** library is designed to solve these problems by providing a lightweight, C99-compliant framework specifically optimized for real-time operation in resource-constrained environments.

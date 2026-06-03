@@ -22,6 +22,13 @@ isShow: true
 image: /202602/flatsphere.webp
 createdAt: '2026-02-04'
 updatedAt: '2026-02-04'
+relatedProjects:
+- smart-flask-thermos-with-round-display-and-esp32-c3
+- desk-weather-clock-geekmagic-s3
+- gateway-smartwatch
+- esp32-s3-smart-home-control-panel
+- elekstube-ips-custom-firmware
+- lilygo-t-display-s3-boilerplate
 ---
 
 ## Overview

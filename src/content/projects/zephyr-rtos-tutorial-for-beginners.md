@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- dallas-formula-racing-embedded-onboarding
+- learning-stm32
+- mbed-os-unipg-samples-1
+- bazel2zephyr
+- bare-metal-programming-guide
+- xenomai-3-exercises
 ---
 
 # Learning Zephyr RTOS: A Comprehensive Tutorial

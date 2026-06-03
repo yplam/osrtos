@@ -23,6 +23,13 @@ isShow: true
 image: /202512/9DoF_IMU_Breakout.webp
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-mpu-9250-i2c-driver
+- mpu6050-interfacing-library-for-esp32-esp-idf
+- micropython-sensor-fusion
+- esp32-i2c-mpu6050-driver
+- icm-20948-component-for-esp-idf
+- micropython-lib
 ---
 
 ## Overview

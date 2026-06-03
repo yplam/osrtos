@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32l475-pandora-board-bsp-for-rt-thread
+- stm32-lwip-mqtt-demo
+- stm32f107-makefile-freertos-template
+- iotsharp-pandora-stm32l475-bsp
+- practice-project-for-stm32f746g-discovery
+- micropython-for-pandora-iot-board
 ---
 
 ## Overview

@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- stm32f429-nucleo-lwip-and-freertos-template
+- stm32f4-display-and-ethernet-example
+- stm32-lwip-mqtt-demo
+- rtems-lwip-stm32-integration
+- stm32f1-rtos-example-project
 ---
 
 ## Overview

@@ -19,6 +19,13 @@ star: 15
 lastUpdated: '2023-02-20'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- rp2040-lvgl-8-demo-with-ili9488-and-xpt2046
+- lvgl-8-on-wt32-sc01-with-arduino
+- jc3248w535-lvgl-v9-test-project
+- jc4827w543-lvgl-v9-implementation
+- esp-lvgl
+- sc01-plus-hmi-example-with-squareline-studio
 ---
 
 Building modern, responsive user interfaces on embedded hardware has become significantly easier with the evolution of the Light and Versatile Graphics Library (LVGL). This project demonstrates a complete implementation of LVGL v8.3.4 on the popular ESP32 platform, specifically tailored for a 1.3-inch 240x240 ST7789 display and an FT6236 capacitive touch controller.

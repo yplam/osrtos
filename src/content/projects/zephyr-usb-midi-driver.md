@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zephyr-webusb-sample-for-stm32
+- nrf-connect-sdk-midi
+- cannectivity
+- micro-ros-module-for-zephyr
+- midi2piousbhub
+- zephyr-stm32-spi-example
 ---
 
 ## Overview

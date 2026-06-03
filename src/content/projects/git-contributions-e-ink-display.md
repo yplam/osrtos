@@ -18,6 +18,13 @@ isShow: true
 image: /202601/elekscava.webp
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- tibber-price-e-ink-display
+- c-quiz-on-e-ink-display
+- e-paper-climate-logger-weathergotchi
+- e-ink-meeting-room-schedule-display
+- esp-e-paper-component
+- paperlesspaper-e-paper-photo-frame-hardware
 ---
 
 ## Showcasing Your Commit Streaks in Low Power

@@ -24,6 +24,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- stm32-cmsis-libraries
+- stm32-prototyping-libraries
+- cmsis-for-stm32-development
+- stm32f103-cmsis-libraries-and-projects
+- stm32cube-cmsis-core
+- pamculib
 ---
 
 The CMSIS-Driver specification is a software API that provides a generic peripheral interface for middleware and application code. By standardizing the way we interact with microcontrollers, ARM allows developers to write code that is significantly more portable across different silicon vendors. The **CMSIS_Drivers** project by Mariusmm provides a concrete implementation of these interfaces for two popular MCU families: Silicon Labs EFM32 and STMicroelectronics STM32.

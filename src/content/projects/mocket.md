@@ -38,6 +38,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- cse160-network-protocols-project-skeleton
+- modbux
+- riden-dongle
+- icetea-test-framework
+- whitefield-framework
+- lwip-contrib-unix-port
 ---
 
 Mocket is a versatile socket mocking framework for Python, often described as "monkey-patching on steroids" for the `socket` and `ssl` modules. It provides a low-level framework for building custom mocks for any protocol, as well as high-level, ready-to-use mocks for common protocols like HTTP, HTTPS, and Redis. 

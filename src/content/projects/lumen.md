@@ -33,6 +33,13 @@ topics:
 isShow: false
 createdAt: '2026-01-27'
 updatedAt: '2026-01-27'
+relatedProjects:
+- bitclock
+- deck
+- tinycore-esp32-s3-learning-platform
+- bbmonitor
+- xiao-debug-mate
+- project-aura
 ---
 
 Lumen is a desktop-grade hardware interaction node designed to bring computer states, game data, and system information into the physical world. Positioned as a fully open-source and programmable alternative to devices like the Stream Deck, Lumen allows developers to create custom firmware that reacts to software events with physical feedback through its display, lights, and motion.

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-fatfs-and-freertos-integration
+- stm32-fatfs-on-sd-card-using-freertos
+- esp32-fatfs-storage-example
+- stm32h743-cmake-template
+- practice-project-for-stm32f746g-discovery
+- stm32l475-freertos-iot-project
 ---
 
 ## Overview

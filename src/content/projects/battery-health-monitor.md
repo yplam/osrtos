@@ -25,6 +25,13 @@ isShow: true
 image: /202601/battery-health.webp
 createdAt: '2026-01-14'
 updatedAt: '2026-01-14'
+relatedProjects:
+- esp32-remote-for-victron
+- spinc-diy-automatic-battery-charger
+- bbmonitor
+- light-watcher
+- max17263-test-app-for-mongoose-os
+- bq35100-mbed-library
 ---
 
 ## Overview

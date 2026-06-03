@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zmk-docker-images
+- nuttx-development-docker-environment
+- nrf-connect-sdk-docker-environment
+- tock-os-docker-build-environment
+- nrf-connect-sdk-build-docker-environment
+- swedish-embedded-workstation
 ---
 
 ## Streamlining Zephyr Development with Docker

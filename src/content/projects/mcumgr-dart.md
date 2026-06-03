@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mcumanager-ios
+- mcumanager-android
+- pelion-device-management-client-example-for-mbed-os
+- anjay-zephyr
+- nimble-ota
+- golioth-firmware-sdk
 ---
 
 ## Overview

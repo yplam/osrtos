@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-03-07'
 updatedAt: '2026-03-07'
+relatedProjects:
+- transfer-files-over-ethernet-with-stm32-and-freertos
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- udp-echo-server-for-stm32f407-and-enc28j60
+- stm32f429-nucleo-lwip-and-freertos-template
+- stm32h745-ethernet-with-lwip-and-freertos
+- stm32-ftp-server
 ---
 
 ## Overview

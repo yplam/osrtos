@@ -27,6 +27,13 @@ isShow: true
 image: /202604/clawputer.webp
 createdAt: '2026-04-19T08:51:51+00:00'
 updatedAt: '2026-04-19T08:51:51+00:00'
+relatedProjects:
+- deskpet
+- deskpet-for-m5stack-cardputer
+- clawy
+- nebaura-labs-mote
+- clawdmeter
+- qbit
 ---
 
 ClawPuter is a unique intersection of hardware, pixel art, and generative AI. Originally conceived as a physical manifestation for the OpenClaw AI project, it transforms the M5Stack Cardputer into a living desktop companion. The heart of the project is a pixel-art lobster that resides on the device's 240x135 IPS display, reacting to its environment and the user in real-time.

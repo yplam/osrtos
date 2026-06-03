@@ -26,6 +26,13 @@ isShow: true
 image: /202601/emw3166.webp
 createdAt: '2026-01-22'
 updatedAt: '2026-01-22'
+relatedProjects:
+- stm32l475-freertos-iot-project
+- stm32f429-nucleo-lwip-and-freertos-template
+- ameba-rtos-sdk
+- eclipse-threadx-usbx
+- iotconnect-azure-rtos-sdk
+- eclipse-threadx-netx-duo
 ---
 
 ## Overview

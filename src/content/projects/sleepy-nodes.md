@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- low-power-wireless-networking-for-iot-lpiot
+- coap-eap-with-eap-noob-in-contiki
+- lightweight-publish-subscribe-application-protocol-for-tinyos
+- mqtt-like-application-for-tinyos
+- contiki-lora-tsch-project
+- msf-protocol-simulation-for-contiki-ng
 ---
 
 ## Overview

@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- ccs811-digital-gas-sensor-driver-for-rt-thread
+- bme680-sensor-package-for-rt-thread
+- gp2y10-dust-sensor-driver-for-rt-thread
+- sgp30-gas-sensor-library-for-mongoose-os
+- pmsxx-sensor-driver-for-rt-thread
+- vl53l0x-tof-sensor-driver-for-rt-thread
 ---
 
 ## Overview

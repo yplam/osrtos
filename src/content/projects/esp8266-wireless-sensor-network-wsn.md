@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- espmonitor-iot-environmental-monitoring-system
+- iot-agricultural-data-monitoring-system
+- espmonitor-iot-environment-monitoring-system
+- esp8266-dht22-spiffs-web-server
+- iot-project-on-hvac
+- mongoose-os-environment-logger
 ---
 
 ## Overview

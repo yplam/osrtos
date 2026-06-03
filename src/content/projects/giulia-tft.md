@@ -25,6 +25,13 @@ isShow: true
 image: /202603/giulia-tft.webp
 createdAt: '2026-03-11'
 updatedAt: '2026-03-11'
+relatedProjects:
+- alfa-romeo-giulia-dashboard-info-display-for-esp32-s3
+- wute-dashboard-for-formula-student-electric
+- esp32-remote-for-victron
+- victron-solar-display-for-esp32-s3
+- euc-dash-esp32-dashboard
+- clawdmeter
 ---
 
 ## Visualizing Alfa Romeo Telemetry with Giulia TFT

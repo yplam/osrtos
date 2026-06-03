@@ -29,6 +29,13 @@ topics:
 isShow: true
 createdAt: '2026-05-13T00:19:38+00:00'
 updatedAt: '2026-05-13T00:19:38+00:00'
+relatedProjects:
+- unigeek-firmware
+- stick-firmware
+- saturn
+- bruce-firmware
+- highboy-firmware
+- m5-keyboard-and-mouse-emulator
 ---
 
 M5_Crystal is a versatile and extensible firmware designed specifically for the M5Stack ecosystem, targeting devices such as the M5StickCPlus2 and the Cardputer-ADV. It provides a comprehensive suite of utilities ranging from network security testing to daily productivity tools, all packed into a portable form factor.

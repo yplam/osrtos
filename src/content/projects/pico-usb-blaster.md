@@ -23,6 +23,13 @@ topics:
 isShow: true
 createdAt: '2026-04-06T00:40:49+00:00'
 updatedAt: '2026-04-06T00:40:49+00:00'
+relatedProjects:
+- usb-video-class-uvc-for-raspberry-pi-pico
+- midi2piousbhub
+- ev2400-reimplementation-for-raspberry-pi-pico
+- raspberry-pi-pico-littlefs-usb-flash-memory-interface
+- pico-cec
+- usbsid-pico
 ---
 
 Pico USB Blaster is a firmware solution designed to turn a Raspberry Pi Pico, or any board based on the RP2040 or RP2350 microcontrollers, into a fully functional Altera USB-blaster / Intel FPGA Download Cable compatible programmer. This tool allows developers to program and debug FPGAs using standard tools like Quartus and OpenOCD without needing the official proprietary hardware.

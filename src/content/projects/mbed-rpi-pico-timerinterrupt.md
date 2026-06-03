@@ -32,6 +32,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mbed-rp2040-pwm-library
+- nrf52-mbed-pwm
+- pico-rtic-template
+- nucleo-experiment-control-system-for-atom-interferometry
+- arduino-pico
+- flexptp
 ---
 
 ## Overview

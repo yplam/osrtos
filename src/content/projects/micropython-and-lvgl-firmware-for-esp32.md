@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-02-08'
 updatedAt: '2026-02-08'
+relatedProjects:
+- esp32-cheap-yellow-display-micropython-lvgl
+- lvgl-micropython-bindings
+- sha2017-badge-firmware
+- lvgl-port-for-m5stack-core2
+- micropython-for-esp32-with-psram-support-lobo-port
+- lvgl-port-for-esp32
 ---
 
 The `micropython_esp32_firmware` project provides a robust, pre-compiled firmware environment for developers looking to build sophisticated graphical user interfaces on ESP32 hardware. By combining the ease of MicroPython with the powerful LVGL (Light and Versatile Graphics Library), this repository simplifies the process of creating interactive displays on embedded systems.

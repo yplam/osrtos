@@ -20,6 +20,13 @@ isShow: true
 image: /202604/esp8266_oled.webp
 createdAt: '2026-04-02T11:57:32+00:00'
 updatedAt: '2026-04-02T11:57:32+00:00'
+relatedProjects:
+- esp32-c3-supermini-oled-display-driver
+- thingpulse-oled-ssd1306-driver
+- esp8266-wi-fi-microcontroller-resource-hub
+- esp32-cheap-yellow-display-micropython-lvgl
+- seeed-studio-xiao-esp32-project-collection
+- esp32-repo
 ---
 
 The HW-364A and HW-364B development boards are highly integrated platforms that simplify the creation of IoT devices with visual feedback. By pairing the ubiquitous ESP8266 microcontroller with a sharp 0.96-inch SSD1306 OLED display, these modules offer a compact solution for projects ranging from environment monitors to network status displays. While these boards are widely available and cost-effective, they are notorious for having inconsistent or incorrect technical documentation from various vendors, which often leads to confusion regarding pin assignments and I2C addresses.

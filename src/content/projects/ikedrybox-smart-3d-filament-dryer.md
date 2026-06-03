@@ -34,6 +34,13 @@ topics:
 isShow: true
 createdAt: '2026-05-09T01:46:08+00:00'
 updatedAt: '2026-05-09T01:46:08+00:00'
+relatedProjects:
+- project-aura
+- advanced-filament-sensor-for-elegoo-carbon-centauri
+- smart-medibox
+- reflow-oven-with-micropython-lvgl
+- esp32-s3-smart-home-control-panel
+- espgaggia-smart-coffee-machine-controller
 ---
 
 IkeDryBox is an advanced, ESP32-based DIY smart filament dryer designed to improve 3D printing quality by maintaining optimal material conditions. Built with precision and efficiency in mind, the project transforms a standard container into a high-tech drying station featuring a responsive LVGL touch interface, highly accurate PID temperature control, and seamless integration with modern smart home ecosystems like Home Assistant.

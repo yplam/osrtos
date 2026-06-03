@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-port-for-stm32f429-discovery-kit
+- lvgl-port-for-esp32
+- lvgl-port-for-m5stack-core2
+- lvgl-demo-embarcadores
+- lvgl-port-for-windows
+- lvgl-port-for-raspberry-pi-pico-mdk-arm
 ---
 
 The `lv_port_stm32f769_disco` repository provides a ready-to-use implementation of the LVGL (Light and Versatile Graphics Library) for the STM32F769 Discovery kit. This board is a high-performance evaluation platform featuring the ARM Cortex-M7 based STM32F769NIH6 microcontroller, which is particularly well-suited for advanced graphical user interfaces thanks to its integrated Chrom-ART Accelerator and MIPI-DSI interface.

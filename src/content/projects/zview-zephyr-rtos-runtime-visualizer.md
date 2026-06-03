@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-02-07'
 updatedAt: '2026-02-07'
+relatedProjects:
+- rtic-scope
+- freertos-visualizer
+- spotflow-observability-device-sdk
+- get-irq-priority-for-rt-thread
+- zephyr-c-20-framework-zpp
+- power-pico
 ---
 
 ## Overview

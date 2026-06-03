@@ -32,6 +32,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp-async-http-update-server
+- esp8266starter
+- esp32-async-web-server-with-spiffs-and-ota
+- esp8266-wifi-relay-async
+- iot-framework-for-nodemcu
+- esp-fs-webserver
 ---
 
 ## Overview

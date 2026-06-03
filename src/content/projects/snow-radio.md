@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32-web-radio-evo3
+- tinyradio9-for-wt32-sc01-plus
+- radiojkk32-multifunctional-internet-radio-player
+- melody-machine
+- espri-esp-radio-interface
+- wt32-sc01-plus-smart-desk-companion
 ---
 
 ## Overview

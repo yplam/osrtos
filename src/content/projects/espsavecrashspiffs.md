@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- spiffslogger
+- rtcmemory
+- esp-multiresetdetector
+- esp-doubleresetdetector-library
+- hommie-logger
+- effortless-spiffs
 ---
 
 ## Overview

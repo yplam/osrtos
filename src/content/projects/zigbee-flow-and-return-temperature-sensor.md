@@ -17,6 +17,13 @@ isShow: true
 image: /202601/zigbee-flow-sensor.webp
 createdAt: '2026-01-29'
 updatedAt: '2026-01-29'
+relatedProjects:
+- beelight-zigbee-light-environment-sensor
+- q-sensor-multi-functional-zigbee-air-quality-sensor
+- zigbee-gas-counter
+- losant-temperature-sensor-for-mongoose-os
+- smart-iot-sensor-with-xiao-esp32c6
+- ruuvitag-firmware-for-zephyr-os
 ---
 
 ## Monitoring Heating Efficiency with Zigbee

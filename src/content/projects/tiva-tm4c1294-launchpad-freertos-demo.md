@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lpc43xx-freertos-led-blinking-example
+- stm32f103c8-freertos-cmsis-blink-example
+- raspberry-pi-pico-freertos-sample-application
+- freertos-mqtt-client-demo
+- qemu-emulation-for-ti-lm3s6965-cortex-m3
+- stm32-libopencm3-freertos-platformio-template
 ---
 
 ## Overview

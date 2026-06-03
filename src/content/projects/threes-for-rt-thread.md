@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- c2048-for-rt-thread
+- rtt-tetris
+- micropython-port-for-rt-thread
+- stm32-pocket-game-dev-console
+- donut-for-rt-thread
+- termbox-for-rt-thread
 ---
 
 ## Overview

@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rust-embedded-examples
+- stm32h743zi-rust-playground
+- stm32-rtic-project-template
+- stm32f4-rtic-playground
+- b-l475e-iot01a-discovery-board-support-crate
+- pico-rtic-template
 ---
 
 ## Overview

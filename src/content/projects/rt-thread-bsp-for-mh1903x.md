@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rt-thread-bsp-for-stm32f407vet6
+- stm32l475-pandora-board-bsp-for-rt-thread
+- iotsharp-pandora-stm32l475-bsp
+- bsp-for-wireless-tag-wt32-sc01-plus-sc01-esp-idf-5-x-lvgl-9-x
+- dhtxx-sensor-driver-for-rt-thread
+- stm32-m-nuttx-custom-board-mod
 ---
 
 ## Overview

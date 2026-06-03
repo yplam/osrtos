@@ -18,6 +18,13 @@ topics:
 isShow: true
 createdAt: '2026-05-18T06:27:18+00:00'
 updatedAt: '2026-05-18T06:27:18+00:00'
+relatedProjects:
+- esp32-ble-ota-arduino
+- esp32-ota-firmware-update-and-file-management
+- dual-boot-esp32-with-platformio-and-arduino
+- esp32-graphical-bootloader
+- bleota-esp32-ota-updates-over-ble
+- tab5-launcher
 ---
 
 The ESP32 is a versatile microcontroller for IoT applications, but standard firmware deployments are often limited to a simple A/B update scheme. Multi-Firmware-ESP expands these capabilities by implementing a custom bootloader that allows users to navigate between multiple firmware versions stored on the device's flash memory using physical hardware switches. Developed using the ESP-IDF framework, this project provides a robust solution for developers needing to host multiple distinct applications on a single chip.

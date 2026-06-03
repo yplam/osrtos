@@ -21,6 +21,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- arduino-freertos-library
+- rtduino
+- seeed-arduino-freertos
+- freertos-port-for-teensy-3-6-4-0-4-1
+- rt-thread-art-arduino-rt-thread
+- arduino-pico
 ---
 
 The Arduino ecosystem is beloved for its simplicity, but as projects grow in complexity, managing multiple tasks using only `millis()` and state machines can become a bottleneck. The **Arduino RT-Thread Library** bridges this gap by bringing the power of RT-Thread—a mature, open-source real-time operating system—directly to the Arduino environment. This library allows developers to leverage professional-grade RTOS features while maintaining the familiar Arduino workflow.

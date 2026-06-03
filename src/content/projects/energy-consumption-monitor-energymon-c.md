@@ -16,6 +16,13 @@ star: 0
 lastUpdated: '2017-12-31'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- energy-consumption-monitor
+- hlw8012-and-bl0937-energy-meter-library-for-mongoose-os
+- mongoose-os-esp8266-pir-monitor
+- ofmon-offline-first-smart-energy-monitoring
+- energyme-home
+- zigbee-gas-counter
 ---
 
 Monitoring home energy consumption doesn't always require invasive electrical work or expensive smart meters. The **energymon-c** project provides a clever, non-intrusive solution by leveraging the optical pulse output found on most modern utility meters. By counting these flashes, the system can accurately calculate energy usage in real-time and present it to the user.

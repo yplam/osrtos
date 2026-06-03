@@ -20,6 +20,13 @@ isShow: true
 image: /202604/ergonomic-keyboard.webp
 createdAt: '2026-04-06T23:51:31+00:00'
 updatedAt: '2026-04-06T23:51:31+00:00'
+relatedProjects:
+- aw-1-keyboard
+- puntero34-pointer-peripheral
+- polymath-studio-one-handed-keyboard-ps-ohk
+- zmk-firmware
+- gesture-detecting-macro-keyboard
+- totemx-split-keyboard
 ---
 
 The Dactyl Manuform is a legendary design in the ergonomic keyboard world, known for its concave key wells that follow the natural curvature of the fingers. This project takes that foundation and enhances it with a seamlessly integrated trackball, creating a comprehensive input device that keeps your hands in a neutral position while providing precise pointer control.

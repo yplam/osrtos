@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- 7-segment-clock
+- shelf-edge-clock
+- esp32-weatherstationrtc
+- desk-weather-clock-geekmagic-s3
+- flatsphere-clock
+- elekstube-ips-custom-firmware
 ---
 
 ## Overview

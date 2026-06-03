@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- x-cube-azrtos-wl-azure-rtos-software-expansion-for-stm32wl
+- x-cube-azrtos-f4-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-wb-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-l4-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-g0-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-g4-azure-rtos-software-expansion-for-stm32cube
 ---
 
 The X-CUBE-IOTA1 is a comprehensive expansion software package designed for the STM32Cube ecosystem. It provides the necessary middleware and drivers to enable IOTA Distributed Ledger Technology (DLT) functionalities directly on STM32 microcontrollers. IOTA is a transaction settlement and data transfer layer specifically optimized for the Internet of Things (IoT), allowing for fee-less data and value transfer in a decentralized environment.

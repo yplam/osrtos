@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- nrf24-jammer
+- esp32-2-4ghz-jammer
+- esp32-bluejammer
+- espnrf24-jammer
+- esp32-bluetooth-signal-jammer
+- c3mini-bluejammer
 ---
 
 The CC1101 Jammer is an open-source firmware project designed for the ESP32 platform, leveraging the versatile CC1101 transceiver to explore the world of Sub-GHz radio frequency interference. By combining the processing power and Wi-Fi capabilities of the ESP32 with the wide-range frequency support of the CC1101, this project provides a portable and accessible tool for RF testing and signal disruption.

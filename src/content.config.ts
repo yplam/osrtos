@@ -69,6 +69,7 @@ const projects = defineCollection({
     rtos: z.string(), // Reference to RTOS slug
     libraries: z.array(z.string()).default([]), // References to library slugs
     topics: z.array(z.string()).default([]), // GitHub topics (metadata only)
+    relatedProjects: z.array(z.string()).default([]), // Content-based recommended project slugs
     lastUpdated: z.coerce.date(),
     star: z.number().default(0),
     version: z.string().optional(),

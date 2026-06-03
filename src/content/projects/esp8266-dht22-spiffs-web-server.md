@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-web-server-and-spiffs-integration
+- esp32-web-server-using-spiffs
+- esp8266-config-data-management
+- esp-datalogger-with-firebase-and-spiffs
+- easy-iot-file-system
+- esp32-async-web-server-with-spiffs-and-ota
 ---
 
 The ESP8266-DHT-SPIFFS project is a comprehensive demonstration of the ESP8266's capabilities as a standalone IoT node. It combines environmental sensing, local file storage, and a robust web interface into a single application, specifically tested on the Wemos D1 mini (V2) hardware.

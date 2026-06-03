@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- edgeai-utensor-embedded-rtos-for-arm-processors
+- magic-wand-on-mbed
+- attiny85-mnist-rnn-eeprom
+- fashion-mnist-on-esp32-with-tensorflow-lite-micro
+- speech-recognition-on-stm32-using-machine-learning
+- edge-computing-ai-for-cubesats
 ---
 
 ## Overview

@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-04-02T23:27:42+00:00'
 updatedAt: '2026-04-02T23:27:42+00:00'
+relatedProjects:
+- pruning-deep-learning-models-for-arm-cortex-m
+- ncnn-mp-neural-network-inference-for-micropython
+- torch2cmsis
+- utensor-code-generator-utensor-cgen
+- tensorflow-lite-micro-for-rt-thread
+- keras-to-cmsis-nn-converter
 ---
 
 Deploying Deep Neural Networks (DNNs) on the edge is a balancing act between limited memory, tight energy budgets, and the need for high throughput. As models grow in complexity—shifting from simple convolutions to sophisticated Transformer architectures—the gap between high-level AI frameworks and low-level embedded hardware continues to widen. Deeploy addresses this challenge by serving as an ONNX-to-C compiler that generates low-level, optimized C code specifically tailored for multi-cluster, heterogeneous Systems-on-Chip (SoCs).

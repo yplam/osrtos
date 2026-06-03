@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-04-17T02:23:58+00:00'
 updatedAt: '2026-04-17T02:23:58+00:00'
+relatedProjects:
+- bmw-e90-can-cluster-arduino-project
+- toyota-rav4-climate-control-panel-lin-bus-interface
+- xiaomi-cybergear-arduino-library
+- alfa-romeo-giulia-dashboard-info-display-for-esp32-s3
+- esp32-bus-pirate
+- esp-can-analyzer
 ---
 
 The BMW iDrive controller (ZBE) is a sophisticated piece of automotive hardware, offering a tactile and robust interface for complex menu navigation. This project provides a bridge between the automotive world and the maker ecosystem by using an ESP32-C3 to interpret the CAN bus signals from a BMW F44 iDrive controller. By leveraging the native Two-Wire Automotive Interface (TWAI) peripheral found in the ESP32-C3, the project translates raw CAN frames into actionable data for custom embedded applications.

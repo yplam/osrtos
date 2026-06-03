@@ -24,6 +24,13 @@ isShow: true
 image: /202602/openept.webp
 createdAt: '2026-03-01'
 updatedAt: '2026-03-01'
+relatedProjects:
+- pv-curve-tracer
+- open-source-ldat-latency-analyser
+- stm32f103-thermometer-and-data-logger
+- hlw8012-and-bl0937-energy-meter-library-for-mongoose-os
+- rust-ir-thermometer-firmware
+- airgradient-pro-rust-firmware
 ---
 
 ## Overview

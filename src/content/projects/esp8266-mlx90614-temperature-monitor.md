@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- mongoose-os-mlx90614-ir-temperature-monitor
+- mongoose-os-environment-logger
+- iot-esp8266-serial-forwarder
+- espmonitor-iot-environmental-monitoring-system
+- espmonitor-iot-environment-monitoring-system
+- esp-temperature-to-losant-using-mongoose-os
 ---
 
 ## Overview

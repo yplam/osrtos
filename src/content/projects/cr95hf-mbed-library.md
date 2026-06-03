@@ -18,6 +18,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- spektrum-receiver-library-for-mbed
+- ds248x-1-wire-library
+- herald-for-c
+- xf-extension-to-freertos
+- spirit-motor-driver-library
+- ublox-gnss-api-for-mbed
 ---
 
 The CR95HF is a versatile 13.56 MHz contactless transceiver from STMicroelectronics, often found on the X-Nucleo NFC03A1 expansion board. While powerful, integrating these chips into an embedded project requires a robust driver layer. The CR95HF library for Mbed OS provides a clean, object-oriented interface to interact with this hardware, specifically targeting ISO/IEC 14443A communication.

@@ -29,6 +29,13 @@ topics:
 isShow: true
 createdAt: '2026-04-19T00:06:21+00:00'
 updatedAt: '2026-04-19T00:06:21+00:00'
+relatedProjects:
+- stackchan-minimal
+- nebaura-labs-mote
+- diy-ai-voice-assistant-for-esp32-s3
+- starmoon-open-source-conversational-ai-device
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- xiaozhi-ai-chatbot
 ---
 
 OpenToys is an open-source platform designed to bring high-performance, local voice AI to toys, companions, and robots. By shifting the computational heavy lifting to local Apple Silicon hardware, the project enables sophisticated conversational capabilities without the need for cloud subscriptions, data harvesting, or persistent internet connectivity. This approach ensures that user data stays on-device while providing a free, low-latency AI experience.

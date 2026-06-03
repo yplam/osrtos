@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f103-cmsis-peripheral-configuration
+- stm32-cmsis-libraries
+- stm32-cmsis-zero-to-hero
+- stm32f1xx-bare-metal-template
+- stm32f103rb-templates-and-examples
+- stm32f103-usb-cdc-cmsis
 ---
 
 ## Overview

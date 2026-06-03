@@ -29,6 +29,13 @@ isShow: true
 image: /202601/trezor.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- colibri-wallet
+- bitcoin-card-wallet
+- stick-firmware
+- m5-crystal
+- micropython-and-lvgl-firmware-for-esp32
+- tenstorrent-system-firmware
 ---
 
 ## Overview

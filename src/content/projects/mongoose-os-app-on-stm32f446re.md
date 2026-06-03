@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mongoose-os-app-skeleton
+- empty-mongoose-os-app
+- uart-out-test-app
+- nucleo-experiment-control-system-for-atom-interferometry
+- bluepill-board-support-for-mbed-os-6
+- mbed-os-6-support-for-weact-black-pill-stm32f411ce
 ---
 
 ## Overview

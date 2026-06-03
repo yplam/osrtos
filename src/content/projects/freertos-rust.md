@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- rttrust-rust-wrapper-for-rt-thread
+- rust-support-for-rt-thread
+- freertos-cpp
+- rust-stub-library-for-apache-nuttx
+- ferros
+- stm32-rtic-project-template
 ---
 
 ## Bridging Rust and FreeRTOS

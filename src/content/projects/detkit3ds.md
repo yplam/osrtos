@@ -22,6 +22,13 @@ isShow: true
 image: /202602/detkit3ds.webp
 createdAt: '2026-02-16'
 updatedAt: '2026-02-16'
+relatedProjects:
+- esp32berry
+- dssh-nintendo-3ds-ssh-client-with-pinyin-ime-and-voice-input
+- stm32n6-getting-started-for-object-detection
+- stm32-pocket-game-dev-console
+- lilka-diy-console
+- esp32-cam-yolo-object-and-animal-detection
 ---
 
 ## Overview

@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mongoose-os-playground
+- cuybot-v1-opensource-smartcar-project
+- mongoose-os-app-skeleton
+- mongoose-os-programs-and-examples
+- pyespcar-micropython-esp32-wifi-car
+- sesame-robot-micro
 ---
 
 ## Driving an Off-the-Shelf Car Robot with Mongoose OS

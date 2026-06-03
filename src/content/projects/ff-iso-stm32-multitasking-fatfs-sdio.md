@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- stm32-fatfs-and-freertos-integration
+- stm32-fatfs-on-sd-card-using-freertos
+- stm32f407vg-freertos-fatfs-sdio-sd-card-demo
+- murasaki
+- stm32h743-cmake-template
+- stm32h5-classic-core-middleware-coremw-mcu-firmware-package
 ---
 
 ## Overview

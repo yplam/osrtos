@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- droners
+- flight-controller-rev2
+- protoflight
+- catpilot-autopilot-software-stack
+- avem
+- catpilot
 ---
 
 MControl is a specialized control module for the PX4 autopilot ecosystem, designed to run as a native application on the NuttX RTOS. Its primary purpose is to enable offboard control mode internally, allowing the drone to execute autonomous flight sequences directly on the Pixhawk hardware. This approach is unique because it eliminates the dependency on external calculators or companion computers typically used for MAVLink-based offboard control.

@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2026-04-08T23:41:30+00:00'
 updatedAt: '2026-04-08T23:41:30+00:00'
+relatedProjects:
+- smart-iot-sensor-with-xiao-esp32c6
+- beelight-zigbee-light-environment-sensor
+- zigbee-gas-counter
+- project-aura
+- air-quality-monitor
+- mq135-air-quality-sensor
 ---
 
 ## Overview

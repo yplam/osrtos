@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- c2048-for-rt-thread
+- threes-for-rt-thread
+- lua2rtt
+- micropython-port-for-rt-thread
+- donut-for-rt-thread
+- freertos-port-for-teensy-3-6-4-0-4-1
 ---
 
 ## Overview

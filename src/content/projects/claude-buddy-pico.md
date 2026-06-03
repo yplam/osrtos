@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-05-18T23:50:40+00:00'
 updatedAt: '2026-05-18T23:50:40+00:00'
+relatedProjects:
+- m5paper-buddy
+- deskpet-for-m5stack-cardputer
+- deskpet
+- clawy
+- clawdmeter
+- ble-based-wi-fi-provisioning-for-raspberry-pi-pico-w-pico-2-w
 ---
 
 Claude Buddy Pico brings the Claude Code mascot to life as a playful, physical desktop companion. Originally developed by Felix Rieseberg for M5 ESP32 hardware, this project ports the experience to the Raspberry Pi Pico 2 W, upgrading the interface to a larger 2.8" display. The device sits alongside your computer, reacting to Claude Desktop's actions with animated expressions and providing physical buttons to approve or deny tool calls via Bluetooth.

@@ -34,6 +34,13 @@ topics:
 isShow: true
 createdAt: '2026-04-07T23:24:43+00:00'
 updatedAt: '2026-04-07T23:24:43+00:00'
+relatedProjects:
+- starkpad-a-linux-powered-touchscreen-macro-deck
+- gesture-detecting-macro-keyboard
+- esp32berry
+- t-hmi-c64-emulator
+- esp32-8048s050c-with-lvgl-9-4-and-freertos
+- esp-usb-ble-hid-bridge
 ---
 
 The HD2 Macropad is a highly flexible, easy-to-use peripheral designed specifically for HELLDIVERS 2. It allows players to manage live configurations and individual loadouts on each drop into combat, streamlining the process of calling in stratagems through a dedicated capacitive touchscreen interface.

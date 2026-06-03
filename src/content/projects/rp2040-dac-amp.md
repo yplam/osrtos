@@ -16,6 +16,13 @@ topics:
 isShow: true
 createdAt: '2026-05-10T00:53:18+00:00'
 updatedAt: '2026-05-10T00:53:18+00:00'
+relatedProjects:
+- usbsid-pico
+- midi-2-solenoid-controller
+- usb-video-class-uvc-for-raspberry-pi-pico
+- ev2400-reimplementation-for-raspberry-pi-pico
+- pico-cec
+- pico2dexed
 ---
 
 The RP2040 DAC-Amp is an ambitious project that explores the limits of the Raspberry Pi RP2040 microcontroller by transforming it into a fully functional USB DAC and a 5-watt Class-D amplifier. While most audio projects on the Pico rely on external DAC chips or simple PWM, this project implements the entire signal chain—from receiving USB audio packets to driving a high-power MOSFET H-bridge—directly on the RP2040 hardware.

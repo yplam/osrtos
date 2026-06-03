@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- gif-decoder-for-lvgl
+- png-decoder-for-lvgl
+- lvgl-emscripten-port
+- freetype-integration-for-lvgl
+- littlevgl2rtt
+- lvgl-rust-bindings
 ---
 
 ## Overview

@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- nimble-arduino
+- silicon-labs-arduino-core
+- arduino-serial-ble
+- zj-ble-rt-thread-and-nimble-for-nordic-nrf52
+- rt-thread-nimble
+- arduino-pico
 ---
 
 ## Overview

@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-04-02T03:43:14+00:00'
 updatedAt: '2026-04-02T03:43:14+00:00'
+relatedProjects:
+- xenomai-3-exercises-for-raspberry-pi-4
+- esp32-experiments
+- micropython-samples-and-drivers
+- xenomai-3-exercises
+- stm32f4-cmsis-lessons
+- stm32-cortex-m4-code-examples
 ---
 
 Programming in C is often taught through abstract exercises, but this repository takes a different approach by exploring the language through live experiments and real-world hardware interactions. Developed as a companion to a series of educational live streams, this collection serves as a deep dive into what is possible with C, covering everything from low-level bit manipulation to high-level network communication.

@@ -34,6 +34,13 @@ topics:
 isShow: true
 createdAt: '2026-04-22T00:26:48+00:00'
 updatedAt: '2026-04-22T00:26:48+00:00'
+relatedProjects:
+- nrf52840-m-2-developer-kit
+- zj-ble-rt-thread-and-nimble-for-nordic-nrf52
+- infuse-iot-sdk
+- hail-iot-development-module
+- lemon-iot-lte-nrf9160
+- zj-sdk-rt-thread-for-nordic-nrf52840
 ---
 
 The nRF54L15 Connect Kit is a versatile rapid prototyping solution designed for developers building next-generation IoT devices. At its core is the Nordic Semiconductor nRF54L15 SoC, a high-performance multiprotocol chip featuring a dual-processor architecture: a 128 MHz Arm Cortex-M33 and a 128 MHz RISC-V coprocessor. This combination, supported by 1.5 MB NVM and 256 KB RAM, provides the computational power and memory headroom required for advanced wireless stacks and secure edge processing.

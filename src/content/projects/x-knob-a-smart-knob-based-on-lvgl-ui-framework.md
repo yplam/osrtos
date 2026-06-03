@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- deck
+- openhasp-firmware
+- esp32-s3-smart-home-control-panel
+- flatsphere-clock
+- project-aura
+- omote-open-universal-remote
 ---
 
 X-Knob is a sophisticated open-source hardware project that reimagines the user interface of a traditional rotary encoder. By combining a brushless DC motor with a circular LCD and a magnetic encoder, it creates a "smart knob" capable of providing dynamic haptic feedback and a rich graphical user interface. The project is a spiritual successor to the well-known smart_knob project, but it optimizes the design by using more accessible hardware and a more powerful UI framework.

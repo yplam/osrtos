@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esphome-meter-reader-tflite-component
+- esp-dl-micropython-binding
+- utensor-mnist-handwriting-recognition-demo
+- magic-wand-on-mbed
+- ncnn-mp-neural-network-inference-for-micropython
+- speech-recognition-on-stm32-using-machine-learning
 ---
 
 The `esp_tensorflow_fmnist` project serves as a practical demonstration of Edge AI, specifically running a machine learning model on the ESP32 microcontroller. By leveraging TensorFlow Lite Micro, this repository shows how to perform inference on the Fashion MNIST dataset—a collection of Zalando's article images—directly on embedded hardware.

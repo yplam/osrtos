@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- xenomai-3-exercises-for-raspberry-pi-4
+- xenomai-3-exercises
+- development-of-real-time-systems-assignments
+- xenomai-on-raspberry-pi
+- xenomai-3-for-raspberry-pi-4
+- raspberry-pi-rtos-rpi-rtos
 ---
 
 ## Overview

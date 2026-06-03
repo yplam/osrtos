@@ -40,6 +40,13 @@ isShow: true
 image: /202602/SX466.webp
 createdAt: '2026-02-19'
 updatedAt: '2026-02-19'
+relatedProjects:
+- esp32-marauder-for-esp32-3248s035c
+- marauder-centauri
+- esp-hack-fw
+- esp32-cheap-yellow-display-micropython-lvgl
+- ghost-esp
+- unigeek-firmware
 ---
 
 ## Overview

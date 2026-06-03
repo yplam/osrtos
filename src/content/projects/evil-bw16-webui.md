@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-15'
 updatedAt: '2026-01-15'
+relatedProjects:
+- wifiphisher-for-esp32
+- deautherx
+- madwifi
+- wifi-nightmare
+- marauder-centauri
+- wifiexe-esp32-s3-based-badusb
 ---
 
 ## Overview

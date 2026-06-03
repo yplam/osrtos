@@ -20,6 +20,13 @@ isShow: true
 image: /202601/bbTalkie.webp
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- diy-ai-voice-assistant-for-esp32-s3
+- wally-c-version
+- starmoon-open-source-conversational-ai-device
+- nebaura-labs-mote
+- opentoys
+- espri-esp-radio-interface
 ---
 
 ## Overview

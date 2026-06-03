@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- modular-music-cv-gate-sequencer-for-stm32
+- europi
+- midi2piousbhub
+- pico2dexed
+- pico-rtic-template
+- pc-6001mkii-emulator-for-raspberry-pi-pico
 ---
 
 Microgroove is an open-source hardware MIDI sequence generator designed to bring generative sequencing techniques—often found in modular synthesis and software environments—to a standalone desktop MIDI setup. Built around the Raspberry Pi Pico, it provides an 8-track environment where users can generate and manipulate sequences in real-time using a variety of algorithmic "Machines."

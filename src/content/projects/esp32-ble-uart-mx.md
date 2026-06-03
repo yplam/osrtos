@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-04-02T03:42:05+00:00'
 updatedAt: '2026-04-02T03:42:05+00:00'
+relatedProjects:
+- arduino-serial-ble
+- esp32-uart-bridge
+- usb-keyboard-and-mouse-bluetooth-adapter-esp32
+- esp32-ble-ota-arduino
+- blynk-async-esp32-bt-wf
+- esp32-nimble-hid-client
 ---
 
 The **esp32-ble-uart-mx** is a versatile BLE-to-serial bridge designed for the ESP32 family. Unlike standard adapters that typically operate in a single mode, this project implements a dual-role architecture, allowing a device to act as a peripheral for a central host (like a smartphone) while simultaneously maintaining up to four connections to other peripheral devices. This flexibility makes it ideal for gathering telemetry from multiple sensors or creating bidirectional wireless links between pairs of devices.

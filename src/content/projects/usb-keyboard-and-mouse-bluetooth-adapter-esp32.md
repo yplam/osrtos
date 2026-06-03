@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-03-31T13:13:04+00:00'
 updatedAt: '2026-03-31T13:13:04+00:00'
+relatedProjects:
+- esp32-s3-usb-to-ble-keyboard-bridge
+- dshare-hid
+- nimble-hid-keyboard-and-mouse-example-for-esp32
+- esp-usb-ble-hid-bridge
+- m5-keyboard-and-mouse-emulator
+- esp32-nimble-hid-client
 ---
 
 ## Bridging the Gap Between Wired and Wireless

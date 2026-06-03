@@ -22,6 +22,13 @@ star: 4
 lastUpdated: '2023-08-07'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- onewireng
+- spektrum-receiver-library-for-mbed
+- spirit-motor-driver-library
+- cr95hf-mbed-library
+- wiznetinterface-library
+- ublox-gnss-api-for-mbed
 ---
 
 The DS248X library is a specialized driver for Mbed OS that simplifies the integration of 1-Wire devices into embedded systems. By utilizing I2C-to-1-Wire bridge chips like the DS2484 or the DS2482 series, developers can offload the timing-critical 1-Wire protocol requirements from the main microcontroller to dedicated hardware. This is particularly useful in complex RTOS environments where strict timing for bit-banging 1-Wire can be difficult to maintain.

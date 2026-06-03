@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp-open-rtos
+- openthread-rtos
+- esp8266-rtos-software-development-kit-sdk
+- esp-4diac-forte-library
+- ameba-rtos-sdk
+- rtox-iot-development-platform
 ---
 
 ## Overview

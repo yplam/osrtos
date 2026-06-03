@@ -27,6 +27,13 @@ topics:
 isShow: true
 createdAt: '2026-04-29T23:39:46+00:00'
 updatedAt: '2026-04-29T23:39:46+00:00'
+relatedProjects:
+- simplebus2-mqtt-bridge
+- esp32-controller-for-charlton-jenrick-fireplace
+- esp32-jarolift-controller
+- lixee-box
+- project-aura
+- dtugateway-for-hoymiles-hms-inverters
 ---
 
 The Genius Gateway is a specialized bridge designed to bring the Hekatron Genius Plus X smoke detection system into the modern smart home era. While Hekatron devices are renowned for their reliability in fire safety, they traditionally operate within a closed ecosystem. Integration with popular home automation platforms usually requires proprietary gateways with limited protocol support. This project provides a reverse-engineered alternative that opens up these devices to standard protocols like MQTT, HTTP, and WebSockets.

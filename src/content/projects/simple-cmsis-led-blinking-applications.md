@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- arm-kl25z-mbed-ide-example-programs
+- stm32f4-cmsis-lessons
+- swift-examples-for-stm32c011
+- stm32f103-cmsis-peripheral-configuration
+- lpc43xx-freertos-led-blinking-example
+- stm32-cmsis-zero-to-hero
 ---
 
 ## Overview

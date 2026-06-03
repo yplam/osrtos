@@ -19,6 +19,13 @@ star: 45
 lastUpdated: '2017-12-19'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp32-fatfs-storage-example
+- esp32-spiffs-image-generation-example
+- esp32-spiffs-with-directory-support-example
+- mklfs
+- littlefs-for-esp-idf
+- stm32-fatfs-and-freertos-integration
 ---
 
 Managing data on embedded devices often requires a reliable file system. While SPIFFS (Serial Peripheral Interface Flash File System) is a common choice for the ESP32, the FAT file system (FATFS) offers a familiar structure and compatibility that many developers prefer for specific use cases. The **ESP32_mkfatfs** project provides a streamlined way to prepare, flash, and use FAT partitions on Espressif's ESP32 platform.

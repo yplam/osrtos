@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-03-07'
 updatedAt: '2026-03-07'
+relatedProjects:
+- freebees-access-control-for-esp32
+- smarttrack-rfid-attendance-system
+- m5-crystal
+- esp-dashboardplus
+- esp32-dynamic-iphone-keyless-system
+- esp-graber
 ---
 
 # NFCity: A Modern Interface for NFC Card Exploration

@@ -12,6 +12,13 @@ rtos: ''
 isShow: true
 createdAt: '2026-05-15T12:09:50+00:00'
 updatedAt: '2026-05-15T12:09:50+00:00'
+relatedProjects:
+- retro-nixie-clock
+- esphome-for-nixie2
+- 7-segment-clock
+- digital-rain-clock
+- elekstube-ips-custom-firmware
+- sanjin-intelligent-mechanical-clock
 ---
 
 ## Overview

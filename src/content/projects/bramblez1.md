@@ -19,6 +19,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- rpl-network-visualizer
+- erbium-border-router
+- 6lbr-on-telecontrolli-devices-x-ip4t-x-ip5
+- bluetooth-mesh-sensor-network
+- esp32-mesh-control
+- smartorchard
 ---
 
 ## Visualizing Multi-hop Networks with BRambleZ1

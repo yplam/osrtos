@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2026-01-30'
 updatedAt: '2026-01-30'
+relatedProjects:
+- esp32-remote-for-victron
+- clawdmeter
+- pixlpal-m1-firmware
+- e-paper-esp32-c6-firmware
+- open-display-firmware
+- esphome-tesla-ble
 ---
 
 ## Overview

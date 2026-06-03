@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- micropython-max7219-8x8-led-matrix-library
+- mongoose-os-ws2812b-driver
+- fastled-idf
+- lvgl-for-raspberry-pi-pico-hub75-led-matrix
+- micropython-tm1637-library
+- mongoose-os-relay-library
 ---
 
 ## Overview

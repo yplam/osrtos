@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- spektrum-receiver-library-for-mbed
+- micropython-rotary-encoder-driver
+- stm32-uid-helper-for-mbed
+- xiaomi-cybergear-arduino-library
+- spirit-motor-driver-library
+- rotary-encoder-with-i-c-interface
 ---
 
 ## Overview

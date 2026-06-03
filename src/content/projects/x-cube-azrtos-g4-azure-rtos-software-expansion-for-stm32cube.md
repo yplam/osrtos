@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- x-cube-azrtos-f4-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-g0-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-l4-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-wb-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-h7-azure-rtos-software-expansion
+- x-cube-azrtos-f7-azure-rtos-software-expansion-for-stm32cube
 ---
 
 ## Bridging Azure RTOS and STM32G4 Hardware

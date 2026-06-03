@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- 100askteam-elinux-code-library
+- esp32-repo
+- awesome-zephyr-rtos
+- imxrt1060-evk-sample-project
+- apache-nuttx-rtos-for-pine64-star64
+- apache-nuttx-getting-started
 ---
 
 ## Exploring the SAMA5D27 Ecosystem

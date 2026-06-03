@@ -26,6 +26,13 @@ isShow: true
 image: /202601/x-track.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- watchx-ii-smart-watch
+- gps-tracker
+- esp32-offline-osm-maps
+- esp32-sdr-gps-receiver
+- ubxgpsi2c
+- motolink
 ---
 
 X-TRACK is a high-performance, open-source GPS bicycle computer designed to provide cyclists with professional-grade features in a DIY-friendly package. The project stands out by offering offline map capabilities and real-time trajectory tracking, features typically reserved for high-end commercial cycling computers.

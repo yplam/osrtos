@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-26'
 updatedAt: '2026-01-26'
+relatedProjects:
+- esp32-freertos-examples
+- mongoose-os-samples-for-esp32
+- esp32-mesh-control
+- mongoose-os-programs-and-examples
+- stm32-lwip-mqtt-demo
+- esp32-pppos-client-example
 ---
 
 ## Overview

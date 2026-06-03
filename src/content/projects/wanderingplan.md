@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- w600-rt-thread-smart-fingerprint-lock
+- gnss-lorawan-tracker
+- fctc-art-pi-code-iot-from-chip-to-cloud
+- w601-rt-thread-alarm-clock
+- smartlock-for-disco-l475vg-iot01a
+- chronothermostat-an-aws-powered-iot-climate-control-system
 ---
 
 ## Overview

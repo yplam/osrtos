@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lv-lib-100ask
+- lv-i18n-internationalization-for-lvgl
+- esphome-lvgl-component
+- sjpg-decoder-for-lvgl
+- lvgl-port-for-esp32
+- littlevgl2rtt
 ---
 
 ## Overview

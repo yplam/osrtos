@@ -26,6 +26,13 @@ star: 1
 lastUpdated: '2023-12-14'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- transfer-files-over-ethernet-with-stm32-and-freertos
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- stm32h745-ethernet-with-lwip-and-freertos
+- sk-mstm32f107-demo-board-example
+- mender-ota-example-for-stm32l4-and-zephyr-rtos
+- stm32h750b-dk-touchgfx-freertos-mqtt-example
 ---
 
 Connecting embedded devices to desktop environments or cloud services often requires a robust serialization format to ensure data integrity and ease of development. This project serves as a practical demonstration of using **Embedded Proto**, an embedded-focused implementation of Google Protocol Buffers, to facilitate communication between a microcontroller and a PC over Ethernet.

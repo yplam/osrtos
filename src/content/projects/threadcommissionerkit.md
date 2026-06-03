@@ -34,6 +34,13 @@ topics:
 isShow: false
 createdAt: '2026-01-26'
 updatedAt: '2026-01-26'
+relatedProjects:
+- pelion-device-management-client-example-for-mbed-os
+- mbed-os-client-example
+- coap-eap-with-eap-noob-in-contiki
+- coremqtt-agent-library
+- autonetwork-library
+- zephyr-coaps-client-with-tinydtls
 ---
 
 ## Overview

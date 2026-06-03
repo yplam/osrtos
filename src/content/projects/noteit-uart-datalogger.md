@@ -27,6 +27,13 @@ isShow: true
 image: /202601/Home_Screen_Prototype.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- usb-pd-tester
+- ch32v003-usb-meter
+- m5cardputer-gps-logger
+- meindatalogger
+- wardriver3000
+- usb-pd-adapter
 ---
 
 NoteIt is a dedicated datalogger designed for devices utilizing UART protocols. It serves as a bridge between embedded systems and data analysis, providing a seamless way to capture serial communication in the field or on the bench. The device is built around a compact 4-layer PCB and is powered by an internal rechargeable battery, making it a truly portable solution for firmware debugging and long-term data collection.

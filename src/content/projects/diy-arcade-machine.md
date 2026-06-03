@@ -28,6 +28,13 @@ isShow: true
 image: /202603/diy-arcade-machine.webp
 createdAt: '2026-03-03'
 updatedAt: '2026-03-03'
+relatedProjects:
+- galagino-for-platformio
+- pico-claw-machine
+- msx1-emulator-for-raspberry-pi-pico
+- oficina-de-circuitpython
+- pico-smsplus-sega-master-system-and-game-gear-emulator
+- rp2040-projects-by-armstrong-subero
 ---
 
 ## Overview

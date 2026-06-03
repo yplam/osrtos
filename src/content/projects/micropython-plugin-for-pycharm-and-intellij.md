@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- micropico-visual-studio-code-extension
+- micropython-stubs
+- mu-a-simple-python-code-editor
+- esp32-mpy-jama
+- micropy-cli
+- mbed-vim
 ---
 
 ## Streamlining MicroPython Development

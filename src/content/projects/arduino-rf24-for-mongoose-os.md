@@ -18,6 +18,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- nrf24-driver-for-contiki-os
+- arduino-ir-for-mongoose-os
+- max17263-library-for-mongoose-os
+- hx711-library-for-mongoose-os
+- lis3dh-accelerometer-library-for-mongoose-os
+- ant-arduino
 ---
 
 The nRF24L01+ is one of the most popular low-cost 2.4GHz wireless transceivers in the maker community, largely due to the robust and feature-rich `RF24` library available for Arduino. For developers moving into the world of IoT with **Mongoose OS**, having access to these same reliable communication primitives is essential. The `arduino-rf24` repository provides exactly that: a dedicated port of the nRF24/RF24 library specifically tailored for the Mongoose OS ecosystem.

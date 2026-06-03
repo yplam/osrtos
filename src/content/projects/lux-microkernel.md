@@ -23,6 +23,13 @@ topics:
 isShow: true
 createdAt: '2026-04-01T01:16:03+00:00'
 updatedAt: '2026-04-01T01:16:03+00:00'
+relatedProjects:
+- minios-esp
+- advanced-operating-system-2017-sos
+- smolos
+- mos-rtos
+- rust-sel4-toy-system-for-i-mx6-sabre-lite
+- phoenix-rtos-project
 ---
 
 ## A Minimalist Approach to Operating System Design

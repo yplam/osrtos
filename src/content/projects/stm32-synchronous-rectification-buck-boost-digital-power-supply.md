@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-04-08T23:52:56+00:00'
 updatedAt: '2026-04-08T23:52:56+00:00'
+relatedProjects:
+- robomaster-supercap-controller-adernal
+- pd240w
+- sw32-4-channel-e-stim
+- usb-pd-adapter
+- stm32f4-digital-synthesizer
+- esp32-lab-power-supply
 ---
 
 This project presents a comprehensive design for a four-switch Buck-Boost digital power supply. Built around the STM32G474 microcontroller, the system is capable of handling both step-up and step-down conversions, supporting a wide input and output range up to 48V and 10A. The design includes complete hardware schematics, PCB layouts, firmware source code, and 3D enclosure models.

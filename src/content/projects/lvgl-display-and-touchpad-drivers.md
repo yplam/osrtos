@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-display-and-touchpad-drivers-for-esp32
+- lvgl-for-embedded-linux
+- lvgl-port-for-esp32
+- esp-lvgl
+- rt-thread-fbtft-framebuffer-drivers-for-tft-lcds
+- lv-lib-100ask
 ---
 
 ## Overview

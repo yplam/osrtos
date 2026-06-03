@@ -14,6 +14,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- c-clk-for-rt-thread
+- w601-rt-thread-alarm-clock
+- rx8900-high-precision-rtc-driver-for-rt-thread
+- ds3231-rtc-driver-for-rt-thread
+- termbox-for-rt-thread
+- donut-for-rt-thread
 ---
 
 ## Bringing a Classic Visual to the RT-Thread Terminal

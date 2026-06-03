@@ -17,6 +17,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- huawei-iot-developer-community-2017-codelabs
+- tinyos-nesc-telosb-programs
+- ameba-rtos-sdk
+- eclipse-threadx-iot-devkit-starter-application
+- blinker-iot-documentation
+- iotjs-plus-tizenrt
 ---
 
 ## Exploring AliOS Things 3.0 Application Development

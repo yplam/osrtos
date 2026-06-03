@@ -31,6 +31,13 @@ topics:
 isShow: false
 createdAt: '2026-03-31T23:34:03+00:00'
 updatedAt: '2026-03-31T23:34:03+00:00'
+relatedProjects:
+- cozy
+- coap-eap-with-eap-noob-in-contiki
+- zephyr-coaps-client-with-tinydtls
+- libwebsockets
+- unabto-sdk
+- mtower-trusted-execution-environment
 ---
 
 Secure communication in the Internet of Things (IoT) often faces a difficult trade-off between robust security and limited hardware resources. While traditional protocols like DTLS provide strong protection, their overhead can be prohibitive for the most constrained devices. The Ephemeral Diffie-Hellman Over COSE (EDHOC) protocol, standardized as RFC 9528, was designed to solve this problem by providing a very low-overhead authenticated key exchange. libedhoc is a specialized C implementation of this protocol, built specifically to bring these security benefits to the smallest embedded systems.

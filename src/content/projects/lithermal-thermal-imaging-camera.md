@@ -21,6 +21,13 @@ isShow: true
 image: /202603/lithermal.webp
 createdAt: '2026-03-19'
 updatedAt: '2026-03-19'
+relatedProjects:
+- m5stickcplus2-amg8833-thermal-camera
+- esp32-thermal-camera-viewer
+- opentemp-thermal-imager-infrared-thermometer
+- esp32-lepton
+- edge-ai-on-embedded-linux-i-mx-8m-plus
+- iot-camera
 ---
 
 ## Overview

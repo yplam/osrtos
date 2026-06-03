@@ -18,6 +18,13 @@ isShow: true
 image: /202601/winder.webp
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- esp32-mqtt-motor-control
+- actonator-3d-printable-robot-actuator
+- cybergear-ros2-controller
+- pico-claw-machine
+- quadruped-robot
+- mks-xdrive-mini-foc-driver
 ---
 
 ## Overview

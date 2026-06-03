@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-21'
 updatedAt: '2026-01-21'
+relatedProjects:
+- esp32-voice-assistant
+- kalo-esp32-voice-assistant
+- opentoys
+- bbtalkie
+- nebaura-labs-mote
+- starmoon-open-source-conversational-ai-device
 ---
 
 ## Overview

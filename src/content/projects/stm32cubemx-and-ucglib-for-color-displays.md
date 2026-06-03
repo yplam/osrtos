@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lvgl-port-for-stm32f429-discovery-kit
+- lvgl-port-for-stm32f769-discovery
+- rt-thread-fbtft-framebuffer-drivers-for-tft-lcds
+- stm32f4-display-and-ethernet-example
+- lvgl-port-for-esp32
+- cmsis-drivers-for-efm32-and-stm32
 ---
 
 The STM32CubeMX and ucglib project provides a practical implementation for driving color TFT displays using the popular ucglib library on STM32 microcontrollers. By leveraging the STM32 HAL (Hardware Abstraction Layer) and STM32CubeMX for initial configuration, this repository simplifies the process of adding graphical output to embedded projects.

@@ -33,6 +33,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- blynk-wifinina-wm
+- blynk-wifimanager
+- blynk-async-gsm-manager
+- blynkgsm-manager
+- blynk-async-wm
+- blynk-async-esp32-bt-wf
 ---
 
 One of the most common frustrations in embedded development is the 'hardcoding' of network credentials. For developers using ESP8266 or ESP32 modules as AT-command shields for more powerful microcontrollers, updating a WiFi password often meant tethering the device back to a PC for a reflash. **Blynk_Esp8266AT_WM** is a library designed to eliminate this workflow by providing a robust WiFiManager and Blynk configuration portal for AT-command-based systems.

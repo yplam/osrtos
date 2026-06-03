@@ -37,6 +37,13 @@ isShow: true
 image: /202601/meterbox.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- wute-dashboard-for-formula-student-electric
+- alfa-romeo-giulia-dashboard-info-display-for-esp32-s3
+- rbcm-s32k344-autosar-rear-body-control-module
+- bmw-e90-can-cluster-arduino-project
+- stm32l476g-discovery-rtos-sensor-project
+- stm32-framework
 ---
 
 ## Overview

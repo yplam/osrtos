@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-demo-test
+- lvgl-emscripten-port
+- lvgl-rust-bindings
+- luavgl
+- littlevgl2rtt
+- eclipse-simulator-for-lvgl-using-sdl
 ---
 
 ## Overview

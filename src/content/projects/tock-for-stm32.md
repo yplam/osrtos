@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mbed-os-6-port-for-weact-stm32h743vit6
+- blackpill-stm32f401ce-support-for-mbed-os-6
+- pinetime-tock
+- mbed-os-6-support-for-weact-black-pill-stm32f401cc
+- mbed-os-6-support-for-weact-black-pill-stm32f411ce
+- bluepill-board-support-for-mbed-os-6
 ---
 
 ## Overview

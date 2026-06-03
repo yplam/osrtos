@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- ayreswifimanager-awm
+- esp-fs-webserver
+- blynk-async-wm
+- blynkgsm-manager
+- asyncesp8266-w5500-manager
+- esp32-wi-fi-provision-care
 ---
 
 AutoNetwork is a comprehensive WiFi management solution designed specifically for ESP32 microcontrollers. It simplifies the process of connecting devices to local networks by providing a robust lifecycle manager that handles everything from initial credential entry to connection monitoring and recovery.

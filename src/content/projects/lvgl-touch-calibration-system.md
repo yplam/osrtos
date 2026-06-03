@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- bsp-stm32-gt911-touch-panel-component
+- lvgl-joystick-library
+- lvgl-display-and-touchpad-drivers
+- esp32-tux
+- lvgl-port-for-esp32
+- lvgl-port-for-stm32f769-discovery
 ---
 
 ## Overview

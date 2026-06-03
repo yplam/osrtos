@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-04-02T23:28:39+00:00'
 updatedAt: '2026-04-02T23:28:39+00:00'
+relatedProjects:
+- bluetooth-ducky-esp32-hid-injection-tool
+- wifiphisher-for-esp32
+- marauder-centauri
+- evil-bw16-webui
+- toothpaste
+- neoducky
 ---
 
 ## Overview

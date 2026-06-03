@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-05-20T00:12:46+00:00'
 updatedAt: '2026-05-20T00:12:46+00:00'
+relatedProjects:
+- smart-plant-monitoring-system
+- iotea
+- m5stack-esphome-integrations
+- eight-sleep-control-with-m5stack-atoms3
+- esphome-ikea-vindriktning
+- multiple-jk-bms-modbus-rs485-integration
 ---
 
 Automated indoor gardening often requires a delicate balance between simple hardware and robust software. The ESPHome Plant Watering project provides a comprehensive firmware solution for managing up to six plants using the M5Stack ecosystem. By leveraging the power of ESPHome and the ESP32-S3-based AtomS3-Lite, this project creates a bridge between physical soil moisture sensors and the Home Assistant automation engine.

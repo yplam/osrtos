@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-03-12'
 updatedAt: '2026-03-12'
+relatedProjects:
+- jc4827w543-lvgl-v9-implementation
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- lvgl-8-on-wt32-sc01-with-arduino
+- rp2040-lvgl-8-demo-with-ili9488-and-xpt2046
+- sc01-plus-hmi-example-with-squareline-studio
+- lilygo-t-display-s3-boilerplate
 ---
 
 The JC3248W535_lvgl_test repository provides a functional example for developers working with the JC3248W535 display module. This hardware is based on the powerful ESP32-S3 SoC, specifically the N16R8V variant which offers 16MB of Flash and 8MB of PSRAM, making it well-suited for memory-intensive graphical user interfaces.

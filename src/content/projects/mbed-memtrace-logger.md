@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- rtems-stack-tracer
+- espfetch
+- mcp2518fd-can-fd-logger-for-raspberry-pi-pico
+- zview-zephyr-rtos-runtime-visualizer
+- contikipy
+- nxscli
 ---
 
 The `mbed-memtrace-logger` is a specialized tool designed to simplify the process of debugging memory issues in mbed-os projects. While mbed-os provides a built-in `memtrace` feature, the raw output can be difficult to interpret during active development. This project provides a Python script that captures serial output and transforms it into a human-readable format, complete with color-coded logs and a visual map of the heap.

@@ -27,6 +27,13 @@ isShow: true
 image: /202601/zmk.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- aw-1-keyboard
+- kmk-firmware
+- zmk-tri-state-behavior
+- highboy-firmware
+- ruuvitag-firmware-for-zephyr-os
+- m5-keyboard-and-mouse-emulator
 ---
 
 ## Overview

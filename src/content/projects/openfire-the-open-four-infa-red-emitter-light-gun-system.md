@@ -23,6 +23,13 @@ isShow: true
 image: /202603/openfire.webp
 createdAt: '2026-03-05'
 updatedAt: '2026-03-05'
+relatedProjects:
+- openfire-firmware-for-esp32
+- oscilloscope-rp2040
+- arcus
+- open-source-ldat-latency-analyser
+- omote-open-universal-remote
+- lvgl-watch-firmware-for-open-smartwatch
 ---
 
 OpenFIRE represents a significant leap forward for the DIY light gun community, serving as the successor to the IR-GUN4ALL and SAMCO projects. It is a feature-rich firmware designed specifically for the Raspberry Pi RP2040 and the newer RP2350 microcontrollers. By leveraging the unique capabilities of these chips, OpenFIRE provides a low-latency, highly customizable experience for retro gaming enthusiasts and arcade builders alike.

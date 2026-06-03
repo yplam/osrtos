@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rt-thread-thread-pool-implementation
+- pubsub-c
+- freertos-wrapper-for-rt-thread
+- coremqtt-agent-library
+- frt-fl-ssie-s-ready-freertos-threading
+- twine-thread-and-worker-interface-for-elk-audio-os
 ---
 
 Ppool is a specialized thread pool library designed for the RT-Thread real-time operating system. By utilizing the POSIX threads (pthread) compatibility layer provided by RT-Thread, Ppool offers a familiar and efficient way to manage concurrent execution without the overhead of manually creating and destroying threads for every background task.

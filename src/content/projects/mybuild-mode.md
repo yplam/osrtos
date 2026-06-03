@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- kconfig-for-the-zephyr-project
+- mbed-vscode-tools
+- rtems-cmake-build-support
+- mbed-vim
+- snu-2d-programming-tools-ide-for-nesc
+- freertos-rust
 ---
 
 ## Enhancing Embox Development with mybuild-mode

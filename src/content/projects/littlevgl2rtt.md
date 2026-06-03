@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-for-embedded-linux
+- lvgl-port-for-esp32
+- freertos-wrapper-for-rt-thread
+- rt-thread-fbtft-framebuffer-drivers-for-tft-lcds
+- lvgl-rust-bindings
+- rt-u8g2-u8g2-graphics-library-for-rt-thread
 ---
 
 ## Overview

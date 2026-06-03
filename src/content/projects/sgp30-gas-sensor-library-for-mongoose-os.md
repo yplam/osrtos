@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mongoose-os-bme680-library
+- sgp30-gas-sensor-driver-for-rt-thread
+- ccs811-digital-gas-sensor-driver-for-rt-thread
+- mongoose-os-environmental-sensors-application
+- max17263-library-for-mongoose-os
+- ltc68xx-battery-monitoring-library-for-mongoose-os
 ---
 
 The `mgos-sgp30` library provides a seamless integration for the Sensirion SGP30 gas sensor within the Mongoose OS ecosystem. The SGP30 is a high-performance multi-pixel gas sensor designed for indoor air quality monitoring, capable of measuring Total Volatile Organic Compounds (TVOC) and CO2 equivalent (eCO2) signals with high stability and accuracy.

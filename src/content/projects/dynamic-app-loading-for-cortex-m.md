@@ -20,6 +20,13 @@ star: 63
 lastUpdated: '2020-07-29'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp32-p4-jit-dynamic-code-loading-system
+- beremiz4uc
+- fpbinject
+- bpf-ebpf-for-microcontroller-compartmentalization
+- arm-control-framework-acorns-rover
+- mcumanager-ios
 ---
 
 In the world of embedded systems, applications are traditionally linked statically with the kernel and flashed as a single monolithic binary. However, as systems become more complex, the need for dynamic application loading—the ability to load and run code at runtime without reflashing the entire system—becomes increasingly valuable. The **Dynamic App Loading** project provides a minimal, educational, and functional example of how to achieve this on ARM Cortex-M hardware.

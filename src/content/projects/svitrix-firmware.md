@@ -26,6 +26,13 @@ isShow: true
 image: /202604/clock.webp
 createdAt: '2026-04-24T09:33:54+00:00'
 updatedAt: '2026-04-24T09:33:54+00:00'
+relatedProjects:
+- pixlpal-m1-firmware
+- openhasp-firmware
+- esp32-jarolift-controller
+- lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
+- elekstube-ips-custom-firmware
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
 ---
 
 SVITRIX is a smart home companion designed to transform the Ulanzi Smart Pixel Clock TC001 and DIY LED matrices into powerful information displays. Built as a community-driven fork of the AWTRIX 3 project, SVITRIX focuses on active development and seamless integration with automation ecosystems like HomeAssistant, IOBroker, and Node-RED. 

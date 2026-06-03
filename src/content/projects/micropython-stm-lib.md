@@ -35,6 +35,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- micropython-lib
+- micropython-samples-and-drivers
+- micropython-examples-for-01studio-development-boards
+- micropython-waveshare-e-paper-drivers
+- micropython-kitchen-sink-for-m5stack
+- stm32-cmsis-libraries
 ---
 
 MicroPython-STM-Lib is a versatile collection of Python modules designed to extend the capabilities of MicroPython, with a primary focus on STM32F4-based boards. While originally tailored for hardware like the original pyboard and the STM32F4DISCOVERY, the library's modular nature ensures that many of its components are compatible with the MicroPython Unix port and other bare-metal targets such as the ESP8266 and ESP32.

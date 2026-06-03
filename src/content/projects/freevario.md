@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- fpv-drone-stm32f411-flight-controller
+- stm32-quadcopter-low-cost-quadcopter-design
+- drone-stm32f1
+- avem
+- move-on-helium-sensors
+- lvgl-demo-embarcadores
 ---
 
 FreeVario is an open-source hardware and firmware project dedicated to creating a high-performance variometer for flight sports. By providing real-time telemetry data to popular flight software such as XCSoar or XCTrack, it serves as a bridge between physical flight sensors and digital navigation tools. The system transmits data via Bluetooth or USB using standard NMEA sentences, making it compatible with a wide range of mobile devices and flight computers.

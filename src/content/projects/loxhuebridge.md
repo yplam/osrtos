@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-02-03'
 updatedAt: '2026-02-03'
+relatedProjects:
+- lixee-box
+- simplebus2-mqtt-bridge
+- comfosense-touch-zehnder-comfoair-q350-mqtt-bridge-controller
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- esphome-modbus-tcp-to-rtu-bridge
+- dtugateway-for-hoymiles-hms-inverters
 ---
 
 ## Overview

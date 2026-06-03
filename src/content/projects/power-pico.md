@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-04-17T08:38:57+00:00'
 updatedAt: '2026-04-17T08:38:57+00:00'
+relatedProjects:
+- ch32v003-usb-meter
+- hlw811x-power-metering-library
+- xiao-debug-mate
+- oscilloscope-rp2040
+- elevourer-portable-intelligent-electronic-load
+- lvgl-port-for-raspberry-pi-pico-mdk-arm
 ---
 
 Power-Pico is more than just a standard USB ammeter; it is a product-level portable low-power measurement analyzer specifically engineered for embedded developers. Traditional ammeters often struggle with the physical limitations of measuring micro-ampere level currents. Power-Pico addresses this with an innovative multi-gear automatic switching sampling design, achieving full-range coverage from $1\mu A$ to $5A$.

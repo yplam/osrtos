@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- c-common-for-rt-thread
+- awesome-zephyr-rtos
+- micro-ros-for-rt-thread
+- rtt-validator
+- stm32h5-classic-core-middleware-coremw-mcu-firmware-package
+- freertos-wrapper-for-rt-thread
 ---
 
 ## Overview

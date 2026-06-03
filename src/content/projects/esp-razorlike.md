@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-mywidget
+- esp-fs-webserver
+- configassist-esp32-esp8266
+- effortless-spiffs
+- arduino-esp-utils
+- esp8266-micropython-development
 ---
 
 ## Overview

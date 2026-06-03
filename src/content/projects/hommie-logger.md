@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- spiffslogger
+- meindatalogger
+- spiffs-circular-queue
+- espsavecrashspiffs
+- ulog-easyflash-flash-backend-and-filter-storage-for-rt-thread
+- esp-datalogger-with-firebase-and-spiffs
 ---
 
 ## Overview

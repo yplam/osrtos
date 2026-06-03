@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-port-for-stm32f769-discovery
+- lvgl-demo-embarcadores
+- lvgl-port-for-m5stack-core2
+- lvgl-port-for-arm-cortex-m55-and-mps3-an547
+- lvgl-port-for-esp32
+- lvgl-port-for-raspberry-pi-pico-mdk-arm
 ---
 
 ## Overview

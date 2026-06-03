@@ -30,6 +30,13 @@ isShow: true
 image: /202512/12640-01a.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- zmk-firmware
+- smart-keymap
+- clawtype
+- polymath-studio-one-handed-keyboard-ps-ohk
+- stick-firmware
+- micropython-and-lvgl-firmware-for-esp32
 ---
 
 ## Python-Powered Keyboards

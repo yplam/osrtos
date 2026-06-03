@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- freertos-port-for-risc-v
+- apache-nuttx-rtos-on-64-bit-risc-v
+- phoenix-rtos-project
+- rt-thread-for-picorv32-on-lichee-tang
+- c-common-for-rt-thread
+- micropython-for-kendryte-k210-lobo-port
 ---
 
 ## Overview

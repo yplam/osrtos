@@ -13,6 +13,13 @@ isShow: true
 image: /202603/pi-powered-smart-display-with-voice-assistant.webp
 createdAt: '2026-03-15'
 updatedAt: '2026-03-15'
+relatedProjects:
+- multi-modal-ai-assistant-on-raspberry-pi-5
+- lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
+- esp32-p4-home-assistant-display
+- project-aura
+- esp32-s3-smart-home-control-panel
+- flatsphere-clock
 ---
 
 TuneoutDisplay is a sophisticated DIY smart display solution designed for the Raspberry Pi 4B. It transforms a standard Pi, a 7-inch touchscreen, and a ReSpeaker 2-Mic HAT into a fully integrated Home Assistant satellite. Unlike generic tablets, TuneoutDisplay is built from the ground up to handle always-on wake word detection, high-fidelity audio streaming, and deep integration with the Home Assistant ecosystem via MQTT.

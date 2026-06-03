@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- compass-multihop-framework-for-tinyos
+- distributed-wavelet-transform-for-tinyos
+- cse160-network-protocols-project-skeleton
+- tinyos-cooja-simulator-application
+- atmega128rfa1-tinyos-kth-wsn-project
+- loadng-implementation-on-contiki-os
 ---
 
 ## Overview

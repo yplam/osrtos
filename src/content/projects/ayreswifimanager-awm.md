@@ -32,6 +32,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- autonetwork-library
+- esp32-w5500-manager
+- esp8266-w5100-manager
+- esp-fs-webserver
+- wifimanager-rp2040w
+- asyncesp8266-w5500-manager
 ---
 
 ## Overview

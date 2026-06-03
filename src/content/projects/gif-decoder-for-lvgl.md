@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- png-decoder-for-lvgl
+- bmp-decoder-for-lvgl
+- lottie-animation-library-for-lvgl
+- animated-gif-on-a-320x240-lcd-display-ili9341-with-the-esp32
+- sjpg-decoder-for-lvgl
+- qr-code-library-for-lvgl
 ---
 
 ## Overview

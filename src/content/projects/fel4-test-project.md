@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- rust-sel4-toy-system-for-i-mx6-sabre-lite
+- sel4twinkle-alloc-rs
+- selfe-sys-rust-bindings-for-sel4
+- solox-amp-rust
+- rust-test-app-for-apache-nuttx-os
+- rust-fel4-workspace-for-raspberry-pi-3
 ---
 
 ## Overview

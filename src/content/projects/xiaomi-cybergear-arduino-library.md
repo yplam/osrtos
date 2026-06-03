@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-02-16'
 updatedAt: '2026-02-16'
+relatedProjects:
+- spirit-motor-driver-library
+- cybergear-ros2-controller
+- arduino-dronecan
+- esp32-ai-connect
+- arduino-serial-ble
+- bmw-idrive-controller-can-bus-interpreter
 ---
 
 ## Overview

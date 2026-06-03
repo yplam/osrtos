@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-02-07'
 updatedAt: '2026-02-07'
+relatedProjects:
+- simpleftpserver-library
+- ftp-server-teensy41
+- ftp-server-with-littlefs-for-wfi32-iot-board
+- stm32-ftp-server
+- esp-fs-webserver
+- devfsuploadesp
 ---
 
 MultiFTPServer is a versatile and lightweight library designed to bring FTP server capabilities to a wide range of embedded platforms. By integrating this library into an Arduino-based project, developers can expose their device's filesystem to standard FTP clients like FileZilla, WinSCP, or Windows File Explorer. This allows for seamless remote file management, including uploading firmware updates, downloading logs, or managing configuration files without needing physical access to the device or its storage media.

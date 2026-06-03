@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- micropython-examples-for-01studio-development-boards
+- asynchronous-programming-in-micropython
+- awesome-micropython
+- sparkfun-python-examples
+- esp32-repo
+- micropython-lib
 ---
 
 ## Overview

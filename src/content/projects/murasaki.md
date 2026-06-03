@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- stm32-prototyping-libraries
+- cmsis-drivers-for-efm32-and-stm32
+- frt-fl-ssie-s-ready-freertos-threading
+- freertos-cpp
+- ff-iso-stm32-multitasking-fatfs-sdio
+- stm32-framework
 ---
 
 ## Overview

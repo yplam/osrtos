@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- arduino-freertos-library
+- arduino-rt-thread-library
+- freertos-port-for-teensy-3-6-4-0-4-1
+- freertos-port-for-avr-xmega
+- rt-thread-art-arduino-rt-thread
+- arduino-pico
 ---
 
 ## Overview

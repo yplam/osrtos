@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- solox-amp-rust
+- fel4-test-project
+- rust-fel4-workspace-for-raspberry-pi-3
+- ferros
+- rust-sel4-toy-system-for-i-mx6-sabre-lite
+- selfe-sys-rust-bindings-for-sel4
 ---
 
 ## Overview

@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-30'
 updatedAt: '2026-01-30'
+relatedProjects:
+- esp32-u2f-security-key
+- esp32-mfa-authenticator
+- securegen
+- open-authenticator-app
+- freebees-access-control-for-esp32
+- ghost-esp
 ---
 
 ## Overview

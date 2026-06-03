@@ -21,6 +21,13 @@ isShow: true
 image: /202601/AC_TENS_version2_3D.webp
 createdAt: '2026-01-31'
 updatedAt: '2026-01-31'
+relatedProjects:
+- tinycore-esp32-s3-learning-platform
+- noninvasive-glucometer
+- openhoop
+- nrf52840-m-2-developer-kit
+- openhrstrap-open-source-esp32-heart-rate-tracker
+- sw32-4-channel-e-stim
 ---
 
 ## Overview

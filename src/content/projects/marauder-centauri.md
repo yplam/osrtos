@@ -37,6 +37,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- esp32-marauder-for-esp32-3248s035c
+- unigeek-firmware
+- esp-hack-fw
+- esp32-marauder-for-cheap-yellow-display-cyd
+- ghostesp
+- wifiphisher-for-esp32
 ---
 
 The Marauder Centauri is a specialized firmware suite designed for the ESP32, transforming the popular microcontroller into a portable powerhouse for wireless security auditing. Inspired by the original ESP8266 Deauther, this project expands the scope to include both WiFi and Bluetooth capabilities, providing a wide array of tools for both offensive testing and defensive monitoring.

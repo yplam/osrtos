@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-display-and-touchpad-drivers
+- lvgl-port-for-esp32
+- lvgl-display-and-touchpad-drivers-for-esp32
+- esp-lvgl
+- littlevgl2rtt
+- lvgl-rust-bindings
 ---
 
 ## Overview

@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- cmsis-device-headers-for-stm32
+- cmsis-for-stm32-development
+- microchip-cmsis-modules-for-arduino
+- cmsis-device-headers-for-microchip-sam
+- cmsis-documentation
+- stm32cube-cmsis-core
 ---
 
 ## Overview

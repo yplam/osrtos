@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- golioth-firmware-sdk
+- golioth-zephyr-sdk
+- infuse-iot-sdk
+- zephyr-sdk
+- iotconnect-azure-rtos-sdk
+- ameba-rtos-sdk
 ---
 
 The Spotflow Observability Device SDK is a powerful toolset designed for developers working with the Zephyr RTOS and ESP-IDF frameworks. It serves as a bridge between embedded hardware and the Spotflow observability platform, allowing for streamlined log management, error reporting, and remote device configuration.

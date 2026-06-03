@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-05-24T00:36:00+00:00'
 updatedAt: '2026-05-24T00:36:00+00:00'
+relatedProjects:
+- esphome-e-ink-4-color-dashboard
+- micropython-waveshare-e-paper-drivers
+- git-contributions-e-ink-display
+- esp32-p4-home-assistant-display
+- esp-e-paper-component
+- devmonitor-for-pis
 ---
 
 Paper Pi is a modern, modular, and highly customizable dashboard for Waveshare E-Ink displays. Powered by Raspberry Pi and rendered in pixels, it is built using Python 3.14+ with async/await patterns and a clean, testable architecture. The project is designed to be easy to deploy and maintain, utilizing Docker to handle complex dependencies and hardware driver setups automatically.

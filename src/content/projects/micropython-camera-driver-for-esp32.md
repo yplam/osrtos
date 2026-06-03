@@ -22,6 +22,13 @@ isShow: true
 image: /202512/ai-thinker-esp32-cam.webp
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-camera-api-for-esp32
+- esp32-cam-micropython
+- esp32-lepton
+- upycam
+- micropython-st7735-tft-lcd-driver
+- micropython-for-esp32-with-psram-support-lobo-port
 ---
 
 ## Bringing Vision to MicroPython

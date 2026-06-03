@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- openhaystack-zephyr-firmware
+- sensilo-ble-sensor-node
+- blue-clover-plt-demo-v2-zephyr-firmware
+- sks-airspy-ant-community-firmware
+- twatch-v3-firmware-for-esp32
+- open-display-firmware
 ---
 
 The ruuvitag_fw_zephyr project provides a modern firmware implementation for the RuuviTag sensor platform, leveraging the power and flexibility of the Zephyr Real-Time Operating System (RTOS). Developed using the nRF Connect SDK (NCS), this firmware transitions the RuuviTag ecosystem into a highly modular and scalable environment suitable for professional IoT deployments.

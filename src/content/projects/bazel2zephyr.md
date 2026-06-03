@@ -19,6 +19,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- sel4-userland-library-tutorial
+- seal-test-bare-bones-example
+- qemu-emulation-for-ti-lm3s6965-cortex-m3
+- stm32f1-rtos-example-project
+- zephyr-rtos-tutorial-for-beginners
+- cmsis-rtos-on-micro-bit
 ---
 
 Bridging the gap between modern build systems like Bazel and embedded RTOS environments like Zephyr can be a daunting task. While Bazel is renowned for its reproducible builds and dependency management, Zephyr relies heavily on CMake. The `bazel2zephyr` project provides a clear, hands-on tutorial for developers who need to take an existing Bazel-based C++ project, cross-compile it for ARM, and link it into a Zephyr application.

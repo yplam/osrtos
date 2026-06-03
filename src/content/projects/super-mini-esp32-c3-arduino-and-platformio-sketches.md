@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-04-04T09:54:01+00:00'
 updatedAt: '2026-04-04T09:54:01+00:00'
+relatedProjects:
+- xiao-esp32c6-sketches
+- seeed-studio-xiao-esp32-project-collection
+- esp32-repo
+- esp32-freertos-examples
+- micropython-examples-for-01studio-development-boards
+- jc2432w328-microcontroller-board-documentation
 ---
 
 The Super Mini ESP32-C3 is a remarkably compact development board that brings the power of the RISC-V based ESP32-C3 microcontroller into a tiny 22x18 mm form factor. This repository serves as a technical companion to a deep dive into these boards, providing a structured set of sketches and projects that exercise nearly every facet of the hardware.

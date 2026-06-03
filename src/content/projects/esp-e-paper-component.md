@@ -22,6 +22,13 @@ isShow: true
 image: /202601/epaper.webp
 createdAt: '2026-01-29'
 updatedAt: '2026-01-29'
+relatedProjects:
+- lvgl-display-and-touchpad-drivers-for-esp32
+- lvgl-port-for-esp32
+- esp32-smartdisplay
+- esp32-tux
+- esp-lvgl
+- esphome-lvgl-component
 ---
 
 ## Overview

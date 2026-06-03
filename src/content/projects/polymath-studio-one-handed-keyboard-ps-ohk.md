@@ -22,6 +22,13 @@ isShow: true
 image: /202603/psohk.webp
 createdAt: '2026-03-12'
 updatedAt: '2026-03-12'
+relatedProjects:
+- custom-5x7-dactyl-manuform-with-integrated-trackball
+- clawtype
+- aw-1-keyboard
+- kmk-firmware
+- gesture-detecting-macro-keyboard
+- diy-portrait-mode-gamepad
 ---
 
 ## Overview

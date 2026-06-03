@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- freertos-port-for-risc-v
+- freertos-port-for-renesas-rh850
+- freertos-port-for-teensy-3-6-4-0-4-1
+- archminix
+- freertos-for-raspberry-pi-3-64-bit
+- freertos-port-for-avr-xmega
 ---
 
 ## Overview

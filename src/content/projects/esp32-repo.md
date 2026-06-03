@@ -17,6 +17,13 @@ star: 18
 lastUpdated: '2018-10-15'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp32-freertos-examples
+- esp-lvgl
+- micropython-samples-and-drivers
+- jc2432w328-microcontroller-board-documentation
+- xiao-esp32c6-sketches
+- super-mini-esp32-c3-arduino-and-platformio-sketches
 ---
 
 The ESP32-Repo by coder137 serves as a practical knowledge base for developers working with the Espressif ESP32 platform. Rather than being a single application, it is a structured repository of examples and configuration templates designed to help developers master the complexities of the ESP32, particularly its integration with FreeRTOS and various build environments.

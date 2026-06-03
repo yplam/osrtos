@@ -19,6 +19,13 @@ topics:
 isShow: true
 createdAt: '2026-04-18T01:30:11+00:00'
 updatedAt: '2026-04-18T01:30:11+00:00'
+relatedProjects:
+- arduino-lab-for-micropython
+- pikapython
+- micro-repl
+- esp32-bitlashtbp
+- 107-arduino-littlefs
+- avr-spiffs
 ---
 
 UNO MOUSE transforms the Arduino UNO into a standalone stack-based microcomputer. Inspired by the MOUSE programming language from the late 1970s, this project provides a minimalist interactive environment that includes a built-in text editor, low-resolution graphics, and persistent program storage. It is designed to operate as a self-contained system, requiring only a PS/2 keyboard and a composite video display to function.

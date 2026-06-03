@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- homebrew-tinyos-for-msp430
+- tinyos-nesc-telosb-programs
+- tinyos-apps-for-msp430f5529
+- freertos-port-for-avr-xmega
+- micro-ros-for-rt-thread
+- tinyos-role-for-ansible
 ---
 
 TinyOS has long been a staple in the wireless sensor network (WSN) community, known for its component-based architecture and event-driven execution model. However, many smaller or newer MSP430 microcontrollers often fall outside the scope of official support. The tinyos-msp430 project bridges this gap, providing a dedicated port for electronics hobbyists and developers working with small-footprint TI MSP430 chips.

@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropico-visual-studio-code-extension
+- micropython-stubber
+- mbed-vscode-tools
+- cmsis-rp2040
+- micropython-stubs
+- esp32-mpy-jama
 ---
 
 ## Streamlining MicroPython Development

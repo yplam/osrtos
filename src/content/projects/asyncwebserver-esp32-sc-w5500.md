@@ -35,6 +35,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- asyncwebserver-esp32-w5500
+- asyncwebserver-esp32-sc-enc
+- asyncwebserver-ethernet
+- asynchttprequest-esp32-ethernet
+- webserver-esp32-w5500
+- asynchttpsrequest-esp32-ethernet
 ---
 
 The **AsyncWebServer_ESP32_SC_W5500** library is a powerful networking tool for developers working with the ESP32 ecosystem, specifically those utilizing the W5500 Ethernet controller. While many ESP32 projects rely on Wi-Fi, industrial and high-reliability applications often require the stability of a wired Ethernet connection. This library bridges that gap by providing a fully asynchronous web server that runs on the LwIP stack for the ESP32-S2, S3, and C3 variants.

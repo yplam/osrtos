@@ -26,6 +26,13 @@ isShow: true
 image: /202512/europi.webp
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- modular-music-cv-gate-sequencer-for-stm32
+- micropython-for-flipper-zero
+- microgroove
+- oficina-de-circuitpython
+- ev2400-reimplementation-for-raspberry-pi-pico
+- pc-6001mkii-emulator-for-raspberry-pi-pico
 ---
 
 ## Bridging Eurorack and Python with EuroPi

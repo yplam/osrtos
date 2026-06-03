@@ -24,6 +24,13 @@ isShow: true
 image: /202603/s3sampler.webp
 createdAt: '2026-03-17'
 updatedAt: '2026-03-17'
+relatedProjects:
+- esp32-sd-sampler
+- esp32-s3-soundfont-sf2-sampler-synthesizer
+- esp32-soundfont-sf2-sampler-synthesizer
+- esp32-custom-hardware-synthesizer
+- stm32f4-digital-synthesizer
+- digital-synth-pra32-u2
 ---
 
 ## High-Performance Polyphonic Sampling on the ESP32-S3

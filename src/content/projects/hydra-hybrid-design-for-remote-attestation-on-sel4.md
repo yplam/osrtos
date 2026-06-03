@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- the-sel4-white-paper
+- sel4-armv8-vmm-manifest
+- rust-sel4-toy-system-for-i-mx6-sabre-lite
+- raspberry-pi-pico-w-and-pico-2-w-fota-bootloader
+- advanced-operating-system-2017-sos
+- bpf-ebpf-for-microcontroller-compartmentalization
 ---
 
 ## Overview

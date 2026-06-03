@@ -38,6 +38,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- ds323x-generic
+- multiresetdetector-generic-library
+- onewireng
+- esp32-targz
+- supladevice-library
+- timezones-for-mongoose-os
 ---
 
 Managing time in embedded systems is notoriously difficult, especially when dealing with Daylight Saving Time (DST) and local offsets. The Timezone_Generic library simplifies this by providing a robust framework for converting Universal Coordinated Time (UTC) to local time. Based on Jack Christensen's original Timezone library, this generic version expands support to a vast ecosystem of modern microcontrollers and networking shields.

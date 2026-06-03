@@ -22,6 +22,13 @@ star: 19
 lastUpdated: '2020-10-24'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- d21ecm-usb-cdc-ecm-for-samd21
+- d21eem-usb-cdc-eem-for-samd21
+- stm32-bluepill-rndis-device-with-lwip
+- usb-cdc-ecm-for-stm32f072
+- ip-over-usb
+- esp32-usb-over-ip
 ---
 
 Connecting embedded devices to a network often requires dedicated Ethernet controllers or Wi-Fi modules, but the **D21rndis** project offers a clever alternative for the Microchip SAMD21. By implementing the Remote Network Driver Interface Specification (RNDIS), this project allows a SAMD21-based board to appear as a network interface to a host computer over a standard USB cable.

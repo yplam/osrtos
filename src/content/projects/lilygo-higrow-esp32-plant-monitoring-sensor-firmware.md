@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lilygo-higrow-esp32-plant-monitoring-sensor-firmware-hardware-v1
+- smart-plant-monitoring-system
+- mongoose-os-configurable-sensor-node
+- mongoose-os-environment-logger
+- ruuvitag-firmware-for-zephyr-os
+- iotea
 ---
 
 ## Overview

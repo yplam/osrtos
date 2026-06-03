@@ -22,6 +22,13 @@ isShow: true
 image: /202603/pico-peanutgb.webp
 createdAt: '2026-03-23'
 updatedAt: '2026-03-23'
+relatedProjects:
+- pico-smsplus-sega-master-system-and-game-gear-emulator
+- retrojam-multi-retro-game-console-emulator
+- msx1-emulator-for-raspberry-pi-pico
+- lvgl-game-boy-advance-emulator
+- pc-6001mkii-emulator-for-raspberry-pi-pico
+- esp32-s3-nes-emulator
 ---
 
 ## Overview

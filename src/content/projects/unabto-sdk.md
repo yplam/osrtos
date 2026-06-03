@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- microlink-tailscale-vpn-for-esp32
+- iotsharp-for-rt-thread
+- iotconnect-azure-rtos-sdk
+- mongoose-os
+- esp-open-rtos
+- esp8266-rtos-homekit-accessory
 ---
 
 uNabto (pronounced 'micro nabto') is a lightweight C framework designed to facilitate secure, encrypted communication between IoT devices and clients. Developed by Nabto, this SDK is specifically tailored for resource-constrained environments where traditional heavy-duty communication stacks might not fit. It provides a robust infrastructure for peer-to-peer (P2P) connectivity, effectively bypassing NAT (Network Address Translation) hurdles through advanced traversal techniques.

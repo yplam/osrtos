@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- advanced-operating-system-2017-sos
+- rust-sel4-toy-system-for-i-mx6-sabre-lite
+- dnx-rtos
+- c-common-for-rt-thread
+- minios-esp
+- clickos-toolchain
 ---
 
 Sofa is a sophisticated userland environment and operating system framework designed to run atop the seL4 microkernel. By leveraging the security and performance of seL4, Sofa provides the necessary abstractions and services to transform a bare microkernel into a functional operating system environment. It implements a set of core servers and a high-level API that allows developers to manage processes, threads, and system resources with ease.

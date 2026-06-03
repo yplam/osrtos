@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- xiao-esp32c6-sketches
+- seeed-studio-xiao-esp32-project-collection
+- smart-iot-sensor-with-xiao-esp32c6
+- supladevice-library
+- micropython-smarthome-node-pysmartnode
+- esphome-ikea-vindriktning
 ---
 
 ## Overview

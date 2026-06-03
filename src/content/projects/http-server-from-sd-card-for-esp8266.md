@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- esp-async-http-update-server
+- esp8266sdupdater
+- esp-fs-webserver
+- sd-card-spi-fatfs-for-esp8266-nonos-sdk
+- esp32-async-web-server-with-spiffs-and-ota
+- simpleftpserver-library
 ---
 
 ## Overview

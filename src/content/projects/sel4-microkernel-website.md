@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- the-sel4-white-paper
+- awesome-provable
+- sel4-ci-actions-and-workflows
+- advanced-operating-system-2017-sos
+- sel4-kernel-101
+- echronos-on-stm32f4x-nucleo-board
 ---
 
 The seL4 website repository contains the source code for the official portal of the seL4 microkernel project. As the central hub for the world's most highly assured operating system, the site provides critical information regarding formal verification, performance benchmarks, and the growing ecosystem of tools and frameworks surrounding the kernel.

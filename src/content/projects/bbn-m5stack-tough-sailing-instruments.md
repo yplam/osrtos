@@ -25,6 +25,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- nmea0183-wifi-marine-data-gateway
+- lvgl-port-for-m5stack-core2
+- esp32-remote-for-victron
+- lvgl-port-for-esp32
+- bbmonitor
+- esp32-tux
 ---
 
 The **BBN M5Stack Tough** project is a specialized firmware for the ESP32-based M5Stack Tough, designed to serve as a rugged, waterproof marine instrument display. For sailors and boaters, having access to real-time data like wind speed, depth, engine status, and GPS location is critical. This project leverages the power of the ESP32 and the LVGL (Light and Versatile Graphics Library) to create a high-performance, touch-enabled dashboard that rivals expensive commercial marine electronics.

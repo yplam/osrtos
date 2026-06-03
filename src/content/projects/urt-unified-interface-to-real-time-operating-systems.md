@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- freertos-wrapper-for-rt-thread
+- rtai-ros
+- cmsis-rtos2-compatibility-layer-for-rt-thread
+- c-common-for-rt-thread
+- twine-thread-and-worker-interface-for-elk-audio-os
+- c-os-ii-compatibility-layer-for-rt-thread
 ---
 
 URT (Unified Interface to Real-Time Operating Systems) is a middleware library designed to bridge the gap between various real-time environments. In the world of embedded and real-time systems, software is often tightly coupled to a specific RTOS API—such as RTAI, Xenomai, or POSIX—making porting difficult and time-consuming. URT addresses this by providing a "sane" and consistent interface to common real-time facilities.

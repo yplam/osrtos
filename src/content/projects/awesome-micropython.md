@@ -18,6 +18,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- awesome-circuitpython
+- awesome-zephyr-rtos
+- micropython-lib
+- micropython-samples-and-drivers
+- micropython-examples-for-01studio-development-boards
+- sparkfun-python-examples
 ---
 
 MicroPython has revolutionized the way developers approach embedded systems by bringing the ease and power of Python 3 to microcontrollers. However, as the ecosystem grew, finding the right driver or library for a specific sensor or protocol became a challenge. **Awesome MicroPython** solves this by providing a curated, community-driven directory that organizes the vast landscape of MicroPython resources into a single, navigable repository.

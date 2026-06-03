@@ -14,6 +14,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- xenomai-hello-world-application
+- str-xenomai-real-time-systems-practices
+- xenomai-3-exercises-for-raspberry-pi-4
+- xenomai-3-exercises
+- xenomai-on-raspberry-pi
+- real-time-spi-on-xenomai-3
 ---
 
 ## Overview

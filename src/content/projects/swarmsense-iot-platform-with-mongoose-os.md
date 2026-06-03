@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mongoose-os-environmental-sensors-application
+- losant-mqtt-mongoose-os-example
+- losant-mqtt-example-for-mongoose-os
+- mongoose-os-samples-for-esp32
+- mongoose-os-programs-and-examples
+- mongoose-os-environment-logger
 ---
 
 ## Overview

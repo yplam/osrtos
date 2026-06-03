@@ -20,6 +20,13 @@ isShow: true
 image: /202601/nrf52811-solum.webp
 createdAt: '2026-01-29'
 updatedAt: '2026-01-29'
+relatedProjects:
+- open-display-firmware
+- pomia-rs
+- pinetime-rs
+- rust-ir-thermometer-firmware
+- epd-nrf5-e-paper-display-calendar-and-photo-frame
+- readmepaper-esp32-7-color-e-paper-display-project
 ---
 
 ## Overview

@@ -23,6 +23,13 @@ version: 2.3.0
 lastUpdated: '2021-03-19'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- easyini
+- esp8266-littlefs-file-handler
+- settings-manager
+- spiffslogger
+- easy-iot-file-system
+- rtcmemory
 ---
 
 Managing storage on microcontrollers like the ESP8266 and ESP32 can often feel like a chore. While SPIFFS (SPI Flash File System) provides a robust way to handle files in flash memory, the boilerplate code required to open files, manage buffers, and handle data type conversion can quickly clutter a project. Effortless-SPIFFS is designed to solve this problem, offering a streamlined interface that allows developers to focus on their application logic rather than the intricacies of file I/O.

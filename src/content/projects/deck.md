@@ -18,6 +18,13 @@ star: 42
 lastUpdated: '2021-11-06'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- clawdmeter
+- lvgl-8-on-wt32-sc01-with-arduino
+- esp32-p4-grid-board
+- x-knob-a-smart-knob-based-on-lvgl-ui-framework
+- lilygo-t-display-s3-boilerplate
+- esp32berry
 ---
 
 Deck is an ambitious embedded UI project that brings a premium, smartphone-like interface to the ESP32 platform. Inspired by the popular [Peak](https://github.com/peng-zhihui/Peak) project by peng-zhihui and the [X-TRACK](https://github.com/FASTSHIFT/X-TRACK) cycle computer UI, Deck focuses on achieving a "silky smooth" 60 FPS user experience on low-cost hardware. 

@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- led-matrix-max7219-for-mongoose-os
+- micropython-tm1637-library
+- micropython-waveshare-e-paper-drivers
+- micropython-st7735-tft-lcd-driver
+- st7789-driver-for-micropython
+- lvgl-for-raspberry-pi-pico-hub75-led-matrix
 ---
 
 The MicroPython MAX7219 library provides a clean and efficient way to interface with the popular MAX7219 8x8 LED matrix driver. Designed specifically for the MicroPython ecosystem, it leverages the hardware SPI interface to drive single or multiple cascaded LED matrices, making it an ideal choice for scrolling text displays, status indicators, and simple animations on microcontrollers like the ESP32, ESP8266, and PyBoard.

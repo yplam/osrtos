@@ -28,6 +28,13 @@ topics:
 isShow: true
 createdAt: '2026-04-19T08:44:52+00:00'
 updatedAt: '2026-04-19T08:44:52+00:00'
+relatedProjects:
+- hub75-dma-based-driver-for-raspberry-pi-pico
+- rainnow-core
+- lvgl-for-raspberry-pi-pico-hub75-led-matrix
+- fastled-idf
+- mongoose-os-ws2812b-driver
+- neopixel-library-for-raspberry-pi-pico
 ---
 
 Hyperk is a high-performance, minimalist firmware designed specifically for driving addressable LED strips over WiFi. While many LED controllers focus on a broad range of built-in effects, Hyperk takes a different approach by prioritizing speed, low latency, and seamless integration with external control software. It serves as a streamlined component that avoids unnecessary complexity, making it an ideal choice for bias lighting and home automation enthusiasts who require precision and responsiveness.

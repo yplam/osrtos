@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- tcf-test-case-framework
+- tock-test-harness
+- remote-flash-and-test-for-bl602-bl604-nuttx
+- wsntestbed
+- smart-home-device-configurator
+- mbed-tools
 ---
 
 Icetea is a specialized automated testing framework designed for the Mbed ecosystem. It provides a robust environment for developers to automate the process of flashing Mbed boards, executing test sequences, and gathering results into comprehensive reports. While the project is currently deprecated, it remains a significant tool for understanding host-driven testing in embedded systems.

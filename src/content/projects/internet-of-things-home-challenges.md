@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- iot-labs-with-contiki-os
+- home-automation-simulation-using-contiki-os
+- homeiot-smart-home-automation-system
+- cooja-using-contiki
+- mtds-projects-iot-and-distributed-systems
+- tinyos-nesc-telosb-programs
 ---
 
 ## Overview

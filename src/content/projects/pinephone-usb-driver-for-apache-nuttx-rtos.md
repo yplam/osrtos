@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- apache-nuttx-rtos-for-pinephone
+- hynitron-cst816s-touch-controller-driver-for-apache-nuttx
+- apache-nuttx-rtos-for-pine64-star64
+- bl602-gpio-expander-for-apache-nuttx
+- unicorn-emulator-for-apache-nuttx-on-avaota-a1-arm64-sbc
+- stm32-m-nuttx-custom-board-mod
 ---
 
 The PinePhone USB Driver project focuses on bringing robust USB Host support to the Apache NuttX RTOS on the PinePhone, which is powered by the Allwinner A64 SoC. This effort involves porting the existing NXP i.MX RT EHCI (Enhanced Host Controller Interface) driver from the NuttX mainline to the A64 architecture, specifically addressing the nuances of 64-bit memory alignment and the unique hardware layout of the PinePhone.

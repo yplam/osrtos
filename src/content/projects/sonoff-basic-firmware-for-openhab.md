@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sonoff-http-firmware
+- openhasp-firmware
+- mongoose-os-configurable-sensor-node
+- dtugateway-for-hoymiles-hms-inverters
+- heidelbridge
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
 ---
 
 ## Overview

@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- sc01-plus-hmi-example-with-squareline-studio
+- jc3248w535-lvgl-v9-test-project
+- jc4827w543-lvgl-v9-implementation
+- rp2040-lvgl-8-demo-with-ili9488-and-xpt2046
+- lilygo-t-display-s3-boilerplate
 ---
 
 ## Graphics and Touch on the WT32-SC01

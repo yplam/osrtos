@@ -29,6 +29,13 @@ isShow: true
 image: /202601/p3a-2.webp
 createdAt: '2026-01-22'
 updatedAt: '2026-01-22'
+relatedProjects:
+- printpoop-retro-pixel-smart-display-for-bambu-lab-a1
+- circuitpal
+- bitmap16-dx
+- esp32-web-radio-evo3
+- esp8266-sound-effects-i2s-web-trigger
+- deskpet-for-m5stack-cardputer
 ---
 
 ## Overview

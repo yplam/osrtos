@@ -21,6 +21,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- fpv-drone-stm32f411-flight-controller
+- drone-stm32f1
+- stm32-quadcopter-low-cost-quadcopter-design
+- flight-controller-rev2
+- droners
+- protoflight
 ---
 
 Avem is a comprehensive open-source flight control system designed for Unmanned Aerial Vehicles (UAVs). Built around the popular and cost-effective STM32F103 microcontroller, Avem provides a robust foundation for hobbyists and engineers looking to understand the inner workings of flight stabilization and control.

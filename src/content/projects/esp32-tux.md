@@ -23,6 +23,13 @@ star: 266
 lastUpdated: '2024-02-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- lvgl-port-for-esp32
+- esp32-lvgl-8-x-sdspi-template
+- esp-lvgl
+- lvgl-display-and-touchpad-drivers-for-esp32
+- lumia-esp32
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
 ---
 
 ESP32-TUX is a sophisticated open-source template designed to jumpstart the development of Touch User Interfaces (TUX) on ESP32 and ESP32-S3 platforms. Developed by Sukesh Ashok Kumar, this project bridges the gap between raw hardware drivers and polished application-level UI, providing developers with a robust foundation for building Human-Machine Interfaces (HMI).

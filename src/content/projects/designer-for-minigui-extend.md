@@ -33,6 +33,13 @@ star: 15
 lastUpdated: '2025-11-11'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- awtk-toolkit-anywhere
+- esp32-mpy-jama
+- db-wrapper
+- luavgl
+- sqlite3-for-esp-idf
+- littledb-sql-like-database-for-esp32
 ---
 
 ### Bringing Visual Productivity to Harbour and MiniGUI

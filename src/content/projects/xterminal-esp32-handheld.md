@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32berry
+- acid-drop-custom-firmware-for-lilygo-t-deck
+- esp32-custom-hardware-synthesizer
+- lvgl-watch-firmware-for-open-smartwatch
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- esp32-mp3
 ---
 
 ## Overview

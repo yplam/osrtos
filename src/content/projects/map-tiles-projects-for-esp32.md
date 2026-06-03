@@ -25,6 +25,13 @@ isShow: true
 image: /202601/map.webp
 createdAt: '2026-01-13'
 updatedAt: '2026-01-13'
+relatedProjects:
+- esp32-offline-osm-maps
+- that-project
+- esp32-experiments
+- esp-lvgl
+- mongoose-os-samples-for-esp32
+- lvgl-demo-embarcadores
 ---
 
 The Map Tiles Projects repository serves as a practical implementation guide for the **0015__map_tiles** component, designed specifically for the ESP32 ecosystem. It provides developers with ready-to-use examples for rendering interactive maps on embedded displays, leveraging the LVGL graphics library for a smooth and responsive user experience.

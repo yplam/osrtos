@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- max17263-library-for-mongoose-os
+- hx711-library-for-mongoose-os
+- arduino-ir-for-mongoose-os
+- adafruit-e-paper-e-ink-library-for-mongoose-os
+- mongoose-os-relay-library
+- mongoose-os-bme680-library
 ---
 
 ## Overview

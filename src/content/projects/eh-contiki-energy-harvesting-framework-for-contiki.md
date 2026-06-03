@@ -18,6 +18,13 @@ star: 6
 lastUpdated: '2021-01-04'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- cooja-senseh
+- ql-tsch-implementation-for-contiki-ng
+- low-power-wireless-networking-for-iot-lpiot
+- waco-a-wake-up-radio-cooja-extension
+- elise-sdn-based-solution-for-iot-networks
+- rl-tsch-implementation-for-contiki-ng
 ---
 
 Energy harvesting (EH) is a transformative technology for wireless sensor networks (WSNs), offering the potential for nodes to operate indefinitely without manual battery replacements. However, the intermittent nature of sources like solar or wind power introduces significant complexity in power management. **EH-Contiki** is a dedicated framework built on top of the Contiki operating system designed to help researchers and developers experiment with energy-aware algorithms and simulations.

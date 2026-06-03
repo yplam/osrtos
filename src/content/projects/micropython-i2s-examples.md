@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-samples-and-drivers
+- micropython-examples-for-01studio-development-boards
+- sparkfun-python-examples
+- stm32-cortex-m4-code-examples
+- awesome-micropython
+- maixpy-scripts
 ---
 
 ## Overview

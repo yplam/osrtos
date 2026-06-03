@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- eclipse-simulator-for-lvgl-using-sdl
+- lvgl-port-for-windows
+- lvgl-emscripten-port
+- lvgl-demo-test
+- luavgl
+- lvgl-demo-embarcadores
 ---
 
 ## Overview

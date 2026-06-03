@@ -14,6 +14,13 @@ isShow: true
 image: /202603/spikes-red.webp
 createdAt: '2026-03-06'
 updatedAt: '2026-03-06'
+relatedProjects:
+- sesame-robot-micro
+- cuybot-v1-opensource-smartcar-project
+- roarm-m2-robotic-arm-control-firmware
+- omote-open-universal-remote
+- highboy-firmware
+- cybergear-ros2-controller
 ---
 
 ## Overview

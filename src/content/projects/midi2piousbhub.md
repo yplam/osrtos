@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-04-03T05:37:37+00:00'
 updatedAt: '2026-04-03T05:37:37+00:00'
+relatedProjects:
+- picogamepadconverter
+- usbsid-pico
+- pico-cec
+- midi-2-solenoid-controller
+- ds5-bridge
+- esp32-host-midi
 ---
 
 Managing a setup with diverse MIDI hardware often requires a complex web of cables and converters. The midi2piousbhub project offers a streamlined solution by transforming a Raspberry Pi Pico into a central routing hub capable of bridging USB, serial, and wireless MIDI streams. By utilizing the unique features of the RP2040 processor, this firmware allows musicians and developers to interconnect a MIDI host (like a PC), traditional serial MIDI devices, and up to four USB MIDI devices through a standard USB hub.

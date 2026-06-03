@@ -31,6 +31,13 @@ topics:
 isShow: true
 createdAt: '2026-04-02T03:38:45+00:00'
 updatedAt: '2026-04-02T03:38:45+00:00'
+relatedProjects:
+- semito-v-micropython-compatibility-layer-mcl
+- micropython-for-bare-metal-raspberry-pi
+- micropython-port-for-rt-thread
+- m5stack-cardputer-virtual-repl
+- micropython-for-sparrow-one-board
+- micropython-kitchen-sink-for-m5stack
 ---
 
 ## Bringing Python to the Flipper Zero

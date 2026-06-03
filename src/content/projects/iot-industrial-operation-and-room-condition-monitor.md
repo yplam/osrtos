@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- iot-project-on-hvac
+- espmonitor-iot-environmental-monitoring-system
+- espmonitor-iot-environment-monitoring-system
+- conveyor-belt-fault-detection-system
+- iot-agricultural-data-monitoring-system
+- smart-dc-maintenance
 ---
 
 ## Overview

@@ -35,6 +35,13 @@ topics:
 isShow: false
 createdAt: '2026-04-20T08:25:49+00:00'
 updatedAt: '2026-04-20T08:25:49+00:00'
+relatedProjects:
+- esp32-ai-connect
+- openrouter-esp-idf-client
+- onesdk-a-unified-ai-access-sdk-for-the-client-side
+- elatoai-realtime-voice-ai-on-esp32
+- supladevice-library
+- embedmcp-embedded-mcp-server-library
 ---
 
 ## Integrating Modern AI into Embedded Systems

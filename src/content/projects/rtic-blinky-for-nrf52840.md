@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f429-rtic-and-smoltcp-example-application
+- pinetime-rs
+- blinky-pico-2-dual-core-bare-metal
+- lpc43xx-freertos-led-blinking-example
+- stm32f4-rtic-playground
+- pico-rtic-template
 ---
 
 ## Overview

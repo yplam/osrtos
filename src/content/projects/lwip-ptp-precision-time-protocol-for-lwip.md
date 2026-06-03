@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- flexptp
+- lwip-for-esp8266
+- stm32duino-lwip
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- lwip-kcp-integration
+- rtems-lwip-stm32-integration
 ---
 
 ## Overview

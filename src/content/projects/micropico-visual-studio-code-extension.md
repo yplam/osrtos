@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-stubs
+- micropy-cli
+- micropython-plugin-for-pycharm-and-intellij
+- pico-zephyr-project
+- cmsis-rp2040
+- rp2040-projects-by-armstrong-subero
 ---
 
 ## Overview

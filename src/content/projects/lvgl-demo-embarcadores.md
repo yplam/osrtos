@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- zephyr-lvgl-sample-for-nrf52840-mdk
+- stm32l476g-discovery-rtos-sensor-project
+- lvgl-demo-test
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- lvgl-port-for-stm32f429-discovery-kit
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
 ---
 
 The LVGL Demo Embarcadores project is a comprehensive example of how to build sophisticated graphical user interfaces (GUIs) for resource-constrained microcontrollers. Developed specifically for the STM32F429-Discovery platform, this project leverages the popular LVGL (Light and Versatile Graphics Library) to create a multi-functional dashboard that interfaces with real-world hardware sensors.

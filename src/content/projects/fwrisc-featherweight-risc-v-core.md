@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- fazyrv-a-scalable-risc-v-core
+- rt-thread-for-picorv32-on-lichee-tang
+- level-risc-v
+- freertos-port-for-risc-v
+- picorv32-rt-thread-on-lichee-tang-eg4s20
+- hbird-e203-rt-thread-on-lichee-tang
 ---
 
 FWRISC is a lightweight RISC-V processor core designed with a focus on balancing FPGA resource utilization and performance. Specifically targeting IoT applications, the FWRISC-S variant implements the RV32IMC instruction set, providing a robust foundation for embedded systems that require a compact yet capable processing unit.

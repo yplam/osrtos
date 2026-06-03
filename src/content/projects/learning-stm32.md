@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- h-c-l-p-tr-nh-stm32f1
+- stm32-cmsis-zero-to-hero
+- stm32-starter-project-for-arch-max
+- bare-metal-programming-guide
+- stm32-cortex-m4-code-examples
+- dallas-formula-racing-embedded-onboarding
 ---
 
 ## Overview

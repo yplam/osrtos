@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-03-15'
 updatedAt: '2026-03-15'
+relatedProjects:
+- espmonitor-iot-environment-monitoring-system
+- iot-industrial-operation-and-room-condition-monitor
+- iot-agricultural-data-monitoring-system
+- iot-project-on-hvac
+- esp8266-wireless-sensor-network-wsn
+- mongoose-os-environment-logger
 ---
 
 ## Overview

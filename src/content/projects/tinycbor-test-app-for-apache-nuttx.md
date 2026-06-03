@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lorawan-test-app-for-apache-nuttx
+- rust-test-app-for-apache-nuttx-os
+- bl602-adc-and-temperature-sensor-test-app
+- lvgl-test-app-for-apache-nuttx
+- lora-test-app-for-semtech-sx1262-and-apache-nuttx
+- zig-on-risc-v-bl602-with-apache-nuttx-rtos
 ---
 
 ## Efficient Data Serialization for Embedded Systems

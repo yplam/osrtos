@@ -14,6 +14,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- apache-nuttx-rtos-on-64-bit-risc-v
+- apache-nuttx-getting-started
+- unicorn-emulator-for-apache-nuttx-on-avaota-a1-arm64-sbc
+- qemu-emulation-for-ti-lm3s6965-cortex-m3
+- tiva-tm4c1294-launchpad-freertos-demo
+- fel4-test-project
 ---
 
 ## Overview

@@ -26,6 +26,13 @@ isShow: true
 image: /202602/cyberpi.webp
 createdAt: '2026-03-01'
 updatedAt: '2026-03-01'
+relatedProjects:
+- micropython-examples-for-01studio-development-boards
+- sparkfun-python-examples
+- rp2040-projects-by-armstrong-subero
+- micropython-samples-and-drivers
+- maixpy-scripts
+- super-mini-esp32-c3-arduino-and-platformio-sketches
 ---
 
 The mBot2 repository is a dedicated resource for developers looking to extend the capabilities of the mBot2 robot and its CyberPi main control board. While these devices are often associated with the mBlock block-based coding environment, this project provides the necessary tools and examples to transition into text-based programming using MicroPython and Arduino (C++).

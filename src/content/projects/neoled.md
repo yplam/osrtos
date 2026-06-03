@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-03-31T23:45:18+00:00'
 updatedAt: '2026-03-31T23:45:18+00:00'
+relatedProjects:
+- fastled-idf
+- neopixel-library-for-raspberry-pi-pico
+- mongoose-os-ws2812b-driver
+- lvgl-for-raspberry-pi-pico-hub75-led-matrix
+- led-matrix-max7219-for-mongoose-os
+- esp-e-paper-component
 ---
 
 Controlling WS2812 NeoPixel LEDs on an ESP32 can be surprisingly tricky. While these LEDs are ubiquitous in the maker world, they rely on extremely precise timing signals. On a multitasking operating system like FreeRTOS, generating these signals via standard GPIO bit-banging can lead to flickering or glitches when the CPU is busy with other tasks like Wi-Fi or Bluetooth. NeoLED solves this problem by offloading the timing requirements to the ESP32's I2S (Inter-IC Sound) peripheral.

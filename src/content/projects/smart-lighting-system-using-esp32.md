@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-04-21T05:17:08+00:00'
 updatedAt: '2026-04-21T05:17:08+00:00'
+relatedProjects:
+- smart-home-automation-with-freertos-and-esp32
+- room-control-system
+- smart-led
+- esp32-mqtt-motor-control
+- quntis-led-controller
+- smart-iot-sensor-with-xiao-esp32c6
 ---
 
 The Smart Lighting System project addresses the common challenge of energy waste in unoccupied or naturally well-lit spaces. By leveraging the ESP32 development board, this project creates an intelligent environment where lighting is treated as a dynamic resource rather than a static utility. It is designed to be energy-efficient, making it particularly suitable for settings like automated classrooms, smart homes, and office buildings where lights are frequently left on unnecessarily.

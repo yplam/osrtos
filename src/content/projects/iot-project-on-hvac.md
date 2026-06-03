@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- iot-industrial-operation-and-room-condition-monitor
+- espmonitor-iot-environmental-monitoring-system
+- espmonitor-iot-environment-monitoring-system
+- chronothermostat-an-aws-powered-iot-climate-control-system
+- esp8266-dht22-spiffs-web-server
+- ac-control
 ---
 
 ## Overview

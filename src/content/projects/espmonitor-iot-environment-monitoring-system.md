@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-17'
 updatedAt: '2026-01-17'
+relatedProjects:
+- espmonitor-iot-environmental-monitoring-system
+- iot-industrial-operation-and-room-condition-monitor
+- iot-project-on-hvac
+- smart-farming-iot-system
+- iot-agricultural-data-monitoring-system
+- air-quality-monitor
 ---
 
 ESPMonitor is a versatile, full-stack IoT framework designed for real-time environmental surveillance. By bridging the gap between low-power microcontrollers and modern web technologies, it offers a robust platform for monitoring temperature, humidity, and water levels in various settings, from home automation to industrial greenhouses.

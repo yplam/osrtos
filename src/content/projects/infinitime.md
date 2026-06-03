@@ -29,6 +29,13 @@ isShow: true
 image: /202512/watchface_collage.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- bosmoment-pinetime-firmware-applications
+- hypnos
+- zephyrwatch
+- pinetime-zephyr-firmware
+- ov-watch
+- pinetime-rs
 ---
 
 InfiniTime is a high-performance, open-source firmware designed specifically for the PineTime smartwatch, a wearable device based on the Nordic Semiconductor nRF52832 SoC. Developed in modern C++, the project aims to provide a smooth, feature-rich user experience while maintaining the flexibility and transparency of open-source software.

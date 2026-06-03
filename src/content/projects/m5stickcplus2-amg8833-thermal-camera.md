@@ -19,6 +19,13 @@ isShow: true
 image: /202603/thermal-camera.webp
 createdAt: '2026-03-02'
 updatedAt: '2026-03-02'
+relatedProjects:
+- esp32-thermal-camera-viewer
+- opentemp-thermal-imager-infrared-thermometer
+- lithermal-thermal-imaging-camera
+- esp32-lepton
+- esp32cam-pir-mqtt-spiffs-webserver
+- esp8266-mlx90614-temperature-monitor
 ---
 
 ## Portable Thermal Imaging with M5StickCPlus2

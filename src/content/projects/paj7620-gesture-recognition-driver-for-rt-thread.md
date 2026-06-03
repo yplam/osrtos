@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- gp2y10-dust-sensor-driver-for-rt-thread
+- sgp30-gas-sensor-driver-for-rt-thread
+- vl53l0x-tof-sensor-driver-for-rt-thread
+- hdc1000-sensor-driver-for-rt-thread
+- hynitron-cst816s-touch-controller-driver-for-apache-nuttx
+- pmsxx-sensor-driver-for-rt-thread
 ---
 
 ## Overview

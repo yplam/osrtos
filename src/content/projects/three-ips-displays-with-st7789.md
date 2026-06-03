@@ -35,6 +35,13 @@ topics:
 isShow: true
 createdAt: '2026-04-01T01:28:03+00:00'
 updatedAt: '2026-04-01T01:28:03+00:00'
+relatedProjects:
+- st7789-driver-for-micropython
+- lilygo-t-display-s3-boilerplate
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- micropython-st7789-lcd-driver
+- esp32-cheap-yellow-display-micropython-lvgl
+- elekstube-ips-custom-firmware
 ---
 
 This project explores the capabilities of three affordable IPS displays featuring the ST7789 driver and a standard 8-pin connector. These displays, which range in resolution from 170x320 to 240x320, have been tested for stability and performance using the ESP32 Wemos Lite and the Arduino IDE. 

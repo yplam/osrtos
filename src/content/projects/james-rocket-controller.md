@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- alturia-firmware
+- filtered-inertial-rotation-module-firm
+- flight-controller-rev2
+- mcp2518fd-can-fd-logger-for-raspberry-pi-pico
+- stick-firmware
+- droners
 ---
 
 The James Rocket Controller is a specialized firmware developed for the Czech Rocket Challenge, a model rocket competition. Built on the Raspberry Pi Pico (RP2040), the system manages the critical phases of a rocket's flight, specifically focusing on automated recovery and flight data recording.

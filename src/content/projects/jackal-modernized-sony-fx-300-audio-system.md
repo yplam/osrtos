@@ -24,6 +24,13 @@ isShow: true
 image: /202601/jackal.webp
 createdAt: '2026-01-28'
 updatedAt: '2026-01-28'
+relatedProjects:
+- esp32-mp3
+- esp32fmradio
+- radiojkk32-multifunctional-internet-radio-player
+- high-fidelity-esp32-bluetooth-audio-sink-with-premium-codecs
+- esp32-custom-hardware-synthesizer
+- si4732-radio
 ---
 
 ## Overview

@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- losant-mqtt-mongoose-os-example
+- mongoose-os-samples-for-esp32
+- mbed-to-ibm-watson-iot-platform
+- mongoose-os-programs-and-examples
+- mongoose-os-environmental-sensors-application
+- mbed-to-azure-iot-hub
 ---
 
 The Losant MQTT example for Mongoose OS provides a streamlined path for developers looking to integrate embedded devices with the Losant IoT platform. By leveraging the Mongoose OS framework, this project demonstrates how to establish a secure MQTT connection, handle device authentication, and transmit telemetry data from popular microcontrollers like the ESP32 and ESP8266.

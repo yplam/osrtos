@@ -17,6 +17,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- littlefs-mbed-rp2040
+- arduino-littlefs-spimemory-wrapper
+- littlefs-portenta-h7-library
+- fs-nano33ble
+- littlefs-for-esp-idf
+- pico-vfs-a-virtual-file-system-for-raspberry-pi-pico
 ---
 
 Managing data on embedded systems requires a filesystem that is both resilient to power failures and gentle on flash memory. `107-Arduino-littlefs` brings the power of [littlefs](https://github.com/littlefs-project/littlefs) to the Arduino environment, providing a clean C++ wrapper around the popular littlefs-v2.5.1 core. Developed by 107-systems, this library is a key component for projects requiring reliable persistent storage, particularly those utilizing the Cyphal (formerly UAVCAN) protocol.

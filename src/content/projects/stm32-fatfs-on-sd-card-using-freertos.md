@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-fatfs-and-freertos-integration
+- stm32f407vg-freertos-fatfs-sdio-sd-card-demo
+- practice-project-for-stm32f746g-discovery
+- stm32h743-cmake-template
+- stm32-usb-mass-storage-with-fatfs
+- ff-iso-stm32-multitasking-fatfs-sdio
 ---
 
 ## Overview

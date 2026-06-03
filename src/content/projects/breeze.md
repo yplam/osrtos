@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-04-17T09:58:24+00:00'
 updatedAt: '2026-04-17T09:58:24+00:00'
+relatedProjects:
+- taproot
+- texas-aimbots-embedded-development
+- arm-control-framework-acorns-rover
+- bridle
+- micro-ros-module-for-zephyr
+- aruw-main-control-board-mcb
 ---
 
 Breeze serves as the core embedded development framework for the RobotPilots team at Shenzhen University. Built on top of the Zephyr RTOS, it provides a structured and modular environment tailored for the high-stakes world of RoboMaster competition robotics. By leveraging Zephyr’s robust ecosystem, Breeze offers a standardized way to manage drivers, libraries, and application code across different robot platforms.

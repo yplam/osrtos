@@ -32,6 +32,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- openhaystack-zephyr-firmware
+- zephyr-c-20-framework-zpp
+- cr95hf-mbed-library
+- zj-ble-rt-thread-and-nimble-for-nordic-nrf52
+- arduino-serial-ble
+- zephyr-rtos-for-dwm1001
 ---
 
 ## Overview

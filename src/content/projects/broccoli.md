@@ -19,6 +19,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- embeddedmqttbroker
+- mqboard-micropython-mqtt-micro-framework
+- micros
+- micropython-smarthome-node-pysmartnode
+- raspberry-pi-pico-web-server-control
+- microhomie
 ---
 
 Broccoli is an innovative project that brings the power of distributed computing to the world of microcontrollers. Specifically designed for ESP32 clusters, Broccoli implements a distributed task queue system inspired by the popular Python library, Celery. By leveraging the capabilities of MicroPython, it allows developers to distribute computational workloads across multiple ESP32 nodes, effectively creating a mini-cluster for embedded tasks.

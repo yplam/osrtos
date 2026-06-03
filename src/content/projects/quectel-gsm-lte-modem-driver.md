@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- avnet-wnc14a2a-cellular-driver
+- cicada-iot-communications-module-for-energy-access
+- m66-gsm-module-integration-with-avr-microcontroller
+- cmsis-drivers-for-efm32-and-stm32
+- mbed-cellular-boilerplate
+- bc28-mqtt-package-for-rt-thread
 ---
 
 ## Overview

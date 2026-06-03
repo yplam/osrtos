@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- lorawan-test-app-for-apache-nuttx
+- esphome-ikea-vindriktning
+- visual-programming-for-zig-with-nuttx-sensors
+- mqtt-demo-for-stm32-iot-discovery-board-with-thingsboard
+- apache-mynewt-sensor-network-for-stm32-blue-pill
+- tinycbor-test-app-for-apache-nuttx
 ---
 
 ## Overview

@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-27'
 updatedAt: '2026-01-27'
+relatedProjects:
+- meshcore-hub
+- streampulse
+- meshtnc
+- meshadv-pi-hat
+- wifimanager-rp2040w-lite
+- meshcore-mqtt-gateway
 ---
 
 ## Overview

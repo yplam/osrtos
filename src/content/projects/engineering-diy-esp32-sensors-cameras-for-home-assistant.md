@@ -30,6 +30,13 @@ isShow: true
 image: /202601/sensors_cams.webp
 createdAt: '2026-01-13'
 updatedAt: '2026-01-13'
+relatedProjects:
+- home-assistant-security-camera-with-esp32-cam
+- esphome-ikea-vindriktning
+- project-aura
+- m5stack-esphome-integrations
+- smart-home-automation-with-freertos-and-esp32
+- homey-smart-home-controllers
 ---
 
 ## Overview

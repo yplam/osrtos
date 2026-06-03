@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- stm32h745-ethernet-with-lwip-and-freertos
+- stm32f429-nucleo-lwip-and-freertos-template
+- stm32-lwip-mqtt-demo
+- sk-mstm32f107-demo-board-example
+- stm32h743zi-rust-playground
 ---
 
 ## Overview

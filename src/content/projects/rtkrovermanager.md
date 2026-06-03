@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtkbasemanager
+- wifimanager-rp2040w-lite
+- wifi-manager-for-micropython
+- esp32-w5500-manager
+- wifimanager-rp2040w
+- esp8266-w5100-manager
 ---
 
 RTKRoverManager is a specialized configuration utility designed for ESP32-based Real-Time Kinematics (RTK) rover projects. As a submodule of the larger RTKRover ecosystem, it simplifies the process of managing device credentials and default parameters, ensuring that hardware can be deployed and reconfigured in the field without requiring firmware recompilation.

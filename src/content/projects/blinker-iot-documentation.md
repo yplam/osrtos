@@ -26,6 +26,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- mongoose-os-samples-for-esp32
+- fctc-art-pi-code-iot-from-chip-to-cloud
+- blynk-python-library
+- jc2432w328-microcontroller-board-documentation
+- 100askteam-elinux-code-library
+- esp32-repo
 ---
 
 Blinker is a comprehensive IoT solution designed to bridge the gap between hardware development and mobile application control. The `blinker-doc` repository serves as the central knowledge base for developers looking to integrate their embedded systems with the Blinker ecosystem. Whether you are working with simple Arduino boards or complex ESP32-based RTOS applications, this documentation provides the necessary roadmap to get your devices online and controllable via a smartphone.

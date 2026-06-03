@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-03-31T13:17:04+00:00'
 updatedAt: '2026-03-31T13:17:04+00:00'
+relatedProjects:
+- cheap-yellow-display-video-player-esp32-2432s028
+- esp32-mjpeg-multiclient-streaming-server
+- esp32-rtspserver
+- deck
+- smalltv-pro-esp-idf-sample-project
+- animated-gif-on-a-320x240-lcd-display-ili9341-with-the-esp32
 ---
 
 ## Streaming Video to the Smalltv-pro

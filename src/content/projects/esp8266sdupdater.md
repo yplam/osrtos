@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- http-server-from-sd-card-for-esp8266
+- esp32-ble-ota-arduino
+- sd-h-and-fs-h-port-for-mongoose-os
+- bleota-esp32-ota-updates-over-ble
+- esp-fs-webserver
+- tab5-launcher
 ---
 
 ESP8266SDUpdater serves as a technical bridge for developers working with the ESP8266 platform who require a flexible way to manage multiple firmware binaries. Acting as a prequel to the popular M5Stack-SD-Updater, this library provides the necessary logic to flash new firmware directly from a microSD card, bypassing the need for traditional serial or Wi-Fi-based OTA (Over-The-Air) updates.

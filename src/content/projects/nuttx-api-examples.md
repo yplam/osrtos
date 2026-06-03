@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nuttx-rtos-experiments
+- nuttx-applications
+- unipg-mbed-os-samples
+- esp32-freertos-examples
+- tinycbor-test-app-for-apache-nuttx
+- mbed-os-unipg-samples-1
 ---
 
 The nuttx_api_examples repository serves as a practical guide for developers working with the Apache NuttX Real-Time Operating System. It provides a structured set of application examples that demonstrate how to utilize core kernel features and system APIs in a real-world embedded environment.

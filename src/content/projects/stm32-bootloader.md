@@ -34,6 +34,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mcuboot-for-stm32
+- mbed-bootloader
+- sdcard-boot-with-ota-for-micropython
+- tock-bootloader
+- esp8266sdupdater
+- yaota8266-ota-bootloader
 ---
 
 ## Overview

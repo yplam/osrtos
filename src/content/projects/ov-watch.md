@@ -21,6 +21,13 @@ isShow: true
 image: /202601/ov-watch.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- watchx-open-source-smartwatch
+- watchx-ii-smart-watch
+- leta
+- zephyrwatch
+- zswatch
+- opentimewatch-os
 ---
 
 ## Overview

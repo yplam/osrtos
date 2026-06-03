@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- ferros
+- fel4-test-project
+- tock-test-harness
+- tcf-test-case-framework
+- selfe-sys-rust-bindings-for-sel4
+- freertos-rust
 ---
 
 ## Overview

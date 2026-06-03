@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-windows-simulator-for-code-blocks
+- lvgl-emscripten-port
+- luavgl
+- lvgl-port-for-windows
+- lvgl-demo-test
+- lvgl-rust-to-wasm
 ---
 
 ## Overview

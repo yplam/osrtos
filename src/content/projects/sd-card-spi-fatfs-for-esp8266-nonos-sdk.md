@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- spiffs-for-esp8266-non-os-sdk
+- stm32-fatfs-and-freertos-integration
+- http-server-from-sd-card-for-esp8266
+- esp32-fatfs-storage-example
+- esp32-lvgl-8-x-sdspi-template
+- sd-h-and-fs-h-port-for-mongoose-os
 ---
 
 ## Overview

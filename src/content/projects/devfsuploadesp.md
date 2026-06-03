@@ -29,6 +29,13 @@ star: 4
 lastUpdated: '2020-05-19'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- espxwebflmgr
+- esp-fs-webserver
+- esp32-ota-firmware-update-and-file-management
+- multiftpserver-library
+- esp32-asyncwebserver-file-upload-example
+- simpleftpserver-library
 ---
 
 Managing internal storage on ESP32 and ESP8266 devices can often be a bottleneck during development. Traditionally, updating a configuration file or a web asset required re-flashing the entire filesystem image or using specific IDE plugins. **DevFsUploadESP** simplifies this workflow by providing a browser-based user interface that runs directly on the ESP device, allowing for real-time file and directory management.

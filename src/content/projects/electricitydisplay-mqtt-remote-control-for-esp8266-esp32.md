@@ -19,6 +19,13 @@ star: 0
 lastUpdated: '2017-06-09'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- losant-mqtt-example-for-mongoose-os
+- losant-mqtt-mongoose-os-example
+- mbed-os-6-stm32-iot-ethernet-controller
+- mongoose-os-samples-for-esp32
+- mqtt-message-display-for-ssd1306
+- mqtt-wake-on-lan-for-esp8266
 ---
 
 ## Remote Hardware Control with Mongoose OS and MQTT

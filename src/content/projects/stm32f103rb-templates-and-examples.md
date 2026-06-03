@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-cortex-m4-code-examples
+- stm32f103-cmsis-peripheral-configuration
+- stm32-makefile-freertos-project-template
+- chibios-rt-examples-for-stm32f401re-nucleo
+- stm32-cmsis-zero-to-hero
+- stm32f4-cmsis-lessons
 ---
 
 The STM32F103RB repository serves as a practical starting point for developers working with the popular STMicroelectronics Cortex-M3 microcontroller. This collection provides a series of clean, modular templates and examples that cover the essential building blocks of embedded firmware development, from basic GPIO toggling to real-time operating system integration.

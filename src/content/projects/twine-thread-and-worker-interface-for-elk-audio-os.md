@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- raspa-realtime-audio-driver-access-library
+- elk-audio-rtdm-driver-for-raspberry-pi
+- urt-unified-interface-to-real-time-operating-systems
+- ppool-for-rt-thread
+- freertos-wrapper-for-rt-thread
+- cmsis-rtos1-compatibility-layer-for-rt-thread
 ---
 
 ## Overview

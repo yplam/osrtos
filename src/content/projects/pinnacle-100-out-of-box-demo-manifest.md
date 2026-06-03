@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sentrius-mg100-gateway-firmware
+- west-the-zephyr-rtos-meta-tool
+- pelion-device-management-client-example-for-mbed-os
+- anjay-zephyr-client
+- blue-clover-plt-demo-v2-zephyr-firmware
+- mender-ota-example-for-stm32l4-and-zephyr-rtos
 ---
 
 ## Overview

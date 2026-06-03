@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- learning-stm32
+- stm32-base-project-template
+- stm32-cmake-cmsis-project-skeleton
+- stm32f030-cmake-cmsis-project-skeleton
+- stm32-cortex-m4-code-examples
+- stm32-makefile-freertos-project-template
 ---
 
 The stm-start repository serves as a foundational guide for developers looking to transition from high-level frameworks like mbed to more direct hardware manipulation on the STM32 platform. Specifically targeting the Arch Max board—a development platform featuring the STM32F407 microcontroller—this project provides the necessary scaffolding to compile C programs that interact directly with the hardware registers as described in the ST reference manuals.

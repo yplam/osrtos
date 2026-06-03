@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lorawan-test-app-for-apache-nuttx
+- mbed-os-client-example
+- pelion-device-management-client-example-for-mbed-os
+- zephyr-wi-fi-and-tcp-udp-connection-demo
+- zephyr-lorawan-lora-examples
+- mongoose-os-aws-iot-uart-and-thing-shadow-example
 ---
 
 The Mbed OS LoRaWAN TinyShell project is a comprehensive example application designed to demonstrate the LoRaWAN protocol stack within the Mbed OS ecosystem. Compliant with the LoRaWAN v1.0.2 specification, this project provides a robust starting point for developers building long-range, low-power IoT applications using ARM-based microcontrollers.

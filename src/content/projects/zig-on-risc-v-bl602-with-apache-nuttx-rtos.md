@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zig-lvgl-touchscreen-app-on-apache-nuttx-rtos
+- visual-programming-for-zig-with-nuttx-sensors
+- pinedio-stack-bl604-on-apache-nuttx-rtos
+- rust-test-app-for-apache-nuttx-os
+- lorawan-test-app-for-apache-nuttx
+- stm32l475-freertos-iot-project
 ---
 
 ## Integrating Zig with Apache NuttX

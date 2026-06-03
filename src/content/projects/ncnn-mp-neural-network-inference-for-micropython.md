@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- micromlp
+- tensorflow-lite-micro-for-rt-thread
+- esp-dl-micropython-binding
+- sparkfun-micropython-opencv
+- pikapython
+- stm32-ai-model-zoo-services
 ---
 
 # ncnn_mp: Bringing High-Performance AI to MicroPython

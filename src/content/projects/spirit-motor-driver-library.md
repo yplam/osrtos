@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- xiaomi-cybergear-arduino-library
+- mbed-os-maxon-epos4-motor-controller-driver
+- serialbridge
+- spektrum-receiver-library-for-mbed
+- arduino-dronecan
+- mcp2515-can-testing-app-for-mongoose-os
 ---
 
 spirit is a specialized C++ library designed to facilitate the control of motor drivers through inter-microcontroller communication. Primarily focused on CAN bus architectures, it establishes a clear hierarchy between a central controller and multiple peripheral motor drivers. This structure allows a single controller to manage a fleet of motors by sending commands to dedicated peripheral microcontrollers that interface directly with motor driver hardware.

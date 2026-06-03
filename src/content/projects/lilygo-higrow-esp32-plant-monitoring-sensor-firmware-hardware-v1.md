@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lilygo-higrow-esp32-plant-monitoring-sensor-firmware
+- smart-plant-monitoring-system
+- mongoose-os-environment-logger
+- mongoose-os-environmental-sensors-application
+- mongoose-os-configurable-sensor-node
+- esp32-ruuvitag-collector
 ---
 
 ## Overview

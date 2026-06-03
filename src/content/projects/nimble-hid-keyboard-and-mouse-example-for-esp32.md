@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-01'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32-nimble-hid-client
+- usb-keyboard-and-mouse-bluetooth-adapter-esp32
+- m5-keyboard-and-mouse-emulator
+- micropython-human-interface-device-library
+- hijelhid-blekeyboard
+- esp32-s3-usb-to-ble-keyboard-bridge
 ---
 
 ## Overview

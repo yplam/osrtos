@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-13'
 updatedAt: '2026-01-13'
+relatedProjects:
+- libwebsockets
+- espai-unified-ai-api-client-for-esp32
+- nanofish
+- simpleftpserver-library
+- jsonx-lightweight-embedded-json-serializer
+- openrouter-esp-idf-client
 ---
 
 ## Overview

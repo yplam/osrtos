@@ -20,6 +20,13 @@ isShow: true
 image: /202602/pico-rex.webp
 createdAt: '2026-02-25'
 updatedAt: '2026-02-25'
+relatedProjects:
+- esp32-rex-dinosaur-game-in-rust
+- msx1-emulator-for-raspberry-pi-pico
+- ev2400-reimplementation-for-raspberry-pi-pico
+- pico-rtic-template
+- pc-6001mkii-emulator-for-raspberry-pi-pico
+- diy-arcade-machine
 ---
 
 ## Bringing the Dino Game to the RP2350

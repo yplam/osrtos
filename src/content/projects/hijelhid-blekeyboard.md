@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2026-04-16T03:44:55+00:00'
 updatedAt: '2026-04-16T03:44:55+00:00'
+relatedProjects:
+- arduino-serial-ble
+- nimble-arduino
+- micropython-human-interface-device-library
+- nimble-hid-keyboard-and-mouse-example-for-esp32
+- esp32-nimble-hid-client
+- nimble-ota
 ---
 
 ## Turning the ESP32 into a Versatile BLE Input Device

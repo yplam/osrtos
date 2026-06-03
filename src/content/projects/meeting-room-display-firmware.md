@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- pelion-device-management-client-example-for-mbed-os
+- e-ink-meeting-room-schedule-display
+- mender-ota-example-for-stm32l4-and-zephyr-rtos
+- esp32-p4-home-assistant-display
+- wt32-sc01-plus-smart-desk-companion
+- open-display-firmware
 ---
 
 ## Overview

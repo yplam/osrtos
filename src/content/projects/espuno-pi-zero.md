@@ -39,6 +39,13 @@ isShow: true
 image: /202601/espuno-pi-zero.webp
 createdAt: '2026-01-15'
 updatedAt: '2026-01-15'
+relatedProjects:
+- cyberboard-v2
+- seeed-home-assistant-discovery
+- xiao-esp32c6-sketches
+- esp-e-paper-component
+- smart-iot-sensor-with-xiao-esp32c6
+- micropython-for-pandora-iot-board
 ---
 
 ## Overview

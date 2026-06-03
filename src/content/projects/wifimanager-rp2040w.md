@@ -32,6 +32,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- wifimanager-rp2040w-lite
+- esp8266-w5100-manager
+- esp32-w5500-manager
+- esp8266-w5500-manager
+- asyncesp8266-w5500-manager
+- blynk-wifinina-wm
 ---
 
 WiFiManager_RP2040W is a specialized library designed for the Raspberry Pi Pico W, enabling seamless WiFi credential management through a web-based configuration portal. Based on the popular WiFiManager concept, this implementation is optimized for the RP2040's CYW43439 wireless chip and the Earle Philhower `arduino-pico` core. It solves the common problem of hardcoding WiFi credentials by allowing users to connect to the device's own Access Point and configure network settings via a standard web browser.

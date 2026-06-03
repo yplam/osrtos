@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- torch2cmsis
+- utensor-code-generator-utensor-cgen
+- pruning-deep-learning-models-for-arm-cortex-m
+- arm-dwt-c-library
+- cmsis-parser
+- ncnn-mp-neural-network-inference-for-micropython
 ---
 
 ## Bridging the Gap Between Keras and Embedded Hardware

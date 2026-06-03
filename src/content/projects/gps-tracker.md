@@ -25,6 +25,13 @@ isShow: true
 image: /202512/gps-tracker.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- gnss-lorawan-tracker
+- esp32-sdr-gps-receiver
+- x-track-open-source-gps-bicycle-computer
+- cardputer-gps-info
+- map-tiles-projects-for-esp32
+- lvgl-demo-embarcadores
 ---
 
 The GPS-Tracker project is a comprehensive embedded systems initiative aimed at developing a standalone device for geospatial positioning. Currently in its development phase, the project bridges the gap between custom hardware engineering and firmware implementation.

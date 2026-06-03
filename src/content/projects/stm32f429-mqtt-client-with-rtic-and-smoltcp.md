@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f429-rtic-and-smoltcp-example-application
+- stm32-lwip-mqtt-demo
+- stm32h743zi-rust-playground
+- freertos-mqtt-client-demo
+- stm32-rtic-project-template
+- stm32f429-nucleo-lwip-and-freertos-template
 ---
 
 The `stm32f429-smoltcp-mqtt-rtic` project is a sophisticated example of building modern, memory-safe embedded applications using the Rust programming language. It targets the STM32F429 microcontroller, specifically the STM32F429ZITx, providing a complete implementation of an MQTT client that leverages a high-performance networking stack and a real-time concurrency framework.

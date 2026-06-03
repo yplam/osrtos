@@ -37,6 +37,13 @@ topics:
 isShow: true
 createdAt: '2026-04-21T05:32:20+00:00'
 updatedAt: '2026-04-21T05:32:20+00:00'
+relatedProjects:
+- treecore-cpu-a-series-of-risc-v-processors
+- fwrisc-featherweight-risc-v-core
+- fazyrv-a-scalable-risc-v-core
+- freertos-port-for-risc-v
+- picorv32-rt-thread-on-lichee-tang-eg4s20
+- rt-thread-for-picorv32-on-lichee-tang
 ---
 
 Level-V is a robust, open-source implementation of a RISC-V processor core designed specifically for developers and researchers who need more than just a minimal "toy" core. Implementing the RV32IMC ISA—covering integer, multiplication, and compressed instruction extensions—it strikes a balance between complexity and accessibility, making it an ideal platform for SoC experiments and architecture research.

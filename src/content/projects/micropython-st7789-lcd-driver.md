@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- micropython-st7735-tft-lcd-driver
+- st7789-driver-for-micropython
+- micropython-waveshare-e-paper-drivers
+- micropython-camera-driver-for-esp32
+- esp32-cheap-yellow-display-micropython-lvgl
+- micropython-max7219-8x8-led-matrix-library
 ---
 
 ## Overview

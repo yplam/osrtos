@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- hommie-logger
+- meindatalogger
+- littlefs-ring-buffers
+- spiffslogger
+- rtcmemory
+- arduino-littlefs-spimemory-wrapper
 ---
 
 ## Overview

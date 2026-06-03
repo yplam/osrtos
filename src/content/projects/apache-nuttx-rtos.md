@@ -16,6 +16,13 @@ libraries:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nuttx-real-time-operating-system
+- apache-nuttx-for-sf2000
+- dnx-rtos
+- phoenix-rtos-project
+- minios-esp
+- apache-nuttx-rtos-on-64-bit-risc-v
 ---
 
 Apache NuttX is a mature, real-time operating system (RTOS) that stands out in the embedded world for its rigorous adherence to standards, particularly POSIX and ANSI. Originally created by Gregory Nutt and now a top-level project at the Apache Software Foundation, it provides a Unix-like environment for microcontrollers ranging from 8-bit to 64-bit architectures.

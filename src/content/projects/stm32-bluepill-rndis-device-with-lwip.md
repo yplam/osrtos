@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- ip-over-usb
+- d21rndis-usb-rndis-for-samd21
+- usb-cdc-ecm-for-stm32f072
+- d21ecm-usb-cdc-ecm-for-samd21
+- d21eem-usb-cdc-eem-for-samd21
+- transfer-files-over-ethernet-with-stm32-and-freertos
 ---
 
 ## Overview

@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-05-11T13:42:56+00:00'
 updatedAt: '2026-05-11T13:42:56+00:00'
+relatedProjects:
+- esp32-uart-bridge
+- nmea0183-wifi-marine-data-gateway
+- linkscope-bpu-uart-analyzer
+- bmw-idrive-controller-can-bus-interpreter
+- esp32webscope
+- esp-scope
 ---
 
 ## Bridging the Gap Between CAN and IoT

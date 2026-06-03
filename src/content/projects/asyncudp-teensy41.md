@@ -31,6 +31,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- asyncudp-esp32-sc-w6100
+- asyncudp-esp32-ethernet
+- asyncudp-rp2040w
+- asyncudp-ethernet
+- asyncwebserver-esp32-sc-enc
+- asyncwebserver-esp32-w5500
 ---
 
 The Teensy 4.1 is one of the most powerful microcontrollers in the hobbyist and professional prototyping space, featuring a high-speed processor and built-in Ethernet capabilities. However, to truly leverage that power in networking applications, developers often need more than standard blocking libraries. Enter **AsyncUDP_Teensy41**, a library designed to bring fully asynchronous UDP communication to the Teensy 4.1 platform.

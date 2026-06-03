@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- picorv32-rt-thread-on-lichee-tang-eg4s20
+- hbird-e203-rt-thread-on-lichee-tang
+- freertos-port-for-risc-v
+- rt-thread-smart-porting-for-risc-v-qemu-and-k210
+- cmsis-rtos-on-micro-bit
+- treecore-cpu-a-series-of-risc-v-processors
 ---
 
 The picorv32_tang project brings together two powerful open-source technologies: the Picorv32 RISC-V CPU core and the RT-Thread Real-Time Operating System. Specifically targeting the Lichee Tang (EG4S20) FPGA board, this repository provides a complete environment for running a modern RTOS on a custom soft-core processor.

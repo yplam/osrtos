@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zig-on-risc-v-bl602-with-apache-nuttx-rtos
+- zig-lvgl-touchscreen-app-on-apache-nuttx-rtos
+- ikea-vindriktning-air-quality-sensor-for-apache-nuttx
+- tinycbor-test-app-for-apache-nuttx
+- zig-language-toolchain-for-esp-idf
+- pinedio-stack-bl604-on-apache-nuttx-rtos
 ---
 
 ## Overview

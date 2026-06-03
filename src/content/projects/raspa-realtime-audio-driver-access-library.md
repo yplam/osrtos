@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- elk-audio-rtdm-driver-for-raspberry-pi
+- twine-thread-and-worker-interface-for-elk-audio-os
+- rtdm-shift-register-driver-for-elk-pi
+- urt-unified-interface-to-real-time-operating-systems
+- simple-open-ethercat-master-library-rtnet-version
+- real-time-spi-on-xenomai-3
 ---
 
 ## Overview

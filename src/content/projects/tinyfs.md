@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pico-vfs-a-virtual-file-system-for-raspberry-pi-pico
+- littlefs-mbed-rp2040
+- littlefs2-idiomatic-rust-api-for-littlefs
+- fs-nano33ble
+- littlefs-for-esp-idf
+- 107-arduino-littlefs
 ---
 
 TinyFS provides a bridge between the Go programming language and the specialized storage needs of microcontrollers. As part of the TinyGo ecosystem, it offers implementations of filesystems like LittleFS and FAT that are optimized for the constraints of embedded hardware, allowing developers to use familiar Go patterns in resource-constrained environments.

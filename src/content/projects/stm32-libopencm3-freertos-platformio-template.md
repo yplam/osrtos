@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f103c8-freertos-cmsis-blink-example
+- stm32-makefile-freertos-project-template
+- stm32f107-makefile-freertos-template
+- stm32f1-rtos-example-project
+- micro-ros-stm32-template
+- minimal-mbed-os-template-for-stm32f103
 ---
 
 The `platformio-libopencm3-freertos` project serves as a foundational template for developers looking to combine the power of the libopencm3 hardware abstraction library with the FreeRTOS real-time operating system. Specifically tailored for the PlatformIO ecosystem, this repository provides a ready-to-use "blinky" example that demonstrates how to integrate these components on STM32 hardware.

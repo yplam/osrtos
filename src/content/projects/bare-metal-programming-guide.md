@@ -27,6 +27,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- embedded-systems-bare-metal-programming-ground-up
+- learning-stm32
+- stm32-cmsis-zero-to-hero
+- h-c-l-p-tr-nh-stm32f1
+- stm32f1xx-bare-metal-template
+- arm-kl25z-mbed-ide-example-programs
 ---
 
 The Bare Metal Programming Guide is a deep dive into the world of embedded systems for developers who want to move beyond the 'magic' of vendor-supplied HALs and IDEs. Created by Cesanta's Sergey Lyubka, this repository serves as both a tutorial and a set of production-ready templates for those who wish to program microcontrollers using nothing but a GCC compiler, a linker script, and a datasheet.

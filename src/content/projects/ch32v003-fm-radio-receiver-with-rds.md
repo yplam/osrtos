@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-04-07T23:33:00+00:00'
 updatedAt: '2026-04-07T23:33:00+00:00'
+relatedProjects:
+- si4732-radio
+- esp32-web-radio-evo3
+- tinyradio9-for-wt32-sc01-plus
+- esp32-mp3
+- esp32fmradio
+- ch32v003-usb-meter
 ---
 
 The CH32V003 FM Radio Receiver is a portable, Li-Ion battery-powered device that allows you to listen to your favorite radio stations with the added benefit of RDS (Radio Data System) functionality. This project is a port of an earlier ATtiny412-based design, now leveraging the cost-effective and capable CH32V003 32-bit RISC-V microcontroller. The receiver is a complete system, integrating a tuner, audio amplifier, display, and power management into a compact, 3D-printed enclosure.

@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-04-09T23:46:13+00:00'
 updatedAt: '2026-04-09T23:46:13+00:00'
+relatedProjects:
+- m5stickcplus2-amg8833-thermal-camera
+- esp32cam-pir-mqtt-spiffs-webserver
+- esp32-lepton
+- lithermal-thermal-imaging-camera
+- esp8266-mlx90614-temperature-monitor
+- esp32-mjpeg-multiclient-streaming-server
 ---
 
 Thermal imaging has become increasingly accessible for hobbyists and engineers, and this project demonstrates how to leverage the ESP32-S3 to create a high-performance thermal viewing station. By combining robust firmware with a modern web interface, the project enables real-time visualization of heat signatures with features typically found in professional equipment.

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-03-24'
 updatedAt: '2026-03-24'
+relatedProjects:
+- w601-rt-thread-alarm-clock
+- mongoose-os-esp8266-pir-monitor
+- lal-control-for-mbed-os
+- m5cardputer-audio-spectrum-display
+- smart-lighting-system-using-esp32
+- roostaboosta
 ---
 
 ## Overview

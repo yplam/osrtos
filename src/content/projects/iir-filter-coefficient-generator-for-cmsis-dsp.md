@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- iir-designer-for-cmsis-dsp
+- dsp-from-ground-up-on-arm-processors-and-python
+- arm-cortex-m-hilbert-transform
+- rtt-libfilter-digital-filter-library-for-rt-thread
+- arm-dwt-c-library
+- arduino-cmsis-module
 ---
 
 ## Overview

@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- spirit-motor-driver-library
+- ds248x-1-wire-library
+- qn8066-fm-dsp-rx-tx-arduino-library
+- cr95hf-mbed-library
+- serialbridge
+- chirp-sdk-library-for-mbed-os
 ---
 
 ## Overview

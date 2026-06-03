@@ -30,6 +30,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- bathhouseos
+- bathhouseos-core-control-panel
+- aquarios-project-aquarius
+- lal-control-for-mbed-os
+- knu-usn-automatic-ventilation-system
+- esp32-p4-home-assistant-display
 ---
 
 BathOS is a specialized subsystem of the broader BathHouseOS project, born out of a practical need to solve common household problems related to bathtub management. The project addresses issues such as accidental flooding, lack of temperature control, and inefficient water usage through a dedicated embedded operating system approach.

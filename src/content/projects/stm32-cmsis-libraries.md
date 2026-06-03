@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f103-cmsis-libraries-and-projects
+- stm32f103-cmsis-peripheral-configuration
+- cmsis-drivers-for-efm32-and-stm32
+- cmsis-for-stm32-development
+- stm32-prototyping-libraries
+- lpc1115-libraries-and-drivers
 ---
 
 ## Overview

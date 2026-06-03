@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-04-08T23:46:11+00:00'
 updatedAt: '2026-04-08T23:46:11+00:00'
+relatedProjects:
+- stm32n6-camera-capture-application
+- raspberry-pi-pico-freertos-sample-application
+- stm32n6-ai-object-detection-and-h-264-usb-video-streaming
+- pico-cec
+- stm32-displaylink
+- micropython-camera-driver-for-esp32
 ---
 
 The Raspberry Pi Pico is a versatile microcontroller, but handling real-time video streaming is a significant challenge for its dual-core ARM Cortex-M0+ architecture. The `rp2040-uvc` project addresses this by turning the RP2040 into a standard USB Video Class (UVC) device, allowing it to act as a webcam or video capture card for a host computer.

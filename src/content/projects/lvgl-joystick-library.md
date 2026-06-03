@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-02-08'
 updatedAt: '2026-02-08'
+relatedProjects:
+- m5dial-lvgl
+- lvgl-port-for-esp32
+- espui
+- jc4827w543-lvgl-v9-implementation
+- esphome-lvgl-component
+- x-knob-a-smart-knob-based-on-lvgl-ui-framework
 ---
 
 ## Overview

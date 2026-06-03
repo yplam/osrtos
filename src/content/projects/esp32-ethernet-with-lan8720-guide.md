@@ -23,6 +23,13 @@ isShow: true
 image: /202603/lam8720.webp
 createdAt: '2026-03-06'
 updatedAt: '2026-03-06'
+relatedProjects:
+- esp32-enc28j60
+- esp32-w5500-manager
+- wiznet-freertos-sdk-for-raspberry-pi-pico-ethernet
+- stm32h745-ethernet-with-lwip-and-freertos
+- esp32-repo
+- esp32-c3-supermini-oled-display-driver
 ---
 
 ## Overview

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- iotsharp-for-rt-thread
+- ppp-device-for-rt-thread
+- mbed-to-ibm-watson-iot-platform
+- stm32f429-mqtt-client-with-rtic-and-smoltcp
+- mbed-to-aws-iot-example
+- cicada-iot-communications-module-for-energy-access
 ---
 
 ## Overview

@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-04-21T05:37:26+00:00'
 updatedAt: '2026-04-21T05:37:26+00:00'
+relatedProjects:
+- ascii-aquarium
+- esp32-virtual-cat-project
+- deck
+- cheap-yellow-display-video-player-esp32-2432s028
+- animated-gif-on-a-320x240-lcd-display-ili9341-with-the-esp32
+- clawdmeter
 ---
 
 Denki Kurage (電気くらげ, or electric jellyfish) is a digital art project that brings a stylized, low-poly 3D jellyfish to life on the Cheap Yellow Display (CYD), a popular ESP32 development board with an integrated screen. The project is designed as a relaxing visual piece, allowing users to watch the jellyfish swim in a virtual environment with retro-style graphics.

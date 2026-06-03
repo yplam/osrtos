@@ -18,6 +18,13 @@ topics:
 isShow: true
 createdAt: '2026-04-04T00:42:50+00:00'
 updatedAt: '2026-04-04T00:42:50+00:00'
+relatedProjects:
+- pomodesk-physical-pomodoro-timer
+- m5paper-buddy
+- eight-sleep-control-with-m5stack-atoms3
+- nogasmlink
+- hunter-douglas-powerview-ble-for-home-assistant
+- simplebus2-mqtt-bridge
 ---
 
 The Focus Dial is a DIY productivity device inspired by the concept of dedicated focus timers like the TimeChi. Built around the ESP32 microcontroller, it serves as a physical gateway to deep work, allowing users to initiate timed focus blocks with a simple tactile interface. By combining local hardware control with smart home integration, it transforms a workspace into a distraction-free zone.

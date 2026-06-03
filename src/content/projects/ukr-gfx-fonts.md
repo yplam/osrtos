@@ -36,6 +36,13 @@ topics:
 isShow: true
 createdAt: '2026-05-21T01:57:03+00:00'
 updatedAt: '2026-05-21T01:57:03+00:00'
+relatedProjects:
+- liquidcrystal-i2c-multilingual
+- rt-u8g2-u8g2-graphics-library-for-rt-thread
+- esp-lvgl
+- lvgl-utilities
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- micropython-font-handling-utility
 ---
 
 Displaying localized text on microcontrollers often presents a significant hurdle, especially for languages using Cyrillic scripts like Ukrainian. Standard GFX libraries typically default to ASCII or limited Latin character sets, leaving developers to struggle with manual font generation or encoding issues. Ukr_GFX_fonts addresses this gap by providing a curated set of high-quality fonts specifically optimized for GFX-compatible libraries, alongside a robust mechanism for handling UTF-8 strings.

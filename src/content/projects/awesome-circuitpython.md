@@ -22,6 +22,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- awesome-micropython
+- awesome-zephyr-rtos
+- oficina-de-circuitpython
+- sparkfun-python-examples
+- micropython-lib
+- micropython-samples-and-drivers
 ---
 
 CircuitPython has revolutionized the way beginners and experts alike approach embedded systems. By bringing the simplicity of Python to microcontrollers, it removes the steep learning curve traditionally associated with low-level languages like C or C++. The **Awesome CircuitPython** repository serves as the definitive directory for this ecosystem, cataloging everything from core firmware to community-driven libraries and specialized hardware.

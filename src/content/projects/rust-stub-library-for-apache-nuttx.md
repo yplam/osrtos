@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rust-embedded-hal-for-apache-nuttx-rtos
+- rust-test-app-for-apache-nuttx-os
+- bl602-adc-and-temperature-sensor-library-for-apache-nuttx
+- rust-i2c-driver-for-bosch-bme280-on-apache-nuttx
+- rust-support-for-rt-thread
+- b-l475e-iot01a-discovery-board-support-crate
 ---
 
 ## Overview

@@ -14,6 +14,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- esp8266-mlx90614-temperature-monitor
+- esp-temperature-to-losant-using-mongoose-os
+- losant-temperature-sensor-for-mongoose-os
+- ds18b20-mgos-test
+- mongoose-os-environment-logger
+- leilei-mongoose-os-sensing-device
 ---
 
 ## Overview

@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-03-31T13:15:59+00:00'
 updatedAt: '2026-03-31T13:15:59+00:00'
+relatedProjects:
+- espgaggia-smart-coffee-machine-controller
+- la-marzocco-round-controller
+- esphome-cosori-kettle-ble-component
+- diy-smart-coffee-and-espresso-scale
+- smart-flask-thermos-with-round-display-and-esp32-c3
+- coffee-bin-mqtt
 ---
 
 Gaggimate is an open-source project designed to upgrade Gaggia espresso machines with smart controls, significantly improving the coffee-making experience. By integrating a display and custom electronics, users can monitor and control their machine with a level of precision not possible with the stock hardware.

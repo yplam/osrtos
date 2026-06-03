@@ -33,6 +33,13 @@ isShow: true
 image: /202601/blue-jammer.webp
 createdAt: '2026-01-15'
 updatedAt: '2026-01-15'
+relatedProjects:
+- esp32-bluejammer
+- esp32-2-4ghz-jammer
+- esp32-bluetooth-signal-jammer
+- nrf24-jammer
+- espnrf24-jammer
+- cc1101-jammer
 ---
 
 ## Overview

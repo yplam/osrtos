@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- raspberry-pi-4-xenomai-3-patch
+- xenomai-3-for-raspberry-pi-4
+- xenomai-3-for-raspberry-pi-0-1-linux-kernel-4-1-21
+- xenomai-3-for-raspberry-pi-2-and-3
+- xenomai-3-exercises-for-raspberry-pi-4
+- str-xenomai-real-time-systems-practices
 ---
 
 Xenomai on Raspberry Pi provides a specialized environment for developers looking to achieve hard real-time performance on one of the most popular single-board computers. While standard Linux is not deterministic by default, Xenomai introduces a dual-kernel architecture that allows real-time tasks to run with high priority and low latency alongside a standard Linux distribution.

@@ -37,6 +37,13 @@ isShow: true
 image: /202602/bruce-devices.webp
 createdAt: '2026-02-11'
 updatedAt: '2026-02-11'
+relatedProjects:
+- infiltra-firmware
+- unigeek-firmware
+- esp-hack-fw
+- ghostesp
+- ghost-esp
+- saturn
 ---
 
 ## Overview

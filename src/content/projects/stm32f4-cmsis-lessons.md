@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-cortex-m4-code-examples
+- stm32-cmsis-zero-to-hero
+- stm32f103rb-templates-and-examples
+- h-c-l-p-tr-nh-stm32f1
+- chibios-rt-examples-for-stm32f401re-nucleo
+- stm32f103-cmsis-peripheral-configuration
 ---
 
 ## Overview

@@ -34,6 +34,13 @@ isShow: true
 image: /202604/scope.webp
 createdAt: '2026-04-12T09:18:01+00:00'
 updatedAt: '2026-04-12T09:18:01+00:00'
+relatedProjects:
+- usb-c-multimeter-hack
+- nanovna-x-enhanced-firmware-for-nanovna-h-h4
+- esp32-bus-pirate
+- oscilloscope-rp2040
+- stm32f1-rtos-example-project
+- sks-airspy-ant-community-firmware
 ---
 
 The FNIRSI 2C53T is a popular, budget-friendly handheld device that combines an oscilloscope, multimeter, and signal generator into a single unit. While the hardware is impressive for its price point, the stock firmware is often cited as a limiting factor. OpenScope 2C53T is a clean-room firmware rewrite designed to unlock the full potential of this hardware through extensive reverse engineering and modern embedded practices.

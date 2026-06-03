@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- lightweight-publish-subscribe-application-protocol-for-tinyos
+- gocontroll-mqtt
+- low-power-wireless-networking-for-iot-lpiot
+- tinyos-cooja-simulator-application
+- mongoose-os-button-switch-for-aws-iot
+- cse160-network-protocols-project-skeleton
 ---
 
 ## Overview

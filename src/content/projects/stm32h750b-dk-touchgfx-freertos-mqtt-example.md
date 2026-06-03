@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-lwip-mqtt-demo
+- freertos-mqtt-client-demo
+- stm32f4-display-and-ethernet-example
+- sk-mstm32f107-demo-board-example
+- mqtt-client-and-https-server-using-mbedtls
+- stm32f429-nucleo-lwip-and-freertos-template
 ---
 
 ## Overview

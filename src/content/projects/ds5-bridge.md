@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-06-02T23:23:14+00:00'
 updatedAt: '2026-06-02T23:23:14+00:00'
+relatedProjects:
+- esp-usb-ble-hid-bridge
+- dshare-hid
+- midi2piousbhub
+- picogamepadconverter
+- usb-keyboard-and-mouse-bluetooth-adapter-esp32
+- m5-keyboard-and-mouse-emulator
 ---
 
 DS5 Bridge provides a high-performance wireless solution for using Sony DualSense and DualSense Edge controllers on a Windows PC. By leveraging the Raspberry Pi Pico 2 W as an intermediary hardware bridge, the system allows the controller to pair over Bluetooth while the Pico connects to the PC via USB. This architecture ensures that Windows recognizes the device as a standard DualSense-compatible USB controller, maintaining compatibility with modern games and applications.

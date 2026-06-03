@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-04-02T07:51:25+00:00'
 updatedAt: '2026-04-02T07:51:25+00:00'
+relatedProjects:
+- littledb-sql-like-database-for-esp32
+- sqlite3-for-esp-idf
+- pico-vfs-a-virtual-file-system-for-raspberry-pi-pico
+- littlefs-mbed-rp2040
+- raspberry-pi-pico-littlefs-usb-flash-memory-interface
+- 107-arduino-littlefs
 ---
 
 The Raspberry Pi Pico has become a staple for hobbyists and professionals alike, but managing complex data structures on its limited flash storage often requires custom, error-prone file formats. The `pico-sqlite` project changes this by bringing the full power of the SQLite3 engine to the RP2040. By providing a relational database interface, it allows developers to move beyond simple flat files and implement robust data persistence directly on their microcontrollers.

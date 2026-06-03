@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- esp32-fatfs-image-tool-and-example
+- littlefs-python
+- littlefs-disk-image-viewer
+- littlefs-explorer-for-windows
+- esp32-spiffs-image-generation-example
+- fileferry-click2flash
 ---
 
 # mklfs: LittleFS Image Creation Tool

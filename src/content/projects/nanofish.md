@@ -20,6 +20,13 @@ topics:
 isShow: true
 createdAt: '2026-04-23T00:47:09+00:00'
 updatedAt: '2026-04-23T00:47:09+00:00'
+relatedProjects:
+- tinyweb
+- uht-micro-http-toolkit
+- libwebsockets
+- embedmcp-embedded-mcp-server-library
+- picoweb
+- lwnbd-a-lightweight-nbd-server-library
 ---
 
 ## Efficient Networking for the Embedded Edge

@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- losant-temperature-sensor-for-mongoose-os
+- mongoose-os-mlx90614-ir-temperature-monitor
+- mongoose-os-esp8266-pir-monitor
+- losant-mqtt-mongoose-os-example
+- coffee-bin-mqtt
+- mongoose-os-environment-logger
 ---
 
 ## Overview

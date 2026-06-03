@@ -16,6 +16,13 @@ star: 8
 lastUpdated: '2021-04-18'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- bitcraze-crazyflie-2-0-2-1-mbed-os-firmware
+- flight-controller-rev2
+- fpv-drone-stm32f411-flight-controller
+- avem
+- protoflight
+- rust-for-arduino-portenta-h7
 ---
 
 Droners is an experimental drone firmware project written in Rust, specifically designed for the STM32F411 microcontroller. While the project is currently in its early stages—as noted by the developer's disclaimer that it is "not ready for deploying"—it provides an interesting look into how modern systems programming languages can be applied to flight control systems.

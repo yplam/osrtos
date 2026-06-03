@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32n6-getting-started-for-audio-ai
+- esp32-voice-assistant
+- erikaos-online-weather-station
+- diy-ai-voice-assistant-for-esp32-s3
+- speech2touch
+- kalo-esp32-voice-assistant
 ---
 
 ## Overview

@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lora-test-app-for-semtech-sx1262-and-apache-nuttx
+- rust-test-app-for-apache-nuttx-os
+- tinycbor-test-app-for-apache-nuttx
+- ikea-vindriktning-air-quality-sensor-for-apache-nuttx
+- zephyr-lorawan-lora-examples
+- zig-on-risc-v-bl602-with-apache-nuttx-rtos
 ---
 
 ## Overview

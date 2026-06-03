@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-03-03'
 updatedAt: '2026-03-03'
+relatedProjects:
+- stm32-bootloader
+- mbed-bootloader
+- stm32cubeh7rs-mcu-firmware-package
+- tock-bootloader
+- tock-for-stm32
+- mongoose-os
 ---
 
 ## Overview

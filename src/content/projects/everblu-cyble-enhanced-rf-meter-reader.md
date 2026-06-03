@@ -28,6 +28,13 @@ topics:
 isShow: true
 createdAt: '2026-04-21T01:09:01+00:00'
 updatedAt: '2026-04-21T01:09:01+00:00'
+relatedProjects:
+- esp32-controller-for-charlton-jenrick-fireplace
+- esp32-jarolift-controller
+- obd2-to-mqtt-for-home-assistant
+- zigbee-gas-counter
+- esp-graber
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
 ---
 
 This project provides a robust solution for monitoring utility consumption by interfacing with Itron EverBlu Cyble Enhanced RF meters. By utilizing an ESP32 or ESP8266 paired with a CC1101 transceiver, users can wirelessly fetch usage data via the RADIAN protocol. The system is designed to be production-ready, supporting both water and gas meters with dedicated measurement units and device classes for Home Assistant.

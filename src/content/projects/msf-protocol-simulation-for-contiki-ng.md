@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- rl-tsch-implementation-for-contiki-ng
+- contiki-lora-tsch-project
+- ql-tsch-implementation-for-contiki-ng
+- ql-tsch-reinforcement-learning-for-time-slotted-channel-hopping
+- rbo-protocol-simulation-for-tinyos
+- computer-network-with-contiki-ng
 ---
 
 ## Overview

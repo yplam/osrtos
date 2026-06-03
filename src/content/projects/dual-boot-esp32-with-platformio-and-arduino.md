@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-04-27T08:41:04+00:00'
 updatedAt: '2026-04-27T08:41:04+00:00'
+relatedProjects:
+- multi-firmware-esp
+- esp32repartition
+- esp32-graphical-bootloader
+- esp32-ble-ota-arduino
+- lilygo-t-display-s3-boilerplate
+- esp32-ble-uart-mx
 ---
 
 Managing multiple firmware applications on a single microcontroller can significantly enhance the versatility of embedded systems. Whether for A/B testing, providing a failsafe recovery mode, or creating a multi-purpose device, the ability to switch between different codebases without re-flashing is a powerful capability. This project provides a clear, minimal implementation of a dual-boot setup on the ESP32 platform, leveraging the PlatformIO ecosystem and the Arduino framework.

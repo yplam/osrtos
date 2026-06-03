@@ -25,6 +25,13 @@ isShow: true
 image: /202603/esp-lvgl.webp
 createdAt: '2026-03-08'
 updatedAt: '2026-03-08'
+relatedProjects:
+- lvgl-display-and-touchpad-drivers-for-esp32
+- lvgl-port-for-esp32
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- esp32-cheap-yellow-display-micropython-lvgl
+- esp32-lvgl-8-x-sdspi-template
+- esp32-tux
 ---
 
 ## Overview

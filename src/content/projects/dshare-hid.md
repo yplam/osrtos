@@ -22,6 +22,13 @@ isShow: true
 image: /202602/esp32-c3-supermini.webp
 createdAt: '2026-02-05'
 updatedAt: '2026-02-05'
+relatedProjects:
+- usb-keyboard-and-mouse-bluetooth-adapter-esp32
+- esp32-s3-usb-to-ble-keyboard-bridge
+- m5-keyboard-and-mouse-emulator
+- nimble-hid-keyboard-and-mouse-example-for-esp32
+- esp-usb-ble-hid-bridge
+- ds5-bridge
 ---
 
 ## Overview

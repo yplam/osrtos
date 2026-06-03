@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-13'
 updatedAt: '2026-01-13'
+relatedProjects:
+- si4732-radio
+- fmoto-motorola-fm-transmitter-moto-mod
+- tinyradio9-for-wt32-sc01-plus
+- esp32-custom-hardware-synthesizer
+- espri-esp-radio-interface
+- radiojkk32-multifunctional-internet-radio-player
 ---
 
 ## Overview

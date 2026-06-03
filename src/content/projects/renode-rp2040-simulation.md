@@ -20,6 +20,13 @@ topics:
 isShow: true
 createdAt: '2026-04-01T01:21:11+00:00'
 updatedAt: '2026-04-01T01:21:11+00:00'
+relatedProjects:
+- rp2040-freertos-template
+- pico-zephyr-project
+- raspberry-pi-pico-freertos-sample-application
+- pigg-raspberry-pi-and-pi-pico-gpio-remote-control
+- pico-rtic-template
+- arduino-pico
 ---
 
 Developing for the Raspberry Pi RP2040 often involves a repetitive cycle of flashing and testing on physical hardware. This project provides a powerful alternative by implementing a detailed simulation of the RP2040 microcontroller within the [Renode](https://github.com/renode/renode) framework. It offers a structured way to build board-level simulations, allowing developers to run and debug firmware in a virtual environment that mimics the behavior of the Raspberry Pi Pico and custom RP2040-based designs.

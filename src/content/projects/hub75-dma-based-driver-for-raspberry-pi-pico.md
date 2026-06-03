@@ -28,6 +28,13 @@ isShow: true
 image: /202601/hub75.webp
 createdAt: '2026-01-17'
 updatedAt: '2026-01-17'
+relatedProjects:
+- lvgl-for-raspberry-pi-pico-hub75-led-matrix
+- neopixel-library-for-raspberry-pi-pico
+- fastled-idf
+- hyperk
+- fatfs-tiva-cm4f-port
+- micropython-st7735-tft-lcd-driver
 ---
 
 ## High-Performance HUB75 Rendering for Raspberry Pi Pico

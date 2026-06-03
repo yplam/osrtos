@@ -25,6 +25,13 @@ isShow: true
 image: /202601/flight-controller-rev2.webp
 createdAt: '2026-01-23'
 updatedAt: '2026-01-23'
+relatedProjects:
+- droners
+- protoflight
+- avem
+- fpv-drone-stm32f411-flight-controller
+- alturia-firmware
+- drone-stm32f1
 ---
 
 ## Overview

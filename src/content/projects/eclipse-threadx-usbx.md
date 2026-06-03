@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- eclipse-threadx-filex
+- eclipse-threadx-netx-duo
+- eclipse-threadx-iot-devkit-starter-application
+- x-cube-azrtos-h7-azure-rtos-software-expansion
+- x-cube-azrtos-g4-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-f7-azure-rtos-software-expansion-for-stm32cube
 ---
 
 ## High-Performance USB Connectivity for Embedded Systems

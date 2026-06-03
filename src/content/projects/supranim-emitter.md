@@ -22,6 +22,13 @@ star: 7
 lastUpdated: '2024-04-11'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- pubsub-c
+- nesper-nim-wrappers-for-esp-idf
+- flexiblebutton
+- stm32-event-triggered-finite-state-machine-framework
+- bloom
+- nimble-arduino
 ---
 
 Supranim Emitter is a streamlined event management library designed for the Nim ecosystem. At its core, it provides a robust mechanism for implementing the observer pattern, allowing different parts of an application to communicate without being tightly coupled. Whether you are building a web service, a command-line tool, or a systems-level application, Supranim Emitter offers a clean way to handle asynchronous or decoupled logic.

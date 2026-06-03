@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- mongoose-os-programs-and-examples
+- mongoose-os-samples-for-esp32
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- esp32-experiments
+- mongoose-os-robot-car
+- unipg-mbed-os-samples
 ---
 
 ## Overview

@@ -25,6 +25,13 @@ isShow: true
 image: /202603/retrojam.webp
 createdAt: '2026-03-23'
 updatedAt: '2026-03-23'
+relatedProjects:
+- pico-smsplus-sega-master-system-and-game-gear-emulator
+- picopeanutgb-game-boy-emulator-for-rp2350
+- msx1-emulator-for-raspberry-pi-pico
+- cardputer-game-station
+- esp32-s3-nes-emulator
+- pc-6001mkii-emulator-for-raspberry-pi-pico
 ---
 
 ## Overview

@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-04-06T23:56:41+00:00'
 updatedAt: '2026-04-06T23:56:41+00:00'
+relatedProjects:
+- oscilloscope-for-stm32f411
+- usb-pd-tester
+- esp-scope
+- ch32v003-usb-meter
+- esp32-64-band-audio-spectrum-analyser
+- oscilloscope-rp2040
 ---
 
 The osillyscope is a miniature digital oscilloscope designed to provide a low-cost, portable solution for basic signal analysis. Built around the ultra-affordable CH32V003A4M6 RISC-V microcontroller, this project demonstrates how much utility can be squeezed out of a low-pin-count, entry-level MCU. The device uses a standard SSD1306 I2C OLED display and three pushbuttons to provide a functional user interface for checking signal presence, levels, and waveforms.

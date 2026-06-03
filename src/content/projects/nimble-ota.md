@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-03-31'
 updatedAt: '2026-03-31'
+relatedProjects:
+- bleota-esp32-ota-updates-over-ble
+- esp32-ble-ota-arduino
+- nimble-arduino
+- arduino-serial-ble
+- esp-async-http-update-server
+- hijelhid-blekeyboard
 ---
 
 Updating firmware wirelessly is a fundamental requirement for modern IoT devices, especially those deployed in hard-to-reach locations. While Wi-Fi-based Over-The-Air (OTA) updates are common, Bluetooth Low Energy (BLE) offers a compelling alternative for low-power devices or environments where Wi-Fi is unavailable. NimBLE OTA provides a streamlined implementation of this capability for the ESP32 platform, built upon the foundation of the Espressif BLE OTA component.

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- msf-protocol-simulation-for-contiki-ng
+- tinyos-cooja-simulator-application
+- cse160-network-protocols-project-skeleton
+- rl-tsch-implementation-for-contiki-ng
+- ql-tsch-reinforcement-learning-for-time-slotted-channel-hopping
+- ql-tsch-implementation-for-contiki-ng
 ---
 
 ## Overview

@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-port-for-esp32
+- m5dial-lvgl
+- lvgl-8-on-wt32-sc01-with-arduino
+- micropython-and-lvgl-firmware-for-esp32
+- esp-lvgl
+- esp32-8048s050c-with-lvgl-9-4-and-freertos
 ---
 
 ## Overview

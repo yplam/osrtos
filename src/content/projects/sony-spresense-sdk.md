@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- kendryte-k210-freertos-sdk
+- ameba-freertos-pro2-sdk
+- esp8266-rtos-software-development-kit-sdk
+- ameba-rtos-sdk
+- nuclei-software-development-kit-nuclei-sdk
+- zj-sdk-rt-thread-for-nordic-nrf52840
 ---
 
 ## Overview

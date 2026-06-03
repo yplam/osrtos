@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-03-24'
 updatedAt: '2026-03-24'
+relatedProjects:
+- nimble-hid-keyboard-and-mouse-example-for-esp32
+- esp32-s3-usb-to-ble-keyboard-bridge
+- usb-keyboard-and-mouse-bluetooth-adapter-esp32
+- esp-usb-ble-hid-bridge
+- airmouses3
+- dshare-hid
 ---
 
 The M5 Keyboard and Mouse Emulator is a specialized firmware designed for the M5Cardputer, a portable development kit based on the ESP32-S3. This project transforms the compact device into a versatile Human Interface Device (HID) capable of controlling computers, tablets, or smartphones via Bluetooth Low Energy (BLE) or USB.

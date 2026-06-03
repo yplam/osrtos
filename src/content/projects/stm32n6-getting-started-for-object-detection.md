@@ -24,6 +24,13 @@ isShow: true
 image: /202601/STM32N6570-DK.webp
 createdAt: '2026-01-19'
 updatedAt: '2026-01-19'
+relatedProjects:
+- image-classification-getting-started-for-stm32n6
+- stm32n6-ai-object-detection-and-h-264-usb-video-streaming
+- stm32n6-getting-started-for-audio-ai
+- edge-ai-on-embedded-linux-i-mx-8m-plus
+- stm32n6-camera-capture-application
+- stm32-ai-model-zoo-services
 ---
 
 The STM32N6-GettingStarted-ObjectDetection project is a comprehensive entry point for developers looking to leverage the advanced AI capabilities of the STM32N6 series microcontrollers. This repository provides a complete, real-time embedded environment designed to execute quantized neural networks accelerated by the on-chip Neural Processing Unit (NPU).

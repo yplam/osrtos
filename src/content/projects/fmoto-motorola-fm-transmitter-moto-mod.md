@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp32fmradio
+- si4732-radio
+- jackal-modernized-sony-fx-300-audio-system
+- espri-esp-radio-interface
+- qn8066-fm-dsp-rx-tx-arduino-library
+- ic-705-ci-v-band-decoder-and-transverter-controller
 ---
 
 FMoto is an innovative hardware modification designed for the Motorola Moto Z ecosystem, developed as a CPEN Capstone project. The project transforms the Moto Z into a portable FM transmitter, allowing users to broadcast audio from their device to nearby FM radio receivers. This is achieved by creating a custom "Moto Mod" that interfaces directly with the smartphone's backplane using the Moto Mods Developer Kit (MDK).

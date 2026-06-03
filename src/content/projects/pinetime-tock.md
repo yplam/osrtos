@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pinetime-rs
+- tock-for-stm32
+- pinetime-zephyr-firmware
+- wasp-os
+- infiniemu
+- infinitime
 ---
 
 The PineTime Tock project provides an out-of-tree port of the Tock operating system specifically tailored for the Pine64 PineTime smart watch. Tock is a modern operating system designed for running multiple untrusted applications on low-power microcontrollers, leveraging the memory safety features of the Rust programming language. This port allows developers to utilize Tock's unique architecture—which separates the kernel from user-level applications—on a wearable platform.

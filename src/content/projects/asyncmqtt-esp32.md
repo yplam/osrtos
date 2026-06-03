@@ -32,6 +32,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- asynchttpsrequest-generic
+- asyncwebserver-esp32-sc-enc
+- asynchttpsrequest-esp32-ethernet
+- asynchttprequest-esp32-ethernet
+- asyncwebserver-esp32-w5500
+- asyncwebserver-esp32-sc-w5500
 ---
 
 The AsyncMQTT_ESP32 library is a powerful extension of the popular Marvin Roger's async-mqtt-client, specifically tailored for the ESP32 family of microcontrollers. In the world of IoT, where responsiveness and efficiency are paramount, this library provides a non-blocking, event-driven approach to MQTT communication. By leveraging asynchronous networking, developers can handle multiple connections simultaneously without stalling the main execution loop, a critical requirement for complex embedded systems.

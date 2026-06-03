@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-04-01T01:13:10+00:00'
 updatedAt: '2026-04-01T01:13:10+00:00'
+relatedProjects:
+- ukr-gfx-fonts
+- i2cwrapper
+- esp32-smartdisplay
+- esp-lvgl
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- rt-u8g2-u8g2-graphics-library-for-rt-thread
 ---
 
 LiquidCrystal_I2C_Multilingual is an advanced Arduino library designed to solve the challenge of printing multilingual UTF-8 strings on standard character LCDs. Whether you are working with Katakana, Russian, French, Spanish, or Vietnamese, this library provides the necessary mapping to render characters correctly on LCD1602, LCD2004, and similar modules connected via I2C using the PCF8574 expander. It is an evolution of the LiquidCrystal_I2C_UTF8 library, expanding language support and improving performance for concurrent multi-LCD setups.

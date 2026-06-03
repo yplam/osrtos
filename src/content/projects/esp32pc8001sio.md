@@ -23,6 +23,13 @@ version: v1.0.3
 lastUpdated: '2023-04-16'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- bbmonitor
+- esp32-ble-uart-mx
+- esphome-modbus-tcp-to-rtu-bridge
+- esp32-uart-bridge
+- pellet-stove-aws-iot-bridge-for-esp32
+- elekstube-ips-custom-firmware
 ---
 
 The **Esp32PC8001SIO** project is a fascinating bridge between the late 1970s and modern IoT technology. Designed for the NEC PC-8001, one of Japan's most iconic early personal computers, this project provides a hardware and software solution to expand the machine's capabilities using an ESP32 microcontroller. By plugging into the PC-8001's SIO (Serial I/O) DIP16 socket, the ESP32 acts as a powerful co-processor, bringing SNTP time synchronization, environmental sensing, and modern file management to a 40-year-old system.

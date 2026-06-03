@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- iir-designer-for-cmsis-dsp
+- stm32-cortex-m4-code-examples
+- iir-filter-coefficient-generator-for-cmsis-dsp
+- arm-cortex-m-hilbert-transform
+- cmsis-for-stm32-development
+- rp2040-projects-by-armstrong-subero
 ---
 
 ## Overview

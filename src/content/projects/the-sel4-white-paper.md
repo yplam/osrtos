@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sel4-microkernel-website
+- hydra-hybrid-design-for-remote-attestation-on-sel4
+- sel4-armv8-vmm-manifest
+- sel4-kernel-101
+- advanced-operating-system-2017-sos
+- sel4-ci-actions-and-workflows
 ---
 
 ## Overview

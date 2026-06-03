@@ -26,6 +26,13 @@ isShow: true
 image: /202602/papaya.webp
 createdAt: '2026-02-07'
 updatedAt: '2026-02-07'
+relatedProjects:
+- openrover-robotic-platform
+- hexapod
+- pyespcar-micropython-esp32-wifi-car
+- andino-open-source-ros-2-educational-robot
+- cuybot-v1-opensource-smartcar-project
+- sesame-robot-micro
 ---
 
 ## Overview

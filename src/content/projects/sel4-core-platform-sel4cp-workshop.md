@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- fel4-test-project
+- rust-sel4-toy-system-for-i-mx6-sabre-lite
+- sel4twinkle-alloc-rs
+- rust-fel4-workspace-for-raspberry-pi-3
+- sel4-kernel-101
+- sel4-kernel-ega-text-display
 ---
 
 ## Overview

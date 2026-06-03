@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- jc3248w535-lvgl-v9-test-project
+- lvgl-8-on-wt32-sc01-with-arduino
+- jc4827w543-lvgl-v9-implementation
+- lilygo-t-display-s3-boilerplate
+- minimal-lcd-demonstration-on-esp-wrover-kit
 ---
 
 The rp2040-eSPI-lvgl project provides a comprehensive starting point for developers looking to implement high-quality graphical user interfaces on the Raspberry Pi Pico (RP2040) platform. By integrating the powerful LVGL (Light and Versatile Graphics Library) version 8.3 with the widely-used TFT_eSPI driver, this demo showcases how to achieve smooth UI performance on a budget-friendly microcontroller.

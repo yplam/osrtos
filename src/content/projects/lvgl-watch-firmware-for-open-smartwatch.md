@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- twatch-v3-firmware-for-esp32
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
+- chronos-watchy
+- opentimewatch-os
+- zephyrwatch
+- omote-open-universal-remote
 ---
 
 The `lvgl-watch` project provides a custom firmware implementation for the Open-Smartwatch hardware platform. Developed using the Arduino framework and the PlatformIO build system, this project leverages the powerful LVGL (Light and Versatile Graphics Library) version 8.0 to create a sophisticated user interface for wearable devices. While the project is currently in a paused development state, it offers a functional foundation for developers looking to customize their ESP32-based smartwatches.

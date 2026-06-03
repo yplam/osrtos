@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-05-07T00:43:35+00:00'
 updatedAt: '2026-05-07T00:43:35+00:00'
+relatedProjects:
+- esp-mesh-lite-examples
+- esp32-wi-fi-provision-care
+- esp32-p4-home-assistant-display
+- esp8266-home-automation
+- meshtnc
+- esp32-ota-firmware-update-and-file-management
 ---
 
 The ESP32 Mesh Control project leverages the ESP-IDF framework to build a robust mesh network of ESP32 devices designed for local indoor environments. By operating independently of an internet connection, it ensures privacy and reliability for local IoT applications. Users interact with the network through a smartphone or computer connected to the same WiFi router, accessing an HTTP server hosted directly on the ESP32 root node. A primary motivation for this repository was implementing Over-the-Air (OTA) updates using only the official ESP-IDF, providing a solution for developers who prefer the native Espressif environment over higher-level frameworks like painlessMesh or ESP-MDF.

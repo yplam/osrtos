@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lv-chinese-ime
+- lvgl-utilities
+- gooey-gui-library
+- lvglpp-a-c-wrapper-for-lvgl
+- lv-modern-c-20-bindings-for-lvgl
+- lv-font-conv
 ---
 
 ## Overview

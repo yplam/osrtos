@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-m-nuttx-custom-board-mod
+- nuttx-rtos-experiments
+- nuttx-applications
+- smoothieware-for-stm32
+- hynitron-cst816s-touch-controller-driver-for-apache-nuttx
+- apache-nuttx-rtos-for-pinephone
 ---
 
 ## Overview

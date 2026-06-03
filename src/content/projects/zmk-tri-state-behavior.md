@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-03-19'
 updatedAt: '2026-03-19'
+relatedProjects:
+- zmk-firmware
+- smart-keymap
+- aw-1-keyboard
+- kmk-firmware
+- clawtype
+- custom-5x7-dactyl-manuform-with-integrated-trackball
 ---
 
 ZMK Tri-State is a specialized behavior module designed for the ZMK Firmware ecosystem, bringing advanced stateful key logic to custom mechanical keyboards. Originally inspired by Nick Conway's implementation for QMK, this module allows users to define keys that perform different actions based on the sequence of presses and external interruptions, without needing to maintain a separate fork of the ZMK source code.

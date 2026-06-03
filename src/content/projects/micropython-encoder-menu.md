@@ -21,6 +21,13 @@ star: 116
 lastUpdated: '2021-04-08'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- micropython-rotary-encoder-driver
+- pikapython
+- raspberry-pi-pico-web-server-control
+- micropython-kitchen-sink-for-m5stack
+- pycopy
+- pycopy-standard-library-pycopy-lib
 ---
 
 Creating a user interface for small embedded devices can be a challenge, especially when you are limited to a tiny OLED screen and a single rotary encoder. The **encodermenu** project provides a streamlined solution for MicroPython developers looking to build navigable, multi-level menus without blocking their main application logic.

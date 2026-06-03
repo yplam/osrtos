@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- atmega128rfa1-tinyos-kth-wsn-project
+- building-wireless-sensor-networks-with-openthread
+- iot-labs-with-contiki-os
+- tinyos-installation-guide-for-windows
+- learning-nesc
+- tinyos-nesc-telosb-programs
 ---
 
 Wireless Sensor Networks (WSN) represent a specialized field within embedded systems, focusing on low-power, distributed sensing and communication. This repository serves as a knowledge base for understanding the core components of WSNs, specifically focusing on the TinyOS ecosystem and the hardware that powers these networks.

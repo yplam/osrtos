@@ -15,6 +15,13 @@ lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
 star: 166
+relatedProjects:
+- esp32webscope
+- esp32-64-band-audio-spectrum-analyser
+- m5cardputer-audio-spectrum-display
+- osillyscope
+- esp32-i2s-microphone-stream
+- esp-can-analyzer
 ---
 
 ESP-Scope is a clever implementation of a web-based oscilloscope leveraging the power of the ESP32 and the ESP-IDF framework. Designed to provide real-time signal visualization through a standard web browser, this project eliminates the need for dedicated display hardware by serving a responsive UI directly from the microcontroller. It is particularly optimized for the Seeed XIAO ESP32C6, though it can be adapted for other ESP32-based development boards.

@@ -22,6 +22,13 @@ isShow: true
 image: /202512/H747-Test.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- h747-weighing-station
+- h747-camera-dual-core-stm32h747-camera-and-display-system
+- stm32l476g-discovery-rtos-sensor-project
+- stm32h750b-dk-touchgfx-freertos-mqtt-example
+- lvgl-demo-embarcadores
+- embedded-graphical-interface-for-pid-control
 ---
 
 ## Overview

@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- tockloader
+- mbed-bootloader
+- stm32-bootloader
+- mcuboot-for-stm32
+- multi-firmware-esp
+- yaota8266-ota-bootloader
 ---
 
 ## Overview

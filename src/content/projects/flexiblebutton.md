@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- doubleresetdetector-generic
+- smart-keymap
+- debouncein
+- embedmcp-embedded-mcp-server-library
+- gooey-gui-library
+- lvgl-joystick-library
 ---
 
 FlexibleButton is a compact and versatile button processing library written in standard C. It is designed to handle a wide range of button interactions, including single clicks, double clicks, multiple clicks, short presses, long presses, and automatic debouncing. One of its standout features is the ability to easily configure combination keys, making it suitable for complex user interfaces in resource-constrained embedded environments.

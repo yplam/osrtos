@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-port-for-stm32f429-discovery-kit
+- lvgl-port-for-stm32f769-discovery
+- lvgl-port-for-m5stack-core2
+- lvgl-demo-embarcadores
+- lvgl-port-for-raspberry-pi-pico-mdk-arm
+- mbed-os-6-port-for-weact-stm32h743vit6
 ---
 
 ## Overview

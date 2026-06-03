@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-port-for-esp32
+- lvgl-display-and-touchpad-drivers
+- esp-lvgl
+- esp32-lvgl-8-x-sdspi-template
+- esp32-smartdisplay
+- esphome-lvgl-component
 ---
 
 ## Overview

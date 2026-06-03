@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-05-09T00:24:05+00:00'
 updatedAt: '2026-05-09T00:24:05+00:00'
+relatedProjects:
+- esp32-experiments
+- pixel-pets
+- that-project
+- seeed-studio-xiao-esp32-project-collection
+- opentoys
+- map-tiles-projects-for-esp32
 ---
 
 The M5Stack ecosystem has long been a favorite for developers looking to bridge the gap between rapid prototyping and polished hardware. The M5Stack Toys repository is a testament to this versatility, offering a curated collection of projects that push the boundaries of what these compact ESP32-based devices can do. From real-time digital signal processing to complex robotics and wireless telemetry, this collection serves as both a playground for hobbyists and a reference for advanced embedded development.

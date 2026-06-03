@@ -32,6 +32,13 @@ isShow: true
 image: /202601/mao1.webp
 createdAt: '2026-01-15'
 updatedAt: '2026-01-15'
+relatedProjects:
+- esp-hack-fw
+- pixlpal-m1-firmware
+- unigeek-firmware
+- esp32-bit-pirate
+- poseidon
+- m5-crystal
 ---
 
 ## Overview

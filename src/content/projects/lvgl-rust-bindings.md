@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-c-binding
+- lvgl-micropython-bindings
+- lvgl-rust-to-wasm
+- lvgl-for-embedded-linux
+- lv-modern-c-20-bindings-for-lvgl
+- lvglpp-a-c-wrapper-for-lvgl
 ---
 
 ## Overview

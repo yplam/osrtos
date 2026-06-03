@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- micropython-st7789-lcd-driver
+- micropython-st7735-tft-lcd-driver
+- micropython-waveshare-e-paper-drivers
+- three-ips-displays-with-st7789
+- micropython-max7219-8x8-led-matrix-library
+- micropython-camera-driver-for-esp32
 ---
 
 ## High-Performance Display Handling in MicroPython

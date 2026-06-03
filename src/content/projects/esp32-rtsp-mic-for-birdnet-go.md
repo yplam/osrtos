@@ -31,6 +31,13 @@ topics:
 isShow: false
 createdAt: '2026-01-19'
 updatedAt: '2026-01-19'
+relatedProjects:
+- esp32-i2s-microphone-stream
+- audio-stream-server-for-m5cardputer
+- birdnet-for-stm32
+- esp32-rtspserver
+- m5cardputer-audio-spectrum-display
+- esp32-custom-hardware-synthesizer
 ---
 
 ## High-Performance Audio Streaming for Avian Monitoring

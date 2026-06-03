@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-25'
 updatedAt: '2026-01-25'
+relatedProjects:
+- asyncmqtt-esp32
+- multiftpserver-library
+- simpleftpserver-library
+- arduino-freertos-library
+- asynchttpsrequest-esp32-ethernet
+- espai-unified-ai-api-client-for-esp32
 ---
 
 ReadyMail is a high-performance, asynchronous email client library specifically tailored for the Arduino environment. It provides a comprehensive solution for embedded systems that need to communicate via email, supporting both the Simple Mail Transfer Protocol (SMTP) for sending messages and the Internet Message Access Protocol (IMAP) for retrieving them.

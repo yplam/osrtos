@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-04-02T12:01:59+00:00'
 updatedAt: '2026-04-02T12:01:59+00:00'
+relatedProjects:
+- infinitime
+- pinetime-tock
+- pinetime-zephyr-firmware
+- pinetime-rs
+- wasp-os
+- hypnos
 ---
 
 InfiniEmu provides a specialized emulation environment tailored specifically for the PineTime smartwatch ecosystem. Rather than offering a generic ARM emulator, this project focuses on the precise hardware interactions required to run production-grade firmware binaries, such as InfiniTime, without modification. By simulating the intricate dance between the nRF52832 microcontroller and its various peripherals, InfiniEmu creates a bridge between embedded development and the convenience of modern desktop and web environments.

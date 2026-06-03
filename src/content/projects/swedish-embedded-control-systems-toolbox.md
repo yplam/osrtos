@@ -22,6 +22,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- embedded-kf-library
+- swedish-embedded-platform-sdk
+- swedish-embedded-workstation
+- hsmcpp-hierarchical-state-machine-c-library
+- smart-keymap
+- rtt-libfilter-digital-filter-library-for-rt-thread
 ---
 
 The Swedish Embedded Control Systems Toolbox is a sophisticated suite of control engineering tools designed specifically for the constraints of embedded systems. Written in pure C, this library provides developers with the mathematical heavy lifting required for advanced control, state estimation, and model identification without the overhead of dynamic memory allocation. This makes it an ideal choice for real-time applications where determinism and memory safety are critical.

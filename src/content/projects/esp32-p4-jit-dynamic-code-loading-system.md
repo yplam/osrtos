@@ -34,6 +34,13 @@ topics:
 isShow: false
 createdAt: '2026-01-14'
 updatedAt: '2026-01-14'
+relatedProjects:
+- micropython-esp32-ulp
+- pikapython
+- dynamic-app-loading-for-cortex-m
+- semito-v-micropython-compatibility-layer-mcl
+- r2p2-esp32-ruby-rapid-portable-platform-for-esp32
+- esp32-mpy-jama
 ---
 
 ## Overview

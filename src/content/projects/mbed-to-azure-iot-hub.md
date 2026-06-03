@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mbed-to-ibm-watson-iot-platform
+- mbed-to-aws-iot-example
+- mbed-to-google-cloud-iot
+- losant-mqtt-example-for-mongoose-os
+- aws-iot-with-the-l475vg-iot01a-on-mbed-os
+- losant-mqtt-mongoose-os-example
 ---
 
 ## Connecting Mbed OS Devices to Azure IoT Hub

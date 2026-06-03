@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- golioth-zephyr-sdk
+- zephyr-coaps-client-with-tinydtls
+- anjay-zephyr
+- infuse-iot-sdk
+- anjay-zephyr-client
+- bridle
 ---
 
 Pyrinas Zephyr is an open-source companion cloud client designed to connect embedded devices to the Pyrinas Server. Specifically optimized for the nRF9160 Feather—a popular development board for LTE-M and NB-IoT applications—this project leverages the power of the Zephyr RTOS to provide a robust and scalable IoT solution.

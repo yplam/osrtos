@@ -22,6 +22,13 @@ isShow: true
 image: /202606/firm_plugged_in.webp
 createdAt: '2026-06-02T09:59:04+00:00'
 updatedAt: '2026-06-02T09:59:04+00:00'
+relatedProjects:
+- alturia-firmware
+- avem
+- droners
+- bitcraze-crazyflie-2-0-2-1-mbed-os-firmware
+- james-rocket-controller
+- flight-controller-rev2
 ---
 
 The Filtered Inertial Rotation Module (FIRM) represents a sophisticated approach to flight instrumentation for high-powered rocketry. Developed by the NCSU High Powered Rocketry Club, this project serves as the primary flight computer for tracking a rocket's attitude and position during high-speed ascent and recovery. By combining high-frequency sensor data with robust filtering algorithms, FIRM provides the precise telemetry required for advanced rocketry missions.

@@ -22,6 +22,13 @@ isShow: true
 image: /202601/spectrum.webp
 createdAt: '2026-01-29'
 updatedAt: '2026-01-29'
+relatedProjects:
+- m5cardputer-audio-spectrum-display
+- esp32-custom-hardware-synthesizer
+- esp-scope
+- esp32-i2s-microphone-stream
+- esp32webscope
+- esp8266-esp32-spotify-oled-display
 ---
 
 ## Overview

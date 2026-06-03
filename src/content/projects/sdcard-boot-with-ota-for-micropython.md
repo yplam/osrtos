@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- yaota8266-ota-bootloader
+- senko-ota-updater-for-micropython
+- multi-firmware-esp
+- stm32-bootloader
+- esp32-ble-ota-arduino
+- bleota-esp32-ota-updates-over-ble
 ---
 
 # SDCard Boot with OTA for MicroPython

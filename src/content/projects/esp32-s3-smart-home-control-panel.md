@@ -29,6 +29,13 @@ topics:
 isShow: true
 createdAt: '2026-04-09T23:48:49+00:00'
 updatedAt: '2026-04-09T23:48:49+00:00'
+relatedProjects:
+- lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
+- project-aura
+- openhasp-firmware
+- comfosense-touch-zehnder-comfoair-q350-mqtt-bridge-controller
+- esp32-p4-home-assistant-display
+- esp32-tux
 ---
 
 The ESP32-S3 Smart Home Control Panel is a feature-rich interface designed specifically for the Waveshare ESP32-S3-Touch-LCD-4B hardware. This project transforms the 4-inch IPS display into a centralized hub for home automation, integrating WiFi, MQTT for Home Assistant connectivity, and real-time environment tracking into a polished UI designed with SquareLine Studio and powered by the LVGL graphics library.

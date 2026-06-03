@@ -35,6 +35,13 @@ isShow: true
 image: /202603/RCS2.webp
 createdAt: '2026-03-07'
 updatedAt: '2026-03-07'
+relatedProjects:
+- m66-gsm-module-integration-with-avr-microcontroller
+- sistema-de-apertura-de-port-n-con-m-dulo-gsm
+- esp8266-wifi-relay-and-bahtinov-masks-controller
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- ac-control
+- arm-control-framework-acorns-rover
 ---
 
 ## Overview

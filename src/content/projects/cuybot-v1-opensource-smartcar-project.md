@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-03-19'
 updatedAt: '2026-03-19'
+relatedProjects:
+- pyespcar-micropython-esp32-wifi-car
+- robomates-firmware
+- mongoose-os-robot-car
+- sesame-robot-micro
+- andino-open-source-ros-2-educational-robot
+- esp32-mqtt-motor-control
 ---
 
 ## Overview

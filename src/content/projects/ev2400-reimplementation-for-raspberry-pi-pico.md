@@ -25,6 +25,13 @@ isShow: true
 image: /202603/Raspberry-Pi-Pico-front.webp
 createdAt: '2026-03-22'
 updatedAt: '2026-03-22'
+relatedProjects:
+- rust-i2c-driver-for-bosch-bme280-on-apache-nuttx
+- pico-usb-blaster
+- nrf52811-solum-tag-firmware
+- esp32-bus-pirate
+- pico-rtic-template
+- rust-embedded-hal-for-apache-nuttx-rtos
 ---
 
 ## Overview

@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-28'
 updatedAt: '2026-01-28'
+relatedProjects:
+- esp-dl-micropython-binding
+- semito-v-micropython-compatibility-layer-mcl
+- ncnn-mp-neural-network-inference-for-micropython
+- ulab-numpy-like-array-manipulation-for-micropython
+- pycopy-standard-library-pycopy-lib
+- maixpy-v4
 ---
 
 SparkFun MicroPython-OpenCV is a groundbreaking port that brings the power of the Open Source Computer Vision Library (OpenCV) to the MicroPython ecosystem. This project enables vision processing on resource-constrained embedded devices, allowing developers to implement sophisticated image manipulation and analysis directly in Python. While OpenCV typically requires desktop-class processors and gigabytes of RAM, this port bridges the gap for microcontrollers, specifically targeting the Raspberry Pi RP2350.

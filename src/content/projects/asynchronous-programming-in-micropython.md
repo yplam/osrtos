@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-samples-and-drivers
+- micropython-lib
+- awesome-micropython
+- awesome-circuitpython
+- micropython-for-kendryte-k210-lobo-port
+- rp2040-projects-by-armstrong-subero
 ---
 
 ## Overview

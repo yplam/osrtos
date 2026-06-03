@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- iot-framework-for-nodemcu
+- losant-mqtt-example-for-mongoose-os
+- mongoose-os-configurable-sensor-node
+- mongoose-os-programs-and-examples
+- golioth-firmware-sdk
+- ft900-iot-and-smart-home-framework
 ---
 
 ## Introduction to Mongoose OS

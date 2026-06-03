@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- fpv-drone-stm32f411-flight-controller
+- drone-stm32f1
+- avem
+- freevario
+- bitcraze-crazyflie-2-0-2-1-mbed-os-firmware
+- catpilot
 ---
 
 ## Overview

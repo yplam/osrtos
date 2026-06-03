@@ -20,6 +20,13 @@ isShow: true
 image: /202603/pigg.webp
 createdAt: '2026-03-09'
 updatedAt: '2026-03-09'
+relatedProjects:
+- renode-rp2040-simulation
+- devmonitor-for-pis
+- rp2040-freertos-template
+- raspberry-pi-pico-web-server-control
+- pico-zephyr-project
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
 ---
 
 ## Overview

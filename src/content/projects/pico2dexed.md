@@ -15,6 +15,13 @@ isShow: true
 image: /202604/pico2dexed.webp
 createdAt: '2026-04-01T23:57:21+00:00'
 updatedAt: '2026-04-01T23:57:21+00:00'
+relatedProjects:
+- ultranet-to-i2s
+- picosound-audio-library-for-rp2040
+- usbsid-pico
+- stm32f4-digital-synthesizer
+- digital-synth-pra32-u2
+- esp32-custom-hardware-synthesizer
 ---
 
 Pico2Dexed brings the iconic sound of the Yamaha DX7 FM synthesizer engine to the Raspberry Pi Pico 2. By leveraging the updated RP2350 microcontroller and its dual ARM Cortex-M33 cores, this project provides a significant performance leap over previous microcontroller-based ports, offering a high-quality, polyphonic synthesizer in a compact form factor.

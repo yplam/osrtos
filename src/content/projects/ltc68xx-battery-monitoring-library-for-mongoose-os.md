@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- max17263-library-for-mongoose-os
+- max17263-test-app-for-mongoose-os
+- hlw8012-and-bl0937-energy-meter-library-for-mongoose-os
+- mongoose-os-bme680-library
+- sgp30-gas-sensor-library-for-mongoose-os
+- mongoose-os-relay-library
 ---
 
 The `mgos-ltc68xx` library is a specialized driver for Mongoose OS designed to facilitate communication with the Linear Technology (now Analog Devices) LTC68xx series of multicell battery stack monitors. These chips are industry standards for Battery Management Systems (BMS), capable of measuring multiple series-connected battery cells with high precision.

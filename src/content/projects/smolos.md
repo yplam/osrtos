@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- picoshell
+- minios-esp
+- pydos
+- breadboardos
+- micropython-port-for-rt-thread
+- pycopy-standard-library-pycopy-lib
 ---
 
 ## Overview

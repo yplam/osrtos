@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- picopeanutgb-game-boy-emulator-for-rp2350
+- m5pi-launcher
+- anemoia-esp32
+- msx1-emulator-for-raspberry-pi-pico
+- retrojam-multi-retro-game-console-emulator
+- pico-smsplus-sega-master-system-and-game-gear-emulator
 ---
 
 ## Overview

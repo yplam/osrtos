@@ -22,6 +22,13 @@ isShow: true
 image: /202603/esp32-i2s-microphone.webp
 createdAt: '2026-03-03'
 updatedAt: '2026-03-03'
+relatedProjects:
+- audio-stream-server-for-m5cardputer
+- esp32-rtsp-mic-for-birdnet-go
+- esp32-custom-hardware-synthesizer
+- esp32-64-band-audio-spectrum-analyser
+- esp32-remote-control-with-websocket
+- esp32-web-server-using-spiffs
 ---
 
 # ESP32 I2S Microphone Stream

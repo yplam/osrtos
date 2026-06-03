@@ -31,6 +31,13 @@ topics:
 isShow: true
 createdAt: '2026-05-24T00:35:05+00:00'
 updatedAt: '2026-05-24T00:35:05+00:00'
+relatedProjects:
+- marstek-venus-e-esphome-integration
+- dtugateway-for-hoymiles-hms-inverters
+- sonoff-basic-firmware-for-openhab
+- esphome-meter-reader-tflite-component
+- geek-magic-firmware
+- elekstube-ips-custom-firmware
 ---
 
 ## Tasmota Firmware with SML and Script Support

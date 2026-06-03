@@ -19,6 +19,13 @@ star: 1
 lastUpdated: '2020-08-28'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp8266-web-server-and-spiffs-integration
+- esp32-monaco-editor-spiffs
+- esp32-async-web-server-with-spiffs-and-ota
+- esp8266-dht22-spiffs-web-server
+- esp32-remote-control-with-websocket
+- esp32-asyncwebserver-file-upload-example
 ---
 
 Building a web interface for an embedded device often involves messy string concatenation within the source code to serve HTML content. The **ESP32 Web Server using SPIFFS** project offers a cleaner, more professional approach by utilizing the ESP32's onboard flash memory to store and serve web assets directly.

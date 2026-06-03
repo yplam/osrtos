@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- smartorchard
+- smart-orchard
+- iot-industrial-operation-and-room-condition-monitor
+- bluetooth-mesh-sensor-network
+- espmonitor-iot-environment-monitoring-system
+- smart-heating-iot-system
 ---
 
 Smart-DC-Maintenance is an integrated IoT solution designed to enhance the safety and efficiency of datacenter environments. Developed as part of the Internet of Things course at the University of Pisa, the project addresses two primary concerns: the environmental health of server racks and the physiological well-being of the technicians working among them. By leveraging a mesh network of microcontrollers, the system provides real-time telemetry and automated monitoring.

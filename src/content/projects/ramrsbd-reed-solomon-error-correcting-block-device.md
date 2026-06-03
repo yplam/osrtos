@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-04-01T01:11:56+00:00'
 updatedAt: '2026-04-01T01:11:56+00:00'
+relatedProjects:
+- arduino-littlefs-spimemory-wrapper
+- littlefs-mbed-rp2040
+- c-crc-for-rt-thread
+- littlefs-for-esp-idf
+- littlefs-ring-buffers
+- pico-vfs-a-virtual-file-system-for-raspberry-pi-pico
 ---
 
 In embedded systems, data integrity is paramount, especially when dealing with storage media prone to corruption. While Cyclic Redundancy Checks (CRCs) are excellent for detecting bit-level errors, they often fall short when it comes to active correction. This is where Reed-Solomon codes come in. Often described as the "big brother" to CRCs, Reed-Solomon codes operate on bytes rather than bits, offering a flexible and powerful way to both detect and correct a configurable number of errors within a data block.

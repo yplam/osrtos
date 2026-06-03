@@ -28,6 +28,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- qn8066-fm-dsp-rx-tx-arduino-library
+- arduino-serial-ble
+- silicon-labs-arduino-core
+- arduino-rf24-for-mongoose-os
+- esp32-ble-uart-mx
+- spektrum-receiver-library-for-mbed
 ---
 
 The **ant-arduino** library is a robust solution for developers looking to integrate ANT wireless protocol capabilities into their embedded projects. Originally forked from the xbee-arduino project, it has evolved into a specialized driver for ANT radios, supporting a wide array of packet types and providing a clean, object-oriented interface for both Arduino and Mbed OS environments.

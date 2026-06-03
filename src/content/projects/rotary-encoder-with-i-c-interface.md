@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-04-07T23:52:13+00:00'
 updatedAt: '2026-04-07T23:52:13+00:00'
+relatedProjects:
+- i2cwrapper
+- micropython-rotary-encoder-driver
+- ryattn-audio-relay-attenuator
+- mbed-quadrature-encoder-library
+- bmw-idrive-controller-can-bus-interpreter
+- hynitron-cst816s-touch-controller-driver-for-apache-nuttx
 ---
 
 Rotary encoders are a staple in user interface design, but managing them directly often requires several GPIO pins, external interrupts, and robust software debouncing logic. This project provides a hardware and firmware solution that allows a rotary encoder to be controlled entirely over an I2C interface. By utilizing a dedicated CH32V003 microcontroller, the device handles all low-level encoder logic and presents the data through a simple register-based interface. This design also supports daisy-chaining multiple encoders by assigning unique I2C addresses to each unit, operating within a wide voltage range of 2.7V to 5.5V.

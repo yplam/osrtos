@@ -38,6 +38,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- golioth-zephyr-sdk
+- spotflow-observability-device-sdk
+- multizone-iot-sdk
+- ameba-rtos-sdk
+- mongoose-os
+- iotsharp-for-rt-thread
 ---
 
 The Golioth Firmware SDK is a powerful middleware layer designed to bridge the gap between embedded hardware and the Golioth IoT cloud. It provides a standardized set of APIs that allow developers to implement complex IoT features—such as over-the-air (OTA) firmware updates, remote logging, and real-time data synchronization—without having to build the underlying communication protocols from scratch.

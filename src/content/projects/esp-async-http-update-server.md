@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-02-25'
 updatedAt: '2026-02-25'
+relatedProjects:
+- esp32-async-web-server-with-spiffs-and-ota
+- esp32-ota-firmware-update-and-file-management
+- esp-fs-webserver
+- esp8266-mywidget
+- http-server-from-sd-card-for-esp8266
+- esp8266-wifi-relay-async
 ---
 
 ## Overview

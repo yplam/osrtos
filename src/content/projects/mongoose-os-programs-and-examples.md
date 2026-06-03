@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- mongoose-os-samples-for-esp32
+- losant-mqtt-example-for-mongoose-os
+- losant-mqtt-mongoose-os-example
+- mongoose-os-playground
+- mongoose-os-app-skeleton
+- esp32-experiments
 ---
 
 ## Overview

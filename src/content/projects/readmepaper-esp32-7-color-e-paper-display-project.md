@@ -25,6 +25,13 @@ isShow: true
 image: /202601/epaper_example.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- 7-color-e-paper-digital-photo-frame
+- open-display-firmware
+- esp-e-paper-component
+- animated-gif-on-a-320x240-lcd-display-ili9341-with-the-esp32
+- tibber-price-e-ink-display
+- e-paper-esp32-c6-firmware
 ---
 
 ## Overview

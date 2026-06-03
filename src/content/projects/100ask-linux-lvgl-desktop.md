@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-for-embedded-linux
+- lvgl-port-for-raspberry-pi-pico-mdk-arm
+- lvgl-port-for-stm32f429-discovery-kit
+- 100askteam-elinux-code-library
+- gooey-gui-library
+- lvgl-port-for-esp32
 ---
 
 ## Overview

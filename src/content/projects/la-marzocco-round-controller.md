@@ -30,6 +30,13 @@ topics:
 isShow: true
 createdAt: '2026-05-05T23:27:13+00:00'
 updatedAt: '2026-05-05T23:27:13+00:00'
+relatedProjects:
+- espgaggia-smart-coffee-machine-controller
+- gaggimate
+- smart-flask-thermos-with-round-display-and-esp32-c3
+- diy-smart-coffee-and-espresso-scale
+- esp-usb-ble-hid-bridge
+- omote-open-universal-remote
 ---
 
 Modern espresso machines often rely heavily on mobile apps for advanced configuration, but for many enthusiasts, a tactile, dedicated physical interface is preferred. The La Marzocco Round Controller project addresses this by providing standalone firmware for ESP32-S3-based round hardware. This isn't just a simple remote; it's a feature-rich interface that bridges the gap between local BLE control and cloud-backed machine management, specifically designed for the JC3636K718-style controller family.

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-port-for-raspberry-pi-pico-mdk-arm
+- m5pi-launcher
+- lvgl-for-embedded-linux
+- zig-lvgl-touchscreen-app-on-apache-nuttx-rtos
+- rp2040-lvgl-8-demo-with-ili9488-and-xpt2046
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
 ---
 
 ## Overview

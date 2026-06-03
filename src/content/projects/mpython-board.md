@@ -22,6 +22,13 @@ isShow: true
 image: /202512/mpython.webp
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- tinycore-esp32-s3-learning-platform
+- pyespcar-micropython-esp32-wifi-car
+- micropython-for-pandora-iot-board
+- micropython-and-lvgl-firmware-for-esp32
+- oficina-de-circuitpython
+- the-micropython-board-pyboard
 ---
 
 ## Introduction to mPython

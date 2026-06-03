@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nodemcu-device-lua-modules
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
+- iot-framework-for-nodemcu
+- mongoose-os-configurable-sensor-node
+- micropython-for-esp32-with-psram-support-lobo-port
+- lua-rtos-for-esp32
 ---
 
 ## Overview

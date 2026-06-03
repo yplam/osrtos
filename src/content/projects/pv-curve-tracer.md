@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- openept-energy-profiler-probe-firmware
+- move-on-helium-sensors
+- stm32l476g-discovery-rtos-sensor-project
+- oscilloscope-rp2040
+- power-pico
+- nanovna-x-enhanced-firmware-for-nanovna-h-h4
 ---
 
 ## Overview

@@ -34,6 +34,13 @@ isShow: true
 image: /202602/kali-zero.webp
 createdAt: '2026-02-19'
 updatedAt: '2026-02-19'
+relatedProjects:
+- bruce-firmware
+- infiltra-firmware
+- poseidon
+- zmk-firmware
+- ghost-esp
+- m5-crystal
 ---
 
 ## Overview

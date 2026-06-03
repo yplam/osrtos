@@ -36,6 +36,13 @@ isShow: true
 image: /202601/nes_emulator_s.webp
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- esp32-s3-nes-emulator
+- retrojam-multi-retro-game-console-emulator
+- catos
+- anemoia-esp32
+- pico-smsplus-sega-master-system-and-game-gear-emulator
+- m5stack-tab5-game-watch-emulator
 ---
 
 ## Turning the Cardputer into a Handheld Retro Console

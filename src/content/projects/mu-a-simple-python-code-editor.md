@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- arduino-lab-for-micropython
+- micropython-plugin-for-pycharm-and-intellij
+- esp32-mpy-jama
+- mpython-board
+- python-for-kids
+- micropython-for-the-bbc-micro-bit
 ---
 
 ## Overview

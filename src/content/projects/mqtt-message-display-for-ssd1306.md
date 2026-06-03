@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- coffee-bin-mqtt
+- losant-mqtt-example-for-mongoose-os
+- losant-mqtt-mongoose-os-example
+- leilei-mongoose-os-sensing-device
+- mongoose-os-mlx90614-ir-temperature-monitor
 ---
 
 The `mongoose-mqtt-ssd1306` project is a specialized firmware implementation for ESP8266 microcontrollers, designed to bridge MQTT network messages with physical OLED displays. Built on the Mongoose OS framework, it provides a streamlined way to visualize data from home automation systems or external controllers like Node-Red, specifically tailored for use cases like Pomodoro timers.

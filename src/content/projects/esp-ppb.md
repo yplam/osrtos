@@ -36,6 +36,13 @@ topics:
 isShow: true
 createdAt: '2026-04-21T05:22:13+00:00'
 updatedAt: '2026-04-21T05:22:13+00:00'
+relatedProjects:
+- ruview
+- antihunter
+- opentimewatch-os
+- esp32-portapack-esp32pp
+- tanksync
+- motesync
 ---
 
 ESP-PPB is a distributed, phase-coherent Wi-Fi Channel State Information (CSI) platform designed to be fully open-source, wireless, and battery-powered. CSI captures how a Wi-Fi signal travels between a transmitter and receiver, providing amplitude and phase data on every subcarrier. By achieving phase-coherent CSI across multiple nodes, the system enables complex applications such as angle-of-arrival (AoA) estimation, indoor localization, and distributed wireless sensing without the constraints of wired backhauls or tethered power. Each node synchronizes its clock over the air using Wi-Fi Fine Timing Measurement (FTM) and a Voltage-Controlled Temperature-Compensated Crystal Oscillator (VCTCXO) disciplined by dual DACs.

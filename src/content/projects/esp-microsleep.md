@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-05-07T00:39:58+00:00'
 updatedAt: '2026-05-07T00:39:58+00:00'
+relatedProjects:
+- lptim-tick-freertos-tickless-idle-via-stm32-lptim
+- mbed-rpi-pico-timerinterrupt
+- esp32-8048s050c-with-lvgl-9-4-and-freertos
+- littlefs-for-esp-idf
+- lwip-ptp-precision-time-protocol-for-lwip
+- rx8900-high-precision-rtc-driver-for-rt-thread
 ---
 
 In the world of embedded development with ESP32 and ESP-IDF, timing is often everything. While FreeRTOS provides the standard `vTaskDelay` function, it is inherently tied to the system tick rate. For many applications, this tick rate is set to 100Hz or 1000Hz, meaning the finest delay you can achieve is 10ms or 1ms respectively. When you need to wait for a specific sensor response or time a protocol signal in the microsecond range, `vTaskDelay` simply isn't granular enough.

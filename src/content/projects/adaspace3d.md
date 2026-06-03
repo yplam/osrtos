@@ -21,6 +21,13 @@ isShow: true
 image: /202601/space-mouse.webp
 createdAt: '2026-01-14'
 updatedAt: '2026-01-14'
+relatedProjects:
+- airmouses3
+- m5-keyboard-and-mouse-emulator
+- smoothieware-for-stm32
+- clawtype
+- klipper-esp32
+- esp-usb-ble-hid-bridge
 ---
 
 ## Overview

@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
+- lvgl-terminal-for-pinephone-on-apache-nuttx
+- rust-test-app-for-apache-nuttx-os
+- zig-lvgl-touchscreen-app-on-apache-nuttx-rtos
+- bl602-adc-and-temperature-sensor-test-app
+- lora-test-app-for-semtech-sx1262-and-apache-nuttx
 ---
 
 ## Overview

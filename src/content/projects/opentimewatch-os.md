@@ -39,6 +39,13 @@ topics:
 isShow: true
 createdAt: '2026-05-17T01:19:52+00:00'
 updatedAt: '2026-05-17T01:19:52+00:00'
+relatedProjects:
+- zephyrwatch
+- watchx-open-source-smartwatch
+- ov-watch
+- lvgl-watch-firmware-for-open-smartwatch
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
+- zswatch
 ---
 
 OpenTimeWatch-OS is an open-source operating system developed for ESP32-S3 based development boards and smartwatches. It is designed to bridge the gap between users who want to customize their wearable experience and developers looking for a flexible platform to build applications, watch faces, and widgets. Currently, the OS provides dedicated support for the LILYGO T-QT Pro, with the architecture built to accommodate additional microcontrollers and boards in future updates.

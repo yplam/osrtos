@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-04-21T05:37:54+00:00'
 updatedAt: '2026-04-21T05:37:54+00:00'
+relatedProjects:
+- esp-hack-fw
+- ghostesp
+- bruce-firmware
+- infiltra-firmware
+- esp32-bit-pirate
+- marauder-centauri
 ---
 
 UniGeek is a versatile, feature-rich firmware designed to transform ESP32-based handheld devices into powerful multi-tools for security auditing, network analysis, and hardware experimentation. Developed with a focus on portability and functionality, UniGeek leverages the power of the ESP32 ecosystem to provide a unified interface for a diverse range of hardware modules and wireless protocols.

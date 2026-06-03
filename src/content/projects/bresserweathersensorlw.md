@@ -35,6 +35,13 @@ topics:
 isShow: true
 createdAt: '2026-04-01T01:22:41+00:00'
 updatedAt: '2026-04-01T01:22:41+00:00'
+relatedProjects:
+- volna-2bw42-weather-station-firmware
+- esp32-ruuvitag-collector
+- lorawan-end-device-with-freertos-and-esp32
+- ikea-vindriktning-air-quality-sensor-for-apache-nuttx
+- meshtnc
+- zephyr-lorawan-lora-examples
 ---
 
 Proprietary weather stations provide excellent local data, but integrating that information into broader IoT ecosystems can be a challenge. The BresserWeatherSensorLW project solves this by acting as a sophisticated gateway, capturing 868 MHz radio signals from Bresser sensors and retransmitting the decoded data over long-range LoRaWAN connections. Designed to run on ESP32 and RP2040 microcontrollers, this project transforms a standard weather station into a connected node capable of communicating with LoRaWAN Network Servers (LNS) across kilometers.

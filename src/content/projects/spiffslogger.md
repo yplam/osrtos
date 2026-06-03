@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- hommie-logger
+- meindatalogger
+- effortless-spiffs
+- esp-datalogger-with-firebase-and-spiffs
+- espsavecrashspiffs
+- rtcmemory
 ---
 
 ## Overview

@@ -30,6 +30,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- golioth-firmware-sdk
+- spotflow-observability-device-sdk
+- multizone-iot-sdk
+- infuse-iot-sdk
+- anjay-zephyr
+- ameba-rtos-sdk
 ---
 
 ## Overview

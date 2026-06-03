@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- bluetooth-mesh-sensor-network
+- beelight-zigbee-light-environment-sensor
+- q-sensor-multi-functional-zigbee-air-quality-sensor
+- esphome-ikea-vindriktning
+- ruuvitag-firmware-for-zephyr-os
+- ccs811-digital-gas-sensor-driver-for-rt-thread
 ---
 
 The `sdk-hsm-thingy53` repository is a comprehensive development kit for the Nordic Thingy53, built on the Zephyr RTOS. It serves as a reference for creating smart home sensors and mesh network nodes, specifically focusing on environmental sensing and low-power communication within the Home Smart Mesh ecosystem.

@@ -33,6 +33,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- asynchttpsrequest-esp32-ethernet
+- asynchttpsrequest-generic
+- asyncwebserver-esp32-sc-enc
+- asyncwebserver-ethernet
+- asyncwebserver-esp32-sc-w5500
+- asyncwebserver-esp32-w5500
 ---
 
 In the world of IoT and embedded systems, blocking operations are often the enemy of responsiveness. When an ESP32 needs to make an HTTP request to a remote server, a standard synchronous client will halt the execution of the main loop until the server responds or the connection times out. This is where **AsyncHTTPRequest_ESP32_Ethernet** comes in, offering a robust, non-blocking solution for ESP32 devices utilizing wired Ethernet connections.

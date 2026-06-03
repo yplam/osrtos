@@ -42,6 +42,13 @@ topics:
 isShow: true
 createdAt: '2026-04-22T00:25:50+00:00'
 updatedAt: '2026-04-22T00:25:50+00:00'
+relatedProjects:
+- esp32-mfa-authenticator
+- open-authenticator-app
+- toothpaste
+- esp32-u2f-security-key
+- esp32-sram-puf-authentication
+- opensk
 ---
 
 SecureGen is a multifunctional security device designed for the LILYGO T-Display ESP32 platform. It provides a robust, open-source alternative to proprietary hardware tokens and software-based authenticators. By combining a TOTP/HOTP authenticator with a password manager that acts as a BLE keyboard, SecureGen allows users to manage their digital security entirely offline or through a controlled local interface.

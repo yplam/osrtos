@@ -24,6 +24,13 @@ star: 5
 lastUpdated: '2020-10-24'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- d21ecm-usb-cdc-ecm-for-samd21
+- d21rndis-usb-rndis-for-samd21
+- usb-cdc-ecm-for-stm32f072
+- ip-over-usb
+- stm32-bluepill-rndis-device-with-lwip
+- esp32-usb-over-ip
 ---
 
 The **D21eem** project is a specialized implementation of the USB Communication Device Class Ethernet Emulation Model (CDC-EEM) specifically designed for the Atmel/Microchip SAMD21 series. By leveraging this protocol, developers can make a SAMD21-based device appear as a standard network interface when plugged into a host computer, enabling high-level networking capabilities over a simple USB cable.

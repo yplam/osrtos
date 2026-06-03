@@ -22,6 +22,13 @@ star: 34
 lastUpdated: '2022-10-22'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- zephyrwatch
+- openhaystack-zephyr-firmware
+- twatch-v3-firmware-for-esp32
+- chronos-watchy
+- ov-watch
+- lvgl-watch-firmware-for-open-smartwatch
 ---
 
 The **ESP32-Watch for OpenHaystack** is a fascinating intersection of DIY hardware and the global tracking ecosystem. Developed by Eric Nam, this project demonstrates how an ESP32-based wearable can be integrated into Apple's "Find My" network, allowing for precise location tracking without the power consumption or hardware requirements of a dedicated GPS module.

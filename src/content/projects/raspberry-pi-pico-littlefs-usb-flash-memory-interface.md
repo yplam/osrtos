@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-04-02T07:50:53+00:00'
 updatedAt: '2026-04-02T07:50:53+00:00'
+relatedProjects:
+- wi-fi-setup-for-raspberry-pi-pico-w-via-usb-mass-storage
+- pico-vfs-a-virtual-file-system-for-raspberry-pi-pico
+- stm32-usb-mass-storage-with-fatfs
+- sqlite-for-raspberry-pi-pico
+- littlefs-mbed-rp2040
+- arduino-littlefs-spimemory-wrapper
 ---
 
 Accessing data stored on a microcontroller often requires specialized tools or custom serial protocols, especially when using robust filesystems like LittleFS. While LittleFS is excellent for embedded environments due to its power-loss resilience and wear leveling, it isn't natively supported by standard desktop operating systems. The Raspberry Pi Pico LittleFS USB Flash Memory Interface solves this problem by creating a bridge between the embedded world and the desktop.

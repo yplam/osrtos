@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-05-05T23:28:24+00:00'
 updatedAt: '2026-05-05T23:28:24+00:00'
+relatedProjects:
+- modm-devices-curated-microcontroller-device-data
+- cmsis-rp2040
+- pico-fft-fft-library-for-raspberry-pi-pico
+- rp2040-projects-by-armstrong-subero
+- pico-zephyr-project
+- pico-demos-for-rp2040
 ---
 
 The primary objective of this project is to improve the non-linearity of the Analog-to-Digital Converter (ADC) in the RP2040 microcontroller. This non-linearity is a documented hardware issue known as errata RP2040-E11. While the hardware itself cannot be altered to restore lost information, software-based correction can significantly improve linearity. The project has also been expanded to support the newer RP2350 microcontroller.

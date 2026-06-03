@@ -33,6 +33,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- asyncwebserver-esp32-w5500
+- asyncwebserver-esp32-sc-w5500
+- asyncwebserver-esp32-sc-enc
+- asynchttpsrequest-esp32-ethernet
+- asynchttprequest-esp32-ethernet
+- asyncudp-ethernet
 ---
 
 AsyncWebServer_Ethernet is a high-performance, asynchronous web server library specifically designed for ESP8266-based systems utilizing Ethernet connectivity. While the ESP8266 is famous for its Wi-Fi capabilities, many industrial and stable IoT applications require the reliability of a wired Ethernet connection. This library bridges that gap by porting the powerful features of the ESPAsyncWebServer library to work with Ethernet shields like the W5100, W5500, and ENC28J60.

@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mgos-combine
+- mongoose-os-docker-action
+- mongoose-os-docker-image
+- mos-native
+- openthread-nrf52840-firmware-builder
+- sel4-ci-actions-and-workflows
 ---
 
 ## Overview

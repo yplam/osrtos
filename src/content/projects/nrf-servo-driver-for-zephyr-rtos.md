@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zephyr-rtos-driver-for-hc-sr04-ultrasonic-sensor
+- hynitron-cst816s-touch-controller-driver-for-apache-nuttx
+- nrf52-mbed-pwm
+- bl602-gpio-expander-for-apache-nuttx
+- zephyr-grbl
+- zephyr-rtos-for-dwm1001
 ---
 
 ## Overview

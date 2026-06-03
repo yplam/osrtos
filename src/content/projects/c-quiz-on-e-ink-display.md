@@ -19,6 +19,13 @@ isShow: true
 image: /202601/onwifi.webp
 createdAt: '2026-01-22'
 updatedAt: '2026-01-22'
+relatedProjects:
+- git-contributions-e-ink-display
+- tibber-price-e-ink-display
+- 7-color-e-paper-digital-photo-frame
+- 42-smart-cluster-sign
+- e-ink-meeting-room-schedule-display
+- esphome-e-ink-4-color-dashboard
 ---
 
 ## Overview

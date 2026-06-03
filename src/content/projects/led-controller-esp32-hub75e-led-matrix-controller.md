@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- lumifur-controller
+- led-matrix-max7219-for-mongoose-os
+- esp32-32x32-rgb-matrix-controller
+- t-hmi-c64-emulator
+- esp32-p4-grid-board
+- openhoop
 ---
 
 ## Overview

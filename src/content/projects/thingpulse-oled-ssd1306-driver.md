@@ -26,6 +26,13 @@ isShow: true
 image: /202512/ThingPulse-ESP8266-Weather-Station.webp
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- rtt-ssd1306-oled-driver-package
+- lvgl-display-and-touchpad-drivers-for-esp32
+- esp-lvgl
+- esp-e-paper-component
+- micropython-max7219-8x8-led-matrix-library
+- esp32-smartdisplay
 ---
 
 ## Overview

@@ -27,6 +27,13 @@ topics:
 isShow: true
 createdAt: '2026-04-12T09:18:54+00:00'
 updatedAt: '2026-04-12T09:18:54+00:00'
+relatedProjects:
+- dynamic-app-loading-for-cortex-m
+- bpf-ebpf-for-microcontroller-compartmentalization
+- stm32f1xx-bare-metal-template
+- esp32-p4-jit-dynamic-code-loading-system
+- rtic-scope
+- beremiz4uc
 ---
 
 FPBInject provides a revolutionary approach to firmware development for ARM Cortex-M microcontrollers by enabling runtime code injection. This tool allows developers to replace any function on a running MCU through a simple serial connection, eliminating the need for constant reflashing, external debuggers, or system downtime.

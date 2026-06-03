@@ -31,6 +31,13 @@ version: v2.0.12-qos
 lastUpdated: '2025-12-17'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- asyncmqtt-esp32
+- asyncwebserver-esp32-sc-enc
+- webserver-esp32-enc
+- asyncwebserver-esp32-w5500
+- asyncwebserver-esp32-sc-w5500
+- webserver-esp32-w5500
 ---
 
 In the world of IoT, the MQTT protocol is the undisputed king of messaging. Usually, developers rely on a central server or a cloud provider to host an MQTT broker like Mosquitto. However, there are many scenarios—such as local offline networks or edge computing—where the microcontroller itself needs to act as the hub. **EmbeddedMqttBroker** is a high-performance, plug-and-play solution designed specifically for the ESP32 and ESP8266 to fill this gap.

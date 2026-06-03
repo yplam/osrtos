@@ -29,6 +29,13 @@ isShow: true
 image: /202512/Gesture-Detecting-Macro-Keyboard.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- onechuk-machine-learning-powered-wii-nunchuk
+- hd2-macropad
+- nimble-hid-keyboard-and-mouse-example-for-esp32
+- esp32-morse-keyer
+- airmouses3
+- m5-keyboard-and-mouse-emulator
 ---
 
 ## Overview

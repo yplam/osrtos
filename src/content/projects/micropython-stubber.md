@@ -30,6 +30,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- micropython-stubs
+- micropy-cli
+- micropico-visual-studio-code-extension
+- micropython-and-lvgl-firmware-for-esp32
+- micropython-plugin-for-pycharm-and-intellij
+- cmsis-parser
 ---
 
 # Boosting MicroPython Development with MicroPython Stubber

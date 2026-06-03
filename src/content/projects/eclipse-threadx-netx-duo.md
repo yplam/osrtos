@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- openthread-rtos
+- eclipse-threadx-usbx
+- eclipse-threadx-iot-devkit-starter-application
+- rtems-lwip-stm32-integration
+- ameba-rtos-sdk
+- uc-modbus-for-rt-thread
 ---
 
 # Eclipse ThreadX NetX Duo: Advanced Embedded Networking

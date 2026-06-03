@@ -33,6 +33,13 @@ isShow: true
 image: /202603/daytime.webp
 createdAt: '2026-03-15'
 updatedAt: '2026-03-15'
+relatedProjects:
+- 7-segment-clock
+- shelf-edge-clock
+- esp32-weatherstationrtc
+- w601-rt-thread-alarm-clock
+- esphome-for-nixie2
+- sanjin-intelligent-mechanical-clock
 ---
 
 ## Solving the Bedtime Struggle with IoT

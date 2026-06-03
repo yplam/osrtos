@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- chronothermostat-an-aws-powered-iot-climate-control-system
+- esp32-controller-for-charlton-jenrick-fireplace
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- mongoose-os-environmental-sensors-application
+- mongoose-os-aws-iot-uart-and-thing-shadow-example
 ---
 
 ## Overview

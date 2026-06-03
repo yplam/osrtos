@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lvgl-for-pinephone-and-webassembly-with-zig-and-apache-nuttx-rtos
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
+- lvgl-test-app-for-apache-nuttx
+- zig-on-risc-v-bl602-with-apache-nuttx-rtos
+- zephyr-lvgl-sample-for-nrf52840-mdk
+- lvgl-terminal-for-pinephone-on-apache-nuttx
 ---
 
 ## Integrating Zig with LVGL on Apache NuttX

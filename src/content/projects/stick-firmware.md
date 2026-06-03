@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-28'
 updatedAt: '2026-01-28'
+relatedProjects:
+- m5-crystal
+- bruce-firmware
+- sha2017-badge-firmware
+- unigeek-firmware
+- micropython-and-lvgl-firmware-for-esp32
+- infiltra-firmware
 ---
 
 Stick Firmware is an open-source project designed to unlock the potential of small-form-factor ESP32 devices, specifically targeting the M5Stack ecosystem. Described as a "powerful beast" in a small package, this firmware provides a structured environment for running applications on devices like the M5StickC Plus 2 and the M5Stack Cardputer.

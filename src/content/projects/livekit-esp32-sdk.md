@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- onesdk-a-unified-ai-access-sdk-for-the-client-side
+- elatoai-realtime-voice-ai-on-esp32
+- openrouter-esp-idf-client
+- ameba-freertos-pro2-sdk
+- golioth-zephyr-sdk
+- esp32-rtspserver
 ---
 
 The LiveKit ESP32 SDK allows developers to bring high-quality real-time communication to embedded hardware. By leveraging the power of the LiveKit platform, ESP32-based devices can participate in video calls, stream audio, and interact with AI agents. This SDK is designed specifically for the ESP-IDF environment, targeting modern chips like the ESP32-S3 and ESP32-P4.

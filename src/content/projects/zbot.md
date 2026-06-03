@@ -30,6 +30,13 @@ topics:
 isShow: true
 createdAt: '2026-04-17T02:24:32+00:00'
 updatedAt: '2026-04-17T02:24:32+00:00'
+relatedProjects:
+- zephyr-rtos-ai-harness
+- wireclaw
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- nebaura-labs-mote
+- opentoys
+- xiaozhi-ai-chatbot
 ---
 
 zbot is an open-source embedded AI agent designed to bring the power of Large Language Models (LLMs) to hardware. Powered by the Zephyr RTOS, zbot implements a ReAct (Reason + Act) loop that connects to any OpenAI-compatible API. This architecture enables the agent to perform complex, multi-step tasks, manage persistent memory, and interact directly with physical hardware components.

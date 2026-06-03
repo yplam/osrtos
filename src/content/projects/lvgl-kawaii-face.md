@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-04-09T23:46:33+00:00'
 updatedAt: '2026-04-09T23:46:33+00:00'
+relatedProjects:
+- xiaozhi-ai-desk-buddy-esp32-s3
+- lvgl-port-for-esp32
+- esp32-p4-grid-board
+- ani-emo-eye
+- esp-e-paper-component
+- esphome-lvgl-component
 ---
 
 Bringing personality to embedded user interfaces often requires complex asset management or heavy video files. LVGL Kawaii Face offers a lightweight, programmatic alternative for developers using LVGL 9 on the ESP32. It is a dedicated widget that renders an animated, expressive face onto a canvas, allowing for a wide range of emotional feedback in human-machine interface (HMI) projects.

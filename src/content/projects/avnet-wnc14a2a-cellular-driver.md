@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- quectel-gsm-lte-modem-driver
+- mbed-cellular-boilerplate
+- cicada-iot-communications-module-for-energy-access
+- mbed-os-lorawan-tinyshell-application
+- kw41z-rf-driver-for-arm-mbed-nanostack
+- pelion-device-management-client-example-for-mbed-os
 ---
 
 ## Overview

@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-port-for-rt-thread
+- lua-rtos-for-esp32
+- littlevgl2rtt
+- c-common-for-rt-thread
+- freertos-wrapper-for-rt-thread
+- rust-support-for-rt-thread
 ---
 
 ## Overview

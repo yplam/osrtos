@@ -16,6 +16,13 @@ isShow: true
 image: /202601/drawing.webp
 createdAt: '2026-01-18'
 updatedAt: '2026-01-18'
+relatedProjects:
+- roarm-m2-robotic-arm-control-firmware
+- sesame-robot-micro
+- hexapod
+- cuybot-v1-opensource-smartcar-project
+- quadruped-robot
+- kawaii-useless-robot
 ---
 
 ## Overview

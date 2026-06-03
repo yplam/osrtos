@@ -24,6 +24,13 @@ isShow: true
 image: /202604/M5StickC-PLUS2.webp
 createdAt: '2026-04-22T00:27:25+00:00'
 updatedAt: '2026-04-22T00:27:25+00:00'
+relatedProjects:
+- clawputer
+- deskpet-for-m5stack-cardputer
+- deskpet
+- m5paper-buddy
+- oh-my-clawd
+- clawdmeter
 ---
 
 ## Meet Clawy: Your AI Development Sidekick

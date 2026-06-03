@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- semito-v-micropython-compatibility-layer-mcl
+- lvgl-micropython-bindings
+- single-stm32-header
+- pycopy-standard-library-pycopy-lib
+- freertos-modern-c-wrappers
+- freertos-cpp
 ---
 
 ## Overview

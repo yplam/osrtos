@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-06-02T23:21:12+00:00'
 updatedAt: '2026-06-02T23:21:12+00:00'
+relatedProjects:
+- wt32-sc01-plus-smart-desk-companion
+- esptimecast
+- bitclock
+- desk-weather-clock-geekmagic-s3
+- elekstube-ips-custom-firmware
+- clawdmeter
 ---
 
 CircuitPal is a self-contained embedded device that transforms an ESP32 and a small OLED screen into a versatile desktop companion. By combining utility functions like an atomic-synced clock and weather station with playful elements like an animated GIF player, it serves as a high-performance example of what can be achieved with the ESP32 Arduino framework and a well-structured state machine.

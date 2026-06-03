@@ -29,6 +29,13 @@ isShow: true
 image: /202602/volna42bw.webp
 createdAt: '2026-02-28'
 updatedAt: '2026-02-28'
+relatedProjects:
+- elekstube-ips-custom-firmware
+- esp32-p4-home-assistant-display
+- dtugateway-for-hoymiles-hms-inverters
+- inkwatchy
+- wt32-sc01-plus-smart-desk-companion
+- open-display-firmware
 ---
 
 ## Overview

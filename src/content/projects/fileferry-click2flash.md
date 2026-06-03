@@ -23,6 +23,13 @@ isShow: true
 image: /202602/click2flash.webp
 createdAt: '2026-02-19'
 updatedAt: '2026-02-19'
+relatedProjects:
+- esp8266-arduino-serial-uploader
+- stm32-bootloader
+- esp32-fatfs-image-tool-and-example
+- esp32-spartan-edge-spiffs-loader
+- tab5-launcher
+- ftp-server-with-littlefs-for-wfi32-iot-board
 ---
 
 ## Overview

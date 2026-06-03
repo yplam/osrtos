@@ -33,6 +33,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- openthread-rtos
+- cooja-using-contiki
+- ameba-rtos-sdk
+- building-wireless-sensor-networks-with-openthread
+- home-automation-simulation-using-contiki-os
+- elise-sdn-based-solution-for-iot-networks
 ---
 
 Whitefield is a powerful simulation framework designed to bridge the gap between high-fidelity network simulation and real-world embedded software development. In the world of IoT and Wireless Sensor Networks (WSN), developers often face a difficult choice: use a simulator like NS-3 for realistic radio models but sacrifice the ability to run their actual firmware, or use an emulator like Cooja which is often tied to a specific OS and may lack the physical layer depth of dedicated simulators. Whitefield provides the "best of both worlds" by loosely coupling popular IoT operating systems with professional-grade PHY/MAC simulators.

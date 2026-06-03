@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sgm706-independent-watchdog-driver-for-rt-thread
+- thread-safe-rt-kprintf-for-rt-thread
+- rust-support-for-rt-thread
+- rx8900-high-precision-rtc-driver-for-rt-thread
+- rttrust-rust-wrapper-for-rt-thread
+- zview-zephyr-rtos-runtime-visualizer
 ---
 
 ## Overview

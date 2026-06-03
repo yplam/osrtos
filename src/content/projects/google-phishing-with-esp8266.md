@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-03-06'
 updatedAt: '2026-03-06'
+relatedProjects:
+- wifiphisher-for-esp32
+- wifiexe-esp32-s3-based-badusb
+- esp8266-telnet-honeypot
+- wifi-manager-for-micropython
+- esp8266-dht22-spiffs-web-server
+- esp8266-config-data-management
 ---
 
 ## Overview

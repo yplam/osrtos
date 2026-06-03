@@ -38,6 +38,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- doubleresetdetector-generic
+- esp-multiresetdetector
+- esp-doubleresetdetector-library
+- timezone-generic-library
+- onewireng
+- ds323x-generic
 ---
 
 ## Overview

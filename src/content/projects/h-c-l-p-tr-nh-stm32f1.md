@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- learning-stm32
+- stm32f4-cmsis-lessons
+- stm32-cortex-m4-code-examples
+- cmsis-for-stm32-development
+- stm32-cmsis-zero-to-hero
+- bare-metal-programming-guide
 ---
 
 ## Overview

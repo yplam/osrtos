@@ -34,6 +34,13 @@ isShow: true
 image: /202601/elatoai.webp
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- esp32-voice-assistant
+- livekit-esp32-sdk
+- echokit-firmware
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- nebaura-labs-mote
+- starmoon-open-source-conversational-ai-device
 ---
 
 ## Bringing Conversational AI to the Edge

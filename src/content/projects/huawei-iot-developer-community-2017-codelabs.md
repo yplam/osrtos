@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- e-yantra-iot-workshop
+- fctc-art-pi-code-iot-from-chip-to-cloud
+- that-project
+- alios-things-application-development
+- mongoose-os-samples-for-esp32
+- mongoose-os-programs-and-examples
 ---
 
 ## Overview

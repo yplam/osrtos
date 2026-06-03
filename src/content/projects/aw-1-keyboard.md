@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- custom-5x7-dactyl-manuform-with-integrated-trackball
+- zmk-firmware
+- esp32-s3-usb-to-ble-keyboard-bridge
+- esp32-morse-keyer
+- gesture-detecting-macro-keyboard
+- totemx-split-keyboard
 ---
 
 The aW_1 is a split, semi-wireless mechanical keyboard designed with a focus on ergonomics, portability, and modern connectivity. Based on the Nordic nRF52832 SoC, which integrates both the CPU and Bluetooth module into a single chip, the aW_1 offers a low-power solution for users who want the freedom of Bluetooth without sacrificing the reliability of a wired connection between halves.

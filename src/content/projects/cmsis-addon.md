@@ -14,6 +14,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- rt-thread-package-list
+- cmsis-device-headers-for-microchip-sam
+- arduino-cmsis-module
+- cmsis-for-stm32-development
+- cmsis-documentation
+- modm-devices-curated-microcontroller-device-data
 ---
 
 ## Streamlining ARM Development with CMSIS Addon

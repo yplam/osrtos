@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rt-thread-nimble
+- zj-sdk-rt-thread-for-nordic-nrf52840
+- zj-tek-rt-thread-nimble-littlevgl-nordic-project
+- n-able-arduino-core
+- nrf52840-m-2-developer-kit
+- ameba-rtos-sdk
 ---
 
 ## Overview

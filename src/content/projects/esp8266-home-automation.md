@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- homey-smart-home-controllers
+- moonlight-8266
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- nodemcu-device-lua-modules
+- smart-led
+- esp32-jarolift-controller
 ---
 
 ## Overview

@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- iot-framework-for-nodemcu
+- leilei-mongoose-os-sensing-device
+- mongoose-os
+- esp-temperature-to-losant-using-mongoose-os
+- mongoose-os-programs-and-examples
+- lilygo-higrow-esp32-plant-monitoring-sensor-firmware
 ---
 
 ## Overview

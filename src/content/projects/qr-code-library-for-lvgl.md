@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- png-decoder-for-lvgl
+- gif-decoder-for-lvgl
+- freetype-integration-for-lvgl
+- lvgl-rust-bindings
+- lvgl-port-for-stm32f429-discovery-kit
+- eclipse-simulator-for-lvgl-using-sdl
 ---
 
 ## Overview

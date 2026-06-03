@@ -2,6 +2,7 @@
 import {getCollection, getEntry, render} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import ProjectMetadataDisplay from '../../components/ProjectMetadataDisplay.astro';
+import ProjectsList from '../../components/ProjectsList.astro';
 import '../../styles/prose.css';
 import { FacebookShareButton, TwitterShareButton, RedditShareButton, SocialShare } from "astro-social-share";
 
@@ -28,6 +29,13 @@ const rtosEntry = entry.data.rtos ? await getEntry('rtos', entry.data.rtos) : nu
 const libraryEntries = await Promise.all(
   (entry.data.libraries || []).map(slug => getEntry('libraries', slug))
 ).then(entries => entries.filter((l): l is NonNullable<typeof l> => !!l));
+
+// Get related Projects (content-based recommendations), keeping only visible ones
+const relatedProjectEntries = await Promise.all(
+  (entry.data.relatedProjects || []).map(slug => getEntry('projects', slug))
+).then(entries =>
+  entries.filter((p): p is NonNullable<typeof p> => !!p && p.data.isShow)
+);
 ---
 
 <Layout title={`${entry.data.title} - Open Source Embedded Project`} description={entry.data.summary} image={entry.data.image}>
@@ -80,6 +88,13 @@ const libraryEntries = await Promise.all(
         />
       </aside>
     </div>
+
+    {relatedProjectEntries.length > 0 && (
+      <section class="related-rtos">
+        <h2>Related Projects</h2>
+        <ProjectsList projects={relatedProjectEntries} isHorizontal={true} />
+      </section>
+    )}
   </article>
 </Layout>
 
@@ -159,54 +174,6 @@ const libraryEntries = await Promise.all(
         font-weight: 700;
         margin: 0 0 1.5rem 0;
         color: #1f2937;
-    }
-
-    .rtos-link {
-        text-decoration: none;
-        color: inherit;
-    }
-
-    .rtos-card {
-        background: white;
-        border: 1px solid #e5e7eb;
-        border-radius: 8px;
-        padding: 2rem;
-        transition: all 0.3s ease;
-    }
-
-    .rtos-card:hover {
-        border-color: #4f46e5;
-        box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
-        transform: translateY(-2px);
-    }
-
-    .rtos-card h3 {
-        margin: 0 0 0.5rem 0;
-        font-size: 1.5rem;
-        color: #1f2937;
-    }
-
-    .rtos-card p {
-        margin: 0 0 1rem 0;
-        color: #6b7280;
-        line-height: 1.6;
-    }
-
-    .rtos-meta {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .stars {
-        font-weight: 600;
-        color: #f59e0b;
-    }
-
-    .arrow {
-        color: #4f46e5;
-        font-size: 1.5rem;
-        font-weight: bold;
     }
 
     @media (max-width: 768px) {

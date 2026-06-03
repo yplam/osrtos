@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtos-wot
+- ameba-rtos-sdk
+- eclipse-threadx-netx-duo
+- freertos-mqtt-client-demo
+- esp-open-rtos
+- rtox-iot-development-platform
 ---
 
 ## Overview

@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- qemu-emulation-for-ti-lm3s6965-cortex-m3
+- stm32f103c8-freertos-cmsis-blink-example
+- cmsis-rtos-on-micro-bit
+- stm32f107-makefile-freertos-template
+- stm32-makefile-freertos-project-template
+- stm32-libopencm3-freertos-platformio-template
 ---
 
 ## Overview

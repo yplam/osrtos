@@ -29,6 +29,13 @@ isShow: true
 image: /202602/air-quality-monitor.webp
 createdAt: '2026-02-28'
 updatedAt: '2026-02-28'
+relatedProjects:
+- mq135-air-quality-sensor
+- project-aura
+- q-sensor-multi-functional-zigbee-air-quality-sensor
+- espmonitor-iot-environment-monitoring-system
+- iot-industrial-operation-and-room-condition-monitor
+- espmonitor-iot-environmental-monitoring-system
 ---
 
 ## Overview

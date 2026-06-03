@@ -32,6 +32,13 @@ isShow: true
 image: /202603/yellow-display-lvgl.webp
 createdAt: '2026-03-19'
 updatedAt: '2026-03-19'
+relatedProjects:
+- esp-lvgl
+- micropython-library-for-the-cheap-yellow-display-cyd
+- micropython-and-lvgl-firmware-for-esp32
+- esp32-smartdisplay
+- lvgl-barebones-example-for-sunton-esp32-2432s028r
+- lvgl-display-and-touchpad-drivers-for-esp32
 ---
 
 ## Overview

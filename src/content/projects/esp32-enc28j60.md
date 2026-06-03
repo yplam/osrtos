@@ -22,6 +22,13 @@ version: v2.0.1
 lastUpdated: '2024-06-18'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- webserver-esp32-enc
+- webserver-esp32-w5500
+- wiznetinterface-library
+- esp32-smartdisplay
+- asynchttprequest-esp32-ethernet
+- asyncwebserver-esp32-sc-enc
 ---
 
 The ESP32-ENC28J60 library is a targeted solution for developers looking to add wired networking to their ESP32 projects using the popular and inexpensive ENC28J60 SPI Ethernet controller. While the ESP32 features a built-in MAC that supports RMII-based Ethernet PHYs (like the LAN8720), many modular components and hobbyist boards utilize the ENC28J60, which communicates over the SPI bus. This library bridges that gap by providing a familiar Arduino-compatible interface for this specific hardware.

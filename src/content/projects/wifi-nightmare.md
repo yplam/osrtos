@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- wifiphisher-for-esp32
+- deautherx
+- madwifi
+- evil-bw16-webui
+- ghost-esp
+- infiltra-firmware
 ---
 
 ## Overview

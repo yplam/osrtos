@@ -19,6 +19,13 @@ isShow: true
 image: /202603/oscilloscope-rp2040.webp
 createdAt: '2026-03-19'
 updatedAt: '2026-03-19'
+relatedProjects:
+- oscilloscope-for-stm32f411
+- usbsnifferpio-for-rp2040
+- ultranet-to-i2s
+- hsdaoh-rp2350-high-speed-data-acquisition-over-hdmi
+- usb-video-class-uvc-for-raspberry-pi-pico
+- arduino-pico
 ---
 
 ## Overview

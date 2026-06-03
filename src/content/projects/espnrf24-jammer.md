@@ -30,6 +30,13 @@ topics:
 isShow: true
 createdAt: '2026-04-19T23:01:31+00:00'
 updatedAt: '2026-04-19T23:01:31+00:00'
+relatedProjects:
+- nrf24-jammer
+- esp32-bluejammer
+- fz-nrf24-jammer
+- esp32-2-4ghz-jammer
+- esp32-bluetooth-signal-jammer
+- c3mini-bluejammer
 ---
 
 ## Overview

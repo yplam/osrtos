@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-15'
 updatedAt: '2026-01-15'
+relatedProjects:
+- home-assistant-security-camera-with-esp32-cam
+- engineering-diy-esp32-sensors-cameras-for-home-assistant
+- bbmonitor
+- esp32-cam-yolo-object-and-animal-detection
+- esp32-thermal-camera-viewer
+- openfire-firmware-for-esp32
 ---
 
 ## Overview

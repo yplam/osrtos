@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nrf24-driver-for-contiki-os
+- akita-meshtastic-zmodem-library-module
+- distributed-wavelet-transform-for-tinyos
+- testbed-tsch-firmware
+- kratos-contiki-os-for-lora
+- contiki-lora-tsch-project
 ---
 
 ## Overview

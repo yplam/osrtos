@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- golioth-firmware-sdk
+- bc28-mqtt-package-for-rt-thread
+- iotconnect-azure-rtos-sdk
+- golioth-zephyr-sdk
+- iotsharp-pandora-stm32l475-bsp
+- unabto-sdk
 ---
 
 IoTSharp for RT-Thread is a specialized software package designed to connect RT-Thread-based embedded systems to the IoTSharp platform. IoTSharp itself is a high-performance, open-source IoT foundation platform built on .NET Core, offering robust support for data collection, processing, visualization, and device management.

@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- huawei-iot-developer-community-2017-codelabs
+- mongoose-os-samples-for-esp32
+- fctc-art-pi-code-iot-from-chip-to-cloud
+- that-project
+- universal-maker-sensor-kit
+- blinker-iot-documentation
 ---
 
 The e-Yantra IoT Workshop repository serves as a central hub for educational resources designed to guide developers through the complexities of the Internet of Things. Created by the e-Yantra project, this repository provides a structured path from fundamental IoT concepts to advanced cloud integration using AWS IoT and the specialized e-Yantra IoT Platform.

@@ -20,6 +20,13 @@ isShow: true
 image: /202602/zereader.webp
 createdAt: '2026-02-08'
 updatedAt: '2026-02-08'
+relatedProjects:
+- papyrix-reader
+- nrf52811-solum-tag-firmware
+- open-display-firmware
+- zephyrwatch
+- zephyr-rtos-ssd1306-custom-font-demo
+- zephyr-grbl
 ---
 
 ## Overview

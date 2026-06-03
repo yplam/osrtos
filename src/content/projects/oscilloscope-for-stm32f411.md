@@ -23,6 +23,13 @@ isShow: true
 image: /202604/oscilloscope.webp
 createdAt: '2026-04-09T08:56:05+00:00'
 updatedAt: '2026-04-09T08:56:05+00:00'
+relatedProjects:
+- osillyscope
+- oscilloscope-rp2040
+- esp32webscope
+- power-pico
+- lvgl-port-for-stm32f429-discovery-kit
+- esp-scope
 ---
 
 Building a digital oscilloscope is a classic rite of passage for many embedded developers. This project implements a functional, dual-channel oscilloscope using the STM32F411CEU6 microcontroller, commonly known as the "Black Pill." Created as a hands-on exploration of the STM32 platform, the project demonstrates how to orchestrate high-speed peripherals to capture and visualize analog signals in real-time.

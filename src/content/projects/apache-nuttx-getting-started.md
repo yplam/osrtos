@@ -20,6 +20,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- nuttx-development-docker-environment
+- apache-nuttx-nsh-task-demo
+- nuttx-esp32-environment-for-wsl2
+- zig-on-risc-v-bl602-with-apache-nuttx-rtos
+- pinedio-stack-bl604-on-apache-nuttx-rtos
+- sama5d27-resource-sharing
 ---
 
 Apache NuttX is a versatile real-time operating system (RTOS) designed with a strong emphasis on standards compliance and a small footprint. It is highly scalable, supporting environments from 8-bit microcontrollers to 64-bit processors. One of its most significant advantages is its adherence to POSIX and ANSI standards, making it a familiar environment for developers coming from Linux or Unix backgrounds. This project, the Apache-NuttX-Getting-Started guide, serves as a bridge for developers looking to explore NuttX using Ubuntu or Windows Subsystem for Linux (WSL2).

@@ -16,6 +16,13 @@ star: 2
 lastUpdated: '2020-05-09'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- mongoose-os-samples-for-esp32
+- mongoose-os-programs-and-examples
+- seeed-studio-xiao-esp32-project-collection
+- map-tiles-projects-for-esp32
+- mongoose-os-playground
+- esp32-repo
 ---
 
 The **esp32-experiments** repository by Luca Belluccini serves as a practical playground for developers looking to explore the diverse capabilities of the ESP32 microcontroller. Rather than focusing on a single library, this project provides several standalone experiments that demonstrate how to integrate networking, peripheral control, and real-time data fetching into embedded applications.

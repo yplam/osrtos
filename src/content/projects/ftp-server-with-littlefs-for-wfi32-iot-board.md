@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-ftp-server
+- multiftpserver-library
+- simpleftpserver-library
+- ftp-server-teensy41
+- transfer-files-over-ethernet-with-stm32-and-freertos
+- esp32-fatfs-storage-example
 ---
 
 ## Overview

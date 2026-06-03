@@ -22,6 +22,13 @@ version: v1.2.17
 lastUpdated: '2018-09-19'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- wiznetinterface-library
+- mbed-os-client-example
+- avnet-wnc14a2a-cellular-driver
+- pelion-device-management-client-example-for-mbed-os
+- m5-crystal
+- blynk-wifinina-wm
 ---
 
 ## Simplifying Connectivity in Mbed OS

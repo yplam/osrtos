@@ -18,6 +18,13 @@ isShow: true
 image: /202603/audiospectrum.webp
 createdAt: '2026-03-17'
 updatedAt: '2026-03-17'
+relatedProjects:
+- esp32-64-band-audio-spectrum-analyser
+- esp32webscope
+- esp-scope
+- audio-stream-server-for-m5cardputer
+- esp32-custom-hardware-synthesizer
+- esp32-rtsp-mic-for-birdnet-go
 ---
 
 ## Overview

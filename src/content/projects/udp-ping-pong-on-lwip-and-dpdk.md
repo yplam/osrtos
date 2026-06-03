@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- tinyhttpd-lwip-dpdk
+- lwip-for-linux
+- lwip-kcp-integration
+- lwip-contrib-unix-port
+- lwip-ptp-precision-time-protocol-for-lwip
+- udp-echo-server-for-milandr-1986ve3
 ---
 
 ## Overview

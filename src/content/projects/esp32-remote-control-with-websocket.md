@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32-web-server-using-spiffs
+- esp32-monaco-editor-spiffs
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- esp8266-web-server-and-spiffs-integration
+- flexispot-web-controller
+- espui
 ---
 
 ## Real-Time Interaction with ESP32

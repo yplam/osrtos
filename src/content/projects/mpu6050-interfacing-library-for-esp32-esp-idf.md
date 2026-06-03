@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-02-28'
 updatedAt: '2026-02-28'
+relatedProjects:
+- esp32-i2c-mpu6050-driver
+- icm-20948-component-for-esp-idf
+- esp32-s3-esp-idf-components-library
+- micropython-mpu9x50-imu-driver
+- micropython-mpu-9250-i2c-driver
+- lis3dh-accelerometer-library-for-mongoose-os
 ---
 
 ## Overview

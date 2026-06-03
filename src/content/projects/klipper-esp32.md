@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-04-01T11:26:12+00:00'
 updatedAt: '2026-04-01T11:26:12+00:00'
+relatedProjects:
+- smoothieware-for-stm32
+- micropython-and-lvgl-firmware-for-esp32
+- openspool
+- fastled-idf
+- sha2017-badge-firmware
+- r2p2-esp32-ruby-rapid-portable-platform-for-esp32
 ---
 
 ## Bringing Klipper to the ESP32 Ecosystem

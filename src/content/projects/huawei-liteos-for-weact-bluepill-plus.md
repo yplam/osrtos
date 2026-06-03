@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- arm-mbed-os-blue-pill-usb-demo
+- mbed-os-6-port-for-weact-stm32h743vit6
+- rt-thread-nimble
+- mbed-os-6-support-for-weact-black-pill-stm32f411ce
+- pinephone-usb-driver-for-apache-nuttx-rtos
+- stm32-bluepill-rndis-device-with-lwip
 ---
 
 ## Overview

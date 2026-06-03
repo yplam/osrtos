@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- hydroponicone
+- smart-plant-monitoring-system
+- iot-agricultural-data-monitoring-system
+- espmonitor-iot-environment-monitoring-system
+- espmonitor-iot-environmental-monitoring-system
+- chronothermostat-an-aws-powered-iot-climate-control-system
 ---
 
 ## Overview

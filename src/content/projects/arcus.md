@@ -27,6 +27,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- pico-rtic-template
+- rust-ir-thermometer-firmware
+- rust-for-arduino-portenta-h7
+- arduino-pico
+- raspberry-pi-pico-freertos-sample-application
+- pomia-rs
 ---
 
 ## Lighting Up the RP2040 with Arcus

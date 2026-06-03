@@ -26,6 +26,13 @@ star: 60
 lastUpdated: '2024-07-28'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- chronos-watchy
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
+- twatch-v3-firmware-for-esp32
+- gateway-smartwatch
+- inkwatchy
+- lvgl-watch-firmware-for-open-smartwatch
 ---
 
 The DT78 ESP32 Firmware project is a compelling example of hardware hacking and embedded systems development. Rather than simply writing software for an existing device, this project involves a complete motherboard replacement for the DT78 smartwatch. By swapping the original proprietary hardware with a custom-designed PCB powered by the ESP32, the project unlocks the full potential of the wearable, turning it into an open-source platform for experimentation.

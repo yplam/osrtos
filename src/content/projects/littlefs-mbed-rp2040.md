@@ -36,6 +36,13 @@ topics:
 isShow: false
 createdAt: '2025-12-27'
 updatedAt: '2025-12-30'
+relatedProjects:
+- fs-nano33ble
+- littlefs-portenta-h7-library
+- 107-arduino-littlefs
+- arduino-littlefs-spimemory-wrapper
+- sqlite-for-raspberry-pi-pico
+- pico-vfs-a-virtual-file-system-for-raspberry-pi-pico
 ---
 
 The LittleFS_Mbed_RP2040 library serves as a specialized wrapper for integrating the LittleFS filesystem into RP2040-based development environments. Specifically targeting boards that utilize the Arduino-mbed RP2040 core, such as the Raspberry Pi Pico and the Arduino Nano RP2040 Connect, this library simplifies the process of managing persistent data on internal flash memory.

@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- freertos-port-for-raspberry-pi
+- freertos-port-for-risc-v
+- raspberry-pi-rtos-rpi-rtos
+- apache-nuttx-rtos-on-64-bit-risc-v
+- apache-nuttx-rtos-for-pine64-star64
+- rp2040-freertos-template
 ---
 
 ## Overview

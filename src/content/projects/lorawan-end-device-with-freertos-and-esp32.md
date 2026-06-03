@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- esp32-ruuvitag-collector
+- mongoose-os-environment-logger
+- bresserweathersensorlw
+- tempo-iot-edge-device
+- mqtt-demo-for-stm32-iot-discovery-board-with-thingsboard
+- ikea-vindriktning-air-quality-sensor-for-apache-nuttx
 ---
 
 ## Overview

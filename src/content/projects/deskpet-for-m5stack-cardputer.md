@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-04-28T23:42:29+00:00'
 updatedAt: '2026-04-28T23:42:29+00:00'
+relatedProjects:
+- deskpet
+- clawputer
+- m5paper-buddy
+- clawy
+- clawdmeter
+- pixel-pets
 ---
 
 ## Overview

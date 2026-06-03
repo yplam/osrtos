@@ -24,6 +24,13 @@ isShow: true
 image: /202601/small_gas_counter.webp
 createdAt: '2026-01-16'
 updatedAt: '2026-01-16'
+relatedProjects:
+- q-sensor-multi-functional-zigbee-air-quality-sensor
+- energy-consumption-monitor
+- smart-iot-sensor-with-xiao-esp32c6
+- lixee-box
+- everblu-cyble-enhanced-rf-meter-reader
+- energyme-home
 ---
 
 The Zigbee Gas Counter is a specialized DIY IoT solution designed to bring smart metering capabilities to traditional gas meters. Built around the powerful ESP32-C6 microcontroller, this project addresses the common gap in the market for reliable, battery-operated Zigbee gas monitoring devices. By leveraging the low-power capabilities of the ESP32-C6 and the Zigbee protocol, it provides a robust alternative to modified door sensors or Wi-Fi-based solutions that often suffer from short battery life or data loss during network outages.

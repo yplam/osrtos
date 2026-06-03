@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- ameba-rtos-sdk
+- esp-open-rtos
+- kendryte-k210-freertos-sdk
+- rtos-wot
+- ameba-freertos-pro2-sdk
+- nuclei-software-development-kit-nuclei-sdk
 ---
 
 The ESP8266 RTOS SDK is a robust development platform designed for creating multi-threaded applications on the ESP8266 Wi-Fi SoC. While the ESP8266 platform originally relied on a non-OS callback-based model, this SDK leverages FreeRTOS to provide a modern, preemptive multitasking environment. This allows developers to manage complex tasks—such as maintaining a Wi-Fi connection, handling TCP/IP traffic, and executing user logic—in separate, prioritized threads.

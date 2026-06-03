@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rt-thread-for-picorv32-on-lichee-tang
+- level-risc-v
+- picorv32-rt-thread-on-lichee-tang-eg4s20
+- apache-nuttx-rtos-on-64-bit-risc-v
+- hbird-e203-rt-thread-on-lichee-tang
+- fazyrv-a-scalable-risc-v-core
 ---
 
 ## Overview

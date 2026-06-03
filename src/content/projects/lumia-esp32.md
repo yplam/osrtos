@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- esp32-tux
+- sc01-plus-hmi-example-with-squareline-studio
+- esp32berry
+- lvgl-port-for-esp32
+- lvgl-8-on-wt32-sc01-with-arduino
 ---
 
 Lumia-ESP32 is a sophisticated demonstration project that recreates a Windows Phone-style user interface on the WT32-SC01 development board. Built on the ESP32 platform, this project showcases the capabilities of modern embedded graphics libraries to create fluid, interactive, and aesthetically pleasing mobile-like experiences on low-power hardware.

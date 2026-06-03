@@ -36,6 +36,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- mbed-to-aws-iot-example
+- fctc-art-pi-code-iot-from-chip-to-cloud
+- mongoose-os
+- mongoose-os-samples-for-esp32
+- mbed-to-google-cloud-iot
+- mbed-to-azure-iot-hub
 ---
 
 ## Overview

@@ -32,6 +32,13 @@ topics:
 isShow: false
 createdAt: '2026-03-31T23:36:49+00:00'
 updatedAt: '2026-03-31T23:36:49+00:00'
+relatedProjects:
+- zig-lvgl-touchscreen-app-on-apache-nuttx-rtos
+- zig-on-risc-v-bl602-with-apache-nuttx-rtos
+- visual-programming-for-zig-with-nuttx-sensors
+- esp8266-rtos-software-development-kit-sdk
+- nesper-nim-wrappers-for-esp-idf
+- micropython-and-lvgl-firmware-for-esp32
 ---
 
 The embedded systems world is often dominated by C and C++, but the Zig programming language is making significant inroads by offering modern features without sacrificing the low-level control required for microcontrollers. This project provides a robust framework for integrating the Zig toolchain with the Espressif IoT Development Framework (ESP-IDF), enabling developers to build firmware for the entire ESP32 family using Zig.

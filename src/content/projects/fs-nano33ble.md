@@ -34,6 +34,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- littlefs-mbed-rp2040
+- littlefs-portenta-h7-library
+- 107-arduino-littlefs
+- arduino-littlefs-spimemory-wrapper
+- littlefs-for-esp-idf
+- effortless-spiffs
 ---
 
 The FS_Nano33BLE library provides a streamlined way to manage filesystems on the onboard flash of nRF52840-based boards. Specifically designed for the Arduino MBED ecosystem, it acts as a wrapper for LittleFS and FATFS, allowing developers to leverage robust storage solutions without deep-diving into the complexities of the underlying Mbed OS storage layers.

@@ -17,6 +17,13 @@ star: 2
 lastUpdated: '2022-11-29'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- stm32-cmsis-zero-to-hero
+- bare-metal-programming-guide
+- stm32f4-cmsis-lessons
+- stm32f103-cmsis-peripheral-configuration
+- uglystm32
+- arm-kl25z-mbed-ide-example-programs
 ---
 
 Learning embedded systems often requires stripping away the abstractions of modern operating systems to understand what is happening at the register level. The **Embedded Systems Bare Metal Programming Ground Up** project is a comprehensive repository of exercises and implementations designed to do exactly that. Based on the popular Udemy course by the same name, this project serves as a practical guide for developers looking to master the STM32F407G-DISC1 discovery kit using the Cortex Microcontroller Software Interface Standard (CMSIS).

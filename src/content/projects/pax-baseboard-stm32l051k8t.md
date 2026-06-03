@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-libopencm3-freertos-platformio-template
+- super-mini-esp32-c3-arduino-and-platformio-sketches
+- stm32l475-freertos-iot-project
+- micro-ros-stm32-template
+- stm32f103rb-templates-and-examples
+- xiao-esp32c6-sketches
 ---
 
 ## Overview

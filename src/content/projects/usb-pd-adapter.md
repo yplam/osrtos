@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-04-07T23:54:12+00:00'
 updatedAt: '2026-04-07T23:54:12+00:00'
+relatedProjects:
+- usb-pd-tester
+- ch32v003-usb-meter
+- pd240w
+- esp32-lab-power-supply
+- noteit-uart-datalogger
+- stm32-synchronous-rectification-buck-boost-digital-power-supply
 ---
 
 The USB PD Adapter is a compact variable power supply designed to turn any USB Type-C PD power supply with Programmable Power Supply (PPS) capabilities into a versatile laboratory-style power source. By negotiating with the input supply, the adapter can provide various selectable voltages and high currents for powering external projects. Key parameters, including voltage, current, power, and energy consumption, are displayed in real-time on an integrated OLED screen.

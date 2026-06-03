@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- low-power-wireless-networking-for-iot-lpiot
+- cooja-senseh
+- tinyos-cooja-simulator-application
+- ql-tsch-implementation-for-contiki-ng
+- sx128x-lora-transceiver-driver-for-contiki-ng
+- contiki-lora-tsch-project
 ---
 
 ## Overview

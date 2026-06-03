@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- ruuvitag-firmware-for-zephyr-os
+- rust-ir-thermometer-firmware
+- airgradient-pro-rust-firmware
+- lilygo-higrow-esp32-plant-monitoring-sensor-firmware-hardware-v1
+- uart-communication-between-nrf52840-and-stm32f401-nucleo
+- lilygo-higrow-esp32-plant-monitoring-sensor-firmware
 ---
 
 Sensilo is an open-source project designed as a generic Bluetooth Low Energy (BLE) sensor node. Named after the Esperanto word for "sensor," the project provides a complete ecosystem including hardware designs, firmware, and a gateway for data collection.

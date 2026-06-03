@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32l475-pandora-board-bsp-for-rt-thread
+- iotsharp-pandora-stm32l475-bsp
+- rt-thread-bsp-for-mh1903x
+- mbed-os-6-port-for-weact-stm32h743vit6
+- bluepill-board-support-for-mbed-os-6
+- b-l475e-iot01a-discovery-board-support-crate
 ---
 
 The STM32F407VET6 Board Support Package (BSP) provides a robust foundation for running the RT-Thread real-time operating system on STM32 hardware. Originally derived from the STM32F4DISCOVERY BSP, this project is specifically tailored for the STM32F407VETx variant, offering a streamlined environment for embedded developers targeting the ARM Cortex-M4 architecture.

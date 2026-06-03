@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rp2040-freertos-template
+- rp2040-projects-by-armstrong-subero
+- raspberry-pi-pico-freertos-sample-application
+- cmsis-rp2040
+- blinky-pico-2-dual-core-bare-metal
+- pico-zephyr-project
 ---
 
 ## Overview

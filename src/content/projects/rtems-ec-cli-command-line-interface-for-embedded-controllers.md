@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- breadboardos
+- picoshell
+- chibios
+- arm-control-framework-acorns-rover
+- mos-rtos
+- minios-esp
 ---
 
 ## Overview

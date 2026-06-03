@@ -28,6 +28,13 @@ isShow: true
 image: /202601/game-and-watch.webp
 createdAt: '2026-01-29'
 updatedAt: '2026-01-29'
+relatedProjects:
+- cardputer-game-station
+- pico-smsplus-sega-master-system-and-game-gear-emulator
+- retrojam-multi-retro-game-console-emulator
+- esp32-s3-nes-emulator
+- t-hmi-c64-emulator
+- msx1-emulator-for-raspberry-pi-pico
 ---
 
 ## Overview

@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- filtered-inertial-rotation-module-firm
+- droners
+- flight-controller-rev2
+- james-rocket-controller
+- airgradient-pro-rust-firmware
+- protoflight
 ---
 
 Alturia Firmware is the sophisticated flight control system powering the Alturia rocket flight computer. Designed for high-performance rocketry, it leverages the Zephyr RTOS to provide a reliable, multi-threaded environment capable of handling complex sensor fusion, data logging, and real-time control tasks simultaneously.

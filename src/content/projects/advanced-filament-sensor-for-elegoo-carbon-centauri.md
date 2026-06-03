@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- ikedrybox-smart-3d-filament-dryer
+- printpoop-retro-pixel-smart-display-for-bambu-lab-a1
+- openspool
+- klipper-esp32
+- td-free
+- printsphere
 ---
 
 The Elegoo Carbon Centauri is a popular budget-friendly 3D printer, but its stock filament runout sensor has a significant limitation: it is a simple binary switch. While it can tell if filament is present, it cannot detect if the filament has stopped moving due to a tangle, a break after the sensor, or a nozzle clog. The Advanced Filament Sensor project addresses this by using an ESP32 microcontroller and a Big Tree Tech (BTT) SFS 2.0 sensor to provide intelligent movement detection.

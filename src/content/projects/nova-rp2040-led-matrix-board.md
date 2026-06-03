@@ -24,6 +24,13 @@ isShow: true
 image: /202603/nova.webp
 createdAt: '2026-03-05'
 updatedAt: '2026-03-05'
+relatedProjects:
+- cyberboard-v2
+- rp2040-dmxsun
+- rgblight-iot-rgb-led-controller
+- arduino-pico
+- lvgl-for-raspberry-pi-pico-hub75-led-matrix
+- esp32-32x32-rgb-matrix-controller
 ---
 
 ## Overview

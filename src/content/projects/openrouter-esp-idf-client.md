@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-26'
 updatedAt: '2026-01-26'
+relatedProjects:
+- espai-unified-ai-api-client-for-esp32
+- esp32-ai-connect
+- livekit-esp32-sdk
+- onesdk-a-unified-ai-access-sdk-for-the-client-side
+- homerpc
+- sqlite3-for-esp-idf
 ---
 
 The OpenRouter ESP-IDF Client brings the power of modern Large Language Models to the ESP32 ecosystem. By providing a native C implementation for the OpenRouter API, this library allows developers to integrate sophisticated AI features—such as natural language processing and smart decision-making—directly into embedded firmware. It acts as a bridge to over 70 AI models, including GPT-4, Claude, and Gemini, through a unified interface optimized for microcontrollers.

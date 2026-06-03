@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-03-31'
 updatedAt: '2026-03-31'
+relatedProjects:
+- t-hmi-c64-emulator
+- freertos-emulator
+- anemoia-esp32
+- cydintosh
+- pc-6001mkii-emulator-for-raspberry-pi-pico
+- msx1-emulator-for-raspberry-pi-pico
 ---
 
 ## Bringing the 386 Era to Modern Microcontrollers

@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- keras-to-cmsis-nn-converter
+- pruning-deep-learning-models-for-arm-cortex-m
+- utensor-code-generator-utensor-cgen
+- cmsis-parser
+- ncnn-mp-neural-network-inference-for-micropython
+- stm32-bare-metal-code-generator
 ---
 
 ## Bridging PyTorch and CMSIS-NN

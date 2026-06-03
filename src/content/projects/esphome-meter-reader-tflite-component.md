@@ -22,6 +22,13 @@ isShow: true
 image: /202601/esp32-cam.webp
 createdAt: '2026-02-05'
 updatedAt: '2026-02-05'
+relatedProjects:
+- fashion-mnist-on-esp32-with-tensorflow-lite-micro
+- everblu-cyble-enhanced-rf-meter-reader
+- tasmota-sml-images
+- esp-e-paper-component
+- tensorflow-lite-micro-for-rt-thread
+- m5stack-esphome-integrations
 ---
 
 ## Overview

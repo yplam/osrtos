@@ -26,6 +26,13 @@ isShow: true
 image: /202602/WUTE_Dashboard_Test.webp
 createdAt: '2026-02-14'
 updatedAt: '2026-02-14'
+relatedProjects:
+- ly-steering-wheel-meterbox
+- alfa-romeo-giulia-dashboard-info-display-for-esp32-s3
+- euc-dash-esp32-dashboard
+- giulia-tft
+- rbcm-s32k344-autosar-rear-body-control-module
+- bbn-m5stack-tough-sailing-instruments
 ---
 
 ## Overview

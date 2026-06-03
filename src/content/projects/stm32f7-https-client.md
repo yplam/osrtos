@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-https-wolfssl-demo
+- stm32h745-ethernet-with-lwip-and-freertos
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- stm32-lwip-mqtt-demo
+- mqtt-client-and-https-server-using-mbedtls
+- stm32-ftp-server
 ---
 
 ## Overview

@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- aws-iot-with-the-l475vg-iot01a-on-mbed-os
+- mbed-to-aws-iot-example
+- mbed-os-client-example
+- mqtt-client-and-https-server-using-mbedtls
+- mbed-to-google-cloud-iot
+- mbed-to-azure-iot-hub
 ---
 
 TLSSocket is a networking library designed for Mbed OS, providing a secure transport layer for embedded applications. It serves as a wrapper around the standard Mbed OS Socket API, integrating TLS (Transport Layer Security) to ensure data integrity and confidentiality for IoT devices.

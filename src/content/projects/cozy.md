@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- libedhoc
+- zephyr-coaps-client-with-tinydtls
+- jsonx-lightweight-embedded-json-serializer
+- crypto-implementations-example-for-contiki-os
+- embedmcp-embedded-mcp-server-library
+- tinycbor-test-app-for-apache-nuttx
 ---
 
 ## Securing Embedded Communications with Cozy

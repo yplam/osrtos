@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- smarttrack-rfid-attendance-system
+- nfcity
+- esp32-dynamic-iphone-keyless-system
+- esp32-mfa-authenticator
+- esp32-weatherstationrtc
+- simplebus2-mqtt-bridge
 ---
 
 ## Overview

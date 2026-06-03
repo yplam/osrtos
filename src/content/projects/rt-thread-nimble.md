@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-01-01'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zj-ble-rt-thread-and-nimble-for-nordic-nrf52
+- n-able-arduino-core
+- arduino-serial-ble
+- zj-tek-rt-thread-nimble-littlevgl-nordic-project
+- nimble-arduino
+- uc-modbus-for-rt-thread
 ---
 
 ## Overview

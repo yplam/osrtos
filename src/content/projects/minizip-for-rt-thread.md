@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- zlib-compression-and-decompression-for-esp-idf
+- esp32-targz
+- cozy
+- rtt-validator
+- c-crc-for-rt-thread
+- termbox-for-rt-thread
 ---
 
 ## Overview

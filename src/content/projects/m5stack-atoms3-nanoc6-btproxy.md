@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-04-08T23:47:03+00:00'
 updatedAt: '2026-04-08T23:47:03+00:00'
+relatedProjects:
+- esp32-s3-usb-to-ble-keyboard-bridge
+- usb-keyboard-and-mouse-bluetooth-adapter-esp32
+- esphome-tesla-ble
+- hunter-douglas-powerview-ble-for-home-assistant
+- m5stack-esphome-integrations
+- seeed-home-assistant-discovery
 ---
 
 Home automation enthusiasts often face the challenge of Bluetooth range limitations. While a central Home Assistant server might be tucked away in a server rack or a utility closet, Bluetooth devices like temperature sensors, smart locks, or plant monitors are scattered throughout the home. The `esphome-m5-btproxy` project offers a streamlined solution to this problem by turning compact M5Stack hardware into dedicated Bluetooth proxies.

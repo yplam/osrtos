@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-04-17T10:09:24+00:00'
 updatedAt: '2026-04-17T10:09:24+00:00'
+relatedProjects:
+- bugbuster
+- linkscope-bpu-uart-analyzer
+- esp32-bus-pirate
+- sc01-plus-hmi-example-with-squareline-studio
+- lumen
+- clawdmeter
 ---
 
 ## A Versatile Companion for Embedded Development

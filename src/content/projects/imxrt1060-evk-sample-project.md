@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- stm32l475-freertos-iot-project
+- lvgl-demo-embarcadores
+- practice-project-for-stm32f746g-discovery
+- stm32f107-makefile-freertos-template
+- zephyr-lvgl-sample-for-nrf52840-mdk
+- sk-mstm32f107-demo-board-example
 ---
 
 ## Overview

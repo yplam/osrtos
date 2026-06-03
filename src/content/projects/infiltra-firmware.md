@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- bruce-firmware
+- esp-hack-fw
+- ghost-esp
+- unigeek-firmware
+- poseidon
+- ghostesp
 ---
 
 Infiltra Firmware is a versatile, open-source toolkit designed to transform standard microcontrollers into powerful wireless security auditing devices. Developed by a dedicated community of developers and security enthusiasts, the project targets a wide array of popular hardware, including the ESP32 and ESP8266 series, M5Stack devices (M5StickC Plus, Cardputer), and specialized modules like the LilyGO T-Embed and RTL8720DN.

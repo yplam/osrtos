@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-03-11'
 updatedAt: '2026-03-11'
+relatedProjects:
+- ghostble
+- toothpaste
+- bruce-firmware
+- ghost-esp
+- esp-hack-fw
+- esp32-ble-uart-mx
 ---
 
 ## Overview

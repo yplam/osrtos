@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- ql-tsch-implementation-for-contiki-ng
+- rl-tsch-implementation-for-contiki-ng
+- contiki-lora-tsch-project
+- msf-protocol-simulation-for-contiki-ng
+- elise-sdn-based-solution-for-iot-networks
+- computer-network-with-contiki-ng
 ---
 
 ## Overview

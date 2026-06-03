@@ -22,6 +22,13 @@ isShow: true
 image: /202604/JC2432W328.webp
 createdAt: '2026-04-01T01:24:28+00:00'
 updatedAt: '2026-04-01T01:24:28+00:00'
+relatedProjects:
+- esp32-repo
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- esp32-cheap-yellow-display-micropython-lvgl
+- esp8266-wi-fi-microcontroller-resource-hub
+- xiao-esp32c6-sketches
+- wt32-sqln-wt32-sc01-plus-with-squareline-studio-and-lvgl
 ---
 
 The JC2432W328 is a versatile development platform that has gained popularity in the maker community as a cost-effective, all-in-one ESP32 module with an integrated display. Often referred to as a variant of the "Cheap Yellow Display" (CYD) family, this board combines the dual-core processing power of the ESP32 with a 2.8-inch TFT LCD, making it an ideal candidate for IoT controllers, handheld devices, and interactive user interface projects.

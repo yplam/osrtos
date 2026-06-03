@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- keras-to-cmsis-nn-converter
+- torch2cmsis
+- ncnn-mp-neural-network-inference-for-micropython
+- deeploy-dnn-compiler-for-heterogeneous-socs
+- stm32-bare-metal-code-generator
+- stm32-ai-model-zoo-services
 ---
 
 ## Overview

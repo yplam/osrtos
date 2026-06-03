@@ -28,6 +28,13 @@ topics:
 isShow: true
 createdAt: '2026-04-18T01:29:35+00:00'
 updatedAt: '2026-04-18T01:29:35+00:00'
+relatedProjects:
+- led-controller-esp32-hub75e-led-matrix-controller
+- cybergear-ros2-controller
+- wireless-3d-touch-probe-edge-finder-for-cnc-vmc-machines
+- ic-705-ci-v-band-decoder-and-transverter-controller
+- flowshutter
+- h747-camera-dual-core-stm32h747-camera-and-display-system
 ---
 
 ## Bridging the Gap in Cinema Focusing

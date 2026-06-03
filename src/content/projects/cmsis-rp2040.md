@@ -22,6 +22,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- rp2040-freertos-template
+- pico-zephyr-project
+- lvgl-port-for-raspberry-pi-pico-mdk-arm
+- pico-rtic-template
+- pico-demos-for-rp2040
+- micropico-visual-studio-code-extension
 ---
 
 Setting up a development environment for the Raspberry Pi Pico (RP2040) often involves manually installing the ARM GCC compiler, CMake, Ninja, and various SDK dependencies. The **cmsis-rp2040** project aims to streamline this process by providing a template that bridges the gap between the official Raspberry Pi Pico SDK and the Open-CMSIS-Pack ecosystem.

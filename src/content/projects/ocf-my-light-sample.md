@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- home-smart-mesh-sdk-for-thingy53
+- eclipse-threadx-iot-devkit-starter-application
+- m5nanoc6-zigbee-test
+- openthread-rtos
+- contiki-simple-traffic-light
+- mbed-os-client-example
 ---
 
 ## Overview

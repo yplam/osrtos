@@ -22,6 +22,13 @@ isShow: true
 image: /202601/cardputer.webp
 createdAt: '2026-01-22'
 updatedAt: '2026-01-22'
+relatedProjects:
+- colibri-wallet
+- trezor-firmware
+- esp32-mfa-authenticator
+- securegen
+- sparkminer
+- sonicrypt
 ---
 
 ## Overview

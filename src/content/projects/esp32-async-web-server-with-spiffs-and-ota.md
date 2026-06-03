@@ -23,6 +23,13 @@ star: 16
 lastUpdated: '2021-08-09'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp32-ota-firmware-update-and-file-management
+- esp-async-http-update-server
+- esp-fs-webserver
+- esp32-webserver-with-firebase-integration
+- esp32-asyncwebserver-file-upload-example
+- esp32-web-server-using-spiffs
 ---
 
 Developing for the ESP32 often involves creating a web interface to interact with the device. This project, **ESP32_ASYNC_WEB_SERVER_SPIFFS_OTA**, provides a robust template for building a high-performance, asynchronous web server that handles everything from basic file serving to remote firmware updates.

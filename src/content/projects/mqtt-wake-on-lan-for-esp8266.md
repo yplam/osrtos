@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- losant-mqtt-example-for-mongoose-os
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- losant-mqtt-mongoose-os-example
+- coffee-bin-mqtt
+- mongoose-os-button-switch-for-aws-iot
+- esp8266-home-automation
 ---
 
 The mosmqtt_wakeonlan project provides a streamlined solution for remotely powering on computers using the Wake-on-LAN (WoL) protocol. By leveraging the ESP8266 microcontroller and the Mongoose OS framework, this application acts as a bridge between the internet (via MQTT) and a local area network.

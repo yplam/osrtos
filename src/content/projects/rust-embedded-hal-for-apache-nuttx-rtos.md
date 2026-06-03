@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rust-i2c-driver-for-bosch-bme280-on-apache-nuttx
+- rust-stub-library-for-apache-nuttx
+- rust-test-app-for-apache-nuttx-os
+- bl602-gpio-expander-for-apache-nuttx
+- pinedio-stack-bl604-on-apache-nuttx-rtos
+- rust-embedded-examples
 ---
 
 ## Bridging Rust and Apache NuttX

@@ -26,6 +26,13 @@ isShow: true
 image: /202601/s32k344-autosar.webp
 createdAt: '2026-01-14'
 updatedAt: '2026-01-14'
+relatedProjects:
+- wute-dashboard-for-formula-student-electric
+- ly-steering-wheel-meterbox
+- arm-control-framework-acorns-rover
+- alfa-romeo-giulia-dashboard-info-display-for-esp32-s3
+- toyota-rav4-climate-control-panel-lin-bus-interface
+- rcs-avr-relay-control-system-with-sms
 ---
 
 ## Overview

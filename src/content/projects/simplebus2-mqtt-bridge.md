@@ -27,6 +27,13 @@ isShow: true
 image: /202602/simplebus2-mqtt-bridge.webp
 createdAt: '2026-02-18'
 updatedAt: '2026-02-18'
+relatedProjects:
+- doorman-s3
+- genius-gateway
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- esphome-modbus-tcp-to-rtu-bridge
+- comfosense-touch-zehnder-comfoair-q350-mqtt-bridge-controller
+- esp32-jarolift-controller
 ---
 
 ## Overview

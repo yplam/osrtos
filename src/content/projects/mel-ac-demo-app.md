@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mel-ac-library-for-mongoose-os
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- ac-control
+- losant-mqtt-mongoose-os-example
+- losant-mqtt-example-for-mongoose-os
 ---
 
 ## Overview

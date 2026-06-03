@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp32-freertos-examples
+- that-project
+- ft900-iot-and-smart-home-framework
+- mongoose-os-samples-for-esp32
+- e-yantra-iot-workshop
+- 100askteam-elinux-code-library
 ---
 
 ## Overview

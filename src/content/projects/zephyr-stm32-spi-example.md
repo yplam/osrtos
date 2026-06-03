@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zephyr-webusb-sample-for-stm32
+- zephyr-rtos-lorawan-node
+- zephyr-lvgl-sample-for-nrf52840-mdk
+- stm32f429-rtic-and-smoltcp-example-application
+- stm32-fatfs-and-freertos-integration
+- zephyr-rtos-ssd1306-custom-font-demo
 ---
 
 The `stm32-spi` project serves as a concise reference for developers looking to implement Serial Peripheral Interface (SPI) communication within the Zephyr RTOS ecosystem. Specifically targeting the STM32 Nucleo-F411RE development board, this example illustrates how to leverage Zephyr's driver model to handle low-level bus operations with minimal application-side complexity.

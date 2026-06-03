@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- 6lowpan-ble-bridge
+- networked-embedded-systems-nes-project
+- analysis-of-coap-using-flocklab
+- building-wireless-sensor-networks-with-openthread
+- apache-mynewt-sensor-network-for-stm32-blue-pill
+- 6lbr-on-telecontrolli-devices-x-ip4t-x-ip5
 ---
 
 ## Overview

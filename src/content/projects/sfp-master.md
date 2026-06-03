@@ -22,6 +22,13 @@ isShow: true
 image: /202603/sfp-master.webp
 createdAt: '2026-03-12'
 updatedAt: '2026-03-12'
+relatedProjects:
+- esp32-mpy-jama
+- fileferry-click2flash
+- esp8266-arduino-serial-uploader
+- bugbuster
+- tockloader
+- flipper-rs485-modbus-plugin
 ---
 
 ## Overview

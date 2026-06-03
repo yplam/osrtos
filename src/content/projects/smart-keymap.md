@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-04-03T05:30:57+00:00'
 updatedAt: '2026-04-03T05:30:57+00:00'
+relatedProjects:
+- clawtype
+- kmk-firmware
+- flexiblebutton
+- m5-crystal
+- hijelhid-blekeyboard
+- zmk-tri-state-behavior
 ---
 
 Smart Keymap is a library designed to handle the complex behavioral logic of "smart keyboards"—devices that go beyond simple typing to offer layers, tap-hold functionality, chords, and customized effects. By decoupling keymap declaration from the underlying firmware framework, it allows developers to build powerful keyboard software using the Nickel configuration language and the Rust programming language.

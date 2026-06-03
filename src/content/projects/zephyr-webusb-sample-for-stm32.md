@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zephyr-stm32-spi-example
+- mender-ota-example-for-stm32l4-and-zephyr-rtos
+- arm-mbed-os-blue-pill-usb-demo
+- stm32f429-rtic-and-smoltcp-example-application
+- zephyr-rtos-lorawan-node
+- zephyr-wi-fi-and-tcp-udp-connection-demo
 ---
 
 The Zephyr WebUSB sample application provides a practical implementation of the WebUSB API, allowing web applications to communicate directly with embedded hardware. This project specifically targets STM32 microcontrollers, leveraging the robust USB stack provided by the Zephyr RTOS to create a bridge between the physical device and a web browser.

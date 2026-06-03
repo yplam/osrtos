@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-04-02T11:53:44+00:00'
 updatedAt: '2026-04-02T11:53:44+00:00'
+relatedProjects:
+- raspberry-pi-pico-littlefs-usb-flash-memory-interface
+- sqlite-for-raspberry-pi-pico
+- littlefs-mbed-rp2040
+- 107-arduino-littlefs
+- littlefs2-idiomatic-rust-api-for-littlefs
+- tinyfs
 ---
 
 Managing storage on embedded devices often involves juggling different libraries for flash memory, SD cards, and various file system formats. For developers working with the Raspberry Pi Pico, pico-vfs simplifies this by providing a thin virtual file system (VFS) layer. It allows for the use of familiar POSIX and C standard file APIs—like `open`, `read`, `fopen`, and `fwrite`—regardless of the underlying hardware.

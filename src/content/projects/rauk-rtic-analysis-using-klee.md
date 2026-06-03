@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtic-scope
+- tock-test-harness
+- mkdbg-embedded-crash-diagnostics-over-uart
+- stm32-rtic-project-template
+- unicorn-emulator-for-apache-nuttx-on-avaota-a1-arm64-sbc
+- pico-rtic-template
 ---
 
 Rauk is a specialized tool designed to bring automated Worst-Case Execution Time (WCET) analysis to the [RTIC](https://rtic.rs) (Real-Time Interrupt-driven Concurrency) framework. Named after the column-like rock formations found in Scandinavia, Rauk provides a bridge between symbolic execution and physical hardware measurements to help developers understand the timing behavior of their embedded Rust applications.

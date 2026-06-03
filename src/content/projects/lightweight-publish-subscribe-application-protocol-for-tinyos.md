@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- mqtt-like-application-for-tinyos
+- compass-multihop-framework-for-tinyos
+- tinyos-social-distancing-application
+- openthread-rtos
+- tinyos-cooja-simulator-application
+- cse160-network-protocols-project-skeleton
 ---
 
 ## Overview

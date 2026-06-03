@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-04-04T10:06:56+00:00'
 updatedAt: '2026-04-04T10:06:56+00:00'
+relatedProjects:
+- esp32-ble-ota-arduino
+- dual-boot-esp32-with-platformio-and-arduino
+- esp32-ota-firmware-update-and-file-management
+- yaota8266-ota-bootloader
+- nimble-ota
+- bleota-esp32-ota-updates-over-ble
 ---
 
 As WLED firmware continues to grow in complexity and features, many older ESP32 devices find themselves trapped by legacy partition tables that don't offer enough space for the latest updates. Esp32Repartition provides a creative solution to this "storage wall" by allowing users to reconfigure their device's flash memory layout remotely.

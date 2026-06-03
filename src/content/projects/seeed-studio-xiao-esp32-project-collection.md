@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-04-02T23:23:26+00:00'
 updatedAt: '2026-04-02T23:23:26+00:00'
+relatedProjects:
+- xiao-esp32c6-sketches
+- super-mini-esp32-c3-arduino-and-platformio-sketches
+- that-project
+- jc2432w328-microcontroller-board-documentation
+- universal-maker-sensor-kit
+- seeed-home-assistant-discovery
 ---
 
 The Seeed Studio XIAO series has gained significant popularity in the embedded world due to its thumb-sized form factor and impressive power-to-size ratio. This repository serves as an extensive library of practical implementations and firmware examples specifically tailored for the ESP32-based members of the XIAO family: the XIAO ESP32C3, the XIAO ESP32S3 (including the Sense variant), and the newer XIAO ESP32C6.

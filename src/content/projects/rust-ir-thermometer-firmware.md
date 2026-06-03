@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pomia-rs
+- airgradient-pro-rust-firmware
+- stm32f103-thermometer-and-data-logger
+- pinetime-rs
+- sensilo-ble-sensor-node
+- b-l475e-iot01a-discovery-board-support-crate
 ---
 
 ## Overview

@@ -23,6 +23,13 @@ isShow: true
 image: /202602/openlap.webp
 createdAt: '2026-02-04'
 updatedAt: '2026-02-04'
+relatedProjects:
+- nearplane-adsb-tracker
+- euc-dash-esp32-dashboard
+- avem
+- fpv-drone-stm32f411-flight-controller
+- drone-stm32f1
+- flightradar24-ttgo
 ---
 
 ## Overview

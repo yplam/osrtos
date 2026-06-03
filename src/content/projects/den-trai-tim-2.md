@@ -15,6 +15,13 @@ version: v2.0
 lastUpdated: '2018-08-28'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- rainnow-core
+- moonlight-8266
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- iot-framework-for-nodemcu
+- sonoff-http-firmware
+- leilei-mongoose-os-sensing-device
 ---
 
 Den Trai Tim 2 (Heart Lamp 2) is a creative embedded project designed to control a heart-shaped LED arrangement. Built specifically for the ESP8266 platform, this project leverages the power of Mongoose OS to create a modern, connected device experience. By using Mongoose OS, the developer has moved away from traditional low-level C programming in favor of a more accessible stack involving JavaScript and web technologies.

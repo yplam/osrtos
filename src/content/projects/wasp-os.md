@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- hypnos
+- pinetime-zephyr-firmware
+- bosmoment-pinetime-firmware-applications
+- infinitime
+- pinetime-rs
+- twatch-v3-firmware-for-esp32
 ---
 
 # Wasp-os: A Python-Powered Smartwatch Experience

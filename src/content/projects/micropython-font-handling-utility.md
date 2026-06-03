@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-st7789-lcd-driver
+- micropython-st7735-tft-lcd-driver
+- micropython-ssd1306-image-display
+- lv-font-conv
+- lvgl-utilities
+- micropython-lib
 ---
 
 ## Overview

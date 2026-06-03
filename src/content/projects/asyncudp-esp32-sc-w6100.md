@@ -33,6 +33,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- asyncudp-esp32-ethernet
+- asyncudp-ethernet
+- asyncudp-teensy41
+- asyncudp-rp2040w
+- asyncwebserver-esp32-sc-enc
+- asyncwebserver-esp32-w5500
 ---
 
 ### Introduction to AsyncUDP_ESP32_SC_W6100

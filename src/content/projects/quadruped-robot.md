@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f103-quadruped-robot
+- tny-360-quadruped-robot
+- hexapod
+- mobile-mecanum-4wd-robot
+- scara-drawing-robot
+- roarm-m2-robotic-arm-control-firmware
 ---
 
 ## Overview

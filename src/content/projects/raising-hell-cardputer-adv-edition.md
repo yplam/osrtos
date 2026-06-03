@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-04-19T00:04:58+00:00'
 updatedAt: '2026-04-19T00:04:58+00:00'
+relatedProjects:
+- tamafi-wifi-powered-virtual-pet
+- pixel-pets
+- esp32-virtual-cat-project
+- deskpet-for-m5stack-cardputer
+- deskpet
+- xterminal-esp32-handheld
 ---
 
 Raising Hell is a virtual pet experience designed for the M5Stack Cardputer ADV, bringing an infernal twist to the classic Tamagotchi-style gameplay. Players are tasked with raising an infernal companion through various life stages, managing its survival through feeding, play, and sleep cycles. The game explores themes of growth, decay, and resurrection, all within the portable form factor of the ESP32-powered Cardputer.

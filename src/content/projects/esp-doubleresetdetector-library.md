@@ -34,6 +34,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp-multiresetdetector
+- doubleresetdetector-generic
+- multiresetdetector-generic-library
+- espsavecrashspiffs
+- esp8266sdupdater
+- rtcmemory
 ---
 
 ## Overview

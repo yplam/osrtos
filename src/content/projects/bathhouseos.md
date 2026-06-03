@@ -28,6 +28,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- bathhouseos-core-control-panel
+- bathos
+- aquarios-project-aquarius
+- homebrew-tinyos-for-msp430
+- knu-usn-automatic-ventilation-system
+- esphome-plant-watering
 ---
 
 ### Automating the Most Private Room in the House: An Introduction to BathHouseOS

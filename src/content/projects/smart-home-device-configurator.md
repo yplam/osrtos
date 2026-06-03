@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mbed-vscode-tools
+- home-smart-mesh-sdk-for-thingy53
+- clion-for-stm32
+- mbed-tools
+- micropython-smarthome-node-pysmartnode
+- supladevice-library
 ---
 
 The Smart Home Device Configurator (`devconf`) is a specialized toolset designed to streamline the development of IoT devices within a smart home ecosystem. By bridging the gap between high-level device descriptions and low-level firmware implementation, it allows developers to focus on the unique features of their hardware rather than the boilerplate of communication protocols and configuration management.

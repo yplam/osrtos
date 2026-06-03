@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32-pppos-client-example
+- losant-mqtt-mongoose-os-example
+- mbed-os-wifi-sample-with-esp8266
+- losant-mqtt-example-for-mongoose-os
+- mongoose-os-samples-for-esp32
+- mongoose-os-aws-iot-uart-and-thing-shadow-example
 ---
 
 ## Overview

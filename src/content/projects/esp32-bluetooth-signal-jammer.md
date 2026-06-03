@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- esp32-2-4ghz-jammer
+- esp32-bluejammer
+- nrf24-bluejammer
+- c3mini-bluejammer
+- nrf24-jammer
+- espnrf24-jammer
 ---
 
 The ESP32 Bluetooth Jammer is a hardware-focused project that demonstrates how common off-the-shelf components can be used to manipulate wireless signals in the 2.4GHz spectrum. By combining the processing power of an ESP32 with the transmission capabilities of NRF24L01 modules, this project creates a device capable of disrupting Bluetooth and WiFi communications.

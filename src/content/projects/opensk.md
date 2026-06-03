@@ -27,6 +27,13 @@ isShow: true
 image: /202601/opensk.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32-u2f-security-key
+- open-authenticator-app
+- smartlock-for-disco-l475vg-iot01a
+- securegen
+- pinetime-tock
+- esp32-mfa-authenticator
 ---
 
 ## Overview

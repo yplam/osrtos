@@ -22,6 +22,13 @@ isShow: true
 image: /202602/opensleep.webp
 createdAt: '2026-02-27'
 updatedAt: '2026-02-27'
+relatedProjects:
+- geekmagic-open-firmware
+- esp32-bus-pirate
+- eight-sleep-control-with-m5stack-atoms3
+- esphome-components-for-miot-devices
+- airgradient-pro-rust-firmware
+- sks-airspy-ant-community-firmware
 ---
 
 ## Overview

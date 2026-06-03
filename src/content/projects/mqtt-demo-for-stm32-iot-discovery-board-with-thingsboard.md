@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- mbed-os-treasure-data-example
+- aws-iot-with-the-l475vg-iot01a-on-mbed-os
+- mongoose-os-environment-logger
+- mongoose-os-environmental-sensors-application
+- mbed-to-azure-iot-hub
+- mbed-os-6-stm32-iot-ethernet-controller
 ---
 
 ## Overview

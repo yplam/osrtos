@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- loadng-implementation-on-contiki-os
+- contiki-lora-tsch-project
+- msf-protocol-simulation-for-contiki-ng
+- rl-tsch-implementation-for-contiki-ng
+- compass-multihop-framework-for-tinyos
+- computer-network-with-contiki-ng
 ---
 
 ## Overview

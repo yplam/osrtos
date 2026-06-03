@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-21'
 updatedAt: '2026-01-21'
+relatedProjects:
+- sparkfun-micropython-opencv
+- fashion-mnist-on-esp32-with-tensorflow-lite-micro
+- ncnn-mp-neural-network-inference-for-micropython
+- micropython-camera-api-for-esp32
+- micropython-camera-driver-for-esp32
+- maixface
 ---
 
 ## Bringing Deep Learning to MicroPython on ESP32

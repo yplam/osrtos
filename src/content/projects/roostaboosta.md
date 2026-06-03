@@ -14,6 +14,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- w601-rt-thread-alarm-clock
+- desk-weather-clock-geekmagic-s3
+- wt32-sc01-plus-smart-desk-companion
+- stm32-weather-station
+- erikaos-online-weather-station
+- esptimecast
 ---
 
 ## Overview

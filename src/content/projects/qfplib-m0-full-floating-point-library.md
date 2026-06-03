@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- qfplib-m3-floating-point-library
+- qfplib-m0-tiny
+- rt-memcpy-cortex-m-assembly-accelerated-version
+- rt-thread-full-featured-vsnprintf-package
+- rtt-math-mathematics-library-for-rt-thread
+- stm32-prototyping-libraries
 ---
 
 ## High-Performance Floating-Point for Cortex-M0

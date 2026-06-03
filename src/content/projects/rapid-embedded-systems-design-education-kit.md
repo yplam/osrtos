@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- introduction-to-soc-design-education-kit
+- learning-stm32
+- ardurtos
+- dallas-formula-racing-embedded-onboarding
+- echronos-on-stm32f4x-nucleo-board
+- h-c-l-p-tr-nh-stm32f1
 ---
 
 The Rapid Embedded Systems Design Education Kit is a flagship offering from the Arm University Program, designed to provide academics and teaching staff with a complete set of materials for undergraduate courses. The kit focuses on the fundamental principles of accelerating embedded systems development and rapid prototyping using modern commercial APIs and hardware.

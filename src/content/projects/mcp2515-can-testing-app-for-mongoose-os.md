@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- max17263-test-app-for-mongoose-os
+- hx711-testing-app-for-mongoose-os
+- spirit-motor-driver-library
+- uart-out-test-app
+- ltc68xx-battery-monitoring-library-for-mongoose-os
+- hx711-library-for-mongoose-os
 ---
 
 ## Overview

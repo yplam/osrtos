@@ -21,6 +21,13 @@ isShow: true
 image: /202605/m5dial-lvgl.webp
 createdAt: '2026-05-07T12:14:33+00:00'
 updatedAt: '2026-05-07T12:14:33+00:00'
+relatedProjects:
+- lvgl-port-for-esp32
+- lvgl-port-for-m5stack-core2
+- lvgl-joystick-library
+- esp-lvgl
+- lvgl-display-and-touchpad-drivers-for-esp32
+- esphome-lvgl-component
 ---
 
 The M5Stack Dial is a unique development kit featuring a circular 1.28-inch TFT touchscreen, a rotary encoder, and an ESP32-S3 StampS3 module. M5Dial-LVGL provides a streamlined port of the popular LVGL (Light and Versatile Graphics Library) specifically for this hardware, making it significantly easier to create sophisticated user interfaces for rotary-input devices.

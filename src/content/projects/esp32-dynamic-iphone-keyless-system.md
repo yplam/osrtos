@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-21'
 updatedAt: '2026-01-21'
+relatedProjects:
+- opencarkey
+- freebees-access-control-for-esp32
+- esphome-tesla-ble
+- blynk-async-esp32-bt-wf
+- sistema-de-apertura-de-port-n-con-m-dulo-gsm
+- smart-home-automation-with-freertos-and-esp32
 ---
 
 ## Overview

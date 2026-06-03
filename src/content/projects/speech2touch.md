@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- la-marzocco-round-controller
+- smartspeaker
+- espgaggia-smart-coffee-machine-controller
+- speech-recognition-on-stm32-using-machine-learning
+- diy-smart-coffee-and-espresso-scale
+- esp32-voice-assistant
 ---
 
 ## Overview

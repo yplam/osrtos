@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32cubeh7rs-mcu-firmware-package
+- x-cube-azrtos-h7-azure-rtos-software-expansion
+- stm32cuben6-mcu-firmware-package
+- x-cube-azrtos-f7-azure-rtos-software-expansion-for-stm32cube
+- stm32cubewb0-mcu-firmware-package
+- x-cube-azrtos-f4-azure-rtos-software-expansion-for-stm32cube
 ---
 
 The STM32H5 Classic Core Middleware (CoreMW) package is a specialized firmware collection from STMicroelectronics, designed to provide a robust foundation for developers working with the STM32H5 series of microcontrollers. This package is unique in that it is distributed exclusively via GitHub, offering a curated set of middleware stacks and pre-configured application examples that are not part of the standard STM32CubeMX generation flow.

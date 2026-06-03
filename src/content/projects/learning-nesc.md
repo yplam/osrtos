@@ -32,6 +32,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- wireless-sensor-network-and-tinyos-documentation
+- tinyos-nesc-telosb-programs
+- snu-2d-programming-tools-ide-for-nesc
+- experiments-with-c-streams-for-beginners
+- cse160-network-protocols-project-skeleton
+- mbed-os-unipg-samples-1
 ---
 
 ## Overview

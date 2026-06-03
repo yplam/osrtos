@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- freertos-mqtt-client-demo
+- esp32-freertos-examples
+- coremqtt-agent-library
+- mongoose-os-samples-for-esp32
+- stm32-lwip-mqtt-demo
+- unipg-mbed-os-samples
 ---
 
 Managing MQTT connections in a multi-threaded RTOS environment often presents a challenge: how do you allow multiple independent tasks to publish and subscribe without complex synchronization or multiple socket connections? The **coreMQTT Agent Demos** repository provides a blueprint for solving this using the coreMQTT Agent library.

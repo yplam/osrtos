@@ -18,6 +18,13 @@ star: 1
 lastUpdated: '2024-09-20'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- re4tinyos-reverse-engineering-for-tinyos
+- snu-2d-programming-tools-ide-for-nesc
+- visual-programming-for-zig-with-nuttx-sensors
+- compass-multihop-framework-for-tinyos
+- tinyos-role-for-ansible
+- cse160-network-protocols-project-skeleton
 ---
 
 Developing applications for Wireless Sensor Networks (WSNs) often involves navigating the complexities of TinyOS and its unique programming language, nesC. To address these challenges, **DSML4TinyOS** provides a model-driven round-trip engineering methodology designed to simplify the creation and management of TinyOS applications.

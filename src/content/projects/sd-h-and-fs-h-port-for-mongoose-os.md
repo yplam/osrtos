@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- hx711-library-for-mongoose-os
+- lis3dh-accelerometer-library-for-mongoose-os
+- max17263-library-for-mongoose-os
+- esp8266sdupdater
+- sd-card-spi-fatfs-for-esp8266-nonos-sdk
+- littlefs-for-esp-idf
 ---
 
 ## Overview

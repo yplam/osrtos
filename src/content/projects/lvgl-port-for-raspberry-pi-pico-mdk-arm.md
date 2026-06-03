@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- cmsis-rp2040
+- lvgl-demo-printer-for-raspberry-pi-3
+- lvgl-port-for-stm32f429-discovery-kit
+- lvgl-for-raspberry-pi-pico-hub75-led-matrix
+- lvgl-port-for-stm32f769-discovery
+- rp2040-lvgl-8-demo-with-ili9488-and-xpt2046
 ---
 
 ## Overview

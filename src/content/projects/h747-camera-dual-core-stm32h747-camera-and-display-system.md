@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- azurertos-dual-core-implementation-for-stm32h747
+- h747-weighing-station
+- stm32l476g-discovery-rtos-sensor-project
+- stm32h743-cmake-template
+- practice-project-for-stm32f746g-discovery
+- stm32n6-camera-capture-application
 ---
 
 ## Overview

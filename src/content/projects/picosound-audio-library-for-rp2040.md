@@ -39,6 +39,13 @@ topics:
 isShow: true
 createdAt: '2026-04-16T03:46:56+00:00'
 updatedAt: '2026-04-16T03:46:56+00:00'
+relatedProjects:
+- backgroundaudio
+- ultranet-to-i2s
+- arduino-pico
+- pico2dexed
+- esp32-s3-soundfont-sf2-sampler-synthesizer
+- pc-6001mkii-emulator-for-raspberry-pi-pico
 ---
 
 Generating high-quality audio on microcontrollers often presents a significant challenge: blocking operations. When a single CPU core is tasked with handling display updates, sensor polling, and flash memory writes alongside audio synthesis, the result is frequently audible stuttering or glitches. PicoSound addresses this fundamental issue on the Raspberry Pi Pico (RP2040) by implementing a dedicated dual-core architecture.

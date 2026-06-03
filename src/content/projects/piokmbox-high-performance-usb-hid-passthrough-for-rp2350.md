@@ -22,6 +22,13 @@ isShow: true
 image: /202604/adafruit_products_metro_rp2350_top.webp
 createdAt: '2026-04-19T00:02:43+00:00'
 updatedAt: '2026-04-19T00:02:43+00:00'
+relatedProjects:
+- pico-cec
+- hub75-dma-based-driver-for-raspberry-pi-pico
+- midi2piousbhub
+- hd2-macropad
+- dshare-hid
+- usbsnifferpio-for-rp2040
 ---
 
 PIOKMbox transforms the Raspberry Pi RP2350 into a sophisticated transparent USB HID bridge. By acting as a man-in-the-middle between a mouse or keyboard and a host PC, it allows for the seamless injection of synthetic inputs alongside physical hardware. The firmware is designed to be entirely invisible to the host computer, mirroring the original device's Vendor ID (VID), Product ID (PID), manufacturer strings, and product names.

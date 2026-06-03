@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- elevourer-portable-intelligent-electronic-load
+- stm32l476g-discovery-rtos-sensor-project
+- wute-dashboard-for-formula-student-electric
+- power-pico
+- noninvasive-glucometer
+- ch32v003-usb-meter
 ---
 
 The 2019 Chinese Undergraduate Electronics Design Contest (NUEDC) presented a unique challenge in Problem F: creating a device capable of accurately counting sheets of paper using non-contact methods. This repository showcases a highly successful implementation of a Paper Counting Display Device, which achieved a 100% accuracy rate for counts up to 50 sheets.

@@ -25,6 +25,13 @@ isShow: true
 image: /202605/StackChan_Minimal.webp
 createdAt: '2026-05-31T13:47:48+00:00'
 updatedAt: '2026-05-31T13:47:48+00:00'
+relatedProjects:
+- opentoys
+- diy-ai-voice-assistant-for-esp32-s3
+- nebaura-labs-mote
+- qbit
+- multi-modal-ai-assistant-on-raspberry-pi-5
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
 ---
 
 StackChan Minimal is a compact, open-source AI companion robot designed for the M5Stack AtomS3R platform. It serves as a physical interface for local AI services, allowing makers and developers to create interactive, "living" robots that can listen, think, and speak using state-of-the-art local models. By offloading heavy AI processing to external local servers, StackChan Minimal maintains a small footprint while offering sophisticated capabilities.

@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mongoose-os-app-skeleton
+- empty-mongoose-os-app
+- mongoose-os-app-on-stm32f446re
+- mongoose-os-cron-app-skeleton
+- common-tools-for-mongoose-os
+- uart-out-test-app
 ---
 
 ## Overview

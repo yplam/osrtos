@@ -24,6 +24,13 @@ isShow: true
 image: /202601/ESP32-C3_oled.webp
 createdAt: '2026-01-26'
 updatedAt: '2026-01-26'
+relatedProjects:
+- esp8266-oled-hw-364a-b-development-guide
+- lilygo-t-display-s3-boilerplate
+- lvgl-8-on-wt32-sc01-with-arduino
+- minimal-lcd-demonstration-on-esp-wrover-kit
+- thingpulse-oled-ssd1306-driver
+- jc4827w543-lvgl-v9-implementation
 ---
 
 The ESP32-C3 Supermini is a compact and cost-effective development board based on the RISC-V architecture. While these boards are widely available on various platforms, they often arrive with little to no technical documentation, particularly regarding the integrated 0.42-inch OLED display. This project addresses those documentation gaps by providing the necessary pin configurations and software workarounds to get the display running efficiently.

@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- rpl-network-authentication-simulation
+- crypto-implementations-example-for-contiki-os
+- tinyosids
+- deautherx
+- wifi-nightmare
+- building-wireless-sensor-networks-with-openthread
 ---
 
 ### Securing Wireless Sensor Networks with TinyOS

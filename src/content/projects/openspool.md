@@ -31,6 +31,13 @@ topics:
 isShow: true
 createdAt: '2026-04-04T10:14:30+00:00'
 updatedAt: '2026-04-04T10:14:30+00:00'
+relatedProjects:
+- klipper-esp32
+- ikedrybox-smart-3d-filament-dryer
+- advanced-filament-sensor-for-elegoo-carbon-centauri
+- freebees-access-control-for-esp32
+- open-display-firmware
+- td-free
 ---
 
 OpenSpool is designed to bring the convenience of automatic filament identification to any 3D printer, mimicking the seamless experience of the Bambu Lab AMS system. By adhering NFC stickers to filament spools and using an ESP32-based reader, users can automatically update printer settings simply by touching the spool to the device.

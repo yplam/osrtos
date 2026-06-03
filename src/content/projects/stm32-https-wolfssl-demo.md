@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f7-https-client
+- stm32-lwip-mqtt-demo
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- stm32h745-ethernet-with-lwip-and-freertos
+- mqtt-client-and-https-server-using-mbedtls
+- lwip-http-server-netconn-rtos-application
 ---
 
 The STM32_HTTPs_WolfSSL project provides a comprehensive demonstration of implementing secure HTTPS communication on STM32 microcontrollers. By integrating a robust stack consisting of FreeRTOS, LwIP, and WolfSSL, this project enables embedded devices to perform secure web requests, which is a fundamental requirement for modern IoT applications.

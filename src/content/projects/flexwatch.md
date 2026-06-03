@@ -12,6 +12,13 @@ rtos: ''
 isShow: true
 createdAt: '2026-03-31'
 updatedAt: '2026-03-31'
+relatedProjects:
+- gateway-smartwatch
+- leta
+- zswatch
+- chronos-watchy
+- zephyrwatch
+- barebones-watch-face-for-pinetime
 ---
 
 Most modern smartwatches are essentially tiny smartphones strapped to your wrist, constantly buzzing with notifications and requiring daily charging. Flexwatch takes a different approach. Designed as a "low stress" wearable, this project prioritizes readability, battery longevity, and a minimalist user experience through the use of electronic paper display (EPD) technology and efficient hardware.

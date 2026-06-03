@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- x-cube-azrtos-l5-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-f7-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-g4-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-wb-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-f4-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-g0-azure-rtos-software-expansion-for-stm32cube
 ---
 
 The X-CUBE-AZRTOS-L4 package represents a significant bridge between the STM32Cube ecosystem and Microsoft's Azure RTOS suite. Specifically designed for the STM32L4 series of ultra-low-power microcontrollers, this expansion package simplifies the process of building high-performance, connected, and secure embedded applications.

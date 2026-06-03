@@ -20,6 +20,13 @@ isShow: true
 image: /202601/pra32-u2-pico-audio-pack.webp
 createdAt: '2026-01-27'
 updatedAt: '2026-01-27'
+relatedProjects:
+- esp32-soundfont-sf2-sampler-synthesizer
+- stm32f4-digital-synthesizer
+- usbsid-pico
+- esp32-custom-hardware-synthesizer
+- pico2dexed
+- esp32-s3-soundfont-sf2-sampler-synthesizer
 ---
 
 ## Overview

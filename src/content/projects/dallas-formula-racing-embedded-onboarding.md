@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-02-16'
 updatedAt: '2026-02-16'
+relatedProjects:
+- learning-stm32
+- rapid-embedded-systems-design-education-kit
+- zephyr-rtos-tutorial-for-beginners
+- introduction-to-soc-design-education-kit
+- h-c-l-p-tr-nh-stm32f1
+- mbed-os-unipg-samples-1
 ---
 
 The Dallas Formula Racing Embedded Onboarding repository is a comprehensive educational resource designed to transition new members into the world of professional embedded systems development. Rather than providing a simple set of instructions, the project utilizes a structured learning progression inspired by Bloom’s Taxonomy, guiding students from basic conceptual understanding to the practical application of complex engineering principles.

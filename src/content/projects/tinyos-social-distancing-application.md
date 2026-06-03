@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- tinyos-cooja-simulator-application
+- lightweight-publish-subscribe-application-protocol-for-tinyos
+- internet-of-things-home-challenges
+- mqtt-like-application-for-tinyos
+- contiki-simple-traffic-light
+- smart-orchard
 ---
 
 The "Keep your distance!" project is a software prototype designed to facilitate social distancing through the use of wireless sensor networks. Developed using TinyOS, the application leverages the communication capabilities of embedded motes to monitor proximity between individuals in real-time. The system is validated through the Cooja simulator and integrates with modern IoT tools like Node-Red and IFTTT to bridge the gap between low-level sensor data and user-facing notifications.

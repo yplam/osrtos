@@ -36,6 +36,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- espmonitor-iot-environment-monitoring-system
+- energy-consumption-monitor-energymon-c
+- tanksync
+- espmonitor-iot-environmental-monitoring-system
+- light-watcher
+- energy-consumption-monitor
 ---
 
 ## Overview

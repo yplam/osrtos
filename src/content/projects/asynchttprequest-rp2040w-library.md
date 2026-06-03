@@ -30,6 +30,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- asynchttprequest-esp32-ethernet
+- asynchttpsrequest-esp32-ethernet
+- asynchttpsrequest-generic
+- asyncudp-rp2040w
+- rp2040-pico-w-esp8285-wifi-library
+- asyncdnsserver-rp2040w
 ---
 
 The Raspberry Pi Pico W has become a favorite for IoT developers, but handling network requests efficiently remains a challenge. Standard blocking HTTP clients can stall your main loop, leading to unresponsive sensors or UI. The **AsyncHTTPRequest_RP2040W** library addresses this by providing a fully asynchronous HTTP layer for the RP2040W, allowing developers to perform REST communication without blocking the execution of their code.

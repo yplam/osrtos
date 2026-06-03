@@ -17,6 +17,13 @@ star: 0
 lastUpdated: '2020-06-01'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- mongoose-os-mlx90614-ir-temperature-monitor
+- hx711-testing-app-for-mongoose-os
+- max17263-test-app-for-mongoose-os
+- esp-temperature-to-losant-using-mongoose-os
+- esp8266-mlx90614-temperature-monitor
+- mcp2515-can-testing-app-for-mongoose-os
 ---
 
 Integrating environmental sensors into IoT applications is a fundamental task for many developers. The **ds18b20-mgos-test** project provides a clear, functional example of how to achieve this using the DS18B20 digital thermometer and the Mongoose OS framework. 

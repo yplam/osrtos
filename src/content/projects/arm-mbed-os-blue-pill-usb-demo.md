@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- bluepill-board-support-for-mbed-os-6
+- stm32-libopencm3-freertos-platformio-template
+- minimal-mbed-os-template-for-stm32f103
+- mbed-os-6-support-for-weact-black-pill-stm32f401cc
+- ip-over-usb
+- stm32f103c8-freertos-cmsis-blink-example
 ---
 
 The "Blue Pill" STM32F103C8 board is a staple in the hobbyist and professional embedded community due to its low cost and versatile ARM Cortex-M3 core. This project provides a practical demonstration of integrating the Arm Mbed OS USB stack with this hardware, enabling developers to implement USB-based communication protocols efficiently.

@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- freertos-mqtt-client-demo
+- stm32-lwip-mqtt-demo
+- stm32-https-wolfssl-demo
+- stm32h750b-dk-touchgfx-freertos-mqtt-example
+- mbed-to-ibm-watson-iot-platform
+- lwip-http-server-netconn-rtos-application
 ---
 
 ## Overview

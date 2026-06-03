@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-02-26'
 updatedAt: '2026-02-26'
+relatedProjects:
+- raspberry-pi-pico-w-and-pico-2-w-fota-bootloader
+- mender-ota-example-for-stm32l4-and-zephyr-rtos
+- ble-based-wi-fi-provisioning-for-raspberry-pi-pico-w-pico-2-w
+- yaota8266-ota-bootloader
+- wiznet-freertos-sdk-for-raspberry-pi-pico-ethernet
+- pico-w-connection-manager-demo
 ---
 
 ## Overview

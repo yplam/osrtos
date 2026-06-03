@@ -19,6 +19,13 @@ isShow: true
 image: /202601/buttfinity.webp
 createdAt: '2026-01-22'
 updatedAt: '2026-01-22'
+relatedProjects:
+- gesture-detecting-macro-keyboard
+- hd2-macropad
+- eight-sleep-control-with-m5stack-atoms3
+- blubutton
+- esphome-cosori-kettle-ble-component
+- esp32-jarolift-controller
 ---
 
 # Buttfinity: Bringing Smart Controls to Gridfinity

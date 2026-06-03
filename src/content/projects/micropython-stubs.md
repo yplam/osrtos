@@ -30,6 +30,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- micropython-stubber
+- micropico-visual-studio-code-extension
+- awesome-micropython
+- micropython-samples-and-drivers
+- micropython-examples-for-01studio-development-boards
+- micropython-lib
 ---
 
 ## Enhancing the MicroPython Development Experience

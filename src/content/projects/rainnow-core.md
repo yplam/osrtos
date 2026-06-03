@@ -14,6 +14,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mongoose-os-ws2812b-driver
+- moonlight-8266
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- hyperk
+- mongoose-os-configurable-sensor-node
+- esp8266-home-automation
 ---
 
 ## Overview

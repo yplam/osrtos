@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rust-embedded-hal-for-apache-nuttx-rtos
+- apache-nuttx-driver-for-bosch-bme280-sensor
+- rust-test-app-for-apache-nuttx-os
+- rust-stub-library-for-apache-nuttx
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
+- hynitron-cst816s-touch-controller-driver-for-apache-nuttx
 ---
 
 ## Overview

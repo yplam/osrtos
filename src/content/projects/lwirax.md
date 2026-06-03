@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lwip-for-esp8266
+- asynchttpsrequest-esp32-ethernet
+- asyncwebserver-ethernet
+- embeddedmqttbroker
+- https-server-generic-library
+- libwebsockets
 ---
 
 ## Overview

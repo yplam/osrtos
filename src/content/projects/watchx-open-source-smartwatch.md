@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- watchx-ii-smart-watch
+- ov-watch
+- opentimewatch-os
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
+- leta
+- zephyrwatch
 ---
 
 WatchX is an ambitious open-source smartwatch project designed for high performance and smooth user experiences. Built around the STM32F411CEU6 microcontroller, it achieves fluid animations at over 60 frames per second, making it a standout example of what is possible on modern embedded hardware.

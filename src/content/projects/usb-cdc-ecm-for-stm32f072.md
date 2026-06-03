@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- ip-over-usb
+- d21ecm-usb-cdc-ecm-for-samd21
+- stm32-bluepill-rndis-device-with-lwip
+- d21eem-usb-cdc-eem-for-samd21
+- d21rndis-usb-rndis-for-samd21
+- stm32duino-lwip
 ---
 
 ## Overview

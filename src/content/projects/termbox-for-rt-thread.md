@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rt-u8g2-u8g2-graphics-library-for-rt-thread
+- littlevgl2rtt
+- micro-ros-for-rt-thread
+- aclock-for-rt-thread
+- rt-thread-fbtft-framebuffer-drivers-for-tft-lcds
+- arduino-rt-thread-library
 ---
 
 ## Overview

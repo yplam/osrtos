@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-mpu9x50-imu-driver
+- micropython-mpu-9250-i2c-driver
+- mpu6050-interfacing-library-for-esp32-esp-idf
+- filtered-inertial-rotation-module-firm
+- stm32l476g-discovery-rtos-sensor-project
+- micropython-port-for-rt-thread
 ---
 
 ## Overview

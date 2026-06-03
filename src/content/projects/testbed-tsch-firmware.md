@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sx128x-lora-transceiver-driver-for-contiki-ng
+- x-cube-subg2-firmware-package
+- contiki-lora-tsch-project
+- meshtnc
+- sx127x-lora-transceiver-driver-for-contiki-ng
+- esp32-mesh-control
 ---
 
 The Testbed TSCH Firmware project provides a specialized suite of firmware modules designed for conducting experiments with Time-Slotted Channel Hopping (TSCH) networks. Developed for the Contiki-NG environment, these firmwares are optimized for the OpenMote-B platform, offering a structured way to collect transmission data, monitor network performance, and automate the deployment process across multiple nodes.

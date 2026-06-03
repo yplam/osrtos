@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- littlefs-mbed-rp2040
+- fs-nano33ble
+- 107-arduino-littlefs
+- arduino-littlefs-spimemory-wrapper
+- littlefs-for-esp-idf
+- littlefs2-idiomatic-rust-api-for-littlefs
 ---
 
 ## Overview

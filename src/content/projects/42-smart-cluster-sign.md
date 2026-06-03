@@ -23,6 +23,13 @@ isShow: true
 image: /202603/smart-cluster-sign.webp
 createdAt: '2026-03-02'
 updatedAt: '2026-03-02'
+relatedProjects:
+- esphome-e-ink-4-color-dashboard
+- e-ink-meeting-room-schedule-display
+- esp-e-paper-component
+- c-quiz-on-e-ink-display
+- e-paper-esp32-c6-firmware
+- home-assistant-epaper-remote
 ---
 
 ## Overview

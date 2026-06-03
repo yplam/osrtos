@@ -11,6 +11,13 @@ rtos: freertos
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- freertos-for-raspberry-pi-3-64-bit
+- rp2040-freertos-template
+- raspberry-pi-rtos-rpi-rtos
+- freertos-port-for-risc-v
+- rust-fel4-workspace-for-raspberry-pi-3
+- micropython-for-bare-metal-raspberry-pi
 ---
 
 The RaspberryPi-FreeRTOS project provides a foundational port of the FreeRTOS real-time operating system to the Raspberry Pi. While the Raspberry Pi is often associated with full-featured Linux distributions, this project enables developers to leverage the deterministic, low-latency capabilities of an RTOS on the platform's ARM-based hardware.

@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- thingpulse-oled-ssd1306-driver
+- rt-thread-fbtft-framebuffer-drivers-for-tft-lcds
+- rt-u8g2-u8g2-graphics-library-for-rt-thread
+- sgp30-gas-sensor-driver-for-rt-thread
+- lvgl-display-and-touchpad-drivers-for-esp32
+- dhtxx-sensor-driver-for-rt-thread
 ---
 
 ## Overview

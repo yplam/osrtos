@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-02-16'
 updatedAt: '2026-02-16'
+relatedProjects:
+- smart-led
+- esp32-32x32-rgb-matrix-controller
+- moonlight-8266
+- esp8266-home-automation
+- neopixel-library-for-raspberry-pi-pico
+- openhoop
 ---
 
 RGBLight is a comprehensive IoT solution designed to bring sophisticated lighting effects to various hardware platforms. Built using the Arduino framework, the project targets popular microcontrollers including the ESP8266, ESP32 (including C3 and S3 variants), and the Raspberry Pi Pico W. It is more than just a simple LED driver; it is a full-featured ecosystem that includes a firmware core, a web-based management interface, and a dedicated animation editor.

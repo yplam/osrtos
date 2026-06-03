@@ -26,6 +26,13 @@ isShow: true
 image: /202601/sampler-synthesizer.webp
 createdAt: '2026-01-21'
 updatedAt: '2026-01-21'
+relatedProjects:
+- esp32-soundfont-sf2-sampler-synthesizer
+- esp32-sd-sampler
+- esp32-s3-sd-sampler
+- esp32-custom-hardware-synthesizer
+- esper-cdp
+- esp32-host-midi
 ---
 
 The ESP32-S3 SoundFont (SF2) Sampler Synthesizer is a specialized firmware designed to transform the ESP32-S3 microcontroller into a powerful wavetable instrument. By leveraging the specific hardware advantages of the S3 variant—most notably its expanded PSRAM and native USB capabilities—this project provides a low-cost solution for high-quality audio synthesis.

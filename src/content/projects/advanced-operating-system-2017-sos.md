@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- rust-sel4-toy-system-for-i-mx6-sabre-lite
+- sofa-operating-system-framework
+- minios-esp
+- apache-nuttx-rtos-for-pinephone
+- mos-rtos
+- phoenix-rtos-project
 ---
 
 The **Advanced Operating System 2017** project represents a deep dive into microkernel-based system design. Developed as part of the UNSW COMP9242 course, this repository contains the implementation of **SOS (Simple Operating System)**, a system server that runs on top of the **seL4 microkernel**. While seL4 provides the fundamental mechanisms for isolation and capability-based resource management, SOS provides the higher-level abstractions—such as file systems, networking, and process management—that turn a microkernel into a functional operating environment.

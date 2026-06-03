@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- uc-modbus-for-rt-thread
+- mbed-os-maxon-epos4-motor-controller-driver
+- micro-ros-for-rt-thread
+- simple-open-ethercat-master-library-rtnet-version
+- c-common-for-rt-thread
+- rt-rosserial-for-rt-thread
 ---
 
 CanFestival-RTT brings the power of the CanFestival CANopen protocol stack to the RT-Thread ecosystem. As a fork of the CanFestival-3 project, this package is designed to be a "plug-and-play" solution for developers needing robust CANopen functionality on RT-Thread-supported hardware. By leveraging RT-Thread's native driver interfaces, it provides a standardized way to implement CANopen master or slave nodes across various MCU architectures.

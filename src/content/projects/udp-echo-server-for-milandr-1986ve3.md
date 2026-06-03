@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- udp-echo-server-for-stm32f407-and-enc28j60
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- stm32h745-ethernet-with-lwip-and-freertos
+- transfer-files-over-ethernet-with-stm32-and-freertos
+- embedded-proto-mbed-os-to-server-example
+- stm32f429-nucleo-lwip-and-freertos-template
 ---
 
 ## Overview

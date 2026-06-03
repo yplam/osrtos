@@ -17,6 +17,13 @@ star: 1
 lastUpdated: '2019-11-29'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp32-fatfs-image-tool-and-example
+- esp32-spiffs-with-directory-support-example
+- esp32-fatfs-storage-example
+- esp32-web-server-using-spiffs
+- esp32-asyncwebserver-file-upload-example
+- esp32-monaco-editor-spiffs
 ---
 
 Integrating a file system into an embedded project is a common requirement for storing configuration files, web assets, or logs. For ESP32 developers, SPIFFS (SPI Flash File System) is a popular choice due to its support for wear leveling and file system consistency on SPI NOR flash. The **esp32_spiffsgen** project serves as a comprehensive guide and template for automating the SPIFFS image creation and flashing process.

@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- antihunter
+- cybersecurity-tinyos-encryption
+- mqtt-like-application-for-tinyos
+- bluetooth-mesh-sensor-network
+- wireless-sensor-network-and-tinyos-documentation
+- atmega128rfa1-tinyos-kth-wsn-project
 ---
 
 TinyOSIDS is a security-focused project providing an Intrusion Detection System (IDS) specifically tailored for Wireless Sensor Networks (WSN). Developed for the TinyOS environment, it addresses the unique security challenges faced by low-power, resource-constrained wireless devices typically found in sensor deployments.

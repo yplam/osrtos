@@ -20,6 +20,13 @@ isShow: true
 image: /202601/airfrog-rev-b-side.webp
 createdAt: '2026-01-26'
 updatedAt: '2026-01-26'
+relatedProjects:
+- cmsis-dap-over-tcp-for-esp32
+- esp32-bus-expander
+- xiao-debug-mate
+- ghost-esp
+- airgradient-pro-rust-firmware
+- deskpet
 ---
 
 ## Overview

@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- apache-nuttx-rtos-on-64-bit-risc-v
+- rust-stub-library-for-apache-nuttx
+- apache-nuttx-nsh-task-demo
+- apache-nuttx-rtos-for-pine64-star64
+- pinephone-usb-driver-for-apache-nuttx-rtos
+- rust-test-app-for-apache-nuttx-os
 ---
 
 ## Overview

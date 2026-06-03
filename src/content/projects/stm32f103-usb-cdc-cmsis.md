@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f103-cmsis-libraries-and-projects
+- usb-cdc-ecm-for-stm32f072
+- stm32-usb-mass-storage-with-fatfs
+- stm32f103-cmsis-peripheral-configuration
+- minimal-mbed-os-template-for-stm32f103
+- arm-mbed-os-blue-pill-usb-demo
 ---
 
 ## Overview

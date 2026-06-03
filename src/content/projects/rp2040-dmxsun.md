@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rgblight-iot-rgb-led-controller
+- midi2piousbhub
+- arcus
+- arduino-pico
+- pico-usb-blaster
+- d21ecm-usb-cdc-ecm-for-samd21
 ---
 
 ## Overview

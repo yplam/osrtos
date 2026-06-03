@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- ubxgpsi2c
+- ds248x-1-wire-library
+- spektrum-receiver-library-for-mbed
+- ltc68xx-battery-monitoring-library-for-mongoose-os
+- serialbridge
+- mbed-cellular-boilerplate
 ---
 
 ## Overview

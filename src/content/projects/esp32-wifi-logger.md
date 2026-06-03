@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- rfc2217-server-for-esp-idf
+- cmsis-dap-over-tcp-for-esp32
+- embeddedmqttbroker
+- esp32-webserver-with-firebase-integration
+- iot-esp8266-serial-forwarder
+- esp32-usb-over-ip
 ---
 
 # ESP32 WiFi Logger

@@ -24,6 +24,13 @@ isShow: true
 image: /202601/SmartSignPic1.webp
 createdAt: '2026-01-15'
 updatedAt: '2026-01-15'
+relatedProjects:
+- echolens-ai-powered-smart-glasses
+- gesture-detecting-macro-keyboard
+- magic-wand-on-mbed
+- nebaura-labs-mote
+- lecyborg-ai-powered-third-arm-prosthesis
+- bruxism-detector
 ---
 
 ## Bridging Communication Gaps with Wearable Tech

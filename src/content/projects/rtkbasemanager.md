@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtkrovermanager
+- wifi-manager-for-micropython
+- esp32-w5500-manager
+- esp8266-w5500-manager
+- wifimanager-rp2040w-lite
+- ayreswifimanager-awm
 ---
 
 ## Overview

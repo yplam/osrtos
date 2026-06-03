@@ -17,6 +17,13 @@ topics:
 isShow: true
 createdAt: '2026-03-31T13:01:20+00:00'
 updatedAt: '2026-03-31T13:01:20+00:00'
+relatedProjects:
+- esp32-bluetooth-signal-jammer
+- esp32-2-4ghz-jammer
+- nrf24-jammer
+- fz-nrf24-jammer
+- esp32-bluejammer
+- nrfbluenullifier
 ---
 
 The NRF24L01 is a staple in the hobbyist electronics world, known for its low cost and reliable point-to-point wireless communication. However, its flexibility allows it to operate in ways beyond simple data transmission. This project demonstrates how to repurpose the NRF24L01 module as a signal jammer, specifically targeting the 2.4GHz spectrum used by Bluetooth and other wireless protocols.

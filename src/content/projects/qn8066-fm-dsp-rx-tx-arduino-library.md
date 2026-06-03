@@ -23,6 +23,13 @@ topics:
 isShow: true
 createdAt: '2026-04-02T23:26:50+00:00'
 updatedAt: '2026-04-02T23:26:50+00:00'
+relatedProjects:
+- ant-arduino
+- spektrum-receiver-library-for-mbed
+- si4732-radio
+- esp-graber
+- arduino-rf24-for-mongoose-os
+- spirit-motor-driver-library
 ---
 
 The QN8066 FM DSP RX/TX Arduino Library is designed to provide an accessible and robust interface for the Quintic QN8066, a highly integrated digital FM transceiver. Developed with hobbyists, electronics technicians, and radio amateurs in mind, the project aims to simplify the creation of FM-based applications. By abstracting the complexities of the device's registers into a clean C++ object-oriented API, it allows developers to focus on application logic rather than low-level bit manipulation.

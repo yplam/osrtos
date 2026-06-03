@@ -33,6 +33,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- silicon-labs-arduino-core
+- arduino-rt-thread-library
+- raspberry-pi-pico-freertos-sample-application
+- rp2040-freertos-template
+- n-able-arduino-core
+- micropython-for-kendryte-k210-lobo-port
 ---
 
 The Raspberry Pi Pico and its successors, the RP2350 series, have redefined what developers expect from low-cost microcontrollers. While the official C/C++ SDK is powerful, many developers prefer the accessibility and vast ecosystem of the Arduino framework. **Arduino-Pico**, maintained by Earle Philhower, is the premier community-driven core that brings the full power of the RP2040 and RP2350 to the Arduino IDE.

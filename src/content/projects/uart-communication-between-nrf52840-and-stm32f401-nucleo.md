@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rust-embedded-examples
+- stm32f4-rtic-playground
+- stm32f429-rtic-and-smoltcp-example-application
+- rust-for-arduino-portenta-h7
+- rust-i2c-driver-for-bosch-bme280-on-apache-nuttx
+- swift-examples-for-stm32c011
 ---
 
 ## Overview

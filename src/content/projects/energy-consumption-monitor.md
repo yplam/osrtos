@@ -16,6 +16,13 @@ star: 0
 lastUpdated: '2017-12-31'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- energy-consumption-monitor-energymon-c
+- hlw8012-and-bl0937-energy-meter-library-for-mongoose-os
+- zigbee-gas-counter
+- energyme-home
+- mongoose-os-esp8266-pir-monitor
+- coffee-bin-mqtt
 ---
 
 Monitoring household energy consumption is a popular entry point for home automation enthusiasts. The **Energy Consumption Monitor** (energymon-js) project offers a streamlined solution for this task by focusing on a simple yet effective method: counting the pulses emitted by a standard energy meter's LED.

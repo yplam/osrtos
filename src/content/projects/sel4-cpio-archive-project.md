@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sel4-userland-library-tutorial
+- sel4-kernel-101
+- fel4-test-project
+- rust-sel4-toy-system-for-i-mx6-sabre-lite
+- sel4-kernel-ega-text-display
+- apache-nuttx-nsh-task-demo
 ---
 
 ## Overview

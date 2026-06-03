@@ -19,6 +19,13 @@ topics:
 isShow: true
 createdAt: '2026-04-04T09:58:02+00:00'
 updatedAt: '2026-04-04T09:58:02+00:00'
+relatedProjects:
+- lilka-diy-console
+- opentemp-thermal-imager-infrared-thermometer
+- diy-portrait-mode-gamepad
+- lumen
+- xterminal-esp32-handheld
+- watchx-ii-smart-watch
 ---
 
 The STM32 Pocket Game/Dev Console is a compact, handheld platform designed for developers and hobbyists looking to explore embedded systems through gaming or portable utility applications. Built around the STM32F042 microcontroller, this device packs essential user interface components into a 97x70mm footprint, making it an ideal candidate for custom firmware experimentation and portable project development.

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- pycopy-standard-library-pycopy-lib
+- awesome-micropython
+- micropython-samples-and-drivers
+- micropython-stm-lib
+- awesome-circuitpython
+- asynchronous-programming-in-micropython
 ---
 
 ## Overview

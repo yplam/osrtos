@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-web-server-and-spiffs-integration
+- esp8266-mywidget
+- esp-fs-webserver
+- esp8266starter
+- esp8266-dht22-spiffs-web-server
+- esp32-web-server-using-spiffs
 ---
 
 The ESP8266 has become a cornerstone of the IoT ecosystem, offering Wi-Fi connectivity and processing power at a very accessible price point. One of its most powerful applications is acting as a standalone web server. This project provides a structured, multi-part tutorial series that guides developers through the process of creating professional web interfaces hosted directly on the microcontroller.

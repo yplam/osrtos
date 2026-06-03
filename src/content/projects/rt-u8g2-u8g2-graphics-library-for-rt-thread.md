@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtt-ssd1306-oled-driver-package
+- arduino-rt-thread-library
+- termbox-for-rt-thread
+- littlevgl2rtt
+- lvgl-port-for-esp32
+- rt-thread-fbtft-framebuffer-drivers-for-tft-lcds
 ---
 
 ## Overview

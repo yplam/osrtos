@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- pelion-device-management-client-example-for-mbed-os
+- raspberry-pi-pico-w-fota-example-application
+- anjay-zephyr-client
+- stm32f4-display-and-ethernet-example
+- embedded-proto-mbed-os-to-server-example
+- stm32h745-ethernet-with-lwip-and-freertos
 ---
 
 ## Overview

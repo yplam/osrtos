@@ -19,6 +19,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- rpl-network-visualizer
+- cooja-senseh
+- home-automation-simulation-using-contiki-os
+- svdsuite
+- cmsis-parser
+- computer-network-with-contiki-ng
 ---
 
 ContikiPy is a specialized toolset designed for researchers and developers working with the Contiki-NG and Contiki-OS ecosystems. Anyone who has spent significant time with the Cooja simulator knows that while it is powerful, the process of manually running simulations, extracting log files, and transforming that raw data into meaningful plots can be repetitive and error-prone. ContikiPy addresses this by providing an automated pipeline for simulation management and data analysis.

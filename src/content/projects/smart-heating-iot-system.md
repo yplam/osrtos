@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- homeiot-smart-home-automation-system
+- smartorchard
+- smart-orchard
+- home-automation-simulation-using-contiki-os
+- chronothermostat-an-aws-powered-iot-climate-control-system
+- smart-dc-maintenance
 ---
 
 ## Overview

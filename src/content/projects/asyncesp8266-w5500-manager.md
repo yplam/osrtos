@@ -35,6 +35,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp8266-w5500-manager
+- asyncesp8266-w5100-manager
+- asyncesp8266-enc-manager
+- esp32-w5500-manager
+- esp8266-w5100-manager
+- asyncesp32-sc-ethernet-manager
 ---
 
 Managing network credentials on embedded devices can be a logistical challenge, especially when hardware is deployed in environments where network settings like static IPs or gateway addresses might change. The **AsyncESP8266_W5500_Manager** library provides a robust solution for developers using the ESP8266 platform paired with W5500 Ethernet shields. By leveraging the power of asynchronous networking, it allows for a seamless configuration experience without blocking the main application loop.

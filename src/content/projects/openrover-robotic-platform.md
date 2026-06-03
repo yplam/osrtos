@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2026-01-07'
 updatedAt: '2026-02-06'
+relatedProjects:
+- papaya-pathfinder
+- pyespcar-micropython-esp32-wifi-car
+- hexapod
+- andino-open-source-ros-2-educational-robot
+- mobile-mecanum-4wd-robot
+- tny-360-quadruped-robot
 ---
 
 ## The OpenRover Project

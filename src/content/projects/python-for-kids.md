@@ -35,6 +35,13 @@ isShow: true
 image: /202601/Python-For-Kids.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- oficina-de-circuitpython
+- mu-a-simple-python-code-editor
+- mpython-board
+- sparkfun-python-examples
+- awesome-circuitpython
+- rp2040-projects-by-armstrong-subero
 ---
 
 ## Overview

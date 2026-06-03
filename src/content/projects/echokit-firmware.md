@@ -22,6 +22,13 @@ isShow: true
 image: /202601/echokit.webp
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- pixlpal-m1-firmware
+- elatoai-realtime-voice-ai-on-esp32
+- diy-ai-voice-assistant-for-esp32-s3
+- nebaura-labs-mote
+- esp32-voice-assistant
 ---
 
 ## Overview

@@ -23,6 +23,13 @@ isShow: true
 image: /202601/OMOTE_assembled.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lvgl-watch-firmware-for-open-smartwatch
+- openhasp-firmware
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- open-display-firmware
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
+- esp32-jarolift-controller
 ---
 
 # OMOTE: The Open Source Universal Remote Firmware

@@ -22,6 +22,13 @@ star: 19
 lastUpdated: '2024-12-26'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp8266-littlefs-file-handler
+- espxwebflmgr
+- effortless-spiffs
+- esp8266-dht22-spiffs-web-server
+- esp32-monaco-editor-spiffs
+- esp8266-web-server-and-spiffs-integration
 ---
 
 Managing data on resource-constrained microcontrollers like the ESP8266 and ESP32 often involves a trade-off between functionality and complexity. The **Easy IoT File System** project aims to bridge this gap by providing a ready-to-use web interface and data handling layer that lives directly on the device's flash memory. By leveraging standard JSON formats, it allows developers to easily store sensor readings and display them through a professional-looking dashboard without writing extensive HTML or CSS from scratch.

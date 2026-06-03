@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-06-01T00:51:21+00:00'
 updatedAt: '2026-06-01T00:51:21+00:00'
+relatedProjects:
+- ameba-freertos-pro2-sdk
+- esp8266-rtos-software-development-kit-sdk
+- kendryte-k210-freertos-sdk
+- openthread-rtos
+- golioth-firmware-sdk
+- nuclei-software-development-kit-nuclei-sdk
 ---
 
 Ameba RTOS is the primary development framework for Realtek’s line of Ameba AIoT SoCs. It provides a full-featured environment for developers to build, compile, and flash firmware onto Realtek hardware, supporting both Linux and Windows development hosts. The framework is designed to be modular, allowing developers to toggle specific features like Wi-Fi, Bluetooth, and various networking protocols depending on the requirements of their specific IoT application.

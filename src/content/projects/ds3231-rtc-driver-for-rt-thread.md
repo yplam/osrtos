@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rx8900-high-precision-rtc-driver-for-rt-thread
+- ds3231-rtc-driver-for-mongoose-os
+- hdc1000-sensor-driver-for-rt-thread
+- tmp1075-temperature-sensor-driver-for-rt-thread
+- vl53l0x-tof-sensor-driver-for-rt-thread
+- ds323x-generic
 ---
 
 ## Overview

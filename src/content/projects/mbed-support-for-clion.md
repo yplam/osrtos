@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mbed-vim
+- mbed-tools
+- clion-for-stm32
+- mbed-vscode-tools
+- micropython-plugin-for-pycharm-and-intellij
+- micropy-cli
 ---
 
 ## Streamlining Mbed OS Development in CLion

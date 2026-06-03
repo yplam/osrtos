@@ -21,6 +21,13 @@ isShow: true
 image: /202601/cc1101.webp
 createdAt: '2026-01-14'
 updatedAt: '2026-01-14'
+relatedProjects:
+- esp32-jarolift-controller
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- genius-gateway
+- esp32-balboa-spa-controller
+- everblu-cyble-enhanced-rf-meter-reader
+- pellet-stove-aws-iot-bridge-for-esp32
 ---
 
 The ESP32 Controller for Charlton & Jenrick Fireplace is an open-source firmware project designed to modernize the control of domestic fireplaces. By combining an ESP32-WROOM-32 microcontroller with a CC1101 433 MHz transceiver, this project reverse-engineers the RF signals used by proprietary remotes to allow for smart home integration and web-based control.

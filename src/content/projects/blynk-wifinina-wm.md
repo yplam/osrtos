@@ -35,6 +35,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- blynk-wifimanager
+- blynk-esp8266at-wm
+- blynkgsm-manager
+- blynk-async-gsm-manager
+- blynk-async-wm
+- blynk-async-esp32-bt-wf
 ---
 
 Managing WiFi credentials and Blynk tokens in embedded projects often leads to the 'hardcoding' trap, where every change in environment requires a firmware re-flash. **Blynk_WiFiNINA_WM** is a powerful library designed to solve this by providing a robust WiFi Configuration Manager (WM) for boards using WiFiNINA shields or modules. By leveraging this library, developers can create devices that are easily reconfigurable at runtime through a user-friendly web interface.

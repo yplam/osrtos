@@ -36,6 +36,13 @@ topics:
 isShow: true
 createdAt: '2026-05-19T23:55:27+00:00'
 updatedAt: '2026-05-19T23:55:27+00:00'
+relatedProjects:
+- esp32-p4-home-assistant-display
+- lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
+- openhasp-firmware
+- esp32-s3-smart-home-control-panel
+- esp-e-paper-component
+- home-assistant-epaper-remote
 ---
 
 BETTA HA Panel provides a professional-grade, runtime-configurable interface for Home Assistant, specifically optimized for high-performance ESP32-P4 and ESP32-S3 touchscreen hardware. Unlike traditional ESPHome-based solutions that require YAML edits and firmware recompilation for every UI change, this project allows users to build and modify their dashboards directly on the device using a web-based editor.

@@ -19,6 +19,13 @@ topics:
 isShow: true
 createdAt: '2026-04-03T05:32:44+00:00'
 updatedAt: '2026-04-03T05:32:44+00:00'
+relatedProjects:
+- victron-solar-display-for-esp32-s3
+- dtugateway-for-hoymiles-hms-inverters
+- esphome-deye-inverter
+- tibber-price-e-ink-display
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- ginlong-solis-solar-inverter-modbus-integration
 ---
 
 ## Monitoring and Controlling Victron Systems with ESP32

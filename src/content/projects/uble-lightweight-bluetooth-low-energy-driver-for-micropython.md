@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- micropython-human-interface-device-library
+- micropython-for-the-bbc-micro-bit
+- nimble-arduino
+- micropython-for-monocle
+- micropython-for-pandora-iot-board
+- micropython-for-bare-metal-raspberry-pi
 ---
 
 ## Overview

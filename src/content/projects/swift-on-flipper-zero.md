@@ -19,6 +19,13 @@ isShow: true
 image: /202603/flipper.webp
 createdAt: '2026-03-03'
 updatedAt: '2026-03-03'
+relatedProjects:
+- swift-examples-for-stm32c011
+- zig-lvgl-touchscreen-app-on-apache-nuttx-rtos
+- esp32-sdl3-swift-example
+- swift-embedded-esp32-c6-oled-demo
+- micropython-for-flipper-zero
+- zephyr-rtos-ssd1306-custom-font-demo
 ---
 
 ## Overview

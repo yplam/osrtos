@@ -23,6 +23,13 @@ isShow: true
 image: /202602/comfosense.webp
 createdAt: '2026-02-07'
 updatedAt: '2026-02-07'
+relatedProjects:
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- esp32-s3-smart-home-control-panel
+- project-aura
+- simplebus2-mqtt-bridge
+- esp32-p4-home-assistant-display
+- openhasp-firmware
 ---
 
 ## Overview

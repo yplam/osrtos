@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- golioth-zephyr-sdk
+- pinnacle-100-out-of-box-demo-manifest
+- golioth-firmware-sdk
+- ruuvitag-firmware-for-zephyr-os
+- mongoose-os
+- lilygo-higrow-esp32-plant-monitoring-sensor-firmware-hardware-v1
 ---
 
 # Sentrius MG100 Gateway Firmware

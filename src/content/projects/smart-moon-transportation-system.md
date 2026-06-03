@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- smart-orchard
+- apache-mynewt-sensor-network-for-stm32-blue-pill
+- smartorchard
+- smart-dc-maintenance
+- bluetooth-mesh-sensor-network
+- low-power-wireless-networking-for-iot-lpiot
 ---
 
 The Smart Moon Transportation System (SMTS) is a sophisticated wireless sensor network (WSN) project designed to tackle the unique challenges of lunar exploration. Specifically, it focuses on the extraction and transportation of lunar regolith—a vital resource for In-Situ Resource Utilization (ISRU) activities such as mineral processing and construction. Transporting this material on the Moon is fraught with difficulties, including extreme temperature fluctuations and hazardous lunar dust. SMTS provides a framework to monitor these conditions and control the transport process to ensure efficiency and safety.

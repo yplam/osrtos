@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-demo-embarcadores
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- jc3248w535-lvgl-v9-test-project
+- lvgl-test-app-for-apache-nuttx
+- lvgl-extended-demos
+- jc4827w543-lvgl-v9-implementation
 ---
 
 LVGL-DemoTest is a specialized repository designed to showcase the capabilities of the Light and Versatile Graphics Library (LVGL), specifically focusing on version 7. LVGL is a widely-used open-source graphics library in the embedded industry, known for its ability to create sophisticated user interfaces with low memory footprints on microcontrollers.

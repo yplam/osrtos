@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- minimal-mbed-os-template-for-stm32f030
+- stm32f1xx-bare-metal-template
+- stm32-libopencm3-freertos-platformio-template
+- stm32-makefile-freertos-project-template
+- stm32f103-cmsis-libraries-and-projects
+- stm32-rtic-project-template
 ---
 
 The STM32F103C8, often found on the popular "Blue Pill" development boards, is a versatile microcontroller, but setting up a modern development environment for it can sometimes be cumbersome. This project provides a minimal, ready-to-use template for building applications on this hardware using Mbed OS.

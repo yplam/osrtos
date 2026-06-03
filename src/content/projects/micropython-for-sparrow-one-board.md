@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-for-w601-iot-board
+- micropython-for-pandora-iot-board
+- micropython-port-for-rt-thread
+- micropython-camera-api-for-esp32
+- esp8266-micropython-development
+- micropython-and-lvgl-firmware-for-esp32
 ---
 
 ## Overview

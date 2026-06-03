@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- dhtxx-sensor-driver-for-rt-thread
+- tmp1075-temperature-sensor-driver-for-rt-thread
+- bme680-sensor-package-for-rt-thread
+- sgp30-gas-sensor-driver-for-rt-thread
+- ccs811-digital-gas-sensor-driver-for-rt-thread
+- gp2y10-dust-sensor-driver-for-rt-thread
 ---
 
 ## Overview

@@ -27,6 +27,13 @@ isShow: true
 image: /202601/inklink.webp
 createdAt: '2026-01-18'
 updatedAt: '2026-01-18'
+relatedProjects:
+- readmepaper-esp32-7-color-e-paper-display-project
+- e-ink-assist-screen
+- 7-color-e-paper-digital-photo-frame
+- esphome-e-ink-4-color-dashboard
+- m5paper-buddy
+- git-contributions-e-ink-display
 ---
 
 InkLink is an innovative project that bridges the gap between digital collaborative spaces and physical ambient displays. It creates a shared drawing canvas accessible via any web browser, which then synchronizes its state to a 7.5-inch tri-color e-paper display. This setup allows multiple users to contribute to a persistent piece of digital art that lives on a physical desk or wall.

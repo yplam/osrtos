@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-04-08T23:37:59+00:00'
 updatedAt: '2026-04-08T23:37:59+00:00'
+relatedProjects:
+- bitcoin-card-wallet
+- trezor-firmware
+- sonicrypt
+- esp32-bit-pirate
+- esp32-u2f-security-key
+- esp32-bus-pirate
 ---
 
 Colibri is a free and open-source DIY project designed to lower the barrier to entry for secure cryptocurrency self-custody. The project's primary goal is to enable anyone with a modest budget and basic technical tools—specifically a laptop, internet access, and approximately $5 worth of hardware—to create a functional and secure hardware wallet. By utilizing widely available ESP32 development boards, Colibri transforms standard maker hardware into a dedicated cryptographic tool.

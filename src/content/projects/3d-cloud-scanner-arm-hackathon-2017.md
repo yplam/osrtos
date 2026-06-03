@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- weather-led-map-with-micropython-on-esp32c3
+- embedded-proto-mbed-os-to-server-example
+- mbed-ble-gap-scanner
+- pv-curve-tracer
+- stm32l476g-discovery-rtos-sensor-project
+- 2d-lidar-edge-detection-using-raspberry-pi-pico
 ---
 
 ## Bringing Objects into the Digital Realm: The 3D Cloud Scanner

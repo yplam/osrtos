@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- hx711-testing-app-for-mongoose-os
+- max17263-library-for-mongoose-os
+- lis3dh-accelerometer-library-for-mongoose-os
+- max17263-test-app-for-mongoose-os
+- arduino-rf24-for-mongoose-os
+- sd-h-and-fs-h-port-for-mongoose-os
 ---
 
 ## Overview

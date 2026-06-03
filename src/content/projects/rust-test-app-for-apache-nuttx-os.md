@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lora-test-app-for-semtech-sx1262-and-apache-nuttx
+- lorawan-test-app-for-apache-nuttx
+- lvgl-test-app-for-apache-nuttx
+- bl602-adc-and-temperature-sensor-test-app
+- rust-stub-library-for-apache-nuttx
+- rust-embedded-hal-for-apache-nuttx-rtos
 ---
 
 The Rust Test App serves as a practical implementation for developers looking to integrate the Rust programming language with the Apache NuttX RTOS. This project demonstrates how to build and run Rust applications within the NuttX environment, specifically targeting embedded platforms like the BL602 (RISC-V) and ESP32.

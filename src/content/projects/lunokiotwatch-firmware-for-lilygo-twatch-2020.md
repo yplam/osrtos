@@ -37,6 +37,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lvgl-watch-firmware-for-open-smartwatch
+- chronos-watchy
+- dt78-esp32-firmware
+- twatch-v3-firmware-for-esp32
+- watchx-open-source-smartwatch
+- opentimewatch-os
 ---
 
 ## Overview

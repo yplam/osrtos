@@ -30,6 +30,13 @@ isShow: true
 image: /202604/openhaldex-c6.webp
 createdAt: '2026-04-12T09:33:21+00:00'
 updatedAt: '2026-04-12T09:33:21+00:00'
+relatedProjects:
+- bmw-idrive-controller-can-bus-interpreter
+- tonex-one-controller
+- cybergear-ros2-controller
+- xiaomi-cybergear-arduino-library
+- esp-can-analyzer
+- ic-705-ci-v-band-decoder-and-transverter-controller
 ---
 
 OpenHaldex is a sophisticated open-source solution designed to unlock the full potential of the Haldex All-Wheel Drive (AWD) systems found in Volkswagen and Audi Group (VAG) vehicles. While factory Haldex controllers are often programmed for efficiency and safety, they can be restrictive for enthusiasts seeking more aggressive torque bias or specific handling characteristics. OpenHaldex acts as a bridge between the vehicle's chassis and the differential, allowing users to dictate exactly how much lock the system applies.

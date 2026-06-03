@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-25'
 updatedAt: '2026-01-25'
+relatedProjects:
+- rapid-embedded-systems-design-education-kit
+- zj-tek-rt-thread-nimble-littlevgl-nordic-project
+- iot-labs-with-contiki-os
+- unipg-mbed-os-samples
+- develop-your-own-bluetooth-low-energy-applications
+- mbed-os-unipg-samples-1
 ---
 
 The Embedded Medical Devices project, developed for the Duke University BME 554L course, provides a structured framework for learning modern embedded systems development within a medical context. The repository serves as a central hub for course materials, laboratory exercises, and technical documentation, focusing heavily on the Zephyr Real-Time Operating System (RTOS) and the Nordic Semiconductor ecosystem.

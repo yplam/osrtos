@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-04-18T01:38:57+00:00'
 updatedAt: '2026-04-18T01:38:57+00:00'
+relatedProjects:
+- svitrix-firmware
+- esphome-ikea-vindriktning
+- elekstube-ips-custom-firmware
+- webscreen-software
+- smart-led
+- pixlpal-m1-firmware
 ---
 
 The IKEA Frekvens and Obegränsad series are beloved for their minimalist aesthetic, but their stock functionality is often limited to basic patterns or sound-reactive modes. **Frekvens** is a comprehensive open-source firmware project designed to unlock the full potential of these displays by replacing their factory controllers with the powerful ESP32 microcontroller. This modification transforms simple LED panels into sophisticated, internet-connected smart home displays capable of showing weather, clocks, animations, and real-time notifications.

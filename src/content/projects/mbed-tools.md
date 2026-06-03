@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mbed-vscode-tools
+- mbed-support-for-clion
+- mbed-vim
+- docker-embedded-development-toolchains
+- micropy-cli
+- west-the-zephyr-rtos-meta-tool
 ---
 
 ## Overview

@@ -19,6 +19,13 @@ star: 3
 lastUpdated: '2021-06-10'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- flexiblebutton
+- rtt-libfilter-digital-filter-library-for-rt-thread
+- mbed-quadrature-encoder-library
+- ds248x-1-wire-library
+- doubleresetdetector-generic
+- mbed-rp2040-pwm-library
 ---
 
 In the world of embedded systems, mechanical switches and buttons are notorious for a phenomenon known as "bouncing." When a physical contact is made or broken, it doesn't transition cleanly between high and low states; instead, it oscillates rapidly for a few milliseconds. For an interrupt-driven system, this can trigger dozens of false events for a single press. **DebounceIn** is a lightweight library for the Mbed OS ecosystem that solves this problem by providing a debounced version of the standard `InterruptIn` class.

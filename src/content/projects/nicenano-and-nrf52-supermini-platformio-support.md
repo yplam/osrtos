@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-16'
 updatedAt: '2026-01-16'
+relatedProjects:
+- super-mini-esp32-c3-arduino-and-platformio-sketches
+- n-able-arduino-core
+- xiao-esp32c6-sketches
+- lemon-iot-lte-nrf9160
+- blackpill-stm32f401ce-support-for-mbed-os-6
+- esp32-repo
 ---
 
 The Nicenano and NRF52840 Supermini are popular, compact development boards often found on platforms like AliExpress, featuring the powerful Nordic nRF52840 SoC. While these boards offer a form factor similar to the Seeed Studio XIAO or Pro Micro, they often lack native support in standard development environments. This project bridges that gap by providing the necessary configuration files and variant definitions to use these boards seamlessly within PlatformIO.

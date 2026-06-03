@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-ftp-server
+- embedded-proto-mbed-os-to-server-example
+- modbus-tcp-for-stm32f407
+- stm32h745-ethernet-with-lwip-and-freertos
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- udp-echo-server-for-stm32f407-and-enc28j60
 ---
 
 ## Overview

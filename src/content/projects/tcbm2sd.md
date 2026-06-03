@@ -27,6 +27,13 @@ topics:
 isShow: true
 createdAt: '2026-04-08T23:51:33+00:00'
 updatedAt: '2026-04-08T23:51:33+00:00'
+relatedProjects:
+- one-rom
+- esp8266sdupdater
+- t-hmi-c64-emulator
+- adaspace3d
+- usbsid-pico
+- 107-arduino-littlefs
 ---
 
 TCBM2SD is a multi-purpose hardware project designed for the Commodore C16, C116, and Plus/4 series. Created by Maciej 'YTM/Elysium' Witkowiak, it serves as both a modern replacement for the CBM 1551 paddle cartridge and a mass storage device using an SD card. By interfacing with the computer's expansion port, it simulates the behavior of a TCBM (Tape/Commodore Bus Manual) bus 1551 disk drive.

@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- sx128x-lora-transceiver-driver-for-contiki-ng
+- nrf24-driver-for-contiki-os
+- sx127x-lora-transceiver-driver-for-contiki-ng
+- bitcraze-crazyflie-2-0-2-1-mbed-os-firmware
+- x-cube-subg2-firmware-package
+- avnet-wnc14a2a-cellular-driver
 ---
 
 ## Overview

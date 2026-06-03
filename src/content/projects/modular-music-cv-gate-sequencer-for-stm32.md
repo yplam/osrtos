@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- microgroove
+- midi-player-for-nucleo-f446re
+- ryattn-audio-relay-attenuator
+- europi
+- esp32-custom-hardware-synthesizer
+- stm32f4-rtic-playground
 ---
 
 ## Overview

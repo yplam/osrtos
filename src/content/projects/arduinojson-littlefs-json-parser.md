@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp8266-littlefs-file-handler
+- settings-manager
+- esp8266-config-data-management
+- esp8266-configuration-data-v2
+- esp8266-web-server-and-spiffs-integration
+- easy-iot-file-system
 ---
 
 ## Managing JSON Data on ESP32 and ESP8266 with LittleFS

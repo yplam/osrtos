@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- kendryte-k210-freertos-sdk
+- micropython-for-kendryte-k210-lobo-port
+- stm32l475-pandora-board-bsp-for-rt-thread
+- rt-thread-bsp-for-stm32f407vet6
+- maixpy-v4
+- rt-thread-smart-porting-for-risc-v-qemu-and-k210
 ---
 
 ## Overview

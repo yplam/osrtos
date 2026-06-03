@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2026-05-09T00:12:32+00:00'
 updatedAt: '2026-05-09T00:12:32+00:00'
+relatedProjects:
+- esp32-lab-power-supply
+- elevourer-portable-intelligent-electronic-load
+- blynk-async-esp32-bt-wf
+- stm32-synchronous-rectification-buck-boost-digital-power-supply
+- esp32-ble-uart-mx
+- ic-705-ci-v-band-decoder-and-transverter-controller
 ---
 
 The SW32 project represents a significant modernization and redesign of the classic MK312 E-Stim box. Developed with a focus on compactness and modern connectivity, the SW32 provides a sophisticated platform for electro-stimulation, leveraging the power of contemporary microcontrollers and high-quality analog components.

@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-24'
 updatedAt: '2026-01-24'
+relatedProjects:
+- smart-lighting-system-using-esp32
+- esp8266-home-automation
+- iot-project-on-hvac
+- smart-home-automation-with-freertos-and-esp32
+- hydroponicone
+- chronothermostat-an-aws-powered-iot-climate-control-system
 ---
 
 ## Overview

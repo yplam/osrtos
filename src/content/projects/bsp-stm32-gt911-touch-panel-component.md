@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-03-02'
 updatedAt: '2026-03-02'
+relatedProjects:
+- hynitron-cst816s-touch-controller-driver-for-apache-nuttx
+- bsp-for-wireless-tag-wt32-sc01-plus-sc01-esp-idf-5-x-lvgl-9-x
+- lvgl-touch-calibration-system
+- lvgl-port-for-stm32f769-discovery
+- lvgl-display-and-touchpad-drivers
+- stm32l475-pandora-board-bsp-for-rt-thread
 ---
 
 ## Overview

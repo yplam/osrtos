@@ -37,6 +37,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mbed-os-6-stm32-iot-ethernet-controller
+- mqtt-demo-for-stm32-iot-discovery-board-with-thingsboard
+- bluetooth-mesh-sensor-network
+- building-wireless-sensor-networks-with-openthread
+- esp32-ruuvitag-collector
+- low-power-wireless-networking-for-iot-lpiot
 ---
 
 The STM32 Blue Pill remains one of the most popular entry-level development boards for embedded enthusiasts. This project elevates the hardware by implementing a sophisticated sensor network using the Apache Mynewt RTOS. By leveraging Mynewt's modular architecture, the application demonstrates how to build a scalable IoT system that can communicate via WiFi using the ESP8266 or via 2.4GHz radio using the nRF24L01.

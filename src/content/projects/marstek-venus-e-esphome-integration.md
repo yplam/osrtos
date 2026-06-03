@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-02-07'
 updatedAt: '2026-02-07'
+relatedProjects:
+- multiple-jk-bms-modbus-rs485-integration
+- esphome-deye-inverter
+- ginlong-solis-solar-inverter-modbus-integration
+- esp32-remote-for-victron
+- esphome-tesla-ble
+- tasmota-sml-images
 ---
 
 ## Overview

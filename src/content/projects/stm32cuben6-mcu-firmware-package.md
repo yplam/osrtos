@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- stm32cubewb0-mcu-firmware-package
+- stm32cubeh7rs-mcu-firmware-package
+- x-cube-azrtos-h7-azure-rtos-software-expansion
+- x-cube-azrtos-wb-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-f7-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-g4-azure-rtos-software-expansion-for-stm32cube
 ---
 
 The STM32CubeN6 MCU Firmware Package is the definitive software resource for developers working with STMicroelectronics' high-performance STM32N6 series. As part of the STM32Cube ecosystem, it provides a structured and scalable approach to embedded development, offering a comprehensive suite of drivers, middleware, and example projects that significantly reduce time-to-market.

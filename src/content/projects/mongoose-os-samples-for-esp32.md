@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- mongoose-os-programs-and-examples
+- esp32-freertos-examples
+- unipg-mbed-os-samples
+- losant-mqtt-example-for-mongoose-os
+- losant-mqtt-mongoose-os-example
+- swarmsense-iot-platform-with-mongoose-os
 ---
 
 ## Overview

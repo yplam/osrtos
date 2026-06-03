@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- kconfig-for-the-zephyr-project
+- pico-zephyr-project
+- stm32-cmake-cmsis-project-skeleton
+- stm32f030-cmake-cmsis-project-skeleton
+- docker-containers-for-the-zephyr-rtos
+- swedish-embedded-workstation
 ---
 
 ## Overview

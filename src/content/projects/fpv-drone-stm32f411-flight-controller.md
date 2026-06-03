@@ -18,6 +18,13 @@ isShow: true
 image: /202604/drone-controller.webp
 createdAt: '2026-04-12T09:32:19+00:00'
 updatedAt: '2026-04-12T09:32:19+00:00'
+relatedProjects:
+- stm32-quadcopter-low-cost-quadcopter-design
+- drone-stm32f1
+- avem
+- droners
+- flight-controller-rev2
+- protoflight
 ---
 
 ## A Complete Open-Source FPV Ecosystem

@@ -26,6 +26,13 @@ isShow: true
 image: /202602/owl.webp
 createdAt: '2026-03-01'
 updatedAt: '2026-03-01'
+relatedProjects:
+- nebaura-labs-mote
+- echolens-ai-powered-smart-glasses
+- opentoys
+- zswatch
+- starmoon-open-source-conversational-ai-device
+- minimal-self-perceiving-embodiment-for-large-language-models
 ---
 
 ## Overview

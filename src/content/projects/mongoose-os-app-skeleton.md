@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mongoose-os-library-skeleton
+- empty-mongoose-os-app
+- websocket-client-for-mongoose-os
+- mongoose-os-app-on-stm32f446re
+- mongoose-os-programs-and-examples
+- uart-out-test-app
 ---
 
 ## Overview

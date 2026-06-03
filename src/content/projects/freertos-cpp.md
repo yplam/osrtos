@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- freertos-add-ons
+- frt-fl-ssie-s-ready-freertos-threading
+- freertos-modern-c-wrappers
+- freertos-rust
+- zephyr-c-20-framework-zpp
+- mos-rtos
 ---
 
 ## Modernizing the FreeRTOS Experience

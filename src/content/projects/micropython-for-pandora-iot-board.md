@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-port-for-rt-thread
+- micropython-for-w601-iot-board
+- micropython-for-sparrow-one-board
+- stm32l475-freertos-iot-project
+- iotsharp-pandora-stm32l475-bsp
+- stm32l475-pandora-board-bsp-for-rt-thread
 ---
 
 ## Overview

@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-16'
 updatedAt: '2026-01-16'
+relatedProjects:
+- esp32-graphical-bootloader
+- multi-firmware-esp
+- esp8266sdupdater
+- m5pi-launcher
+- lvgl-port-for-m5stack-core2
+- esp32-fatfs-image-tool-and-example
 ---
 
 ## Overview

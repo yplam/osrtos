@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-04-02T03:40:12+00:00'
 updatedAt: '2026-04-02T03:40:12+00:00'
+relatedProjects:
+- usb-pd-tester
+- usb-pd-adapter
+- power-pico
+- osillyscope
+- esp32-remote-for-victron
+- noteit-uart-datalogger
 ---
 
 The CH32V003-USBMeter is a complete, open-source solution for monitoring USB power delivery, built around the ultra-affordable WCH CH32V003 RISC-V microcontroller. This project demonstrates how much functionality can be packed into a device using a "7-cent MCU" with just 16KB of Flash and 2KB of RAM, making it a perfect case study for resource-constrained embedded development.

@@ -32,6 +32,13 @@ isShow: true
 image: /202603/esp32-jarolift.webp
 createdAt: '2026-03-19'
 updatedAt: '2026-03-19'
+relatedProjects:
+- esp32-controller-for-charlton-jenrick-fireplace
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- openhasp-firmware
+- esp8266-home-automation
+- simplebus2-mqtt-bridge
+- genius-gateway
 ---
 
 ## Overview

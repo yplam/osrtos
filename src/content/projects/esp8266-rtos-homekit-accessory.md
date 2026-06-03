@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- dsc-keybus-interface-rtos
+- homerpc
+- microlink-tailscale-vpn-for-esp32
+- coap-eap-with-eap-noob-in-contiki
+- unabto-sdk
+- esp32-u2f-security-key
 ---
 
 The ESP8266 RTOS HomeKit Accessory project is a technical implementation of Apple's HomeKit Accessory Protocol (HAP) designed to run natively on the ESP8266 microcontroller. By utilizing the `esp-open-rtos` environment—an open-source, FreeRTOS-based framework—this project allows developers to create HomeKit-compatible devices without the need for a software bridge or third-party hub.

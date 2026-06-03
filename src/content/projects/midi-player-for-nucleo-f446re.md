@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- modular-music-cv-gate-sequencer-for-stm32
+- esp32-host-midi
+- ryattn-audio-relay-attenuator
+- audio-recorder
+- esp32-mp3
+- mongoose-os-app-on-stm32f446re
 ---
 
 ## Overview

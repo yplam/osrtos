@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-02-11'
 updatedAt: '2026-02-11'
+relatedProjects:
+- zephyr-cve-2021-3625-exploit-examples
+- treecore-cpu-a-series-of-risc-v-processors
+- cortex-m33-trustzone-experiments-on-qemu-an505
+- apache-nuttx-rtos-on-64-bit-risc-v
+- multizone-security-tee-for-risc-v
+- cybersecurity-tinyos-encryption
 ---
 
 ## Overview

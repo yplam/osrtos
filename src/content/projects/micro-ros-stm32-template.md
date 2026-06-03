@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- stm32f107-makefile-freertos-template
+- stm32-makefile-freertos-project-template
+- stm32f429-nucleo-lwip-and-freertos-template
+- stm32-libopencm3-freertos-platformio-template
+- stm32-rtic-project-template
+- micro-ros-for-rt-thread
 ---
 
 ## Overview

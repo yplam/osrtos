@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lvgl-test-app-for-apache-nuttx
+- zephyr-lvgl-sample-for-nrf52840-mdk
+- pinedio-stack-bl604-on-apache-nuttx-rtos
+- zig-lvgl-touchscreen-app-on-apache-nuttx-rtos
+- rp2040-lvgl-8-demo-with-ili9488-and-xpt2046
+- lvgl-barebones-example-for-sunton-esp32-2432s028r
 ---
 
 ## Overview

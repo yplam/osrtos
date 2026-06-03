@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-examples-for-01studio-development-boards
+- maixpy-v4
+- micropython-samples-and-drivers
+- mbot2-and-cyberpi-programming-examples
+- micropython-for-kendryte-k210-lobo-port
+- sparkfun-python-examples
 ---
 
 ## Overview

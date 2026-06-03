@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- stm32f429-nucleo-lwip-and-freertos-template
+- stm32h745-ethernet-with-lwip-and-freertos
+- stm32-https-wolfssl-demo
+- mqtt-client-and-https-server-using-mbedtls
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- stm32-lwip-mqtt-demo
 ---
 
 ## Overview

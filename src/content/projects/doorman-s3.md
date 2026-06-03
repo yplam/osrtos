@@ -38,6 +38,13 @@ isShow: true
 image: /202602/doorman.webp
 createdAt: '2026-02-09'
 updatedAt: '2026-02-09'
+relatedProjects:
+- simplebus2-mqtt-bridge
+- esphome-modbus-tcp-to-rtu-bridge
+- genius-gateway
+- heidelbridge
+- lixee-box
+- esp32-c6-matter-over-thread-roof-window-controller
 ---
 
 The Doorman S3 is an intercom gateway designed to bridge the gap between traditional building intercom systems and modern home automation. Specifically targeting systems like TCS and Koch, it allows users to bring their front door functionality into platforms like Home Assistant, providing a unified interface for access control.

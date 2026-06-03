@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- sgp30-gas-sensor-library-for-mongoose-os
+- bme680-sensor-package-for-rt-thread
+- mongoose-os-environmental-sensors-application
+- apache-nuttx-driver-for-bosch-bme280-sensor
+- max17263-library-for-mongoose-os
+- ltc68xx-battery-monitoring-library-for-mongoose-os
 ---
 
 ## Overview

@@ -25,6 +25,13 @@ star: 1
 lastUpdated: '2022-01-08'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- mongoose-os-aws-iot-uart-and-thing-shadow-example
+- flatsphere-clock
+- sanjin-intelligent-mechanical-clock
+- shelf-edge-clock
+- deck
 ---
 
 Building embedded applications often involves a steep learning curve with C or C++. However, the **esp32_nextion_js_binary_clock** project offers a different approach by leveraging Mongoose OS and JavaScript (mJS) to create a functional binary clock. This project serves as an excellent demonstration of how to interface an ESP32 with a Nextion Human-Machine Interface (HMI) display using high-level scripting.

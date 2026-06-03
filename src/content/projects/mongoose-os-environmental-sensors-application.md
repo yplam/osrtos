@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mongoose-os-environment-logger
+- swarmsense-iot-platform-with-mongoose-os
+- losant-mqtt-example-for-mongoose-os
+- mongoose-os-aws-iot-uart-and-thing-shadow-example
+- mqtt-demo-for-stm32-iot-discovery-board-with-thingsboard
+- sgp30-gas-sensor-library-for-mongoose-os
 ---
 
 ## Overview

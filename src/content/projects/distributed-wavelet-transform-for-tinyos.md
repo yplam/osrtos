@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- tag-and-tina-implementation-on-tinyos
+- compass-multihop-framework-for-tinyos
+- radiotftp-process-for-contiki-os
+- low-power-wireless-networking-for-iot-lpiot
+- atmega128rfa1-tinyos-kth-wsn-project
+- lightweight-publish-subscribe-application-protocol-for-tinyos
 ---
 
 ## Overview

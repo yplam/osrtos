@@ -30,6 +30,13 @@ isShow: true
 image: /202601/wally-in-use.webp
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- xiaozhi-ai-desk-buddy-esp32-s3
+- esp32-voice-assistant
+- diy-ai-voice-assistant-for-esp32-s3
+- xiaozhi-ai-chatbot
+- starmoon-open-source-conversational-ai-device
+- kalo-esp32-voice-chat-ai-friends
 ---
 
 ## Overview

@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- smart-lighting-system-using-esp32
+- esp32-mqtt-motor-control
+- homeiot-smart-home-automation-system
+- room-control-system
+- esp32-freertos-examples
+- openhasp-firmware
 ---
 
 ## Overview

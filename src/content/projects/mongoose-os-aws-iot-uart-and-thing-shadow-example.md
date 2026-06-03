@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- mongoose-os-environmental-sensors-application
+- losant-mqtt-example-for-mongoose-os
+- losant-mqtt-mongoose-os-example
+- mongoose-os-programs-and-examples
+- mongoose-os-button-switch-for-aws-iot
+- iot-framework-for-nodemcu
 ---
 
 ## Overview

@@ -23,6 +23,13 @@ isShow: true
 image: /202602/ildawavex16.webp
 createdAt: '2026-02-06'
 updatedAt: '2026-02-06'
+relatedProjects:
+- esp32-web-radio-evo3
+- openfire-firmware-for-esp32
+- esp32-a2dp-sink-with-ldac-aptx-hd-and-aac-support
+- esp8266-sound-effects-i2s-web-trigger
+- esp32-s3-soundfont-sf2-sampler-synthesizer
+- esper-cdp
 ---
 
 ## High-Resolution Laser Control

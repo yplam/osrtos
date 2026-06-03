@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sgp30-gas-sensor-driver-for-rt-thread
+- pmsxx-sensor-driver-for-rt-thread
+- gp2y10-dust-sensor-driver-for-rt-thread
+- bme680-sensor-package-for-rt-thread
+- dhtxx-sensor-driver-for-rt-thread
+- sgp30-gas-sensor-library-for-mongoose-os
 ---
 
 ## Overview

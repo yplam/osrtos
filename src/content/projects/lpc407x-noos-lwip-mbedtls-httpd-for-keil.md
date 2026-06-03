@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lwip-http-server-netconn-rtos-application
+- mqtt-client-and-https-server-using-mbedtls
+- stm32f429-nucleo-lwip-and-freertos-template
+- straight-httpd-embedded-web-server-simulator
+- stm32f7-https-client
+- stm32f7-lxi-device
 ---
 
 ## Overview

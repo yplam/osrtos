@@ -21,6 +21,13 @@ isShow: true
 image: /202603/tempo.webp
 createdAt: '2026-03-17'
 updatedAt: '2026-03-17'
+relatedProjects:
+- lorawan-end-device-with-freertos-and-esp32
+- mbed-os-6-stm32-iot-ethernet-controller
+- esp32-ruuvitag-collector
+- iot-agricultural-data-monitoring-system
+- mongoose-os-environmental-sensors-application
+- bluetooth-mesh-sensor-network
 ---
 
 ## Overview

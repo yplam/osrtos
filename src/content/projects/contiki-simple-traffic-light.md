@@ -17,6 +17,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- tinyos-cooja-simulator-application
+- rtic-blinky-for-nrf52840
+- tiva-tm4c1294-launchpad-freertos-demo
+- lpc43xx-freertos-led-blinking-example
+- home-automation-simulation-using-contiki-os
+- cooja-using-contiki
 ---
 
 Building a traffic light system is a classic exercise in embedded systems, but implementing it across multiple wireless nodes adds an interesting layer of complexity. The **Contiki Simple Traffic Light** project by Le Hoang Tuan provides a straightforward example of how to synchronize state between devices using Contiki-OS and the Rime communication stack.

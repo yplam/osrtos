@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-04-09T23:47:33+00:00'
 updatedAt: '2026-04-09T23:47:33+00:00'
+relatedProjects:
+- embedmcp-embedded-mcp-server-library
+- klipper-esp32
+- pixelroot32-game-engine
+- embedded-proto-mbed-os-to-server-example
+- stm32h743zi-rust-playground
+- rust-sel4-toy-system-for-i-mx6-sabre-lite
 ---
 
 ## Minecraft on a Microcontroller

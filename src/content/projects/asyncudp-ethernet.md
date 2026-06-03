@@ -31,6 +31,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- asyncudp-esp32-sc-w6100
+- asyncudp-esp32-ethernet
+- asyncwebserver-ethernet
+- asyncudp-teensy41
+- asyncwebserver-esp32-w5500
+- asyncwebserver-esp32-sc-enc
 ---
 
 Networking on the ESP8266 is often synonymous with WiFi, but many industrial or stable IoT applications require the reliability of a wired Ethernet connection. The **AsyncUDP_Ethernet** library brings the power of asynchronous UDP communication to ESP8266 devices using external Ethernet controllers like the W5100, W5500, or ENC28J60.

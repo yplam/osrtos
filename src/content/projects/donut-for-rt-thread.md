@@ -17,6 +17,13 @@ star: 1
 lastUpdated: '2021-12-14'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- aclock-for-rt-thread
+- termbox-for-rt-thread
+- rtt-math-mathematics-library-for-rt-thread
+- rtt-tetris
+- rtt-ssd1306-oled-driver-package
+- lua2rtt
 ---
 
 The "donut.c" code is a legendary piece of C programming, famous for its obfuscated shape and the complex math required to render a 3D torus using only ASCII characters. Now, thanks to the `donut` package for RT-Thread, this iconic demo is available for embedded developers to run directly on their RTOS-enabled hardware.

@@ -30,6 +30,13 @@ isShow: true
 image: /202602/mq135.webp
 createdAt: '2026-02-11'
 updatedAt: '2026-02-11'
+relatedProjects:
+- air-quality-monitor
+- project-aura
+- q-sensor-multi-functional-zigbee-air-quality-sensor
+- sgp30-gas-sensor-library-for-mongoose-os
+- esphome-ikea-vindriktning
+- ccs811-digital-gas-sensor-driver-for-rt-thread
 ---
 
 ## Overview

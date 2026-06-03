@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-emscripten-port
+- luavgl
+- lvglpp-a-c-wrapper-for-lvgl
+- lvgl-c-binding
+- lvgl-port-for-m5stack-core2
+- lv-modern-c-20-bindings-for-lvgl
 ---
 
 ## The Power of React for Embedded UIs

@@ -24,6 +24,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- d21eem-usb-cdc-eem-for-samd21
+- d21rndis-usb-rndis-for-samd21
+- usb-cdc-ecm-for-stm32f072
+- ip-over-usb
+- stm32-bluepill-rndis-device-with-lwip
+- wiznetinterface-library
 ---
 
 The **D21ecm** project is a specialized implementation of the USB Communication Device Class - Ethernet Control Model (CDC-ECM) for the Microchip (formerly Atmel) SAMD21 microcontroller. By leveraging this protocol, developers can transform a SAMD21-based board into a network interface that is natively recognized by operating systems like Linux and macOS, as well as many modern smartphones.

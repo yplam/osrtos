@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-04-07T23:28:44+00:00'
 updatedAt: '2026-04-07T23:28:44+00:00'
+relatedProjects:
+- esp32-ota-firmware-update-and-file-management
+- autonetwork-library
+- wifi-manager-for-micropython
+- esp-async-http-update-server
+- ayreswifimanager-awm
+- esp32-mesh-control
 ---
 
 Connecting an embedded device to a local Wi-Fi network is a fundamental hurdle for any IoT project. The **esp32-wifi-provision-care** library offers a streamlined solution for ESP32 developers using the ESP-IDF framework. It simplifies the process by managing Wi-Fi credentials stored in the default NVS (Non-Volatile Storage) partition and providing a fallback mechanism when connectivity fails.

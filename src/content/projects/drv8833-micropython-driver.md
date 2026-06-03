@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-02-08'
 updatedAt: '2026-02-08'
+relatedProjects:
+- opendualmotordriver
+- micropython-rotary-encoder-driver
+- neopixel-library-for-raspberry-pi-pico
+- micropython-st7735-tft-lcd-driver
+- micropython-waveshare-e-paper-drivers
+- micropython-max7219-8x8-led-matrix-library
 ---
 
 ## Overview

@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-04-05T00:57:19+00:00'
 updatedAt: '2026-04-05T00:57:19+00:00'
+relatedProjects:
+- pixlpal-m1-firmware
+- led-controller-esp32-hub75e-led-matrix-controller
+- esp32-32x32-rgb-matrix-controller
+- svitrix-firmware
+- openhoop
+- led-matrix-max7219-for-mongoose-os
 ---
 
 The LumiFur Controller is a sophisticated firmware solution for creators building high-end wearable LED displays, particularly the iconic Protogen-style masks. Built for the Adafruit MatrixPortal ESP32-S3, it transforms standard HUB75 RGB LED panels into reactive, expressive faces capable of complex animations and real-time sensor interaction.

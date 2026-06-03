@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32-web-server-using-spiffs
+- esp8266-remote-firework-countdown-relay
+- esp8266-wifi-relay-and-bahtinov-masks-controller
+- rtkrovermanager
+- esp32-remote-control-with-websocket
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
 ---
 
 ## Overview

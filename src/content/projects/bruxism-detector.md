@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-17'
 updatedAt: '2026-01-17'
+relatedProjects:
+- snoresense-ai-powered-snore-detection-on-seeed-xiao-mg24-sense
+- pulse-real-time-vibration-anomaly-detection
+- smart-sign-language-glove-translator
+- conveyor-belt-fault-detection-system
+- pulse
+- battery-health-monitor
 ---
 
 ## Overview

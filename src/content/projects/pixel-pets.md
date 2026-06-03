@@ -37,6 +37,13 @@ topics:
 isShow: true
 createdAt: '2026-05-22T01:02:26+00:00'
 updatedAt: '2026-05-22T01:02:26+00:00'
+relatedProjects:
+- esp32-virtual-cat-project
+- tamafi-wifi-powered-virtual-pet
+- deskpet-for-m5stack-cardputer
+- raising-hell-cardputer-adv-edition
+- deskpet
+- m5stack-toys
 ---
 
 Pixel Pets is a family of virtual pets designed to run on M5Stack hardware. The ecosystem consists of three primary pet variants—**Muffin** (CoreS3 + LLM), **Visu** (CoreS3), and **Goo-Goo** (Core2)—plus an optional pocket-sized companion device called **Pip** (M5StickC PLUS2). The project is built from a single source tree supporting five different build environments, sharing core pet logic, animations, and mini-games across all targets while leveraging specific hardware capabilities like voice processing and cameras on the CoreS3. 

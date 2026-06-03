@@ -38,6 +38,13 @@ topics:
 isShow: false
 createdAt: '2026-04-26T05:04:37+00:00'
 updatedAt: '2026-04-26T05:04:37+00:00'
+relatedProjects:
+- infiltra-firmware
+- esp-hack-fw
+- saturn
+- unigeek-firmware
+- ghost-esp
+- bruce-firmware
 ---
 
 ## Overview

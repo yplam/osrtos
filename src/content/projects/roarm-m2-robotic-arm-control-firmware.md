@@ -24,6 +24,13 @@ isShow: true
 image: /202604/RoArm-M2-S-details-39.webp
 createdAt: '2026-04-08T00:05:53+00:00'
 updatedAt: '2026-04-08T00:05:53+00:00'
+relatedProjects:
+- scara-drawing-robot
+- robomates-firmware
+- sesame-robot-micro
+- cuybot-v1-opensource-smartcar-project
+- mks-xdrive-mini-foc-driver
+- esp32-ota-firmware-update-and-file-management
 ---
 
 ## Overview

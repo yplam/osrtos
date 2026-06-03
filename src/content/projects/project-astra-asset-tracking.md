@@ -17,6 +17,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- loadng-implementation-on-contiki-os
+- low-power-wireless-networking-for-iot-lpiot
+- contiki-lora-tsch-project
+- gnss-lorawan-tracker
+- motesync
+- networked-embedded-systems-nes-project
 ---
 
 In large-scale enterprise environments, maintaining real-time visibility of high-value or mission-critical assets is a significant logistical challenge. Project ASTRA (Asset Tracking) provides a robust solution designed to track moving assets across multiple locations using a network of wireless nodes. Developed on the Contiki operating system, this project leverages low-power wireless communication to ensure efficient, energy-aware monitoring.

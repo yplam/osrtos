@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- qfplib-m0-full-floating-point-library
+- qfplib-m3-floating-point-library
+- lvgl-port-for-arm-cortex-m55-and-mps3-an547
+- fatfs-tiva-cm4f-port
+- i-mx-rt-cpu-support-package-for-crossworks
+- qfplib-m0-tiny
 ---
 
 ## Overview

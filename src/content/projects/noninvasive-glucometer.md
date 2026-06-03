@@ -18,6 +18,13 @@ topics:
 isShow: true
 createdAt: '2026-03-31T23:42:06+00:00'
 updatedAt: '2026-03-31T23:42:06+00:00'
+relatedProjects:
+- opentens-open-source-electrical-stimulation-system
+- freevario
+- td-free
+- openhrstrap-open-source-esp32-heart-rate-tracker
+- ch32v003-usb-meter
+- 2019-electronic-design-competition-paper-counting-display-device
 ---
 
 Developing a reliable noninvasive method for monitoring blood glucose levels remains one of the most significant challenges in medical technology. The Noninvasive Glucometer project is an open-source initiative aimed at tackling this problem by providing a platform for designing, building, and testing sensor prototypes. By sharing these designs, the project hopes to reduce the pain, cost, and waste associated with traditional invasive glucometers.

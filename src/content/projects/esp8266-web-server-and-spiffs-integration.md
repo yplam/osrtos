@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- esp32-web-server-using-spiffs
+- esp8266-dht22-spiffs-web-server
+- esp8266-config-data-management
+- esp8266-configuration-data-v2
+- esp32-monaco-editor-spiffs
+- esp8266-webserver-tutorials
 ---
 
 ## Overview

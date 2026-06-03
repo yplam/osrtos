@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-26'
 updatedAt: '2026-01-26'
+relatedProjects:
+- esp-e-paper-component
+- open-display-firmware
+- readmepaper-esp32-7-color-e-paper-display-project
+- sha2017-badge-firmware
+- volna-2bw42-weather-station-firmware
+- twatch-v3-firmware-for-esp32
 ---
 
 ## Overview

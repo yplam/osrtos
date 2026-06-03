@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-04-04T00:49:34+00:00'
 updatedAt: '2026-04-04T00:49:34+00:00'
+relatedProjects:
+- msx1-emulator-for-raspberry-pi-pico
+- picopeanutgb-game-boy-emulator-for-rp2350
+- pico-smsplus-sega-master-system-and-game-gear-emulator
+- usbsid-pico
+- retrojam-multi-retro-game-console-emulator
+- japi-base
 ---
 
 The NEC PC-6001mkII, a beloved 8-bit machine from the early 1980s, finds a new home on the Raspberry Pi Pico. This emulator project transforms the RP2040 microcontroller into a functional PC-6001mkII, complete with support for its successor models like the PC-6601 and the "SR" variants. It is a highly technical implementation that leverages the unique features of the RP2040, particularly its Programmable I/O (PIO) blocks, to handle demanding tasks like VGA signal generation and audio synthesis.

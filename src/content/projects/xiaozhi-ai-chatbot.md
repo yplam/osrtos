@@ -22,6 +22,13 @@ isShow: true
 image: /202601/sensecap_watcher.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- opentoys
+- starmoon-open-source-conversational-ai-device
+- wally-c-version
+- diy-ai-voice-assistant-for-esp32-s3
+- esp32-voice-assistant
 ---
 
 ## Overview

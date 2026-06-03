@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-02-18'
 updatedAt: '2026-02-18'
+relatedProjects:
+- comfosense-touch-zehnder-comfoair-q350-mqtt-bridge-controller
+- esp32-jarolift-controller
+- esp32-controller-for-charlton-jenrick-fireplace
+- simplebus2-mqtt-bridge
+- mel-ac-library-for-mongoose-os
+- openhasp-firmware
 ---
 
 ## Overview

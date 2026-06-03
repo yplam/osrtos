@@ -19,6 +19,13 @@ topics:
 isShow: true
 createdAt: '2026-06-02T23:24:44+00:00'
 updatedAt: '2026-06-02T23:24:44+00:00'
+relatedProjects:
+- esp32-controller-for-charlton-jenrick-fireplace
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- esp32-jarolift-controller
+- esp8266-home-automation
+- omote-open-universal-remote
+- esphome-ikea-vindriktning
 ---
 
 The Quntis Monitor Light Bar PRO+ (model LI-HY-208-BK) is a popular desk lighting solution that typically relies on a dedicated physical remote for power, dimming, and color temperature control. While effective, the lack of native smart home connectivity led to the development of this DIY bridge. By leveraging previous reverse-engineering efforts, this project migrates the control logic to the ESP32 platform, allowing the lamp to be fully integrated into Home Assistant.

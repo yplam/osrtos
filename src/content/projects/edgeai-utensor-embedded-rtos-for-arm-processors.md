@@ -19,6 +19,13 @@ star: 7
 lastUpdated: '2021-03-02'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- tensorflow-lite-micro-for-rt-thread
+- utensor-mnist-handwriting-recognition-demo
+- pruning-deep-learning-models-for-arm-cortex-m
+- magic-wand-on-mbed
+- edge-ai-on-embedded-linux-i-mx-8m-plus
+- stm32n6-getting-started-for-audio-ai
 ---
 
 ## Bringing Intelligence to the Edge with uTensor

@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- wanderingplan
+- smart-heating-iot-system
+- patient-monitoring-system-using-96boards
+- genius-gateway
+- knu-usn-automatic-ventilation-system
+- smartorchard
 ---
 
 The Intelligent Building Fire Protection System is a comprehensive IoT solution designed to enhance safety in modern structures through real-time environmental monitoring and automated emergency response. Built upon the Huawei LiteOS real-time operating system and the Bear Pi development platform, this project demonstrates a robust implementation of a three-layer IoT architecture to detect hazards and provide multi-channel alerting.

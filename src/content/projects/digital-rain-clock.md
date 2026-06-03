@@ -19,6 +19,13 @@ isShow: true
 image: /202602/digital_rain_clock.webp
 createdAt: '2026-02-06'
 updatedAt: '2026-02-06'
+relatedProjects:
+- esp32-weatherstationrtc
+- ascii-aquarium
+- elekstube-ips-custom-firmware
+- esptimecast
+- iv-11-vfd-tube-clock
+- 7-segment-clock
 ---
 
 ## Overview

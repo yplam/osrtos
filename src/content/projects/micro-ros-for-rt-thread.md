@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- micro-ros-module-for-zephyr
+- rt-rosserial-for-rt-thread
+- c-common-for-rt-thread
+- micropython-port-for-rt-thread
+- tensorflow-lite-micro-for-rt-thread
+- micro-ros-stm32-template
 ---
 
 Micro-ROS brings the power of ROS 2 (Robot Operating System) to microcontrollers and resource-constrained devices. This project specifically targets the RT-Thread RTOS, providing a seamless integration for developers working with the ROS 2 Galactic distribution. By bridging the gap between high-level robotics software and low-level embedded systems, it allows RT-Thread nodes to communicate directly with a standard ROS 2 graph.

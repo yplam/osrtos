@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- stm32cube-cmsis-core
+- cmsis-device-headers-for-stm32
+- stm32-prototyping-libraries
+- cmsis-documentation
+- stm32-cmsis-libraries
+- cmsis-drivers-for-efm32-and-stm32
 ---
 
 ## Streamlining STM32 Development with CMSIS

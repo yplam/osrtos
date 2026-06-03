@@ -20,6 +20,13 @@ isShow: true
 image: /202601/esp-graber.webp
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- daeva-rf-cybersecurity-tool
+- project-starbeam
+- esp-hack-fw
+- cc1101-jammer
+- esp32-bit-pirate
+- esp32-bus-pirate
 ---
 
 ## Overview

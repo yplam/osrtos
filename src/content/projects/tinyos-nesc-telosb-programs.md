@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- tinyos-apps-for-msp430f5529
+- homebrew-tinyos-for-msp430
+- tinyos-role-for-ansible
+- atmega128rfa1-tinyos-kth-wsn-project
+- mongoose-os-programs-and-examples
+- tinyos-for-msp430
 ---
 
 ## Overview

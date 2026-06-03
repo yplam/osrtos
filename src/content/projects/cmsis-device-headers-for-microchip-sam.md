@@ -19,6 +19,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- cmsis-device-headers-for-stm32
+- microchip-cmsis-modules-for-arduino
+- cmsis-for-stm32-development
+- single-stm32-header
+- modm-devices-curated-microcontroller-device-data
+- development-utils
 ---
 
 Developing for Microchip SAM microcontrollers requires a solid foundation of register definitions and hardware abstraction. The **cmsis-header-sam** repository provides the essential CMSIS (Cortex Microcontroller Software Interface Standard) device headers for the Microchip SAM family, ensuring that developers have access to standardized, reliable, and clean header files for their embedded projects.

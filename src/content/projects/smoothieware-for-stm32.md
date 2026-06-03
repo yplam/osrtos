@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zephyr-grbl
+- klipper-esp32
+- bitcraze-crazyflie-2-0-2-1-mbed-os-firmware
+- micro-ros-stm32-template
+- adaspace3d
+- stm32-prototyping-libraries
 ---
 
 ## Overview

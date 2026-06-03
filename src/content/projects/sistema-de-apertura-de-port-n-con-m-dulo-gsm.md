@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- freebees-access-control-for-esp32
+- rcs-avr-relay-control-system-with-sms
+- blynkgsm-manager
+- esp32-dynamic-iphone-keyless-system
+- sms-server
+- vortex-cannon-esp32-access-point-controller
 ---
 
 ## Overview

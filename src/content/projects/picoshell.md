@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-26'
 updatedAt: '2026-01-26'
+relatedProjects:
+- smolos
+- breadboardos
+- raspberry-pi-pico-freertos-shell
+- minios-esp
+- pydos
+- raspberry-pi-pico-web-server-control
 ---
 
 PicoShell is a lightweight, real-time command-line interface (CLI) designed specifically for the Raspberry Pi Pico W 2, powered by the RP2350 dual-core processor. Developed entirely in MicroPython, it transforms the standard MicroPython REPL experience into a more structured, UNIX-style shell environment. This makes it significantly easier to interact with the hardware's filesystem, manage network connections, and monitor system performance without writing custom Python scripts for every basic task.

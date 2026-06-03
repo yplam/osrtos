@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-02-27'
 updatedAt: '2026-02-27'
+relatedProjects:
+- hlw8012-and-bl0937-energy-meter-library-for-mongoose-os
+- axp2101-pmic-driver-for-esp-idf
+- power-pico
+- lvgl-port-for-esp32
+- rtems-i2c-driver-for-max961x
+- hx711-library-for-mongoose-os
 ---
 
 ## Overview

@@ -17,6 +17,13 @@ isShow: true
 image: /202601/Atomic_Clock.webp
 createdAt: '2026-01-23'
 updatedAt: '2026-01-23'
+relatedProjects:
+- retrofit-electronic-clock-with-raspberry-pi-pico-w
+- dcf77-transmitter
+- old-train-station-clock-revival
+- 7-segment-clock
+- elekstube-ips-custom-firmware
+- esp32fmradio
 ---
 
 ## Overview

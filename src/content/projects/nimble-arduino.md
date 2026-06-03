@@ -30,6 +30,13 @@ topics:
 isShow: true
 createdAt: '2026-01-01'
 updatedAt: '2026-01-04'
+relatedProjects:
+- arduino-serial-ble
+- nimble-ota
+- n-able-arduino-core
+- hijelhid-blekeyboard
+- esp32-ble-ota-arduino
+- bleota-esp32-ota-updates-over-ble
 ---
 
 ## Overview

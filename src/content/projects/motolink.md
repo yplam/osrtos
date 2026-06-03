@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- xiaomi-cybergear-arduino-library
+- cybergear-ros2-controller
+- sel4-hobd-prototype-system
+- x-track-open-source-gps-bicycle-computer
+- cuybot-v1-opensource-smartcar-project
+- esp32-bus-pirate
 ---
 
 MotoLink is a specialized hardware and software interface designed for motorcycle tuning and diagnostics. It provides a bridge between a motorcycle's Electronic Control Unit (ECU) and a computer, supporting both CAN Bus and K-Line communication protocols. The project is primarily intended for use with Honda HRC, Yamaha YEC, and generic OBD ECUs, offering a DIY alternative to commercial auto-tune systems like Bazzaz or Power Commander.

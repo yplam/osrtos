@@ -37,6 +37,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- golioth-firmware-sdk
+- golioth-zephyr-sdk
+- multizone-security-tee-for-risc-v
+- mtower-trusted-execution-environment
+- kendryte-k210-freertos-sdk
+- mongoose-os
 ---
 
 ## Overview

@@ -32,6 +32,13 @@ topics:
 isShow: true
 createdAt: '2026-05-07T12:16:06+00:00'
 updatedAt: '2026-05-07T12:16:06+00:00'
+relatedProjects:
+- esp-4diac-forte-library
+- dynamic-app-loading-for-cortex-m
+- stm32h743zi-rust-playground
+- micropython-port-for-rt-thread
+- stm32f429-rtic-and-smoltcp-example-application
+- rt-thread-art-arduino-rt-thread
 ---
 
 Beremiz4uC bridges the gap between the Beremiz Open Source IDE for IEC 61131-3 PLC programming and high-performance microcontrollers. By leveraging the Zephyr RTOS, this runtime environment provides a robust foundation for executing industrial control logic on ARM Cortex-M hardware, specifically targeting the STM32F4 series. It enables developers to transform standard development boards into functional PLCs capable of running complex automation sequences.

@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-23'
 updatedAt: '2026-01-23'
+relatedProjects:
+- esp32-reticulum-network-stack-gateway-node
+- losant-mqtt-mongoose-os-example
+- esp32-mesh-control
+- meshtnc
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- losant-mqtt-example-for-mongoose-os
 ---
 
 ## Overview

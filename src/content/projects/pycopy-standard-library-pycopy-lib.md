@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pycopy
+- micropython-lib
+- pikapython
+- semito-v-micropython-compatibility-layer-mcl
+- microdot
+- sparkfun-micropython-opencv
 ---
 
 ## Overview

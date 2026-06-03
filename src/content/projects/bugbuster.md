@@ -17,6 +17,13 @@ libraries:
 isShow: true
 createdAt: '2026-03-31T23:22:11+00:00'
 updatedAt: '2026-03-31T23:22:11+00:00'
+relatedProjects:
+- xiao-debug-mate
+- esp32-bus-pirate
+- esp32-bit-pirate
+- hydrabus
+- unigeek-firmware
+- lumen
 ---
 
 BugBuster is a versatile bench instrument designed to replace a collection of traditional lab equipment with a single USB-C connected board. It is specifically tailored for embedded systems testing and field instrument prototyping, offering high-precision analog and digital capabilities in a compact form factor.

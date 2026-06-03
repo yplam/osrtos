@@ -24,6 +24,13 @@ isShow: true
 image: /202603/TamaFi.webp
 createdAt: '2026-03-17'
 updatedAt: '2026-03-17'
+relatedProjects:
+- pixel-pets
+- raising-hell-cardputer-adv-edition
+- esp32-virtual-cat-project
+- deskpet
+- deskpet-for-m5stack-cardputer
+- circuitpal
 ---
 
 ## Overview

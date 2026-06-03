@@ -21,6 +21,13 @@ isShow: true
 image: /202512/honeypots.webp
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- google-phishing-with-esp8266
+- esp8266-micropython-development
+- picoshell
+- wifiphisher-for-esp32
+- uht-micro-http-toolkit
+- smolos
 ---
 
 ## Overview

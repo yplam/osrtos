@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- micropython-and-lvgl-firmware-for-esp32
+- unigeek-firmware
+- open-display-firmware
+- e-paper-esp32-c6-firmware
+- stick-firmware
+- bruce-firmware
 ---
 
 The SHA2017 Badge Firmware is the core software stack developed for the electronic badge distributed at the Still Hacking Anyway (SHA) 2017 hacker camp. Built on the Espressif IoT Development Framework (ESP-IDF), the firmware leverages FreeRTOS to manage the complex tasks of a modern connected wearable, including wireless networking, power management, and a high-level application environment.

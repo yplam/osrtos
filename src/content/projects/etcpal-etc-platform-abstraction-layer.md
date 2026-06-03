@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- enterprise-stm32-platform-development
+- c-common-for-rt-thread
+- freertos-wrapper-for-rt-thread
+- lua-rtos-for-esp32
+- c-os-ii-compatibility-layer-for-rt-thread
+- ameba-rtos-sdk
 ---
 
 EtcPal, the ETC Platform Abstraction Layer, is a foundational library designed to facilitate the creation of highly portable software. In the professional lighting and embedded systems industry, software often needs to span a vast range of hardware—from high-end desktop workstations to resource-constrained 32-bit microcontrollers. EtcPal solves this challenge by providing a unified, platform-neutral interface for common system operations.

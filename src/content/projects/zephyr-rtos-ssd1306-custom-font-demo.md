@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zephyr-lvgl-sample-for-nrf52840-mdk
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
+- zephyr-rtos-lorawan-node
+- swift-embedded-esp32-c6-oled-demo
+- zephyr-stm32-spi-example
+- arm-mbed-os-blue-pill-usb-demo
 ---
 
 ## Overview

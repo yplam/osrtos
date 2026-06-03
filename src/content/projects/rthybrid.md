@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- octopus-reel-realtime-eeg-laboratory
+- simple-open-ethercat-master-library-rtnet-version
+- xenomai-3-for-raspberry-pi-4
+- archminix
+- rtai-irq-latency-experiments
+- xenomai-3-for-raspberry-pi-0-1-linux-kernel-4-1-21
 ---
 
 RTHybrid is a specialized real-time software library designed for the field of experimental neuroscience. Its primary purpose is to facilitate the creation of electrophysiological hybrid circuits, where living neurons are interfaced with computational models in real-time. This technique, known as dynamic-clamp, requires extremely low and predictable latency to maintain the biological relevance of the interaction between model and tissue.

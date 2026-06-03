@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-05-01T00:13:56+00:00'
 updatedAt: '2026-05-01T00:13:56+00:00'
+relatedProjects:
+- okhi-open-keylogger-hardware-implant
+- toothpaste
+- freebees-access-control-for-esp32
+- bruce-firmware
+- esp-hack-fw
+- bluetooth-ducky-esp32-hid-injection-tool
 ---
 
 **The Tick** represents a significant evolution in covert access control system implants. Designed to be installed seamlessly behind card readers, it silently intercepts, logs, and replays access credentials. It provides security auditors and red teamers with a compact and flexible tool for investigating facility security through advanced credential injection and protocol sniffing.

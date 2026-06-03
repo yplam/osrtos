@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- pelion-device-management-client-example-for-mbed-os
+- mcuboot-for-stm32
+- stm32-bootloader
+- multi-firmware-esp
+- tock-bootloader
+- raspberry-pi-pico-w-and-pico-2-w-fota-bootloader
 ---
 
 ## Overview

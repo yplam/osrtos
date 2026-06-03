@@ -17,6 +17,13 @@ topics:
 isShow: true
 createdAt: '2026-04-01T01:18:51+00:00'
 updatedAt: '2026-04-01T01:18:51+00:00'
+relatedProjects:
+- midi2piousbhub
+- usbsid-pico
+- rp2040-dac-amp
+- digital-synth-pra32-u2
+- ultranet-to-i2s
+- pico-cec
 ---
 
 The MIDI 2 Solenoid Controller is a specialized firmware designed for the Raspberry Pi Pico, enabling it to act as a bridge between the digital world of MIDI and physical mechanical action. By converting USB MIDI signals into PWM outputs, this project allows musicians and sound artists to control up to four solenoids directly from a computer or MIDI sequencer.

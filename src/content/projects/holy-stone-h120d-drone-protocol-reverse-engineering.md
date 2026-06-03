@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-05-11T07:33:30+00:00'
 updatedAt: '2026-05-11T07:33:30+00:00'
+relatedProjects:
+- drone-stm32f1
+- fpv-drone-stm32f411-flight-controller
+- avem
+- flight-controller-rev2
+- droners
+- arduino-dronecan
 ---
 
 The Holy Stone H120D is a popular GPS-enabled drone, but like many consumer UAVs, its internal communication protocols are often undocumented and proprietary. This project changes that by providing the first public documentation of the H120D's WiFi protocol, derived from extensive reverse engineering of the stock Android application and live packet captures.

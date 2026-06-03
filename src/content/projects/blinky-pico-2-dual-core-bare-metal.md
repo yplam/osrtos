@@ -21,6 +21,13 @@ isShow: true
 image: /202602/pico-2.webp
 createdAt: '2026-02-14'
 updatedAt: '2026-02-14'
+relatedProjects:
+- pico-demos-for-rp2040
+- rtic-blinky-for-nrf52840
+- raspberry-pi-pico-freertos-sample-application
+- lpc43xx-freertos-led-blinking-example
+- seal-test-bare-bones-example
+- micropython-for-bare-metal-raspberry-pi
 ---
 
 The `Blinky_Pico2_dual_core_nosdk` project offers a deep dive into the low-level internals of the Raspberry Pi Pico 2, powered by the RP2350 microcontroller. Unlike most projects that rely on the official Raspberry Pi Pico SDK, this repository provides a completely manual, bare-metal implementation. It serves as an educational resource for developers who want to understand exactly what happens from the moment the processor leaves reset until the first LED blinks.

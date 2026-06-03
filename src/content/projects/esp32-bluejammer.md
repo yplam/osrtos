@@ -30,6 +30,13 @@ isShow: true
 image: /202602/esp32-bluejammer.webp
 createdAt: '2026-02-18'
 updatedAt: '2026-02-18'
+relatedProjects:
+- esp32-2-4ghz-jammer
+- c3mini-bluejammer
+- esp32-bluetooth-signal-jammer
+- espnrf24-jammer
+- nrf24-jammer
+- nrfbluenullifier
 ---
 
 ## Overview

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nxscli
+- semito-v-micropython-compatibility-layer-mcl
+- freertos-visualizer
+- rust-stub-library-for-apache-nuttx
+- bl602-adc-and-temperature-sensor-library-for-apache-nuttx
+- micropython-port-for-rt-thread
 ---
 
 ## Overview

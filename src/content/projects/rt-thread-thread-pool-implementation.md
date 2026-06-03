@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- ppool-for-rt-thread
+- little-led-daemon-littled-for-rt-thread
+- frt-fl-ssie-s-ready-freertos-threading
+- freertos-wrapper-for-rt-thread
+- freertos-add-ons
+- r3v2-cmsis-rtos
 ---
 
 ## Overview

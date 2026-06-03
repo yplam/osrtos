@@ -17,6 +17,13 @@ libraries:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zephyrwatch
+- gateway-smartwatch
+- ov-watch
+- leta
+- opentimewatch-os
+- watchx-open-source-smartwatch
 ---
 
 ## Overview

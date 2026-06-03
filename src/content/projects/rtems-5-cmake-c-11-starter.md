@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtems-cmake-build-support
+- stm32-makefile-freertos-project-template
+- stateos-c-11
+- stm32f030-cmake-cmsis-project-skeleton
+- stm32-cmake-cmsis-project-skeleton
+- arduino-osek-with-erika-enterprise-ee
 ---
 
 ## Overview

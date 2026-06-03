@@ -19,6 +19,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- modbusmaster-for-mbed-os-6
+- serialbridge
+- spektrum-receiver-library-for-mbed
+- murasaki
+- ubxgpsi2c
+- rt-rosserial-for-rt-thread
 ---
 
 Managing serial communication in embedded systems often involves balancing responsiveness with reliability. In the Mbed OS ecosystem, while `UARTSerial` provides a robust foundation for buffered serial I/O, developers frequently need more granular control over timeouts and asynchronous event handling. This is where **AsynchSerial** comes in—a lightweight wrapper designed to simplify these common tasks.

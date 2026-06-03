@@ -31,6 +31,13 @@ topics:
 isShow: true
 createdAt: '2026-05-27T01:54:07+00:00'
 updatedAt: '2026-05-27T01:54:07+00:00'
+relatedProjects:
+- tinycore-esp32-s3-learning-platform
+- esp32-bit-pirate
+- mpython-board
+- lilka-diy-console
+- hbird-e203-rt-thread-on-lichee-tang
+- colibri-wallet
 ---
 
 The Shrike family represents a thoughtful approach to making FPGA technology accessible to the broader maker community. Born from a passion project at Vicharak, these boards combine the versatility of popular microcontrollers with the power of reconfigurable logic. By pairing a Renesas FPGA with ubiquitous MCUs like the Raspberry Pi RP2040 or the ESP32-S3, Shrike provides a stepping stone for those moving from standard embedded programming into the world of heterogeneous computing.

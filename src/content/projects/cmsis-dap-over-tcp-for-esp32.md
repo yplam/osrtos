@@ -33,6 +33,13 @@ isShow: true
 image: /202602/cmsis_dap_tcp_diagram.webp
 createdAt: '2026-02-03'
 updatedAt: '2026-02-03'
+relatedProjects:
+- esp32-wifi-logger
+- airfrog
+- esp32-usb-over-ip
+- ip-over-usb
+- esp32-bus-expander
+- esp32-bus-pirate
 ---
 
 ## Overview

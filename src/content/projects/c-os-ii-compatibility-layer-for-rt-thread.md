@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- c-os-iii-compatibility-layer-for-rt-thread
+- cmsis-rtos1-compatibility-layer-for-rt-thread
+- cmsis-rtos2-compatibility-layer-for-rt-thread
+- freertos-wrapper-for-rt-thread
+- c-common-for-rt-thread
+- rtduino
 ---
 
 ## Overview

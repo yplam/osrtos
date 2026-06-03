@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- swedish-embedded-workstation
+- zephyr-sdk
+- ameba-rtos-sdk
+- swedish-embedded-control-systems-toolbox
+- enterprise-stm32-platform-development
+- zephyr-rtos-ai-harness
 ---
 
 ## Overview

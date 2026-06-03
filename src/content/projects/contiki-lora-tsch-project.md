@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- ql-tsch-implementation-for-contiki-ng
+- rl-tsch-implementation-for-contiki-ng
+- ql-tsch-reinforcement-learning-for-time-slotted-channel-hopping
+- msf-protocol-simulation-for-contiki-ng
+- sx128x-lora-transceiver-driver-for-contiki-ng
+- sx127x-lora-transceiver-driver-for-contiki-ng
 ---
 
 The Contiki LoRa TSCH project explores the integration of Time-Slotted Channel Hopping (TSCH) with LoRa modulation. While LoRa is traditionally associated with the LoRaWAN protocol—which typically uses an ALOHA-based medium access control—this project leverages the deterministic nature of TSCH, a key component of the IEEE 802.15.4 standard, to provide reliable and scheduled communication over long-range LoRa links.

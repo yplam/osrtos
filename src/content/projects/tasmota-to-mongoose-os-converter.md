@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mongoose-to-tasmota-home-accessory-architect-or-espurna
+- shelly-to-haa-firmware-converter
+- mongoose-os
+- mongoose-os-configurable-sensor-node
+- sonoff-basic-firmware-for-openhab
+- sonoff-http-firmware
 ---
 
 ## Overview

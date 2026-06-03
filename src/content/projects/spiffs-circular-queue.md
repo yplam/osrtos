@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- littlefs-ring-buffers
+- hommie-logger
+- rtcmemory
+- effortless-spiffs
+- spiffslogger
+- esp-multiresetdetector
 ---
 
 ## Overview

@@ -37,6 +37,13 @@ version: v1.3.1
 lastUpdated: '2022-12-05'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- timezone-generic-library
+- ds3231-rtc-driver-for-rt-thread
+- multiresetdetector-generic-library
+- doubleresetdetector-generic
+- elekstube-ips-custom-firmware
+- rx8900-high-precision-rtc-driver-for-rt-thread
 ---
 
 The DS3231 and DS3232 are staples in the embedded world for a reason: they are low-cost, extremely accurate I2C real-time clocks (RTC) featuring an integrated temperature-compensated crystal oscillator (TCXO). However, as the Arduino ecosystem has expanded far beyond the original AVR chips, developers often struggle with library compatibility across different architectures. The **DS323x_Generic** library solves this by providing a robust, cross-platform implementation that works seamlessly on everything from an ESP32 to a Raspberry Pi Pico.

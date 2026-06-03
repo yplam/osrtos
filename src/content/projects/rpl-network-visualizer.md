@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- bramblez1
+- freertos-visualizer
+- erbium-border-router
+- contikipy
+- computer-network-with-contiki-ng
+- loadng-implementation-on-contiki-os
 ---
 
 ## Overview

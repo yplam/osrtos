@@ -17,6 +17,13 @@ isShow: true
 image: /202603/totemx.webp
 createdAt: '2026-03-11'
 updatedAt: '2026-03-11'
+relatedProjects:
+- aw-1-keyboard
+- custom-5x7-dactyl-manuform-with-integrated-trackball
+- puntero34-pointer-peripheral
+- loongcat40-keyboard
+- polymath-studio-one-handed-keyboard-ps-ohk
+- gesture-detecting-macro-keyboard
 ---
 
 ## Overview

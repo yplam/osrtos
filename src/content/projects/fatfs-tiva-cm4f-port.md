@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- stm32-fatfs-on-sd-card-using-freertos
+- hub75-dma-based-driver-for-raspberry-pi-pico
+- stm32-fatfs-and-freertos-integration
+- littlefs-for-esp-idf
+- st7735-video-playback-for-stm32
+- stm32f407vg-freertos-fatfs-sdio-sd-card-demo
 ---
 
 ## Overview

@@ -35,6 +35,13 @@ version: v1.0.0
 lastUpdated: '2022-12-11'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp8266-w5500-manager
+- asyncesp8266-w5500-manager
+- esp8266-w5100-manager
+- asyncesp8266-w5100-manager
+- esp8266-enc-manager
+- asyncesp32-sc-ethernet-manager
 ---
 
 Managing network credentials in embedded systems often leads to a common frustration: hardcoding IP addresses and settings into the source code. The **ESP32_W5500_Manager** library solves this by providing a robust connection manager for ESP32 devices paired with the W5500 Ethernet controller. By leveraging the LwIP stack, it allows developers to configure Ethernet settings—including Static IP, DHCP, and custom application parameters—at runtime through a user-friendly web interface.

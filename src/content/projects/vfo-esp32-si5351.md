@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- ic-705-ci-v-band-decoder-and-transverter-controller
+- espri-esp-radio-interface
+- si4732-radio
+- esp32-s3-smart-home-control-panel
+- esp32berry
+- esp32-sdr-gps-receiver
 ---
 
 The VFO-ESP32-Si5351 project is a comprehensive solution for amateur radio enthusiasts looking to build or upgrade their transceivers with a modern, digitally-controlled oscillator. By leveraging the processing power of the ESP32 and the versatility of the Si5351A clock generator, this project provides a stable and feature-rich frequency control system that rivals commercial equipment.

@@ -17,6 +17,13 @@ star: 6
 lastUpdated: '2020-08-26'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- contiki-lora-tsch-project
+- low-power-wireless-networking-for-iot-lpiot
+- ql-tsch-implementation-for-contiki-ng
+- computer-network-with-contiki-ng
+- rl-tsch-implementation-for-contiki-ng
+- mrhof-simplified-modified-rpl-objective-function-for-contiki
 ---
 
 The LOADng (Lightweight On-demand Ad hoc Distance-vector Routing Protocol - Next Generation) is a simplified version of the AODV routing protocol, specifically designed for Low-power and Lossy Networks (LLNs). This project provides a functional implementation of the LOADng protocol integrated into the Contiki OS environment, specifically targeting the Rime network stack.

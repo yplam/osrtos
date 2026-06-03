@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtdm-shift-register-driver-for-elk-pi
+- raspa-realtime-audio-driver-access-library
+- real-time-spi-on-xenomai-3
+- xenomai-3-for-raspberry-pi-4
+- xenomai-3-for-raspberry-pi-0-1-linux-kernel-4-1-21
+- soem-w5500-ethercat-master-for-raspberry-pi
 ---
 
 ## Overview

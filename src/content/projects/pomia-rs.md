@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rust-ir-thermometer-firmware
+- stm32f4-rtic-playground
+- pinetime-rs
+- rust-embedded-examples
+- b-l475e-iot01a-discovery-board-support-crate
+- airgradient-pro-rust-firmware
 ---
 
 # Exploring Rust for Embedded Systems with Pomia-rs

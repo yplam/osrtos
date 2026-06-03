@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-22'
 updatedAt: '2026-01-22'
+relatedProjects:
+- embedmcp-embedded-mcp-server-library
+- esp8266-littlefs-file-handler
+- pycopy
+- cozy
+- embedded-kf-library
+- settings-manager
 ---
 
 ## Overview

@@ -26,6 +26,13 @@ isShow: true
 image: /202601/objex-link.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nrf52840-m-2-developer-kit
+- tinycore-esp32-s3-learning-platform
+- dual-boot-esp32-with-platformio-and-arduino
+- hail-iot-development-module
+- eez-bench-box-3-bb3-modular-power-supply-platform
+- esp32-ble-uart-mx
 ---
 
 # OBJEX Link: A Sustainable and Modular IoT Ecosystem

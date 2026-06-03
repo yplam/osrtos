@@ -18,6 +18,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- cse160-network-protocols-project-skeleton
+- tag-and-tina-implementation-on-tinyos
+- lightweight-publish-subscribe-application-protocol-for-tinyos
+- loadng-implementation-on-contiki-os
+- distributed-wavelet-transform-for-tinyos
+- dsml4tinyos-a-domain-specific-language-for-tinyos
 ---
 
 ## The COMPASS Multihop Framework for TinyOS

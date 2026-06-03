@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- espchat
+- esp8266-web-server-and-spiffs-integration
+- esp32-remote-control-with-websocket
+- esp8266-wifi-relay-async
+- esp-fs-webserver
+- esp8266-wifi-relay
 ---
 
 The ESP8266 WebServer Chat project demonstrates the capability of the ESP8266 microcontroller to host a functional real-time communication platform. By leveraging the Arduino framework and the PlatformIO development environment, this project creates a standalone web server that allows users to interact through a chat interface directly in their browsers.

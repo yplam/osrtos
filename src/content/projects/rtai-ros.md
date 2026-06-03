@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- urt-unified-interface-to-real-time-operating-systems
+- rt-rosserial-for-rt-thread
+- simple-open-ethercat-master-library-rtnet-version
+- micro-ros-for-rt-thread
+- cybergear-ros2-controller
+- superviseur-robot-real-time-systems-project
 ---
 
 ## Overview

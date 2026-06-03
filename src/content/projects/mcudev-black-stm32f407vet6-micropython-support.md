@@ -17,6 +17,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- the-micropython-board-pyboard
+- blackpill-stm32f401ce-support-for-mbed-os-6
+- mbed-os-6-port-for-weact-stm32h743vit6
+- mbed-os-6-support-for-weact-black-pill-stm32f401cc
+- mbed-os-6-support-for-weact-black-pill-stm32f411ce
+- rt-thread-bsp-for-stm32f407vet6
 ---
 
 The MCUDev Black STM32F407VET6 is a popular and affordable development board featuring a powerful ARM Cortex-M4 processor. This project provides the essential board definition files to integrate this hardware into the MicroPython ecosystem, allowing developers to leverage Python for high-performance embedded applications.

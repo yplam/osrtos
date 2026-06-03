@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- max17263-test-app-for-mongoose-os
+- ltc68xx-battery-monitoring-library-for-mongoose-os
+- hx711-library-for-mongoose-os
+- lis3dh-accelerometer-library-for-mongoose-os
+- sgp30-gas-sensor-library-for-mongoose-os
+- arduino-rf24-for-mongoose-os
 ---
 
 The MAX17263 is a high-precision battery fuel gauge IC designed to provide accurate state-of-charge (SoC) data for lithium-ion batteries. This repository provides a dedicated library for Mongoose OS, allowing developers to easily integrate battery monitoring capabilities into their IoT firmware.

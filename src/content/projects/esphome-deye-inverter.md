@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-17'
 updatedAt: '2026-01-17'
+relatedProjects:
+- ginlong-solis-solar-inverter-modbus-integration
+- dtugateway-for-hoymiles-hms-inverters
+- marstek-venus-e-esphome-integration
+- esp32-remote-for-victron
+- esphome-modbus-tcp-to-rtu-bridge
+- multiple-jk-bms-modbus-rs485-integration
 ---
 
 The ESPHome Deye Inverter project provides a robust, open-source solution for integrating Deye photovoltaic inverters into the Home Assistant ecosystem. By leveraging the ESPHome framework and Modbus RTU communication, this project enables users to bypass proprietary cloud loggers and gain direct, local control over their solar power systems.

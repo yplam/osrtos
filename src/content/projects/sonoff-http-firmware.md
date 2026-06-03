@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sonoff-basic-firmware-for-openhab
+- esp8266-wifi-relay
+- mongoose-to-tasmota-home-accessory-architect-or-espurna
+- mongoose-os-configurable-sensor-node
+- esp8266-home-automation
+- cloudhome-firmware
 ---
 
 ## Overview

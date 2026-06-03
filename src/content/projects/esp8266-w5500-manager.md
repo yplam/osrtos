@@ -36,6 +36,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-w5100-manager
+- esp32-w5500-manager
+- asyncesp8266-w5500-manager
+- asyncesp8266-w5100-manager
+- esp8266-enc-manager
+- asyncesp8266-enc-manager
 ---
 
 ## Overview

@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- movingaveragefloat
+- moving-average-filter
+- mpu6050-interfacing-library-for-esp32-esp-idf
+- rtt-libfilter-digital-filter-library-for-rt-thread
+- nano33blesensor
+- spektrum-receiver-library-for-mbed
 ---
 
 ## Overview

@@ -22,6 +22,13 @@ star: 18
 lastUpdated: '2019-07-10'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp8266-rtos-homekit-accessory
+- esp-4diac-forte-library
+- simplebus2-mqtt-bridge
+- supladevice-library
+- ds248x-1-wire-library
+- rtos-wot
 ---
 
 Modernizing a legacy home security system often requires expensive proprietary modules or cumbersome third-party bridges. The **dscKeybusInterface-RTOS** project changes that by providing a high-performance, open-source library that allows an ESP8266 to communicate directly with the DSC PowerSeries Keybus protocol. This repository is a port of the popular Arduino dscKeybusInterface library to the `esp-open-rtos` (FreeRTOS-based) environment, specifically optimized for native Apple HomeKit integration.

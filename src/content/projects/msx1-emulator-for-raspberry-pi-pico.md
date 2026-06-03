@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-28'
 updatedAt: '2026-01-28'
+relatedProjects:
+- pc-6001mkii-emulator-for-raspberry-pi-pico
+- pico-smsplus-sega-master-system-and-game-gear-emulator
+- picopeanutgb-game-boy-emulator-for-rp2350
+- retrojam-multi-retro-game-console-emulator
+- usbsid-pico
+- esp32-s3-nes-emulator
 ---
 
 ## Overview

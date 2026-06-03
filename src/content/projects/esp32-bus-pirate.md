@@ -40,6 +40,13 @@ isShow: true
 image: /202601/esp32-bus-pirate.webp
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- esp32-bit-pirate
+- esp32-bus-expander
+- esp-hack-fw
+- esp-graber
+- beamstalker
+- hydrabus
 ---
 
 The ESP32 Bus Pirate is an ambitious open-source firmware project that transforms standard ESP32-S3 development boards into versatile multi-protocol hacking and diagnostic tools. Inspired by the legendary Bus Pirate, this firmware leverages the modern power of the ESP32-S3 to provide a significantly expanded feature set, including support for both wired digital protocols and various wireless communication standards.

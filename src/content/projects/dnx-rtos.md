@@ -28,6 +28,13 @@ version: Release-2.4.0
 lastUpdated: '2020-12-19'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- minios-esp
+- nuttx-real-time-operating-system
+- apache-nuttx-rtos
+- mos-rtos
+- phoenix-rtos-project
+- xc-os-a-lightweight-graphical-os-for-mcus
 ---
 
 The dnx RTOS is a general-purpose operating system designed to bring Unix-like capabilities to small, resource-constrained microcontrollers. Rather than being a completely new kernel from scratch, dnx is built as a sophisticated layer on top of the well-known FreeRTOS kernel. You can think of it as a specialized distribution of FreeRTOS that provides the high-level abstractions typically found in larger operating systems.

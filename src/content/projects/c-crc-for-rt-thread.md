@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtt-validator
+- c-common-for-rt-thread
+- micro-ros-for-rt-thread
+- uc-modbus-for-rt-thread
+- c-clk-for-rt-thread
+- arduino-rt-thread-library
 ---
 
 μC/CRC for RT-Thread is a specialized port of the Silicon Labs uC/CRC utility library, designed to provide robust Error Detecting Code (EDC) and Error Correcting Code (ECC) capabilities to the RT-Thread ecosystem. This library is essential for embedded applications requiring high data integrity, such as communication protocols, storage systems, and safety-critical firmware.

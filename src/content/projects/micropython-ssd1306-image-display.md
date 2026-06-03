@@ -21,6 +21,13 @@ isShow: true
 image: /202603/micropython-ssd1306.webp
 createdAt: '2026-03-05'
 updatedAt: '2026-03-05'
+relatedProjects:
+- micropython-st7735-tft-lcd-driver
+- micropython-st7789-lcd-driver
+- thingpulse-oled-ssd1306-driver
+- rtt-ssd1306-oled-driver-package
+- pixelforge
+- micropython-waveshare-e-paper-drivers
 ---
 
 ## Overview

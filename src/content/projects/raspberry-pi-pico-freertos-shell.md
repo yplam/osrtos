@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-17'
 updatedAt: '2026-01-17'
+relatedProjects:
+- picoshell
+- rp2040-freertos-template
+- raspberry-pi-pico-freertos-sample-application
+- breadboardos
+- pydos
+- sqlite-for-raspberry-pi-pico
 ---
 
 ## Overview

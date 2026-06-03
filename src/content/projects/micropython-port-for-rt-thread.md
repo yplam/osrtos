@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- micropython-for-pandora-iot-board
+- micropython-for-w601-iot-board
+- semito-v-micropython-compatibility-layer-mcl
+- micro-ros-for-rt-thread
+- micropython-for-sparrow-one-board
+- lua2rtt
 ---
 
 ## Overview

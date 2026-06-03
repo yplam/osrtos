@@ -21,6 +21,13 @@ isShow: true
 image: /202605/sunton-esp32-s3-5-inch-ips-with-touch.webp
 createdAt: '2026-05-07T12:11:56+00:00'
 updatedAt: '2026-05-07T12:11:56+00:00'
+relatedProjects:
+- lvgl-barebones-example-for-sunton-esp32-2432s028r
+- jc4827w543-lvgl-v9-implementation
+- lvgl-port-for-m5stack-core2
+- esp32-tux
+- lvgl-port-for-esp32
+- lvgl-8-on-wt32-sc01-with-arduino
 ---
 
 ## High-Resolution Graphics on the ESP32-S3

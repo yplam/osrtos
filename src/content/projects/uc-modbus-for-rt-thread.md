@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- c-common-for-rt-thread
+- modbus-tcp-for-stm32f407
+- rt-rosserial-for-rt-thread
+- canfestival-rtt
+- micro-ros-for-rt-thread
+- c-os-iii-compatibility-layer-for-rt-thread
 ---
 
 uC/Modbus for RT-Thread is a specialized port of the robust uC/Modbus stack, originally developed by Micrium (now Silicon Labs), specifically tailored for the RT-Thread real-time operating system. Modbus remains one of the most widely used industrial communication protocols, and this package brings its full suite of capabilities to the RT-Thread community.

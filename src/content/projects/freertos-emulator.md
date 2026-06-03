@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- development-of-real-time-systems-assignments
+- eclipse-simulator-for-lvgl-using-sdl
+- freertos-for-raspberry-pi-3-64-bit
+- tiny386
+- unicorn-emulator-for-apache-nuttx-on-avaota-a1-arm64-sbc
+- lvgl-demo-embarcadores
 ---
 
 ## Overview

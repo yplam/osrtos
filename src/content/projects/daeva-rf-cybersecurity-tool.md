@@ -20,6 +20,13 @@ isShow: true
 image: /202603/daeva.webp
 createdAt: '2026-03-15'
 updatedAt: '2026-03-15'
+relatedProjects:
+- esp-graber
+- project-starbeam
+- esp32-bluejammer
+- marauder-centauri
+- ghostesp
+- esp-hack-fw
 ---
 
 Daeva is a versatile, open-source cybersecurity tool specifically engineered for RF signal manipulation. Built around the powerful ESP32 microcontroller, it serves as a portable Swiss Army knife for security researchers and hobbyists interested in Sub-GHz frequencies. The project focuses on the most common bands used in remote controls, sensors, and IoT devices: 315 MHz, 433 MHz, 868 MHz, and 915 MHz.

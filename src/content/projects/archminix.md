@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- freertos-for-cadence-tensilica-hifi-4-dsp
+- freertos-port-for-teensy-3-6-4-0-4-1
+- freertos-port-for-renesas-rh850
+- cmsis-rtos-on-micro-bit
+- rtems-sdio-driver-and-benchmarking-tools
+- rt-thread-bsp-for-stm32f407vet6
 ---
 
 ArchMinix represents a significant effort to bridge the gap between high-performance Digital Signal Processors (DSPs) and robust real-time operating systems. Specifically, this project focuses on porting the Board Support Package (BSP) for the Texas Instruments TMS320C6678 into the master branch of RTEMS 4.11. By partitioning source files into logical sub-folders, the project aims to provide a clean, modular foundation for developers working with C6x architecture.

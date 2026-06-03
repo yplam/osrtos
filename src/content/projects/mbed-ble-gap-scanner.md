@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mbed-os-ble-gap-advertiser-for-arduino-nano-33-ble
+- ghostble
+- develop-your-own-bluetooth-low-energy-applications
+- esp32-ble-uart-mx
+- openhaystack-zephyr-firmware
+- nimble-arduino
 ---
 
 ## Overview

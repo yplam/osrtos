@@ -13,6 +13,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtt-validator
+- rtt-math-mathematics-library-for-rt-thread
+- embedded-kf-library
+- pmsxx-sensor-driver-for-rt-thread
+- gp2y10-dust-sensor-driver-for-rt-thread
+- movingaveragefloat
 ---
 
 Digital filtering is a crucial component in embedded systems for processing sensor data and overcoming random interference. The rtt-libfilter library provides a collection of digital filter algorithms specifically optimized for the RT-Thread ecosystem.

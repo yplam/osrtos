@@ -13,6 +13,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- xenomai-3-exercises
+- str-xenomai-real-time-systems-practices
+- xenoparticles
+- xenomai-3-exercises-for-raspberry-pi-4
+- sel4-kernel-101
+- xenomai-3-for-raspberry-pi-4
 ---
 
 ## Overview

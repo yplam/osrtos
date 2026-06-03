@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-test-app-for-apache-nuttx
+- apache-nuttx-rtos-for-pinephone
+- zig-lvgl-touchscreen-app-on-apache-nuttx-rtos
+- lvgl-for-pinephone-and-webassembly-with-zig-and-apache-nuttx-rtos
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
+- lvgl-demo-printer-for-raspberry-pi-3
 ---
 
 ## Overview

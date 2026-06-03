@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-02-01'
 updatedAt: '2026-02-01'
+relatedProjects:
+- hub75-dma-based-driver-for-raspberry-pi-pico
+- neopixel-library-for-raspberry-pi-pico
+- micropython-max7219-8x8-led-matrix-library
+- lvgl-port-for-raspberry-pi-pico-mdk-arm
+- lvgl-port-for-esp32
+- led-matrix-max7219-for-mongoose-os
 ---
 
 The `hub75_lvgl` project brings the power of the Light and Versatile Graphics Library (LVGL) to the Raspberry Pi Pico, specifically targeting HUB75 RGB LED matrix panels. While these panels are typically used for simple scrolling text or basic animations, this project demonstrates how to implement a sophisticated UI framework to create rich, animated displays on hardware that is traditionally difficult to drive.

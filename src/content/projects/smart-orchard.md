@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- smartorchard
+- smart-heating-iot-system
+- homeiot-smart-home-automation-system
+- smart-dc-maintenance
+- home-automation-simulation-using-contiki-os
+- smart-farming-iot-system
 ---
 
 The Smart Orchard project represents a modern approach to precision agriculture, leveraging Internet of Things (IoT) technologies to provide farmers with real-time insights into their crops. By integrating low-power wireless sensors and actuators, the system enables automated monitoring and intervention, such as smart irrigation management.

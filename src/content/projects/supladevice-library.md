@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- silicon-labs-arduino-core
+- autonetwork-library
+- spirit-motor-driver-library
+- thing-simplified-mqtt-framework-for-esp8266-and-esp32
+- pamculib
+- esp32-ai-connect
 ---
 
 ## Overview

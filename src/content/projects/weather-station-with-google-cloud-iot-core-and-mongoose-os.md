@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mongoose-os-environmental-sensors-application
+- mongoose-os-programs-and-examples
+- mongoose-os-environment-logger
+- losant-mqtt-example-for-mongoose-os
+- swarmsense-iot-platform-with-mongoose-os
+- mbed-to-google-cloud-iot
 ---
 
 This project provides a comprehensive guide and codebase for building a professional-grade IoT weather station. By combining the power of Mongoose OS with Google Cloud Platform (GCP), it demonstrates how to bridge the gap between embedded hardware and cloud-based data analytics.

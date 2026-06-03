@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- str-xenomai-real-time-systems-practices
+- nuttx-rtos-experiments
+- xenomai-3-exercises-for-raspberry-pi-4
+- rtems-sdio-driver-and-benchmarking-tools
+- open-source-ldat-latency-analyser
+- development-of-real-time-systems-assignments
 ---
 
 The RTAI IRQ Latency Experiments project provides a specialized environment for benchmarking and analyzing interrupt latency within the Real-Time Application Interface (RTAI) for Linux. In the world of hard real-time systems, the time elapsed between a hardware signal and the execution of its corresponding Interrupt Service Routine (ISR) is a critical metric. This project offers the tools necessary to quantify that delay across different hardware interfaces.

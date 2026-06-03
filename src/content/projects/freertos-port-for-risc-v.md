@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- rt-thread-smart-porting-for-risc-v-qemu-and-k210
+- freertos-for-raspberry-pi-3-64-bit
+- freertos-port-for-avr-xmega
+- freertos-port-for-renesas-rh850
+- rt-thread-for-picorv32-on-lichee-tang
+- freertos-for-cadence-tensilica-hifi-4-dsp
 ---
 
 The FreeRTOS-RISCV project represents a significant community effort to bring the FreeRTOS real-time operating system to the RISC-V architecture during its early development phases. While now considered obsolete due to the official integration of RISC-V support into the main FreeRTOS codebase, this codebase served as a crucial bridge for developers working with various iterations of the RISC-V privilege specification.

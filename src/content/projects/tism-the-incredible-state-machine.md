@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-05-07T00:41:12+00:00'
 updatedAt: '2026-05-07T00:41:12+00:00'
+relatedProjects:
+- arduino-pico
+- pico-rtic-template
+- rp2040-freertos-template
+- stm32-event-triggered-finite-state-machine-framework
+- raspberry-pi-pico-freertos-sample-application
+- mbed-rpi-pico-timerinterrupt
 ---
 
 Developing for the Raspberry Pi Pico often starts with a simple loop, but as projects grow to include multiple sensors, motors, and user interfaces, managing timing becomes a significant challenge. While the RP2040 and RP2350 offer dual-core performance, standard procedural code often leaves one core idle or struggles to balance competing priorities. TISM, or "The Incredible State Machine," provides a lightweight framework to solve this by applying cooperative multitasking techniques specifically tuned for the Pico ecosystem.

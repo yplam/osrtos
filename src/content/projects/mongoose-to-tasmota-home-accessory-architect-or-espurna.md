@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- tasmota-to-mongoose-os-converter
+- shelly-to-haa-firmware-converter
+- sonoff-http-firmware
+- mongoose-os-configurable-sensor-node
+- mongoose-os
+- sonoff-basic-firmware-for-openhab
 ---
 
 The `mgos-to-tasmota` project serves as a specialized bridge for smart home enthusiasts looking to migrate their Shelly devices from the stock Mongoose OS-based firmware to alternative platforms like Tasmota, Home Accessory Architect (HAA), or ESPurna. This transition is often desired to gain local control, improve privacy, or integrate devices into ecosystems like HomeKit or Home Assistant without relying on proprietary cloud services.

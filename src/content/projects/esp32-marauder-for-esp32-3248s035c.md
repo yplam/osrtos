@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-05-25T00:48:32+00:00'
 updatedAt: '2026-05-25T00:48:32+00:00'
+relatedProjects:
+- esp32-marauder-for-cheap-yellow-display-cyd
+- marauder-centauri
+- ghost-esp
+- unigeek-firmware
+- ghostesp
+- esp32-8048s050c-with-lvgl-9-4-and-freertos
 ---
 
 The ESP32 Marauder is one of the most well-known open-source projects for portable Wi-Fi security auditing and network analysis. Originally developed by JustCallMeKoko, the suite has become a staple for security enthusiasts using ESP32-based hardware. This specific repository provides a dedicated port of the Marauder firmware for the **ESP32-3248S035C**, a popular development board that integrates an ESP32 with a large 3.5-inch capacitive touchscreen display.

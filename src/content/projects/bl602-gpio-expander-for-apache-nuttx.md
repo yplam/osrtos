@@ -21,6 +21,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- hynitron-cst816s-touch-controller-driver-for-apache-nuttx
+- pinedio-stack-bl604-on-apache-nuttx-rtos
+- rust-embedded-hal-for-apache-nuttx-rtos
+- bl602-adc-and-temperature-sensor-library-for-apache-nuttx
+- tca9534-8-bit-i-o-expander-driver-for-rt-thread
+- gpio-device-driver-for-beaglebone-black
 ---
 
 Developing for the PineDio Stack BL604 on Apache NuttX RTOS presents a unique challenge: managing a high density of GPIOs. The standard NuttX GPIO driver for the BL602 architecture often maps pins in a way that can be confusing for developers—for instance, `/dev/gpio0` might actually map to physical Pin 10. The **BL602 Expander** project solves this by providing a dedicated GPIO Expander driver that maps GPIOs 0 through 22 directly to `/dev/gpio0` through `/dev/gpio22`.

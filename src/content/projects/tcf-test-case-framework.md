@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- icetea-test-framework
+- tock-test-harness
+- swedish-embedded-platform-sdk
+- ferros-fancy-test
+- remote-flash-and-test-for-bl602-bl604-nuttx
+- bridle
 ---
 
 ## Overview

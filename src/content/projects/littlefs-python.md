@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- littlefs2-idiomatic-rust-api-for-littlefs
+- pico-vfs-a-virtual-file-system-for-raspberry-pi-pico
+- littlefs-mbed-rp2040
+- arduino-littlefs-spimemory-wrapper
+- littlefs-portenta-h7-library
+- 107-arduino-littlefs
 ---
 
 ## Overview

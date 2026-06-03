@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- vs-code-zephyr-development-environment
+- micropico-visual-studio-code-extension
+- mbed-vscode-tools
+- west-the-zephyr-rtos-meta-tool
+- zig-language-toolchain-for-esp-idf
+- zephyr-rtos-ai-harness
 ---
 
 ## Overview

@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- openthread-rtos
+- stm32l475-freertos-iot-project
+- ameba-rtos-sdk
+- nxp-i-mx-rt-development-platform
+- rtos-wot
+- stm32f429-nucleo-lwip-and-freertos-template
 ---
 
 RTOX is a comprehensive IoT development platform designed specifically for the Nuvoton NUM487KM_DEVB evaluation board. It serves as a pre-integrated stack for developers looking to jumpstart their embedded IoT projects on the Nuvoton M480 series microcontrollers. By combining a real-time operating system with networking, file system management, and advanced debugging tools, RTOX provides a "batteries-included" environment for Cortex-M4 development.

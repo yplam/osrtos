@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- develop-your-own-bluetooth-low-energy-applications
+- zephyr-usb-midi-driver
+- zephyr-rtos-for-dwm1001
+- midi2piousbhub
+- rt-thread-nimble
+- zephyr-lorawan-lora-examples
 ---
 
 ## Overview

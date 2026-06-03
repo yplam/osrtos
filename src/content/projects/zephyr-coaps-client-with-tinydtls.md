@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- building-wireless-sensor-networks-with-openthread
+- anjay-zephyr-client
+- anjay-zephyr
+- pyrinas-zephyr
+- infuse-iot-sdk
+- coap-eap-with-eap-noob-in-contiki
 ---
 
 ## Reliable, Efficient, and Encrypted Cellular IoT

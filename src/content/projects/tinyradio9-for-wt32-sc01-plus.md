@@ -18,6 +18,13 @@ isShow: true
 image: /202604/tinyradio9.webp
 createdAt: '2026-04-26T02:24:13+00:00'
 updatedAt: '2026-04-26T02:24:13+00:00'
+relatedProjects:
+- snow-radio
+- esp32-web-radio-evo3
+- melody-machine
+- si4732-radio
+- radiojkk32-multifunctional-internet-radio-player
+- wt32-sqln-wt32-sc01-plus-with-squareline-studio-and-lvgl
 ---
 
 ## Bringing High-Quality Internet Radio to the WT32-SC01-PLUS

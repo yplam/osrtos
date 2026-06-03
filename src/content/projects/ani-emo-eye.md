@@ -26,6 +26,13 @@ isShow: true
 image: /202602/ani-emo-eye.webp
 createdAt: '2026-02-09'
 updatedAt: '2026-02-09'
+relatedProjects:
+- mochi-esp32-client
+- xiaozhi-ai-desk-buddy-esp32-s3
+- fluxgarage-roboeyes-library
+- lvgl-kawaii-face
+- stackchan-minimal
+- nebaura-labs-mote
 ---
 
 ## Overview

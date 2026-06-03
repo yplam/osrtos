@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- esp8266starter
+- riden-dongle
+- nmea0183-wifi-marine-data-gateway
+- esp8266-web-server-and-spiffs-integration
+- esp8266-mlx90614-temperature-monitor
+- esp8266-dht22-spiffs-web-server
 ---
 
 ## Overview

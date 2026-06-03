@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- moving-average-filter
+- movingaverageangle
+- nano33blesensor
+- rtt-libfilter-digital-filter-library-for-rt-thread
+- qfplib-m0-full-floating-point-library
+- qfplib-m3-floating-point-library
 ---
 
 ## Overview

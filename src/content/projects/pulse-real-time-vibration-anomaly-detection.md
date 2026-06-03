@@ -28,6 +28,13 @@ isShow: true
 image: /202603/pulse.webp
 createdAt: '2026-03-15'
 updatedAt: '2026-03-15'
+relatedProjects:
+- pulse
+- edgeai-utensor-embedded-rtos-for-arm-processors
+- ofmon-offline-first-smart-energy-monitoring
+- magic-wand-on-mbed
+- stm32n6-getting-started-for-audio-ai
+- speech-recognition-on-stm32-using-machine-learning
 ---
 
 ## Overview

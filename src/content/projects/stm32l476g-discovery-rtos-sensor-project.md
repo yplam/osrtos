@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- azurertos-dual-core-implementation-for-stm32h747
+- erikaos-real-time-watch
+- lvgl-demo-embarcadores
+- h747-weighing-station
+- practice-project-for-stm32f746g-discovery
+- h747-camera-dual-core-stm32h747-camera-and-display-system
 ---
 
 The OSProject repository showcases a comprehensive implementation of a real-time operating system on the STM32L476G-Discovery board. Developed as a final project for Auburn University's RTOS course, it leverages the ARM CMSIS-RTOS2 (RTX) framework to manage complex hardware interactions across multiple concurrent threads.

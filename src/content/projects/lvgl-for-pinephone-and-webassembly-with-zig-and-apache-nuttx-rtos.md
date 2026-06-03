@@ -23,6 +23,13 @@ isShow: true
 image: /202601/pinephone-lvgl-zig.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zig-lvgl-touchscreen-app-on-apache-nuttx-rtos
+- lvgl-rust-to-wasm
+- lvgl-terminal-for-pinephone-on-apache-nuttx
+- lvgl-emscripten-port
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
+- apache-nuttx-rtos-for-pinephone
 ---
 
 ## Overview

@@ -22,6 +22,13 @@ isShow: true
 image: /202512/monocle.webp
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- micropython-and-lvgl-firmware-for-esp32
+- esp32-cam-micropython
+- m5-crystal
+- uble-lightweight-bluetooth-low-energy-driver-for-micropython
+- micropython-for-the-bbc-micro-bit
+- stick-firmware
 ---
 
 ## Overview

@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-cortex-m4-code-examples
+- stm32f103rb-templates-and-examples
+- rust-embedded-examples
+- stm32f4-cmsis-lessons
+- esp32-freertos-examples
+- unipg-mbed-os-samples
 ---
 
 ## Overview

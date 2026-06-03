@@ -28,6 +28,13 @@ isShow: true
 image: /202601/tulip_hero.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- m5stack-cardputer-virtual-repl
+- europi
+- retro-video-synthesizer-esp32-pure-data
+- esp32-custom-hardware-synthesizer
+- esp32-mp3
+- xterminal-esp32-handheld
 ---
 
 ## Overview

@@ -27,6 +27,13 @@ topics:
 isShow: true
 createdAt: '2026-04-06T23:56:08+00:00'
 updatedAt: '2026-04-06T23:56:08+00:00'
+relatedProjects:
+- open-display-firmware
+- esp-e-paper-component
+- e-ink-meeting-room-schedule-display
+- nrf52811-solum-tag-firmware
+- readmepaper-esp32-7-color-e-paper-display-project
+- e-paper-esp32-c6-firmware
 ---
 
 ## Overview

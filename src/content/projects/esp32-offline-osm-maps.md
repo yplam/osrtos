@@ -21,6 +21,13 @@ star: 45
 lastUpdated: '2023-11-24'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- map-tiles-projects-for-esp32
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- esp32-lvgl-8-x-sdspi-template
+- lvgl-demo-embarcadores
+- lilygo-t-display-s3-boilerplate
+- lvgl-port-for-esp32
 ---
 
 Displaying rich, interactive maps on resource-constrained microcontrollers has traditionally been a significant challenge. The **esp32_offline_osm** project by mryndzionek addresses this by providing a streamlined pipeline for bringing OpenStreetMap (OSM) data to the ESP32 platform using the Light and Versatile Graphics Library (LVGL).

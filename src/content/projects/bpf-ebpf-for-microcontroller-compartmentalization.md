@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-03-04'
 updatedAt: '2026-03-04'
+relatedProjects:
+- multizone-iot-sdk
+- sel4-armv8-vmm-manifest
+- ofmon-offline-first-smart-energy-monitoring
+- fpbinject
+- pelion-device-management-client-example-for-mbed-os
+- esp32-p4-jit-dynamic-code-loading-system
 ---
 
 ## Overview

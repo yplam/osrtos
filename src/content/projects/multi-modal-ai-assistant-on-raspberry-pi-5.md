@@ -13,6 +13,13 @@ isShow: true
 image: /202603/raspberry-pi-5-ai-assistant.webp
 createdAt: '2026-03-01'
 updatedAt: '2026-03-01'
+relatedProjects:
+- diy-ai-voice-assistant-for-esp32-s3
+- tuneoutdisplay
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- stackchan-minimal
+- opentoys
+- esp32-voice-assistant
 ---
 
 The Multi-Modal AI Assistant is a sophisticated edge computing project that transforms the Raspberry Pi 5 into a fully autonomous, offline intelligent agent. By integrating local Large Language Models (LLMs), computer vision, and voice processing, the system provides a private and responsive AI experience without relying on external cloud APIs or internet connectivity.

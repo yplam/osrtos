@@ -21,6 +21,13 @@ isShow: true
 image: /202603/wifikey.webp
 createdAt: '2026-03-17'
 updatedAt: '2026-03-17'
+relatedProjects:
+- autonetwork-library
+- wifi-manager-for-micropython
+- wifimanager-rp2040w
+- blynk-wifinina-wm
+- bleeper
+- rtkbasemanager
 ---
 
 ## Overview

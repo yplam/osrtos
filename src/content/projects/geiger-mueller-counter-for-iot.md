@@ -30,6 +30,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- iot-esp8266-serial-forwarder
+- zigbee-gas-counter
+- esp8266-web-server-and-spiffs-integration
+- iot-industrial-operation-and-room-condition-monitor
+- nmea0183-wifi-marine-data-gateway
+- esp-datalogger-with-firebase-and-spiffs
 ---
 
 ## Overview

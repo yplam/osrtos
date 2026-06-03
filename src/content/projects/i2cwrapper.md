@@ -39,6 +39,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- supladevice-library
+- xiaomi-cybergear-arduino-library
+- liquidcrystal-i2c-multilingual
+- spirit-motor-driver-library
+- thingpulse-oled-ssd1306-driver
+- pamculib
 ---
 
 I2Cwrapper is a versatile framework designed to bridge the gap between I2C-capable controllers and peripherals that lack a native I2C interface. By using an Arduino-compatible device as an intermediary "target" (slave), the framework allows developers to control hardware like stepper motor drivers, TFT displays, and various sensors over the I2C bus. This approach effectively turns a standard microcontroller into a custom I2C peripheral.

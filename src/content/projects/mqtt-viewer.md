@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-02-05'
 updatedAt: '2026-02-05'
+relatedProjects:
+- esp32-mpy-jama
+- xiao-debug-mate
+- linkscope-bpu-uart-analyzer
+- modbux
+- meshcore-mqtt-gateway
+- freertos-visualizer
 ---
 
 ## Overview

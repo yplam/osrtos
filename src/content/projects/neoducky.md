@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2026-02-18'
 updatedAt: '2026-02-18'
+relatedProjects:
+- bluetooth-ducky-esp32-hid-injection-tool
+- wifiexe-esp32-s3-based-badusb
+- badstm
+- toothpaste
+- the-tick
+- bruce-firmware
 ---
 
 NeoDucky is an open-source HID payload injection tool designed for security research and ethical hacking. While it is specifically optimized for the Adafruit NeoKey Trinkey (based on the ATSAMD21E18 microcontroller), its CircuitPython-based architecture allows it to be ported to almost any device that supports USB HID and CircuitPython.

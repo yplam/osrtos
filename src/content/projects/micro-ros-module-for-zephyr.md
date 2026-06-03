@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- micro-ros-for-rt-thread
+- rt-rosserial-for-rt-thread
+- micro-ros-stm32-template
+- cybergear-ros2-controller
+- zephyr-grbl
+- zephyr-rtos-lorawan-node
 ---
 
 ## Bridging ROS 2 and Zephyr RTOS

@@ -19,6 +19,13 @@ isShow: true
 image: /202603/esp32-cam-yolo.webp
 createdAt: '2026-03-03'
 updatedAt: '2026-03-03'
+relatedProjects:
+- automatic-pet-feeder-with-esp32-cam-yolov8-object-detection
+- yolov26n-optimized-qat-deployment-on-esp32-p4
+- flock-detector-3-0
+- stm32n6-getting-started-for-object-detection
+- esp32cam-pir-mqtt-spiffs-webserver
+- stm32n6-ai-object-detection-and-h-264-usb-video-streaming
 ---
 
 ## Overview

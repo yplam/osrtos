@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-02-02'
 updatedAt: '2026-02-02'
+relatedProjects:
+- image-classification-getting-started-for-stm32n6
+- stm32n6-getting-started-for-object-detection
+- birdnet-for-stm32
+- speech-recognition-on-stm32-using-machine-learning
+- tensorflow-lite-micro-for-rt-thread
+- stm32-ai-model-zoo-services
 ---
 
 ## The Power of Edge AI on STM32N6

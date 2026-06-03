@@ -23,6 +23,13 @@ topics:
 isShow: true
 createdAt: '2026-04-25T00:41:09+00:00'
 updatedAt: '2026-04-25T00:41:09+00:00'
+relatedProjects:
+- bmw-idrive-controller-can-bus-interpreter
+- alfa-romeo-giulia-dashboard-info-display-for-esp32-s3
+- bbmonitor
+- xiaomi-cybergear-arduino-library
+- toyota-rav4-climate-control-panel-lin-bus-interface
+- ly-steering-wheel-meterbox
 ---
 
 The e90-can-cluster project is a sophisticated bridge between the digital world of driving simulators and the tactile reality of automotive hardware. By utilizing an Arduino or Teensy microcontroller, this project allows enthusiasts to repurpose a genuine BMW 3-series (E90) instrument cluster for use with PC games like BeamNG.drive, Euro Truck Simulator 2, and American Truck Simulator.

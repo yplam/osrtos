@@ -29,6 +29,13 @@ topics:
 isShow: true
 createdAt: '2026-06-02T02:42:01+00:00'
 updatedAt: '2026-06-02T02:42:01+00:00'
+relatedProjects:
+- pico-vfs-a-virtual-file-system-for-raspberry-pi-pico
+- pc-6001mkii-emulator-for-raspberry-pi-pico
+- msx1-emulator-for-raspberry-pi-pico
+- sqlite-for-raspberry-pi-pico
+- usbsid-pico
+- arduino-pico
 ---
 
 Japi Base is a well-documented foundation for building small-scale computers on the Raspberry Pi Pico 2 (RP2350). It provides the essential I/O infrastructure—video, keyboard, storage, and sound—while maintaining a architecture that keeps the system hackable and educational. By isolating the base I/O engine to Core 1 and a single PIO block, the platform ensures that Core 0 and the remaining hardware resources are completely free for custom user programs.

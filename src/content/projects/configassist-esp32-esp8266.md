@@ -34,6 +34,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp-fs-webserver
+- easyini
+- bleeper
+- autonetwork-library
+- blynk-wifimanager
+- rtkrovermanager
 ---
 
 Managing configuration settings on embedded devices like the ESP32 and ESP8266 often involves a repetitive cycle of writing web handlers, creating HTML forms, and managing flash storage. **ConfigAssist** is a lightweight library designed to break this cycle by providing a comprehensive, automated configuration management system. By defining application variables in a simple YAML format, developers can instantly generate a responsive web portal to edit settings, which are then automatically saved to the device's local storage.

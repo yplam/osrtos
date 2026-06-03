@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- neoled
+- led-matrix-max7219-for-mongoose-os
+- lvgl-port-for-m5stack-core2
+- lvgl-port-for-esp32
+- neopixel-library-for-raspberry-pi-pico
+- hub75-dma-based-driver-for-raspberry-pi-pico
 ---
 
 ## High-Performance LED Control for ESP-IDF

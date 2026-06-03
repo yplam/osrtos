@@ -32,6 +32,13 @@ isShow: true
 image: /202602/beelight.webp
 createdAt: '2026-02-26'
 updatedAt: '2026-02-26'
+relatedProjects:
+- q-sensor-multi-functional-zigbee-air-quality-sensor
+- home-smart-mesh-sdk-for-thingy53
+- smart-iot-sensor-with-xiao-esp32c6
+- zigbee-flow-and-return-temperature-sensor
+- m5nanoc6-zigbee-test
+- lixee-box
 ---
 
 ## Overview

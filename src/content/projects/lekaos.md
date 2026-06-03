@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- arm-control-framework-acorns-rover
+- tock-for-stm32
+- enterprise-stm32-platform-development
+- texas-aimbots-embedded-development
+- mos-rtos
+- xc-os-a-lightweight-graphical-os-for-mcus
 ---
 
 ## Overview

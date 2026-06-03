@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-06-02T23:21:35+00:00'
 updatedAt: '2026-06-02T23:21:35+00:00'
+relatedProjects:
+- openept-energy-profiler-probe-firmware
+- openfire-the-open-four-infa-red-emitter-light-gun-system
+- oscilloscope-rp2040
+- ropixon-at-lora-dongle
+- lumen
+- pv-curve-tracer
 ---
 
 Measuring the delay between a physical mouse click and the resulting pixel change on a screen—often called "click-to-photon" latency—is a critical task for competitive gamers, hardware reviewers, and developers. Open-Source LDAT provides a powerful, DIY solution for this measurement, rivaling commercial tools like NVIDIA's LDAT through the use of high-performance microcontrollers and custom software optimizations.

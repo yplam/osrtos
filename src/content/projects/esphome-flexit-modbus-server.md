@@ -24,6 +24,13 @@ isShow: true
 image: /202602/xiao-front.webp
 createdAt: '2026-02-27'
 updatedAt: '2026-02-27'
+relatedProjects:
+- esphome-modbus-tcp-to-rtu-bridge
+- esphome-deye-inverter
+- multiple-jk-bms-modbus-rs485-integration
+- comfosense-touch-zehnder-comfoair-q350-mqtt-bridge-controller
+- esphome-components-for-miot-devices
+- ginlong-solis-solar-inverter-modbus-integration
 ---
 
 ## Overview

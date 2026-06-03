@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-utilities
+- freetype-integration-for-lvgl
+- image-converter-for-lvgl
+- micropython-font-handling-utility
+- lvgl-offline-image-conversion-tool
+- pixelforge
 ---
 
 ## Typography for Resource-Constrained Systems

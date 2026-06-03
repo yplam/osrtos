@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- jc2432w328-microcontroller-board-documentation
+- esp8266-oled-hw-364a-b-development-guide
+- seeed-studio-xiao-esp32-project-collection
+- esp32-repo
+- that-project
+- xiao-esp32c6-sketches
 ---
 
 ## Overview

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f4-cmsis-lessons
+- embedded-systems-bare-metal-programming-ground-up
+- stm32f103rb-templates-and-examples
+- stm32f103-cmsis-libraries-and-projects
+- learning-stm32
+- stm32f103-cmsis-peripheral-configuration
 ---
 
 ## Mastering STM32 Bare-Metal with CMSIS

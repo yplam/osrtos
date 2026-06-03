@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-04-16T03:48:03+00:00'
 updatedAt: '2026-04-16T03:48:03+00:00'
+relatedProjects:
+- xiao-debug-mate
+- cmsis-dap-over-tcp-for-esp32
+- get-irq-priority-for-rt-thread
+- hydrabus
+- stm32f1-rtos-example-project
+- linkscope-bpu-uart-analyzer
 ---
 
 ## Debugging Without a Probe

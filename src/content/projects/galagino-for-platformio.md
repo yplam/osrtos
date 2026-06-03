@@ -34,6 +34,13 @@ topics:
 isShow: true
 createdAt: '2026-05-26T01:10:41+00:00'
 updatedAt: '2026-05-26T01:10:41+00:00'
+relatedProjects:
+- diy-arcade-machine
+- cydintosh
+- anemoia-esp32-nes-emulator
+- retrojam-multi-retro-game-console-emulator
+- anemoia-esp32
+- cardputer-game-station
 ---
 
 Galagino is a specialized port of Till Harbaum’s original Galaga emulator, now expanded to support 24 classic arcade titles and optimized for the PlatformIO ecosystem. This version integrates contributions from developers like Alby1970 and SurvivalHacking, bringing a diverse library of games—including Bombjack, Mr. Do!, Gyruss, and Time Pilot—to the ESP32 platform. The project provides an accessible path for enthusiasts to build their own mini arcade machines without the need for custom PCBs or 3D printing.

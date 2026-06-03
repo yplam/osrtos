@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- deautherx
+- wifiphisher-for-esp32
+- ghost-esp
+- wifi-nightmare
+- evil-bw16-webui
+- ghostesp
 ---
 
 MadWifi is a specialized firmware developed for the Espressif ESP8266 platform, designed to demonstrate WiFi vulnerabilities and perform stress tests on wireless infrastructure. By leveraging the low-level capabilities of the ESP8266 radio, the project allows for the injection of raw 802.11 frames, enabling features like deauthentication attacks and beacon frame manipulation.

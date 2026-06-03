@@ -34,6 +34,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- blynk-wifinina-wm
+- blynk-async-wm
+- blynk-esp8266at-wm
+- blynk-async-gsm-manager
+- blynkgsm-manager
+- blynk-async-esp32-bt-wf
 ---
 
 Developing IoT applications for the ESP8266 and ESP32 often involves a frustrating cycle of hardcoding WiFi credentials, flashing the device, and then realizing you need to move the hardware to a different network. **Blynk_WiFiManager (Blynk_WM)** is a library designed to break this cycle by providing a robust, runtime configuration interface for both WiFi and Blynk credentials.

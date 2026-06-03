@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- tca9534-8-bit-i-o-expander-driver-for-rt-thread
+- sgp30-gas-sensor-driver-for-rt-thread
+- rx8900-high-precision-rtc-driver-for-rt-thread
+- vl53l0x-tof-sensor-driver-for-rt-thread
+- ds3231-rtc-driver-for-rt-thread
+- rt-thread-bsp-for-mh1903x
 ---
 
 ## Overview

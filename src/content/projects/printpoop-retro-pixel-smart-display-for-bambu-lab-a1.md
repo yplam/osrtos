@@ -38,6 +38,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- printsphere
+- bbmonitor
+- clawdmeter
+- bitclock
+- advanced-filament-sensor-for-elegoo-carbon-centauri
+- p3a-pixel-art-player
 ---
 
 ## Overview

@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-04-26T06:21:22+00:00'
 updatedAt: '2026-04-26T06:21:22+00:00'
+relatedProjects:
+- desk-weather-clock-geekmagic-s3
+- stm32f107-makefile-freertos-template
+- stm32-cmake-cmsis-project-skeleton
+- stm32-base-project-template
+- stm32-weather-station
+- elekstube-ips-custom-firmware
 ---
 
 Developing for the STM32F407 series often involves navigating legacy IDEs and fragmented toolchains. This project provides a production-grade template specifically tailored for a Weather Clock application, designed to be extensible for any STM32F407xx project. It moves away from traditional Keil-based workflows in favor of a high-performance environment using GCC 13.2, Ninja, and VS Code.

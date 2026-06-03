@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- arm-control-framework-acorns-rover
+- stm32f103-quadruped-robot
+- roarm-m2-robotic-arm-control-firmware
+- lekaos
+- maixface
+- lecyborg-ai-powered-third-arm-prosthesis
 ---
 
 ## Overview

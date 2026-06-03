@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-23'
 updatedAt: '2026-01-23'
+relatedProjects:
+- diy-arcade-machine
+- winder-bldc-motor-winding-machine
+- diy-portrait-mode-gamepad
+- scara-drawing-robot
+- magic-8-ball-toy
+- claude-buddy-pico
 ---
 
 ## Overview

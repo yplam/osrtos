@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-02-08'
 updatedAt: '2026-02-08'
+relatedProjects:
+- rt-rosserial-for-rt-thread
+- cybergear-ros2-controller
+- micro-ros-module-for-zephyr
+- micro-ros-stm32-template
+- arduino-dronecan
+- micro-ros-for-rt-thread
 ---
 
 ## Overview

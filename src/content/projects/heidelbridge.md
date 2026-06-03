@@ -25,6 +25,13 @@ isShow: true
 image: /202602/home_assistant.webp
 createdAt: '2026-02-11'
 updatedAt: '2026-02-11'
+relatedProjects:
+- dtugateway-for-hoymiles-hms-inverters
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- simplebus2-mqtt-bridge
+- sonoff-basic-firmware-for-openhab
+- esp32-controller-for-charlton-jenrick-fireplace
+- lixee-box
 ---
 
 HeidelBridge serves as a specialized firmware for ESP32 microcontrollers, designed to integrate Heidelberg Energy Control wallboxes into modern smart home ecosystems. By acting as a communication bridge, it translates the wallbox's native Modbus RTU protocol into a network-accessible format, specifically emulating the Daheimladen API. This transformation allows users to monitor and control their EV charging infrastructure through standard home energy management systems (HEMS).

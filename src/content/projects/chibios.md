@@ -17,6 +17,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- chibios-rt-examples-for-stm32f401re-nucleo
+- arduino-rt-thread-library
+- nuclei-software-development-kit-nuclei-sdk
+- nuttx-real-time-operating-system
+- stm32cubeh7rs-mcu-firmware-package
+- eclipse-threadx-usbx
 ---
 
 ChibiOS is a name synonymous with efficiency and reliability in the embedded world. It isn't just a single RTOS; it is a modular ecosystem designed to scale from the smallest 8-bit microcontrollers to the most powerful 32-bit processors. Whether you are building a simple sensor node or a complex industrial controller, ChibiOS provides the building blocks necessary for robust real-time performance.

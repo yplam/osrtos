@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- freertos-cell-for-the-jailhouse-hypervisor
+- rust-support-for-rt-thread
+- phoenix-rtos-project
+- freertos-port-for-risc-v
+- chibios
+- mos-rtos
 ---
 
 ## Overview

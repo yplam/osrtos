@@ -29,6 +29,13 @@ isShow: true
 image: /202601/esp-usb-ble-hid.webp
 createdAt: '2026-01-22'
 updatedAt: '2026-01-22'
+relatedProjects:
+- esp32-s3-usb-to-ble-keyboard-bridge
+- usb-keyboard-and-mouse-bluetooth-adapter-esp32
+- ds5-bridge
+- m5-keyboard-and-mouse-emulator
+- esp32-nimble-hid-client
+- picogamepadconverter
 ---
 
 ## Overview

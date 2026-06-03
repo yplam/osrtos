@@ -33,6 +33,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- blynk-async-wm
+- blynk-async-gsm-manager
+- blynk-wifimanager
+- blynkgsm-manager
+- blynk-wifinina-wm
+- blynk-esp8266at-wm
 ---
 
 Managing connectivity on the ESP32 can often feel like a series of trade-offs. Traditionally, Blynk users had to choose between WiFi or Bluetooth/BLE at compile time, requiring firmware updates just to switch communication methods. The **Blynk_Async_ESP32_BT_WF** library changes this dynamic by allowing developers to include both WiFi and BT/BLE stacks in a single sketch, enabling them to run simultaneously or be selected at runtime.

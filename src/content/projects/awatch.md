@@ -18,6 +18,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- zephyrwatch
+- twatch-v3-firmware-for-esp32
+- lvgl-watch-firmware-for-open-smartwatch
+- dt78-esp32-firmware
+- opentimewatch-os
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
 ---
 
 If you grew up with the Commodore Amiga, the blue and orange aesthetic of Workbench 1.x is likely etched into your memory. **AWatch** brings that classic retro aesthetic to the wrist, transforming the ESP32-powered LilyGO TTGO T-Watch into a functional, Workbench-inspired timepiece. Originally developed as a countdown timer for measuring time during COVID-19 lockdowns, the project evolved into a feature-rich proof-of-concept that pays homage to 1980s computing.

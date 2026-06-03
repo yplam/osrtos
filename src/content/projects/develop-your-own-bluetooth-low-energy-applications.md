@@ -32,6 +32,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- building-wireless-sensor-networks-with-openthread
+- seeed-studio-xiao-esp32-project-collection
+- micropython-examples-for-01studio-development-boards
+- xiao-esp32c6-sketches
+- esp32-ble-ota-arduino
+- zephyr-lorawan-lora-examples
 ---
 
 ## Mastering Bluetooth Low Energy Across Platforms

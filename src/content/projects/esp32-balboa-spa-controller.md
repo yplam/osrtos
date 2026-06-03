@@ -21,6 +21,13 @@ isShow: true
 image: /202602/balboa_spa.webp
 createdAt: '2026-03-01'
 updatedAt: '2026-03-01'
+relatedProjects:
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- esp32-controller-for-charlton-jenrick-fireplace
+- volna-2bw42-weather-station-firmware
+- esp32-p4-home-assistant-display
+- openhasp-firmware
+- esp32-jarolift-controller
 ---
 
 ## Overview

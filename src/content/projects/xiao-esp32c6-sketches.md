@@ -23,6 +23,13 @@ topics:
 isShow: true
 createdAt: '2026-04-04T09:55:28+00:00'
 updatedAt: '2026-04-04T09:55:28+00:00'
+relatedProjects:
+- super-mini-esp32-c3-arduino-and-platformio-sketches
+- seeed-studio-xiao-esp32-project-collection
+- esp32-repo
+- jc2432w328-microcontroller-board-documentation
+- micropython-examples-for-01studio-development-boards
+- seeed-home-assistant-discovery
 ---
 
 The Seeed Studio XIAO ESP32C6 is a compact yet powerful development board based on the Espressif ESP32-C6 SoC. This repository serves as a technical companion to the board, providing a wide array of sketches that demonstrate its capabilities across various wireless protocols and hardware peripherals. Whether you are looking to benchmark WiFi performance, explore the latest smart home standards like Matter and Zigbee, or optimize power consumption for battery-operated devices, these examples provide a solid foundation.

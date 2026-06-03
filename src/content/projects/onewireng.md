@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- ds248x-1-wire-library
+- supladevice-library
+- doubleresetdetector-generic
+- timezone-generic-library
+- multiresetdetector-generic-library
+- spirit-motor-driver-library
 ---
 
 OneWireNg is a modern, feature-rich 1-wire service library designed for a broad spectrum of embedded platforms. It serves as a robust alternative to the classic OneWire library, offering enhanced functionality and a flexible architecture that caters to both hobbyist Arduino projects and professional industrial applications using ESP-IDF, Pico SDK, or Mbed OS.

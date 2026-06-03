@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nodemcu-firmware
+- esp8266-home-automation
+- mongoose-os-programs-and-examples
+- homey-smart-home-controllers
+- iot-framework-for-nodemcu
+- micropython-smarthome-node-pysmartnode
 ---
 
 ## Overview

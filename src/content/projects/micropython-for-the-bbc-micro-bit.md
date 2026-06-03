@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-for-pandora-iot-board
+- micropython-port-for-rt-thread
+- micropython-for-w601-iot-board
+- mpython-board
+- the-micropython-board-pyboard
+- micropython-lib
 ---
 
 MicroPython for the BBC micro:bit is an implementation of the Python 3 programming language optimized to run on the constrained hardware of the original micro:bit. By bringing a high-level, interpreted language to this educational platform, the project enables students and developers to interact with hardware using a Read-Eval-Print Loop (REPL) and simple scripts, abstracting away the complexities of C/C++ development.

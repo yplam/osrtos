@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- wireless-sensor-network-and-tinyos-documentation
+- tinyos-role-for-ansible
+- tinyos-nesc-telosb-programs
+- apache-nuttx-getting-started
+- atmega128rfa1-tinyos-kth-wsn-project
+- building-wireless-sensor-networks-with-openthread
 ---
 
 TinyOS is a pioneering open-source operating system designed specifically for low-power wireless devices, such as those used in sensor networks, ubiquitous computing, and smart buildings. Because TinyOS is built using nesC—a dialect of the C language optimized for the event-driven nature of sensor networks—setting up a development environment can be a complex task, especially on Windows. This repository serves as a dedicated guide to navigating that complexity.

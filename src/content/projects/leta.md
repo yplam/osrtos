@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-04-04T10:02:39+00:00'
 updatedAt: '2026-04-04T10:02:39+00:00'
+relatedProjects:
+- ov-watch
+- gateway-smartwatch
+- zswatch
+- watchx-open-source-smartwatch
+- watchx-ii-smart-watch
+- zephyrwatch
 ---
 
 Leta, named after the Russian word for summer, is a custom-built wrist watch project that started during the summer months. It represents a comprehensive exercise in embedded systems design, combining hardware engineering, real-time operating system development, and user interface design to create a functional, wearable device.

@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-04-01T01:20:17+00:00'
 updatedAt: '2026-04-01T01:20:17+00:00'
+relatedProjects:
+- audio-recorder
+- s-pdif-recorder-for-raspberry-pi-pico
+- esp32-custom-hardware-synthesizer
+- esp32-sd-sampler
+- esp32-s3-soundfont-sf2-sampler-synthesizer
+- kalo-esp32-voice-assistant
 ---
 
 Capturing high-quality audio on embedded systems often requires moving beyond internal ADCs to dedicated external hardware. This project, a fork of the original work by MhageGH, provides a streamlined solution for recording high-fidelity sound using an ESP32 and the PCM1808 analog-to-digital converter (ADC).

@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- sqlite-for-raspberry-pi-pico
+- sqlite3-for-esp-idf
+- esp8266-littlefs-file-handler
+- littlefs-mbed-rp2040
+- qdbm-library-for-mongoose-os
+- littlefs-for-esp-idf
 ---
 
 LittleDB is a specialized database library tailored for the ESP32 ecosystem, offering a SQL-like interface for managing data on embedded file systems. By leveraging LittleFS, it provides a robust way to handle structured data without the overhead of a full-scale relational database management system, making it ideal for IoT applications that require persistent storage with a familiar query syntax.

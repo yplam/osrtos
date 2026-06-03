@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-04-07T23:53:38+00:00'
 updatedAt: '2026-04-07T23:53:38+00:00'
+relatedProjects:
+- usb-keyboard-and-mouse-bluetooth-adapter-esp32
+- esp32-uart-bridge
+- ropixon-at-lora-dongle
+- arduino-rf24-for-mongoose-os
+- bresserweathersensorlw
+- esp32-s3-usb-to-ble-keyboard-bridge
 ---
 
 USB2NRF (also referred to as NRF2USB) is a versatile development tool specifically engineered for wireless applications utilizing the low-cost nRF24L01+ 2.4GHz transceiver. By integrating a CH32X033 microcontroller, the device provides a seamless USB interface for communicating with the radio module. This makes it an ideal choice for a variety of tasks, such as transferring serial data wirelessly between computers, acting as a receiver for wireless keyboards and mice, or collecting data from remote IoT sensors.

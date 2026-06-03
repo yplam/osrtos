@@ -30,6 +30,13 @@ isShow: true
 image: /202601/loongcat40.webp
 createdAt: '2026-01-14'
 updatedAt: '2026-01-14'
+relatedProjects:
+- gesture-detecting-macro-keyboard
+- clawtype
+- hd2-macropad
+- kmk-firmware
+- aw-1-keyboard
+- claude-buddy-pico
 ---
 
 ## Overview

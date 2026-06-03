@@ -12,6 +12,13 @@ rtos: freertos
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- arduino-freertos-library
+- freertos-port-for-risc-v
+- freertos-port-for-renesas-rh850
+- seeed-arduino-freertos
+- freertos-port-for-teensy-3-6-4-0-4-1
+- freertos-port-for-raspberry-pi
 ---
 
 ## Overview

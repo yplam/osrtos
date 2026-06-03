@@ -24,6 +24,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- sx128x-lora-transceiver-driver-for-contiki-ng
+- sx127x-lora-transceiver-driver-for-contiki-ng
+- contiki-lora-tsch-project
+- low-power-wireless-networking-for-iot-lpiot
+- waco-a-wake-up-radio-cooja-extension
+- radiotftp-process-for-contiki-os
 ---
 
 KRATOS (The Contiki Operating System for LoRa Chipsets) is a specialized fork of Contiki OS 3.0, tailored specifically for low-power wide-area network (LPWAN) research. Developed to bridge the gap between traditional wireless sensor networks and modern LoRa technology, KRATOS provides a robust software platform for developers working with the Semtech SX1276 transceiver and the TI MSP430FR5969 microcontroller.

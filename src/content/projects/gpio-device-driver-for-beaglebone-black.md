@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- bl602-gpio-expander-for-apache-nuttx
+- hynitron-cst816s-touch-controller-driver-for-apache-nuttx
+- rtdm-shift-register-driver-for-elk-pi
+- tca9534-8-bit-i-o-expander-driver-for-rt-thread
+- sgm706-independent-watchdog-driver-for-rt-thread
+- micropython-rotary-encoder-driver
 ---
 
 ## Overview

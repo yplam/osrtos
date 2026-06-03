@@ -18,6 +18,13 @@ star: 0
 lastUpdated: '2018-04-24'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- pixelroot32-game-engine
+- esp32-pseudo-3d-racing-game
+- esp32-rex-dinosaur-game-in-rust
+- m5stack-tab5-game-watch-emulator
+- stm32l476g-discovery-rtos-sensor-project
+- pico-rex-dinosaur-game-for-raspberry-pi-pico-2
 ---
 
 ## Exploring the ECE 2035 RPG Game

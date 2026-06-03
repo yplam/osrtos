@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-04-26T02:26:13+00:00'
 updatedAt: '2026-04-26T02:26:13+00:00'
+relatedProjects:
+- golioth-zephyr-sdk
+- spotflow-observability-device-sdk
+- ameba-rtos-sdk
+- esp8266-rtos-software-development-kit-sdk
+- nrf52840-m-2-developer-kit
+- zephyr-coaps-client-with-tinydtls
 ---
 
 ## Simplifying Ultra-Low-Power IoT Development

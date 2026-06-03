@@ -23,6 +23,13 @@ isShow: true
 image: /202604/kawaii-useless-robot.webp
 createdAt: '2026-04-06T23:47:48+00:00'
 updatedAt: '2026-04-06T23:47:48+00:00'
+relatedProjects:
+- sesame-robot-micro
+- scara-drawing-robot
+- xiaozhi-ai-desk-buddy-esp32-s3
+- qbit
+- stackchan-minimal
+- tny-360-quadruped-robot
 ---
 
 The Kawaii Useless Robot is a creative evolution of the classic 'useless box'—a device whose sole purpose is to turn itself off. This project takes that concept and adds a layer of personality and mobility, resulting in a robot that doesn't just flip a switch, but reacts with facial expressions and can even drive away if it feels 'pushed' too hard. Built around the ESP32, the robot utilizes the microcontroller's dual-core capabilities and FreeRTOS to manage a complex array of hardware peripherals and behavioral logic.

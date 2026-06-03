@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- cmsis-parser
+- stm32f1xx-bare-metal-template
+- cmsis-svd-srcgen
+- uglystm32
+- single-stm32-header
+- stm32f103-cmsis-peripheral-configuration
 ---
 
 ## Overview

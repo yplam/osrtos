@@ -26,6 +26,13 @@ star: 262
 lastUpdated: '2024-08-12'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- bleota-esp32-ota-updates-over-ble
+- nimble-ota
+- open-display-firmware
+- multi-firmware-esp
+- arduino-serial-ble
+- esp32-ble-uart-mx
 ---
 
 Updating firmware on an ESP32 is a common requirement for IoT devices, but most standard solutions rely on a Wi-Fi connection. In scenarios where Wi-Fi is unavailable, unreliable, or too power-hungry, Bluetooth Low Energy (BLE) offers a compelling alternative. The **ESP32_BLE_OTA_Arduino** project provides a robust implementation for performing OTA updates over BLE, allowing developers to push new firmware directly from a smartphone or a computer.

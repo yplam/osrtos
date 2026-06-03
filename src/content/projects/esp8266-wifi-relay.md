@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-wifi-relay-async
+- esp8266-wifi-relay-and-bahtinov-masks-controller
+- esp8266-web-server-and-spiffs-integration
+- sonoff-http-firmware
+- espui
+- esp8266-mywidget
 ---
 
 ## Overview

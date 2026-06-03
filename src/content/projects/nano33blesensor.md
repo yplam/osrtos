@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- arduino-serial-ble
+- mbed-os-ble-gap-advertiser-for-arduino-nano-33-ble
+- esp32-nimble-hid-client
+- nimble-arduino
+- n-able-arduino-core
+- fs-nano33ble
 ---
 
 ## Overview

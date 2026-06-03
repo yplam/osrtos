@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- freertos-mqtt-client-demo
+- mqtt-like-application-for-tinyos
+- stm32-lwip-mqtt-demo
+- stm32f429-mqtt-client-with-rtic-and-smoltcp
+- bc28-mqtt-package-for-rt-thread
+- lightweight-publish-subscribe-application-protocol-for-tinyos
 ---
 
 ## Overview

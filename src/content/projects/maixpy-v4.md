@@ -25,6 +25,13 @@ isShow: true
 image: /202512/maixpy.webp
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- maixpy-scripts
+- rt-thread-board-support-package-for-kendryte-k210
+- sparkfun-micropython-opencv
+- image-classification-getting-started-for-stm32n6
+- kendryte-k210-freertos-sdk
+- ncnn-mp-neural-network-inference-for-micropython
 ---
 
 ## Overview

@@ -23,6 +23,13 @@ isShow: true
 image: /202602/SPINC_assembled.webp
 createdAt: '2026-02-14'
 updatedAt: '2026-02-14'
+relatedProjects:
+- battery-health-monitor
+- bitclock
+- noteit-uart-datalogger
+- esp32-remote-for-victron
+- shelf-edge-clock
+- ch32v003-usb-meter
 ---
 
 ## Overview

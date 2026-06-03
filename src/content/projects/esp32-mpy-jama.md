@@ -37,6 +37,13 @@ version: v1.2.0
 lastUpdated: '2023-05-03'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- micropython-and-lvgl-firmware-for-esp32
+- micropython-plugin-for-pycharm-and-intellij
+- esp32-ota-firmware-update-and-file-management
+- micropy-cli
+- esp32-fatfs-image-tool-and-example
+- wifi-manager-for-micropython
 ---
 
 Developing for the ESP32 using MicroPython often involves juggling multiple command-line tools for flashing, file transfers, and terminal access. **ESP32 MPY-Jama** aims to consolidate this workflow into a single, powerful, and lightweight cross-platform application. Designed by Jean-Christophe Bos, this tool provides a comprehensive graphical interface for managing your IoT projects on MacOS, Windows, and Linux.

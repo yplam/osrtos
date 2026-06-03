@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-02-02'
 updatedAt: '2026-02-02'
+relatedProjects:
+- reflow-oven-with-micropython-lvgl
+- esphome-cosori-kettle-ble-component
+- espgaggia-smart-coffee-machine-controller
+- ikedrybox-smart-3d-filament-dryer
+- elevourer-portable-intelligent-electronic-load
+- eight-sleep-control-with-m5stack-atoms3
 ---
 
 Precius is an ambitious open-source project that brings industrial-grade precision to the home kitchen. Developed by WEkigai, a small Dutch company, the project centers around the "Precius Station"—a smart cooktop designed to replace traditional, power-based heating with precise, temperature-controlled cooking. By focusing on the physical and chemical changes in food, Precius allows home cooks to achieve consistent results in techniques ranging from sous-vide and deep frying to searing and sautéing.

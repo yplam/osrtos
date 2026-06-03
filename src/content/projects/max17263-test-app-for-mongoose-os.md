@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- max17263-library-for-mongoose-os
+- hx711-testing-app-for-mongoose-os
+- mcp2515-can-testing-app-for-mongoose-os
+- ltc68xx-battery-monitoring-library-for-mongoose-os
+- hx711-library-for-mongoose-os
+- sgp30-gas-sensor-library-for-mongoose-os
 ---
 
 ## Overview

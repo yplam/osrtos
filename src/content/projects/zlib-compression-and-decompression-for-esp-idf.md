@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-04-01T23:48:23+00:00'
 updatedAt: '2026-04-01T23:48:23+00:00'
+relatedProjects:
+- esp32-targz
+- esp32-freertos-examples
+- minizip-for-rt-thread
+- esp32-repo
+- esp-mesh-lite-examples
+- webserver-esp32-w5500
 ---
 
 While the Espressif IoT Development Framework (ESP-IDF) component registry includes the zlib library for compression and decompression, developers often find a lack of practical sample code to get started. This project bridges that gap by providing a variety of implementation examples tailored for the ESP32, ESP32-S2, and ESP32-S3 architectures.

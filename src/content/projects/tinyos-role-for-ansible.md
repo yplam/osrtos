@@ -14,6 +14,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- tinyos-nesc-telosb-programs
+- homebrew-tinyos-for-msp430
+- tinyos-installation-guide-for-windows
+- tinyos-for-msp430
+- dsml4tinyos-a-domain-specific-language-for-tinyos
+- pico-zephyr-project
 ---
 
 Setting up a development environment for wireless sensor networks (WSN) often involves juggling specific compiler versions, specialized languages like nesC, and hardware-specific toolchains. For developers working with **TinyOS**, an open-source operating system designed for low-power wireless devices, this process can be complex. The `ansible-role-tinyos` project provides a repeatable, automated way to provision a TinyOS environment using Ansible.

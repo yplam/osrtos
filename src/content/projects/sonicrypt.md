@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-03-04'
 updatedAt: '2026-03-04'
+relatedProjects:
+- colibri-wallet
+- bbmonitor
+- esp32-64-band-audio-spectrum-analyser
+- esp32-i2s-microphone-stream
+- esp32-remote-control-with-websocket
+- esp32-custom-hardware-synthesizer
 ---
 
 Sonicrypt is an innovative open-source project designed to bridge the gap between digital blockchain transactions and physical confirmation. In retail or face-to-face environments, waiting for a crypto transaction to finalize can be an uncertain experience for both buyers and sellers. Sonicrypt solves this by providing immediate, standalone auditory and visual cues the moment a payment is confirmed on-chain.

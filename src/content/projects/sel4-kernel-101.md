@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sel4-userland-library-tutorial
+- sel4-cpio-archive-project
+- xenomai-hello-world-application
+- sel4-kernel-ega-text-display
+- the-sel4-white-paper
+- sel4-core-platform-sel4cp-workshop
 ---
 
 ## Introduction to seL4 Development

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32-cam-micropython
+- micropython-camera-driver-for-esp32
+- micropython-camera-api-for-esp32
+- esp32cam-pir-mqtt-spiffs-webserver
+- usb-video-class-uvc-for-raspberry-pi-pico
+- esp32-mjpeg-multiclient-streaming-server
 ---
 
 ## Overview

@@ -33,6 +33,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- blynkgsm-manager
+- blynk-async-esp32-bt-wf
+- blynk-wifimanager
+- blynk-async-wm
+- blynk-esp8266at-wm
+- blynk-wifinina-wm
 ---
 
 Managing connectivity for IoT devices in the field can be a logistical nightmare. Traditionally, developers had to hardcode WiFi SSIDs or GSM APN settings, meaning a simple change in network environment required a physical firmware update. **Blynk_Async_GSM_Manager** solves this problem for ESP32 and ESP8266 developers by providing a robust, asynchronous configuration portal that allows credentials to be updated on the fly.

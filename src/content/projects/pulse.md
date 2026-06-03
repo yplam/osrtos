@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-04-09T23:53:25+00:00'
 updatedAt: '2026-04-09T23:53:25+00:00'
+relatedProjects:
+- pulse-real-time-vibration-anomaly-detection
+- edgeai-utensor-embedded-rtos-for-arm-processors
+- conveyor-belt-fault-detection-system
+- stm32n6-getting-started-for-audio-ai
+- ofmon-offline-first-smart-energy-monitoring
+- streampulse
 ---
 
 Pulse provides a real-time vibration anomaly detection solution designed to run entirely on a microcontroller, eliminating the need for cloud subscriptions or complex IT infrastructure. By focusing on an affordable, standalone hardware design, it addresses the gap in predictive maintenance for small-scale industrial applications like motors, pumps, and fans.

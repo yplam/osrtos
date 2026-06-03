@@ -15,6 +15,13 @@ isShow: true
 image: /202601/esp32s3-usb-keyboard-ble.webp
 createdAt: '2026-01-06'
 updatedAt: '2026-01-06'
+relatedProjects:
+- usb-keyboard-and-mouse-bluetooth-adapter-esp32
+- esp-usb-ble-hid-bridge
+- dshare-hid
+- m5-keyboard-and-mouse-emulator
+- nimble-hid-keyboard-and-mouse-example-for-esp32
+- esp32-morse-keyer
 ---
 
 ## Overview

@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-05-07T23:43:27+00:00'
 updatedAt: '2026-05-07T23:43:27+00:00'
+relatedProjects:
+- raspberry-pi-pico-littlefs-usb-flash-memory-interface
+- ble-based-wi-fi-provisioning-for-raspberry-pi-pico-w-pico-2-w
+- wifimanager-rp2040w-lite
+- nas-with-esp32-and-raspberry-pi-pico-w
+- pico-vfs-a-virtual-file-system-for-raspberry-pi-pico
+- wifimanager-rp2040w
 ---
 
 Configuring Wi-Fi credentials on embedded devices often involves hardcoding strings, setting up a serial console, or creating a temporary Wi-Fi Access Point for a web-based captive portal. This project offers a simpler, more intuitive alternative by making the Raspberry Pi Pico W appear as a standard USB flash drive when connected to a computer.

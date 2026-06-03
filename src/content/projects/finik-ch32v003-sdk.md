@@ -23,6 +23,13 @@ topics:
 isShow: true
 createdAt: '2026-03-31T23:35:54+00:00'
 updatedAt: '2026-03-31T23:35:54+00:00'
+relatedProjects:
+- stm32-cmake-cmsis-project-skeleton
+- stm32f030-cmake-cmsis-project-skeleton
+- vs-code-zephyr-development-environment
+- air32f103-template-project
+- micropico-visual-studio-code-extension
+- stm32h743-cmake-template
 ---
 
 The CH32V003 has gained significant popularity in the embedded community as an incredibly cost-effective RISC-V microcontroller. However, setting up a professional development environment for these chips can sometimes be a hurdle. The FINIK CH32V003 SDK aims to bridge this gap by offering a development experience that feels as intuitive as the Arduino IDE while maintaining the power and flexibility of a CMake-driven build system.

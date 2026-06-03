@@ -31,6 +31,13 @@ version: '1.0'
 lastUpdated: '2020-12-26'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp32-async-web-server-with-spiffs-and-ota
+- esp-async-http-update-server
+- esp-fs-webserver
+- espxwebflmgr
+- devfsuploadesp
+- esp32-wi-fi-provision-care
 ---
 
 Managing ESP32 devices in the field often presents a challenge: how do you update the code or modify configuration files without physically connecting a USB cable? The **ESP32-OTA-File-management** project provides a robust, web-based solution to this problem, turning your ESP32 into a self-contained management portal.

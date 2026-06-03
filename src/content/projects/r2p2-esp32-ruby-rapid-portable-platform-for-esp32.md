@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-26'
 updatedAt: '2026-01-26'
+relatedProjects:
+- sqlite3-for-esp-idf
+- micropython-for-esp32-with-psram-support-lobo-port
+- esp32-u2f-security-key
+- dual-boot-esp32-with-platformio-and-arduino
+- klipper-esp32
+- esp32-p4-jit-dynamic-code-loading-system
 ---
 
 R2P2-ESP32 is an implementation of the Ruby Rapid Portable Platform (R2P2) specifically tailored for the ESP32 series of microcontrollers. By utilizing the `picoruby-esp32` component, this project allows developers to run PicoRuby—a lightweight version of the Ruby programming language—directly on Espressif hardware.

@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rust-ir-thermometer-firmware
+- stm32-pid-temperature-control-implementation
+- ryattn-audio-relay-attenuator
+- stm32f103-cmsis-libraries-and-projects
+- openept-energy-profiler-probe-firmware
+- stm32-weather-station
 ---
 
 ## Overview

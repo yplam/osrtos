@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- libtock-c-tock-userland-c-library
+- archminix
+- nuttx-development-docker-environment
+- swedish-embedded-workstation
+- tock-os-docker-image
+- nuttx-esp32-environment-for-wsl2
 ---
 
 The ClickOS toolchain is a specialized build system designed to facilitate the development of ClickOS, a high-performance virtualized middlebox platform. ClickOS is built upon the Xen hypervisor and utilizes MiniOS, a lightweight operating system kernel designed specifically for Xen "stub" domains. This toolchain automates the process of fetching, patching, and compiling the essential libraries required to run network functions in these highly efficient virtual environments.

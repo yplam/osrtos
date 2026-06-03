@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-03-11'
 updatedAt: '2026-03-11'
+relatedProjects:
+- rgblight-iot-rgb-led-controller
+- led-controller-esp32-hub75e-led-matrix-controller
+- lumifur-controller
+- x-knob-a-smart-knob-based-on-lvgl-ui-framework
+- open-wink-headlight-mod
+- onechuk-machine-learning-powered-wii-nunchuk
 ---
 
 ## Overview

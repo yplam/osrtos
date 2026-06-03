@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- send-my-sensor
+- ruuvitag-firmware-for-zephyr-os
+- esp32-watch-for-openhaystack
+- open-display-firmware
+- zephyr-rtos-for-dwm1001
+- chrz-watch-firmware
 ---
 
 ## Overview

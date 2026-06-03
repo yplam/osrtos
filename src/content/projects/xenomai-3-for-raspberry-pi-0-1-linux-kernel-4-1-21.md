@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- xenomai-3-for-raspberry-pi-4
+- xenomai-3-for-raspberry-pi-2-and-3
+- raspberry-pi-rtos-rpi-rtos
+- raspberry-pi-4-xenomai-3-patch
+- xenomai-on-raspberry-pi
+- soem-w5500-ethercat-master-for-raspberry-pi
 ---
 
 ## Overview

@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- spektrum-receiver-library-for-mbed
+- mbed-os-libraries
+- micro-ros-for-rt-thread
+- picoosc
+- spirit-motor-driver-library
+- arm-cortex-m-hilbert-transform
 ---
 
 ## Bringing Data-over-Sound to Mbed OS

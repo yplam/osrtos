@@ -35,6 +35,13 @@ topics:
 isShow: true
 createdAt: '2026-06-02T02:38:48+00:00'
 updatedAt: '2026-06-02T02:38:48+00:00'
+relatedProjects:
+- pocketssh
+- esp32berry
+- detkit3ds
+- zhilly-ai-pentester-assistant
+- acid-drop-custom-firmware-for-lilygo-t-deck
+- clawy
 ---
 
 Coding from the couch has reached a new level of portability with DSSH, a full-featured SSH client specifically designed for the Nintendo 3DS family of consoles. While mobile SSH clients are common, DSSH distinguishes itself by leveraging the dual-screen hardware of the 3DS to provide a surprisingly productive environment for system administration and development on the go.

@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- texas-aimbots-embedded-development
+- lekaos
+- bitcraze-crazyflie-2-0-2-1-mbed-os-firmware
+- watchbot-system
+- mongoose-os-robot-car
+- micro-ros-stm32-template
 ---
 
 The ARM Control Framework, often referred to as the Acorns Rover, is a robust embedded system designed to provide external control over a mobile platform through a standardized UART connection. Built on top of Mbed OS, this project demonstrates a highly modular approach to firmware development, allowing developers to extend the rover's capabilities with minimal friction.

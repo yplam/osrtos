@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-13'
 updatedAt: '2026-01-13'
+relatedProjects:
+- meshcore-mqtt-gateway
+- meshtnc
+- esp32-mesh-control
+- genius-gateway
+- esp32-gps-gateway-with-rtk-ntrip-support
+- dtugateway-for-hoymiles-hms-inverters
 ---
 
 ## Overview

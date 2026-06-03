@@ -20,6 +20,13 @@ star: 32
 lastUpdated: '2017-07-18'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- mpu6050-interfacing-library-for-esp32-esp-idf
+- icm-20948-component-for-esp-idf
+- micropython-mpu-9250-i2c-driver
+- micropython-mpu9x50-imu-driver
+- apache-nuttx-driver-for-bosch-bme280-sensor
+- esp32-lepton
 ---
 
 ## Interfacing the MPU6050 with ESP32

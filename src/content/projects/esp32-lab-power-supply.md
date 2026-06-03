@@ -23,6 +23,13 @@ topics:
 isShow: true
 createdAt: '2026-04-27T08:40:18+00:00'
 updatedAt: '2026-04-27T08:40:18+00:00'
+relatedProjects:
+- elevourer-portable-intelligent-electronic-load
+- esp32-remote-for-victron
+- usb-pd-adapter
+- sw32-4-channel-e-stim
+- eez-bench-box-3-bb3-modular-power-supply-platform
+- reflow-oven-with-micropython-lvgl
 ---
 
 The ESP32 Lab Power Supply is a DIY laboratory-grade power solution designed for versatility and precision. Built around the ESP32 DevKit, this project provides a dual-channel output with integrated voltage and current control, managed through a modern graphical interface on a 3.5" TFT display. 

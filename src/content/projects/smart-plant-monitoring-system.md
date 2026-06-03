@@ -28,6 +28,13 @@ isShow: true
 image: /202603/plant-monitoring.webp
 createdAt: '2026-03-03'
 updatedAt: '2026-03-03'
+relatedProjects:
+- iotea
+- lilygo-higrow-esp32-plant-monitoring-sensor-firmware
+- smart-farming-iot-system
+- lilygo-higrow-esp32-plant-monitoring-sensor-firmware-hardware-v1
+- esphome-plant-watering
+- iot-agricultural-data-monitoring-system
 ---
 
 The Smart Plant Monitoring System is a comprehensive IoT solution designed to automate and simplify plant care. Built around the versatile ESP32 microcontroller, the project combines environmental sensing with automated actuation to ensure plants receive optimal care without constant manual intervention.

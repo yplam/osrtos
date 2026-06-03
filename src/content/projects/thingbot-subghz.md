@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- 6lbr-on-telecontrolli-devices-x-ip4t-x-ip5
+- low-power-wireless-networking-for-iot-lpiot
+- tinycore-esp32-s3-learning-platform
+- hail-iot-development-module
+- 6lowpan-ble-bridge
+- atmega128rfa1-tinyos-kth-wsn-project
 ---
 
 ## Overview

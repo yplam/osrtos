@@ -21,6 +21,13 @@ isShow: true
 image: /202601/near-plane.webp
 createdAt: '2026-01-28'
 updatedAt: '2026-01-28'
+relatedProjects:
+- plane-radar
+- flightradar24-ttgo
+- cardputer-gps-info
+- openlap
+- papersat
+- claudegauge
 ---
 
 # nearPlane: A Portable ADSB Tracker for Aviation Enthusiasts

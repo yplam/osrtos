@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32h745-ethernet-with-lwip-and-freertos
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- wiznet-freertos-sdk-for-raspberry-pi-pico-ethernet
+- wiznetinterface-library
+- udp-echo-server-for-stm32f407-and-enc28j60
+- rtems-lwip-stm32-integration
 ---
 
 The W5500 LwIP Binding project provides a crucial bridge for embedded developers looking to integrate the WIZnet W5500 Ethernet controller with the popular LwIP (Lightweight IP) TCP/IP stack. Specifically designed for environments running FreeRTOS, this implementation allows the W5500 to operate in MAC RAW mode, effectively turning the hardware chip into a standard network interface for the LwIP stack.

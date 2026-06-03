@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lwip-for-linux
+- lwip-for-esp8266
+- lwip-kcp-integration
+- udp-ping-pong-on-lwip-and-dpdk
+- tinyhttpd-lwip-dpdk
+- stm32duino-lwip
 ---
 
 ## Overview

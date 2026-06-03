@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- bbn-m5stack-tough-sailing-instruments
+- espmonitor-iot-environmental-monitoring-system
+- esp32-webserver-with-firebase-integration
+- iot-esp8266-serial-forwarder
+- dtugateway-for-hoymiles-hms-inverters
+- esp-datalogger-with-firebase-and-spiffs
 ---
 
 # NMEA0183-WiFi: A Modern Marine Data Gateway

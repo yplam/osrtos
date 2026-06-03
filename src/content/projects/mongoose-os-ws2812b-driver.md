@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- rainnow-core
+- led-matrix-max7219-for-mongoose-os
+- neoled
+- neopixel-library-for-raspberry-pi-pico
+- mongoose-os-relay-library
+- hyperk
 ---
 
 ## Overview

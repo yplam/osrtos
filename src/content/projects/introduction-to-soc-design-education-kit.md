@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- rapid-embedded-systems-design-education-kit
+- dallas-formula-racing-embedded-onboarding
+- h-c-l-p-tr-nh-stm32f1
+- tinycore-esp32-s3-learning-platform
+- bare-metal-programming-guide
+- learning-stm32
 ---
 
 ## Overview

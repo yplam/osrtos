@@ -18,6 +18,13 @@ libraries:
 isShow: true
 createdAt: '2026-05-18T12:36:30+00:00'
 updatedAt: '2026-05-18T12:36:30+00:00'
+relatedProjects:
+- pixlpal-m1-firmware
+- lvgl-kawaii-face
+- nebaura-labs-mote
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- wally-c-version
+- diy-ai-voice-assistant-for-esp32-s3
 ---
 
 The Xiaozhi AI Desk Buddy is a charming example of how embedded systems can be used to create personality in hardware. Built around the compact but powerful Seeed Xiao ESP32-S3, this project transforms a collection of sensors and displays into an expressive desk companion. It is an extension of the Xiaozhi firmware, focusing heavily on a sophisticated animation system that brings a digital face to life.

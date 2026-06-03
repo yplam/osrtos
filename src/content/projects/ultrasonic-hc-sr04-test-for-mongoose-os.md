@@ -14,6 +14,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- zephyr-rtos-driver-for-hc-sr04-ultrasonic-sensor
+- hlw8012-and-bl0937-energy-meter-library-for-mongoose-os
+- hx711-testing-app-for-mongoose-os
+- max17263-test-app-for-mongoose-os
+- ds18b20-mgos-test
+- hx711-library-for-mongoose-os
 ---
 
 ## Overview

@@ -23,6 +23,13 @@ isShow: true
 image: /202602/node-and-carrier.webp
 createdAt: '2026-02-11'
 updatedAt: '2026-02-11'
+relatedProjects:
+- xiaomi-cybergear-arduino-library
+- spirit-motor-driver-library
+- serialbridge
+- catpilot
+- silicon-labs-arduino-core
+- spektrum-receiver-library-for-mbed
 ---
 
 ## Overview

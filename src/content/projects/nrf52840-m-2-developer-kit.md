@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nrf54l15-connect-kit
+- zj-ble-rt-thread-and-nimble-for-nordic-nrf52
+- objex-link
+- ameba-rtos-sdk
+- infuse-iot-sdk
+- hail-iot-development-module
 ---
 
 The nRF52840 M.2 Developer Kit is a modular and versatile IoT prototyping platform designed to accelerate the transition from development to production. At its core is the nRF52840 M.2 Module, a removable E-Key form factor board powered by the Nordic Semiconductor nRF52840 SoC. This hardware architecture allows developers to prototype using the full developer kit and then seamlessly integrate the same M.2 module into custom PCB hardware for final products.

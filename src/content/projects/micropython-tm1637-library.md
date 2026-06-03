@@ -23,6 +23,13 @@ isShow: true
 image: /202512/tm1637.webp
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- micropython-max7219-8x8-led-matrix-library
+- micropython-waveshare-e-paper-drivers
+- led-matrix-max7219-for-mongoose-os
+- micropython-library-for-the-cheap-yellow-display-cyd
+- micropython-stm-lib
+- micropython-st7789-lcd-driver
 ---
 
 ## Overview

@@ -20,6 +20,13 @@ isShow: true
 image: /202601/pico-100base.webp
 createdAt: '2026-01-28'
 updatedAt: '2026-01-28'
+relatedProjects:
+- rp2040-hat-lwip-c
+- asyncudp-esp32-sc-w6100
+- hsdaoh-rp2350-high-speed-data-acquisition-over-hdmi
+- asyncudp-esp32-ethernet
+- asyncwebserver-esp32-w5500
+- asyncudp-ethernet
 ---
 
 ## Overview

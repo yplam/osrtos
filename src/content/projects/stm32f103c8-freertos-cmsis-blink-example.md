@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-libopencm3-freertos-platformio-template
+- stm32f1-rtos-example-project
+- lpc43xx-freertos-led-blinking-example
+- stm32f103rb-templates-and-examples
+- seal-test-bare-bones-example
+- stm32l475-freertos-iot-project
 ---
 
 ## Overview

@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- qemu-emulation-for-ti-lm3s6965-cortex-m3
+- solox-amp-rust
+- sel4-armv8-vmm-manifest
+- lvgl-port-for-arm-cortex-m55-and-mps3-an547
+- multizone-security-tee-for-risc-v
+- mtower-trusted-execution-environment
 ---
 
 ## Overview

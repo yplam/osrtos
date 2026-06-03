@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-04-01T23:49:15+00:00'
 updatedAt: '2026-04-01T23:49:15+00:00'
+relatedProjects:
+- sqlite-for-raspberry-pi-pico
+- littledb-sql-like-database-for-esp32
+- littlefs-for-esp-idf
+- micropython-for-esp32-with-psram-support-lobo-port
+- r2p2-esp32-ruby-rapid-portable-platform-for-esp32
+- lvgl-port-for-esp32
 ---
 
 ## Bringing Relational Databases to the Edge

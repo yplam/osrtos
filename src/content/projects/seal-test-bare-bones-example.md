@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f103c8-freertos-cmsis-blink-example
+- stm32f1-rtos-example-project
+- stm32f030-cmake-cmsis-project-skeleton
+- lpc43xx-freertos-led-blinking-example
+- stm32-libopencm3-freertos-platformio-template
+- stm32-cmake-cmsis-project-skeleton
 ---
 
 ## Overview

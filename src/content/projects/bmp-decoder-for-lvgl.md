@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- png-decoder-for-lvgl
+- sjpg-decoder-for-lvgl
+- gif-decoder-for-lvgl
+- image-converter-for-lvgl
+- lvgl-offline-image-conversion-tool
+- 100ask-linux-lvgl-desktop
 ---
 
 ## Overview

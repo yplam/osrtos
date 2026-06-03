@@ -29,6 +29,13 @@ topics:
 isShow: true
 createdAt: '2026-03-31'
 updatedAt: '2026-03-31'
+relatedProjects:
+- rtos-wot
+- supladevice-library
+- beremiz4uc
+- esp32-freertos-examples
+- dsc-keybus-interface-rtos
+- esp-open-rtos
 ---
 
 The ESP 4diac FORTE Library brings the power of the IEC 61499 standard to the Espressif ecosystem. 4diac FORTE is an open-source PLC (Programmable Logic Controller) runtime framework designed for distributed automation. By packaging this framework as a standard ESP-IDF component, this project enables developers to execute complex control logic on affordable ESP32 and ESP32-S2 hardware, leveraging the underlying FreeRTOS and LwIP stacks for multitasking and networking.

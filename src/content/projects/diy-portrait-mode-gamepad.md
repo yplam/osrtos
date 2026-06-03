@@ -18,6 +18,13 @@ isShow: true
 image: /202601/gamepad.webp
 createdAt: '2026-01-15'
 updatedAt: '2026-01-15'
+relatedProjects:
+- esp-usb-ble-hid-bridge
+- stm32-pocket-game-dev-console
+- polymath-studio-one-handed-keyboard-ps-ohk
+- hd2-macropad
+- picogamepadconverter
+- adaspace3d
 ---
 
 The DIY Portrait-Mode Gamepad is a specialized hardware project designed to enhance the mobile gaming experience, particularly for titles and emulators that favor a vertical orientation. Built around the versatile Raspberry Pi RP2040 microcontroller, this gamepad provides a physical interface for smartphones, connecting directly via a USB-C port to eliminate the latency and battery concerns associated with traditional Bluetooth controllers.

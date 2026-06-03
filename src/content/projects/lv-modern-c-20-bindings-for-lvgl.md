@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-04-19T08:42:30+00:00'
 updatedAt: '2026-04-19T08:42:30+00:00'
+relatedProjects:
+- lvgl-c-binding
+- lvglpp-a-c-wrapper-for-lvgl
+- lvgl-rust-bindings
+- luavgl
+- zephyr-c-20-framework-zpp
+- lvgl-micropython-bindings
 ---
 
 LVGL has long been the industry standard for creating sophisticated graphical user interfaces on resource-constrained embedded systems. However, as embedded development increasingly adopts modern C++ standards, the traditional C API can feel verbose and error-prone. The `lv` project addresses this by providing a header-only, C++20 wrapper that brings modern programming paradigms to the LVGL ecosystem without sacrificing performance.

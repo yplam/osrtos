@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- utensor-mnist-handwriting-recognition-demo
+- tensorflow-lite-micro-for-rt-thread
+- edgeai-utensor-embedded-rtos-for-arm-processors
+- speech-recognition-on-stm32-using-machine-learning
+- edge-ai-on-embedded-linux-i-mx-8m-plus
+- fashion-mnist-on-esp32-with-tensorflow-lite-micro
 ---
 
 ## Overview

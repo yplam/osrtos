@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvglpp-a-c-wrapper-for-lvgl
+- lv-modern-c-20-bindings-for-lvgl
+- luavgl
+- lvgl-rust-bindings
+- lvgl-micropython-bindings
+- lvgl-port-for-esp32
 ---
 
 # LVGL C++ Binding: Modernizing Embedded GUI Development

@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-03-07'
 updatedAt: '2026-03-07'
+relatedProjects:
+- elekstube-ips-custom-firmware
+- 7-segment-clock
+- iv-11-vfd-tube-clock
+- children-s-iot-clock
+- sanjin-intelligent-mechanical-clock
+- retro-nixie-clock
 ---
 
 ## Overview

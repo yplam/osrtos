@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- cortex-m33-trustzone-experiments-on-qemu-an505
+- the-sel4-white-paper
+- bpf-ebpf-for-microcontroller-compartmentalization
+- selfe-sys-rust-bindings-for-sel4
+- hydra-hybrid-design-for-remote-attestation-on-sel4
+- rust-sel4-toy-system-for-i-mx6-sabre-lite
 ---
 
 ## Overview

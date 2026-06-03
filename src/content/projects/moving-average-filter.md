@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- movingaveragefloat
+- movingaverageangle
+- rtt-libfilter-digital-filter-library-for-rt-thread
+- embedded-kf-library
+- qfplib-m0-full-floating-point-library
+- qfplib-m0-tiny
 ---
 
 ## Overview

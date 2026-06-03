@@ -23,6 +23,13 @@ isShow: true
 image: /202601/swift-embedded.webp
 createdAt: '2026-01-14'
 updatedAt: '2026-01-14'
+relatedProjects:
+- esp32-sdl3-swift-example
+- swift-on-flipper-zero
+- swift-examples-for-stm32c011
+- zephyr-rtos-ssd1306-custom-font-demo
+- jc3248w535-lvgl-v9-test-project
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
 ---
 
 Embedded Swift is an emerging frontier for developers looking to bring the safety and expressiveness of the Swift programming language to resource-constrained environments. This project serves as a practical demonstration of Swift running on the ESP32-C6, specifically targeting the Seeed Studio XIAO ESP32-C6 expansion board. The demo features a real-time 3D graphics rendering of a rotating cube displayed on an OLED screen.

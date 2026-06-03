@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- compass-multihop-framework-for-tinyos
+- tinyos-nesc-telosb-programs
+- msf-protocol-simulation-for-contiki-ng
+- tag-and-tina-implementation-on-tinyos
+- computer-network-with-contiki-ng
+- networked-embedded-systems-nes-project
 ---
 
 ## Overview

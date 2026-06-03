@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mbed-os-6-support-for-weact-black-pill-stm32f411ce
+- mbed-os-6-support-for-weact-black-pill-stm32f401cc
+- bluepill-board-support-for-mbed-os-6
+- mbed-os-6-port-for-weact-stm32h743vit6
+- mcudev-black-stm32f407vet6-micropython-support
+- rt-thread-bsp-for-stm32f407vet6
 ---
 
 The WeAct Black Pill, featuring the STM32F401CEU6, is a popular choice for developers seeking a more powerful alternative to the classic Blue Pill. While the Blue Pill is limited by its STM32F103 MCU, the Black Pill offers significantly more RAM, flash memory, and a single-precision floating-point unit (FPU), all within a similar compact form factor. This project provides the necessary target support to run Mbed OS 6 on these boards.

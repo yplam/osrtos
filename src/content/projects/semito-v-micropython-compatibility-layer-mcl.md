@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-27'
 updatedAt: '2026-01-27'
+relatedProjects:
+- micropython-port-for-rt-thread
+- blynk-python-library
+- sparkfun-micropython-opencv
+- micropython-for-pandora-iot-board
+- pycopy-standard-library-pycopy-lib
+- pikapython
 ---
 
 ## Overview

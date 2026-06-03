@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- nrf52840-m-2-developer-kit
+- cyberboard-v2
+- thingbot-subghz
+- nrf54l15-connect-kit
+- tinycore-esp32-s3-learning-platform
+- objex-link
 ---
 
 ## Overview

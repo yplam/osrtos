@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-17'
 updatedAt: '2026-01-17'
+relatedProjects:
+- esp32-bluejammer
+- esp32-bluetooth-signal-jammer
+- c3mini-bluejammer
+- nrf24-jammer
+- espnrf24-jammer
+- cc1101-jammer
 ---
 
 ## Overview

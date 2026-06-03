@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-wifi-relay
+- esp8266-wifi-relay-async
+- esp8266-remote-firework-countdown-relay
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- esp8266-electronic-timekeeper
+- riden-dongle
 ---
 
 ## Overview

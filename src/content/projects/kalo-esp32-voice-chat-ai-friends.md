@@ -34,6 +34,13 @@ isShow: true
 image: /202601/kalo.webp
 createdAt: '2026-01-24'
 updatedAt: '2026-01-24'
+relatedProjects:
+- kalo-esp32-voice-assistant
+- esp32-voice-assistant
+- diy-ai-voice-assistant-for-esp32-s3
+- nebaura-labs-mote
+- starmoon-open-source-conversational-ai-device
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
 ---
 
 ## Overview

@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sk-mstm32f107-demo-board-example
+- stm32h750b-dk-touchgfx-freertos-mqtt-example
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- stm32h745-ethernet-with-lwip-and-freertos
+- mender-ota-example-for-stm32l4-and-zephyr-rtos
+- ip-over-usb
 ---
 
 ## Overview

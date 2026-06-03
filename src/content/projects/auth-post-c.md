@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- losant-mqtt-example-for-mongoose-os
+- esp8266-dht22-spiffs-web-server
+- mongoose-os-programs-and-examples
+- losant-mqtt-mongoose-os-example
+- esp8266-config-data-management
+- coap-eap-with-eap-noob-in-contiki
 ---
 
 In the world of IoT and embedded systems, securing web interfaces is a critical requirement. The **auth-post-c** project provides a clean, C-based implementation of a Mongoose OS application that focuses specifically on securing HTTP endpoints using Digest Access Authentication.

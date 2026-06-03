@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pinephone-usb-driver-for-apache-nuttx-rtos
+- pinedio-stack-bl604-on-apache-nuttx-rtos
+- apache-nuttx-rtos-for-pine64-star64
+- lvgl-terminal-for-pinephone-on-apache-nuttx
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
+- lvgl-test-app-for-apache-nuttx
 ---
 
 Apache NuttX is a lightweight, POSIX-compliant Real-Time Operating System (RTOS) designed for resource-constrained environments. This project focuses on porting and optimizing NuttX for the Pine64 PinePhone, a smartphone powered by the Allwinner A64 SoC featuring four Arm Cortex-A53 cores. By bringing a professional-grade RTOS to a mobile handset platform, this repository enables low-level experimentation and the development of highly efficient firmware for mobile hardware.

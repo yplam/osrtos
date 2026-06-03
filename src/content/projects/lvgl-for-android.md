@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- eclipse-simulator-for-lvgl-using-sdl
+- luavgl
+- sc01-plus-hmi-example-with-squareline-studio
+- lvgl-emscripten-port
+- lvgl-android-style-launcher
+- lvgljs
 ---
 
 ## Overview

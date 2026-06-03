@@ -22,6 +22,13 @@ isShow: true
 image: /202603/ultimate-remote.webp
 createdAt: '2026-03-24'
 updatedAt: '2026-03-24'
+relatedProjects:
+- omote-open-universal-remote
+- m5apps
+- saturn
+- m5-keyboard-and-mouse-emulator
+- esp32-web-radio-evo3
+- roarm-m2-robotic-arm-control-firmware
 ---
 
 ## Overview

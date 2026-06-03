@@ -31,6 +31,13 @@ isShow: true
 image: /202601/reflow-oven.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- precius-precision-cooking-and-home-kitchen-automation
+- espgaggia-smart-coffee-machine-controller
+- micropython-and-lvgl-firmware-for-esp32
+- smart-flask-thermos-with-round-display-and-esp32-c3
+- esp32-tux
+- embedded-graphical-interface-for-pid-control
 ---
 
 ## Overview

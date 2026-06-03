@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rl-tsch-implementation-for-contiki-ng
+- ql-tsch-implementation-for-contiki-ng
+- ql-tsch-reinforcement-learning-for-time-slotted-channel-hopping
+- low-power-wireless-networking-for-iot-lpiot
+- smart-orchard
+- wsntestbed
 ---
 
 ## Overview

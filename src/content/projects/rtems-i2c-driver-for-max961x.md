@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- tmp1075-temperature-sensor-driver-for-rt-thread
+- vl53l0x-tof-sensor-driver-for-rt-thread
+- hdc1000-sensor-driver-for-rt-thread
+- ds3231-rtc-driver-for-rt-thread
+- rx8900-high-precision-rtc-driver-for-rt-thread
+- sgp30-gas-sensor-driver-for-rt-thread
 ---
 
 The `rtems-i2c-max961x-driver` provides a robust implementation for interfacing with the Maxim Integrated MAX9611 and MAX9612 high-side current-sense amplifiers within the RTEMS ecosystem. These chips are versatile sensors capable of monitoring high-side current, input supply voltage, and internal temperature, making them ideal for power management and system health monitoring in embedded applications.

@@ -11,6 +11,13 @@ rtos: freertos
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- stm32f103c8-freertos-cmsis-blink-example
+- tiva-tm4c1294-launchpad-freertos-demo
+- raspberry-pi-pico-freertos-sample-application
+- lpc1115-libraries-and-drivers
+- stm32-libopencm3-freertos-platformio-template
+- stm32-fatfs-and-freertos-integration
 ---
 
 The LPC43XX-FreeRTOS-with-2xLED-Threads project serves as a practical implementation guide for running FreeRTOS on the NXP LPC4337 Xplorer board. Developed using the LPCExpresso IDE, this repository provides a complete workspace for developers looking to explore multi-threaded applications on the LPC43xx series of microcontrollers.

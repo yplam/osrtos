@@ -27,6 +27,13 @@ isShow: true
 image: /202603/pico-smsplus.webp
 createdAt: '2026-03-23'
 updatedAt: '2026-03-23'
+relatedProjects:
+- picopeanutgb-game-boy-emulator-for-rp2350
+- msx1-emulator-for-raspberry-pi-pico
+- retrojam-multi-retro-game-console-emulator
+- pc-6001mkii-emulator-for-raspberry-pi-pico
+- esp32-s3-nes-emulator
+- anemoia-esp32
 ---
 
 ## Overview

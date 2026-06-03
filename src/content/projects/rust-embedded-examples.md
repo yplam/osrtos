@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rust-for-arduino-portenta-h7
+- stm32f4-rtic-playground
+- uart-communication-between-nrf52840-and-stm32f401-nucleo
+- chibios-rt-examples-for-stm32f401re-nucleo
+- b-l475e-iot01a-discovery-board-support-crate
+- pico-rtic-template
 ---
 
 Rust has become a powerful contender in the embedded systems world, offering memory safety and modern tooling for microcontrollers. This repository serves as a practical guide for developers looking to explore embedded Rust on the STM32 platform, specifically targeting the NUCLEO-F103RB development board.

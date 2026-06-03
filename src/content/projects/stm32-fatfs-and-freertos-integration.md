@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f407vg-freertos-fatfs-sdio-sd-card-demo
+- stm32-fatfs-on-sd-card-using-freertos
+- esp32-fatfs-storage-example
+- practice-project-for-stm32f746g-discovery
+- ff-iso-stm32-multitasking-fatfs-sdio
+- stm32h743-cmake-template
 ---
 
 ## Overview

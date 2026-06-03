@@ -33,6 +33,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- seeed-studio-xiao-esp32-project-collection
+- esp-lvgl
+- esp32-repo
+- fctc-art-pi-code-iot-from-chip-to-cloud
+- mongoose-os-samples-for-esp32
+- map-tiles-projects-for-esp32
 ---
 
 # Exploring "That Project": A Hub for ESP32 and ESP8266 Innovation

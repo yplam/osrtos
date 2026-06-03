@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- settings-manager
+- effortless-spiffs
+- easyini
+- arduino-littlefs-spimemory-wrapper
+- easy-iot-file-system
+- arduinojson-littlefs-json-parser
 ---
 
 ## Overview

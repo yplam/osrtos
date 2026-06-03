@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- sama5d27-resource-sharing
+- fctc-art-pi-code-iot-from-chip-to-cloud
+- esp-lvgl
+- stm32-cortex-m4-code-examples
+- lvgl-for-embedded-linux
+- blinker-iot-documentation
 ---
 
 ## Overview

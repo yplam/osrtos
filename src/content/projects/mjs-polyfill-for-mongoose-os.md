@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- mjs-array-prototype-polyfill
+- mjs-math-object-polyfill
+- mjs-engine-script-testing-framework
+- mongoose-os-relay-library
+- mongoose-os-programs-and-examples
+- common-tools-for-mongoose-os
 ---
 
 ## Overview

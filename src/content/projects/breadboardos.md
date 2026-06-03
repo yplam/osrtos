@@ -31,6 +31,13 @@ topics:
 isShow: false
 createdAt: '2026-04-01T01:29:24+00:00'
 updatedAt: '2026-04-01T01:29:24+00:00'
+relatedProjects:
+- picoshell
+- minios-esp
+- smolos
+- raspberry-pi-rtos-rpi-rtos
+- raspberry-pi-pico-freertos-shell
+- rp2040-freertos-template
 ---
 
 BreadboardOS (BBOS) is a specialized firmware platform designed to streamline the transition from a messy breadboard prototype to a functional embedded system. At its core, BBOS is built on the philosophy that every project should start with a Command Line Interface (CLI). By providing a recognizable, POSIX-style shell from the outset, developers can debug, test, and interact with hardware peripherals without needing to write custom UI code or serial parsers for every new project.

@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-03-22'
 updatedAt: '2026-03-22'
+relatedProjects:
+- awesome-circuitpython
+- rp2040-projects-by-armstrong-subero
+- python-for-kids
+- universal-maker-sensor-kit
+- sparkfun-python-examples
+- ardurtos
 ---
 
 ## Introduction to the CircuitPython Workshop

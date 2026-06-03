@@ -12,6 +12,13 @@ rtos: ''
 isShow: true
 createdAt: '2026-05-29T00:14:52+00:00'
 updatedAt: '2026-05-29T00:14:52+00:00'
+relatedProjects:
+- focus-dial
+- bbmonitor
+- deskpet
+- deskpet-for-m5stack-cardputer
+- flexwatch
+- children-s-iot-clock
 ---
 
 Maintaining a "flow state" during complex tasks like PCB design or software development is a double-edged sword. While it allows for deep focus, it often leads to losing track of time and neglecting necessary breaks. PomoDesk is a hardware-based solution to this problem, offering a physical Pomodoro timer that moves the countdown away from distracting screen apps and onto a dedicated desktop device.

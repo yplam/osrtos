@@ -22,6 +22,13 @@ isShow: true
 image: /202603/m5-cardputer.webp
 createdAt: '2026-03-02'
 updatedAt: '2026-03-02'
+relatedProjects:
+- esp-hack-fw
+- esp32-bit-pirate
+- infiltra-firmware
+- ghost-esp
+- bruce-firmware
+- esp32-2-4ghz-jammer
 ---
 
 BeamStalker is a versatile, open-source firmware designed for ESP32 and ESP32-S3 microcontrollers, specifically tailored for RF experimentation and security auditing. It serves as a collaborative platform for developers and enthusiasts to explore wireless protocols, including WiFi and Bluetooth Low Energy (BLE), in an ethical and educational context.

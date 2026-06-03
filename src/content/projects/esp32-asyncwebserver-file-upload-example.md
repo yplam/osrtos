@@ -22,6 +22,13 @@ star: 100
 lastUpdated: '2021-10-12'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp32-async-web-server-with-spiffs-and-ota
+- esp32-web-server-using-spiffs
+- esp32-ota-firmware-update-and-file-management
+- esp32-spiffs-with-directory-support-example
+- devfsuploadesp
+- esp32-monaco-editor-spiffs
 ---
 
 Managing files on an embedded device like the ESP32 can often be a complex task, especially when trying to provide a user-friendly interface for uploading data. The **esp32-asyncwebserver-fileupload-example** repository by smford provides a clear, step-by-step guide to implementing these features using the powerful `ESPAsyncWebServer` library and the SPIFFS (SPI Flash File System).

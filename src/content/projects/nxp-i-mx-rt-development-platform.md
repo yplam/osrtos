@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtox-iot-development-platform
+- i-mx-rt-cpu-support-package-for-crossworks
+- enterprise-stm32-platform-development
+- nuttx-development-docker-environment
+- zephyr-sdk
+- zj-ble-rt-thread-and-nimble-for-nordic-nrf52
 ---
 
 The NXP i.MX RT series represents a unique class of "crossover" processors. These devices bridge the gap between traditional microcontrollers (MCUs) and high-performance applications processors. By featuring powerful Arm Cortex-M cores, they deliver the real-time responsiveness and ease of use associated with MCUs while providing the performance levels typically reserved for more complex SoCs. This platform is designed to support next-generation IoT applications with a high level of integration and security.

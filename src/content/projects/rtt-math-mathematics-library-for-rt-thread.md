@@ -13,6 +13,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtt-validator
+- rtt-libfilter-digital-filter-library-for-rt-thread
+- c-crc-for-rt-thread
+- qfplib-m0-full-floating-point-library
+- rt-thread-package-list
+- rust-support-for-rt-thread
 ---
 
 ## Overview

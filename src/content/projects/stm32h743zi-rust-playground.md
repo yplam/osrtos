@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f4-rtic-playground
+- rust-for-arduino-portenta-h7
+- stm32f429-rtic-and-smoltcp-example-application
+- stm32-rtic-project-template
+- stm32f429-mqtt-client-with-rtic-and-smoltcp
+- pico-rtic-template
 ---
 
 ## Overview

@@ -34,6 +34,13 @@ topics:
 isShow: false
 createdAt: '2026-03-31T23:46:38+00:00'
 updatedAt: '2026-03-31T23:46:38+00:00'
+relatedProjects:
+- esp32-jarolift-controller
+- eight-sleep-control-with-m5stack-atoms3
+- esp32-mqtt-motor-control
+- smart-iot-sensor-with-xiao-esp32c6
+- hunter-douglas-powerview-ble-for-home-assistant
+- comfosense-touch-zehnder-comfoair-q350-mqtt-bridge-controller
 ---
 
 The transition toward unified smart home standards has reached a milestone with Matter, a protocol designed to ensure interoperability across different manufacturers and ecosystems. This project implements a specialized Matter-enabled controller for roof windows, utilizing the Espressif ESP32-C6. By leveraging Matter over Thread, it provides a low-power, mesh-capable solution that integrates seamlessly into modern smart home setups without the need for proprietary bridges.

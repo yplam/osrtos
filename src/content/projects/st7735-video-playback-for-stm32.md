@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- unigraphic-video-player-for-ili9341v
+- cheap-yellow-display-video-player-esp32-2432s028
+- stm32-displaylink
+- stm32-fatfs-on-sd-card-using-freertos
+- esp32-composite-video-library
+- stm32n6-camera-capture-application
 ---
 
 ## High-Speed Video Playback on STM32

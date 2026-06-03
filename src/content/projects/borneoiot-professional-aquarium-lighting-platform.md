@@ -35,6 +35,13 @@ isShow: true
 image: /202603/borneo.webp
 createdAt: '2026-03-12'
 updatedAt: '2026-03-12'
+relatedProjects:
+- aquarium-app
+- project-aura
+- smart-lighting-system-using-esp32
+- esp32-jarolift-controller
+- svitrix-firmware
+- led-controller-esp32-hub75e-led-matrix-controller
 ---
 
 ## Overview

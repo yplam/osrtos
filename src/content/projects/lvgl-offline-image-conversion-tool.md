@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- image-converter-for-lvgl
+- lvgl-utilities
+- image-converter-ultra-icu
+- lv-font-conv
+- pixelforge
+- png-decoder-for-lvgl
 ---
 
 ## Overview

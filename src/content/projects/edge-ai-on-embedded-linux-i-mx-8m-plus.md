@@ -33,6 +33,13 @@ topics:
 isShow: true
 createdAt: '2026-05-13T00:18:08+00:00'
 updatedAt: '2026-05-13T00:18:08+00:00'
+relatedProjects:
+- stm32n6-getting-started-for-object-detection
+- stm32n6-ai-object-detection-and-h-264-usb-video-streaming
+- image-classification-getting-started-for-stm32n6
+- magic-wand-on-mbed
+- edgeai-utensor-embedded-rtos-for-arm-processors
+- yolov26n-optimized-qat-deployment-on-esp32-p4
 ---
 
 This project provides a comprehensive implementation of an Edge AI system on the NXP i.MX 8M Plus EVK. It spans the entire embedded stack, starting from Yocto BSP bring-up to deploying real-time neural network inference using the onboard 2.3 TOPS NPU. The primary demonstration features a live camera feed processed through a MobileNet SSD v2 model, delivering bounding boxes to an HDMI display with a low latency of 11ms per inference.

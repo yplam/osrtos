@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mongoose-os-relay-library
+- arduino-ir-for-mongoose-os
+- mongoose-os-programs-and-examples
+- mel-ac-library-for-mongoose-os
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- lis3dh-accelerometer-library-for-mongoose-os
 ---
 
 ## Overview

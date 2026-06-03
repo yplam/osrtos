@@ -28,6 +28,13 @@ topics:
 isShow: true
 createdAt: '2026-04-17T08:43:45+00:00'
 updatedAt: '2026-04-17T08:43:45+00:00'
+relatedProjects:
+- anemoia-esp32
+- anemoia-esp32-nes-emulator
+- esp32-s3-nes-emulator
+- retro-video-synthesizer-esp32-pure-data
+- esp32-pseudo-3d-racing-game
+- esp32-rex-dinosaur-game-in-rust
 ---
 
 PixelRoot32 is a comprehensive 2D game engine designed to bring modern development workflows to the world of embedded systems. Developed primarily for the ESP32, it offers a cross-platform environment that allows developers to build and test games on PC (Windows, Linux, or macOS) using SDL2 before deploying the same code to microcontroller hardware. This dual-target approach significantly speeds up the development cycle by removing the need for constant hardware flashing.

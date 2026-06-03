@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-04-17T10:05:44+00:00'
 updatedAt: '2026-04-17T10:05:44+00:00'
+relatedProjects:
+- stm32n6-getting-started-for-object-detection
+- stm32n6-getting-started-for-audio-ai
+- stm32n6-ai-object-detection-and-h-264-usb-video-streaming
+- stm32n6-camera-capture-application
+- edge-ai-on-embedded-linux-i-mx-8m-plus
+- maixpy-v4
 ---
 
 ## Overview

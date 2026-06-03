@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- st7735-video-playback-for-stm32
+- stm32f4-display-and-ethernet-example
+- usb-video-class-uvc-for-raspberry-pi-pico
+- practice-project-for-stm32f746g-discovery
+- arm-mbed-os-blue-pill-usb-demo
+- stm32-usb-mass-storage-with-fatfs
 ---
 
 ## Overview

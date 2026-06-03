@@ -33,6 +33,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rthybrid
+- rtai-irq-latency-experiments
+- simple-open-ethercat-master-library-rtnet-version
+- elk-audio-rtdm-driver-for-raspberry-pi
+- rtdm-shift-register-driver-for-elk-pi
+- str-xenomai-real-time-systems-practices
 ---
 
 Octopus-ReEL, short for Octopus Realtime EEG Laboratory, is a specialized software suite designed for high-performance electroencephalography (EEG) research. The project provides a robust framework for synchronized data acquisition, real-time stimulation, and online data visualization, specifically targeting environments where hard real-time constraints are critical for experimental accuracy.

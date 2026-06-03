@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- multizone-iot-sdk
+- multizone-security-tee-for-risc-v
+- fwrisc-featherweight-risc-v-core
+- cortex-m33-trustzone-experiments-on-qemu-an505
+- mongoose-os
+- libedhoc
 ---
 
 ## Overview

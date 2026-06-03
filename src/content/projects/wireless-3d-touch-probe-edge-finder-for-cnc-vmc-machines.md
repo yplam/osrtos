@@ -31,6 +31,13 @@ topics:
 isShow: false
 createdAt: '2026-02-24'
 updatedAt: '2026-02-24'
+relatedProjects:
+- advanced-filament-sensor-for-elegoo-carbon-centauri
+- smoothieware-for-stm32
+- td-free
+- pulse
+- antihunter
+- 3d-cloud-scanner-arm-hackathon-2017
 ---
 
 ## Overview

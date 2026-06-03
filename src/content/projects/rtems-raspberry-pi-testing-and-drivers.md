@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- freertos-port-for-raspberry-pi
+- tca9534-8-bit-i-o-expander-driver-for-rt-thread
+- raspberry-pi-pico-freertos-sample-application
+- xenomai-3-exercises-for-raspberry-pi-4
+- raspberry-pi-4-xenomai-3-patch
+- rtdm-shift-register-driver-for-elk-pi
 ---
 
 ## Overview

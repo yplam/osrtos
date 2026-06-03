@@ -20,6 +20,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- cmsis-for-stm32-development
+- cmsis-documentation
+- stm32-prototyping-libraries
+- cmsis-drivers-for-efm32-and-stm32
+- cmsis-device-headers-for-stm32
+- stm32f103-cmsis-peripheral-configuration
 ---
 
 The **STM32Cube CMSIS Core** repository is a foundational component for any developer working within the STM32 ecosystem. It provides the essential interface between the ARM Cortex processor core and the software application, ensuring that developers have a standardized way to access processor features, manage interrupts, and initialize system hardware.

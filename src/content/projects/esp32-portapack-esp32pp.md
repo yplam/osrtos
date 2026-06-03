@@ -32,6 +32,13 @@ topics:
 isShow: true
 createdAt: '2026-03-31'
 updatedAt: '2026-03-31'
+relatedProjects:
+- espri-esp-radio-interface
+- esp32-bus-expander
+- esp32-gps-gateway-with-rtk-ntrip-support
+- esp32-ascom-alpaca-implementation
+- freebees-access-control-for-esp32
+- flock-detector-3-0
 ---
 
 The HackRF Portapack has long been a favorite tool for software-defined radio (SDR) enthusiasts, providing a portable interface for signal analysis. However, many users find themselves wanting more integrated data, such as precise GPS coordinates for wardriving or environmental telemetry for field operations. The ESP32-Portapack (ESP32PP) project addresses these needs by introducing a versatile hardware addon module that communicates with the Portapack via I2C.

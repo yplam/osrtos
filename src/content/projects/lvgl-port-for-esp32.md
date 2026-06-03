@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-display-and-touchpad-drivers-for-esp32
+- lvgl-port-for-m5stack-core2
+- esp-lvgl
+- m5dial-lvgl
+- esphome-lvgl-component
+- esp32-tux
 ---
 
 The `lv_port_esp32` project serves as the official reference implementation for running the Light and Versatile Graphics Library (LVGL) on Espressif's ESP32 platform. It provides a ready-to-use environment that integrates the LVGL graphics stack with the ESP-IDF framework, allowing developers to create sophisticated graphical user interfaces for embedded devices using C or C++.

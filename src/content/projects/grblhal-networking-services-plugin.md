@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- multiftpserver-library
+- ftp-server-teensy41
+- ip-over-usb
+- stm32-ftp-server
+- modbus-tcp-for-stm32f407
+- simpleftpserver-library
 ---
 
 The grblHAL Networking Services Plugin is a powerful extension designed to bring modern connectivity to CNC machines and motion control systems running grblHAL. By leveraging the industry-standard lwIP TCP/IP stack, this plugin transforms a standard serial-based controller into a networked device capable of sophisticated remote management and integration.

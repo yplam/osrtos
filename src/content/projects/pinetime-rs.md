@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pinetime-tock
+- pinetime-zephyr-firmware
+- infinitime
+- rust-ir-thermometer-firmware
+- pomia-rs
+- bosmoment-pinetime-firmware-applications
 ---
 
 Pinetime-rs is a project dedicated to bringing the safety and performance of the Rust programming language to the PineTime smartwatch. By utilizing the Real-Time Interrupt-driven Concurrency (RTIC) framework, the project provides a robust foundation for building embedded applications on the nRF52832 microcontroller.

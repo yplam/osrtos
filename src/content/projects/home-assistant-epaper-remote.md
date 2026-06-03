@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-04-06T23:57:11+00:00'
 updatedAt: '2026-04-06T23:57:11+00:00'
+relatedProjects:
+- esphome-e-ink-4-color-dashboard
+- esp32-p4-home-assistant-display
+- e-ink-assist-screen
+- eight-sleep-control-with-m5stack-atoms3
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- m5paper-buddy
 ---
 
 The Home Assistant ePaper Remote provides a tactile, dedicated physical interface for smart home control. Built specifically for ESP32-S3 based e-Ink development boards, this project transforms high-resolution electronic paper displays into interactive control hubs. By utilizing e-Ink technology, the remote offers exceptional readability and a clean aesthetic that blends into home environments more naturally than traditional tablet or smartphone screens.

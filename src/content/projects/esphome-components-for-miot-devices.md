@@ -22,6 +22,13 @@ isShow: true
 image: /202603/esphome-miot.webp
 createdAt: '2026-03-19'
 updatedAt: '2026-03-19'
+relatedProjects:
+- esphome-hitachi-h-link-ac-component
+- m5stack-esphome-integrations
+- homey-smart-home-controllers
+- esphome-cosori-kettle-ble-component
+- esphome-ikea-vindriktning
+- seeed-home-assistant-discovery
 ---
 
 ## Liberating Xiaomi MIoT Devices from the Cloud

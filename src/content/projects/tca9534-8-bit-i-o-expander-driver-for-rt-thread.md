@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- tmp1075-temperature-sensor-driver-for-rt-thread
+- vl53l0x-tof-sensor-driver-for-rt-thread
+- bl602-gpio-expander-for-apache-nuttx
+- hynitron-cst816s-touch-controller-driver-for-apache-nuttx
+- sgp30-gas-sensor-driver-for-rt-thread
+- sgm706-independent-watchdog-driver-for-rt-thread
 ---
 
 The TCA9534 driver package is a specialized software component designed for the RT-Thread real-time operating system. It provides a seamless interface to the Texas Instruments TCA9534, a versatile I2C/SMBus to 8-bit I/O expander. This chip is widely used in applications where a processor's native GPIO pins are limited, such as in servers, routers, industrial automation, and personal electronics.

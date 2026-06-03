@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mongoose-os-app-on-stm32f446re
+- lal-control-for-mbed-os
+- nrf52-mbed-pwm
+- mbed-rpi-pico-timerinterrupt
+- arm-control-framework-acorns-rover
+- mbed-rp2040-pwm-library
 ---
 
 ## Overview

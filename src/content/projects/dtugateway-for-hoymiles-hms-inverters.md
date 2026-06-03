@@ -31,6 +31,13 @@ topics:
 isShow: true
 createdAt: '2026-04-02T03:39:25+00:00'
 updatedAt: '2026-04-02T03:39:25+00:00'
+relatedProjects:
+- esphome-deye-inverter
+- ginlong-solis-solar-inverter-modbus-integration
+- esp32-remote-for-victron
+- heidelbridge
+- volna-2bw42-weather-station-firmware
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
 ---
 
 ## Bridging the Gap for Hoymiles Solar Systems

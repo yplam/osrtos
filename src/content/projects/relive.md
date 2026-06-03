@@ -29,6 +29,13 @@ topics:
 isShow: true
 createdAt: '2026-04-20T08:16:56+00:00'
 updatedAt: '2026-04-20T08:16:56+00:00'
+relatedProjects:
+- 7-color-e-paper-digital-photo-frame
+- e-ink-assist-screen
+- paperlesspaper-e-paper-photo-frame-hardware
+- espframe-for-immich
+- maixface
+- epd-nrf5-e-paper-display-calendar-and-photo-frame
 ---
 
 Relive is a comprehensive, self-hosted ecosystem designed to solve the problem of "digital hoarding." While many users store thousands of family photos on Network Attached Storage (NAS) devices, these images often sit unvisited for years. Relive breathes life back into these archives by using artificial intelligence to understand photo content and proactively presenting meaningful moments on dedicated hardware displays.

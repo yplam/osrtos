@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtems-5-cmake-c-11-starter
+- stm32-cmake-cmsis-project-skeleton
+- buildpkg
+- stm32f030-cmake-cmsis-project-skeleton
+- stm32-base-project-template
+- cmsis-rp2040
 ---
 
 ## Streamlining RTEMS Development with CMake

@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- hypnos
+- infinitime
+- zephyrwatch
+- bosmoment-pinetime-firmware-applications
+- pinetime-rs
+- twatch-v3-firmware-for-esp32
 ---
 
 ## Overview

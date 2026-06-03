@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- lvglpp-a-c-wrapper-for-lvgl
+- lvgl-c-binding
+- lvgl-rust-bindings
+- 100ask-linux-lvgl-desktop
+- espui
+- esp-lvgl
 ---
 
 ## Overview

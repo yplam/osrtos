@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-05-07T23:44:50+00:00'
 updatedAt: '2026-05-07T23:44:50+00:00'
+relatedProjects:
+- usbsnifferpio-for-rp2040
+- arm-cortex-m-hilbert-transform
+- oscilloscope-rp2040
+- neopixel-library-for-raspberry-pi-pico
+- arm-dwt-c-library
+- m5cardputer-audio-spectrum-display
 ---
 
 Performing frequency domain analysis on microcontrollers often requires navigating complex mathematical libraries and hardware-specific configurations. The `pico_fft` library addresses this challenge for the Raspberry Pi Pico (RP2040) by providing a streamlined wrapper for the well-regarded [KISS FFT](https://github.com/mborgerding/kissfft) library. By abstracting the complexities of Fast Fourier Transform (FFT) operations, it allows developers to focus on signal processing logic rather than low-level boilerplate.

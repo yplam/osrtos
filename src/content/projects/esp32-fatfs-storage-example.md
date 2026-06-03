@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32-fatfs-image-tool-and-example
+- stm32-fatfs-and-freertos-integration
+- esp32-spiffs-image-generation-example
+- esp32-spiffs-with-directory-support-example
+- stm32f407vg-freertos-fatfs-sdio-sd-card-demo
+- littlefs-for-esp-idf
 ---
 
 # Implementing FAT File System Storage on ESP32

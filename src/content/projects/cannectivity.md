@@ -26,6 +26,13 @@ isShow: true
 image: /202602/CANnectivity.webp
 createdAt: '2026-02-14'
 updatedAt: '2026-02-14'
+relatedProjects:
+- zephyr-usb-midi-driver
+- canfestival-rtt
+- zephyr-grbl
+- micro-ros-module-for-zephyr
+- openhaystack-zephyr-firmware
+- ruuvitag-firmware-for-zephyr-os
 ---
 
 ## Overview

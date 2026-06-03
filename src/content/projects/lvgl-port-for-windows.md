@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-windows-simulator-for-code-blocks
+- eclipse-simulator-for-lvgl-using-sdl
+- lvgl-emscripten-port
+- lvgl-port-for-stm32f769-discovery
+- lvgl-port-for-esp32
+- luavgl
 ---
 
 ## Overview

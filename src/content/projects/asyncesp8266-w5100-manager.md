@@ -35,6 +35,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- asyncesp8266-enc-manager
+- esp8266-w5100-manager
+- asyncesp8266-w5500-manager
+- asyncesp32-sc-ethernet-manager
+- esp8266-w5500-manager
+- esp8266-enc-manager
 ---
 
 Managing network credentials and connection settings in embedded systems can be a significant hurdle, especially when devices are deployed in the field without easy access to a serial console. The **AsyncESP8266_W5100_Manager** library addresses this challenge for ESP8266-based projects utilizing Wiznet W5100 or W5100S Ethernet controllers. By providing a robust, asynchronous web configuration portal, it allows developers to configure Ethernet settings—such as Static vs. DHCP IP, DNS servers, and custom application parameters—at runtime.

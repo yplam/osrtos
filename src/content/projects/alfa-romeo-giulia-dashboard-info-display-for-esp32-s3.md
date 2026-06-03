@@ -34,6 +34,13 @@ isShow: true
 image: /202601/alfa-romeo-giulia.wepb
 createdAt: '2026-01-14'
 updatedAt: '2026-01-14'
+relatedProjects:
+- giulia-tft
+- bmw-e90-can-cluster-arduino-project
+- wute-dashboard-for-formula-student-electric
+- bbmonitor
+- euc-dash-esp32-dashboard
+- bmw-idrive-controller-can-bus-interpreter
 ---
 
 ## Overview

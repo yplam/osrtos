@@ -20,6 +20,13 @@ isShow: true
 image: /202603/nanoc6.webp
 createdAt: '2026-03-19'
 updatedAt: '2026-03-19'
+relatedProjects:
+- beelight-zigbee-light-environment-sensor
+- e32wamb-esp32-c6-hue-white-ambiance-replacement
+- smart-iot-sensor-with-xiao-esp32c6
+- q-sensor-multi-functional-zigbee-air-quality-sensor
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- seeed-home-assistant-discovery
 ---
 
 The M5NanoC6 Zigbee Test project provides a practical implementation of a Zigbee End Device using the M5Stack M5NanoC6, a compact development board powered by the ESP32-C6. This SoC is notable for its integrated support for 2.4 GHz Wi-Fi 6, Bluetooth 5 (LE), and 802.15.4 protocols, including Zigbee and Thread. This project specifically focuses on creating a simple on/off light that can be controlled via Zigbee2MQTT and integrated into Home Assistant.

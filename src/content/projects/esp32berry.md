@@ -25,6 +25,13 @@ star: 236
 lastUpdated: '2024-05-24'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- xterminal-esp32-handheld
+- lumia-esp32
+- acid-drop-custom-firmware-for-lilygo-t-deck
+- esp32-tux
+- deck
+- pocketssh
 ---
 
 ESP32Berry is an ambitious project that transforms the LilyGO T-Deck—a portable ESP32-S3 based handheld with a keyboard and screen—into a functional, miniature computing device. Developed by Eric Nam (ThatProject), the project aims to provide a cohesive user experience similar to a mobile operating system, tailored specifically for the constraints and capabilities of embedded hardware.

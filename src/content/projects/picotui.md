@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pycopy-standard-library-pycopy-lib
+- pycopy
+- gooey-gui-library
+- micropython-encoder-menu
+- micropython-lib
+- espui
 ---
 
 ## Overview

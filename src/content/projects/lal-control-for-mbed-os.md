@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- nucleo-experiment-control-system-for-atom-interferometry
+- stm32-pid-temperature-control-implementation
+- arm-control-framework-acorns-rover
+- stm32l476g-discovery-rtos-sensor-project
+- embedded-graphical-interface-for-pid-control
+- w601-rt-thread-alarm-clock
 ---
 
 ## Overview

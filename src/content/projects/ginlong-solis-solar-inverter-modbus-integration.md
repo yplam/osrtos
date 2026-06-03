@@ -27,6 +27,13 @@ isShow: true
 image: /202512/solis-esp8266-wiring.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- esphome-deye-inverter
+- dtugateway-for-hoymiles-hms-inverters
+- multiple-jk-bms-modbus-rs485-integration
+- marstek-venus-e-esphome-integration
+- esphome-modbus-tcp-to-rtu-bridge
+- esp32-remote-for-victron
 ---
 
 Interfacing with solar inverters for real-time monitoring is a key requirement for modern energy management. This project addresses this by providing a suite of tools to communicate with Ginlong Solis inverters via their Modbus RS-485 interface, bypassing proprietary cloud dependencies in favor of local control.

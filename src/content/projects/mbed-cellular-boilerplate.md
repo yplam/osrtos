@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mbed-os-wifi-sample-with-esp8266
+- avnet-wnc14a2a-cellular-driver
+- pelion-device-management-client-example-for-mbed-os
+- quectel-gsm-lte-modem-driver
+- pppos-example-for-mongoose-os
+- ppp-device-for-rt-thread
 ---
 
 Connecting embedded devices to cellular networks often involves managing complex state machines, handling unexpected disconnections, and interfacing with specific modem hardware. The Mbed Cellular Boilerplate project provides a solid foundation for building reliable cellular applications using Mbed OS and uBlox modems.

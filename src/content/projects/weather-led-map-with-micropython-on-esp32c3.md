@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-23'
 updatedAt: '2026-01-23'
+relatedProjects:
+- esptimecast
+- weather-micro-station-for-t-display-s3
+- esp8266-esp32-spotify-oled-display
+- esp32-32x32-rgb-matrix-controller
+- esp32-offline-osm-maps
+- erikaos-online-weather-station
 ---
 
 The HackConRD 2025 badge is more than just a piece of conference hardware; it is a functional IoT device designed to visualize the weather across the Dominican Republic. Built around the powerful and cost-effective ESP32C3 microcontroller, this project leverages MicroPython to create an interactive meteorological map using a matrix of 31 addressable RGB LEDs.

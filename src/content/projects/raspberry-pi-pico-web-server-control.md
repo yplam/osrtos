@@ -31,6 +31,13 @@ isShow: true
 image: /202601/pico-web-server.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- uht-micro-http-toolkit
+- micro-repl
+- microwebsrv
+- micros
+- microwebsrv2
+- picoweb
 ---
 
 ## Overview

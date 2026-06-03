@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-26'
 updatedAt: '2026-01-26'
+relatedProjects:
+- marstek-venus-e-esphome-integration
+- ginlong-solis-solar-inverter-modbus-integration
+- esphome-modbus-tcp-to-rtu-bridge
+- esphome-deye-inverter
+- esphome-flexit-modbus-server
+- m5stack-esphome-integrations
 ---
 
 ## Overview

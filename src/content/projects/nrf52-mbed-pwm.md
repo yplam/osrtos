@@ -33,6 +33,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mbed-rp2040-pwm-library
+- mbed-rpi-pico-timerinterrupt
+- n-able-arduino-core
+- nucleo-experiment-control-system-for-atom-interferometry
+- arduino-serial-ble
+- nimble-arduino
 ---
 
 The nRF52_MBED_PWM library is designed to provide robust, hardware-based Pulse Width Modulation (PWM) for nRF52840-based microcontrollers running on the Arduino-mbed platform. Unlike software-based PWM implementations that rely on CPU cycles and can be interrupted by high-priority tasks or blocking functions, this library leverages the dedicated hardware PWM peripherals of the nRF52840 SoC. This ensures that PWM signals remain stable and accurate, even when the processor is busy with complex calculations, wireless communication, or other time-sensitive operations.

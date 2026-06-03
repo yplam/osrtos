@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nrf-connect-sdk-docker-environment
+- docker-containers-for-the-zephyr-rtos
+- docker-embedded-development-toolchains
+- zmk-docker-images
+- tock-os-docker-image
+- tock-os-docker-build-environment
 ---
 
 The nRF Connect SDK Build Docker project provides a standardized, containerized environment for developing firmware for Nordic Semiconductor's nRF series of microcontrollers. By encapsulating the complex toolchain requirements of the nRF Connect SDK (NCS) into a Docker image, it eliminates the common dependency challenges associated with setting up embedded development environments across different operating systems.

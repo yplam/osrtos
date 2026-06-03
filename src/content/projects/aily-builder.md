@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- finik-ch32v003-sdk
+- mbed-tools
+- esp32-p4-jit-dynamic-code-loading-system
+- arduino-pico
+- sparkminer
+- fastled-idf
 ---
 
 ## Introduction

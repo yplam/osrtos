@@ -34,6 +34,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- nxp-i-mx-rt-development-platform
+- development-utils
+- mbed-os-6-port-for-weact-stm32h743vit6
+- microchip-cmsis-modules-for-arduino
+- stm32cubeh7rs-mcu-firmware-package
+- x-cube-azrtos-g4-azure-rtos-software-expansion-for-stm32cube
 ---
 
 ## Overview

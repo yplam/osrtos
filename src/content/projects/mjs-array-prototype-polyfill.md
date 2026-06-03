@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- mjs-math-object-polyfill
+- mjs-polyfill-for-mongoose-os
+- mjs-engine-script-testing-framework
+- lis3dh-accelerometer-library-for-mongoose-os
+- arduino-ir-for-mongoose-os
+- mongoose-os-relay-library
 ---
 
 mJS is a lightweight JavaScript engine specifically tailored for microcontrollers with very limited resources. To keep the library footprint as small as possible, the standard JavaScript Array prototype is not included by default. The `mjs-array` project addresses this by providing a partial polyfill that adds essential utility functions to array instances.

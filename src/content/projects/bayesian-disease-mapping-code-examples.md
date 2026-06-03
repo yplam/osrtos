@@ -19,6 +19,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- stm32-cortex-m4-code-examples
+- esp32-repo
+- modm-devices-curated-microcontroller-device-data
+- hsmcpp-hierarchical-state-machine-c-library
+- esp-mesh-lite-examples
+- xiao-esp32c6-sketches
 ---
 
 Bayesian Disease Mapping (BDM) is a critical field in public health and epidemiology, providing the statistical tools necessary to understand the distribution of diseases across geographic areas and time. The **Bayesian-DM-code-examples** repository, maintained by Andrew Lawson, serves as an open-source resource for researchers and statisticians looking to implement hierarchical Bayesian models using a variety of modern software packages.

@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-04-27T00:36:21+00:00'
 updatedAt: '2026-04-27T00:36:21+00:00'
+relatedProjects:
+- selfie-autonomous-car-iarrc-2018
+- stm32f103-quadruped-robot
+- mobile-mecanum-4wd-robot
+- robart-autonomous-llm-controlled-robot
+- cuybot-v1-opensource-smartcar-project
+- 16-ir-array-pid-line-follower-robot-using-esp32
 ---
 
 Building an autonomous robot often involves a complex dance between low-level hardware control and high-level spatial reasoning. This project simplifies that relationship through a minimalist, high-speed racing robot that bridges the gap between an STM32-based embedded system and the ROS1 (Noetic) ecosystem. Designed with a focus on efficiency and resource-constrained environments, the robot excels at navigating unknown static mazes using a "transparent transmission" architecture.

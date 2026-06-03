@@ -35,6 +35,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- asynchttpsrequest-esp32-ethernet
+- asynchttprequest-esp32-ethernet
+- https-server-generic-library
+- asyncmqtt-esp32
+- asyncwebserver-esp32-sc-enc
+- asyncwebserver-ethernet
 ---
 
 In the world of IoT and embedded systems, performing secure HTTPS requests can often be a bottleneck. Traditional blocking libraries force the processor to wait for a server response, stalling other critical tasks like sensor polling or display updates. The **AsyncHTTPSRequest_Generic** library solves this by bringing an asynchronous, event-driven paradigm—similar to JavaScript's `XMLHttpRequest`—to the Arduino and ESP32 ecosystem.

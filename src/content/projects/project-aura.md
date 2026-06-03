@@ -39,6 +39,13 @@ isShow: true
 image: /202602/aura.webp
 createdAt: '2026-02-08'
 updatedAt: '2026-02-08'
+relatedProjects:
+- esphome-ikea-vindriktning
+- q-sensor-multi-functional-zigbee-air-quality-sensor
+- esp32-s3-smart-home-control-panel
+- air-quality-monitor
+- bitclock
+- comfosense-touch-zehnder-comfoair-q350-mqtt-bridge-controller
 ---
 
 Project Aura is an open-source air-quality station designed for makers who want a polished, reliable device rather than a bare sensor board. Built around the ESP32-S3, it combines high-quality telemetry with a professional user interface and seamless smart home integration. The project is specifically designed to be accessible, requiring no soldering when using recommended Grove or QT connectors, making it an ideal project for both hobbyists and those seeking a functional home environmental monitor.

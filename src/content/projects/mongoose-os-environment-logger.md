@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mongoose-os-environmental-sensors-application
+- mqtt-demo-for-stm32-iot-discovery-board-with-thingsboard
+- losant-temperature-sensor-for-mongoose-os
+- esp-temperature-to-losant-using-mongoose-os
+- esp32-ruuvitag-collector
+- espmonitor-iot-environmental-monitoring-system
 ---
 
 ## Overview

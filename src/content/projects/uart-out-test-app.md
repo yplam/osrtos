@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- empty-mongoose-os-app
+- mongoose-os-app-skeleton
+- mcp2515-can-testing-app-for-mongoose-os
+- mongoose-os-app-on-stm32f446re
+- websocket-client-for-mongoose-os
+- max17263-test-app-for-mongoose-os
 ---
 
 ## Overview

@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-emscripten-port
+- lvgl-for-pinephone-and-webassembly-with-zig-and-apache-nuttx-rtos
+- lvgl-rust-bindings
+- zig-lvgl-touchscreen-app-on-apache-nuttx-rtos
+- lvgl-demo-embarcadores
+- eclipse-simulator-for-lvgl-using-sdl
 ---
 
 ## Overview

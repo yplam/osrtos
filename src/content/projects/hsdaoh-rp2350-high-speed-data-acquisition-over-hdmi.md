@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-04-05T00:58:03+00:00'
 updatedAt: '2026-04-05T00:58:03+00:00'
+relatedProjects:
+- oscilloscope-rp2040
+- hub75-dma-based-driver-for-raspberry-pi-pico
+- pico-100base-tx-bit-banged-100-mbit-s-ethernet
+- usbsnifferpio-for-rp2040
+- picoave
+- zynq-adc-data-acquisition-with-dma-and-lwip
 ---
 
 The Raspberry Pi Pico 2, powered by the RP2350 microcontroller, introduced a powerful new peripheral: the High-Speed Serial Transmit (HSTX) port. While primarily intended for digital video output, the hsdaoh-rp2350 project repurposes this interface to solve a classic problem in embedded systems—getting massive amounts of data off a microcontroller and into a PC in real time without the overhead or bandwidth limitations of standard USB CDC or UART.

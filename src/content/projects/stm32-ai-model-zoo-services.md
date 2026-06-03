@@ -33,6 +33,13 @@ isShow: true
 image: /202603/stm32ai.webp
 createdAt: '2026-03-03'
 updatedAt: '2026-03-03'
+relatedProjects:
+- stm32n6-getting-started-for-audio-ai
+- ncnn-mp-neural-network-inference-for-micropython
+- stm32n6-getting-started-for-object-detection
+- micropython-examples-for-01studio-development-boards
+- birdnet-for-stm32
+- image-classification-getting-started-for-stm32n6
 ---
 
 ## Bringing AI to the Edge with STM32

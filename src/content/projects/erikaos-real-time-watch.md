@@ -28,6 +28,13 @@ star: 1
 lastUpdated: '2024-09-13'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- stm32l476g-discovery-rtos-sensor-project
+- erikaos-online-weather-station
+- echronos-on-stm32f4x-nucleo-board
+- zephyrwatch
+- lvgl-demo-embarcadores
+- ov-watch
 ---
 
 The ErikaOS Real-Time Watch is an embedded application that transforms an STM32F407-Discovery board into a functional digital watch. By leveraging the Erika Enterprise RTOS, this project demonstrates how to manage real-time tasks, hardware interrupts, and user interface components on a resource-constrained microcontroller.

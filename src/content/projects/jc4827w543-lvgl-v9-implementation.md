@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-04-24T09:37:19+00:00'
 updatedAt: '2026-04-24T09:37:19+00:00'
+relatedProjects:
+- jc3248w535-lvgl-v9-test-project
+- lvgl-8-on-wt32-sc01-with-arduino
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- rp2040-lvgl-8-demo-with-ili9488-and-xpt2046
+- sc01-plus-hmi-example-with-squareline-studio
+- lilygo-t-display-s3-boilerplate
 ---
 
 The JC4827W543 is a powerful ESP32-S3 based development board featuring a high-resolution 4.3-inch display, making it an ideal candidate for sophisticated graphical user interfaces. This project provides a foundational implementation of the Light and Versatile Graphics Library (LVGL) version 9, showcasing how to harness the board's hardware capabilities for interactive applications.

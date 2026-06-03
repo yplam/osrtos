@@ -34,6 +34,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- nrf52-mbed-pwm
+- mbed-rpi-pico-timerinterrupt
+- nucleo-experiment-control-system-for-atom-interferometry
+- spektrum-receiver-library-for-mbed
+- arduino-freertos-library
+- fastled-idf
 ---
 
 ## Overview

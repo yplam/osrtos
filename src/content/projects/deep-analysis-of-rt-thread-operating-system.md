@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zephyr-inside
+- sama5d27-resource-sharing
+- development-of-real-time-systems-assignments
+- tinyos-english-documentation
+- nuttx-rtos-experiments
+- esp32-repo
 ---
 
 RT-Thread is a highly popular open-source real-time operating system (RTOS) known for its modularity and rich component ecosystem. While many developers are familiar with its API, the "Deep Analysis of RT-Thread" project aims to pull back the curtain on the underlying implementation. This repository serves as a technical guide for engineers who want to understand the "how" and "why" behind RT-Thread's core functionality.

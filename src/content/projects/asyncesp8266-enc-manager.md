@@ -34,6 +34,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- asyncesp8266-w5100-manager
+- asyncesp8266-w5500-manager
+- esp8266-enc-manager
+- esp8266-w5500-manager
+- asyncesp32-sc-ethernet-manager
+- esp8266-w5100-manager
 ---
 
 While the ESP8266 is famous for its integrated WiFi capabilities, many industrial and hobbyist applications require the reliability of a wired connection. The **AsyncESP8266_ENC_Manager** library addresses a common pain point for these developers: managing network credentials and static IP configurations without hardcoding them into the firmware. By combining the ESP8266 with the ENC28J60 Ethernet controller, this library provides a robust 'Connection Manager' experience similar to popular WiFi managers but tailored for Ethernet.

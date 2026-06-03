@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-04-16T03:45:58+00:00'
 updatedAt: '2026-04-16T03:45:58+00:00'
+relatedProjects:
+- x-knob-a-smart-knob-based-on-lvgl-ui-framework
+- mks-xdrive-mini-foc-driver
+- klipper-esp32
+- cybergear-ros2-controller
+- opendualmotordriver
+- foc-ears-dead-silent-animatronics
 ---
 
 FOC_Pocket is an embedded systems project born from the desire to learn Field Oriented Control (FOC) while leveraging highly integrated modern components. The project centers around a "coin-size" form factor, specifically designed to drive 2204-style brushless gimbal motors using a high-performance MPS (Monolithic Power Systems) chip stack and the ESP32-S3 microcontroller.

@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-04-17T10:06:12+00:00'
 updatedAt: '2026-04-17T10:06:12+00:00'
+relatedProjects:
+- stm32n6-ai-object-detection-and-h-264-usb-video-streaming
+- usb-video-class-uvc-for-raspberry-pi-pico
+- image-classification-getting-started-for-stm32n6
+- stm32n6-getting-started-for-object-detection
+- h747-camera-dual-core-stm32h747-camera-and-display-system
+- esp32-mjpeg-multiclient-streaming-server
 ---
 
 The STM32N6 series represents a significant step in performance for the STM32 family, and this application serves as a primary demonstration of its multimedia capabilities. Designed for the STM32N6570-DK Discovery Board and the NUCLEO-N657X0-Q Nucleo Board, the project focuses on capturing video from high-quality camera sensors and streaming that data to a host PC via the USB Video Class (UVC) protocol.

@@ -25,6 +25,13 @@ star: 12
 lastUpdated: '2020-05-22'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp32-fatfs-image-tool-and-example
+- esp8266sdupdater
+- avr-spiffs
+- spiffs-for-esp8266-non-os-sdk
+- easyini
+- fileferry-click2flash
 ---
 
 The Spartan Edge Accelerator Board is a powerful development platform that pairs an ESP32 with a Xilinx Spartan-7 FPGA. Traditionally, the ESP32 acts as a bridge, loading the FPGA bitstream from a microSD card into the Spartan-7 via Slave Serial Configuration Mode. While effective, this requirement for external storage can be a bottleneck for projects where the FPGA logic is static or where physical space and reliability are concerns. 

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- ruuvitag-firmware-for-zephyr-os
+- mender-ota-example-for-stm32l4-and-zephyr-rtos
+- openhaystack-zephyr-firmware
+- anjay-zephyr-client
+- sensilo-ble-sensor-node
+- nrf54l15-connect-kit
 ---
 
 ## Overview

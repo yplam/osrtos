@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- cmsis-drivers-for-efm32-and-stm32
+- spirit-motor-driver-library
+- supladevice-library
+- esp32-smartdisplay
+- microchip-cmsis-modules-for-arduino
+- stm32-cmsis-libraries
 ---
 
 ## Overview

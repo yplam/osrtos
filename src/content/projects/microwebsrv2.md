@@ -35,6 +35,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- microwebsrv
+- tinyweb
+- uht-micro-http-toolkit
+- raspberry-pi-pico-web-server-control
+- asyncwebserver-esp32-sc-enc
+- asyncwebserver-esp32-w5500
 ---
 
 MicroWebSrv2 is a high-performance, asynchronous web server designed specifically for the constraints of embedded systems. As a complete redesign of the original MicroWebSrv, this version focuses on scalability, robustness, and efficiency, making it an ideal choice for IoT applications running on MicroPython or CPython.

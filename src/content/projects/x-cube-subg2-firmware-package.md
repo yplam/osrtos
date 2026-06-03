@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32cuben6-mcu-firmware-package
+- x-cube-azrtos-wl-azure-rtos-software-expansion-for-stm32wl
+- x-cube-azrtos-h7-azure-rtos-software-expansion
+- x-cube-azrtos-wb-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-g4-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-g0-azure-rtos-software-expansion-for-stm32cube
 ---
 
 ## Overview

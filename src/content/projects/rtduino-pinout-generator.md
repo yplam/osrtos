@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtduino
+- arduino-cmsis-module
+- rt-thread-art-arduino-rt-thread
+- buildpkg
+- bl602-gpio-expander-for-apache-nuttx
+- arduino-freertos-library
 ---
 
 RTduino is a compatibility layer that allows the Arduino ecosystem to run on top of the RT-Thread RTOS. This bridge is powerful because it combines the ease of use of Arduino with the real-time capabilities and extensive middleware of RT-Thread. However, for this bridge to work, the system needs to know which physical pins on a specific microcontroller correspond to the standard Arduino pinout. This is where the **RTduino Pinout Generator** comes into play.

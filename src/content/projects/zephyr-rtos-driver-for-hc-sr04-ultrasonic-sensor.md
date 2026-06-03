@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- vl53l0x-tof-sensor-driver-for-rt-thread
+- zephyr-rtos-for-dwm1001
+- nrf-servo-driver-for-zephyr-rtos
+- hdc1000-sensor-driver-for-rt-thread
+- apache-nuttx-driver-for-bosch-bme280-sensor
+- ultrasonic-hc-sr04-test-for-mongoose-os
 ---
 
 ## Overview

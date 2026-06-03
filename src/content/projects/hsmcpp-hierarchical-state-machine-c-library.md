@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- freertos-modern-c-wrappers
+- supladevice-library
+- arduino-rt-thread-library
+- frt-fl-ssie-s-ready-freertos-threading
+- stateos-c-11
+- amast-minimalist-asynchronous-toolkit
 ---
 
 ## Overview

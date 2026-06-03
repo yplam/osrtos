@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pinetime-rs
+- pomia-rs
+- iv-11-vfd-tube-clock
+- rust-ir-thermometer-firmware
+- esphome-for-nixie2
+- elekstube-ips-custom-firmware
 ---
 
 ## Overview

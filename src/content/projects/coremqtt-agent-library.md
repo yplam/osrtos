@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- freertos-coremqtt-agent-demos
+- embeddedmqttbroker
+- bc28-mqtt-package-for-rt-thread
+- ppool-for-rt-thread
+- thing-simplified-mqtt-framework-for-esp8266-and-esp32
+- freertos-mqtt-client-demo
 ---
 
 Managing MQTT connections in a multi-threaded embedded environment can be complex. Developers often face challenges when multiple tasks need to publish messages or subscribe to topics simultaneously without corrupting the internal state of the MQTT stack. The **coreMQTT Agent library** is designed specifically to solve this problem by providing a thread-safe wrapper around the [coreMQTT](https://github.com/FreeRTOS/coreMQTT) library.

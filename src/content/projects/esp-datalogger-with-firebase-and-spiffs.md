@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp32-webserver-with-firebase-integration
+- meindatalogger
+- spiffslogger
+- esp8266-dht22-spiffs-web-server
+- esp8266-web-server-and-spiffs-integration
+- iot-esp8266-serial-forwarder
 ---
 
 The ESP-Datalogger is a versatile proof-of-concept project designed for the ESP8266 microcontroller. It serves as a comprehensive solution for logging data both locally and to the cloud, providing a robust framework for monitoring environmental sensors or system performance metrics.

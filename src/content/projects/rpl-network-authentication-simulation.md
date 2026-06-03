@@ -18,6 +18,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- coap-eap-with-eap-noob-in-contiki
+- home-automation-simulation-using-contiki-os
+- cybersecurity-tinyos-encryption
+- computer-network-with-contiki-ng
+- msf-protocol-simulation-for-contiki-ng
+- crypto-implementations-example-for-contiki-os
 ---
 
 The **RPL Network Authentication Simulation** is a specialized project designed to model a secure Internet of Things (IoT) infrastructure within a healthcare context. Built on top of the **Contiki-OS** and simulated using the **Cooja** environment, this project addresses the critical need for security in 6LoWPAN networks, specifically focusing on protecting hospital data from common wireless threats.

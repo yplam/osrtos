@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-21'
 updatedAt: '2026-01-21'
+relatedProjects:
+- image-converter-for-lvgl
+- micropython-ssd1306-image-display
+- lvgl-utilities
+- lvgl-offline-image-conversion-tool
+- displaykit
+- image-converter-ultra-icu
 ---
 
 PixelForge serves as a specialized utility for embedded developers working with graphical displays. Converting standard image formats like PNG or JPG into the specific byte arrays required by microcontrollers can often be a tedious manual process involving external scripts or complex command-line tools. PixelForge simplifies this workflow by providing a fast, browser-based interface that runs entirely client-side.

@@ -19,6 +19,13 @@ isShow: true
 image: /202601/paperlesspaper.webp
 createdAt: '2026-01-26'
 updatedAt: '2026-01-26'
+relatedProjects:
+- esp-e-paper-component
+- 7-color-e-paper-digital-photo-frame
+- bitclock
+- readmepaper-esp32-7-color-e-paper-display-project
+- open-display-firmware
+- e-paper-climate-logger-weathergotchi
 ---
 
 The Paperlesspaper project provides a comprehensive open-hardware solution for building a high-quality e-Paper photo frame. Unlike traditional monochrome or limited-color e-ink screens, this design leverages the Spectra 6 color EInk display, which offers a significantly broader and more vibrant color gamut, making it ideal for displaying digital art and photography in a physical frame.

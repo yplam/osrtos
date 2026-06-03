@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- freertos-port-for-teensy-3-6-4-0-4-1
+- zephyr-wi-fi-and-tcp-udp-connection-demo
+- stm32l476g-discovery-rtos-sensor-project
+- lvgl-demo-embarcadores
+- zephyr-stm32-spi-example
+- mender-ota-example-for-stm32l4-and-zephyr-rtos
 ---
 
 ## Overview

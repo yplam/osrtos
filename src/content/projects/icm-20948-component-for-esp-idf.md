@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-21'
 updatedAt: '2026-01-21'
+relatedProjects:
+- mpu6050-interfacing-library-for-esp32-esp-idf
+- esp32-i2c-mpu6050-driver
+- esp32-s3-esp-idf-components-library
+- micropython-mpu-9250-i2c-driver
+- axp2101-pmic-driver-for-esp-idf
+- apache-nuttx-driver-for-bosch-bme280-sensor
 ---
 
 The ICM-20948 is a highly integrated 9-axis Inertial Measurement Unit (IMU) from TDK InvenSense, combining a 3-axis gyroscope, 3-axis accelerometer, and a 3-axis compass. This project provides a dedicated component for the ESP-IDF framework, allowing developers to easily integrate this powerful sensor into ESP32-based robotics and IoT applications.

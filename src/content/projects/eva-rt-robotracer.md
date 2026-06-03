@@ -19,6 +19,13 @@ isShow: true
 image: /202601/EVA-RT_01.webp
 createdAt: '2026-01-15'
 updatedAt: '2026-01-15'
+relatedProjects:
+- cuybot-v1-opensource-smartcar-project
+- 16-ir-array-pid-line-follower-robot-using-esp32
+- human-following-robot
+- taproot
+- actonator-3d-printable-robot-actuator
+- openrover-robotic-platform
 ---
 
 ## Overview

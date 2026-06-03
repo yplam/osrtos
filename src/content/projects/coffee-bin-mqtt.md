@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- mongoose-os-esp8266-pir-monitor
+- esp-temperature-to-losant-using-mongoose-os
+- losant-temperature-sensor-for-mongoose-os
+- mqtt-wake-on-lan-for-esp8266
+- mqtt-message-display-for-ssd1306
+- leilei-mongoose-os-sensing-device
 ---
 
 Coffee-Bin MQTT is a specialized IoT sensor project designed to bring smart monitoring to coffee machines. Built around the popular ESP8266 (specifically the ESP12F module), this project provides a robust way to track the fill status of coffee bins and signal when maintenance is required, all via the MQTT protocol.

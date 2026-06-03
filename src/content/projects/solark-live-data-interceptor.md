@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-03-31T23:31:34+00:00'
 updatedAt: '2026-03-31T23:31:34+00:00'
+relatedProjects:
+- esphome-deye-inverter
+- ginlong-solis-solar-inverter-modbus-integration
+- dtugateway-for-hoymiles-hms-inverters
+- esp32-remote-for-victron
+- iot-esp8266-serial-forwarder
+- marstek-venus-e-esphome-integration
 ---
 
 Monitoring solar energy systems often involves a trade-off between convenience and data granularity. While manufacturers like SolArk provide cloud-based monitoring, these platforms frequently suffer from update delays and coarse resolution. The SolArk Live Data Interceptor project addresses this by tapping directly into the serial communication stream between the inverter and its official WiFi dongle.

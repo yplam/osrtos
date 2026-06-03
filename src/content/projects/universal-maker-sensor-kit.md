@@ -23,6 +23,13 @@ topics:
 isShow: true
 createdAt: '2026-04-05T01:03:55+00:00'
 updatedAt: '2026-04-05T01:03:55+00:00'
+relatedProjects:
+- seeed-studio-xiao-esp32-project-collection
+- oficina-de-circuitpython
+- that-project
+- e-yantra-iot-workshop
+- mbot2-and-cyberpi-programming-examples
+- super-mini-esp32-c3-arduino-and-platformio-sketches
 ---
 
 The SunFounder Universal Maker Sensor Kit is a versatile educational ecosystem designed to bridge the gap between basic electronics and complex IoT applications. Aimed at students, hobbyists, and makers, this repository provides the firmware and logic required to interface with a vast array of components included in the kit. From simple digital inputs like buttons and touch sensors to sophisticated I2C and SPI-based modules like the MPU6050 accelerometer and the MAX30102 heart rate sensor, the project serves as a comprehensive library of implementations for modern microcontrollers.

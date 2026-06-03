@@ -17,6 +17,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- arm-dwt-c-library
+- iir-designer-for-cmsis-dsp
+- pico-fft-fft-library-for-raspberry-pi-pico
+- dsp-from-ground-up-on-arm-processors-and-python
+- iir-filter-coefficient-generator-for-cmsis-dsp
+- qfplib-m3-floating-point-library
 ---
 
 ## Bringing the Hilbert Transform to ARM Cortex-M

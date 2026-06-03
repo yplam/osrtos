@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- pikapython
+- micropython-and-lvgl-firmware-for-esp32
+- semito-v-micropython-compatibility-layer-mcl
+- esp32-p4-jit-dynamic-code-loading-system
+- pycopy
+- jupyter-micropython-kernel
 ---
 
 ## Overview

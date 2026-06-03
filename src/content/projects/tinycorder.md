@@ -24,6 +24,13 @@ isShow: true
 image: /202601/Tinycorder.webp
 createdAt: '2026-01-15'
 updatedAt: '2026-01-15'
+relatedProjects:
+- xiao-debug-mate
+- lumen
+- stm32-pocket-game-dev-console
+- wardriver3000
+- e-paper-climate-logger-weathergotchi
+- tinycore-esp32-s3-learning-platform
 ---
 
 ## Overview

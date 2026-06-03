@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-03-31T23:28:24+00:00'
 updatedAt: '2026-03-31T23:28:24+00:00'
+relatedProjects:
+- esp32-sram-puf-authentication
+- esp32-mfa-authenticator
+- open-authenticator-app
+- securegen
+- opensk
+- toothpaste
 ---
 
 Hardware security keys are a cornerstone of modern multi-factor authentication (MFA), providing a physical layer of protection against phishing and unauthorized access. The esp32_u2f project brings this capability to the versatile and affordable ESP32 platform, specifically targeting chips with native USB-OTG support like the ESP32-S2 and ESP32-S3. By utilizing this project, developers can turn standard development boards into functional security tokens.

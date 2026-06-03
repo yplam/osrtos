@@ -27,6 +27,13 @@ topics:
 isShow: true
 createdAt: '2026-05-25T00:17:20+00:00'
 updatedAt: '2026-05-25T00:17:20+00:00'
+relatedProjects:
+- pico-ttl2vga
+- hub75-dma-based-driver-for-raspberry-pi-pico
+- msx1-emulator-for-raspberry-pi-pico
+- kompressorklock
+- lvgl-for-raspberry-pi-pico-hub75-led-matrix
+- picoave
 ---
 
 ## Pushing 8-Bit Hardware to the Limit

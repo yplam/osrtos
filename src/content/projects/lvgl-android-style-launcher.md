@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- m5pi-launcher
+- tab5-launcher
+- lvgl-for-android
+- 100ask-linux-lvgl-desktop
+- lvgl-demo-embarcadores
+- lvgl-port-for-raspberry-pi-pico-mdk-arm
 ---
 
 ## Overview

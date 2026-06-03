@@ -27,6 +27,13 @@ isShow: true
 image: /202601/esphome-hlink.webp
 createdAt: '2026-01-24'
 updatedAt: '2026-01-24'
+relatedProjects:
+- esphome-components-for-miot-devices
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- esphome-cosori-kettle-ble-component
+- esphome-ikea-vindriktning
+- ac-control
+- mel-ac-library-for-mongoose-os
 ---
 
 ## Overview

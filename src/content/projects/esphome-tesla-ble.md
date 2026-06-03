@@ -27,6 +27,13 @@ topics:
 isShow: true
 createdAt: '2026-04-08T23:47:44+00:00'
 updatedAt: '2026-04-08T23:47:44+00:00'
+relatedProjects:
+- esphome-cosori-kettle-ble-component
+- esp32-ble-ota-arduino
+- hunter-douglas-powerview-ble-for-home-assistant
+- m5stack-atoms3-nanoc6-btproxy
+- esp32-dynamic-iphone-keyless-system
+- esp32-ble-uart-mx
 ---
 
 ESPHome Tesla BLE provides a specialized integration for ESP32 devices to interface with Tesla vehicles via Bluetooth Low Energy (BLE). By utilizing the ESPHome framework, the project transforms hardware like the M5Stack NanoC6 into a dedicated vehicle controller capable of managing charging states and retrieving real-time diagnostics without relying on the Tesla Fleet API.

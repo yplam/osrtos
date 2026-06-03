@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- smart-plant-monitoring-system
+- esphome-plant-watering
+- lilygo-higrow-esp32-plant-monitoring-sensor-firmware-hardware-v1
+- lilygo-higrow-esp32-plant-monitoring-sensor-firmware
+- smart-farming-iot-system
+- chronothermostat-an-aws-powered-iot-climate-control-system
 ---
 
 ## Overview

@@ -28,6 +28,13 @@ isShow: true
 image: /202512/flowshutter.webp
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp32-cam-micropython
+- micropython-camera-driver-for-esp32
+- micropython-camera-api-for-esp32
+- esp32-cam-mcp-server
+- upycam
+- esp32cam-pir-mqtt-spiffs-webserver
 ---
 
 Flowshutter is an open-source camera remote and motion logging solution designed to integrate seamlessly with the Gyroflow stabilization ecosystem. By providing a bridge between professional cameras and flight controller (FC) hardware, Flowshutter ensures that motion data is precisely synchronized with video recordings, a critical requirement for high-quality post-process stabilization.

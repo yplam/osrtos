@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-02-09'
 updatedAt: '2026-02-09'
+relatedProjects:
+- openthread-rtos
+- seeed-home-assistant-discovery
+- shelly-to-haa-firmware-converter
+- nrf-connect-sdk-build-docker-environment
+- esp32-p4-home-assistant-display
+- cloudhome-firmware
 ---
 
 ## Overview

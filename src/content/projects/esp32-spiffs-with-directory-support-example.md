@@ -17,6 +17,13 @@ star: 73
 lastUpdated: '2018-06-07'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp32-spiffs-image-generation-example
+- esp32-fatfs-image-tool-and-example
+- esp32-fatfs-storage-example
+- stm32-fatfs-and-freertos-integration
+- esp32-asyncwebserver-file-upload-example
+- esp32-monaco-editor-spiffs
 ---
 
 While the standard **esp-idf** framework provides robust support for the SPIFFS (SPI Flash File System), it historically lacked native directory support. The **ESP32_spiffs_example** by loboris addresses this gap by providing a modified version of the SPIFFS VFS driver, enabling developers to use standard directory functions like `mkdir()` and `rmdir()` on their ESP32 devices.

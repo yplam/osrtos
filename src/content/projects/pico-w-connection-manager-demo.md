@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- wifimanager-rp2040w-lite
+- wifimanager-rp2040w
+- ble-based-wi-fi-provisioning-for-raspberry-pi-pico-w-pico-2-w
+- esp32-web-server-using-spiffs
+- rtkrovermanager
+- esp8266-web-server-and-spiffs-integration
 ---
 
 ## Overview

@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- smalltv-pro-esp-idf-sample-project
+- rp2040-lvgl-8-demo-with-ili9488-and-xpt2046
+- lvgl-barebones-example-for-sunton-esp32-2432s028r
+- lilygo-t-display-s3-boilerplate
+- jc3248w535-lvgl-v9-test-project
+- jc4827w543-lvgl-v9-implementation
 ---
 
 ## Overview

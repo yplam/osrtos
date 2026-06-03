@@ -17,6 +17,13 @@ isShow: true
 image: /202601/render3.webp
 createdAt: '2026-01-23'
 updatedAt: '2026-01-23'
+relatedProjects:
+- esp32-s3-usb-to-ble-keyboard-bridge
+- pico-cec
+- hd2-macropad
+- 42-smart-cluster-sign
+- t-hmi-c64-emulator
+- m5-keyboard-and-mouse-emulator
 ---
 
 ## Overview

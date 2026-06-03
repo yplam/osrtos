@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lpc43xx-freertos-led-blinking-example
+- rt-thread-thread-pool-implementation
+- rtic-blinky-for-nrf52840
+- simple-cmsis-led-blinking-applications
+- ppool-for-rt-thread
+- fastled-idf
 ---
 
 ## Overview

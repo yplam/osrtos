@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- edgeai-utensor-embedded-rtos-for-arm-processors
+- utensor-mnist-handwriting-recognition-demo
+- edge-ai-on-embedded-linux-i-mx-8m-plus
+- yolov26n-optimized-qat-deployment-on-esp32-p4
+- fashion-mnist-on-esp32-with-tensorflow-lite-micro
+- magic-wand-on-mbed
 ---
 
 ## Overview

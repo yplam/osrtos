@@ -34,6 +34,13 @@ topics:
 isShow: true
 createdAt: '2026-04-26T05:28:18+00:00'
 updatedAt: '2026-04-26T05:28:18+00:00'
+relatedProjects:
+- vfo-esp32-si5351
+- espri-esp-radio-interface
+- esp32-ble-uart-mx
+- usb-keyboard-and-mouse-bluetooth-adapter-esp32
+- tonex-one-controller
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
 ---
 
 ### Enhancing the IC-705 for Microwave Operation

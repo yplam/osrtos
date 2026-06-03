@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-03-31T13:11:03+00:00'
 updatedAt: '2026-03-31T13:11:03+00:00'
+relatedProjects:
+- energy-consumption-monitor
+- zigbee-gas-counter
+- lixee-box
+- energy-consumption-monitor-energymon-c
+- esp32-remote-for-victron
+- marstek-venus-e-esphome-integration
 ---
 
 ## Comprehensive Home Energy Monitoring

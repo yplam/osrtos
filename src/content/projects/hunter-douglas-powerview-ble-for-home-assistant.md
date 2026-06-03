@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-04-02T11:54:51+00:00'
 updatedAt: '2026-04-02T11:54:51+00:00'
+relatedProjects:
+- esp32-mqtt-motor-control
+- esphome-tesla-ble
+- seeed-home-assistant-discovery
+- esphome-cosori-kettle-ble-component
+- esp32-c6-matter-over-thread-roof-window-controller
+- m5stack-atoms3-nanoc6-btproxy
 ---
 
 Integrating smart window treatments into a local automation ecosystem can often be a challenge due to proprietary protocols and encryption. The `hdpv_ble` project addresses this for Hunter Douglas PowerView Gen 3 devices, providing a robust Home Assistant integration that communicates directly over Bluetooth Low Energy (BLE). By moving away from cloud-dependent APIs, users gain faster response times and improved privacy for their motorized shades.

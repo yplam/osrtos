@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32l475-pandora-board-bsp-for-rt-thread
+- rt-thread-bsp-for-stm32f407vet6
+- stm32l475-freertos-iot-project
+- micropython-for-pandora-iot-board
+- b-l475e-iot01a-discovery-board-support-crate
+- rt-thread-bsp-for-mh1903x
 ---
 
 ## Overview

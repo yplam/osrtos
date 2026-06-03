@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-c-binding
+- lvglpp-a-c-wrapper-for-lvgl
+- eclipse-simulator-for-lvgl-using-sdl
+- lvgl-emscripten-port
+- lvgl-micropython-bindings
+- lvgl-rust-bindings
 ---
 
 ## Overview

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pmsxx-sensor-driver-for-rt-thread
+- hdc1000-sensor-driver-for-rt-thread
+- bme680-sensor-package-for-rt-thread
+- ccs811-digital-gas-sensor-driver-for-rt-thread
+- tmp1075-temperature-sensor-driver-for-rt-thread
+- sgp30-gas-sensor-driver-for-rt-thread
 ---
 
 The `rtt-dhtxx` package is a dedicated driver for the DHTxx series of digital humidity and temperature sensors, designed specifically for the RT-Thread real-time operating system. These sensors, which include popular models like the DHT11, DHT12, DHT21, and DHT22, utilize a single-bus (one-wire) communication protocol to provide environmental data to microcontrollers.

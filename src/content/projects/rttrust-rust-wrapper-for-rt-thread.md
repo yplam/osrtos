@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rust-support-for-rt-thread
+- freertos-rust
+- b-l475e-iot01a-discovery-board-support-crate
+- selfe-sys-rust-bindings-for-sel4
+- freertos-wrapper-for-rt-thread
+- ferros
 ---
 
 ## Overview

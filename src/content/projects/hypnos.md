@@ -20,6 +20,13 @@ isShow: true
 image: /202601/watch_photo.webp
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pinetime-zephyr-firmware
+- zephyrwatch
+- infinitime
+- bosmoment-pinetime-firmware-applications
+- wasp-os
+- opentimewatch-os
 ---
 
 ## Overview

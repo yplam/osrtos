@@ -17,6 +17,13 @@ star: 1
 lastUpdated: '2020-05-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- mongoose-os-app-skeleton
+- mongoose-os-library-skeleton
+- uart-out-test-app
+- mongoose-os-app-on-stm32f446re
+- websocket-client-for-mongoose-os
+- mongoose-os-cron-app-skeleton
 ---
 
 ## A Clean Slate for IoT Development

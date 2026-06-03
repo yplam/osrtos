@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- arduino-littlefs-spimemory-wrapper
+- esp8266-littlefs-file-handler
+- sd-card-spi-fatfs-for-esp8266-nonos-sdk
+- avr-spiffs
+- effortless-spiffs
+- easyini
 ---
 
 The `esp8266_spiffs` project provides a dedicated implementation of the SPI Flash File System (SPIFFS) tailored for the ESP8266 platform using the official NON-OS SDK. Originally forked from the widely-used SPIFFS project by Peter Andersson, this version has been specifically customized to operate within the constraints and requirements of the ESP8266's bare-metal environment without requiring additional dependencies.

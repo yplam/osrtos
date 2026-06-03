@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- losant-temperature-sensor-for-mongoose-os
+- mongoose-os-esp8266-pir-monitor
+- esp-temperature-to-losant-using-mongoose-os
+- mongoose-os-environment-logger
+- coffee-bin-mqtt
+- esp8266-mlx90614-temperature-monitor
 ---
 
 # Ultra-Low Power Temperature Logging with ESP8266

@@ -21,6 +21,13 @@ star: 29
 lastUpdated: '2020-04-03'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- mongoose-os-environment-logger
+- lorawan-end-device-with-freertos-and-esp32
+- lilygo-higrow-esp32-plant-monitoring-sensor-firmware-hardware-v1
+- bresserweathersensorlw
+- losant-temperature-sensor-for-mongoose-os
+- apache-mynewt-sensor-network-for-stm32-blue-pill
 ---
 
 The **ESP32-Ruuvitag-Collector** is a specialized firmware for the ESP32 microcontroller designed to bridge the gap between Ruuvitag Bluetooth Low Energy (BLE) sensors and modern data platforms like InfluxDB and Home Assistant. Ruuvitags are popular open-source environmental sensors that broadcast temperature, humidity, and pressure data via BLE. This project allows users to gather that data efficiently, even in remote locations or battery-powered setups.

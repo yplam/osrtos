@@ -36,6 +36,13 @@ isShow: true
 image: /202602/usbsid-pico.webp
 createdAt: '2026-02-27'
 updatedAt: '2026-02-27'
+relatedProjects:
+- pc-6001mkii-emulator-for-raspberry-pi-pico
+- midi2piousbhub
+- msx1-emulator-for-raspberry-pi-pico
+- ultranet-to-i2s
+- pico2dexed
+- digital-synth-pra32-u2
 ---
 
 USBSID-Pico is a versatile interface board designed to bring the iconic sound of the Commodore 64's MOS SID chip to modern computing environments. By leveraging the power of the Raspberry Pi Pico (RP2040) and the newer Pico 2 (RP2350), this project allows users to connect real SID hardware or modern emulators to computers, phones, and MIDI controllers via USB.

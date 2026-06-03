@@ -29,6 +29,13 @@ topics:
 isShow: true
 createdAt: '2026-04-25T13:38:23+00:00'
 updatedAt: '2026-04-25T13:38:23+00:00'
+relatedProjects:
+- smart-farming-iot-system
+- smart-plant-monitoring-system
+- espmonitor-iot-environment-monitoring-system
+- room-control-system
+- smart-orchard
+- espmonitor-iot-environmental-monitoring-system
 ---
 
 HydroponicOne is an open-source IoT control system designed for the precise monitoring and automation of hydroponic environments. It aims to bridge the gap between basic DIY setups and industrial automation by integrating high-precision sensor data with a modern web-based management stack. The project provides a complete ecosystem for tracking essential parameters like pH, electrical conductivity (EC), water levels, and climate conditions.

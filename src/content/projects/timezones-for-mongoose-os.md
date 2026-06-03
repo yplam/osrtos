@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- timezone-generic-library
+- ds3231-rtc-driver-for-mongoose-os
+- adafruit-e-paper-e-ink-library-for-mongoose-os
+- common-tools-for-mongoose-os
+- c-clk-for-rt-thread
+- ltc68xx-battery-monitoring-library-for-mongoose-os
 ---
 
 ## Overview

@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- littlefs-portenta-h7-library
+- fs-nano33ble
+- littlefs-mbed-rp2040
+- 107-arduino-littlefs
+- sqlite3-for-esp-idf
+- esp32-fatfs-storage-example
 ---
 
 ## Overview

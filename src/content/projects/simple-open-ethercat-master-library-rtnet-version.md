@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- soem-w5500-ethercat-master-for-raspberry-pi
+- real-time-spi-on-xenomai-3
+- canfestival-rtt
+- xenomai-3-for-raspberry-pi-2-and-3
+- xenomai-3-for-raspberry-pi-0-1-linux-kernel-4-1-21
+- flexptp
 ---
 
 ## Overview

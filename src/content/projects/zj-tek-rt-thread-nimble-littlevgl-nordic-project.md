@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zephyr-lvgl-sample-for-nrf52840-mdk
+- zj-ble-rt-thread-and-nimble-for-nordic-nrf52
+- lvgl-demo-embarcadores
+- zj-sdk-rt-thread-for-nordic-nrf52840
+- zig-lvgl-touchscreen-app-on-apache-nuttx-rtos
+- stm32l476g-discovery-rtos-sensor-project
 ---
 
 ## Overview

@@ -17,6 +17,13 @@ isShow: true
 image: /202603/gateway-smartwatch.webp
 createdAt: '2026-03-02'
 updatedAt: '2026-03-02'
+relatedProjects:
+- zswatch
+- leta
+- dt78-esp32-firmware
+- watchx-open-source-smartwatch
+- opentimewatch-os
+- ov-watch
 ---
 
 The Gateway Smartwatch is a sophisticated open-source wearable platform designed to serve as a portable sensor hub. Built around the powerful ESP32-S3-MINI-1 module, it provides high-performance processing and wireless connectivity in a compact form factor suitable for daily wear.

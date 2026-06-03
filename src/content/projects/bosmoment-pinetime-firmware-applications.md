@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- infinitime
+- pinetime-zephyr-firmware
+- hypnos
+- pinetime-rs
+- wasp-os
+- zephyrwatch
 ---
 
 ## Overview

@@ -22,6 +22,13 @@ star: 2
 lastUpdated: '2019-04-18'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- tock-os-docker-image
+- nuttx-development-docker-environment
+- swedish-embedded-workstation
+- nrf-connect-sdk-docker-environment
+- sel4-camkes-and-l4v-docker-build-environments
+- docker-containers-for-the-zephyr-rtos
 ---
 
 Setting up a development environment for embedded systems often involves a complex dance of toolchains, dependencies, and cross-compilation configurations. The **ARTIK Developer Environment Docker** project simplifies this process for developers working with Samsung ARTIK modules by providing a ready-to-use containerized workspace. Whether you are building real-time applications for the ARTIK-05x series or full Linux distributions for the ARTIK 530/710, this environment has you covered.

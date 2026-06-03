@@ -28,6 +28,13 @@ topics:
 isShow: true
 createdAt: '2026-04-25T13:50:24+00:00'
 updatedAt: '2026-04-25T13:50:24+00:00'
+relatedProjects:
+- iot-project-on-hvac
+- smart-plant-monitoring-system
+- rcs-avr-relay-control-system-with-sms
+- bathos
+- chronothermostat-an-aws-powered-iot-climate-control-system
+- precius-precision-cooking-and-home-kitchen-automation
 ---
 
 The Fully Automated Egg Incubator is a specialized microcontroller-based system designed to regulate the delicate environmental conditions required for successful bird egg hatching. Built around the ATmega328P microcontroller, the system automates the regulation of temperature, humidity, and periodic egg rotation—three critical factors that ensure proper embryonic development.

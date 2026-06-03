@@ -33,6 +33,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- webserver-esp32-enc
+- webserver-esp32-w5500
+- embedmcp-embedded-mcp-server-library
+- embeddedmqttbroker
+- nanofish
+- lwirax
 ---
 
 ## Overview

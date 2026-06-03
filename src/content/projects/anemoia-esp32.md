@@ -23,6 +23,13 @@ isShow: true
 image: /202601/anemoia.webp
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- anemoia-esp32-nes-emulator
+- esp32-s3-nes-emulator
+- picopeanutgb-game-boy-emulator-for-rp2350
+- pixelroot32-game-engine
+- cardputer-game-station
+- pico-smsplus-sega-master-system-and-game-gear-emulator
 ---
 
 ## Overview

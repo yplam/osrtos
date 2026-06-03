@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-04-02T23:25:26+00:00'
 updatedAt: '2026-04-02T23:25:26+00:00'
+relatedProjects:
+- xiaomi-cybergear-arduino-library
+- micro-ros-module-for-zephyr
+- spirit-motor-driver-library
+- micro-ros-stm32-template
+- micro-ros-for-rt-thread
+- roarm-m2-robotic-arm-control-firmware
 ---
 
 ## Package Summary

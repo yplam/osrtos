@@ -18,6 +18,13 @@ isShow: true
 image: /202512/Arduino-Lab4MPy-screenshot.webp
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- micro-repl
+- jupyter-micropython-kernel
+- mu-a-simple-python-code-editor
+- micropico-visual-studio-code-extension
+- esp32-mpy-jama
+- micropython-plugin-for-pycharm-and-intellij
 ---
 
 ## Overview

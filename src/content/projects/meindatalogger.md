@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- esp-datalogger-with-firebase-and-spiffs
+- spiffslogger
+- hommie-logger
+- mongoose-os-environment-logger
+- esp32-webserver-with-firebase-integration
+- esp8266-config-data-management
 ---
 
 ## Overview

@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- micropython-encoder-menu
+- micropython-stm-lib
+- drv8833-micropython-driver
+- micropython-samples-and-drivers
+- st7789-driver-for-micropython
+- micropython-st7735-tft-lcd-driver
 ---
 
 ## Overview

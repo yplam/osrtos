@@ -31,6 +31,13 @@ isShow: true
 image: /boards/pico2.webp
 createdAt: '2026-04-28T23:53:54+00:00'
 updatedAt: '2026-04-28T23:53:54+00:00'
+relatedProjects:
+- picosound-audio-library-for-rp2040
+- esp32-rtspserver
+- arduino-pico
+- esp32-custom-hardware-synthesizer
+- esp32-64-band-audio-spectrum-analyser
+- esp32-host-midi
 ---
 
 Playing audio on a microcontroller often presents a classic scheduling challenge: how do you decode complex formats like MP3 or HE-AAC while simultaneously managing a web server, handling user input, or reading from an SD card? BackgroundAudio is a high-performance Arduino library designed to solve this by moving the heavy lifting of audio decoding and output into the background.

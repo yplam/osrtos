@@ -22,6 +22,13 @@ isShow: true
 image: /202603/terminal.webp
 createdAt: '2026-03-22'
 updatedAt: '2026-03-22'
+relatedProjects:
+- bbmonitor
+- micropython-library-for-the-cheap-yellow-display-cyd
+- tibber-price-e-ink-display
+- smalltv-pro-esp-idf-sample-project
+- esp32-remote-for-victron
+- esp32-marauder-for-cheap-yellow-display-cyd
 ---
 
 ## Overview

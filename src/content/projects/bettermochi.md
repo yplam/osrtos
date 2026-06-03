@@ -27,6 +27,13 @@ isShow: true
 image: /202602/better-mochi.webp
 createdAt: '2026-02-28'
 updatedAt: '2026-02-28'
+relatedProjects:
+- chronos-watchy
+- elekstube-ips-custom-firmware
+- geek-magic-firmware
+- dt78-esp32-firmware
+- lvgl-watch-firmware-for-open-smartwatch
+- twatch-v3-firmware-for-esp32
 ---
 
 ## Overview

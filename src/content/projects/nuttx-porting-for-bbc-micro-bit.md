@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- cmsis-rtos-on-micro-bit
+- micropython-for-the-bbc-micro-bit
+- stm32-m-nuttx-custom-board-mod
+- apache-nuttx-rtos-for-pine64-star64
+- nuttx-rtos-experiments
+- arm-kl25z-mbed-ide-example-programs
 ---
 
 ## Overview

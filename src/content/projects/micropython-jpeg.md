@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-04-19T23:04:34+00:00'
 updatedAt: '2026-04-19T23:04:34+00:00'
+relatedProjects:
+- micropython-camera-driver-for-esp32
+- sjpg-decoder-for-lvgl
+- micropython-camera-api-for-esp32
+- esp32-cam-micropython
+- esp32-mjpeg-multiclient-streaming-server
+- micropython-for-esp32-with-psram-support-lobo-port
 ---
 
 Processing high-resolution images on microcontrollers has traditionally been a challenge due to limited RAM and processing power. MicroPython JPEG addresses this by providing a dedicated C-based module for MicroPython that focuses on speed and memory efficiency. Primarily targeting the ESP32 port, this module enables developers to handle JPEG decoding and encoding tasks with performance levels that rival native applications.

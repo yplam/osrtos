@@ -19,6 +19,13 @@ star: 18
 lastUpdated: '2022-11-28'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esp-scope
+- m5cardputer-audio-spectrum-display
+- esp32-64-band-audio-spectrum-analyser
+- oscilloscope-rp2040
+- esp-can-analyzer
+- esp32-remote-control-with-websocket
 ---
 
 ESP32WebScope is an integrated tool designed for the ESP32 platform that transforms a single microcontroller into a functional low-frequency oscilloscope and waveform generator. By leveraging the dual-core architecture of the ESP32, the project manages to handle high-speed data acquisition and web-based communication simultaneously without significant performance degradation.

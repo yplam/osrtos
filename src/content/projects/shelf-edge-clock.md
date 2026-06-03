@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- 7-segment-clock
+- esp32-weatherstationrtc
+- elekstube-ips-custom-firmware
+- sanjin-intelligent-mechanical-clock
+- esptimecast
+- desk-weather-clock-geekmagic-s3
 ---
 
 ## Overview

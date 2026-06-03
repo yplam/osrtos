@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- transfer-files-over-ethernet-with-stm32-and-freertos
+- ftp-server-with-littlefs-for-wfi32-iot-board
+- stm32f429-nucleo-lwip-and-freertos-template
+- multiftpserver-library
+- udp-echo-server-for-stm32f407-and-enc28j60
+- stm32h745-ethernet-with-lwip-and-freertos
 ---
 
 ## Overview

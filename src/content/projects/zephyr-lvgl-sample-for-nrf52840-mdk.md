@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
+- smalltv-pro-esp-idf-sample-project
+- zj-tek-rt-thread-nimble-littlevgl-nordic-project
+- lvgl-demo-embarcadores
+- zig-lvgl-touchscreen-app-on-apache-nuttx-rtos
+- lvgl-test-app-for-apache-nuttx
 ---
 
 ## Overview

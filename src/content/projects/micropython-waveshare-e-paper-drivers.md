@@ -20,6 +20,13 @@ isShow: true
 image: /202512/waveshare-epaper.webp
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- lvgl-display-and-touchpad-drivers-for-esp32
+- adafruit-e-paper-e-ink-library-for-mongoose-os
+- micropython-st7789-lcd-driver
+- micropython-st7735-tft-lcd-driver
+- st7789-driver-for-micropython
+- micropython-samples-and-drivers
 ---
 
 The MicroPython Waveshare e-Paper project provides a comprehensive suite of drivers for the popular Waveshare e-Ink display modules. Based on the original Raspberry Pi examples provided by Waveshare, this repository enables MicroPython developers to easily integrate low-power, high-contrast displays into their embedded projects.

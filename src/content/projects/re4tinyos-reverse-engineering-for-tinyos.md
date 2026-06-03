@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- dsml4tinyos-a-domain-specific-language-for-tinyos
+- compass-multihop-framework-for-tinyos
+- cse160-network-protocols-project-skeleton
+- snu-2d-programming-tools-ide-for-nesc
+- tinyos-nesc-telosb-programs
+- rbo-protocol-simulation-for-tinyos
 ---
 
 RE4TinyOS (Reverse Engineering for TinyOS) is a specialized framework designed to bridge the gap between low-level TinyOS application code and high-level architectural models. Developed as part of a master's thesis on model-driven round-trip engineering, this project provides tools to analyze, interpret, and model applications built for the TinyOS operating system.

@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- fel4-test-project
+- lvgl-demo-test
+- lvgl-test-app-for-apache-nuttx
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
+- sel4-kernel-101
+- jc3248w535-lvgl-v9-test-project
 ---
 
 ## Overview

@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-04-01T01:32:03+00:00'
 updatedAt: '2026-04-01T01:32:03+00:00'
+relatedProjects:
+- fwrisc-featherweight-risc-v-core
+- treecore-cpu-a-series-of-risc-v-processors
+- level-risc-v
+- rt-thread-for-picorv32-on-lichee-tang
+- freertos-port-for-risc-v
+- wireguard-fpga
 ---
 
 FazyRV represents a unique approach to RISC-V processor design, specifically targeting environments where silicon real estate or FPGA resource consumption is the primary constraint. Unlike standard 32-bit processors that process full words in a single cycle, FazyRV utilizes a scalable data path that allows developers to precisely navigate the trade-off between performance and area.

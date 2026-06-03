@@ -22,6 +22,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- pinetime-rs
+- bosmoment-pinetime-firmware-applications
+- infinitime
+- zephyrwatch
+- pinetime-zephyr-firmware
+- hypnos
 ---
 
 The PineTime smartwatch has become a favorite playground for embedded developers, particularly those interested in the intersection of Rust and real-time operating systems. The **barebones-watchface** project provides a clean, minimalist starting point for developers looking to build their own custom interfaces for the PineTime using the Apache Mynewt RTOS and the LVGL graphics library.

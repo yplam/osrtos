@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- rauk-rtic-analysis-using-klee
+- zview-zephyr-rtos-runtime-visualizer
+- stm32-rtic-project-template
+- pico-rtic-template
+- b-l475e-iot01a-discovery-board-support-crate
+- rttrust-rust-wrapper-for-rt-thread
 ---
 
 Debugging real-time systems often presents a paradox: the act of observing the system can change its behavior. Traditional logging methods, such as printing over UART, introduce significant latency and CPU overhead that can mask race conditions or cause missed deadlines. **RTIC Scope** solves this by providing a non-intrusive, zero-cost tracing toolset specifically designed for the [RTIC (Real-Time Interrupt-driven Concurrency)](https://rtic.rs) framework.

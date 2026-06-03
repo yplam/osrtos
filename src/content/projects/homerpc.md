@@ -19,6 +19,13 @@ topics:
 isShow: true
 createdAt: '2026-03-31'
 updatedAt: '2026-03-31'
+relatedProjects:
+- microhomie
+- micropython-smarthome-node-pysmartnode
+- esp8266-rtos-homekit-accessory
+- iot-framework-for-nodemcu
+- openrouter-esp-idf-client
+- room-control-system
 ---
 
 HomeRPC is a specialized Remote Procedure Call (RPC) framework tailored for the unique demands of smart home ecosystems. Developed primarily for the ESP32 microcontroller, it leverages the power of FreeRTOS and the ESP-IDF framework to provide a lightweight, efficient, and scalable solution for controlling hardware remotely. While many RPC frameworks are designed for high-performance servers, HomeRPC focuses on the constraints of embedded systems, making it an ideal bridge between physical devices and high-level logic like Large Language Models (LLMs).

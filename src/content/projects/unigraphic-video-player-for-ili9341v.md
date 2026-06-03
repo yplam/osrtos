@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- st7735-video-playback-for-stm32
+- cheap-yellow-display-video-player-esp32-2432s028
+- usb-video-class-uvc-for-raspberry-pi-pico
+- lvgl-port-for-stm32f429-discovery-kit
+- stm32-displaylink
+- animated-gif-on-a-320x240-lcd-display-ili9341-with-the-esp32
 ---
 
 ## Overview

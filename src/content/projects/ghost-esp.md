@@ -27,6 +27,13 @@ isShow: true
 image: /202603/ghostfront-600x800.webp
 createdAt: '2026-03-04'
 updatedAt: '2026-03-04'
+relatedProjects:
+- ghostesp
+- infiltra-firmware
+- esp-hack-fw
+- unigeek-firmware
+- esp32-marauder-for-esp32-3248s035c
+- ghostble
 ---
 
 ## Overview

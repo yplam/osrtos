@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nuttx-real-time-operating-system
+- rt-thread-smart-porting-for-risc-v-qemu-and-k210
+- freertos-port-for-risc-v
+- micro-ros-for-rt-thread
+- raspberry-pi-rtos-rpi-rtos
+- apache-nuttx-rtos
 ---
 
 ## Overview

@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pyespcar-micropython-esp32-wifi-car
+- autonomous-racing-robot-stm32-ros1
+- cuybot-v1-opensource-smartcar-project
+- mongoose-os-robot-car
+- watchbot-system
+- arm-control-framework-acorns-rover
 ---
 
 ## Overview

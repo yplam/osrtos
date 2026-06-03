@@ -27,6 +27,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- rust-ir-thermometer-firmware
+- pomia-rs
+- stm32h743zi-rust-playground
+- rust-for-arduino-portenta-h7
+- stm32f429-rtic-and-smoltcp-example-application
+- sensilo-ble-sensor-node
 ---
 
 The AirGradient Pro is a well-regarded open-source air quality monitoring kit, but for developers seeking the memory safety and concurrency benefits of Rust, the `air-gradient-pro-rs` project provides a powerful alternative. This project moves away from the traditional Arduino/ESP8266 ecosystem, opting instead for an STM32F411 "Black Pill" microcontroller and a sophisticated software stack built on the Real-Time Interrupt-driven Concurrency (RTIC) framework.

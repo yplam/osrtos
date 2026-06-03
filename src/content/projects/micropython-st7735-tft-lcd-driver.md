@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- micropython-st7789-lcd-driver
+- st7789-driver-for-micropython
+- micropython-ssd1306-image-display
+- micropython-waveshare-e-paper-drivers
+- micropython-camera-driver-for-esp32
+- esp32-cheap-yellow-display-micropython-lvgl
 ---
 
 ## Overview

@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nxslib
+- freertos-visualizer
+- rtems-ec-cli-command-line-interface-for-embedded-controllers
+- picoshell
+- linkscope-bpu-uart-analyzer
+- espfetch
 ---
 
 ## Overview

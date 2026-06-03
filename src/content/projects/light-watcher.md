@@ -30,6 +30,13 @@ topics:
 isShow: true
 createdAt: '2026-04-18T01:29:14+00:00'
 updatedAt: '2026-04-18T01:29:14+00:00'
+relatedProjects:
+- esp32-remote-for-victron
+- smart-beehive-monitoring-system
+- ofmon-offline-first-smart-energy-monitoring
+- smart-lighting-system-using-esp32
+- iotea
+- geiger-mueller-counter-for-iot
 ---
 
 Light Watcher is an automated monitoring solution designed to provide real-time updates on the state of the local electrical grid. Built primarily for the ESP32-C3 SuperMini, this Telegram bot tracks the exact timing of power outages and restorations, offering essential data for users in regions experiencing frequent grid instability. It functions as a specialized IoT observer that logs outage durations and maintains statistics, ensuring users stay informed through instant messaging.

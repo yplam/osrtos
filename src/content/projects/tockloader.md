@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- tock-bootloader
+- tock-test-harness
+- tock-os-docker-build-environment
+- esp32-mpy-jama
+- nxscli
+- west-the-zephyr-rtos-meta-tool
 ---
 
 Tockloader is the essential command-line utility for developers working with the Tock operating system. Designed to streamline the development workflow, it provides a unified interface for flashing kernel binaries, managing multiple independent applications, and inspecting the state of embedded hardware.

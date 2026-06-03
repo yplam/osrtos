@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-and-lvgl-firmware-for-esp32
+- lvgl-c-binding
+- lvgl-rust-bindings
+- lvglpp-a-c-wrapper-for-lvgl
+- luavgl
+- lvgl-port-for-esp32
 ---
 
 ## Introduction to LVGL MicroPython Bindings

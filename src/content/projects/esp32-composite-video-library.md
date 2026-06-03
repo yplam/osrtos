@@ -19,6 +19,13 @@ version: v1.0.0
 lastUpdated: '2022-05-03'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- lvgl-port-for-esp32
+- lvgl-display-and-touchpad-drivers-for-esp32
+- esp-lvgl
+- esp32-smartdisplay
+- esp32-lvgl-8-x-sdspi-template
+- lvgl-port-for-m5stack-core2
 ---
 
 Generating video signals usually requires dedicated hardware or complex external encoders, but the **ESP32 Composite Video Library** changes that for the ESP32 ecosystem. This library allows developers to output a composite video signal (CVBS) directly from a single GPIO pin (GPIO25) using the ESP32's internal DAC and I2S peripherals. While currently limited to monochrome (grayscale) output, it provides a robust foundation for retro-gaming emulators, diagnostic displays, and low-cost infotainment systems.

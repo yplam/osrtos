@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-03-31T23:35:02+00:00'
 updatedAt: '2026-03-31T23:35:02+00:00'
+relatedProjects:
+- esp32-bus-expander
+- esp32-portapack-esp32pp
+- si4732-radio
+- radiojkk32-multifunctional-internet-radio-player
+- esp32-web-radio-evo3
+- esp32fmradio
 ---
 
 ## Overview

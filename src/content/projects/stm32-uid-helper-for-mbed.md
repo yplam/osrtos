@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- minimal-mbed-os-template-for-stm32f103
+- bluepill-board-support-for-mbed-os-6
+- stm32f103-low-power-library-for-mbed-os
+- minimal-mbed-os-template-for-stm32f030
+- mbed-quadrature-encoder-library
+- single-stm32-header
 ---
 
 The `stm32-uid` library is a specialized utility for developers working with STM32 microcontrollers within the Mbed OS ecosystem. Its primary purpose is to provide a clean, high-level interface for accessing the unique 96-bit device identifier (UID) that is factory-programmed into every STM32 chip.

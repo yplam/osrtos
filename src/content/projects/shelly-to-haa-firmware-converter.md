@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-03-02'
 updatedAt: '2026-03-02'
+relatedProjects:
+- mongoose-to-tasmota-home-accessory-architect-or-espurna
+- tasmota-to-mongoose-os-converter
+- sonoff-basic-firmware-for-openhab
+- openthread-nrf52840-firmware-builder
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- esphome-components-for-miot-devices
 ---
 
 ## Overview

@@ -22,6 +22,13 @@ isShow: true
 image: /202603/ATOMS3R-Camera.webp
 createdAt: '2026-03-17'
 updatedAt: '2026-03-17'
+relatedProjects:
+- micropython-camera-driver-for-esp32
+- esp32-cam-micropython
+- upycam
+- micropython-for-sparrow-one-board
+- esp32-cam-mcp-server
+- micropython-examples-for-01studio-development-boards
 ---
 
 ## Overview

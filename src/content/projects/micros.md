@@ -36,6 +36,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- raspberry-pi-pico-web-server-control
+- micropython-for-w601-iot-board
+- mqboard-micropython-mqtt-micro-framework
+- minios-esp
+- micropython-for-pandora-iot-board
+- micropython-smarthome-node-pysmartnode
 ---
 
 ## Overview

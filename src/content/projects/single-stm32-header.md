@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- cmsis-device-headers-for-stm32
+- cmsis-for-stm32-development
+- stm32-prototyping-libraries
+- stm32f103-cmsis-libraries-and-projects
+- uglystm32
+- cmsis-device-headers-for-microchip-sam
 ---
 
 ## Overview

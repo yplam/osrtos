@@ -20,6 +20,13 @@ star: 46
 lastUpdated: '2022-10-16'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- lvgl-port-for-esp32
+- lvgl-display-and-touchpad-drivers-for-esp32
+- esp32-tux
+- esp-lvgl
+- wt32-sqln-wt32-sc01-plus-with-squareline-studio-and-lvgl
+- bsp-for-wireless-tag-wt32-sc01-plus-sc01-esp-idf-5-x-lvgl-9-x
 ---
 
 Building sophisticated user interfaces on embedded systems often requires juggling display drivers, touch controllers, and storage peripherals. The **ESP32-LVGL8x-SDSPI** project by Sukesh Ashok Kumar provides a robust template for developers using the ESP-IDF framework to create high-quality UIs with LVGL 8.x and LovyanGFX, specifically optimized for ESP32 and ESP32-S3 microcontrollers.

@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- roostaboosta
+- stm32l476g-discovery-rtos-sensor-project
+- esp32-weatherstationrtc
+- children-s-iot-clock
+- elekstube-ips-custom-firmware
+- flatsphere-clock
 ---
 
 ## Overview

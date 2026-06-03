@@ -28,6 +28,13 @@ isShow: true
 image: /202604/w5100s-evb-pico2.webp
 createdAt: '2026-04-27T08:41:57+00:00'
 updatedAt: '2026-04-27T08:41:57+00:00'
+relatedProjects:
+- rp2040-hat-lwip-c
+- rp2040-freertos-template
+- wiznetinterface-library
+- pico-zephyr-project
+- raspberry-pi-pico-freertos-sample-application
+- w5500-lwip-binding-for-freertos
 ---
 
 Developing connected applications on the Raspberry Pi Pico often requires the reliability of a wired connection. This repository provides a comprehensive environment for integrating WIZnet’s Ethernet solutions with the Raspberry Pi Pico and the newer Pico 2, utilizing FreeRTOS for task management and timing. By combining the RP2040 or RP2350 microcontrollers with WIZnet’s hardwired TCP/IP chips, developers can build stable, multi-threaded networking applications that handle everything from basic DHCP to secure cloud connectivity via SSL/TLS.

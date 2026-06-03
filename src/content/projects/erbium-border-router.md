@@ -18,6 +18,13 @@ star: 1
 lastUpdated: '2015-12-21'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- bramblez1
+- 6lbr-on-telecontrolli-devices-x-ip4t-x-ip5
+- loadng-implementation-on-contiki-os
+- rpl-network-visualizer
+- computer-network-with-contiki-ng
+- mrhof-simplified-modified-rpl-objective-function-for-contiki
 ---
 
 The Erbium Border-Router (ERBR) is a specialized implementation of a 6LoWPAN border router for the Contiki OS ecosystem. While standard Contiki border routers typically provide a simple HTTP web server to display routing tables and neighbor information, this project takes a more modern, machine-to-machine (M2M) approach by replacing the web interface with a RESTful CoAP engine.

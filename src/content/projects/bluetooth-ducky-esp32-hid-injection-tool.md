@@ -30,6 +30,13 @@ topics:
 isShow: false
 createdAt: '2026-01-17'
 updatedAt: '2026-01-17'
+relatedProjects:
+- wifiexe-esp32-s3-based-badusb
+- m5-keyboard-and-mouse-emulator
+- neoducky
+- toothpaste
+- dshare-hid
+- esp32-bluejammer
 ---
 
 ## Overview

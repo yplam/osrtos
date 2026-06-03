@@ -20,6 +20,13 @@ isShow: true
 image: /202602/clock_calendar.webp
 createdAt: '2026-03-01'
 updatedAt: '2026-03-01'
+relatedProjects:
+- atomic-clock-ntp-modification
+- old-train-station-clock-revival
+- elekstube-ips-custom-firmware
+- w601-rt-thread-alarm-clock
+- retro-nixie-clock
+- geek-magic-firmware
 ---
 
 # Retrofitting a Classic Digital Clock with Raspberry Pi Pico W

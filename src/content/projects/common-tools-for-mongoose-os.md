@@ -13,6 +13,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- mongoose-os-app-skeleton
+- mongoose-os-relay-library
+- mjs-polyfill-for-mongoose-os
+- mongoose-os-programs-and-examples
+- mongoose-os-docker-image
+- mongoose-os-samples-for-esp32
 ---
 
 ## Streamlining Mongoose-OS Development with Common Tools

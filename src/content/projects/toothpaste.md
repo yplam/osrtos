@@ -38,6 +38,13 @@ topics:
 isShow: true
 createdAt: '2026-04-12T09:15:31+00:00'
 updatedAt: '2026-04-12T09:15:31+00:00'
+relatedProjects:
+- securegen
+- wifiexe-esp32-s3-based-badusb
+- bluetooth-ducky-esp32-hid-injection-tool
+- dshare-hid
+- esp32-u2f-security-key
+- m5-keyboard-and-mouse-emulator
 ---
 
 Entering long, complex passwords on untrusted or air-gapped computers is a recurring headache for security-conscious users. Whether it's a BIOS interface, a remote server, or a public terminal, these systems often lack the software flexibility to support password managers or network-based clipboard sharing. ToothPaste solves this by leveraging the most universally trusted interface available: the USB Human Interface Device (HID) standard.

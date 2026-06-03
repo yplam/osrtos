@@ -19,6 +19,13 @@ star: 227
 lastUpdated: '2017-11-14'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- pppos-example-for-mongoose-os
+- esp-mesh-lite-examples
+- micropython-for-esp32-with-psram-support-lobo-port
+- ppp-device-for-rt-thread
+- freertos-mqtt-client-demo
+- blynk-async-gsm-manager
 ---
 
 Connecting an ESP32 to the internet usually involves Wi-Fi or Ethernet, but in many remote sensing or mobile applications, cellular connectivity is the only option. The **ESP32-PPPOS-EXAMPLE** repository provides a robust implementation of Point-to-Point Protocol over Serial (PPPoS), allowing the ESP32 to establish a full TCP/IP stack connection using a standard GSM/GPRS modem.

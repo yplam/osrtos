@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-02-04'
 updatedAt: '2026-02-04'
+relatedProjects:
+- pymc-repeater
+- bluetooth-mesh-sensor-network
+- meshcore-mqtt-gateway
+- smart-dc-maintenance
+- swarmsense-iot-platform-with-mongoose-os
+- espmonitor-iot-environment-monitoring-system
 ---
 
 ## Overview

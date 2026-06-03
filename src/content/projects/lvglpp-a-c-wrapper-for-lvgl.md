@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-c-binding
+- lv-modern-c-20-bindings-for-lvgl
+- luavgl
+- lvgl-micropython-bindings
+- lvgl-rust-bindings
+- lvgl-port-for-esp32
 ---
 
 ## Overview

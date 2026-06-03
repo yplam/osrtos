@@ -30,6 +30,13 @@ isShow: true
 image: /202604/5752-07.webp
 createdAt: '2026-04-27T08:44:14+00:00'
 updatedAt: '2026-04-27T08:44:14+00:00'
+relatedProjects:
+- high-fidelity-esp32-bluetooth-audio-sink-with-premium-codecs
+- pixlpal-m1-firmware
+- esper-cdp
+- esp32-s3-soundfont-sf2-sampler-synthesizer
+- bleota-esp32-ota-updates-over-ble
+- esp32-mp3
 ---
 
 While the ESP32 has long been a favorite for DIY Bluetooth audio projects, most implementations are limited to the standard SBC codec, which often falls short for high-fidelity listening. This project transforms the ESP32-WROVER into a professional-grade audio sink by introducing support for premium codecs including LDAC, aptX HD, aptX Low Latency, and AAC. By leveraging the power of the ESP-IDF framework and external PSRAM, it bridges the gap between hobbyist microcontrollers and high-end audio hardware.

@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-25'
 updatedAt: '2026-01-25'
+relatedProjects:
+- flight-controller-rev2
+- droners
+- suchai-flight-software
+- avem
+- fpv-drone-stm32f411-flight-controller
+- catpilot
 ---
 
 Protoflight is a modular flight control software framework designed with a focus on performance, versatility, and educational value. Unlike monolithic flight controllers, Protoflight is built from a collection of independent libraries, each designed to be usable in its own right. This architecture makes the system "protean"—easily changeable and adaptable for prototyping new ideas in flight dynamics and stabilization.

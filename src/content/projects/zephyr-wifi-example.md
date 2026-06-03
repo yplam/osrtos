@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zephyr-wi-fi-and-tcp-udp-connection-demo
+- zephyr-lorawan-lora-examples
+- anjay-zephyr-client
+- pico-zephyr-project
+- mbed-os-client-example
+- building-wireless-sensor-networks-with-openthread
 ---
 
 ## Overview

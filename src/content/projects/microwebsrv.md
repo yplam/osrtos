@@ -34,6 +34,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- microwebsrv2
+- uht-micro-http-toolkit
+- raspberry-pi-pico-web-server-control
+- tinyweb
+- microdot
+- mqboard-micropython-mqtt-micro-framework
 ---
 
 MicroWebSrv is a lightweight and efficient HTTP web server specifically designed for the MicroPython ecosystem. It provides a robust platform for creating embedded web interfaces, RESTful APIs, and real-time data exchange systems on microcontrollers such as the ESP32, Pycom modules, and the Pyboard D-series. By focusing on a small footprint and ease of integration, it allows developers to add sophisticated networking capabilities to IoT devices with minimal overhead.

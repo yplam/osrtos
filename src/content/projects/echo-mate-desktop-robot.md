@@ -23,6 +23,13 @@ isShow: true
 image: /202602/echo-mate.webp
 createdAt: '2026-03-01'
 updatedAt: '2026-03-01'
+relatedProjects:
+- stackchan-minimal
+- tny-360-quadruped-robot
+- qbit
+- xiaozhi-ai-desk-buddy-esp32-s3
+- multi-modal-ai-assistant-on-raspberry-pi-5
+- clawputer
 ---
 
 Echo-Mate is an advanced, open-source desktop robot designed as both a functional assistant and a powerful development platform. Built around the Rockchip RV1106 SoC, it leverages a single-core Cortex-A7 processor and a dedicated 1TOPS NPU to deliver a range of intelligent features, from AI-driven conversations to real-time computer vision tasks.

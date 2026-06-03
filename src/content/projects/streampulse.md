@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-13'
 updatedAt: '2026-01-13'
+relatedProjects:
+- espmonitor-iot-environment-monitoring-system
+- pulse-real-time-vibration-anomaly-detection
+- pymc-repeater
+- espmonitor-iot-environmental-monitoring-system
+- smart-dc-maintenance
+- pulse
 ---
 
 StreamPulse is a minimal microservice architecture designed to solve the problem of monitoring heterogeneous IP camera networks. In environments where mixed infrastructure—such as consumer-grade TP-Link Tapo cameras and custom Raspberry Pi nodes running MotionEye—is deployed, traditional NVR monitoring often fails to provide granular health data. StreamPulse fills this gap by providing a dedicated heartbeat mechanism that goes beyond simple ping checks to verify actual video stream availability.

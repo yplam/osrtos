@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-fatfs-and-freertos-integration
+- practice-project-for-stm32f746g-discovery
+- stm32-fatfs-on-sd-card-using-freertos
+- stm32f407vg-freertos-fatfs-sdio-sd-card-demo
+- stm32f107-makefile-freertos-template
+- stm32-base-project-template
 ---
 
 ## Overview

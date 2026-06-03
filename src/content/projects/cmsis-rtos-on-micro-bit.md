@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- stm32f1-rtos-example-project
+- qemu-emulation-for-ti-lm3s6965-cortex-m3
+- raspberry-pi-pico-freertos-sample-application
+- micro-ros-for-rt-thread
+- stm32f103c8-freertos-cmsis-blink-example
+- echronos-on-stm32f4x-nucleo-board
 ---
 
 The BBC micro:bit is a staple in educational electronics, but beneath its simple exterior lies a capable Nordic nRF51 SoC based on the ARM Cortex-M0 architecture. While many developers interact with it via MicroPython or MakeCode, the **CMSIS-RTOS-microbit** project opens the door to professional-grade real-time operating system (RTOS) development using the ARM CMSIS-RTOS (RTX) standard.

@@ -14,6 +14,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- arduino-ir-for-mongoose-os
+- mongoose-os-relay-library
+- mel-ac-library-for-mongoose-os
+- telegram-bot-api-for-mongoose-os
+- lis3dh-accelerometer-library-for-mongoose-os
+- sgp30-gas-sensor-library-for-mongoose-os
 ---
 
 The Mongoose OS IR Protocol Library is a specialized module designed to handle infrared communication within the Mongoose OS ecosystem. It simplifies the process of receiving and decoding IR signals, which is a common requirement for IoT devices interacting with standard consumer electronics remotes.

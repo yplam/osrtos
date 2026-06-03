@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- zephyr-rtos-lorawan-node
+- zephyr-rtos-for-dwm1001
+- lorawan-test-app-for-apache-nuttx
+- anjay-zephyr-client
+- zephyr-wifi-example
+- building-wireless-sensor-networks-with-openthread
 ---
 
 ## Overview

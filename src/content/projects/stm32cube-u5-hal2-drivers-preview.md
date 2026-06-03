@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
+relatedProjects:
+- stm32cubeh7rs-mcu-firmware-package
+- x-cube-azrtos-h7-azure-rtos-software-expansion
+- stm32cuben6-mcu-firmware-package
+- stm32-framework
+- x-cube-azrtos-l5-azure-rtos-software-expansion-for-stm32cube
+- x-cube-azrtos-g0-azure-rtos-software-expansion-for-stm32cube
 ---
 
 ## Introduction to STM32Cube HAL2

@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- freertos-modern-c-wrappers
+- freertos-cpp
+- freertos-add-ons
+- freertos-wrapper-for-rt-thread
+- arduino-freertos-library
+- xf-extension-to-freertos
 ---
 
 ## Overview

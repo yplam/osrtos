@@ -36,6 +36,13 @@ isShow: true
 image: /202601/Atom_EchoS3R_01.webp
 createdAt: '2026-01-31'
 updatedAt: '2026-01-31'
+relatedProjects:
+- unabto-sdk
+- esp8266-rtos-homekit-accessory
+- esp32-usb-over-ip
+- mqboard-micropython-mqtt-micro-framework
+- cmsis-dap-over-tcp-for-esp32
+- ghostesp
 ---
 
 MicroLink brings the power of Tailscale's mesh VPN to the ESP32 ecosystem, allowing microcontrollers to participate directly in a secure "tailnet." This implementation is a production-ready ESP-IDF component that handles the complexities of the Tailscale protocol, including coordination, encryption, and NAT traversal.

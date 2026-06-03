@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- bmp-decoder-for-lvgl
+- png-decoder-for-lvgl
+- gif-decoder-for-lvgl
+- micropython-jpeg
+- image-converter-for-lvgl
+- freetype-integration-for-lvgl
 ---
 
 ## Overview

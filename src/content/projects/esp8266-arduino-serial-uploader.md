@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp32-ota-firmware-update-and-file-management
+- espxwebflmgr
+- devfsuploadesp
+- fileferry-click2flash
+- multiftpserver-library
+- esp8266-web-server-and-spiffs-integration
 ---
 
 ## Overview

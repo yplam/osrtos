@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- taproot
+- arm-control-framework-acorns-rover
+- aruw-main-control-board-mcb
+- breeze
+- enterprise-stm32-platform-development
+- stm32-framework
 ---
 
 ## Powering the Texas Aimbots: An Inside Look at Their Embedded Stack

@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-mywidget
+- esp8266-web-server-and-spiffs-integration
+- esp-fs-webserver
+- iot-esp8266-serial-forwarder
+- iot-framework-for-nodemcu
+- arduino-esp-utils
 ---
 
 Esp8266Starter is designed to jumpstart the development of ESP8266-based IoT applications by providing a robust, pre-configured foundation. Instead of rewriting boilerplate code for WiFi connectivity, web servers, and configuration management for every new project, developers can use this repository as a base to focus immediately on their specific application logic.

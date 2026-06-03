@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-04-20T08:19:15+00:00'
 updatedAt: '2026-04-20T08:19:15+00:00'
+relatedProjects:
+- t-hmi-c64-emulator
+- infiniemu
+- arduino-osek-with-erika-enterprise-ee
+- renode-rp2040-simulation
+- rt-thread-art-arduino-rt-thread
+- pixelroot32-game-engine
 ---
 
 Velxio is a fully local, open-source multi-board emulator designed to bring embedded systems development to the browser. It enables developers to write Arduino C++ or Python code, compile it using an integrated backend, and simulate the resulting firmware on real CPU emulations. With support for 19 different boards and 5 distinct CPU architectures, Velxio provides a comprehensive environment for testing electronic circuits and embedded software without physical hardware.

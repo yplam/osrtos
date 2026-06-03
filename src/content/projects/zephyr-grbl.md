@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- smoothieware-for-stm32
+- micro-ros-module-for-zephyr
+- klipper-esp32
+- cannectivity
+- bitcraze-crazyflie-2-0-2-1-mbed-os-firmware
+- blue-clover-plt-demo-v2-zephyr-firmware
 ---
 
 ## Overview

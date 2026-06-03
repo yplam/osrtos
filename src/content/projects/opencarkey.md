@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-18'
 updatedAt: '2026-01-18'
+relatedProjects:
+- esp32-dynamic-iphone-keyless-system
+- open-wink-headlight-mod
+- esphome-tesla-ble
+- freebees-access-control-for-esp32
+- open-authenticator-app
+- sistema-de-apertura-de-port-n-con-m-dulo-gsm
 ---
 
 ## Overview

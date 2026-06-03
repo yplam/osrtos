@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- freertos-mqtt-client-demo
+- stm32h750b-dk-touchgfx-freertos-mqtt-example
+- stm32-https-wolfssl-demo
+- lwip-tcp-ip-stack-on-stm32-microcontroller
+- stm32f429-mqtt-client-with-rtic-and-smoltcp
+- stm32l475-freertos-iot-project
 ---
 
 The STM32_LWIP_MQTT project is a comprehensive demonstration of how to implement MQTT protocol support on STM32 microcontrollers. By leveraging the power of FreeRTOS and the lightweight IP (LwIP) stack, this project provides a robust foundation for building Internet of Things (IoT) devices that require reliable network communication.

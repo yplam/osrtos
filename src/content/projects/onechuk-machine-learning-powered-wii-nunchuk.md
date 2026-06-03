@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- gesture-detecting-macro-keyboard
+- esp-usb-ble-hid-bridge
+- airmouses3
+- picogamepadconverter
+- openhoop
+- buttfinity
 ---
 
 The onechuk project transforms a standard Nintendo Wii Nunchuk into a versatile, machine-learning-enhanced controller. By integrating an ESP32 (specifically the TinyPICO Nano) into the classic controller's shell, the project enables complex gesture recognition using TensorFlow Lite for Microcontrollers. This allows users to execute various commands—ranging from media playback to system administration—simply by "drawing" shapes with the analog joystick.

@@ -20,6 +20,13 @@ star: 2
 lastUpdated: '2021-06-18'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- zmk-docker-images
+- tock-os-docker-image
+- nrf-connect-sdk-docker-environment
+- docker-containers-for-the-zephyr-rtos
+- nrf-connect-sdk-build-docker-environment
+- tock-os-docker-build-environment
 ---
 
 Setting up a development environment for embedded systems is notoriously difficult. Between managing specific versions of the GNU Arm Embedded Toolchain, ensuring CMake and Ninja are correctly configured, and handling Python dependencies for tools like Mbed CLI, developers often spend more time fighting their environment than writing code. Leka's `docker-embedded-toolchains` project solves this by providing standardized, ready-to-use Docker images for both local development and Continuous Integration (CI).

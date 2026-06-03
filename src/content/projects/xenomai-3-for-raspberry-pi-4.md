@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- xenomai-3-for-raspberry-pi-0-1-linux-kernel-4-1-21
+- xenomai-3-for-raspberry-pi-2-and-3
+- raspberry-pi-4-xenomai-3-patch
+- xenomai-on-raspberry-pi
+- raspberry-pi-rtos-rpi-rtos
+- xenomai-3-exercises-for-raspberry-pi-4
 ---
 
 Xenomai 3 brings hard real-time capabilities to the Linux kernel, and this project specifically targets the Raspberry Pi 4. By using the I-pipe (Interrupt Pipeline) patch, it allows the system to handle time-critical tasks with deterministic latency while still running a standard Linux environment for non-real-time operations.

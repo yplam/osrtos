@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-05-05T23:33:42+00:00'
 updatedAt: '2026-05-05T23:33:42+00:00'
+relatedProjects:
+- t-hmi-c64-emulator
+- galagino-for-platformio
+- anemoia-esp32-nes-emulator
+- tiny386
+- anemoia-esp32
+- esp32-marauder-for-cheap-yellow-display-cyd
 ---
 
 ## Overview

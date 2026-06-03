@@ -35,6 +35,13 @@ topics:
 isShow: true
 createdAt: '2026-06-02T23:24:07+00:00'
 updatedAt: '2026-06-02T23:24:07+00:00'
+relatedProjects:
+- dtugateway-for-hoymiles-hms-inverters
+- project-aura
+- ofmon-offline-first-smart-energy-monitoring
+- zigbee-gas-counter
+- everblu-cyble-enhanced-rf-meter-reader
+- ginlong-solis-solar-inverter-modbus-integration
 ---
 
 TankSync is engineered with a focus on reliability rather than cloud dependency. Designed to address the challenges of water monitoring in demanding environments, it provides a robust solution that continues to function even when internet connectivity fails. The system is built for resilience, featuring local operation by default and an optional cloud layer for convenience.

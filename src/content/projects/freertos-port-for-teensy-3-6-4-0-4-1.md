@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- arduino-freertos-library
+- arduino-rt-thread-library
+- seeed-arduino-freertos
+- zephyr-shell-demo-for-teensy-4-0-4-1
+- mos-rtos
+- rust-support-for-rt-thread
 ---
 
 ## Overview

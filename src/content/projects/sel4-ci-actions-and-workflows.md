@@ -16,6 +16,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- sel4-tools
+- sel4-camkes-and-l4v-docker-build-environments
+- rt-thread-linux-ci-environment
+- docker-embedded-development-toolchains
+- remote-flash-and-test-for-bl602-bl604-nuttx
+- awesome-provable
 ---
 
 Maintaining a high-assurance ecosystem like the seL4 microkernel requires more than just high-quality code; it requires rigorous, automated verification and testing. The **seL4/ci-actions** repository serves as the central hub for the continuous integration (CI) infrastructure used by the seL4 Foundation. By consolidating GitHub Actions and workflow definitions into a single location, the project avoids duplication and ensures that every repository in the seL4 ecosystem adheres to the same stringent standards.

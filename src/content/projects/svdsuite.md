@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-02-08'
 updatedAt: '2026-02-08'
+relatedProjects:
+- cmsis-parser
+- cmsis-svd-srcgen
+- development-utils
+- arduino-cmsis-module
+- micropython-stubber
+- i-mx-rt-cpu-support-package-for-crossworks
 ---
 
 SVDSuite is a comprehensive Python-based toolkit for managing CMSIS System View Description (SVD) files. These XML-based files are critical in the embedded systems ecosystem, as they provide a formalized description of the memory-mapped registers, peripherals, and bit fields for ARM Cortex-M microcontrollers. By providing a robust programmatic interface to these files, SVDSuite enables developers to automate the generation of device header files, debugger views, and peripheral access layers.

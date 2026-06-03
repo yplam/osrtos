@@ -18,6 +18,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- iot-project-on-hvac
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- mel-ac-demo-app
+- mel-ac-library-for-mongoose-os
+- esphome-hitachi-h-link-ac-component
+- thing-simplified-mqtt-framework-for-esp8266-and-esp32
 ---
 
 Managing air conditioning units that lack built-in smart features can be a challenge for home automation enthusiasts. The **AC_control** project offers a robust solution by bridging the gap between traditional infrared (IR) remotes and modern IoT protocols. By leveraging an ESP8266 or similar microcontroller, this project allows users to switch their A/C on and off using MQTT messages.

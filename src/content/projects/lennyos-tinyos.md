@@ -33,6 +33,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- esp-open-rtos
+- 100ask-linux-lvgl-desktop
+- minios-esp
+- rtos-wot
+- tinyos-english-documentation
+- smolos
 ---
 
 LennyOS TinyOS is an ambitious project within the LennyOS ecosystem that focuses on providing a lightweight, component-based operating system for embedded devices. By leveraging the TinyOS framework—a platform widely recognized for its efficiency in wireless sensor networks and low-power IoT applications—LennyOS TinyOS offers a specialized environment for developers working on resource-constrained hardware.

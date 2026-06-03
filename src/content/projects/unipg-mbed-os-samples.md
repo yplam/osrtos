@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- mbed-os-unipg-samples-1
+- mongoose-os-samples-for-esp32
+- esp32-freertos-examples
+- chibios-rt-examples-for-stm32f401re-nucleo
+- mongoose-os-programs-and-examples
+- freertos-coremqtt-agent-demos
 ---
 
 ## Overview

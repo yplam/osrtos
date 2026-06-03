@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nrf-connect-sdk-build-docker-environment
+- docker-containers-for-the-zephyr-rtos
+- docker-embedded-development-toolchains
+- mongoose-os-docker-image
+- artik-developer-environment-docker
+- zmk-docker-images
 ---
 
 ## Streamlining nRF Connect SDK Development with Docker

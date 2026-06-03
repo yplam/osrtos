@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mongoose-os
+- mongoose-os-configurable-sensor-node
+- esp8266-mywidget
+- leilei-mongoose-os-sensing-device
+- mongoose-os-button-switch-for-aws-iot
+- esp8266starter
 ---
 
 ## Overview

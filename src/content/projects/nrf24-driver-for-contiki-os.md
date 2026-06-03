@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- arduino-rf24-for-mongoose-os
+- sx128x-lora-transceiver-driver-for-contiki-ng
+- sx127x-lora-transceiver-driver-for-contiki-ng
+- kw41z-rf-driver-for-arm-mbed-nanostack
+- 6lowpan-ble-bridge
+- ant-arduino
 ---
 
 ## Overview

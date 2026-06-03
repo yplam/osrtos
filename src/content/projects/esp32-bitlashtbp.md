@@ -21,6 +21,13 @@ star: 1
 lastUpdated: '2023-08-01'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- pydos
+- lua-rtos-for-esp32
+- esp32-bus-expander
+- micropython-and-lvgl-firmware-for-esp32
+- esp-fs-webserver
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
 ---
 
 ESP32_BitlashTBP is an innovative project designed to bring high-level scripting and interactive command shells to the ESP32-C3 microcontroller. By combining two distinct script interpreters—Bitlash and TinyBasicPlus—with the low-latency Quick ESP-NOW wireless protocol, this project creates a flexible platform for remote control, automation, and rapid prototyping without the overhead of a full Wi-Fi stack.

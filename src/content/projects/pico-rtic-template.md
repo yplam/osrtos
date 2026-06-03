@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-rtic-project-template
+- rp2040-freertos-template
+- rust-embedded-examples
+- rust-for-arduino-portenta-h7
+- stm32h743zi-rust-playground
+- stm32f4-rtic-playground
 ---
 
 ## Overview

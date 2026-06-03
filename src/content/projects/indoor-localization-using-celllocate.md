@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- ublox-gnss-api-for-mbed
+- mbed-cellular-boilerplate
+- gps-tracker
+- gnss-lorawan-tracker
+- smartlock-for-disco-l475vg-iot01a
+- mbed-os-lorawan-tinyshell-application
 ---
 
 ## Overview

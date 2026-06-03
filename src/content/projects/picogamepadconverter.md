@@ -31,6 +31,13 @@ isShow: true
 image: /202602/pico_inputs.webp
 createdAt: '2026-02-27'
 updatedAt: '2026-02-27'
+relatedProjects:
+- esp-usb-ble-hid-bridge
+- pico-cec
+- midi2piousbhub
+- ds5-bridge
+- usb-keyboard-and-mouse-bluetooth-adapter-esp32
+- pico-ttl2vga
 ---
 
 PicoGamepadConverter is a powerful firmware solution for the Raspberry Pi Pico and other RP2040/RP2350-based boards, designed to bridge the gap between various gaming peripherals and platforms. Whether you are looking to use a modern Bluetooth controller on a vintage PlayStation 2 or connect a classic Nintendo 64 controller to a PC as an Xinput device, this project provides the necessary translation layer.

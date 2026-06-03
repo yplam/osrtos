@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-display-and-touchpad-drivers
+- esp-lvgl
+- lvgl-display-and-touchpad-drivers-for-esp32
+- esp32-tux
+- lvgl-port-for-esp32
+- lv-chinese-ime
 ---
 
 ## Overview

@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mbed-support-for-clion
+- mbed-tools
+- mbed-vscode-tools
+- micropython-plugin-for-pycharm-and-intellij
+- micropico-visual-studio-code-extension
+- finik-ch32v003-sdk
 ---
 
 ## Streamlining Mbed OS Development in Vim

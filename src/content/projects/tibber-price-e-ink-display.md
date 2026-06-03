@@ -17,6 +17,13 @@ isShow: true
 image: /202604/LILYGO-T5-E-PAPER_1.webp
 createdAt: '2026-04-06T00:35:40+00:00'
 updatedAt: '2026-04-06T00:35:40+00:00'
+relatedProjects:
+- git-contributions-e-ink-display
+- readmepaper-esp32-7-color-e-paper-display-project
+- esp32-remote-for-victron
+- bbmonitor
+- c-quiz-on-e-ink-display
+- 7-color-e-paper-digital-photo-frame
 ---
 
 ## Visualizing Energy Costs with E-Ink

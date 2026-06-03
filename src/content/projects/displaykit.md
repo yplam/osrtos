@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- espui
+- lvgl-emscripten-port
+- pixelforge
+- betta-ha-panel
+- sc01-plus-hmi-example-with-squareline-studio
+- esp32-tux
 ---
 
 ## Introduction to DisplayKit

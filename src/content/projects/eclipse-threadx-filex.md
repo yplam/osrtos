@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- eclipse-threadx-usbx
+- littlefs-for-esp-idf
+- littlefs-portenta-h7-library
+- eclipse-threadx-netx-duo
+- stm32-fatfs-and-freertos-integration
+- pico-vfs-a-virtual-file-system-for-raspberry-pi-pico
 ---
 
 ## Overview

@@ -14,6 +14,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rtdm-shift-register-driver-for-elk-pi
+- soem-w5500-ethercat-master-for-raspberry-pi
+- xenomai-3-for-raspberry-pi-4
+- xenomai-3-for-raspberry-pi-2-and-3
+- xenomai-on-raspberry-pi
+- xenomai-3-for-raspberry-pi-0-1-linux-kernel-4-1-21
 ---
 
 Xenomai 3 provides a robust framework for hard real-time tasks on Linux. This project demonstrates how to leverage the Real-Time Driver Model (RTDM) to achieve deterministic SPI communication on the Raspberry Pi 3. By bypassing the standard Linux SPI stack, developers can achieve the timing precision required for high-performance industrial and robotics applications.

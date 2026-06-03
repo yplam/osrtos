@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mbed-to-ibm-watson-iot-platform
+- mbed-to-aws-iot-example
+- mbed-to-azure-iot-hub
+- aws-iot-with-the-l475vg-iot01a-on-mbed-os
+- mbed-os-client-example
+- losant-mqtt-example-for-mongoose-os
 ---
 
 Connecting microcontrollers to cloud services requires a robust combination of networking, security, and protocol handling. The Mbed-to-Google-Cloud-IoT repository provides a complete example of how to bridge an Mbed OS device to Google Cloud IoT Core. By utilizing MQTT over TLS, the project ensures that data transmitted between the edge device and the cloud remains encrypted and authenticated.

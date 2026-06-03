@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f107-makefile-freertos-template
+- stm32-base-project-template
+- stm32-libopencm3-freertos-platformio-template
+- stm32-rtic-project-template
+- stm32f103rb-templates-and-examples
+- stm32f1-rtos-example-project
 ---
 
 The STM32 Makefile FreeRTOS project is a streamlined development template designed for engineers who prefer a command-line workflow over heavy integrated development environments (IDEs). By leveraging the GNU ARM GCC toolchain and a modular Makefile structure, it provides a robust foundation for building real-time applications on the STM32F10x series of microcontrollers.

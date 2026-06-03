@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- ferros
+- rttrust-rust-wrapper-for-rt-thread
+- fel4-test-project
+- rust-fel4-workspace-for-raspberry-pi-3
+- freertos-rust
+- rust-support-for-rt-thread
 ---
 
 ## Overview

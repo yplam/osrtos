@@ -19,6 +19,13 @@ isShow: true
 image: /202602/Flipper-Add-On-SubGhz-1-1.webp
 createdAt: '2026-02-18'
 updatedAt: '2026-02-18'
+relatedProjects:
+- flipper-rs485-modbus-plugin
+- lora-test-app-for-semtech-sx1262-and-apache-nuttx
+- fz-nrf24-jammer
+- lorawan-test-app-for-apache-nuttx
+- zephyr-lorawan-lora-examples
+- ropixon-at-lora-dongle
 ---
 
 The Flipper LoRa Relay App is a specialized tool designed for the Flipper Zero multi-tool, extending its capabilities into the world of Long Range (LoRa) radio communication. By leveraging the Electronic Cats Flipper Add-On: Sub-GHz, which features the Semtech SX1262 transceiver, this application transforms the Flipper Zero into a portable LoRa sniffer and injector.

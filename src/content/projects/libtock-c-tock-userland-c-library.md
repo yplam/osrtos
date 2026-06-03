@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- rust-support-for-rt-thread
+- tock-for-stm32
+- rust-stub-library-for-apache-nuttx
+- nuclei-software-development-kit-nuclei-sdk
+- clickos-toolchain
+- kendryte-k210-freertos-sdk
 ---
 
 ## Overview

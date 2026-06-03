@@ -28,6 +28,13 @@ isShow: true
 image: /202603/minigotchi.webp
 createdAt: '2026-03-19'
 updatedAt: '2026-03-19'
+relatedProjects:
+- infiltra-firmware
+- ghost-esp
+- deautherx
+- bruce-firmware
+- poseidon
+- ghostesp
 ---
 
 Minigotchi-ESP32 is a specialized firmware designed for the ESP32 platform, serving as a port of the original Minigotchi project. It is built to replicate the peer detection and environmental interaction behaviors of the Pwnagotchi, a popular DIY security tool. While the original Pwnagotchi runs on Linux-based hardware like the Raspberry Pi Zero, Minigotchi-ESP32 brings similar capabilities to the more power-efficient and cost-effective ESP32 microcontroller ecosystem.

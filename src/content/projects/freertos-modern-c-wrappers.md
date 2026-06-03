@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- frt-fl-ssie-s-ready-freertos-threading
+- xf-extension-to-freertos
+- freertos-cpp
+- zephyr-c-20-framework-zpp
+- freertos-add-ons
+- freertos-wrapper-for-rt-thread
 ---
 
 ## Overview

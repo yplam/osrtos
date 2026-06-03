@@ -14,6 +14,13 @@ rtos: freertos
 isShow: true
 createdAt: '2026-06-01T00:56:47+00:00'
 updatedAt: '2026-06-01T00:56:47+00:00'
+relatedProjects:
+- bbmonitor
+- git-contributions-e-ink-display
+- espmonitor-iot-environment-monitoring-system
+- gateway-smartwatch
+- esphome-e-ink-4-color-dashboard
+- weather-micro-station-for-t-display-s3
 ---
 
 The E-Paper Climate Logger, affectionately known as the "Weathergotchi," is an open-source project designed to provide a robust and visually clear solution for tracking environmental conditions. This repository serves as a one-stop shop for the project, containing not only the firmware but also the professional-grade PCB schematics and CAD files required to build the physical unit.

@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- nanofish
+- embedmcp-embedded-mcp-server-library
+- libwebsockets
+- pycopy-standard-library-pycopy-lib
+- lwirax
+- stm32duino-lwip
 ---
 
 lwNBD (Lightweight Network Block Device) is a specialized server library designed to bring standard block device networking to resource-constrained environments. Originally developed for the PlayStation 2's Input/Output Processor (IOP)—a 37.5 MHz MIPS-based processor with only 2MB of RAM—lwNBD is built for portability, modularity, and efficiency.

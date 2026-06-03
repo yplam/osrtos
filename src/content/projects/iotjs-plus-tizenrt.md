@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- lua-rtos-for-esp32
+- iot-framework-for-nodemcu
+- openthread-rtos
+- rtox-iot-development-platform
+- phoenix-rtos-project
+- onesdk-a-unified-ai-access-sdk-for-the-client-side
 ---
 
 TizenRT is a lightweight, RTOS-based platform specifically engineered for low-end Internet of Things (IoT) devices. Originally developed by Samsung, this repository represents a specialized version that integrates IoT.js capabilities into the TizenRT ecosystem. The platform provides a robust environment for developers to build, configure, and deploy firmware to a variety of microcontrollers and SoCs while maintaining a small footprint suitable for resource-constrained hardware.

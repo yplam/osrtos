@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f103-cmsis-libraries-and-projects
+- stm32f103rb-templates-and-examples
+- stm32-cmsis-zero-to-hero
+- stm32-cmsis-libraries
+- stm32f4-cmsis-lessons
+- stm32-cortex-m4-code-examples
 ---
 
 The stm32f103CMSIS repository provides a comprehensive set of low-level peripheral configuration examples for the STM32F103 series of microcontrollers. By leveraging the Cortex Microcontroller Software Interface Standard (CMSIS), this project demonstrates how to interface with hardware registers directly, offering a lightweight and efficient alternative to higher-level abstraction layers like the STM32 HAL.

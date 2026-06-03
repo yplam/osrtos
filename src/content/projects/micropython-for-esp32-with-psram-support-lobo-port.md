@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- micropython-for-kendryte-k210-lobo-port
+- micropython-and-lvgl-firmware-for-esp32
+- micropython-camera-driver-for-esp32
+- esp32-cam-micropython
+- micropython-st7735-tft-lcd-driver
+- micropython-stm-lib
 ---
 
 ## Overview

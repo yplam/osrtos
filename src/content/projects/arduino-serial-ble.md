@@ -29,6 +29,13 @@ topics:
 isShow: false
 createdAt: '2026-04-04T00:45:04+00:00'
 updatedAt: '2026-04-04T00:45:04+00:00'
+relatedProjects:
+- nimble-arduino
+- esp32-ble-uart-mx
+- nimble-ota
+- hijelhid-blekeyboard
+- n-able-arduino-core
+- bleota-esp32-ota-updates-over-ble
 ---
 
 Connecting embedded devices to mobile apps or desktop terminals often requires a reliable serial-like interface. The Arduino Serial BLE library simplifies this process for ESP32 developers by implementing the Nordic UART Service (NUS). This service is a widely recognized standard for transparent data over Bluetooth Low Energy (BLE), making it compatible with numerous mobile applications like nRF Connect and Serial Bluetooth Terminal.

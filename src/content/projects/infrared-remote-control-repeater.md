@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- mongoose-os-ir-protocol-library
+- arduino-ir-for-mongoose-os
+- esp32fmradio
+- omote-open-universal-remote
+- spektrum-receiver-library-for-mbed
+- pico-cec
 ---
 
 ## Overview

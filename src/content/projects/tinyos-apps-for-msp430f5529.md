@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- atmega128rfa1-tinyos-kth-wsn-project
+- tinyos-nesc-telosb-programs
+- zephyr-lorawan-lora-examples
+- unipg-mbed-os-samples
+- super-mini-esp32-c3-arduino-and-platformio-sketches
+- esp32-experiments
 ---
 
 ## Overview

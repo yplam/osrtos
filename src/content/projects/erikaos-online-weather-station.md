@@ -28,6 +28,13 @@ star: 2
 lastUpdated: '2024-09-20'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- stm32-weather-station
+- weather-micro-station-for-t-display-s3
+- esp8266-esp32-spotify-oled-display
+- erikaos-real-time-watch
+- esptimecast
+- stm32f407-weather-clock-cmake-development-template
 ---
 
 The ErikaOS Online Weather Station is a sophisticated embedded project that transforms an STM32F407-discovery board into a real-time dashboard for weather updates and Spotify playback status. By leveraging the Erika Enterprise RTOS and an ESP8266 WiFi module, this project demonstrates how to build a robust, internet-connected device capable of handling complex API interactions and serving web-based configuration interfaces.

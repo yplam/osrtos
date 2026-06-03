@@ -23,6 +23,13 @@ isShow: true
 image: /202602/esp32-rex.webp
 createdAt: '2026-02-25'
 updatedAt: '2026-02-25'
+relatedProjects:
+- pico-rex-dinosaur-game-for-raspberry-pi-pico-2
+- esp32-virtual-cat-project
+- esp32-pseudo-3d-racing-game
+- stm32f4-rtic-playground
+- nrf52811-solum-tag-firmware
+- stm32h743zi-rust-playground
 ---
 
 ## Overview

@@ -34,6 +34,13 @@ isShow: true
 image: /202601/CroppedFinishedProject.webp
 createdAt: '2026-01-18'
 updatedAt: '2026-01-18'
+relatedProjects:
+- esphome-treadmill-ftms
+- twatch-v3-firmware-for-esp32
+- esp32-watch-for-openhaystack
+- noninvasive-glucometer
+- ov-watch
+- chrz-watch-firmware
 ---
 
 OpenHRStrap is an ambitious open-source project that brings professional-grade heart rate monitoring to the DIY community. Built around the powerful ESP32 platform, specifically the XIAO S3, this project demonstrates how to capture, process, and transmit electrocardiogram (ECG) data in a form factor compatible with standard chest straps. By bridging the gap between raw analog biosignals and digital fitness ecosystems, OpenHRStrap offers a transparent alternative to proprietary wearable technology.

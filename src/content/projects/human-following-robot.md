@@ -20,6 +20,13 @@ topics:
 isShow: true
 createdAt: '2026-04-25T13:56:30+00:00'
 updatedAt: '2026-04-25T13:56:30+00:00'
+relatedProjects:
+- 16-ir-array-pid-line-follower-robot-using-esp32
+- eva-rt-robotracer
+- watchbot-system
+- robart-autonomous-llm-controlled-robot
+- tny-360-quadruped-robot
+- selfie-autonomous-car-iarrc-2018
 ---
 
 ## Overview / Introduction

@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- rp2040-freertos-template
+- pico-zephyr-project
+- lpc43xx-freertos-led-blinking-example
+- stm32-fatfs-and-freertos-integration
+- wiznet-freertos-sdk-for-raspberry-pi-pico-ethernet
+- pico-rtic-template
 ---
 
 ## Overview

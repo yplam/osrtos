@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-02-25'
 updatedAt: '2026-02-25'
+relatedProjects:
+- hlw811x-power-metering-library
+- icm-20948-component-for-esp-idf
+- lvgl-port-for-esp32
+- fastled-idf
+- esp32-s3-esp-idf-components-library
+- lvgl-port-for-m5stack-core2
 ---
 
 ## Overview

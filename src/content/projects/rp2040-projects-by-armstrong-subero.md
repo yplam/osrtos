@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-02-09'
 updatedAt: '2026-02-09'
+relatedProjects:
+- rp2040-freertos-template
+- micropython-samples-and-drivers
+- oficina-de-circuitpython
+- pico-zephyr-project
+- pico-demos-for-rp2040
+- awesome-micropython
 ---
 
 ## Overview

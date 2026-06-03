@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- multi-firmware-esp
+- raspberry-pi-pico-w-and-pico-2-w-fota-bootloader
+- bleota-esp32-ota-updates-over-ble
+- sdcard-boot-with-ota-for-micropython
+- esp32repartition
+- raspberry-pi-pico-w-fota-example-application
 ---
 
 ## Overview

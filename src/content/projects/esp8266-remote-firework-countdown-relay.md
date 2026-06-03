@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp8266-wifi-relay-async
+- esp8266-wifi-relay-and-bahtinov-masks-controller
+- vortex-cannon-esp32-access-point-controller
+- esp8266-wifi-relay
+- esp8266-sound-effects-i2s-web-trigger
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
 ---
 
 ## Overview

@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-cmake-cmsis-project-skeleton
+- stm32-base-project-template
+- stm32-rtic-project-template
+- stm32-makefile-freertos-project-template
+- clion-for-stm32
+- stm32-starter-project-for-arch-max
 ---
 
 ## Modern STM32 Development with VSCode and CMake

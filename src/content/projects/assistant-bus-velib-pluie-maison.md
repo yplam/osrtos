@@ -14,6 +14,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- esptimecast
+- esp8266-esp32-spotify-oled-display
+- esphome-e-ink-4-color-dashboard
+- esp32-cyd-weather-station-with-3-day-forecast
+- lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
+- erikaos-online-weather-station
 ---
 
 ## A Smart Display for the Parisian Commuter

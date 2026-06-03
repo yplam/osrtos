@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- smart-heating-iot-system
+- home-automation-simulation-using-contiki-os
+- smart-orchard
+- smartorchard
+- cloudhome-firmware
+- internet-of-things-home-challenges
 ---
 
 ## Overview

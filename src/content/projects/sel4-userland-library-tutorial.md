@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sel4-kernel-101
+- sel4-cpio-archive-project
+- bazel2zephyr
+- apache-nuttx-getting-started
+- rust-stub-library-for-apache-nuttx
+- sofa-operating-system-framework
 ---
 
 ## Overview

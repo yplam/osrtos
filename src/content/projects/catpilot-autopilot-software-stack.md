@@ -34,6 +34,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- catpilot
+- droners
+- protoflight
+- fpv-drone-stm32f411-flight-controller
+- bitcraze-crazyflie-2-0-2-1-mbed-os-firmware
+- flight-controller-rev2
 ---
 
 CatPilot is a sophisticated autopilot software stack tailored for Unmanned Aerial Systems (UAS). It is built on the philosophy of using top-level domain-specific notations to specify desired behaviors, which are then executed by a minimalistic, generalized C-language codebase. This approach is designed to create scalable, distributed embedded software systems suitable for real-time mission-critical applications.

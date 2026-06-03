@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-13'
 updatedAt: '2026-01-13'
+relatedProjects:
+- deck
+- clawdmeter
+- animated-gif-on-a-320x240-lcd-display-ili9341-with-the-esp32
+- esp32-p4-home-assistant-display
+- xiaozhi-ai-desk-buddy-esp32-s3
+- lvgl-port-for-esp32
 ---
 
 ## Overview

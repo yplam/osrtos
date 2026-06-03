@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-03-31'
 updatedAt: '2026-03-31'
+relatedProjects:
+- rpl-network-visualizer
+- nxslib
+- nxscli
+- zview-zephyr-rtos-runtime-visualizer
+- esp32-mpy-jama
+- linkscope-bpu-uart-analyzer
 ---
 
 Monitoring the internal state of an embedded system in real-time is often a challenge, especially when dealing with multiple concurrent tasks in an RTOS environment. The `freeRTOS-visualizer` provides an elegant, open-source solution for developers looking to gain immediate insight into their FreeRTOS task transitions without requiring complex or proprietary debugging hardware.

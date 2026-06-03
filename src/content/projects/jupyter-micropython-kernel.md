@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- micro-repl
+- arduino-lab-for-micropython
+- semito-v-micropython-compatibility-layer-mcl
+- m5stack-cardputer-virtual-repl
+- micropython-port-for-rt-thread
+- micropython-and-lvgl-firmware-for-esp32
 ---
 
 ## Overview

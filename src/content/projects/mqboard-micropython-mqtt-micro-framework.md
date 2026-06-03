@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- microhomie
+- micropython-smarthome-node-pysmartnode
+- micropython-for-esp32-with-psram-support-lobo-port
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- micros
+- micropython-and-lvgl-firmware-for-esp32
 ---
 
 ## Managing Remote MicroPython Nodes with MQBoard

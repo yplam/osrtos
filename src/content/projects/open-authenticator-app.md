@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32-mfa-authenticator
+- securegen
+- esp32-u2f-security-key
+- smartlock-for-disco-l475vg-iot01a
+- opensk
+- autonetwork-library
 ---
 
 Open Authenticator is a security-focused project providing an open-source alternative to commercial hardware authenticators. This repository contains the firmware application designed specifically for the Open-Authenticator hardware platform, powered by the ESP32 microcontroller.

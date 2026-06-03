@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- lvgl-demo-embarcadores
+- stm32l476g-discovery-rtos-sensor-project
+- azurertos-dual-core-implementation-for-stm32h747
+- elevourer-portable-intelligent-electronic-load
+- reflow-oven-with-micropython-lvgl
+- stm32-pid-temperature-control-implementation
 ---
 
 ## Overview

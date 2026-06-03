@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-04-21T05:18:54+00:00'
 updatedAt: '2026-04-21T05:18:54+00:00'
+relatedProjects:
+- freertos-modern-c-wrappers
+- freertos-cpp
+- freertos-add-ons
+- zephyr-c-20-framework-zpp
+- frt-fl-ssie-s-ready-freertos-threading
+- hsmcpp-hierarchical-state-machine-c-library
 ---
 
 FreeRTOS is the industry standard for real-time operating systems in the embedded world, but its C-based API often requires significant boilerplate and manual management of opaque pointers and macros. The `xf` library (short for eXtension to FreeRTOS) addresses these challenges by providing a modern C++ wrapper that emphasizes safety, ergonomics, and developer speed while honoring the original design choices of FreeRTOS.

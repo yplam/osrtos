@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-rtic-project-template
+- project-shadow-flight
+- freertos-rust
+- rust-stub-library-for-apache-nuttx
+- stm32h743zi-rust-playground
+- rust-ir-thermometer-firmware
 ---
 
 ## Overview

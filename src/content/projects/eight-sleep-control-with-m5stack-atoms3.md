@@ -22,6 +22,13 @@ isShow: true
 image: /202601/atoms3-eightsleep.webp
 createdAt: '2026-01-23'
 updatedAt: '2026-01-23'
+relatedProjects:
+- esp32-c6-matter-over-thread-roof-window-controller
+- home-assistant-epaper-remote
+- comfosense-touch-zehnder-comfoair-q350-mqtt-bridge-controller
+- m5stack-esphome-integrations
+- esphome-hitachi-h-link-ac-component
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
 ---
 
 ## Overview

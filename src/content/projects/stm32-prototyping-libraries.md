@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-framework
+- cmsis-for-stm32-development
+- cmsis-drivers-for-efm32-and-stm32
+- stm32-cmsis-libraries
+- stm32f103-cmsis-libraries-and-projects
+- stm32h5-classic-core-middleware-coremw-mcu-firmware-package
 ---
 
 ## Streamlining STM32 Development

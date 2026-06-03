@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32-framework
+- moe-minds-of-embedded-system
+- amast-minimalist-asynchronous-toolkit
+- micro-ros-stm32-template
+- stm32-libopencm3-freertos-platformio-template
+- tism-the-incredible-state-machine
 ---
 
 ## Overview

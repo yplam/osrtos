@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-02-04'
 updatedAt: '2026-02-04'
+relatedProjects:
+- xiaozhi-ai-desk-buddy-esp32-s3
+- ani-emo-eye
+- sesame-robot-micro
+- nebaura-labs-mote
+- pixlpal-m1-firmware
+- fluxgarage-roboeyes-library
 ---
 
 ## Overview

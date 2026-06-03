@@ -21,6 +21,13 @@ isShow: true
 image: /202601/openfire.webp
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- openfire-the-open-four-infa-red-emitter-light-gun-system
+- lvgl-watch-firmware-for-open-smartwatch
+- beamstalker
+- omote-open-universal-remote
+- esp32-bit-pirate
+- esp32-bus-pirate
 ---
 
 ## Overview

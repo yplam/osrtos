@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- autonetwork-library
+- losant-mqtt-mongoose-os-example
+- arduino-esp-utils
+- effortless-spiffs
+- esp-fs-webserver
+- configassist-esp32-esp8266
 ---
 
 ## Overview

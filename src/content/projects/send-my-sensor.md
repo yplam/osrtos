@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- openhaystack-zephyr-firmware
+- ruuvitag-firmware-for-zephyr-os
+- sensilo-ble-sensor-node
+- esp32-watch-for-openhaystack
+- lorawan-end-device-with-freertos-and-esp32
+- bluetooth-mesh-sensor-network
 ---
 
 ## Overview

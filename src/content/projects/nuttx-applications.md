@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nuttx-api-examples
+- nuttx-development-docker-environment
+- nuttx-real-time-operating-system
+- x-cube-azrtos-g4-azure-rtos-software-expansion-for-stm32cube
+- stm32h5-classic-core-middleware-coremw-mcu-firmware-package
+- stm32cuben6-mcu-firmware-package
 ---
 
 ## Overview

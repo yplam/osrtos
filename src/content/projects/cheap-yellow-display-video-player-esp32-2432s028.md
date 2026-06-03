@@ -18,6 +18,13 @@ isShow: true
 image: /202601/Cheay-Yellow-Display-3.webp
 createdAt: '2026-01-29'
 updatedAt: '2026-01-29'
+relatedProjects:
+- unigraphic-video-player-for-ili9341v
+- st7735-video-playback-for-stm32
+- netshlix
+- micropython-library-for-the-cheap-yellow-display-cyd
+- animated-gif-stored-in-sd-card-and-played-from-spiffs-on-a-round-display-gc9a01-with-the-esp32
+- animated-gif-on-a-320x240-lcd-display-ili9341-with-the-esp32
 ---
 
 ## Overview

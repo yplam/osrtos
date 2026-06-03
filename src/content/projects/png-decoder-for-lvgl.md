@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- gif-decoder-for-lvgl
+- bmp-decoder-for-lvgl
+- sjpg-decoder-for-lvgl
+- qr-code-library-for-lvgl
+- lottie-animation-library-for-lvgl
+- lvgl-for-embedded-linux
 ---
 
 ## Overview

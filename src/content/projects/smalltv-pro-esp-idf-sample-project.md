@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-03-31T23:28:06+00:00'
 updatedAt: '2026-03-31T23:28:06+00:00'
+relatedProjects:
+- lvgl-barebones-example-for-sunton-esp32-2432s028r
+- minimal-lcd-demonstration-on-esp-wrover-kit
+- zephyr-lvgl-sample-for-nrf52840-mdk
+- lvgl-port-for-esp32
+- lvgl-8-on-wt32-sc01-with-arduino
+- jc3248w535-lvgl-v9-test-project
 ---
 
 The Smalltv-Pro is a compact, aesthetically pleasing hardware device featuring a vibrant 240x240 LCD display, commonly used as a smart weather clock or desktop accessory. While many users interact with this hardware through factory firmware or high-level home automation integrations, this project provides a professional-grade starting point for developers who want to leverage the full power of the Espressif IoT Development Framework (ESP-IDF).

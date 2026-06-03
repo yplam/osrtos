@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- mbed-memtrace-logger
+- mkdbg-embedded-crash-diagnostics-over-uart
+- freertos-visualizer
+- ctracer
+- zview-zephyr-rtos-runtime-visualizer
+- cmsis-parser
 ---
 
 ## Overview

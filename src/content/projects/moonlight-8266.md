@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- esp8266-home-automation
+- rgblight-iot-rgb-led-controller
+- rainnow-core
+- esp8266-wifi-relay-and-bahtinov-masks-controller
+- iot-esp8266-serial-forwarder
+- volna-2bw42-weather-station-firmware
 ---
 
 ## Overview

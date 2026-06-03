@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-31'
 updatedAt: '2026-01-31'
+relatedProjects:
+- hd2-macropad
+- gesture-detecting-macro-keyboard
+- esp32berry
+- piokmbox-high-performance-usb-hid-passthrough-for-rp2350
+- lumen
+- deck
 ---
 
 ## Overview

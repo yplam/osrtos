@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-29'
 updatedAt: '2026-01-29'
+relatedProjects:
+- human-following-robot
+- cuybot-v1-opensource-smartcar-project
+- watchbot-system
+- 16-ir-array-pid-line-follower-robot-using-esp32
+- smart-moon-transportation-system
+- pyespcar-micropython-esp32-wifi-car
 ---
 
 ## Overview

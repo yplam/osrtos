@@ -23,6 +23,13 @@ isShow: true
 image: /202601/cube_clock.webp
 createdAt: '2026-01-22'
 updatedAt: '2026-01-22'
+relatedProjects:
+- elekstube-ips-custom-firmware
+- desk-weather-clock-geekmagic-s3
+- geekmagic-open-firmware
+- esp8266-mywidget
+- esp8266-electronic-timekeeper
+- wt32-sc01-plus-smart-desk-companion
 ---
 
 ## Overview

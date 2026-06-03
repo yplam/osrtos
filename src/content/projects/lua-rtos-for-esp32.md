@@ -28,6 +28,13 @@ isShow: true
 image: /202512/lua-rtos-esp32.webp
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lua2rtt
+- iotjs-plus-tizenrt
+- xc-os-a-lightweight-graphical-os-for-mcus
+- micropython-and-lvgl-firmware-for-esp32
+- rtos-wot
+- lispbm-lbm
 ---
 
 # Lua RTOS for ESP32: A Scriptable Real-Time Operating System

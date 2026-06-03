@@ -30,6 +30,13 @@ isShow: true
 image: /202512/esp-fs-webserver.webp
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp32-ota-firmware-update-and-file-management
+- esp32-async-web-server-with-spiffs-and-ota
+- devfsuploadesp
+- esp-async-http-update-server
+- configassist-esp32-esp8266
+- webserver-esp32-w5500
 ---
 
 The `esp-fs-webserver` library is a powerful tool for developers building web-based interfaces on ESP32 and ESP8266 microcontrollers. It evolved from the standard `FSBrowser.ino` examples found in the ESP core libraries, transforming a complex set of manual file-handling routines into a streamlined, object-oriented Arduino library. By abstracting the complexities of filesystem management and HTTP routing, it allows developers to focus on building responsive user interfaces rather than low-level server logic.

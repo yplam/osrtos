@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- azurertos-dual-core-implementation-for-stm32h747
+- h747-camera-dual-core-stm32h747-camera-and-display-system
+- stm32l476g-discovery-rtos-sensor-project
+- stm32-weather-station
+- lvgl-demo-embarcadores
+- erikaos-real-time-watch
 ---
 
 ## Overview

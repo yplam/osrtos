@@ -31,6 +31,13 @@ version: v1.2.9
 lastUpdated: '2025-08-17'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- zlib-compression-and-decompression-for-esp-idf
+- bleota-esp32-ota-updates-over-ble
+- esp-fs-webserver
+- esp32-ota-firmware-update-and-file-management
+- esp8266sdupdater
+- timezone-generic-library
 ---
 
 Managing files on embedded systems often involves a delicate balance between storage capacity and data transfer speeds. The ESP32-targz library provides a robust solution for developers working with ESP32, ESP8266, or RP2040 microcontrollers who need to handle compressed archives. By bridging the gap between filesystems and compression formats, this library allows for the efficient storage and transmission of data using standard .tar and .gz formats.

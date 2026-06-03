@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- micropython-for-flipper-zero
+- micropython-for-w601-iot-board
+- freertos-port-for-raspberry-pi
+- micropython-port-for-rt-thread
+- pycopy-standard-library-pycopy-lib
+- pico-demos-for-rp2040
 ---
 
 MicroPython is a lean and efficient implementation of the Python 3 programming language that is optimized to run on microcontrollers and in constrained environments. While most Raspberry Pi users are accustomed to running Python within a full Linux distribution like Raspberry Pi OS, the `micropython-raspberrypi` project takes a different approach: bare metal.

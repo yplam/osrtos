@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mongoose-os-create-bin-file-action
+- mongoose-os-docker-image
+- mongoose-os-docker-action
+- common-tools-for-mongoose-os
+- tasmota-to-mongoose-os-converter
+- mos-native
 ---
 
 ## Streamlining Mongoose OS Firmware Management

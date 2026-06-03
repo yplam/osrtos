@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mbed-to-ibm-watson-iot-platform
+- aws-iot-with-the-l475vg-iot01a-on-mbed-os
+- mbed-to-google-cloud-iot
+- mbed-to-azure-iot-hub
+- mbed-os-client-example
+- pelion-device-management-client-example-for-mbed-os
 ---
 
 Connecting microcontrollers to cloud services requires a robust combination of networking stacks, security protocols, and application logic. The Mbed-to-AWS-IoT project serves as a practical example for developers looking to integrate Mbed OS devices with the AWS IoT Core ecosystem. By leveraging MQTT over a secure TLS connection, it ensures that data transmitted between the edge device and the cloud remains encrypted and authenticated.

@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-04-01T00:03:12+00:00'
 updatedAt: '2026-04-01T00:03:12+00:00'
+relatedProjects:
+- smalltv-pro-esp-idf-sample-project
+- esp32-8048s050c-with-lvgl-9-4-and-freertos
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- esp32-cheap-yellow-display-micropython-lvgl
+- lvgl-port-for-esp32
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
 ---
 
 The Sunton 2432S028R, widely known in the maker community as the "Cheap Yellow Display" (CYD), is a versatile development board that packs an ESP32, a 2.8-inch color touchscreen, and several peripherals into an affordable package. While many examples for this board rely on the Arduino framework, this project provides a streamlined, barebones template for developers who prefer the professional Espressif IoT Development Framework (ESP-IDF).

@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- gaggimate
+- la-marzocco-round-controller
+- diy-smart-coffee-and-espresso-scale
+- openhasp-firmware
+- lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
+- reflow-oven-with-micropython-lvgl
 ---
 
 ## Overview

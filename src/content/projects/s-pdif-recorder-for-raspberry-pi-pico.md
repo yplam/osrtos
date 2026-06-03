@@ -25,6 +25,13 @@ isShow: true
 image: /202603/pico_spdif_recorder_pcb_front.webp
 createdAt: '2026-03-22'
 updatedAt: '2026-03-22'
+relatedProjects:
+- esp32-pcm1808-sound-recorder
+- micropython-i2s-examples
+- audio-recorder
+- mcp2518fd-can-fd-logger-for-raspberry-pi-pico
+- pc-6001mkii-emulator-for-raspberry-pi-pico
+- usbsid-pico
 ---
 
 ## High-Resolution Audio Recording on the Raspberry Pi Pico

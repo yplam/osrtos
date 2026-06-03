@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-demo-test
+- esp-lvgl
+- lvgl-demo-embarcadores
+- lvgl-display-and-touchpad-drivers
+- lvgl-for-embedded-linux
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
 ---
 
 ## Overview

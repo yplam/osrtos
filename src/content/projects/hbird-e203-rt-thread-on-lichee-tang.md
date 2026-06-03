@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- picorv32-rt-thread-on-lichee-tang-eg4s20
+- rt-thread-for-picorv32-on-lichee-tang
+- nuclei-software-development-kit-nuclei-sdk
+- stm32f1-rtos-example-project
+- rt-thread-smart-porting-for-risc-v-qemu-and-k210
+- cmsis-rtos-on-micro-bit
 ---
 
 ## Overview

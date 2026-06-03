@@ -18,6 +18,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- anjay-zephyr-client
+- pelion-device-management-client-example-for-mbed-os
+- golioth-zephyr-sdk
+- zephyr-coaps-client-with-tinydtls
+- openthread-rtos
+- pyrinas-zephyr
 ---
 
 Anjay-zephyr is a specialized module designed to bring the power of the Anjay LwM2M (Lightweight Machine-to-Machine) library to the Zephyr RTOS ecosystem. Developed by AVSystem, this integration allows developers to build robust, standards-compliant IoT applications that benefit from LwM2M's device management capabilities, including remote configuration, monitoring, and over-the-air firmware updates.

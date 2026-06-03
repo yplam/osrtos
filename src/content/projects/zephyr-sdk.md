@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- swedish-embedded-platform-sdk
+- docker-containers-for-the-zephyr-rtos
+- nuclei-software-development-kit-nuclei-sdk
+- swedish-embedded-workstation
+- spotflow-observability-device-sdk
+- ameba-rtos-sdk
 ---
 
 The Zephyr SDK is a critical component of the Zephyr RTOS ecosystem, providing the necessary infrastructure to compile, link, and debug embedded applications across a vast array of hardware architectures. Unlike traditional toolchains that might target a single processor family, the Zephyr SDK is a multi-architecture powerhouse, ensuring that developers have a consistent environment whether they are working on a low-power ARM Cortex-M microcontroller or a high-performance RISC-V SoC.

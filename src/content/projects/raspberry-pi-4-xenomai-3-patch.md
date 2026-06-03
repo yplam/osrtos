@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- xenomai-on-raspberry-pi
+- xenomai-3-for-raspberry-pi-4
+- xenomai-3-for-raspberry-pi-0-1-linux-kernel-4-1-21
+- xenomai-3-for-raspberry-pi-2-and-3
+- xenomai-3-exercises-for-raspberry-pi-4
+- raspberry-pi-rtos-rpi-rtos
 ---
 
 ## Real-Time Linux on Raspberry Pi 4

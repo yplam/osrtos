@@ -23,6 +23,13 @@ star: 29
 lastUpdated: '2022-01-11'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- fpv-drone-stm32f411-flight-controller
+- stm32-quadcopter-low-cost-quadcopter-design
+- holy-stone-h120d-drone-protocol-reverse-engineering
+- avem
+- droners
+- catpilot
 ---
 
 Building a custom flight controller is a classic challenge in the embedded systems world, and the **drone_stm32f1** project provides a robust, open-source foundation for doing exactly that. Centered around the ubiquitous STM32F103C8T6—famously known as the 'BluePill'—this project offers a full-stack approach to drone development, covering everything from low-level firmware to high-level ground station software.

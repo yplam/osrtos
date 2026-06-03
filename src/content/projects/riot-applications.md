@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- tinyos-apps-for-msp430f5529
+- tinyos-nesc-telosb-programs
+- atmega128rfa1-tinyos-kth-wsn-project
+- zephyr-lorawan-lora-examples
+- building-wireless-sensor-networks-with-openthread
+- nuttx-applications
 ---
 
 The RIOT Applications repository serves as a historical and functional collection of tools designed to extend the capabilities of the RIOT operating system. While many of these applications have recently been integrated directly into the main RIOT codebase as examples, this repository remains a valuable reference for developers looking to understand how to build complex, feature-rich applications on top of the RIOT kernel.

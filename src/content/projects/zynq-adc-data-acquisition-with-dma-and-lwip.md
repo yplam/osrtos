@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- hsdaoh-rp2350-high-speed-data-acquisition-over-hdmi
+- w5500-lwip-binding-for-freertos
+- udp-echo-server-for-stm32f407-and-enc28j60
+- transfer-files-over-ethernet-with-stm32-and-freertos
+- audio-recorder
+- stm32h745-ethernet-with-lwip-and-freertos
 ---
 
 ## High-Speed Data Acquisition on ZYNQ

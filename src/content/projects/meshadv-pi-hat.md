@@ -26,6 +26,13 @@ isShow: true
 image: /202603/meshadv-pi-hat.webp
 createdAt: '2026-03-15'
 updatedAt: '2026-03-15'
+relatedProjects:
+- pinedio-stack-bl604-on-apache-nuttx-rtos
+- pymc-repeater
+- esp32-portapack-esp32pp
+- esp32-bus-expander
+- meshtnc
+- espuno-pi-zero
 ---
 
 ## Overview

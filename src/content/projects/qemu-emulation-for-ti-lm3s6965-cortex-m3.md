@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f1-rtos-example-project
+- cmsis-rtos-on-micro-bit
+- cortex-m33-trustzone-experiments-on-qemu-an505
+- tiva-tm4c1294-launchpad-freertos-demo
+- seal-test-bare-bones-example
+- echronos-on-stm32f4x-nucleo-board
 ---
 
 ## Overview

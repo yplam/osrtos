@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sdcard-boot-with-ota-for-micropython
+- esp32-ble-ota-arduino
+- esp-async-http-update-server
+- esp32-ota-firmware-update-and-file-management
+- mqboard-micropython-mqtt-micro-framework
+- bleota-esp32-ota-updates-over-ble
 ---
 
 ## Overview

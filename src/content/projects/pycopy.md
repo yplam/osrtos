@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- pycopy-standard-library-pycopy-lib
+- pikapython
+- picoweb
+- semito-v-micropython-compatibility-layer-mcl
+- microdot
+- micropython-esp32-ulp
 ---
 
 Pycopy is a minimalist, lightweight, and extensible implementation of the Python programming language, specifically designed to scale from powerful cloud servers down to resource-constrained microcontrollers. Originally based on MicroPython, Pycopy follows a philosophy of simplicity and efficiency, aiming to provide a "core" Python experience that is both powerful and small enough for embedded use.

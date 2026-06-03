@@ -24,6 +24,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32f4-cmsis-lessons
+- chibios-rt-examples-for-stm32f401re-nucleo
+- stm32f103rb-templates-and-examples
+- cmsis-for-stm32-development
+- h-c-l-p-tr-nh-stm32f1
+- rust-embedded-examples
 ---
 
 ## Overview

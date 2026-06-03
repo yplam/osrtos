@@ -23,6 +23,13 @@ topics:
 isShow: true
 createdAt: '2026-04-24T09:35:16+00:00'
 updatedAt: '2026-04-24T09:35:16+00:00'
+relatedProjects:
+- tenstorrent-zephyr-platforms
+- zephyr-rtos-ai-harness
+- wallabmc
+- ruuvitag-firmware-for-zephyr-os
+- multizone-iot-sdk
+- openmmc
 ---
 
 Tenstorrent is a leader in high-performance AI accelerator hardware, and the TT-System-Firmware repository provides the essential software infrastructure for managing these complex systems. Built on the Zephyr RTOS, this firmware stack is designed to be modular, secure, and scalable, catering to the unique requirements of Tenstorrent’s AI ULC (Ultra-Low-Cost) architectures.

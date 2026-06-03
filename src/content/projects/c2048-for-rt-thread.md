@@ -17,6 +17,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- threes-for-rt-thread
+- rtt-tetris
+- termbox-for-rt-thread
+- micropython-port-for-rt-thread
+- donut-for-rt-thread
+- sel4-core-platform-sel4cp-workshop
 ---
 
 The 2048 puzzle game, originally created by Gabriele Cirulli, became a global phenomenon for its simple yet addictive mechanics. While most people are familiar with the mobile or web versions, the embedded world often finds creative ways to bring these experiences to resource-constrained environments. The **c2048** project is a dedicated port of the Linux terminal version of 2048 (originally by Maurits) specifically tailored for the **RT-Thread** real-time operating system.

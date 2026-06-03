@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- project-shadow-flight
+- filtered-inertial-rotation-module-firm
+- move-on-helium-sensors
+- suchai-flight-software
+- stm32l476g-discovery-rtos-sensor-project
+- lfr-flight-software
 ---
 
 ## Overview

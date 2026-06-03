@@ -20,6 +20,13 @@ isShow: true
 image: /202601/proto-light.webp
 createdAt: '2026-01-30'
 updatedAt: '2026-01-30'
+relatedProjects:
+- m5nanoc6-zigbee-test
+- quntis-led-controller
+- smart-lighting-system-using-esp32
+- esp32-32x32-rgb-matrix-controller
+- q-sensor-multi-functional-zigbee-air-quality-sensor
+- moonlight-8266
 ---
 
 ## Overview

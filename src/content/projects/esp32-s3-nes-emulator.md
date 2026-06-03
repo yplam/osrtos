@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-04-20T08:20:56+00:00'
 updatedAt: '2026-04-20T08:20:56+00:00'
+relatedProjects:
+- anemoia-esp32
+- anemoia-esp32-nes-emulator
+- pico-smsplus-sega-master-system-and-game-gear-emulator
+- cardputer-game-station
+- picopeanutgb-game-boy-emulator-for-rp2350
+- retrojam-multi-retro-game-console-emulator
 ---
 
 Retro gaming enthusiasts have a new way to enjoy classic 8-bit titles with this DIY handheld NES emulator project. Built specifically for the powerful ESP32-S3, this emulator leverages the microcontroller's dual-core architecture to deliver full-speed gameplay, crisp visuals, and high-quality audio. By building upon the established `esp-nofrendo` codebase, this implementation provides a polished experience that captures the essence of the original Nintendo Entertainment System hardware.

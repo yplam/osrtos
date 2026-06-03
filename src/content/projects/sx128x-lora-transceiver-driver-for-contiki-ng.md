@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sx127x-lora-transceiver-driver-for-contiki-ng
+- contiki-lora-tsch-project
+- nrf24-driver-for-contiki-os
+- kratos-contiki-os-for-lora
+- kw41z-rf-driver-for-arm-mbed-nanostack
+- ql-tsch-implementation-for-contiki-ng
 ---
 
 The SX128X driver provides a specialized interface for Semtech's SX128x series of LoRa transceivers within the Contiki-NG ecosystem. Developed primarily as a research tool, this driver facilitates the exploration of Time-Slotted Channel Hopping (TSCH) protocols in conjunction with LoRa modulation, a combination that offers unique possibilities for robust, long-range, and low-power wireless networking.

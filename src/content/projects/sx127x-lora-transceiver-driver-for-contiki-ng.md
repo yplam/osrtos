@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- sx128x-lora-transceiver-driver-for-contiki-ng
+- contiki-lora-tsch-project
+- nrf24-driver-for-contiki-os
+- kratos-contiki-os-for-lora
+- ql-tsch-implementation-for-contiki-ng
+- kw41z-rf-driver-for-arm-mbed-nanostack
 ---
 
 The SX127X LoRa transceiver driver is a dedicated implementation for the Contiki-NG operating system, specifically designed to bridge the gap between low-power wide-area network (LPWAN) hardware and modern wireless sensor network protocols. Originally developed to study the effectiveness of the Time-Slotted Channel Hopping (TSCH) protocol in conjunction with LoRa technology, this driver provides the necessary abstractions to use Semtech SX1272/SX1276 radios within the Contiki-NG ecosystem.

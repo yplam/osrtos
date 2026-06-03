@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- openthread-rtos
+- 6lbr-on-telecontrolli-devices-x-ip4t-x-ip5
+- anjay-zephyr
+- coap-eap-with-eap-noob-in-contiki
+- 6lowpan-ble-bridge
+- zephyr-wi-fi-and-tcp-udp-connection-demo
 ---
 
 ## Overview

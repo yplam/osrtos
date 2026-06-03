@@ -20,6 +20,13 @@ topics:
 isShow: true
 createdAt: '2026-04-08T23:40:31+00:00'
 updatedAt: '2026-04-08T23:40:31+00:00'
+relatedProjects:
+- swift-on-flipper-zero
+- rust-embedded-examples
+- stm32-cortex-m4-code-examples
+- stm32f4-cmsis-lessons
+- chibios-rt-examples-for-stm32f401re-nucleo
+- simple-cmsis-led-blinking-applications
 ---
 
 The evolution of Swift has brought it to the world of microcontrollers through the "Embedded Swift" feature introduced in Swift 6.0. This repository provides a practical look at how to leverage this modern, safety-focused language on the STM32C011, a cost-effective ARM Cortex-M0+ microcontroller. Specifically designed for the STM32C0116-DK development kit, these examples demonstrate that Swift can operate efficiently in resource-constrained environments with as little as 6 KiB of SRAM and 32 KiB of flash.

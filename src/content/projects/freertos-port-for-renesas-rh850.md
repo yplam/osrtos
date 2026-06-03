@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- freertos-port-for-risc-v
+- freertos-port-for-avr-xmega
+- arduino-freertos-library
+- freertos-port-for-teensy-3-6-4-0-4-1
+- freertos-port-for-raspberry-pi
+- freertos-for-cadence-tensilica-hifi-4-dsp
 ---
 
 ## Overview

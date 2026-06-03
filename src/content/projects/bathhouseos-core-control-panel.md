@@ -30,6 +30,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- bathhouseos
+- bathos
+- aquarios-project-aquarius
+- homebrew-tinyos-for-msp430
+- buttfinity
+- tanksync
 ---
 
 The BathHouseOS Core Control Panel is a unique sub-operating system designed to act as the central nervous system for a suite of bathroom-focused embedded devices. In an era where the Internet of Things (IoT) often implies heavy reliance on cloud services and external servers, this project takes a different path by prioritizing local, wired or wireless connections that do not require an internet connection to function.

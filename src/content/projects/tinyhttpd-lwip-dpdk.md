@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- udp-ping-pong-on-lwip-and-dpdk
+- lwip-contrib-unix-port
+- lwip-for-linux
+- lwip-kcp-integration
+- lwip-ptp-precision-time-protocol-for-lwip
+- straight-httpd-embedded-web-server-simulator
 ---
 
 ## Overview

@@ -20,6 +20,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- chronos-watchy
+- twatch-v3-firmware-for-esp32
+- zephyrwatch
+- zswatch
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
+- infinitime
 ---
 
 The CHRZ Watch project is a comprehensive custom firmware implementation for the I6HRC smartwatch, a wearable device powered by the Nordic NRF52832 SoC. While many budget smartwatches ship with limited, proprietary software, CHRZ Watch leverages the ARM Mbed RTOS to provide a modern, extensible, and power-efficient alternative. This project is particularly notable for its deep integration with the open-source Android companion app, Gadgetbridge, allowing for a fully private and customizable wearable experience.

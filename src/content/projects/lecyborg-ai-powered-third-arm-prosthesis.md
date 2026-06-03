@@ -22,6 +22,13 @@ isShow: true
 image: /202602/myoware_LeCyborg.webp
 createdAt: '2026-02-01'
 updatedAt: '2026-02-01'
+relatedProjects:
+- watchbot-system
+- echolens-ai-powered-smart-glasses
+- roarm-m2-robotic-arm-control-firmware
+- scara-drawing-robot
+- gesture-detecting-macro-keyboard
+- minimal-self-perceiving-embodiment-for-large-language-models
 ---
 
 ## Overview

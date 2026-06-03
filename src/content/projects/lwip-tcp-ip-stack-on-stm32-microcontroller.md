@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- stm32h745-ethernet-with-lwip-and-freertos
+- rtems-lwip-stm32-integration
+- stm32-lwip-mqtt-demo
+- sk-mstm32f107-demo-board-example
+- stm32f429-nucleo-lwip-and-freertos-template
+- udp-echo-server-for-stm32f407-and-enc28j60
 ---
 
 ## Overview

@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lvgl-rust-to-wasm
+- eclipse-simulator-for-lvgl-using-sdl
+- lvgljs
+- lvgl-port-for-windows
+- luavgl
+- lvgl-for-pinephone-and-webassembly-with-zig-and-apache-nuttx-rtos
 ---
 
 ## Bringing Embedded UIs to the Web

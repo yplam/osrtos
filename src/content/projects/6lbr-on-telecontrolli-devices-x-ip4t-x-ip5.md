@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- home-automation-simulation-using-contiki-os
+- 6lowpan-ble-bridge
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- mbed-os-6-stm32-iot-ethernet-controller
+- low-power-wireless-networking-for-iot-lpiot
+- homeiot-smart-home-automation-system
 ---
 
 Connecting low-power microcontrollers to the Internet of Things requires a robust networking stack and efficient hardware. Telecontrolli has addressed this for their CC1310-based Smart Devices by adapting the Contiki Operating System to create a comprehensive 6LoWPAN Border Router (6LBR) solution. This project specifically targets the X.IP4T SmartModule and the X.IP5 SmartMachine, providing the necessary firmware to bridge wireless sensor networks with standard IPv6 networks.

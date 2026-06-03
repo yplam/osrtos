@@ -24,6 +24,13 @@ star: 5
 lastUpdated: '2024-03-17'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
+- hunter-douglas-powerview-ble-for-home-assistant
+- esp32-c6-matter-over-thread-roof-window-controller
+- esp32-jarolift-controller
+- smart-home-automation-with-freertos-and-esp32
+- cuybot-v1-opensource-smartcar-project
 ---
 
 Automating home fixtures often requires a balance between high-torque mechanical power and smart, networked control. The **ESP32 MQTT Motor Control** project by JJFourie provides a robust solution for this by repurposing a 12V automotive wiper motor to manage heavy living room blinds. By leveraging the ESP32's dual-core capabilities and MQTT connectivity, this project transforms a standard DC motor into a precision-controlled smart device integrated with Home Assistant.

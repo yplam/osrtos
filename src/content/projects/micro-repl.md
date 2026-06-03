@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-03-06'
 updatedAt: '2026-03-06'
+relatedProjects:
+- arduino-lab-for-micropython
+- jupyter-micropython-kernel
+- raspberry-pi-pico-web-server-control
+- picoshell
+- micropico-visual-studio-code-extension
+- smolos
 ---
 
 ## Overview

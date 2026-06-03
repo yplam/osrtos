@@ -25,6 +25,13 @@ isShow: true
 image: /202603/acid-drop.webp
 createdAt: '2026-03-07'
 updatedAt: '2026-03-07'
+relatedProjects:
+- esp32berry
+- xterminal-esp32-handheld
+- micropython-and-lvgl-firmware-for-esp32
+- tab5-launcher
+- pixlpal-m1-firmware
+- melody-machine
 ---
 
 ## Overview

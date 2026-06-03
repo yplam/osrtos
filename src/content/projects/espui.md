@@ -35,6 +35,13 @@ isShow: true
 image: /202512/ui_complete.webp
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- esp-dashboardplus
+- esp-fs-webserver
+- esp8266-wifi-relay
+- esp32-remote-control-with-websocket
+- lvgl-joystick-library
+- arduino-esp-utils
 ---
 
 # ESPUI: Streamlined Web Interfaces for ESP8266 and ESP32

@@ -21,6 +21,13 @@ isShow: true
 image: /202603/devmonitorforpis.webp
 createdAt: '2026-03-05'
 updatedAt: '2026-03-05'
+relatedProjects:
+- lvgl-port-for-raspberry-pi-pico-mdk-arm
+- lvgl-demo-printer-for-raspberry-pi-3
+- pigg-raspberry-pi-and-pi-pico-gpio-remote-control
+- micropython-st7789-lcd-driver
+- bbmonitor
+- st7789-and-lvgl-demo-for-apache-nuttx-rtos
 ---
 
 DevMonitor for Pis is an open-source hardware and software project designed to provide a dedicated system monitoring interface for popular single-board computers. The project specifically targets the Raspberry Pi Zero 2W and the Orange Pi Zero 3, offering tailored expansion board designs and optimized software for each platform.

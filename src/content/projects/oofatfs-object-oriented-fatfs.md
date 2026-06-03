@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- awtk-fs-adapter
+- pico-vfs-a-virtual-file-system-for-raspberry-pi-pico
+- esp32-spiffs-with-directory-support-example
+- ff-iso-stm32-multitasking-fatfs-sdio
+- stm32-fatfs-and-freertos-integration
+- littlefs2-idiomatic-rust-api-for-littlefs
 ---
 
 ## Overview

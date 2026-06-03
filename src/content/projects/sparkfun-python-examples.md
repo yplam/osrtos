@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-28'
 updatedAt: '2026-01-28'
+relatedProjects:
+- micropython-examples-for-01studio-development-boards
+- micropython-samples-and-drivers
+- mbot2-and-cyberpi-programming-examples
+- awesome-circuitpython
+- awesome-micropython
+- micropython-i2s-examples
 ---
 
 # Exploring SparkFun Python Examples

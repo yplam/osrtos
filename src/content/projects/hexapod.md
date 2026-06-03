@@ -21,6 +21,13 @@ topics:
 isShow: true
 createdAt: '2026-04-03T05:35:58+00:00'
 updatedAt: '2026-04-03T05:35:58+00:00'
+relatedProjects:
+- stm32f103-quadruped-robot
+- papaya-pathfinder
+- openrover-robotic-platform
+- sesame-robot-micro
+- quadruped-robot
+- tny-360-quadruped-robot
 ---
 
 ## Introduction

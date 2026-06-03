@@ -41,6 +41,13 @@ topics:
 isShow: true
 createdAt: '2026-05-20T08:43:02+00:00'
 updatedAt: '2026-05-20T08:43:02+00:00'
+relatedProjects:
+- esp32-bus-pirate
+- esp-hack-fw
+- unigeek-firmware
+- esp32-bus-expander
+- beamstalker
+- bruce-firmware
 ---
 
 ### Multi-Protocol Hardware Hacking

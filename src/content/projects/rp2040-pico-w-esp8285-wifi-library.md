@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-02-26'
 updatedAt: '2026-02-26'
+relatedProjects:
+- asynchttprequest-rp2040w-library
+- asyncudp-rp2040w
+- asyncdnsserver-rp2040w
+- picoosc
+- ble-based-wi-fi-provisioning-for-raspberry-pi-pico-w-pico-2-w
+- pico-w-connection-manager-demo
 ---
 
 ## Overview

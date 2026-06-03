@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
+- melody-machine
+- lumia-esp32
+- tinyradio9-for-wt32-sc01-plus
+- lvgl-demo-embarcadores
+- lvgl-for-pinephone-and-webassembly-with-zig-and-apache-nuttx-rtos
 ---
 
 ## Overview

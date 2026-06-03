@@ -14,6 +14,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- smartorchard
+- aquarium-app
+- espmonitor-iot-environmental-monitoring-system
+- smart-dc-maintenance
+- smart-orchard
+- home-automation-simulation-using-contiki-os
 ---
 
 Coral reefs are among the most diverse and valuable ecosystems on Earth, but they are increasingly threatened by rising ocean temperatures. To address this, the Coral Reef Monitoring System provides a simulated IoT framework for tracking environmental health in real-time. By leveraging low-power wireless sensor networks, this project demonstrates how technology can be used to safeguard fragile marine habitats.

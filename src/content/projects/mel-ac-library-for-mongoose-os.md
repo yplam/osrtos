@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mel-ac-demo-app
+- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- telegram-bot-api-for-mongoose-os
+- mongoose-os-relay-library
+- arduino-ir-for-mongoose-os
+- mongoose-os-ir-protocol-library
 ---
 
 ## Overview

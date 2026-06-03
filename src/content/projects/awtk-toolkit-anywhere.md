@@ -23,6 +23,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- luavgl
+- gooey-gui-library
+- eclipse-simulator-for-lvgl-using-sdl
+- lvgl-port-for-arm-cortex-m55-and-mps3-an547
+- awtk-fs-adapter
+- micropython-and-lvgl-firmware-for-esp32
 ---
 
 AWTK, which stands for **Toolkit AnyWhere**, is an open-source GUI engine developed by ZLG (ZhouLiGong). Designed with versatility in mind, it serves as a cross-platform solution for creating beautiful and efficient user interfaces across embedded systems, web browsers, mobile devices, and desktop environments. Beyond being a standalone library, AWTK is also the built-in GUI engine for AWorksOS, ZLG's IoT operating system.

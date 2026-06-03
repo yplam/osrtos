@@ -18,6 +18,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- apache-nuttx-rtos
+- apache-nuttx-for-sf2000
+- phoenix-rtos-project
+- dnx-rtos
+- apache-nuttx-rtos-on-64-bit-risc-v
+- apache-nuttx-rtos-for-pine64-star64
 ---
 
 ## Overview

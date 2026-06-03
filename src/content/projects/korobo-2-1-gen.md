@@ -23,6 +23,13 @@ isShow: true
 image: /202601/image_korobo-2-1.webp
 createdAt: '2026-01-17'
 updatedAt: '2026-01-17'
+relatedProjects:
+- andino-open-source-ros-2-educational-robot
+- openrover-robotic-platform
+- qbit
+- sesame-robot-micro
+- claude-buddy-pico
+- kawaii-useless-robot
 ---
 
 KOROBO (2.1 Gen) is a palm-sized, spherical robot designed to evoke a sense of presence and personality through simple movements and expressions. Developed as an open-source platform by the KORokoro.rOBOt project, this "2.1 Generation" version builds upon previous iterations to provide a more durable and extensible framework for makers and researchers interested in human-robot interaction.

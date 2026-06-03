@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- tensorflow-lite-micro-for-rt-thread
+- edgeai-utensor-embedded-rtos-for-arm-processors
+- torch2cmsis
+- keras-to-cmsis-nn-converter
+- deeploy-dnn-compiler-for-heterogeneous-socs
+- ncnn-mp-neural-network-inference-for-micropython
 ---
 
 ## Overview

@@ -22,6 +22,13 @@ isShow: true
 image: /202602/tinyCore-Quadrant.webp
 createdAt: '2026-02-28'
 updatedAt: '2026-02-28'
+relatedProjects:
+- mpython-board
+- pyespcar-micropython-esp32-wifi-car
+- cyberboard-v2
+- thingbot-subghz
+- objex-link
+- cuybot-v1-opensource-smartcar-project
 ---
 
 ## Overview

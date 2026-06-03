@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mos-rtos
+- freertos-modern-c-wrappers
+- freertos-cpp
+- freertos-port-for-teensy-3-6-4-0-4-1
+- rtems-5-cmake-c-11-starter
+- echronos-on-stm32f4x-nucleo-board
 ---
 
 StateOS is a free real-time operating system (RTOS) specifically engineered for deeply embedded applications. This repository, StateOS_cpp11, provides a modern development environment by integrating C++11 features, most notably `std::thread`, into the RTOS ecosystem. This allows developers to use standard C++ threading primitives while maintaining the deterministic behavior required for real-time embedded systems.

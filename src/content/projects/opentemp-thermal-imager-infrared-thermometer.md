@@ -18,6 +18,13 @@ isShow: true
 image: /202603/opentemp.webp
 createdAt: '2026-03-02'
 updatedAt: '2026-03-02'
+relatedProjects:
+- m5stickcplus2-amg8833-thermal-camera
+- lithermal-thermal-imaging-camera
+- stm32-pocket-game-dev-console
+- rust-ir-thermometer-firmware
+- esp32-thermal-camera-viewer
+- esp8266-mlx90614-temperature-monitor
 ---
 
 OpenTemp is a sophisticated, open-source handheld thermal imaging device designed for makers, engineers, and hobbyists. Combining a high-performance thermal sensor with a powerful microcontroller, it provides a portable solution for visualizing heat patterns, identifying thermal leaks, or exploring the infrared spectrum in real-time.

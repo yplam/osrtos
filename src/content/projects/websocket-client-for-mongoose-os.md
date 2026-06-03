@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- mongoose-os-app-skeleton
+- uart-out-test-app
+- losant-mqtt-mongoose-os-example
+- empty-mongoose-os-app
+- mongoose-os-app-on-stm32f446re
+- websocket-implementation-for-raspberry-pi-pico-w
 ---
 
 Mongoose OS is a popular framework for developing IoT firmware on microcontrollers like the ESP32 and ESP8266. This project serves as a practical implementation of a WebSocket client within the Mongoose OS ecosystem, providing a foundational skeleton for developers looking to integrate real-time, bidirectional communication into their embedded devices.

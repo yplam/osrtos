@@ -15,6 +15,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mqtt-demo-for-stm32-iot-discovery-board-with-thingsboard
+- mbed-to-ibm-watson-iot-platform
+- mongoose-os-environmental-sensors-application
+- mbed-to-aws-iot-example
+- mbed-to-azure-iot-hub
+- mongoose-os-environment-logger
 ---
 
 ## Overview

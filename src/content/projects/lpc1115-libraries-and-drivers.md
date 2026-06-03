@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- lpc43xx-freertos-led-blinking-example
+- stm32-cmsis-libraries
+- stm32-prototyping-libraries
+- stm32f103-cmsis-libraries-and-projects
+- stm32-cortex-m4-code-examples
+- stm32f103rb-templates-and-examples
 ---
 
 ## Overview

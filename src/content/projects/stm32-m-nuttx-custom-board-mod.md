@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- nuttx-rtos-experiments
+- stm32-cmsis-libraries
+- stm32l475-pandora-board-bsp-for-rt-thread
+- stm32-framework
+- rt-thread-bsp-for-stm32f407vet6
+- stm32f103-cmsis-peripheral-configuration
 ---
 
 ## Overview

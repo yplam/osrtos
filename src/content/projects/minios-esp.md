@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2026-04-19T00:03:06+00:00'
 updatedAt: '2026-04-19T00:03:06+00:00'
+relatedProjects:
+- smolos
+- picoshell
+- dnx-rtos
+- breadboardos
+- xc-os-a-lightweight-graphical-os-for-mcus
+- micros
 ---
 
 MiniOS-ESP is a lightweight, Unix-like command-line operating system specifically designed for ESP32 microcontrollers. While many ESP32 projects function as single-purpose firmware, MiniOS-ESP transforms the hardware into a multi-process environment featuring a full shell, persistent storage, and integrated networking utilities. It targets developers and hobbyists looking for a more structured, interactive way to interact with their embedded hardware, particularly when paired with an ST7789 TFT display.

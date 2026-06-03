@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
+relatedProjects:
+- ameba-freertos-pro2-sdk
+- nuclei-software-development-kit-nuclei-sdk
+- ameba-rtos-sdk
+- esp8266-rtos-software-development-kit-sdk
+- rt-thread-board-support-package-for-kendryte-k210
+- micropython-for-kendryte-k210-lobo-port
 ---
 
 ## Overview

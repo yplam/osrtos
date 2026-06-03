@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- c-common-for-rt-thread
+- ds3231-rtc-driver-for-rt-thread
+- rx8900-high-precision-rtc-driver-for-rt-thread
+- c-crc-for-rt-thread
+- aclock-for-rt-thread
+- lwip-ptp-precision-time-protocol-for-lwip
 ---
 
 ## Overview

@@ -20,6 +20,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- wifiexe-esp32-s3-based-badusb
+- stm32-usb-mass-storage-with-fatfs
+- neoducky
+- bluetooth-ducky-esp32-hid-injection-tool
+- stm32-bootloader
+- stm32-fatfs-and-freertos-integration
 ---
 
 ## Introduction to BadSTM

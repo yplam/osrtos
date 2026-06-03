@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-01-20'
 updatedAt: '2026-01-20'
+relatedProjects:
+- esp32-p4-home-assistant-display
+- esp32-s3-smart-home-control-panel
+- openhasp-firmware
+- esphome-lvgl-component
+- lvgl-port-for-esp32
+- betta-ha-panel
 ---
 
 ## Overview

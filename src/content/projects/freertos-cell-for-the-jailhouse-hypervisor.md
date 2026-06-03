@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-28'
 updatedAt: '2025-12-28'
+relatedProjects:
+- rt-hypervisor
+- freertos-for-raspberry-pi-3-64-bit
+- raspberry-pi-rtos-rpi-rtos
+- freertos-port-for-risc-v
+- str-xenomai-real-time-systems-practices
+- xenomai-3-for-raspberry-pi-2-and-3
 ---
 
 ## Overview

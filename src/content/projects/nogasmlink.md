@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-28'
 updatedAt: '2026-01-28'
+relatedProjects:
+- bluetooth-mesh-sensor-network
+- focus-dial
+- esp32-dynamic-iphone-keyless-system
+- euc-dash-esp32-dashboard
+- patient-monitoring-system-using-96boards
+- iot-project-on-hvac
 ---
 
 NogasmLink is an open-source firmware for the ESP32 designed to provide a local, privacy-focused alternative for controlling Lovense devices. By leveraging the ESP32's built-in Bluetooth LE capabilities and an external pressure sensor, the project creates an automated arousal management system that reacts in real-time to physical feedback.

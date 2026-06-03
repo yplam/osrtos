@@ -34,6 +34,13 @@ isShow: true
 image: /202602/yolo26n-esp.webp
 createdAt: '2026-02-11'
 updatedAt: '2026-02-11'
+relatedProjects:
+- esp32-cam-yolo-object-and-animal-detection
+- esp-dl-micropython-binding
+- edge-ai-on-embedded-linux-i-mx-8m-plus
+- stm32n6-getting-started-for-object-detection
+- ncnn-mp-neural-network-inference-for-micropython
+- stm32n6-ai-object-detection-and-h-264-usb-video-streaming
 ---
 
 ## High-Performance Object Detection on the Edge

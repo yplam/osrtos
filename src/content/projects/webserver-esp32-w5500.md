@@ -38,6 +38,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- webserver-esp32-enc
+- https-server-generic-library
+- asyncwebserver-esp32-w5500
+- asyncwebserver-esp32-sc-w5500
+- asyncwebserver-ethernet
+- asynchttpsrequest-esp32-ethernet
 ---
 
 ## Overview

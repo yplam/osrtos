@@ -20,6 +20,13 @@ topics:
 isShow: false
 createdAt: '2025-12-31'
 updatedAt: '2025-12-31'
+relatedProjects:
+- iot-labs-with-contiki-os
+- low-power-wireless-networking-for-iot-lpiot
+- internet-of-things-home-challenges
+- building-wireless-sensor-networks-with-openthread
+- smart-dc-maintenance
+- mongoose-os-samples-for-esp32
 ---
 
 ## Overview

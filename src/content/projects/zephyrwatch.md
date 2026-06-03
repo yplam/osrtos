@@ -21,6 +21,13 @@ isShow: true
 image: /202603/300px-ESP32-S3-Touch-LCD-1.28.webp
 createdAt: '2026-03-22'
 updatedAt: '2026-03-22'
+relatedProjects:
+- zswatch
+- opentimewatch-os
+- hypnos
+- infinitime
+- twatch-v3-firmware-for-esp32
+- ov-watch
 ---
 
 ZephyrWatch is an open-source smartwatch project designed to bring a modern, modular firmware experience to wearable hardware. Built on the Zephyr Real-Time Operating System (RTOS), it leverages a robust ecosystem of drivers and stacks to create a functional and extensible timepiece. The project specifically targets the Waveshare ESP32-S3-Touch-LCD-1.28, a circular display module that combines a powerful dual-core SoC with a capacitive touch interface.

@@ -15,6 +15,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- stm32-bare-metal-code-generator
+- cmsis-svd-srcgen
+- svdsuite
+- torch2cmsis
+- development-utils
+- keras-to-cmsis-nn-converter
 ---
 
 ## Streamlining STM32 Development with CMSIS-Parser

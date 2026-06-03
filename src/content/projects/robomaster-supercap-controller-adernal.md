@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-03-07'
 updatedAt: '2026-03-07'
+relatedProjects:
+- stm32-synchronous-rectification-buck-boost-digital-power-supply
+- opendualmotordriver
+- sw32-4-channel-e-stim
+- elevourer-portable-intelligent-electronic-load
+- robomates-firmware
+- roarm-m2-robotic-arm-control-firmware
 ---
 
 ## Overview

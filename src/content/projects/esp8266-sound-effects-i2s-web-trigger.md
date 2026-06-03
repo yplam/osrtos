@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
+relatedProjects:
+- esp32-web-server-using-spiffs
+- esp32-i2s-microphone-stream
+- z906-remote
+- esp8266-web-server-and-spiffs-integration
+- radiojkk32-multifunctional-internet-radio-player
+- esp32-monaco-editor-spiffs
 ---
 
 ## Overview

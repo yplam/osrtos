@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-01-29'
 updatedAt: '2026-01-29'
+relatedProjects:
+- lvgl-port-for-esp32
+- lvgl-for-raspberry-pi-pico-hub75-led-matrix
+- lvgl-port-for-m5stack-core2
+- esp32-tux
+- lilygo-t-display-s3-boilerplate
+- lvgl-8-on-wt32-sc01-with-arduino
 ---
 
 ## Overview

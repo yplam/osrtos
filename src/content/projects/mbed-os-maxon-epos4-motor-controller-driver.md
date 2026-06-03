@@ -19,6 +19,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- spirit-motor-driver-library
+- canfestival-rtt
+- arm-control-framework-acorns-rover
+- kw41z-rf-driver-for-arm-mbed-nanostack
+- mongoose-os-ws2812b-driver
+- xiaomi-cybergear-arduino-library
 ---
 
 ## Overview

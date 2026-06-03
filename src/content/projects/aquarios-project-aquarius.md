@@ -28,6 +28,13 @@ topics:
 lastUpdated: '2025-12-27'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
+relatedProjects:
+- bathhouseos-core-control-panel
+- bathhouseos
+- aquarium-app
+- bathos
+- borneoiot-professional-aquarium-lighting-platform
+- ascii-aquarium
 ---
 
 AquariOS, also known as Project Aquarius, is a specialized embedded operating system tailored specifically for the management and automation of aquariums. In an era where many IoT devices rely heavily on cloud connectivity, AquariOS takes a different approach by offering a completely offline solution for fish tank maintenance, ensuring that your aquatic ecosystem remains stable regardless of your internet status.

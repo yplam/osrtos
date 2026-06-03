@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
+relatedProjects:
+- mbed-os-client-example
+- mbed-to-aws-iot-example
+- mender-ota-example-for-stm32l4-and-zephyr-rtos
+- mbed-bootloader
+- anjay-zephyr-client
+- anjay-zephyr
 ---
 
 ## Overview

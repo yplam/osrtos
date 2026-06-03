@@ -33,6 +33,13 @@ topics:
 isShow: false
 createdAt: '2026-04-21T05:25:21+00:00'
 updatedAt: '2026-04-21T05:25:21+00:00'
+relatedProjects:
+- esp32-repo
+- roarm-m2-robotic-arm-control-firmware
+- actonator-3d-printable-robot-actuator
+- spirit-motor-driver-library
+- micropython-samples-and-drivers
+- xiaomi-cybergear-arduino-library
 ---
 
 The MKS XDRIVE Mini represents a cost-effective entry point into the world of high-performance Field Oriented Control (FOC) for robotics. Based on the proven ODrive architecture, this driver is designed to handle demanding motor control tasks with precision, utilizing the ODrive tool ecosystem for configuration and the CAN bus for robust communication in complex multi-axis systems.
