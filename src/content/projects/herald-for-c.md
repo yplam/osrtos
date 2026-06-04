@@ -38,7 +38,7 @@ relatedProjects:
 - cr95hf-mbed-library
 - zj-ble-rt-thread-and-nimble-for-nordic-nrf52
 - arduino-serial-ble
-- zephyr-rtos-for-dwm1001
+- zephyr-native-meshtastic-stack
 ---
 
 ## Overview

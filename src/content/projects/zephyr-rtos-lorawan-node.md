@@ -24,11 +24,11 @@ createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
 relatedProjects:
 - zephyr-lorawan-lora-examples
+- zephyr-native-meshtastic-stack
 - zephyr-stm32-spi-example
 - mender-ota-example-for-stm32l4-and-zephyr-rtos
 - zephyr-webusb-sample-for-stm32
 - gnss-lorawan-tracker
-- lorawan-test-app-for-apache-nuttx
 ---
 
 ## Overview

@@ -25,7 +25,7 @@ relatedProjects:
 - lvgl-android-style-launcher
 - lvgl-game-boy-advance-emulator
 - lvgl-for-embedded-linux
-- lvgl-terminal-for-pinephone-on-apache-nuttx
+- retro-zero
 ---
 
 ## Overview

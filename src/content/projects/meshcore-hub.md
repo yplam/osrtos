@@ -29,8 +29,8 @@ relatedProjects:
 - bluetooth-mesh-sensor-network
 - meshcore-mqtt-gateway
 - smart-dc-maintenance
+- crose-china-rose-lightweight-data-engine
 - swarmsense-iot-platform-with-mongoose-os
-- espmonitor-iot-environment-monitoring-system
 ---
 
 ## Overview

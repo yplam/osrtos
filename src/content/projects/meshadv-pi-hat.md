@@ -30,9 +30,9 @@ relatedProjects:
 - pinedio-stack-bl604-on-apache-nuttx-rtos
 - pymc-repeater
 - esp32-portapack-esp32pp
+- zephyr-native-meshtastic-stack
 - esp32-bus-expander
 - meshtnc
-- espuno-pi-zero
 ---
 
 ## Overview

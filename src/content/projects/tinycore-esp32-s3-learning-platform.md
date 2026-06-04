@@ -24,11 +24,11 @@ createdAt: '2026-02-28'
 updatedAt: '2026-02-28'
 relatedProjects:
 - mpython-board
+- openairscope
 - pyespcar-micropython-esp32-wifi-car
 - cyberboard-v2
 - thingbot-subghz
 - objex-link
-- cuybot-v1-opensource-smartcar-project
 ---
 
 ## Overview

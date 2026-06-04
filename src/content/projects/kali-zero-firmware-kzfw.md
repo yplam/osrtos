@@ -38,9 +38,9 @@ relatedProjects:
 - bruce-firmware
 - infiltra-firmware
 - poseidon
+- crumble
 - zmk-firmware
 - ghost-esp
-- m5-crystal
 ---
 
 ## Overview

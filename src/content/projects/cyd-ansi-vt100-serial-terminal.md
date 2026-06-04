@@ -24,11 +24,11 @@ createdAt: '2026-03-22'
 updatedAt: '2026-03-22'
 relatedProjects:
 - bbmonitor
+- crypto-price-viewer
 - micropython-library-for-the-cheap-yellow-display-cyd
 - tibber-price-e-ink-display
 - smalltv-pro-esp-idf-sample-project
 - esp32-remote-for-victron
-- esp32-marauder-for-cheap-yellow-display-cyd
 ---
 
 ## Overview

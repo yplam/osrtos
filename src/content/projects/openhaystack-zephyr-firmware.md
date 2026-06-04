@@ -29,7 +29,7 @@ relatedProjects:
 - esp32-watch-for-openhaystack
 - open-display-firmware
 - zephyr-rtos-for-dwm1001
-- chrz-watch-firmware
+- zephyr-native-meshtastic-stack
 ---
 
 ## Overview

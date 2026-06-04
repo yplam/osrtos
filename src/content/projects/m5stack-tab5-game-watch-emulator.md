@@ -33,8 +33,8 @@ relatedProjects:
 - pico-smsplus-sega-master-system-and-game-gear-emulator
 - retrojam-multi-retro-game-console-emulator
 - esp32-s3-nes-emulator
+- retro-zero
 - t-hmi-c64-emulator
-- msx1-emulator-for-raspberry-pi-pico
 ---
 
 ## Overview

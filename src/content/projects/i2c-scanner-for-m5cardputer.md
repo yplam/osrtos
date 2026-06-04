@@ -21,10 +21,10 @@ updatedAt: '2026-03-24'
 relatedProjects:
 - cardputer-gps-info
 - i2cwrapper
+- esp32-network-scanner
 - esp32-marauder-for-esp32-3248s035c
 - ghostble
 - bbmonitor
-- xiao-debug-mate
 ---
 
 The I2C Scanner for M5Cardputer is a specialized utility designed to simplify hardware debugging and peripheral identification on the M5Stack Cardputer platform. By leveraging the device's integrated display and Grove expansion port, this tool provides a portable solution for identifying I2C addresses without needing a full desktop setup or external logic analyzer.

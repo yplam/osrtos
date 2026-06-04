@@ -25,11 +25,11 @@ createdAt: '2026-02-03'
 updatedAt: '2026-02-03'
 relatedProjects:
 - zereader
+- crumble
 - esp-e-paper-component
 - open-display-firmware
 - bitclock
 - sha2017-badge-firmware
-- e-paper-esp32-c6-firmware
 ---
 
 Papyrix is a specialized, open-source firmware designed for the Xteink X4 e-paper display reader. Built using the PlatformIO ecosystem and targeting the ESP32-C3 microcontroller, it serves as a streamlined alternative to the official closed-source firmware. The project focuses on providing a high-quality reading experience on constrained hardware, balancing feature-rich document parsing with the strict memory limitations of the ESP32-C3.

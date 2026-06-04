@@ -26,9 +26,9 @@ relatedProjects:
 - golioth-zephyr-sdk
 - golden-gate
 - anjay-zephyr
+- zephyr-native-meshtastic-stack
 - pyrinas-zephyr
 - sentrius-mg100-gateway-firmware
-- golioth-firmware-sdk
 ---
 
 ## Overview

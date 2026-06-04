@@ -27,9 +27,9 @@ relatedProjects:
 - esp8266-arduino-serial-uploader
 - stm32-bootloader
 - esp32-fatfs-image-tool-and-example
+- raccoon-flash-explorer-demo
 - esp32-spartan-edge-spiffs-loader
 - tab5-launcher
-- ftp-server-with-littlefs-for-wfi32-iot-board
 ---
 
 ## Overview

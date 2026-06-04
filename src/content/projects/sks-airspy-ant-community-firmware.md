@@ -31,7 +31,7 @@ relatedProjects:
 - esp32-ble-ota-arduino
 - openhaystack-zephyr-firmware
 - bleota-esp32-ota-updates-over-ble
-- opensleep
+- zephyr-native-meshtastic-stack
 ---
 
 ## Overview

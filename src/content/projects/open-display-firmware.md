@@ -29,7 +29,7 @@ relatedProjects:
 - esp32-ble-ota-arduino
 - readmepaper-esp32-7-color-e-paper-display-project
 - lvgl-watch-firmware-for-open-smartwatch
-- esp-e-paper-component
+- crumble
 ---
 
 Open Display Firmware is an open-source project dedicated to powering Bluetooth Low Energy (BLE) based display tags. Designed to be versatile and efficient, it provides the necessary logic to drive e-paper displays across a variety of modern microcontrollers, including the NRF52840 and several ESP32 variants like the S3, C6, and C3.

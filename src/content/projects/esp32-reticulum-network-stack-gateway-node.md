@@ -25,8 +25,8 @@ relatedProjects:
 - meshtnc
 - esp32-mesh-control
 - genius-gateway
+- zephyr-native-meshtastic-stack
 - esp32-gps-gateway-with-rtk-ntrip-support
-- dtugateway-for-hoymiles-hms-inverters
 ---
 
 ## Overview

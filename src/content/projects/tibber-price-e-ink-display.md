@@ -21,9 +21,9 @@ relatedProjects:
 - git-contributions-e-ink-display
 - readmepaper-esp32-7-color-e-paper-display-project
 - esp32-remote-for-victron
+- crypto-price-viewer
 - bbmonitor
 - c-quiz-on-e-ink-display
-- 7-color-e-paper-digital-photo-frame
 ---
 
 ## Visualizing Energy Costs with E-Ink

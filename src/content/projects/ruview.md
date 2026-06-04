@@ -38,9 +38,9 @@ relatedProjects:
 - esp-ppb
 - antihunter
 - ghost-esp
+- openairscope
 - esp32-marauder-for-esp32-3248s035c
 - project-starbeam
-- echokit-firmware
 ---
 
 RuView represents a significant leap in environmental sensing by repurposing standard WiFi signals into a sophisticated spatial intelligence system. Instead of relying on cameras or wearable devices, RuView analyzes Channel State Information (CSI)—the data that describes how WiFi signals propagate through and interact with an environment—to detect people, track movement, and even monitor biological functions like breathing and heart rate.

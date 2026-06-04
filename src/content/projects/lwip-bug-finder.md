@@ -21,11 +21,11 @@ createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
 relatedProjects:
 - lwip-for-linux
+- esp32-network-scanner
 - lwip-contrib-unix-port
 - ghost-esp
 - lwip-for-esp8266
 - straight-httpd-embedded-web-server-simulator
-- rauk-rtic-analysis-using-klee
 ---
 
 ## Overview
