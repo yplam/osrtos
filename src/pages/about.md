@@ -19,7 +19,7 @@ OSRTOS is a comprehensive resource for open source real-time operating systems (
 We welcome feedback, suggestions, and contributions!
 
 - **GitHub**: [github.com/yplam/osrtos](https://github.com/yplam/osrtos)
-- **Email**: [yplam@yplam.com](mailto:yplam@yplam.com)
+- **Email**: [openrtos@gmail.com](mailto:openrtos@gmail.com)
 
 Whether you want to suggest a new RTOS or library to feature, report an issue, or contribute to the project, feel free to reach out through GitHub or email.
 
