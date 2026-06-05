@@ -31,10 +31,10 @@ updatedAt: '2026-01-27'
 relatedProjects:
 - desk-weather-clock-geekmagic-s3
 - esp32-cyd-weather-station-with-3-day-forecast
+- astronomy-micro-station
 - erikaos-online-weather-station
 - esp32-weatherstationrtc
 - wt32-sc01-plus-smart-desk-companion
-- stm32f407-weather-clock-cmake-development-template
 ---
 
 ## Overview

@@ -26,10 +26,10 @@ updatedAt: '2026-04-28T23:37:36+00:00'
 relatedProjects:
 - esp32-usb-over-ip
 - esp8266-wifi-relay-and-bahtinov-masks-controller
+- astronomy-micro-station
 - rfc2217-server-for-esp-idf
 - esp32-cam-mcp-server
 - webserver-esp32-enc
-- esp8266-mywidget
 ---
 
 ## Bringing ASCOM Alpaca to the ESP32

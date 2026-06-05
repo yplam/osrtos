@@ -27,8 +27,8 @@ relatedProjects:
 - esp32-remote-for-victron
 - tanksync
 - esphome-deye-inverter
+- astronomy-micro-station
 - smart-beehive-monitoring-system
-- esphome-meter-reader-tflite-component
 ---
 
 The Solar Concentrator project is an open-source hardware and software ecosystem designed to harness solar energy through automated mirror alignment. By concentrating sunlight from a 1m² array of 48 mirrors onto a single focal point, the system can generate approximately 1000 watts of thermal heat. This energy is directed into a custom-built oven, capable of reaching temperatures over 210°C in just 30 minutes, all while the electronic control system consumes a mere 3.8 watts of power.

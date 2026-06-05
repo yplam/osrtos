@@ -24,7 +24,7 @@ relatedProjects:
 - melody-machine
 - si4732-radio
 - radiojkk32-multifunctional-internet-radio-player
-- wt32-sqln-wt32-sc01-plus-with-squareline-studio-and-lvgl
+- ehradio
 ---
 
 ## Bringing High-Quality Internet Radio to the WT32-SC01-PLUS

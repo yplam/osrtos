@@ -45,7 +45,7 @@ relatedProjects:
 - esp32-s3-smart-home-control-panel
 - air-quality-monitor
 - openairscope
-- bitclock
+- astronomy-micro-station
 ---
 
 Project Aura is an open-source air-quality station designed for makers who want a polished, reliable device rather than a bare sensor board. Built around the ESP32-S3, it combines high-quality telemetry with a professional user interface and seamless smart home integration. The project is specifically designed to be accessible, requiring no soldering when using recommended Grove or QT connectors, making it an ideal project for both hobbyists and those seeking a functional home environmental monitor.

@@ -27,9 +27,9 @@ relatedProjects:
 - esp32-web-radio-evo3
 - tinyradio9-for-wt32-sc01-plus
 - radiojkk32-multifunctional-internet-radio-player
+- ehradio
 - melody-machine
 - espri-esp-radio-interface
-- wt32-sc01-plus-smart-desk-companion
 ---
 
 ## Overview

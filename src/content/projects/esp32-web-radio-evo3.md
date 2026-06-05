@@ -22,11 +22,11 @@ createdAt: '2026-01-22'
 updatedAt: '2026-01-22'
 relatedProjects:
 - radiojkk32-multifunctional-internet-radio-player
+- ehradio
 - snow-radio
 - tinyradio9-for-wt32-sc01-plus
 - melody-machine
 - si4732-radio
-- esp32-rtspserver
 ---
 
 The ESP32 Web Radio Evo3 is a sophisticated internet radio streamer designed for the ESP32-S3 microcontroller. This third iteration of the "Evo" series represents a significant step forward in DIY audio streaming hardware, providing a custom-tailored experience that moves beyond generic platforms. By leveraging the PCM5102A DAC, the system delivers high-quality audio across various formats, including MP3, AAC, VORBIS, and high-bitrate FLAC streams up to 1.5Mbit.

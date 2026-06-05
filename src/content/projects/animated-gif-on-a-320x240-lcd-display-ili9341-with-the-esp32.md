@@ -20,12 +20,12 @@ isShow: false
 createdAt: '2026-04-06T00:37:25+00:00'
 updatedAt: '2026-04-06T00:37:25+00:00'
 relatedProjects:
+- animated-gif-with-push-button-on-ili9341-lcd
 - animated-gif-stored-in-sd-card-and-played-from-spiffs-on-a-round-display-gc9a01-with-the-esp32
 - gif-decoder-for-lvgl
 - readmepaper-esp32-7-color-e-paper-display-project
 - minimal-lcd-demonstration-on-esp-wrover-kit
 - smalltv-pro-esp-idf-sample-project
-- esp32-p4-grid-board
 ---
 
 Integrating animations into embedded systems often presents challenges regarding memory management and processing power. The AnimatedGIF340_240 project addresses these challenges by providing a robust implementation for displaying animated GIF files on an ILI9341-based 320x240 LCD using the ESP32-S3 microcontroller.

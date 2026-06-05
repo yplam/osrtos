@@ -25,11 +25,11 @@ createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
 relatedProjects:
 - animated-gif-on-a-320x240-lcd-display-ili9341-with-the-esp32
+- animated-gif-with-push-button-on-ili9341-lcd
 - readmepaper-esp32-7-color-e-paper-display-project
 - cheap-yellow-display-video-player-esp32-2432s028
 - gif-decoder-for-lvgl
 - esp32-spiffs-image-generation-example
-- jc4827w543-lvgl-v9-implementation
 ---
 
 Displaying animated GIFs on microcontrollers can be a challenge due to memory constraints and storage speed. This project by the Last Outpost Workshop provides a robust solution for the ESP32, specifically targeting the popular GC9A01 round TFT display. By combining external SD card storage with the speed of internal SPIFFS (Serial Peripheral Interface Flash File System), it achieves smooth animation playback suitable for wearable tech, smart gauges, or decorative props.

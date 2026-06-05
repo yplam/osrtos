@@ -24,7 +24,7 @@ relatedProjects:
 - lottie-animation-library-for-lvgl
 - animated-gif-on-a-320x240-lcd-display-ili9341-with-the-esp32
 - sjpg-decoder-for-lvgl
-- qr-code-library-for-lvgl
+- animated-gif-with-push-button-on-ili9341-lcd
 ---
 
 ## Overview

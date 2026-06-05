@@ -22,9 +22,9 @@ relatedProjects:
 - tinyradio9-for-wt32-sc01-plus
 - esp32fmradio
 - espri-esp-radio-interface
+- ehradio
 - elekstube-ips-custom-firmware
 - qn8066-fm-dsp-rx-tx-arduino-library
-- esp32-web-radio-evo3
 ---
 
 ## Overview

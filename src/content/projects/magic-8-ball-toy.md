@@ -24,10 +24,10 @@ updatedAt: '2026-04-21T05:35:55+00:00'
 relatedProjects:
 - animated-gif-on-a-320x240-lcd-display-ili9341-with-the-esp32
 - pico-claw-machine
+- animated-gif-with-push-button-on-ili9341-lcd
 - magic-wand-on-mbed
 - james-rocket-controller
 - cyberboard-v2
-- stm32l476g-discovery-rtos-sensor-project
 ---
 
 This DIY project was born from a desire to utilize small, round displays in a creative way while experimenting with the Raspberry Pi Pico platform. By integrating a 1.28-inch round LCD into a classic 8-ball shell, the device emulates the floating behavior of a 20-sided dice. 

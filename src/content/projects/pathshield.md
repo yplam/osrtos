@@ -27,12 +27,12 @@ isShow: true
 createdAt: '2026-04-01T01:15:06+00:00'
 updatedAt: '2026-04-01T01:15:06+00:00'
 relatedProjects:
+- plume-m5cardputer-adv-edition
 - antihunter
 - flock-detector-3-0
 - ghostble
 - ghost-esp
 - skysweep32-multi-band-passive-drone-detector
-- bluehound
 ---
 
 PathShield is a specialized RF awareness firmware designed for the M5StickC-Plus (v1 and v2) hardware platforms. In an era where portable trackers like AirTags, Tiles, and various IoT surveillance devices are increasingly common, PathShield provides a portable, real-time solution for identifying persistent wireless signals that may be following a user. By leveraging the dual-radio capabilities of the ESP32, the project monitors both Wi-Fi and Bluetooth Low Energy (BLE) spectrums to build a comprehensive map of the surrounding RF environment.

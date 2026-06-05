@@ -38,9 +38,9 @@ relatedProjects:
 - batear
 - daeva-rf-cybersecurity-tool
 - flock-detector-3-0
+- plume-m5cardputer-adv-edition
 - pathshield
 - bluehound
-- esp32-bluejammer
 ---
 
 SkySweep32 is a comprehensive monitoring solution designed to identify unmanned aerial vehicles (UAVs) by analyzing the radio frequency (RF) environment. Built around the versatile ESP32 microcontroller, the project offers a modular architecture that scales from a budget-friendly starter kit to an advanced multi-sensor sentinel. By scanning common frequencies used for drone control and video telemetry, it provides operators with real-time awareness of nearby aerial activity without emitting detectable signals itself.

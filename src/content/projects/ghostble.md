@@ -45,7 +45,7 @@ relatedProjects:
 - esp-hack-fw
 - marauder-centauri
 - mbed-ble-gap-scanner
-- bluehound
+- plume-m5cardputer-adv-edition
 ---
 
 ## Navigating the BLE Landscape with GhostBLE

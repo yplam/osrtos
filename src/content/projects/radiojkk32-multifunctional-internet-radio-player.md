@@ -28,9 +28,9 @@ relatedProjects:
 - esp32-web-radio-evo3
 - snow-radio
 - melody-machine
+- ehradio
 - tinyradio9-for-wt32-sc01-plus
 - espri-esp-radio-interface
-- esper-cdp
 ---
 
 RadioJKK32 is a comprehensive internet radio solution designed for the ESP32-A1S (ESP32-A1S Audio Kit). Built on the Espressif Audio Development Framework (ESP-ADF) and the ESP-IDF, it transforms the ESP32 into a powerful standalone media player capable of streaming high-quality audio, recording to local storage, and providing a modern user interface through both physical displays and web browsers.

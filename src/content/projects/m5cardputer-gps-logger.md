@@ -26,7 +26,7 @@ relatedProjects:
 - meindatalogger
 - wardriver3000
 - gps-tracker
-- esp-datalogger-with-firebase-and-spiffs
+- plume-m5cardputer-adv-edition
 ---
 
 The M5Cardputer GPS Logger is a specialized firmware designed for the M5Stack Cardputer, transforming the compact, keyboard-equipped device into a portable GPS tracking station. By interfacing with a UART GPS module—specifically tested with the Grove GPS Air530—the project provides a streamlined way to capture and store geospatial data in a standard CSV format.

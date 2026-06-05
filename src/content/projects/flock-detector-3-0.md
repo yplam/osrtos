@@ -29,12 +29,12 @@ isShow: false
 createdAt: '2026-04-25T00:59:28+00:00'
 updatedAt: '2026-04-25T00:59:28+00:00'
 relatedProjects:
+- plume-m5cardputer-adv-edition
 - ghost-esp
 - antihunter
 - pathshield
 - skysweep32-multi-band-passive-drone-detector
 - esp32-sniffer
-- ghostble
 ---
 
 ## Overview

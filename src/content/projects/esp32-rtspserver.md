@@ -41,8 +41,8 @@ relatedProjects:
 - https-server-generic-library
 - esp32cam-pir-mqtt-spiffs-webserver
 - webserver-esp32-w5500
+- ehradio
 - webserver-esp32-enc
-- esp32-web-radio-evo3
 ---
 
 The ESP32-RTSPServer library is a powerful solution for developers looking to implement multimedia streaming on ESP32 microcontrollers. It provides a robust RTSP (Real-Time Streaming Protocol) server capable of handling video, audio, and even subtitle tracks simultaneously. This makes it an ideal choice for building DIY IP cameras, baby monitors, or remote sensing devices using low-cost hardware.
