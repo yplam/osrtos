@@ -33,11 +33,11 @@ createdAt: '2026-04-04T00:51:03+00:00'
 updatedAt: '2026-04-04T00:51:03+00:00'
 relatedProjects:
 - 3d-cloud-scanner-arm-hackathon-2017
+- noeticmaze
 - sparkfun-micropython-opencv
 - nicla-vision-ros2-package
 - autonomous-racing-robot-stm32-ros1
 - cuybot-v1-opensource-smartcar-project
-- andino-open-source-ros-2-educational-robot
 ---
 
 This project focuses on developing the logic required to calculate the distance to the next edge for a robot equipped with a 2D LIDAR sensor. Designed for applications such as table-top navigation, the system identifies drop-offs or holes in the environment to prevent the robot from falling. The implementation leverages the processing power of the Raspberry Pi Pico and interfaces with hardware using the RPLidar.h library.

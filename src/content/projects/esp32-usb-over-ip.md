@@ -24,9 +24,9 @@ relatedProjects:
 - ip-over-usb
 - rfc2217-server-for-esp-idf
 - esp32-ascom-alpaca-implementation
+- wifi-remote-display-adv
 - cmsis-dap-over-tcp-for-esp32
 - d21eem-usb-cdc-eem-for-samd21
-- lwip-for-esp8266
 ---
 
 The ESP32 USB over IP project brings the capability of the USB/IP protocol to the ESP32S3 microcontroller, enabling users to share physical USB devices over a network. This repository is an enhanced fork of the original `usbipdcpp_esp32` project, specifically tuned for better stability, compatibility, and performance. By leveraging the ESP32S3's native USB capabilities and the ESP-IDF framework, it transforms the SoC into a wireless USB bridge.

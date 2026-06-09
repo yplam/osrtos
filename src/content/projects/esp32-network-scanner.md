@@ -24,7 +24,7 @@ relatedProjects:
 - esp32-ascom-alpaca-implementation
 - i2c-scanner-for-m5cardputer
 - esp-can-analyzer
-- asyncesp32-sc-ethernet-manager
+- wifi-remote-display-adv
 ---
 
 Identifying devices on a network is a common task for IoT management, but traditional ICMP-based "ping" scans often fall short. Many modern computers and IoT devices are configured to ignore ping requests for security reasons or to save power. The ESP32 Network Scanner takes a different approach by leveraging the Address Resolution Protocol (ARP) to map out a Local Area Network (LAN). Since ARP is a fundamental part of how Ethernet and Wi-Fi networks function—mapping IP addresses to physical MAC addresses—devices generally cannot ignore these requests if they want to communicate on the network.

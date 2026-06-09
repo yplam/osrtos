@@ -21,11 +21,11 @@ createdAt: '2026-03-24'
 updatedAt: '2026-03-24'
 relatedProjects:
 - picogamepadconverter
+- tossed-the-tv-kept-the-remote
 - piokmbox-high-performance-usb-hid-passthrough-for-rp2350
 - midi2piousbhub
 - usb-video-class-uvc-for-raspberry-pi-pico
 - esp-usb-ble-hid-bridge
-- raspberry-pi-pico-freertos-sample-application
 ---
 
 Pico-CEC is an open-source project designed to bridge the gap between home theater PCs and television hardware. Many budget-friendly or repurposed micro-desktops used as media players—especially those running Kodi or LibreELEC—lack native support for HDMI Consumer Electronics Control (CEC). This often forces users to rely on additional peripherals like wireless keyboards or game controllers just to navigate a menu. Pico-CEC solves this by using a Raspberry Pi Pico to intercept CEC signals from the HDMI bus and translate them into standard USB HID keyboard commands.

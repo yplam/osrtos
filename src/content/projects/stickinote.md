@@ -25,11 +25,11 @@ createdAt: '2026-01-13'
 updatedAt: '2026-01-13'
 relatedProjects:
 - esp32-8048s050c-with-lvgl-9-4-and-freertos
+- sonosesp-esp32-p4-sonos-controller
 - esp-e-paper-component
 - esp32-p4-grid-board
 - esp32-p4-home-assistant-display
 - lvgl-port-for-m5stack-core2
-- esp32berry
 ---
 
 ## Overview

@@ -30,12 +30,12 @@ image: /202602/tonex-one.webp
 createdAt: '2026-02-14'
 updatedAt: '2026-02-14'
 relatedProjects:
+- sonosesp-esp32-p4-sonos-controller
 - esp32-host-midi
 - hd2-macropad
 - ic-705-ci-v-band-decoder-and-transverter-controller
 - esp-usb-ble-hid-bridge
 - esp32-remote-for-victron
-- omote-open-universal-remote
 ---
 
 ## Overview

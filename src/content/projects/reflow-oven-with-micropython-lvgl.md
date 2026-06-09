@@ -33,11 +33,11 @@ createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
 relatedProjects:
 - precius-precision-cooking-and-home-kitchen-automation
+- sonosesp-esp32-p4-sonos-controller
 - espgaggia-smart-coffee-machine-controller
 - micropython-and-lvgl-firmware-for-esp32
 - smart-flask-thermos-with-round-display-and-esp32-c3
 - esp32-tux
-- embedded-graphical-interface-for-pid-control
 ---
 
 ## Overview

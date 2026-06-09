@@ -30,7 +30,7 @@ relatedProjects:
 - radiojkk32-multifunctional-internet-radio-player
 - high-fidelity-esp32-bluetooth-audio-sink-with-premium-codecs
 - esp32-custom-hardware-synthesizer
-- si4732-radio
+- sonosesp-esp32-p4-sonos-controller
 ---
 
 ## Overview

@@ -26,9 +26,9 @@ relatedProjects:
 - omote-open-universal-remote
 - m5apps
 - saturn
+- wifi-remote-display-adv
 - m5-keyboard-and-mouse-emulator
 - esp32-web-radio-evo3
-- roarm-m2-robotic-arm-control-firmware
 ---
 
 ## Overview

@@ -27,7 +27,7 @@ relatedProjects:
 - lvgl-port-for-m5stack-core2
 - esp32-tux
 - lvgl-port-for-esp32
-- lvgl-8-on-wt32-sc01-with-arduino
+- sonosesp-esp32-p4-sonos-controller
 ---
 
 ## High-Resolution Graphics on the ESP32-S3

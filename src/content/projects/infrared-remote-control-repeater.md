@@ -20,9 +20,9 @@ relatedProjects:
 - mongoose-os-ir-protocol-library
 - arduino-ir-for-mongoose-os
 - esp32fmradio
+- tossed-the-tv-kept-the-remote
 - omote-open-universal-remote
 - spektrum-receiver-library-for-mbed
-- pico-cec
 ---
 
 ## Overview
