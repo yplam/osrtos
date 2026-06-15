@@ -23,11 +23,11 @@ createdAt: '2026-03-01'
 updatedAt: '2026-03-01'
 relatedProjects:
 - esp32-cam-yolo-object-and-animal-detection
+- esp32-cam-mjpeg-streaming-and-sd-capture
 - home-assistant-security-camera-with-esp32-cam
 - esp32-virtual-cat-project
 - tamafi-wifi-powered-virtual-pet
 - iotea
-- esp32cam-pir-mqtt-spiffs-webserver
 ---
 
 ## Overview

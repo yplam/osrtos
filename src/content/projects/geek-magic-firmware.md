@@ -27,9 +27,9 @@ relatedProjects:
 - elekstube-ips-custom-firmware
 - desk-weather-clock-geekmagic-s3
 - geekmagic-open-firmware
+- diy-weather-clock-firmware
 - esp8266-mywidget
 - esp8266-electronic-timekeeper
-- wt32-sc01-plus-smart-desk-companion
 ---
 
 ## Overview

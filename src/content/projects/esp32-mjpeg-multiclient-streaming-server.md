@@ -26,12 +26,12 @@ lastUpdated: '2024-10-01'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
 relatedProjects:
+- esp32-cam-mjpeg-streaming-and-sd-capture
 - esp32-rtspserver
 - esp32cam-pir-mqtt-spiffs-webserver
 - netshlix
 - esp32-cam-micropython
 - stm32n6-camera-capture-application
-- esp32-thermal-camera-viewer
 ---
 
 Streaming video from a resource-constrained microcontroller like the ESP32 is a common challenge, often limited by memory and processing power to a single client. The **ESP32 MJPEG Multiclient Streaming Server** project addresses this limitation by providing a robust, FreeRTOS-based implementation that allows up to 10 simultaneous clients to view a live MJPEG stream from an AI-Thinker ESP32-CAM or ESP-EYE module.

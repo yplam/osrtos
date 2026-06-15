@@ -32,8 +32,8 @@ relatedProjects:
 - xiao-debug-mate
 - esp-can-analyzer
 - esp-scope
+- esp-nus-high-throughput-ble-5-uart-bridge
 - m5cardputer-audio-spectrum-display
-- esp32webscope
 ---
 
 ## Visualizing the Invisible: Real-Time UART Analysis

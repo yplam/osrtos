@@ -23,8 +23,8 @@ relatedProjects:
 - sanjin-intelligent-mechanical-clock
 - children-s-iot-clock
 - esptimecast
+- diy-weather-clock-firmware
 - esp32-weatherstationrtc
-- elekstube-ips-custom-firmware
 ---
 
 Building a custom digital clock is a classic maker project, but the 7-Segment Clock by iml885203 takes it a step further by integrating modern IoT capabilities. Using an ESP8266 and addressable WS2812B LED strips, this project creates a large, vibrant display that stays perfectly in sync with network time (NTP) and offers a sleek web interface for customization.

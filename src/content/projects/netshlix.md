@@ -25,12 +25,12 @@ isShow: false
 createdAt: '2026-03-31T13:17:04+00:00'
 updatedAt: '2026-03-31T13:17:04+00:00'
 relatedProjects:
+- esp32-cam-mjpeg-streaming-and-sd-capture
 - cheap-yellow-display-video-player-esp32-2432s028
 - esp32-mjpeg-multiclient-streaming-server
 - wifi-remote-display-adv
 - esp32-rtspserver
 - deck
-- smalltv-pro-esp-idf-sample-project
 ---
 
 ## Streaming Video to the Smalltv-pro

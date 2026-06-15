@@ -23,9 +23,9 @@ relatedProjects:
 - upycam
 - micropython-camera-driver-for-esp32
 - micropython-camera-api-for-esp32
+- esp32-cam-mjpeg-streaming-and-sd-capture
 - micropython-for-esp32-with-psram-support-lobo-port
 - esp32cam-pir-mqtt-spiffs-webserver
-- esp32-mjpeg-multiclient-streaming-server
 ---
 
 The ESP32-CAM is a powerful, low-cost development board that adds a camera interface to the popular ESP32 SoC. However, getting the camera to work seamlessly with MicroPython often requires custom firmware builds and specific drivers. The **esp32-cam-micropython** project by Shari Tumin provides a robust solution by integrating camera support directly into the MicroPython core, allowing developers to control the camera using high-level Python scripts.

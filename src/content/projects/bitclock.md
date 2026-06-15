@@ -30,8 +30,8 @@ relatedProjects:
 - wt32-sc01-plus-smart-desk-companion
 - elekstube-ips-custom-firmware
 - project-aura
+- diy-weather-clock-firmware
 - esp32-weatherstationrtc
-- circuitpal
 ---
 
 Bitclock is an open-source, multi-functional desk companion that combines a clock with air quality monitoring capabilities. Designed around an e-ink display, it provides a high-contrast, always-on interface that is easy on the eyes and aesthetically pleasing in any office or home environment.

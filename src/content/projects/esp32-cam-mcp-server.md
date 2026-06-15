@@ -28,12 +28,12 @@ image: /202601/esp32-cam.webp
 createdAt: '2026-01-27'
 updatedAt: '2026-01-27'
 relatedProjects:
+- esp32-cam-mjpeg-streaming-and-sd-capture
 - micropython-camera-api-for-esp32
 - micropython-camera-driver-for-esp32
 - esp32-cam-micropython
 - esp32-ascom-alpaca-implementation
 - esp32cam-pir-mqtt-spiffs-webserver
-- homerpc
 ---
 
 The ESP32-CAM MCP Server project transforms the popular ESP32-CAM hardware module into a remotely controllable AI-enabled camera system. By implementing the Model Context Protocol (MCP) 2024-11-05 specification, this project allows AI assistants, such as GitHub Copilot or VS Code AI-Toolkit, to interact directly with physical hardware. This bridge enables a seamless workflow where an AI can "see" through the camera, control lighting, and monitor system health in real-time.

@@ -17,6 +17,13 @@ topics:
 isShow: false
 createdAt: '2026-06-11T00:55:13+00:00'
 updatedAt: '2026-06-11T00:55:13+00:00'
+relatedProjects:
+- esp32cam-pir-mqtt-spiffs-webserver
+- esp32-mjpeg-multiclient-streaming-server
+- esp32-cam-micropython
+- upycam
+- netshlix
+- esp32-cam-mcp-server
 ---
 
 The ESP32-CAM is one of the most versatile and affordable hardware platforms for IoT vision projects. This repository provides a comprehensive implementation for the AI-Thinker ESP32-CAM module, built on the ESP-IDF (v5.x) framework. It transforms the module into a networked camera capable of simultaneous live streaming, automated image logging, and remote management.

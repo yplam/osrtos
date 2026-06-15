@@ -28,7 +28,7 @@ relatedProjects:
 - upycam
 - micropython-for-sparrow-one-board
 - esp32-cam-mcp-server
-- micropython-examples-for-01studio-development-boards
+- esp32-cam-mjpeg-streaming-and-sd-capture
 ---
 
 ## Overview

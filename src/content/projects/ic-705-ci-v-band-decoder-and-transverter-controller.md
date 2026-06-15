@@ -40,7 +40,7 @@ relatedProjects:
 - esp32-ble-uart-mx
 - usb-keyboard-and-mouse-bluetooth-adapter-esp32
 - tonex-one-controller
-- mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
+- gamepad-ps211
 ---
 
 ### Enhancing the IC-705 for Microwave Operation

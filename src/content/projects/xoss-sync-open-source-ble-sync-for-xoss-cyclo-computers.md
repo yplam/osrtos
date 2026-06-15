@@ -42,7 +42,7 @@ relatedProjects:
 - esphome-treadmill-ftms
 - x-track-open-source-gps-bicycle-computer
 - develop-your-own-bluetooth-low-energy-applications
-- herald-for-c
+- esp-nus-high-throughput-ble-5-uart-bridge
 ---
 
 ## Overview

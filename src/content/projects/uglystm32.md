@@ -18,10 +18,10 @@ updatedAt: '2026-01-04'
 relatedProjects:
 - stm32f1xx-bare-metal-template
 - stm32f103-cmsis-libraries-and-projects
+- stm32-bare-metal-learning-labs
 - embedded-systems-bare-metal-programming-ground-up
 - minimal-mbed-os-template-for-stm32f103
 - stm32-bare-metal-code-generator
-- single-stm32-header
 ---
 
 ## Overview

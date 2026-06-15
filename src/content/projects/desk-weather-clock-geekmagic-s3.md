@@ -31,10 +31,10 @@ updatedAt: '2026-04-25T00:38:51+00:00'
 relatedProjects:
 - wt32-sc01-plus-smart-desk-companion
 - esp32-weatherstationrtc
+- diy-weather-clock-firmware
 - esptimecast
 - elekstube-ips-custom-firmware
 - geek-magic-firmware
-- weather-micro-station-for-t-display-s3
 ---
 
 The Desk Weather Clock project transforms the GeekMagic-S3, a compact ESP32-S3-based display cube, into a versatile and highly customizable desktop information hub. While the original hardware is often sold as a simple clock accessory, this custom firmware significantly expands its capabilities, turning it into a networked device capable of displaying real-time weather, system notifications, and custom images pushed from other devices on the local network.

@@ -18,10 +18,10 @@ updatedAt: '2026-01-15'
 relatedProjects:
 - esp32-weatherstationrtc
 - desk-weather-clock-geekmagic-s3
+- diy-weather-clock-firmware
 - 7-segment-clock
 - elekstube-ips-custom-firmware
 - shelf-edge-clock
-- circuitpal
 ---
 
 ## Overview

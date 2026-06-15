@@ -23,8 +23,8 @@ relatedProjects:
 - minimal-mbed-os-template-for-stm32f103
 - stm32f103-cmsis-libraries-and-projects
 - minimal-mbed-os-template-for-stm32f030
+- stm32-bare-metal-learning-labs
 - stm32-makefile-freertos-project-template
-- stm32-bare-metal-code-generator
 ---
 
 ## Overview

@@ -34,10 +34,10 @@ updatedAt: '2026-01-19'
 relatedProjects:
 - esp32-i2s-microphone-stream
 - audio-stream-server-for-m5cardputer
+- esp32-cam-mjpeg-streaming-and-sd-capture
 - birdnet-for-stm32
 - esp32-rtspserver
 - m5cardputer-audio-spectrum-display
-- esp32-custom-hardware-synthesizer
 ---
 
 ## High-Performance Audio Streaming for Avian Monitoring

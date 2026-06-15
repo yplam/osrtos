@@ -28,7 +28,7 @@ relatedProjects:
 - m5cardputer-audio-spectrum-display
 - esp8266-sound-effects-i2s-web-trigger
 - esp32-rtspserver
-- nmea0183-wifi-marine-data-gateway
+- esp32-cam-mjpeg-streaming-and-sd-capture
 ---
 
 ## Overview

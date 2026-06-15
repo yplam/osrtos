@@ -21,10 +21,10 @@ updatedAt: '2025-12-29'
 relatedProjects:
 - ameba-freertos-pro2-sdk
 - usb-video-class-uvc-for-raspberry-pi-pico
+- esp32-cam-mjpeg-streaming-and-sd-capture
 - h747-camera-dual-core-stm32h747-camera-and-display-system
 - esp32-mjpeg-multiclient-streaming-server
 - stm32n6-camera-capture-application
-- openthread-rtos
 ---
 
 ## Overview

@@ -22,12 +22,12 @@ lastUpdated: '2021-01-17'
 createdAt: '2025-12-27'
 updatedAt: '2025-12-27'
 relatedProjects:
+- esp32-cam-mjpeg-streaming-and-sd-capture
 - home-assistant-security-camera-with-esp32-cam
 - esp32-mjpeg-multiclient-streaming-server
 - esp32-cam-micropython
 - esp32-webserver-with-firebase-integration
 - esp32-thermal-camera-viewer
-- upycam
 ---
 
 The ESP32Cam PIR MQTT SPIFFS Webserver project is a comprehensive implementation of a smart security and environmental monitoring node. Originally conceived as a simple gate monitor to detect movement and trigger a garden light, it has evolved into a sophisticated IoT device capable of photo capture, video streaming, and environmental sensing.

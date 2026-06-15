@@ -16,6 +16,13 @@ topics:
 isShow: false
 createdAt: '2026-06-13T05:18:10+00:00'
 updatedAt: '2026-06-13T05:18:10+00:00'
+relatedProjects:
+- stm32f107-makefile-freertos-template
+- kompressorklock
+- stm32l475-freertos-iot-project
+- ic-705-ci-v-band-decoder-and-transverter-controller
+- hd2-macropad
+- diy-portrait-mode-gamepad
 ---
 
 ## Building a Modern Embedded Gamepad

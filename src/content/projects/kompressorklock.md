@@ -13,12 +13,12 @@ image: /202605/clock.webp
 createdAt: '2026-05-16T02:53:53+00:00'
 updatedAt: '2026-05-16T02:53:53+00:00'
 relatedProjects:
+- gamepad-ps211
 - stm32-pid-temperature-control-implementation
 - retro-nixie-clock
 - arm-control-framework-acorns-rover
 - lal-control-for-mbed-os
 - pomia-rs
-- mbed-os-6-stm32-iot-ethernet-controller
 ---
 
 ## Overview

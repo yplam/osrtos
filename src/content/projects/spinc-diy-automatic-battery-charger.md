@@ -26,10 +26,10 @@ updatedAt: '2026-02-14'
 relatedProjects:
 - battery-health-monitor
 - bitclock
+- diy-weather-clock-firmware
 - noteit-uart-datalogger
 - esp32-remote-for-victron
 - shelf-edge-clock
-- ch32v003-usb-meter
 ---
 
 ## Overview

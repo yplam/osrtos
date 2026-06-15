@@ -34,8 +34,8 @@ relatedProjects:
 - antihunter
 - flock-detector-3-0
 - genius-gateway
+- quakeguard
 - tanksync
-- simplebus2-mqtt-bridge
 ---
 
 Batear is a specialized firmware application designed for civil defense and community monitoring, turning low-cost microcontrollers into sophisticated acoustic sensors. While traditional drone detection often relies on expensive radar or high-bandwidth camera systems, Batear focuses on the unique acoustic signature produced by drone rotors. By running entirely at the edge on the ESP32-S3, it provides a private, subscription-free solution for monitoring airspace near homes, farms, or community borders.

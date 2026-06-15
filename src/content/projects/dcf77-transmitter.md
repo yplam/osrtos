@@ -25,9 +25,9 @@ relatedProjects:
 - atomic-clock-ntp-modification
 - esp32fmradio
 - esptimecast
+- diy-weather-clock-firmware
 - esp-graber
 - esp8266-electronic-timekeeper
-- esp-ppb
 ---
 
 The DCF77 time signal is a cornerstone of precise timekeeping in Europe, broadcasting from Mainflingen, Germany, to millions of radio-controlled clocks. However, signal reception can be spotty or non-existent in shielded buildings, basements, or regions outside the transmitter's range. This DCF77-Transmitter project offers a clever solution: using an affordable ESP8266 microcontroller to create a localized "mini-transmitter" that keeps these clocks perfectly synchronized.

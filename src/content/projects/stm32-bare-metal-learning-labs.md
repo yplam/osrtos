@@ -20,6 +20,13 @@ topics:
 isShow: true
 createdAt: '2026-06-11T00:55:53+00:00'
 updatedAt: '2026-06-11T00:55:53+00:00'
+relatedProjects:
+- embedded-systems-bare-metal-programming-ground-up
+- stm32-cmsis-zero-to-hero
+- stm32f1xx-bare-metal-template
+- bare-metal-programming-guide
+- stm32f103-cmsis-libraries-and-projects
+- stm32f4-cmsis-lessons
 ---
 
 The STM32F411, affectionately known as the "Black Pill," is a powerhouse of a microcontroller featuring an ARM Cortex-M4 core. While many developers reach for the STM32 HAL (Hardware Abstraction Layer) or LL (Low-Level) drivers to get up and running, there is a profound educational value—and often a performance gain—in stripping away these layers. The STM32 Bare-Metal Learning Labs project serves as a structured journey into the heart of the silicon, demonstrating how to interface with peripherals at the register level.

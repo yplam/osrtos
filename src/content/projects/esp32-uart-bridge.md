@@ -35,11 +35,11 @@ createdAt: '2026-04-25T00:59:57+00:00'
 updatedAt: '2026-04-25T00:59:57+00:00'
 relatedProjects:
 - esp32-ble-uart-mx
+- esp-nus-high-throughput-ble-5-uart-bridge
 - esphome-modbus-tcp-to-rtu-bridge
 - linkscope-bpu-uart-analyzer
 - esp-can-analyzer
 - nmea0183-wifi-marine-data-gateway
-- esp32-gps-gateway-with-rtk-ntrip-support
 ---
 
 The ESP32 UART Bridge is a sophisticated firmware solution designed to transform standard ESP32 and ESP32-S3 development boards into universal serial communication hubs. Far more than a simple USB-to-TTL converter, this project provides a multi-layered bridging system that connects traditional UART devices to modern network protocols and wireless interfaces. It is particularly well-suited for robotics, industrial automation, and remote debugging scenarios where serial data needs to be accessed over long distances or through diverse hardware interfaces.

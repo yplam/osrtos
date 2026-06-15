@@ -8,9 +8,9 @@ summary: LwRB is a lightweight, platform-independent C11 library providing a gen
   architectures.
 codeUrl: https://github.com/MaJerle/lwrb
 siteUrl: http://docs.majerle.eu/projects/lwrb/
-star: 1471
+star: 1477
 version: v3.2.0
-lastUpdated: '2026-06-02'
+lastUpdated: '2026-06-11'
 components:
 - Storage
 platforms:
@@ -26,7 +26,7 @@ licenses:
 - MIT
 libraryType: Middleware
 createdAt: '2025-12-17'
-updatedAt: '2026-06-03'
+updatedAt: '2026-06-15'
 ---
 
 ### Features

@@ -32,6 +32,13 @@ topics:
 isShow: true
 createdAt: '2026-06-13T05:24:02+00:00'
 updatedAt: '2026-06-13T05:24:02+00:00'
+relatedProjects:
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- opentoys
+- wireclaw
+- stackchan-minimal
+- echo-mate-desktop-robot
+- qbit
 ---
 
 OttoClaw is a localized AI desktop humanoid robot system developed by FlashCat Technology. Built on the ESP32-S3 platform, it represents a departure from traditional AI toys by running a lightweight agent entirely on the edge. The system is designed to be a quiet, non-intrusive companion that expresses itself through physical movement and digital messaging rather than voice, making it ideal for desk environments where silence is preferred.

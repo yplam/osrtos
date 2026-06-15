@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-06-12T00:50:33+00:00'
 updatedAt: '2026-06-12T00:50:33+00:00'
+relatedProjects:
+- blinky-pico-2-dual-core-bare-metal
+- stm32f1xx-bare-metal-template
+- bare-metal-programming-guide
+- micropython-for-bare-metal-raspberry-pi
+- stm32-bare-metal-learning-labs
+- ameba-rtos-sdk
 ---
 
 Developing for Espressif's RISC-V microcontrollers typically involves the robust but heavy ESP-IDF framework. For developers seeking a leaner approach or those who need absolute control over the hardware, the ESP32 RISC-V Bare-Metal SDK offers a compelling alternative. This SDK provides a minimal development environment that bypasses the standard ESP-IDF entirely, allowing for direct register-level programming and custom runtime environments.

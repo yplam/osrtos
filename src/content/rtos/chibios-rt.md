@@ -8,7 +8,7 @@ summary: ChibiOS is a modular, high-performance development environment for embe
   it highly suitable for functional safety and multicore ARM Cortex-M applications.
 codeUrl: https://github.com/ChibiOS/ChibiOS
 siteUrl: http://www.chibios.org/dokuwiki/doku.php
-star: 840
+star: 842
 version: ver21.11.5
 lastUpdated: '2026-05-31'
 components:
@@ -35,7 +35,7 @@ libraries:
 - CMSIS
 - NASA OSAL
 createdAt: '2025-12-22'
-updatedAt: '2026-06-03'
+updatedAt: '2026-06-15'
 ---
 
 ### Features

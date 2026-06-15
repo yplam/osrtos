@@ -25,8 +25,8 @@ relatedProjects:
 - old-train-station-clock-revival
 - elekstube-ips-custom-firmware
 - w601-rt-thread-alarm-clock
+- diy-weather-clock-firmware
 - retro-nixie-clock
-- geek-magic-firmware
 ---
 
 # Retrofitting a Classic Digital Clock with Raspberry Pi Pico W

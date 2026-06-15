@@ -23,6 +23,13 @@ topics:
 isShow: true
 createdAt: '2026-06-11T00:55:17+00:00'
 updatedAt: '2026-06-11T00:55:17+00:00'
+relatedProjects:
+- elekstube-ips-custom-firmware
+- desk-weather-clock-geekmagic-s3
+- esptimecast
+- esp32-weatherstationrtc
+- geek-magic-firmware
+- volna-2bw42-weather-station-firmware
 ---
 
 This repository provides an alternative firmware for the DIY Weather Clock WiFi kit, a common electronics project found on retailers like Amazon and AliExpress. The hardware typically consists of a plexiglass structure housing an ESP-01S module (ESP8266 MCU), a 0.96" Adafruit-compatible OLED display (128x64 px), and an interface PCB. 

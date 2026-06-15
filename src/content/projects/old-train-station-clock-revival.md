@@ -25,11 +25,11 @@ createdAt: '2026-02-02'
 updatedAt: '2026-02-02'
 relatedProjects:
 - retrofit-electronic-clock-with-raspberry-pi-pico-w
+- diy-weather-clock-firmware
 - sanjin-intelligent-mechanical-clock
 - elekstube-ips-custom-firmware
 - atomic-clock-ntp-modification
 - retro-nixie-clock
-- esphome-for-nixie2
 ---
 
 ## Reviving Vintage Horology with Modern Electronics

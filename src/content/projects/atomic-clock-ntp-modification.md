@@ -21,9 +21,9 @@ relatedProjects:
 - retrofit-electronic-clock-with-raspberry-pi-pico-w
 - dcf77-transmitter
 - old-train-station-clock-revival
+- diy-weather-clock-firmware
 - 7-segment-clock
 - elekstube-ips-custom-firmware
-- esp32fmradio
 ---
 
 ## Overview

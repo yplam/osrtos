@@ -34,7 +34,7 @@ relatedProjects:
 - embeddedmqttbroker
 - esp32-webserver-with-firebase-integration
 - iot-esp8266-serial-forwarder
-- esp32-usb-over-ip
+- esp32-cam-mjpeg-streaming-and-sd-capture
 ---
 
 # ESP32 WiFi Logger

@@ -36,8 +36,8 @@ relatedProjects:
 - desk-weather-clock-geekmagic-s3
 - shelf-edge-clock
 - elekstube-ips-custom-firmware
+- diy-weather-clock-firmware
 - wt32-sc01-plus-smart-desk-companion
-- 7-segment-clock
 ---
 
 The ESP32-WeatherStationRTC is a multi-functional desk clock designed to monitor indoor environmental conditions while providing highly accurate timekeeping. Built around the versatile ESP32 microcontroller and programmed using the Arduino framework, this project combines several sensors and an LED matrix display to create an informative and sleek desktop accessory.

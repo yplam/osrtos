@@ -32,7 +32,7 @@ relatedProjects:
 - conveyor-belt-fault-detection-system
 - stm32n6-getting-started-for-audio-ai
 - ofmon-offline-first-smart-energy-monitoring
-- streampulse
+- quakeguard
 ---
 
 Pulse provides a real-time vibration anomaly detection solution designed to run entirely on a microcontroller, eliminating the need for cloud subscriptions or complex IT infrastructure. By focusing on an affordable, standalone hardware design, it addresses the gap in predictive maintenance for small-scale industrial applications like motors, pumps, and fans.

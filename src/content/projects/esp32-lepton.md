@@ -31,8 +31,8 @@ relatedProjects:
 - esp32-thermal-camera-viewer
 - micropython-camera-api-for-esp32
 - st7789-driver-for-micropython
+- esp32-cam-mjpeg-streaming-and-sd-capture
 - fastled-idf
-- esp32-i2c-mpu6050-driver
 ---
 
 The ESP32-Lepton project provides a robust, high-performance driver specifically designed for the FLIR Lepton 3.5 thermal imaging camera within the ESP-IDF ecosystem. As thermal imaging becomes more accessible for embedded applications—ranging from industrial monitoring to DIY thermography—having a dedicated driver that leverages the specific hardware features of the ESP32 series is crucial.
