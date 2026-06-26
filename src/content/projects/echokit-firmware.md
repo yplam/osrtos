@@ -26,9 +26,9 @@ relatedProjects:
 - xiaoclaw-ai-voice-assistant-with-local-agent-brain
 - pixlpal-m1-firmware
 - elatoai-realtime-voice-ai-on-esp32
+- claude-pocket
 - diy-ai-voice-assistant-for-esp32-s3
 - nebaura-labs-mote
-- esp32-voice-assistant
 ---
 
 ## Overview

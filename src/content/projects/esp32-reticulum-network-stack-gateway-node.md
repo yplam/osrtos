@@ -23,10 +23,10 @@ updatedAt: '2026-01-13'
 relatedProjects:
 - meshcore-mqtt-gateway
 - meshtnc
+- rnode-firmware-neopixel-edition
 - esp32-mesh-control
 - genius-gateway
 - zephyr-native-meshtastic-stack
-- esp32-gps-gateway-with-rtk-ntrip-support
 ---
 
 ## Overview

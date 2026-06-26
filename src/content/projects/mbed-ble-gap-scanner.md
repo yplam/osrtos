@@ -23,7 +23,7 @@ relatedProjects:
 - develop-your-own-bluetooth-low-energy-applications
 - esp32-ble-uart-mx
 - openhaystack-zephyr-firmware
-- nimble-arduino
+- ble-sniffer-for-nrf54l15
 ---
 
 ## Overview

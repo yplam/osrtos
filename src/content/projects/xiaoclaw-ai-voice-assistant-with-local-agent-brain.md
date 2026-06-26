@@ -34,9 +34,9 @@ relatedProjects:
 - wireclaw
 - xiaozhi-ai-chatbot
 - echokit-firmware
+- claude-pocket
 - ottoclaw
 - opentoys
-- diy-ai-voice-assistant-for-esp32-s3
 ---
 
 XiaoClaw represents a significant step forward in bringing sophisticated artificial intelligence to the edge. Designed specifically for the ESP32-S3, it transforms a standard microcontroller into a unified voice assistant capable of not just responding to queries, but reasoning through complex tasks using a local agent brain. By combining the voice interaction capabilities of the `xiaozhi-esp32` framework with the `mimiclaw` agent engine, XiaoClaw creates a seamless bridge between human speech and LLM-driven execution.

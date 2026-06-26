@@ -7,9 +7,9 @@ summary: Hubris is a memory-isolated, task-based RTOS written in Rust, specifica
   attack surfaces and ensure deterministic behavior in critical systems.
 codeUrl: https://github.com/oxidecomputer/hubris
 siteUrl: https://github.com/oxidecomputer/hubris
-star: 3541
-version: all-sp-v1.0.72
-lastUpdated: '2026-06-10'
+star: 3548
+version: oxide-rot-1-v1.39.0
+lastUpdated: '2026-06-25'
 components:
 - Bootloader
 - Cryptography
@@ -29,7 +29,7 @@ platforms:
 licenses:
 - MPL-2.0
 createdAt: '2025-12-15'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-26'
 ---
 
 ### Features

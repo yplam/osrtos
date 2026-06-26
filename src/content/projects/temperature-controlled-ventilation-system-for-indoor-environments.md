@@ -30,6 +30,13 @@ topics:
 isShow: true
 createdAt: '2026-06-18T08:51:44+00:00'
 updatedAt: '2026-06-18T08:51:44+00:00'
+relatedProjects:
+- stm32-pid-temperature-control-implementation
+- iot-project-on-hvac
+- knu-usn-automatic-ventilation-system
+- comfosense-touch-zehnder-comfoair-q350-mqtt-bridge-controller
+- lal-control-for-mbed-os
+- fully-automated-egg-incubator
 ---
 
 Maintaining a comfortable indoor environment requires a delicate balance between temperature sensing and mechanical response. This project implements a sophisticated ventilation control system built on the STM32F103R6 microcontroller, designed to manage airflow automatically or via manual user intervention. By integrating analog sensors, motor drivers, and visual feedback, it serves as a robust example of a closed-loop control system in the embedded space.

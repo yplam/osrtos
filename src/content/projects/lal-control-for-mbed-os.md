@@ -20,10 +20,10 @@ updatedAt: '2025-12-29'
 relatedProjects:
 - nucleo-experiment-control-system-for-atom-interferometry
 - stm32-pid-temperature-control-implementation
+- temperature-controlled-ventilation-system-for-indoor-environments
 - arm-control-framework-acorns-rover
 - stm32l476g-discovery-rtos-sensor-project
 - embedded-graphical-interface-for-pid-control
-- w601-rt-thread-alarm-clock
 ---
 
 ## Overview

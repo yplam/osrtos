@@ -28,11 +28,11 @@ createdAt: '2026-01-31'
 updatedAt: '2026-01-31'
 relatedProjects:
 - zephyr-native-meshtastic-stack
+- rnode-firmware-neopixel-edition
 - radiotftp-process-for-contiki-os
 - esp32-reticulum-network-stack-gateway-node
 - esp-mesh-lite-examples
 - transfer-files-over-ethernet-with-stm32-and-freertos
-- meshtnc
 ---
 
 The Akita Meshtastic ZModem project introduces a robust file transfer capability to the Meshtastic LoRa mesh ecosystem. While Meshtastic is primarily known for text messaging and location sharing, transferring binary files over high-latency, low-bandwidth LoRa links presents significant challenges. This project addresses those challenges by implementing a custom, non-blocking ZModem protocol engine specifically optimized for the Meshtastic environment.

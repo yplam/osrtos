@@ -17,11 +17,11 @@ createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
 relatedProjects:
 - networked-embedded-systems-nes-project
+- temperature-controlled-ventilation-system-for-indoor-environments
 - homeiot-smart-home-automation-system
 - atmega128rfa1-tinyos-kth-wsn-project
 - q-sensor-multi-functional-zigbee-air-quality-sensor
 - bathos
-- tinyos-social-distancing-application
 ---
 
 ## Overview

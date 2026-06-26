@@ -20,7 +20,7 @@ relatedProjects:
 - electricitydisplay-mqtt-remote-control-for-esp8266-esp32
 - hyperk
 - mongoose-os-configurable-sensor-node
-- esp8266-home-automation
+- rnode-firmware-neopixel-edition
 ---
 
 ## Overview

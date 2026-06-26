@@ -31,10 +31,10 @@ updatedAt: '2026-01-04'
 relatedProjects:
 - m5stack-cardputer-virtual-repl
 - europi
+- patternflow
 - retro-video-synthesizer-esp32-pure-data
 - esp32-custom-hardware-synthesizer
 - esp32-mp3
-- xterminal-esp32-handheld
 ---
 
 ## Overview

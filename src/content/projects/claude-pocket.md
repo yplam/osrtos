@@ -29,6 +29,13 @@ topics:
 isShow: true
 createdAt: '2026-06-18T08:45:45+00:00'
 updatedAt: '2026-06-18T08:45:45+00:00'
+relatedProjects:
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- diy-ai-voice-assistant-for-esp32-s3
+- echokit-firmware
+- nebaura-labs-mote
+- esp32-voice-assistant
+- starmoon-open-source-conversational-ai-device
 ---
 
 ## Overview

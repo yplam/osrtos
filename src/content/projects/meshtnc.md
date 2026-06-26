@@ -29,8 +29,8 @@ relatedProjects:
 - zephyr-native-meshtastic-stack
 - esp32-mesh-control
 - meshcore-mqtt-gateway
+- rnode-firmware-neopixel-edition
 - x-cube-subg2-firmware-package
-- zephyr-lorawan-lora-examples
 ---
 
 MeshTNC is a versatile firmware solution designed to turn common LoRa-enabled development boards into functional Terminal Node Controllers (TNC). By providing a bridge between LoRa radio hardware and standard computing interfaces, it allows users to pipe data across long distances using low-power radio technology. The project is built to be highly portable, supporting a wide array of hardware architectures including ESP32, nRF52, RP2040, and STM32.

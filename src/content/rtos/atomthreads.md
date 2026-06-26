@@ -6,7 +6,7 @@ codeUrl: https://github.com/kelvinlawson/atomthreads
 siteUrl: http://atomthreads.com/index.php
 date: '2016-11-29'
 lastUpdated: '2017-08-27'
-star: 438
+star: 437
 components: []
 libraries: []
 licenses:
@@ -16,7 +16,7 @@ platforms:
 summary: Atomthreads is a free, lightweight, portable, real-time scheduler for embedded
   systems.
 createdAt: '2017-08-27'
-updatedAt: '2026-06-15'
+updatedAt: '2026-06-26'
 ---
 
 ### Features

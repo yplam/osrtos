@@ -29,9 +29,9 @@ relatedProjects:
 - openhoop
 - rgblight-iot-rgb-led-controller
 - nova-rp2040-led-matrix-board
+- rnode-firmware-neopixel-edition
 - neopixel-library-for-raspberry-pi-pico
 - onechuk-machine-learning-powered-wii-nunchuk
-- usb-pd-tester
 ---
 
 TinyBling is a decorative wearable device designed to provide a sparkly, eye-catching effect through a ring of 16 addressable LEDs. While seemingly simple, the project serves as a practical demonstration of the CH32V003 microcontroller's capabilities, particularly in handling strict timing requirements with limited hardware resources.

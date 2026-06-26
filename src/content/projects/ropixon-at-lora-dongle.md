@@ -15,11 +15,11 @@ createdAt: '2026-01-27'
 updatedAt: '2026-01-27'
 relatedProjects:
 - lora-test-app-for-semtech-sx1262-and-apache-nuttx
+- rnode-firmware-neopixel-edition
 - zephyr-rtos-lorawan-node
 - x-cube-subg2-firmware-package
 - pax-baseboard-stm32l051k8t
 - ip-over-usb
-- meshtnc
 ---
 
 ## Overview

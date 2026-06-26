@@ -27,9 +27,9 @@ relatedProjects:
 - rgblight-iot-rgb-led-controller
 - led-controller-esp32-hub75e-led-matrix-controller
 - lumifur-controller
+- patternflow
 - x-knob-a-smart-knob-based-on-lvgl-ui-framework
 - open-wink-headlight-mod
-- onechuk-machine-learning-powered-wii-nunchuk
 ---
 
 ## Overview

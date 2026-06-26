@@ -27,12 +27,12 @@ image: /202604/compositevideosynth.webp
 createdAt: '2026-04-19T08:41:58+00:00'
 updatedAt: '2026-04-19T08:41:58+00:00'
 relatedProjects:
+- patternflow
 - esp32-custom-hardware-synthesizer
 - esp32-composite-video-library
 - esp32-64-band-audio-spectrum-analyser
 - bbmonitor
 - pixelroot32-game-engine
-- netshlix
 ---
 
 The Retro Video Synthesizer project transforms a standard ESP32 microcontroller into a dedicated graphics engine for vintage hardware. By leveraging the ESP32's internal Digital-to-Analog Converters (DAC), this project generates a live composite video signal, allowing users to connect modern microcontrollers directly to classic CRT televisions or analog monitors. It is designed for VJs, circuit benders, and retro-hardware enthusiasts who want to create dynamic, low-latency visual art without the need for a full-sized computer in the rendering chain.

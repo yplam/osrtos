@@ -39,6 +39,13 @@ topics:
 isShow: true
 createdAt: '2026-06-18T08:46:32+00:00'
 updatedAt: '2026-06-18T08:46:32+00:00'
+relatedProjects:
+- esp32-rtsp-mic-for-birdnet-go
+- esp32-i2s-microphone-stream
+- audio-stream-server-for-m5cardputer
+- esp32-rtspserver
+- birdnet-for-stm32
+- ehradio
 ---
 
 ## High-Quality Audio Streaming for Wildlife Monitoring

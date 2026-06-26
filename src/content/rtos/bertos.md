@@ -6,7 +6,7 @@ codeUrl: https://github.com/develersrl/bertos
 siteUrl: http://www.bertos.org/
 date: '2016-11-29'
 lastUpdated: '2018-08-09'
-star: 124
+star: 123
 components: []
 libraries: []
 licenses:
@@ -19,7 +19,7 @@ platforms:
 summary: BeRTOS is a real time open source operating system supplied with drivers
   and libraries designed for the rapid development of embedded software.
 createdAt: '2018-08-09'
-updatedAt: '2018-08-09'
+updatedAt: '2026-06-26'
 ---
 
 ### Features

@@ -27,7 +27,7 @@ relatedProjects:
 - espmonitor-iot-environment-monitoring-system
 - chronothermostat-an-aws-powered-iot-climate-control-system
 - esp8266-dht22-spiffs-web-server
-- ac-control
+- temperature-controlled-ventilation-system-for-indoor-environments
 ---
 
 ## Overview

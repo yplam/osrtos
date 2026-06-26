@@ -24,11 +24,11 @@ createdAt: '2026-03-24'
 updatedAt: '2026-03-24'
 relatedProjects:
 - esp32-i2s-microphone-stream
+- esp32-rtsp-microphone-for-birdnet
 - esp32-rtsp-mic-for-birdnet-go
 - m5cardputer-audio-spectrum-display
 - esp8266-sound-effects-i2s-web-trigger
 - esp32-rtspserver
-- esp32-cam-mjpeg-streaming-and-sd-capture
 ---
 
 ## Overview

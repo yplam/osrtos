@@ -32,12 +32,12 @@ isShow: false
 createdAt: '2026-01-19'
 updatedAt: '2026-01-19'
 relatedProjects:
+- esp32-rtsp-microphone-for-birdnet
 - esp32-i2s-microphone-stream
 - audio-stream-server-for-m5cardputer
 - esp32-cam-mjpeg-streaming-and-sd-capture
 - birdnet-for-stm32
 - esp32-rtspserver
-- m5cardputer-audio-spectrum-display
 ---
 
 ## High-Performance Audio Streaming for Avian Monitoring

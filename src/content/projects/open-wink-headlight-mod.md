@@ -23,9 +23,9 @@ relatedProjects:
 - opencarkey
 - openhoop
 - cuybot-v1-opensource-smartcar-project
+- rnode-firmware-neopixel-edition
 - esphome-tesla-ble
 - webscreen-software
-- esp32-ble-ota-arduino
 ---
 
 The Mazda Miata MX-5 is iconic for its pop-up headlights, and the "wink"—where one headlight remains down while the other pops up—is a favorite gesture among owners. The Open Wink project modernizes this classic modification by providing a community-driven, open-source alternative to proprietary kits. It offers a sophisticated ecosystem consisting of a custom hardware module, a cross-platform mobile application, and a dedicated update server.

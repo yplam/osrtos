@@ -29,10 +29,10 @@ updatedAt: '2026-02-03'
 relatedProjects:
 - stm32n6-getting-started-for-audio-ai
 - esp32-rtsp-mic-for-birdnet-go
+- esp32-rtsp-microphone-for-birdnet
 - stm32-ai-model-zoo-services
 - tensorflow-lite-micro-for-rt-thread
 - image-classification-getting-started-for-stm32n6
-- speech-recognition-on-stm32-using-machine-learning
 ---
 
 ## Overview

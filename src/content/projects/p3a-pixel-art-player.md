@@ -33,9 +33,9 @@ relatedProjects:
 - printpoop-retro-pixel-smart-display-for-bambu-lab-a1
 - circuitpal
 - bitmap16-dx
+- patternflow
 - sonosesp-esp32-p4-sonos-controller
 - esp32-web-radio-evo3
-- esp8266-sound-effects-i2s-web-trigger
 ---
 
 ## Overview

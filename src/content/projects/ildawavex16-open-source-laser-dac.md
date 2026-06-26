@@ -29,7 +29,7 @@ relatedProjects:
 - esp32-a2dp-sink-with-ldac-aptx-hd-and-aac-support
 - esp8266-sound-effects-i2s-web-trigger
 - esp32-s3-soundfont-sf2-sampler-synthesizer
-- esper-cdp
+- patternflow
 ---
 
 ## High-Resolution Laser Control

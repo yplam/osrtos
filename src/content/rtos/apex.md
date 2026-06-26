@@ -7,7 +7,7 @@ summary: Apex is a monolithic real-time operating system (RTOS) designed for 32-
   to run Linux-compatible applications on hardware where full Linux is too large.
 slug: apex
 codeUrl: https://github.com/apexrtos/apex
-star: 34
+star: 35
 lastUpdated: '2022-05-30'
 components:
 - Bootloader
@@ -28,7 +28,7 @@ libraries:
 - musl
 - libc++
 createdAt: '2026-06-09'
-updatedAt: '2026-06-09'
+updatedAt: '2026-06-26'
 ---
 
 ### Features
