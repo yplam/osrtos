@@ -22,12 +22,12 @@ isShow: true
 createdAt: '2026-05-10T09:13:35+00:00'
 updatedAt: '2026-05-10T09:13:35+00:00'
 relatedProjects:
+- ai-desk-card
 - esphome-e-ink-4-color-dashboard
 - git-contributions-e-ink-display
 - epd-nrf5-e-paper-display-calendar-and-photo-frame
 - 42-smart-cluster-sign
 - esp-e-paper-component
-- bitclock
 ---
 
 Creating a wireless e-ink device provides an elegant solution for displaying schedules for meeting rooms or home offices. This project leverages high-visibility e-paper technology to create a low-power display that remains readable in various lighting conditions without the glare of traditional screens.

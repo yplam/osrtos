@@ -32,7 +32,7 @@ relatedProjects:
 - esp8266-wifi-relay-and-bahtinov-masks-controller
 - omote-open-universal-remote
 - esp32-web-server-using-spiffs
-- bbmonitor
+- ai-desk-card
 ---
 
 Managing a standing desk environment becomes significantly more flexible with the Flexispot Web Controller. This project enables control of Flexispot standing desks—specifically the E7 Pro—using an M5Unified-compatible device like the Arduino Nesso N1. By emulating the original desk controller, this system allows for height adjustments and preset triggers through a local network interface or physical hardware buttons.

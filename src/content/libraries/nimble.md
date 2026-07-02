@@ -10,7 +10,7 @@ codeUrl: https://github.com/apache/mynewt-nimble
 siteUrl: http://mynewt.apache.org/latest/network/docs/index.html
 star: 875
 version: nimble_1_9_0_tag
-lastUpdated: '2026-06-24'
+lastUpdated: '2026-06-09'
 components:
 - Wireless
 - Bluetooth
@@ -30,7 +30,7 @@ licenses:
 - Apache-2.0
 libraryType: Wireless
 createdAt: '2025-12-20'
-updatedAt: '2026-06-26'
+updatedAt: '2026-07-02'
 ---
 
 ### Features

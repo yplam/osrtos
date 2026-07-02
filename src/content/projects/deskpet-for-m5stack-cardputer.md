@@ -31,8 +31,8 @@ relatedProjects:
 - clawputer
 - m5paper-buddy
 - clawy
+- ai-desk-card
 - clawdmeter
-- pixel-pets
 ---
 
 ## Overview

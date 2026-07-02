@@ -35,8 +35,8 @@ relatedProjects:
 - 6lowpan-ble-bridge
 - unabto-sdk
 - zephyr-native-meshtastic-stack
+- munim-bluetooth
 - openthread-rtos
-- herald-for-c
 ---
 
 Project Golden Gate is a sophisticated, portable framework designed by Fitbit to solve a common challenge in the IoT and wearable space: providing reliable, secure, and standardized network communication over Bluetooth Low Energy (BLE). While BLE is ubiquitous in mobile and wearable devices, its native GATT (Generic Attribute Profile) interface is often too limited for complex networking needs. Golden Gate bridges this gap by layering a full IP-based stack on top of BLE, allowing developers to use familiar protocols like CoAP, MQTT, and TLS even on resource-constrained hardware.

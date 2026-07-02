@@ -5,8 +5,8 @@ version: v3.3.2
 codeUrl: https://github.com/phoenix-rtos/phoenix-rtos-kernel
 siteUrl: http://phoenix-rtos.com/
 date: '2019-02-12'
-lastUpdated: '2026-06-17'
-star: 158
+lastUpdated: '2026-06-29'
+star: 159
 components:
 - FileSystem
 - Network
@@ -23,7 +23,7 @@ platforms:
 summary: Phoenix-RTOS is an open-source, microkernel-based, realtime operating system
   for resource constrained devices.
 createdAt: '2025-12-10'
-updatedAt: '2026-06-26'
+updatedAt: '2026-07-02'
 ---
 
 ### Features

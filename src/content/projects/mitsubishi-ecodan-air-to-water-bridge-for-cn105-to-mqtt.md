@@ -28,7 +28,7 @@ relatedProjects:
 - esp32-controller-for-charlton-jenrick-fireplace
 - simplebus2-mqtt-bridge
 - mel-ac-library-for-mongoose-os
-- openhasp-firmware
+- solar2mqtt
 ---
 
 ## Overview

@@ -38,7 +38,7 @@ relatedProjects:
 - microchip-cmsis-modules-for-arduino
 - supladevice-library
 - arduino-serial-ble
-- hijelhid-blekeyboard
+- nrf54l-arduino-core
 ---
 
 ## Overview

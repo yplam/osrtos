@@ -31,10 +31,10 @@ updatedAt: '2026-01-20'
 relatedProjects:
 - rcs-avr-relay-control-system-with-sms
 - quectel-gsm-lte-modem-driver
+- quectel-uniknect-project
 - cicada-iot-communications-module-for-energy-access
 - avnet-wnc14a2a-cellular-driver
 - blynkgsm-manager
-- blynk-async-gsm-manager
 ---
 
 Integrating cellular connectivity into embedded systems opens up a world of possibilities for remote monitoring and IoT applications. This project provides a robust framework for connecting the Quectel M66 GSM module with the ubiquitous ATmega328P microcontroller. By abstracting the complexities of AT commands and serial communication, it allows developers to focus on application logic rather than low-level protocol handling.

@@ -31,9 +31,9 @@ relatedProjects:
 - esphome-deye-inverter
 - dtugateway-for-hoymiles-hms-inverters
 - multiple-jk-bms-modbus-rs485-integration
+- solar2mqtt
 - marstek-venus-e-esphome-integration
 - esphome-modbus-tcp-to-rtu-bridge
-- esp32-remote-for-victron
 ---
 
 Interfacing with solar inverters for real-time monitoring is a key requirement for modern energy management. This project addresses this by providing a suite of tools to communicate with Ginlong Solis inverters via their Modbus RS-485 interface, bypassing proprietary cloud dependencies in favor of local control.

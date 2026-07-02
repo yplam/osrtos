@@ -28,9 +28,9 @@ relatedProjects:
 - esphome-deye-inverter
 - multiple-jk-bms-modbus-rs485-integration
 - simplebus2-mqtt-bridge
+- solar2mqtt
 - ginlong-solis-solar-inverter-modbus-integration
 - esp32-uart-bridge
-- esphome-flexit-modbus-server
 ---
 
 ## Bridging Industrial Protocols with ESPHome

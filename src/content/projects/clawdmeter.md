@@ -22,8 +22,8 @@ relatedProjects:
 - claudegauge
 - deskpet
 - deck
+- ai-desk-card
 - deskpet-for-m5stack-cardputer
-- clawy
 ---
 
 Clawdmeter is a specialized desk companion designed for users of Claude Code. Built on the Waveshare ESP32-S3-Touch-AMOLED-2.16 platform, this dashboard provides a real-time visual representation of token usage through a series of expressive pixel-art animations and data-rich screens. The project bridges the gap between a local development environment and a physical monitoring device using Bluetooth Low Energy (BLE).

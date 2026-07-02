@@ -24,8 +24,8 @@ relatedProjects:
 - cicada-iot-communications-module-for-energy-access
 - m66-gsm-module-integration-with-avr-microcontroller
 - cmsis-drivers-for-efm32-and-stm32
+- quectel-uniknect-project
 - mbed-cellular-boilerplate
-- bc28-mqtt-package-for-rt-thread
 ---
 
 ## Overview

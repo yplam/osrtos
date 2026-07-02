@@ -29,7 +29,7 @@ relatedProjects:
 - esp-e-paper-component
 - c-quiz-on-e-ink-display
 - e-paper-esp32-c6-firmware
-- home-assistant-epaper-remote
+- ai-desk-card
 ---
 
 ## Overview

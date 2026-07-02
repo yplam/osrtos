@@ -20,11 +20,11 @@ createdAt: '2026-02-06'
 updatedAt: '2026-02-06'
 relatedProjects:
 - readmepaper-esp32-7-color-e-paper-display-project
+- ai-desk-card
 - home-assistant-epaper-remote
 - esphome-e-ink-4-color-dashboard
 - esp-e-paper-component
 - esp32-p4-home-assistant-display
-- inklink
 ---
 
 The E-Ink Assist Screen project provides a sophisticated solution for creating low-power information dashboards using e-Paper technology. By combining a powerful Node.js rendering backend with an efficient ESP32 client, it allows users to display real-time data from Home Assistant on high-resolution E-Ink displays, such as the Waveshare 7.5" panel.

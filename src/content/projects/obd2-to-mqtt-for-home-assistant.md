@@ -32,12 +32,12 @@ image: /202603/obd2mqtt.webp
 createdAt: '2026-03-07'
 updatedAt: '2026-03-07'
 relatedProjects:
+- solar2mqtt
 - everblu-cyble-enhanced-rf-meter-reader
 - mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
 - esp32-controller-for-charlton-jenrick-fireplace
 - simplebus2-mqtt-bridge
 - esp32-jarolift-controller
-- esp32-p4-home-assistant-display
 ---
 
 ## Overview

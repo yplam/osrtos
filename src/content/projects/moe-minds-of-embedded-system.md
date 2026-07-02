@@ -27,7 +27,7 @@ relatedProjects:
 - minios-esp
 - nuttx-real-time-operating-system
 - seeed-arduino-freertos
-- micropython-encoder-menu
+- quectel-uniknect-project
 ---
 
 ## Overview

@@ -24,8 +24,8 @@ relatedProjects:
 - mbed-tools
 - esp32-p4-jit-dynamic-code-loading-system
 - arduino-pico
+- nrf54l-arduino-core
 - sparkminer
-- fastled-idf
 ---
 
 ## Introduction
