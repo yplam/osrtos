@@ -40,6 +40,13 @@ topics:
 isShow: true
 createdAt: '2026-07-19T00:30:20+00:00'
 updatedAt: '2026-07-19T00:30:20+00:00'
+relatedProjects:
+- ehradio
+- esp32-web-radio-evo3
+- melody-machine
+- tinyradio9-for-wt32-sc01-plus
+- elekstube-ips-custom-firmware
+- radiojkk32-multifunctional-internet-radio-player
 ---
 
 AtlasCube is a sophisticated hobby project that transforms a generic ESP32-S3 development board into a powerful internet radio and smart clock. It is designed to be entirely self-contained, running all services on-device without any cloud dependencies. The firmware manages internet radio streaming, displays a customizable clock, handles reminders, and provides a comprehensive web UI for configuration. 

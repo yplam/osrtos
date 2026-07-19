@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-07-10T02:04:19+00:00'
 updatedAt: '2026-07-10T02:04:19+00:00'
+relatedProjects:
+- project-starbeam
+- pathshield
+- esp-graber
+- poseidon
+- esp-hack-fw
+- skysweep32-multi-band-passive-drone-detector
 ---
 
 In the world of wireless security auditing, visibility is often the difference between a secure perimeter and a silent breach. Periscope-OS transforms the compact M5Stack M5StickS3 into a specialized signals intelligence (SIGINT) powerhouse, offering a passive 2.4GHz RF spectrum analyzer and tactical sonar radar deck in a handheld form factor. By focusing on passive reconnaissance, it allows security professionals to map the invisible landscape of Wi-Fi traffic without emitting detectable signals themselves.

@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-07-08T00:12:09+00:00'
 updatedAt: '2026-07-08T00:12:09+00:00'
+relatedProjects:
+- simpleftpserver-library
+- webserver-esp32-enc
+- webserver-esp32-w5500
+- https-server-generic-library
+- esp-fs-webserver
+- embeddedmqttbroker
 ---
 
 Accessing an ESP32 web server from outside a local network usually involves a headache of port forwarding, static IP configurations, or reliance on heavy third-party cloud accounts. The esp32-tunnel project simplifies this process by providing a unified API to expose local servers to the public internet using three distinct tunneling methods: self-hosted WebSocket relays, localtunnel, and bore.

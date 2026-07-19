@@ -24,10 +24,10 @@ updatedAt: '2026-03-31T09:33:00+00:00'
 relatedProjects:
 - esp32-wifi-logger
 - esp32-usb-over-ip
+- esp32-tunnel
 - esp32-ble-uart-mx
 - esphome-modbus-tcp-to-rtu-bridge
 - esp32-ascom-alpaca-implementation
-- webserver-esp32-w5500
 ---
 
 Accessing serial ports over a network is a common requirement in embedded development, whether for remote debugging, data logging, or firmware updates. While simple Telnet-to-UART bridges are common, they often lack the ability to change serial port parameters—like baud rate or flow control—remotely. This is where RFC2217 comes in. By extending the Telnet protocol with specific COM port control commands, RFC2217 allows a client to manage the physical settings of a remote serial device as if it were connected locally.

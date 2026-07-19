@@ -18,6 +18,13 @@ topics:
 isShow: true
 createdAt: '2026-07-15T05:07:56+00:00'
 updatedAt: '2026-07-15T05:07:56+00:00'
+relatedProjects:
+- stackchan-minimal
+- opentoys
+- diy-ai-voice-assistant-for-esp32-s3
+- esp32-voice-assistant
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- elatoai-realtime-voice-ai-on-esp32
 ---
 
 Building a robot that understands natural language is a complex orchestration of hardware and software. The Voice-Controlled Ground and Aerial Robot project simplifies this by distributing the workload across four coordinated environments. By combining the low-latency processing of the ESP32-S3 with the reasoning capabilities of large language models (LLMs) and the reliable motor control of the Arduino UNO, this repository provides a full-stack blueprint for voice-interactive hardware.

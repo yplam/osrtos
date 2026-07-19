@@ -23,10 +23,10 @@ updatedAt: '2026-01-04'
 relatedProjects:
 - wallabmc
 - esp-open-rtos
+- openc6-bios
 - eez-bench-box-3-bb3-modular-power-supply-platform
 - arm-control-framework-acorns-rover
 - stm32f107-makefile-freertos-template
-- stm32l475-freertos-iot-project
 ---
 
 openMMC is a modular, open-source firmware implementation for Intelligent Platform Management Controllers (IPMC). Developed primarily for the AMC FMC Carrier (AFC) boards used in MicroTCA systems, it provides the essential management layer required for high-availability hardware in research and industrial environments.

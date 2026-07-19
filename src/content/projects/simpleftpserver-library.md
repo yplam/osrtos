@@ -37,7 +37,7 @@ relatedProjects:
 - esp-fs-webserver
 - ftp-server-with-littlefs-for-wfi32-iot-board
 - stm32-ftp-server
-- devfsuploadesp
+- esp32-tunnel
 ---
 
 ## Overview

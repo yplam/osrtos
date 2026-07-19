@@ -32,6 +32,13 @@ topics:
 isShow: false
 createdAt: '2026-07-08T00:11:47+00:00'
 updatedAt: '2026-07-08T00:11:47+00:00'
+relatedProjects:
+- bbtalkie
+- claude-pocket
+- la-marzocco-round-controller
+- espframe-for-immich
+- echokit-firmware
+- esp-hosted-open
 ---
 
 ## A Standalone PBX in Your Pocket

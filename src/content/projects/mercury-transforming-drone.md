@@ -14,12 +14,12 @@ image: /202603/mercury-transforming-drone.webp
 createdAt: '2026-03-07'
 updatedAt: '2026-03-07'
 relatedProjects:
+- voice-controlled-ground-and-aerial-robot
 - droners
 - flight-controller-rev2
 - fpv-drone-stm32f411-flight-controller
 - holy-stone-h120d-drone-protocol-reverse-engineering
 - protoflight
-- catpilot-autopilot-software-stack
 ---
 
 ## Overview

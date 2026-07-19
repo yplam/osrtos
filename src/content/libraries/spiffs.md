@@ -7,9 +7,9 @@ summary: SPIFFS is a lightweight, heap-less file system designed for SPI NOR fla
   to maximize flash longevity and performance.
 codeUrl: https://github.com/pellepl/spiffs
 siteUrl: https://github.com/pellepl/spiffs
-star: 1616
+star: 1618
 version: 0.3.7
-lastUpdated: '2026-06-18'
+lastUpdated: '2026-07-16'
 components:
 - FileSystem
 - Storage
@@ -26,7 +26,7 @@ licenses:
 - MIT
 libraryType: FileSystem
 createdAt: '2023-12-02'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-19'
 ---
 
 ### Features

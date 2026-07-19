@@ -21,10 +21,10 @@ updatedAt: '2026-04-23T00:36:45+00:00'
 relatedProjects:
 - raspberry-pi-pico-w-fota-example-application
 - wi-fi-setup-for-raspberry-pi-pico-w-via-usb-mass-storage
+- network-provisioning-for-zephyr-rtos
 - pico-w-connection-manager-demo
 - wifimanager-rp2040w-lite
 - nimble-hid-keyboard-and-mouse-example-for-esp32
-- rp2040-pico-w-esp8285-wifi-library
 ---
 
 This repository demonstrates a practical method for configuring Wi-Fi on a Raspberry Pi Pico W or Pico 2 W using Bluetooth Low Energy (BLE). By using a generic BLE client, such as nRF Connect on a smartphone or PC, users can wirelessly transmit the Wi-Fi SSID and password to the microcontroller, enabling it to join a local network without hardcoded credentials.

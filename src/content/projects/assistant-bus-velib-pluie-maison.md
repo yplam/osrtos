@@ -20,7 +20,7 @@ relatedProjects:
 - esphome-e-ink-4-color-dashboard
 - esp32-cyd-weather-station-with-3-day-forecast
 - astronomy-micro-station
-- lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
+- geekmagic-smalltv-esp8266-firmware
 ---
 
 ## A Smart Display for the Parisian Commuter

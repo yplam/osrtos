@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-07-15T05:10:22+00:00'
 updatedAt: '2026-07-15T05:10:22+00:00'
+relatedProjects:
+- ncnn-mp-neural-network-inference-for-micropython
+- micromlp
+- picolm
+- tensorflow-lite-micro-for-rt-thread
+- atome-lm
+- fashion-mnist-on-esp32-with-tensorflow-lite-micro
 ---
 
 ## Overview

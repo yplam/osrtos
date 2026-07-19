@@ -24,6 +24,13 @@ isShow: true
 image: /202607/aquarium.webp
 createdAt: '2026-07-10T02:04:57+00:00'
 updatedAt: '2026-07-10T02:04:57+00:00'
+relatedProjects:
+- ascii-aquarium
+- denki-kurage
+- borneoiot-professional-aquarium-lighting-platform
+- esp32-virtual-cat-project
+- aquarios-project-aquarius
+- tamafi-wifi-powered-virtual-pet
 ---
 
 The ESP32 CYD Aquarium transforms the popular ESP32-2432S028R development board—affectionately known in the maker community as the "Cheap Yellow Display" (CYD)—into a lively, self-sustaining desk companion. Originally adapted from the Livegrid OpenMatrix project, which targeted large HUB75 LED matrices, this implementation retools the experience for the compact 2.8-inch ILI9341 TFT screen found on the CYD.

@@ -32,8 +32,8 @@ relatedProjects:
 - esp32-s3-smart-home-control-panel
 - openhasp-firmware
 - esphome-lvgl-component
-- lvgl-port-for-esp32
-- betta-ha-panel
+- hometiles
+- geekmagic-smalltv-esp8266-firmware
 ---
 
 ## Overview

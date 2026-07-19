@@ -20,6 +20,13 @@ topics:
 isShow: true
 createdAt: '2026-07-19T00:28:48+00:00'
 updatedAt: '2026-07-19T00:28:48+00:00'
+relatedProjects:
+- 7-color-e-paper-digital-photo-frame
+- epd-nrf5-e-paper-display-calendar-and-photo-frame
+- readmepaper-esp32-7-color-e-paper-display-project
+- e-ink-meeting-room-schedule-display
+- esp-e-paper-component
+- espframe-for-immich
 ---
 
 FrameFilm (帧影) is an atmospheric electronic film fridge magnet designed to blend retro aesthetics with modern electronic paper technology. The project's name, a combination of "Frame" and "Film," reflects its core mission: to capture and freeze moments of life in a high-texture, film-like format that fits seamlessly into a home environment.

@@ -24,11 +24,11 @@ createdAt: '2026-03-01'
 updatedAt: '2026-03-01'
 relatedProjects:
 - usbsnifferpio-for-rp2040
+- esp32-c5-its-logger
 - rp2040-hat-lwip-c
 - oscilloscope-rp2040
 - s-pdif-recorder-for-raspberry-pi-pico
 - mcp2515-can-testing-app-for-mongoose-os
-- bmw-idrive-controller-can-bus-interpreter
 ---
 
 ## Overview

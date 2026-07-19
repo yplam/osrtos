@@ -6,7 +6,7 @@ codeUrl: https://github.com/brtos/brtos
 siteUrl: https://github.com/brtos/brtos
 date: '2016-11-29'
 lastUpdated: '2018-03-01'
-star: 79
+star: 80
 components: []
 libraries: []
 licenses:
@@ -19,7 +19,7 @@ platforms:
 summary: BRTOS is a lightweight preemptive real time operating system designed for
   low end microcontrollers.
 createdAt: '2018-03-01'
-updatedAt: '2018-03-01'
+updatedAt: '2026-07-19'
 ---
 
 ### Features

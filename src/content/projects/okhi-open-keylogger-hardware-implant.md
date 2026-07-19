@@ -43,8 +43,8 @@ relatedProjects:
 - wifiexe-esp32-s3-based-badusb
 - bluetooth-ducky-esp32-hid-injection-tool
 - deautherx
+- periscope-os-v2-0-0-sigint
 - toothpaste
-- esp-graber
 ---
 
 okhi is a hardware implant designed to log keystrokes from USB and PS2 keyboards. It is engineered to be easily concealable within a keyboard housing, laptop, or desktop tower, drawing its power directly from the keyboard's internal cable. Once installed, the implant provides real-time viewing of keystrokes via a WiFi-enabled web interface.

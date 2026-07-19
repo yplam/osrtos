@@ -27,8 +27,8 @@ relatedProjects:
 - pixlpal-m1-firmware
 - esper-cdp
 - esp32-s3-soundfont-sf2-sampler-synthesizer
+- atlascube
 - ehradio
-- esp32-rtsp-mic-for-birdnet-go
 ---
 
 Building a high-quality Bluetooth audio receiver on the ESP32 typically involves settling for the standard SBC codec. This project, however, pushes the hardware to its limits by providing a comprehensive A2DP sink implementation that supports a suite of premium codecs including LDAC, aptX HD, AAC, and even next-generation formats like LC3plus and Opus. Optimized for the ESP32-WROVER platform, it leverages external PSRAM to handle the large buffers required for 96kHz/24-bit Hi-Res audio streaming.

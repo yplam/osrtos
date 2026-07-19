@@ -34,9 +34,9 @@ relatedProjects:
 - autonomous-racing-robot-stm32-ros1
 - arm-control-framework-acorns-rover
 - texas-aimbots-embedded-development
+- wall-following-robot
 - cuybot-v1-opensource-smartcar-project
 - stm32l476g-discovery-rtos-sensor-project
-- embedded-graphical-interface-for-pid-control
 ---
 
 NoeticMaze is a comprehensive embedded robotics project designed to demonstrate advanced navigation capabilities on the STM32F446RE microcontroller. Unlike many simple motor-control projects, NoeticMaze implements a full navigation stack—ranging from raw sensor fusion to high-level path planning—directly on the NUCLEO-F446RE platform. By leveraging the FreeRTOS real-time operating system and the CMSIS-RTOS v2 API, the system manages a complex array of concurrent tasks including Lidar processing, IMU attitude estimation, and real-time motion control.

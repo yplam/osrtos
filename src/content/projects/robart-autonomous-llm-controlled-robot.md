@@ -23,12 +23,12 @@ isShow: true
 createdAt: '2026-04-06T23:55:27+00:00'
 updatedAt: '2026-04-06T23:55:27+00:00'
 relatedProjects:
+- voice-controlled-ground-and-aerial-robot
 - mobile-mecanum-4wd-robot
 - stm32f103-quadruped-robot
 - autonomous-racing-robot-stm32-ros1
 - opentoys
 - human-following-robot
-- openrover-robotic-platform
 ---
 
 RoBart explores the potential of embodied AI by placing sophisticated Large Language Models into a mobile robot body. Built using a salvaged hoverboard for mobility and an iPhone Pro for its powerful sensors and compute, RoBart demonstrates how high-level reasoning can be integrated with real-world navigation and perception.

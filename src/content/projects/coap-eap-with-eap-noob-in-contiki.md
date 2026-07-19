@@ -23,9 +23,9 @@ relatedProjects:
 - rpl-network-authentication-simulation
 - 6lbr-on-telecontrolli-devices-x-ip4t-x-ip5
 - libedhoc
+- network-provisioning-for-zephyr-rtos
 - zephyr-coaps-client-with-tinydtls
 - esp8266-rtos-homekit-accessory
-- sleepy-nodes
 ---
 
 The **CoAP-EAP with EAP-NOOB** project is a specialized implementation designed to solve one of the most challenging problems in the Internet of Things: secure bootstrapping. When a new IoT device (or "appliance") is taken out of the box, it needs a secure way to be authenticated and associated with a user's account without pre-shared keys or complex manual configuration. This project implements the **EAP-NOOB (Nimble Out-of-Band)** authentication method, as specified in the IETF drafts, specifically tailored for the **Contiki-NG** operating system.

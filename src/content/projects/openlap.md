@@ -28,8 +28,8 @@ relatedProjects:
 - euc-dash-esp32-dashboard
 - avem
 - fpv-drone-stm32f411-flight-controller
+- esp32-flight-tracker
 - drone-stm32f1
-- flightradar24-ttgo
 ---
 
 ## Overview

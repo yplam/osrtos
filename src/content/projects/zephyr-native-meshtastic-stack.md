@@ -21,12 +21,12 @@ isShow: false
 createdAt: '2026-06-04T00:45:15+00:00'
 updatedAt: '2026-06-04T00:45:15+00:00'
 relatedProjects:
+- network-provisioning-for-zephyr-rtos
 - zephyr-rtos-lorawan-node
 - contiki-lora-tsch-project
 - meshtnc
 - zephyr-lorawan-lora-examples
 - openhaystack-zephyr-firmware
-- micro-ros-module-for-zephyr
 ---
 
 Meshtastic is a popular open-source project providing long-range, off-grid communication using LoRa radio hardware. While the reference Meshtastic firmware is a powerful PlatformIO/Arduino-based application, it often requires significant device-specific integration code and conditional compilation to support different hardware. The Meshtastic Zephyr project offers a fresh approach by providing a native implementation built entirely on top of the Zephyr RTOS.

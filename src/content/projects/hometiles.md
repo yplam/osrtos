@@ -27,6 +27,13 @@ topics:
 isShow: true
 createdAt: '2026-07-08T00:12:02+00:00'
 updatedAt: '2026-07-08T00:12:02+00:00'
+relatedProjects:
+- esp32-p4-home-assistant-display
+- betta-ha-panel
+- openhasp-firmware
+- lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
+- esp32-s3-smart-home-control-panel
+- sonosesp-esp32-p4-sonos-controller
 ---
 
 HomeTiles is a comprehensive firmware solution for ESP32-P4 touch displays, transforming them into dedicated smart home control panels. Formerly known as the ESP32-P4-HomeAssistant-Display, the project has evolved into a polished, tile-based dashboard system that integrates seamlessly with Home Assistant via MQTT. It provides a bridge between high-performance hardware and a user-friendly configuration experience through a built-in web administration panel.

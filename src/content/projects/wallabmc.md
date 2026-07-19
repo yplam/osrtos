@@ -30,9 +30,9 @@ relatedProjects:
 - openmmc
 - tenstorrent-system-firmware
 - sonoff-http-firmware
+- openc6-bios
 - breadboardos
 - stm32f103-usb-cdc-cmsis
-- mender-ota-example-for-stm32l4-and-zephyr-rtos
 ---
 
 WallaBMC is a lightweight Baseboard Management Controller (BMC) firmware designed to bring essential server management capabilities to embedded systems. Developed by Tenstorrent, it targets microcontrollers like the STM32 and RISC-V based platforms, offering a streamlined alternative to full-featured, Linux-based BMC solutions. By leveraging the Zephyr RTOS, WallaBMC provides a modular and efficient foundation for monitoring and managing host systems through industry-standard interfaces.

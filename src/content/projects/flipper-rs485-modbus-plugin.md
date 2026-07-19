@@ -26,9 +26,9 @@ relatedProjects:
 - flipper-lora-relay-app
 - esp32-bus-expander
 - esp32-bus-pirate
+- esp32-c5-its-logger
 - matter-esp32-modbus-adapter
 - esphome-flexit-modbus-server
-- riden-dongle
 ---
 
 The Flipper RS485 Modbus plugin is a powerful extension for the Flipper Zero, transforming the handheld multi-tool into a diagnostic and interaction device for industrial Modbus RTU networks. Developed by Electronic Cats, this plugin bridges the gap between portable security tools and industrial automation systems.

@@ -23,7 +23,7 @@ relatedProjects:
 - stm32l476g-discovery-rtos-sensor-project
 - oscilloscope-rp2040
 - power-pico
-- nanovna-x-enhanced-firmware-for-nanovna-h-h4
+- esp32-flight-tracker
 ---
 
 ## Overview

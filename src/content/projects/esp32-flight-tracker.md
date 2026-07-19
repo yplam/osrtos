@@ -24,6 +24,13 @@ isShow: true
 image: /202607/esp32-flight-tracker.webp
 createdAt: '2026-07-18T14:32:12+00:00'
 updatedAt: '2026-07-18T14:32:12+00:00'
+relatedProjects:
+- plane-radar
+- flightradar24-ttgo
+- nearplane-adsb-tracker
+- pons-pilot-oriented-navigation-system-for-human-powered-aircraft
+- flock-detector-3-0
+- weather-micro-station-for-t-display-s3
 ---
 
 ## Real-Time Flight Tracking on the ESP32-S3

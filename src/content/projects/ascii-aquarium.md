@@ -34,12 +34,12 @@ isShow: true
 createdAt: '2026-06-02T10:01:56+00:00'
 updatedAt: '2026-06-02T10:01:56+00:00'
 relatedProjects:
+- esp32-cyd-aquarium
 - denki-kurage
 - digital-rain-clock
 - elekstube-ips-custom-firmware
 - printpoop-retro-pixel-smart-display-for-bambu-lab-a1
 - animated-gif-on-a-320x240-lcd-display-ili9341-with-the-esp32
-- borneoiot-professional-aquarium-lighting-platform
 ---
 
 ## Meet the ASCII Aquarium

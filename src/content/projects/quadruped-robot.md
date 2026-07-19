@@ -33,7 +33,7 @@ relatedProjects:
 - hexapod
 - mobile-mecanum-4wd-robot
 - scara-drawing-robot
-- roarm-m2-robotic-arm-control-firmware
+- voice-controlled-ground-and-aerial-robot
 ---
 
 ## Overview

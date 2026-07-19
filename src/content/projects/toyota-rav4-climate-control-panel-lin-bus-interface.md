@@ -30,7 +30,7 @@ relatedProjects:
 - bmw-e90-can-cluster-arduino-project
 - stm32-displaylink
 - temperature-controlled-ventilation-system-for-indoor-environments
-- alfa-romeo-giulia-dashboard-info-display-for-esp32-s3
+- taskmanager-j2534-bridge
 ---
 
 Exploring automotive electronics often reveals sophisticated hardware that serves as an excellent platform for embedded systems training. This project focuses on interfacing an STM32G474RE microcontroller with a Toyota RAV4 V (XA50) climate control panel. By treating the car's HVAC control unit as a high-quality human-machine interface (HMI), developers can learn the intricacies of the LIN (Local Interconnect Network) bus protocol while interacting with professional-grade encoders, push buttons, and displays.

@@ -32,6 +32,13 @@ topics:
 isShow: false
 createdAt: '2026-07-15T05:07:24+00:00'
 updatedAt: '2026-07-15T05:07:24+00:00'
+relatedProjects:
+- picolm
+- pikapython
+- ncnn-mp-neural-network-inference-for-micropython
+- openrouter-esp-idf-client
+- tinymldelta
+- pycopy
 ---
 
 Datacenter-scale large language models assume datacenter-scale resources, but a $2 microcontroller stuck on a wall or embedded in a battery-powered toy doesn't have gigabytes of RAM. Atome LM bridges this gap by providing a reference implementation of a routed-ternary tiny language model specifically architected for the constraints of embedded systems. It is not just a model, but a complete integration kit that covers the entire pipeline from training in Python to bit-exact inference in C99.

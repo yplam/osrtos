@@ -31,6 +31,13 @@ topics:
 isShow: true
 createdAt: '2026-07-19T00:28:33+00:00'
 updatedAt: '2026-07-19T00:28:33+00:00'
+relatedProjects:
+- geek-magic-firmware
+- elekstube-ips-custom-firmware
+- desk-weather-clock-geekmagic-s3
+- geekmagic-open-firmware
+- lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
+- volna-2bw42-weather-station-firmware
 ---
 
 The GeekMagic SmallTV ESP8266 firmware is a specialized replacement for the stock software on SmallTV-style smart weather clocks. Specifically targeting the ESP8266-based "Ultra" variant, it transforms the device into a highly customizable desktop companion with a 240x240 ST7789 display and an authenticated web dashboard for remote management.

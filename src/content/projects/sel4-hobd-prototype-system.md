@@ -21,8 +21,8 @@ relatedProjects:
 - motolink
 - sel4-kernel-ega-text-display
 - fel4-test-project
+- taskmanager-j2534-bridge
 - advanced-operating-system-2017-sos
-- breadboardos
 ---
 
 ## Overview

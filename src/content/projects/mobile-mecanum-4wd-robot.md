@@ -36,10 +36,10 @@ updatedAt: '2026-03-04'
 relatedProjects:
 - andino-open-source-ros-2-educational-robot
 - openrover-robotic-platform
+- voice-controlled-ground-and-aerial-robot
 - quadruped-robot
 - cybergear-ros2-controller
 - stm32f103-quadruped-robot
-- pyespcar-micropython-esp32-wifi-car
 ---
 
 ## Overview

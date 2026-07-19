@@ -28,9 +28,9 @@ relatedProjects:
 - utensor-mnist-handwriting-recognition-demo
 - fashion-mnist-on-esp32-with-tensorflow-lite-micro
 - micromlp
+- noodle-neural-network-inference-engine
 - ncnn-mp-neural-network-inference-for-micropython
-- speech-recognition-on-stm32-using-machine-learning
-- deeploy-dnn-compiler-for-heterogeneous-socs
+- atome-lm
 ---
 
 This project demonstrates the capability of running a lightweight Recurrent Neural Network (RNN) model on the ATtiny85 microcontroller. Despite the hardware's significant constraints, the model achieves approximately 95% accuracy in recognizing handwritten digits from the MNIST dataset. The core of the implementation relies on utilizing the internal 512-byte EEPROM to store the model's parameters, allowing the device to perform inference without exhausting its limited SRAM.

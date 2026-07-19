@@ -27,8 +27,8 @@ relatedProjects:
 - golden-gate
 - anjay-zephyr
 - zephyr-native-meshtastic-stack
+- network-provisioning-for-zephyr-rtos
 - pyrinas-zephyr
-- sentrius-mg100-gateway-firmware
 ---
 
 ## Overview

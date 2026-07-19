@@ -34,11 +34,11 @@ createdAt: '2025-12-30'
 updatedAt: '2025-12-30'
 relatedProjects:
 - lua-rtos-for-esp32
+- atome-lm
 - pikapython
 - micropython-esp32-ulp
 - micropython-and-lvgl-firmware-for-esp32
 - pycopy
-- iotjs-plus-tizenrt
 ---
 
 ## Overview

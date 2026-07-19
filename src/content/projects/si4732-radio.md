@@ -21,10 +21,10 @@ updatedAt: '2026-01-23'
 relatedProjects:
 - tinyradio9-for-wt32-sc01-plus
 - esp32fmradio
+- atlascube
 - espri-esp-radio-interface
 - ehradio
 - elekstube-ips-custom-firmware
-- qn8066-fm-dsp-rx-tx-arduino-library
 ---
 
 ## Overview

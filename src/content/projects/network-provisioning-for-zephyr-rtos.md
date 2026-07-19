@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-07-15T05:11:03+00:00'
 updatedAt: '2026-07-15T05:11:03+00:00'
+relatedProjects:
+- ble-based-wi-fi-provisioning-for-raspberry-pi-pico-w-pico-2-w
+- zephyr-native-meshtastic-stack
+- zephyr-wifi-example
+- zephyr-wi-fi-and-tcp-udp-connection-demo
+- openthread-rtos
+- building-wireless-sensor-networks-with-openthread
 ---
 
 ## Seamless Network Onboarding for Zephyr Devices

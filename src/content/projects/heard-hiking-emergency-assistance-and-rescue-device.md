@@ -35,6 +35,13 @@ topics:
 isShow: true
 createdAt: '2026-07-19T00:29:06+00:00'
 updatedAt: '2026-07-19T00:29:06+00:00'
+relatedProjects:
+- antihunter
+- gnss-lorawan-tracker
+- zephyr-native-meshtastic-stack
+- flock-detector-3-0
+- rnode-firmware-neopixel-edition
+- gps-tracker
 ---
 
 In remote mountain areas, the lack of cellular coverage makes group safety a significant challenge. While existing tools like Personal Locator Beacons (PLBs) or satellite messengers are effective for calling for help after an accident, they do little to help a group stay together and prevent incidents before they occur. HEARD addresses this gap by creating a small mesh of ESP32 devices that allows a group leader to know exactly where everyone is and whether any member has strayed from the planned route, all without any external infrastructure.

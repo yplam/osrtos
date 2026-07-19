@@ -27,8 +27,8 @@ relatedProjects:
 - diy-ai-voice-assistant-for-esp32-s3
 - opentoys
 - esp32-voice-assistant
+- voice-controlled-ground-and-aerial-robot
 - xiaoclaw-ai-voice-assistant-with-local-agent-brain
-- echokit-firmware
 ---
 
 Giving a Large Language Model (LLM) a physical presence is more than just connecting a chatbot to a motor. It involves creating a feedback system where the model can perceive the effects of its own actions. The **Minimal Embodiment** project provides a reference implementation for exactly this: a small, persistent body built around an ESP32 that allows an LLM to interact with and sense the physical world in real-time.

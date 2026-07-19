@@ -27,6 +27,13 @@ topics:
 isShow: true
 createdAt: '2026-07-15T05:07:49+00:00'
 updatedAt: '2026-07-15T05:07:49+00:00'
+relatedProjects:
+- highboy-firmware
+- esp32-risc-v-bare-metal-sdk
+- openmmc
+- apache-nuttx-rtos-for-pine64-star64
+- yaota8266-ota-bootloader
+- multizone-iot-sdk
 ---
 
 OpenC6 BIOS is an open-source, high-performance modular platform designed specifically for the ESP32-C6 (RISC-V) microcontroller. It shifts the traditional monolithic firmware paradigm toward a more server-like architecture by acting as a host platform that decouples hardware initialization from application logic. This allows developers to hot-swap, download, and execute bare-metal payloads directly into RAM or Execute-In-Place (XIP) Flash through a standardized System Call Interface (ABI).

@@ -24,9 +24,9 @@ relatedProjects:
 - foc-pocket
 - esp32-virtual-cat-project
 - lumifur-controller
+- voice-controlled-ground-and-aerial-robot
+- verhobot
 - opentoys
-- actonator-3d-printable-robot-actuator
-- tny-360-quadruped-robot
 ---
 
 # FOC Ears: Dead Silent Animatronics

@@ -33,7 +33,7 @@ relatedProjects:
 - e-ink-meeting-room-schedule-display
 - nrf52811-solum-tag-firmware
 - readmepaper-esp32-7-color-e-paper-display-project
-- e-paper-esp32-c6-firmware
+- framefilm
 ---
 
 ## Overview

@@ -23,9 +23,9 @@ relatedProjects:
 - cuybot-v1-opensource-smartcar-project
 - 16-ir-array-pid-line-follower-robot-using-esp32
 - human-following-robot
+- wall-following-robot
 - taproot
 - actonator-3d-printable-robot-actuator
-- openrover-robotic-platform
 ---
 
 ## Overview

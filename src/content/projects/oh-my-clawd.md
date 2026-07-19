@@ -20,9 +20,9 @@ relatedProjects:
 - clawdmeter
 - claudegauge
 - clawy
+- codelight
 - deskpet
 - bbmonitor
-- deskpet-for-m5stack-cardputer
 ---
 
 Oh My Clawd is a dedicated hardware companion for users of Claude Code, Anthropic's command-line interface for AI-assisted programming. It transforms the popular ESP32-2432S028R, commonly known as the "Cheap Yellow Display" (CYD), into a real-time usage monitor. By polling local credentials and Anthropic's API headers, the device provides a glanceable, animated representation of current session and weekly usage limits, helping developers manage their rate limits without leaving their terminal.

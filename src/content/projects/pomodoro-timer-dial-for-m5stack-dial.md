@@ -27,12 +27,12 @@ image: /202606/pomodoro-timer.webp
 createdAt: '2026-06-04T23:38:17+00:00'
 updatedAt: '2026-06-04T23:38:17+00:00'
 relatedProjects:
+- tomato32
 - pomodesk-physical-pomodoro-timer
 - focus-dial
 - geek-magic-firmware
 - flatsphere-clock
 - deck
-- elekstube-ips-custom-firmware
 ---
 
 The Pomodoro Timer Dial is a sophisticated implementation of the popular productivity technique, tailored specifically for the M5Stack Dial v1.1 hardware. By combining the ESP32-S3's processing power with the unique physical form factor of a rotary encoder and a circular touch display, this project offers a tactile and intuitive way to manage focus sessions and breaks.

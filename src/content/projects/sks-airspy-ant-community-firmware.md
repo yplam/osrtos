@@ -30,8 +30,8 @@ relatedProjects:
 - twatch-v3-firmware-for-esp32
 - esp32-ble-ota-arduino
 - openhaystack-zephyr-firmware
+- esp-hosted-open
 - bleota-esp32-ota-updates-over-ble
-- zephyr-native-meshtastic-stack
 ---
 
 ## Overview

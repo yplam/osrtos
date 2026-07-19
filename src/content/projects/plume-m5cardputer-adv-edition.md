@@ -34,11 +34,11 @@ createdAt: '2026-06-04T23:42:19+00:00'
 updatedAt: '2026-06-04T23:42:19+00:00'
 relatedProjects:
 - flock-detector-3-0
+- flipdeflock
 - pathshield
 - ghostble
 - skysweep32-multi-band-passive-drone-detector
 - wardriver3000
-- antihunter
 ---
 
 Plume is a sophisticated surveillance awareness tool designed for the M5Cardputer ADV (ESP32-S3). It functions as a passive RF scanner that identifies Flock Safety Automated License Plate Reader (ALPR) cameras and Raven acoustic surveillance devices. By operating entirely locally, Plume ensures privacy; it never transmits, connects to, or interacts with the devices it detects, instead relying on publicly broadcast RF signals to alert users to nearby surveillance infrastructure.

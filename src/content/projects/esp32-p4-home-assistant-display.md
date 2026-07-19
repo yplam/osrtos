@@ -26,12 +26,12 @@ isShow: true
 createdAt: '2026-04-16T03:43:10+00:00'
 updatedAt: '2026-04-16T03:43:10+00:00'
 relatedProjects:
+- hometiles
 - lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
 - betta-ha-panel
 - openhasp-firmware
+- geekmagic-smalltv-esp8266-firmware
 - esphome-e-ink-4-color-dashboard
-- esp32-s3-smart-home-control-panel
-- volna-2bw42-weather-station-firmware
 ---
 
 ## ESP32-P4 Home Assistant Display

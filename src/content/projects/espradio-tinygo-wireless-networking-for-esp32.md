@@ -28,9 +28,9 @@ relatedProjects:
 - seeed-home-assistant-discovery
 - esp32-bus-expander
 - airfrog
+- esp-hosted-open
 - esp32-bit-pirate
 - microlink-tailscale-vpn-for-esp32
-- esp32-wifi-logger
 ---
 
 TinyGo has revolutionized how developers build firmware for microcontrollers by bringing the simplicity and safety of Go to embedded systems. However, one of the biggest challenges in the ESP32 ecosystem has been leveraging the chip's powerful radio peripherals without relying on the massive ESP-IDF C framework. The `espradio` project bridges this gap, providing a high-performance wireless communication package specifically for TinyGo.

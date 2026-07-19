@@ -23,11 +23,11 @@ createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
 relatedProjects:
 - zephyr-wifi-example
+- network-provisioning-for-zephyr-rtos
 - mbed-os-wifi-sample-with-esp8266
 - mender-ota-example-for-stm32l4-and-zephyr-rtos
 - eclipse-threadx-iot-devkit-starter-application
 - zephyr-webusb-sample-for-stm32
-- mbed-os-lorawan-tinyshell-application
 ---
 
 The Zephyr Demo Wi-Fi project provides a practical utility for developers working with networked embedded systems. Built on the Zephyr RTOS, this application serves as both a demonstration of Wi-Fi capabilities and a functional tool for testing TCP and UDP connectivity directly from a serial console.

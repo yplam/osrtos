@@ -31,11 +31,11 @@ createdAt: '2026-06-25T23:49:55+00:00'
 updatedAt: '2026-06-25T23:49:55+00:00'
 relatedProjects:
 - esp32-mesh-control
+- esp-hosted-open
 - ropixon-at-lora-dongle
 - esp32-32x32-rgb-matrix-controller
 - esp32-reticulum-network-stack-gateway-node
 - meshtnc
-- rainnow-core
 ---
 
 ### Visual Status for Reticulum Nodes

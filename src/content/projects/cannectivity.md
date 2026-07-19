@@ -30,9 +30,9 @@ relatedProjects:
 - zephyr-usb-midi-driver
 - canfestival-rtt
 - zephyr-grbl
+- taskmanager-j2534-bridge
 - micro-ros-module-for-zephyr
 - openhaystack-zephyr-firmware
-- ruuvitag-firmware-for-zephyr-os
 ---
 
 ## Overview

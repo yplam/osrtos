@@ -30,8 +30,8 @@ relatedProjects:
 - esp32-weatherstationrtc
 - elekstube-ips-custom-firmware
 - bitclock
+- geekmagic-smalltv-esp8266-firmware
 - stm32-weather-station
-- circuitpal
 ---
 
 The WT32-SC01 PLUS Smart Desk Companion is a feature-rich firmware project designed to transform Espressif's ESP32-S3 based touch display module into a versatile desktop utility. By combining high-performance graphics with network connectivity, the project creates a centralized hub for time, weather, and multimedia.

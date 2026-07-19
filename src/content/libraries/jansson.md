@@ -9,7 +9,7 @@ codeUrl: https://github.com/akheron/jansson
 siteUrl: http://www.digip.org/jansson/
 star: 3344
 version: v2.15.1
-lastUpdated: '2026-07-01'
+lastUpdated: '2026-07-09'
 platforms:
 - POSIX
 - Linux
@@ -19,7 +19,7 @@ licenses:
 - MIT
 libraryType: Middleware
 createdAt: '2025-07-24'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-19'
 ---
 
 ### Features

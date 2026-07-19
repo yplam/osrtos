@@ -30,9 +30,9 @@ relatedProjects:
 - esp32-bus-pirate
 - esp32-bit-pirate
 - espri-esp-radio-interface
+- esp-hosted-open
 - esp-graber
 - esp32-portapack-esp32pp
-- esp32-marauder-for-esp32-3248s035c
 ---
 
 The ESP32 Bus Expander is a strategic addition to the ESP32 Bus Pirate ecosystem, designed specifically to overcome the hardware limitations of single-chip solutions. While the main ESP32 Bus Pirate (often based on the ESP32-S3) is a powerhouse for general-purpose tasks and high-speed USB interfacing, it typically lacks support for the 5 GHz Wi-Fi band. The Bus Expander addresses this by introducing the ESP32-C5—Espressif's first dual-band Wi-Fi chip—into the architecture.

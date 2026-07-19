@@ -28,12 +28,12 @@ isShow: true
 createdAt: '2026-04-17T09:57:34+00:00'
 updatedAt: '2026-04-17T09:57:34+00:00'
 relatedProjects:
+- atome-lm
 - pikapython
 - tensorflow-lite-micro-for-rt-thread
+- noodle-neural-network-inference-engine
 - ncnn-mp-neural-network-inference-for-micropython
 - deeploy-dnn-compiler-for-heterogeneous-socs
-- openrouter-esp-idf-client
-- embedmcp-embedded-mcp-server-library
 ---
 
 PicoLM is an ultra-lightweight, from-scratch inference engine that enables running 1-billion parameter Large Language Models (LLMs) on hardware as affordable as a $10 board. Built in pure C11 with zero external dependencies, it provides a fully offline "local brain" for AI applications, requiring no cloud access, no API keys, and no Python environment.

@@ -35,6 +35,13 @@ topics:
 isShow: true
 createdAt: '2026-07-15T05:06:06+00:00'
 updatedAt: '2026-07-15T05:06:06+00:00'
+relatedProjects:
+- flock-detector-3-0
+- ghost-esp
+- plume-m5cardputer-adv-edition
+- pathshield
+- antihunter
+- marauder-centauri
 ---
 
 FlipDeFlock transforms the Flipper Zero into a powerful tool for counter-surveillance and wireless site surveys by pairing it with any standard ESP32 board. While the Flipper's internal radio is limited to BLE, this project leverages the ESP32's capability for Wi-Fi monitor mode to detect and track surveillance infrastructure that would otherwise be invisible. It is designed for researchers and security professionals to conduct authorized assessments and increase awareness of surrounding surveillance hardware.

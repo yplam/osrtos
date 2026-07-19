@@ -30,7 +30,7 @@ relatedProjects:
 - espgaggia-smart-coffee-machine-controller
 - speech-recognition-on-stm32-using-machine-learning
 - claude-pocket
-- diy-smart-coffee-and-espresso-scale
+- voice-controlled-ground-and-aerial-robot
 ---
 
 ## Overview

@@ -10,12 +10,12 @@ codeUrl: https://github.com/h2zero/esp-nimble-cpp
 siteUrl: https://h2zero.github.io/esp-nimble-cpp/
 star: 288
 version: 2.5.0
-lastUpdated: '2026-04-24'
+lastUpdated: '2026-05-26'
 licenses:
 - Apache-2.0
 libraryType: Wireless
 createdAt: '2025-12-29'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-19'
 ---
 
 ### Features

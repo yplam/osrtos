@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-07-08T00:10:37+00:00'
 updatedAt: '2026-07-08T00:10:37+00:00'
+relatedProjects:
+- openhrstrap-open-source-esp32-heart-rate-tracker
+- espmonitor-iot-environment-monitoring-system
+- bbmonitor
+- air-quality-monitor
+- smart-medibox
+- esp32-remote-for-victron
 ---
 
 VitalMonitor is a portable, four-parameter vital signs monitor designed to bridge the gap between accessible hobbyist electronics and clinical monitoring requirements. Developed as a biomedical engineering project at UMFST "G.E. Palade" Targu Mures, this device serves as a functional proof-of-concept for monitoring heart rate, blood oxygen saturation (SpO2), body temperature, and respiratory rate on a single integrated platform.

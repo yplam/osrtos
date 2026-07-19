@@ -30,6 +30,13 @@ topics:
 isShow: true
 createdAt: '2026-07-18T14:33:50+00:00'
 updatedAt: '2026-07-18T14:33:50+00:00'
+relatedProjects:
+- pomodoro-timer-dial-for-m5stack-dial
+- esp32-8048s050c-with-lvgl-9-4-and-freertos
+- esp32-tux
+- opentimewatch-os
+- flatsphere-clock
+- pomodesk-physical-pomodoro-timer
 ---
 
 Tomato32 is a dedicated Pomodoro timer application designed for the [Waveshare ESP32-S3-Touch-LCD-3.49](https://www.waveshare.com/esp32-s3-touch-lcd-3.49.htm) development board. By utilizing the board's integrated touchscreen and powerful ESP32-S3 microcontroller, it provides a tactile and visually engaging tool for managing focus sessions and breaks. 

@@ -20,6 +20,13 @@ topics:
 isShow: true
 createdAt: '2026-07-15T05:07:02+00:00'
 updatedAt: '2026-07-15T05:07:02+00:00'
+relatedProjects:
+- stm32-starter-project-for-arch-max
+- stm32-m-nuttx-custom-board-mod
+- learning-stm32
+- gps-tracker
+- practice-project-for-stm32f746g-discovery
+- wt32-sqln-wt32-sc01-plus-with-squareline-studio-and-lvgl
 ---
 
 Transitioning from off-the-shelf development boards like an Arduino or ESP32 to custom-designed PCBs is a significant milestone for any embedded systems developer. This project provides a roadmap for creating custom hardware centered around the STM32H573RIT6, a high-performance microcontroller based on the ARM Cortex-M33 architecture. By moving beyond pre-built modules, developers gain full control over form factor, power efficiency, and peripheral selection, making it possible to create production-ready devices.

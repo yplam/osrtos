@@ -25,12 +25,12 @@ isShow: true
 createdAt: '2026-06-09T00:26:55+00:00'
 updatedAt: '2026-06-09T00:26:55+00:00'
 relatedProjects:
+- esp32-flight-tracker
 - bbmonitor
 - wifiexe-esp32-s3-based-badusb
 - deck
 - wifi-remote-display-adv
 - lilygo-t-display-s3-boilerplate
-- lumen
 ---
 
 ## Overview

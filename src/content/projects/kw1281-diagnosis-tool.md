@@ -19,12 +19,12 @@ isShow: false
 createdAt: '2025-12-29'
 updatedAt: '2025-12-29'
 relatedProjects:
+- taskmanager-j2534-bridge
 - sel4-hobd-prototype-system
 - i2c-scanner-for-m5cardputer
 - mkdbg-embedded-crash-diagnostics-over-uart
 - zephyr-wi-fi-and-tcp-udp-connection-demo
 - cannectivity
-- openhaldex-esp32-c6-haldex-controller
 ---
 
 The KW1281 diagnosis tool is an open-source utility designed for interacting with older Volkswagen Auto Group (VAG) vehicles. It implements the KW1281 protocol, which was the standard diagnostic protocol for many VW, Audi, Seat, and Skoda models before the industry-wide transition to KWP2000 and CAN-based diagnostics.

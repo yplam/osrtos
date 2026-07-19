@@ -7,8 +7,8 @@ summary: JesFs is a lightweight, robust file system specifically engineered for 
   applications requiring reliable data persistence and secure firmware updates.
 codeUrl: https://github.com/joembedded/JesFs
 siteUrl: https://github.com/joembedded/JesFs
-star: 249
-lastUpdated: '2026-07-01'
+star: 250
+lastUpdated: '2026-07-04'
 components:
 - FileSystem
 - Storage
@@ -24,7 +24,7 @@ licenses:
 - Unknown
 libraryType: FileSystem
 createdAt: '2025-08-19'
-updatedAt: '2026-07-02'
+updatedAt: '2026-07-19'
 ---
 
 ### Features

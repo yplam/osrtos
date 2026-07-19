@@ -36,8 +36,8 @@ relatedProjects:
 - pathshield
 - flock-detector-3-0
 - marauder-centauri
+- flipdeflock
 - ghost-esp
-- batear
 ---
 
 AntiHunter is a low-cost, open-source distributed perimeter defense system designed for wireless network security and operational awareness. Built on the ESP32-S3 architecture with mesh networking capabilities, it functions as a scalable sensor network for real-time threat detection, device mapping, and perimeter security. The system transforms spectrum activity into actionable security intelligence by combining WiFi and BLE scanning, GPS positioning, and environmental sensors into a digital and physical "tripwire."

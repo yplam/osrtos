@@ -27,8 +27,8 @@ relatedProjects:
 - echolens-ai-powered-smart-glasses
 - roarm-m2-robotic-arm-control-firmware
 - scara-drawing-robot
+- voice-controlled-ground-and-aerial-robot
 - gesture-detecting-macro-keyboard
-- minimal-self-perceiving-embodiment-for-large-language-models
 ---
 
 ## Overview

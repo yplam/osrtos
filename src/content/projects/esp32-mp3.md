@@ -30,9 +30,9 @@ relatedProjects:
 - xterminal-esp32-handheld
 - jackal-modernized-sony-fx-300-audio-system
 - melody-machine
+- atlascube
 - esp32-custom-hardware-synthesizer
 - esp32-sd-sampler
-- esp32-web-radio-evo3
 ---
 
 The ESP32 MP3 project is a self-built, portable media player that combines custom hardware design with an intuitive software interface. Originally conceived as a simple software experiment for Bluetooth audio streaming, the project evolved into a comprehensive product featuring a custom-designed development board and a bespoke graphical user interface.

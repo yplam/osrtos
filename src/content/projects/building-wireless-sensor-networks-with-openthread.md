@@ -43,7 +43,7 @@ relatedProjects:
 - atmega128rfa1-tinyos-kth-wsn-project
 - zephyr-coaps-client-with-tinydtls
 - iot-labs-with-contiki-os
-- low-power-wireless-networking-for-iot-lpiot
+- network-provisioning-for-zephyr-rtos
 ---
 
 Developing robust wireless sensor networks requires a deep understanding of networking protocols, security, and power management. This repository provides a practical companion to the book *Building Wireless Sensor Networks with OpenThread*, offering a diverse set of examples built on the Zephyr RTOS. By leveraging the OpenThread implementation of the Thread protocol, these applications demonstrate how to create self-healing, secure, and power-efficient mesh networks for the Internet of Things.

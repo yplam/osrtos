@@ -29,8 +29,8 @@ relatedProjects:
 - esp32-watch-for-openhaystack
 - si4732-radio
 - vfo-esp32-si5351
+- esp32-flight-tracker
 - gnss-lorawan-tracker
-- gps-tracker
 ---
 
 Traditional GPS receivers are often treated as "black boxes" that output NMEA sentences over a serial port, hiding the complex mathematics of signal acquisition and tracking. The ESP32 SDR GPS project breaks this convention by implementing the entire signal processing chain—from raw radio frequency (RF) samples to a position fix—directly on the ESP32 microcontroller. This project serves as a powerful demonstration of the ESP32's digital signal processing capabilities, proving that a general-purpose MCU can handle the intensive demands of a Software Defined Radio (SDR) GPS receiver.

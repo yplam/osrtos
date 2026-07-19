@@ -36,9 +36,9 @@ relatedProjects:
 - esp32-web-radio-evo3
 - melody-machine
 - radiojkk32-multifunctional-internet-radio-player
+- atlascube
 - snow-radio
 - tinyradio9-for-wt32-sc01-plus
-- si4732-radio
 ---
 
 ## Introduction

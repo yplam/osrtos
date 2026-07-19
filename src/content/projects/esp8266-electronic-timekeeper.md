@@ -23,10 +23,10 @@ updatedAt: '2026-01-04'
 relatedProjects:
 - esp8266-wifi-relay-and-bahtinov-masks-controller
 - geek-magic-firmware
+- geekmagic-smalltv-esp8266-firmware
 - ayreswifimanager-awm
 - rtkbasemanager
 - esp8266-w5100-manager
-- 7-segment-clock
 ---
 
 The ESP8266 Electronic Timekeeper is a specialized firmware project designed to transform an ESP8266 microcontroller into a network-accessible scheduling device. By combining the wireless capabilities of the ESP8266 with a robust local web server, the project provides an intuitive way to manage time-based events or periods without needing physical buttons or complex serial commands.

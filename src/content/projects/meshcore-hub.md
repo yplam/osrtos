@@ -30,7 +30,7 @@ relatedProjects:
 - meshcore-mqtt-gateway
 - smart-dc-maintenance
 - crose-china-rose-lightweight-data-engine
-- swarmsense-iot-platform-with-mongoose-os
+- codelight
 ---
 
 ## Overview

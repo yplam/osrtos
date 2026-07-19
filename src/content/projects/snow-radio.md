@@ -29,7 +29,7 @@ relatedProjects:
 - radiojkk32-multifunctional-internet-radio-player
 - ehradio
 - melody-machine
-- espri-esp-radio-interface
+- atlascube
 ---
 
 ## Overview

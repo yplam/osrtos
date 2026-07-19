@@ -42,7 +42,7 @@ relatedProjects:
 - esp32-ruuvitag-collector
 - flock-detector-3-0
 - esp32-wi-fi-provision-care
-- wardriver3000
+- periscope-os-v2-0-0-sigint
 ---
 
 The ESP32 Sniffer is a specialized firmware developed to monitor and analyze Wi-Fi traffic, specifically focusing on Probe Request packets. These packets are broadcast by smartphones searching for available or known Wi-Fi networks. By capturing these requests, the ESP32 can gather significant data about nearby devices without requiring them to actually connect to a network, making it a powerful tool for presence detection and location tracking.

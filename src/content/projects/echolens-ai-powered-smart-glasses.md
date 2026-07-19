@@ -32,8 +32,8 @@ relatedProjects:
 - nebaura-labs-mote
 - esp32-voice-assistant
 - diy-ai-voice-assistant-for-esp32-s3
+- voice-controlled-ground-and-aerial-robot
 - stackchan-minimal
-- starmoon-open-source-conversational-ai-device
 ---
 
 ## Overview

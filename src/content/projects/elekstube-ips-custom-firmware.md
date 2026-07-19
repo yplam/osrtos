@@ -34,10 +34,10 @@ updatedAt: '2026-03-31T23:32:10+00:00'
 relatedProjects:
 - diy-weather-clock-firmware
 - geek-magic-firmware
+- geekmagic-smalltv-esp8266-firmware
 - desk-weather-clock-geekmagic-s3
 - esp32-weatherstationrtc
 - shelf-edge-clock
-- volna-2bw42-weather-station-firmware
 ---
 
 This custom firmware is designed for the EleksTube IPS V1 clock and its various hardware derivatives, leveraging the ESP32's built-in WiFi capabilities to transform a standard desk clock into a connected information hub. By replacing the stock software, users gain access to automated time synchronization, sophisticated display modes, and remote management features.

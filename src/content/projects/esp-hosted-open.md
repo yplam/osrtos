@@ -38,6 +38,13 @@ topics:
 isShow: false
 createdAt: '2026-07-08T00:11:07+00:00'
 updatedAt: '2026-07-08T00:11:07+00:00'
+relatedProjects:
+- esp32-bus-expander
+- esp32-bit-pirate
+- beamstalker
+- rnode-firmware-neopixel-edition
+- esp32-bus-pirate
+- ghost-esp
 ---
 
 ## Unlocking the Full Potential of Espressif Silicon

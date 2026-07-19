@@ -38,10 +38,10 @@ updatedAt: '2025-12-30'
 relatedProjects:
 - ncnn-mp-neural-network-inference-for-micropython
 - esp-dl-micropython-binding
+- noodle-neural-network-inference-engine
 - esp32-ai-connect
 - espai-unified-ai-api-client-for-esp32
 - embedmcp-embedded-mcp-server-library
-- pycopy-standard-library-pycopy-lib
 ---
 
 ## Overview

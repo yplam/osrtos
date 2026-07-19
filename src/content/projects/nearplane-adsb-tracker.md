@@ -24,10 +24,10 @@ updatedAt: '2026-01-28'
 relatedProjects:
 - plane-radar
 - flightradar24-ttgo
+- esp32-flight-tracker
 - cardputer-gps-info
 - openlap
 - papersat
-- claudegauge
 ---
 
 # nearPlane: A Portable ADSB Tracker for Aviation Enthusiasts

@@ -23,6 +23,13 @@ topics:
 isShow: false
 createdAt: '2026-07-18T14:32:12+00:00'
 updatedAt: '2026-07-18T14:32:12+00:00'
+relatedProjects:
+- tensorflow-lite-micro-for-rt-thread
+- edgeai-utensor-embedded-rtos-for-arm-processors
+- atome-lm
+- fashion-mnist-on-esp32-with-tensorflow-lite-micro
+- pruning-deep-learning-models-for-arm-cortex-m
+- embedmcp-embedded-mcp-server-library
 ---
 
 Updating machine learning models on edge devices often presents a significant challenge for developers. Shipping a full TensorFlow Lite Micro model—which can range from 20 KB to over 200 KB—over low-bandwidth connections like BLE or LoRaWAN is slow, costly, and energy-intensive. TinyMLDelta solves this by shifting the paradigm from full model re-flashing to incremental binary patches. Instead of replacing the entire file, it generates a tiny diff that mutates the existing model in flash into a new version.

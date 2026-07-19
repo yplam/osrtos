@@ -28,9 +28,9 @@ relatedProjects:
 - pixel-pets
 - raising-hell-cardputer-adv-edition
 - esp32-virtual-cat-project
+- esp32-cyd-aquarium
 - deskpet
 - deskpet-for-m5stack-cardputer
-- circuitpal
 ---
 
 ## Overview

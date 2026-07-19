@@ -23,6 +23,13 @@ topics:
 isShow: true
 createdAt: '2026-07-18T14:33:49+00:00'
 updatedAt: '2026-07-18T14:33:49+00:00'
+relatedProjects:
+- cannectivity
+- esp-can-analyzer
+- toyota-rav4-climate-control-panel-lin-bus-interface
+- kw1281-diagnosis-tool
+- bmw-idrive-controller-can-bus-interpreter
+- sel4-hobd-prototype-system
 ---
 
 Professional vehicle diagnostic interfaces are notoriously expensive and often locked to specific manufacturer software. The Taskmanager J2534 Bridge aims to break this cycle by providing an open, galvanically-isolated adapter that speaks the universal J2534 standard used by original equipment manufacturers (OEMs). By implementing the PassThru API in software, this project allows users to run actual dealer software like Toyota Techstream, VW ODIS, and Ford IDS using custom, affordable hardware.

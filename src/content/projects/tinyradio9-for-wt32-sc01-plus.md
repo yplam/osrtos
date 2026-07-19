@@ -23,8 +23,8 @@ relatedProjects:
 - esp32-web-radio-evo3
 - melody-machine
 - si4732-radio
+- atlascube
 - radiojkk32-multifunctional-internet-radio-player
-- ehradio
 ---
 
 ## Bringing High-Quality Internet Radio to the WT32-SC01-PLUS

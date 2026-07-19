@@ -37,10 +37,10 @@ updatedAt: '2026-01-04'
 relatedProjects:
 - lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
 - esp32-p4-home-assistant-display
+- hometiles
 - omote-open-universal-remote
 - betta-ha-panel
 - esphome-lvgl-component
-- esp32-s3-smart-home-control-panel
 ---
 
 openHASP is a powerful, open-source firmware designed to transform commodity touchscreen displays into versatile home automation controllers. Originally inspired by the HASwitchPlate project, openHASP represents a significant evolution by removing the requirement for proprietary Nextion hardware. Instead, it leverages the Light and Versatile Graphics Library (LVGL) to drive a wide array of affordable LCD and OLED displays directly from the MCU.

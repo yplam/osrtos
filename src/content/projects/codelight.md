@@ -32,6 +32,13 @@ topics:
 isShow: true
 createdAt: '2026-07-18T14:34:15+00:00'
 updatedAt: '2026-07-18T14:34:15+00:00'
+relatedProjects:
+- agentdeck
+- ai-desk-card
+- m5paper-buddy
+- onesdk-a-unified-ai-access-sdk-for-the-client-side
+- oh-my-clawd
+- electricitydisplay-mqtt-remote-control-for-esp8266-esp32
 ---
 
 Codelight provides live status, usage tracking, conversation following, and remote-control prompts for a wide array of supported coding agents. It allows developers to monitor grouped working, waiting, or idle states on various devices including desk screens, phones, GNOME panels, or directly within VS Code. When away from the keyboard, the system enables users to approve permission prompts and answer agent questions from any connected client.

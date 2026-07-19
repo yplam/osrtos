@@ -31,7 +31,7 @@ relatedProjects:
 - micropython-and-lvgl-firmware-for-esp32
 - tab5-launcher
 - pixlpal-m1-firmware
-- melody-machine
+- atlascube
 ---
 
 ## Overview

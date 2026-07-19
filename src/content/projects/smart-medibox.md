@@ -32,11 +32,11 @@ createdAt: '2026-03-15'
 updatedAt: '2026-03-15'
 relatedProjects:
 - chronothermostat-an-aws-powered-iot-climate-control-system
+- verhobot
 - ikedrybox-smart-3d-filament-dryer
 - shelf-edge-clock
+- vitalmonitor-esp32-portable-vital-signs-monitor
 - iot-project-on-hvac
-- simplebus2-mqtt-bridge
-- freebees-access-control-for-esp32
 ---
 
 The Smart Medibox is an integrated IoT device designed to streamline medication management for users who require regular prescriptions. Developed for the ESP32 platform, this project combines hardware sensing, real-time feedback, and remote monitoring to ensure that medicine is taken on time and stored in optimal conditions.

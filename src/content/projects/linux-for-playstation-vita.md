@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-07-19T00:28:30+00:00'
 updatedAt: '2026-07-19T00:28:30+00:00'
+relatedProjects:
+- apache-nuttx-rtos-for-pinephone
+- lvgl-port-for-arm-cortex-m55-and-mps3-an547
+- lvgl-for-embedded-linux
+- apache-nuttx-rtos-for-pine64-star64
+- xenomai-on-raspberry-pi
+- pinephone-usb-driver-for-apache-nuttx-rtos
 ---
 
 The PlayStation Vita remains one of the most capable handheld consoles ever released, powered by a quad-core ARM Cortex-A9 SoC. While the device's native operating system is highly optimized, the quest to run a mainline Linux kernel on the hardware has been a long-standing goal for the homebrew and reverse engineering community. This project represents a modern milestone in that journey, successfully porting Linux 6.12 to the Vita.
