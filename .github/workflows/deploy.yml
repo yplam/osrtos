@@ -4,6 +4,10 @@ on:
   push:
     branches: [ master, astro ]
 
+concurrency:
+  group: deploy-osrtos.com
+  cancel-in-progress: false
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -23,4 +27,4 @@ jobs:
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USER }}
           TARGET: "/data/osrtos.com/"
-          SCRIPT_BEFORE: "rm -rf /data/osrtos.com/*"
+          ARGS: "-rlgoDzc -i --delete"
