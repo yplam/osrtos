@@ -20,10 +20,10 @@ updatedAt: '2026-01-04'
 relatedProjects:
 - rt-thread-for-picorv32-on-lichee-tang
 - hbird-e203-rt-thread-on-lichee-tang
+- ostomachion
 - cmsis-rtos-on-micro-bit
 - freertos-port-for-risc-v
 - echronos-on-stm32f4x-nucleo-board
-- raspberry-pi-pico-freertos-sample-application
 ---
 
 ## Overview

@@ -26,9 +26,9 @@ relatedProjects:
 - esp32-i2s-microphone-stream
 - esp32-rtsp-microphone-for-birdnet
 - esp32-rtsp-mic-for-birdnet-go
+- m5mic
 - m5cardputer-audio-spectrum-display
 - esp8266-sound-effects-i2s-web-trigger
-- esp32-rtspserver
 ---
 
 ## Overview

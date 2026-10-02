@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-08-09T09:15:30+00:00'
 updatedAt: '2026-08-09T09:15:30+00:00'
+relatedProjects:
+- cuybot-v1-opensource-smartcar-project
+- mobile-mecanum-4wd-robot
+- pyespcar-micropython-esp32-wifi-car
+- mongoose-os-robot-car
+- robomates-firmware
+- andino-open-source-ros-2-educational-robot
 ---
 
 ## Introduction to the 4WD Arduino Robot Car

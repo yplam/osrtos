@@ -26,12 +26,12 @@ isShow: false
 createdAt: '2026-02-05'
 updatedAt: '2026-02-05'
 relatedProjects:
+- gsm-sip-bridge
 - sistema-de-apertura-de-port-n-con-m-dulo-gsm
 - esp32-gps-gateway-with-rtk-ntrip-support
 - meshadv-pi-hat
 - mbed-cellular-boilerplate
 - m66-gsm-module-integration-with-avr-microcontroller
-- quectel-gsm-lte-modem-driver
 ---
 
 ## Overview

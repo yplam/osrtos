@@ -30,12 +30,12 @@ image: /202602/volna42bw.webp
 createdAt: '2026-02-28'
 updatedAt: '2026-02-28'
 relatedProjects:
+- inkcast
 - elekstube-ips-custom-firmware
 - geekmagic-smalltv-esp8266-firmware
 - diy-weather-clock-firmware
 - esp32-p4-home-assistant-display
 - dtugateway-for-hoymiles-hms-inverters
-- inkwatchy
 ---
 
 ## Overview

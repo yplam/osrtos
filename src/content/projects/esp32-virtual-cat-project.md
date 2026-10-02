@@ -19,11 +19,11 @@ createdAt: '2026-05-11T01:43:12+00:00'
 updatedAt: '2026-05-11T01:43:12+00:00'
 relatedProjects:
 - pixel-pets
+- tamagooshi
 - tamafi-wifi-powered-virtual-pet
 - raising-hell-cardputer-adv-edition
 - xiaozhi-ai-desk-buddy-esp32-s3
 - foc-ears
-- esp32-cyd-aquarium
 ---
 
 The ESP32 Virtual Cat is a delightful project that brings a digital companion to life using the power of Rust and the ESP32-C3 microcontroller. Far from being a simple static animation, this project implements a reactive system that responds to its environment and user interaction through a variety of sensors, demonstrating how modern systems programming can be applied to create charming, interactive embedded devices.

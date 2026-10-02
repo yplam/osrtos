@@ -32,10 +32,10 @@ updatedAt: '2026-02-28'
 relatedProjects:
 - mq135-air-quality-sensor
 - project-aura
+- sensorstation3
 - q-sensor-multi-functional-zigbee-air-quality-sensor
 - espmonitor-iot-environment-monitoring-system
 - iot-industrial-operation-and-room-condition-monitor
-- espmonitor-iot-environmental-monitoring-system
 ---
 
 ## Overview

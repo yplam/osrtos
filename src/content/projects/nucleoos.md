@@ -36,11 +36,11 @@ createdAt: '2026-07-29T04:15:51+00:00'
 updatedAt: '2026-07-29T04:15:51+00:00'
 relatedProjects:
 - purplx-cyberdeck-os-for-m5stack-cardputer-adv
+- loadout-for-m5stack-tab5
 - minios-esp
 - xc-os-a-lightweight-graphical-os-for-mcus
 - m5apps
 - bruce-firmware
-- xiaoclaw-ai-voice-assistant-with-local-agent-brain
 ---
 
 NucleoOS is a modern, multi-app operating system designed specifically for the M5Stack Cardputer. Despite the hardware constraints of the ESP32-S3—which features no PSRAM and only approximately 512 KB of RAM—NucleoOS provides a rich, desktop-class experience. It achieves this through a unique "web-native" architecture where the firmware runs on the device while a browser serves as a powerful operator console.

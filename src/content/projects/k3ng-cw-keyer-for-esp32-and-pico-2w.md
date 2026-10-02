@@ -30,10 +30,10 @@ updatedAt: '2026-07-20T10:55:34+00:00'
 relatedProjects:
 - esp32-morse-keyer
 - gesture-detecting-macro-keyboard
+- rfsqueak-mk1
 - esp32-gps-gateway-with-rtk-ntrip-support
 - vfo-esp32-si5351
 - ic-705-ci-v-band-decoder-and-transverter-controller
-- esp32-s3-usb-to-ble-keyboard-bridge
 ---
 
 The K3NG CW Keyer has long been a staple in the amateur radio community, known for its incredible flexibility and a feature set that rivals high-end commercial hardware. This specific fork by K7MDL2 brings that power into the modern era by targeting the ESP32-WROOM32 and the Raspberry Pi Pico 2W. By leveraging these powerful microcontrollers, the project adds features previously difficult to implement on standard AVR-based Arduinos, such as Bluetooth keyboard support and high-resolution graphical interfaces.

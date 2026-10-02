@@ -43,9 +43,9 @@ relatedProjects:
 - esp32-rtsp-mic-for-birdnet-go
 - esp32-i2s-microphone-stream
 - audio-stream-server-for-m5cardputer
+- m5mic
 - aes67-ravenna-for-esp32-p4
 - esp32-rtspserver
-- birdnet-for-stm32
 ---
 
 ## High-Quality Audio Streaming for Wildlife Monitoring

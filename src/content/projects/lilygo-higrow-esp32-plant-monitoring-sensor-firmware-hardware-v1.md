@@ -30,9 +30,9 @@ relatedProjects:
 - lilygo-higrow-esp32-plant-monitoring-sensor-firmware
 - smart-plant-monitoring-system
 - mongoose-os-environment-logger
+- esp32-c3-environmental-monitoring-node
 - mongoose-os-environmental-sensors-application
 - mongoose-os-configurable-sensor-node
-- esp32-ruuvitag-collector
 ---
 
 ## Overview

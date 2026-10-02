@@ -35,7 +35,7 @@ relatedProjects:
 - hd2-macropad
 - esp32-tux
 - esp32-s3-nes-emulator
-- purplx-cyberdeck-os-for-m5stack-cardputer-adv
+- holocubic-nes-dynamic-module
 ---
 
 The T-HMI-C64 project is a Commodore 64 emulator specifically optimized for the ESP32-S3 platform. While originally developed for the Lilygo T-HMI development board—which features a 2.8-inch touch LCD and an SD card slot—the emulator has since expanded to support a variety of hardware, including the Lilygo T-Display S3 AMOLED, the Waveshare ESP32-S3-LCD-2.8, and the popular ESP32 'Cheap Yellow Display' (CYD). Beyond standard small-form-factor LCDs, the project even supports rendering to 64x64 or 128x64 LED matrix panels using HUB75 interfaces.

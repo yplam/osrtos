@@ -23,6 +23,13 @@ topics:
 isShow: true
 createdAt: '2026-08-06T11:22:27+00:00'
 updatedAt: '2026-08-06T11:22:27+00:00'
+relatedProjects:
+- m5paper-buddy
+- deskpet
+- bbmonitor
+- ai-desk-card
+- clawdmeter
+- claudegauge
 ---
 
 The ESP32 AI Mini Screen is a retro-styled 240×240 desktop companion designed to provide real-time visibility into AI workflows and system metrics. Acting as a physical dashboard for Claude Code and Codex CLI, it eliminates the need for direct API keys by communicating with a local bridge program on macOS or Windows. This bridge extracts session logs and credentials to display remaining quotas, costs, and active task statuses directly on the device's TFT screen.

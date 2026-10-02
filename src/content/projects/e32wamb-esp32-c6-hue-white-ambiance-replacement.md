@@ -22,11 +22,11 @@ createdAt: '2026-01-30'
 updatedAt: '2026-01-30'
 relatedProjects:
 - m5nanoc6-zigbee-test
+- zigbee-gateway-esp32-c6
 - quntis-led-controller
 - smart-lighting-system-using-esp32
 - esp32-32x32-rgb-matrix-controller
 - esp32-plc
-- q-sensor-multi-functional-zigbee-air-quality-sensor
 ---
 
 ## Overview

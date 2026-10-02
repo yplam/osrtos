@@ -19,8 +19,8 @@ relatedProjects:
 - networked-embedded-systems-nes-project
 - project-astra-asset-tracking
 - atmega128rfa1-tinyos-kth-wsn-project
+- geoshake
 - thingbot-subghz
-- esp-ppb
 ---
 
 MoteSync is an embedded systems project focused on the detection of a sound source's epicenter using a wireless sensor network (WSN). By leveraging distributed sensors, the system can triangulate or estimate the origin of acoustic signals within a monitored area, making it a valuable tool for environmental monitoring and acoustic research.

@@ -28,9 +28,9 @@ relatedProjects:
 - esp32-flight-tracker
 - bbmonitor
 - wavesight
+- esp32-cheap-yellow-display-cyd-wi-fi-analyzer
 - wifiexe-esp32-s3-based-badusb
 - deck
-- wifi-remote-display-adv
 ---
 
 ## Overview

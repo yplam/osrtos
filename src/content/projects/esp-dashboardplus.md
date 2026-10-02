@@ -34,7 +34,7 @@ relatedProjects:
 - esp-fs-webserver
 - esp32-remote-control-with-websocket
 - nmea0183-wifi-marine-data-gateway
-- esp32-p4-home-assistant-display
+- overhead
 ---
 
 ESP-DashboardPlus is a comprehensive library designed to simplify the creation of real-time web interfaces for ESP32-based devices. By leveraging WebSocket communication, it enables instantaneous updates between the microcontroller and the browser, making it ideal for monitoring sensors, controlling actuators, and managing system configurations without the latency associated with traditional HTTP polling.

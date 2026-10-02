@@ -6,8 +6,8 @@ summary: Parson is a lightweight, C89-compliant JSON library for C that provides
   characterized by its dot-notation addressing system for nested objects and its minimal
   footprint, consisting of only two source files.
 codeUrl: https://github.com/kgabis/parson
-star: 1465
-lastUpdated: '2023-10-31'
+star: 1470
+lastUpdated: '2026-09-15'
 components:
 - FileSystem
 platforms:
@@ -20,7 +20,7 @@ licenses:
 - MIT
 libraryType: Middleware
 createdAt: '2023-10-31'
-updatedAt: '2026-08-01'
+updatedAt: '2026-10-02'
 ---
 
 ### Features

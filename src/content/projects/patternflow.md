@@ -33,8 +33,8 @@ relatedProjects:
 - pixlpal-m1-firmware
 - led-controller-esp32-hub75e-led-matrix-controller
 - esp32-32x32-rgb-matrix-controller
+- awtrix-ng
 - svitrix-firmware
-- rgblight-iot-rgb-led-controller
 ---
 
 PatternFlow is an open-source LED synthesizer designed to be played with the fingertips. By turning four physical knobs, users can reshape light patterns generated through creative coding on an LED matrix in real time. Rather than treating light as a passive visual effect, the project aims to create a multisensory experience that connects directly to the motion of the hand.

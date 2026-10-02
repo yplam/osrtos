@@ -21,10 +21,10 @@ updatedAt: '2026-01-12'
 relatedProjects:
 - esp32-mqtt-motor-control
 - actonator-3d-printable-robot-actuator
+- 4wd-arduino-robot-car
 - cybergear-ros2-controller
 - pico-claw-machine
 - quadruped-robot
-- mks-xdrive-mini-foc-driver
 ---
 
 ## Overview

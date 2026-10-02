@@ -20,12 +20,12 @@ image: /202602/m5apps.webp
 createdAt: '2026-02-04'
 updatedAt: '2026-02-04'
 relatedProjects:
+- loadout-for-m5stack-tab5
 - purplx-cyberdeck-os-for-m5stack-cardputer-adv
 - tab5-launcher
 - esp32-graphical-bootloader
 - nucleoos
 - ultimate-remote-for-m5cardputer
-- m5pi-launcher
 ---
 
 ## Overview

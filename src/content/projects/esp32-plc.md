@@ -38,11 +38,11 @@ createdAt: '2026-07-29T04:15:21+00:00'
 updatedAt: '2026-07-29T04:15:21+00:00'
 relatedProjects:
 - esp-4diac-forte-library
+- ionode
 - beremiz4uc
 - klipper-esp32
 - micropython-and-lvgl-firmware-for-esp32
 - esp32-bus-pirate
-- cuybot-v1-opensource-smartcar-project
 ---
 
 Industrial automation has traditionally been dominated by expensive, proprietary Programmable Logic Controllers (PLCs). The **ESP32-PLC** project seeks to disrupt this landscape by bringing the power of ladder logic—the standard language of industrial control—to the versatile and low-cost ESP32 microcontroller. By combining the robust Espressif IoT Development Framework (ESP-IDF) with the specialized `ladderlib` library, this repository provides a professional-grade foundation for building custom automation solutions.

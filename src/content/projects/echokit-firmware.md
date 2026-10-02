@@ -24,11 +24,11 @@ createdAt: '2026-01-12'
 updatedAt: '2026-01-12'
 relatedProjects:
 - xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- esp32-p4-home-assistant-mqtt-voice-assistant
 - pixlpal-m1-firmware
 - elatoai-realtime-voice-ai-on-esp32
 - claude-pocket
 - diy-ai-voice-assistant-for-esp32-s3
-- nebaura-labs-mote
 ---
 
 ## Overview

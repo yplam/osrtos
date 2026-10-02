@@ -37,9 +37,9 @@ relatedProjects:
 - ai-desk-card
 - deskpet-for-m5stack-cardputer
 - clawy
+- esp32-ai-mini-screen
 - deskpet
 - claude-buddy-pico
-- clawdmeter-plus
 ---
 
 ## Your AI Coding Partner in Physical Form

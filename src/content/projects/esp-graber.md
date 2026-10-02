@@ -26,7 +26,7 @@ relatedProjects:
 - esp-hack-fw
 - cc1101-jammer
 - esp32-bit-pirate
-- esp32-bus-pirate
+- rfsqueak-mk1
 ---
 
 ## Overview

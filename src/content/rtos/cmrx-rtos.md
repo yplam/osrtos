@@ -1,15 +1,15 @@
 ---
 title: CMRX RTOS
-summary: CMRX is security-oriented, high-performance microkernel targeted towards low-cost
-  microcontrollers without support for memory management unit. It provides memory isolated
-  environment on commodity 32-bit microcontrollers equipped with MPU. It serves as a minimal 
-  core for building secure and reliable embedded systems by enforcing strict hardware-enforced
-  isolation.
+summary: CMRX is security-oriented, high-performance microkernel targeted towards
+  low-cost microcontrollers without support for memory management unit. It provides
+  memory isolated environment on commodity 32-bit microcontrollers equipped with MPU.
+  It serves as a minimal core for building secure and reliable embedded systems by
+  enforcing strict hardware-enforced isolation.
 slug: cmrx
 codeUrl: https://github.com/ventZl/cmrx
 siteUrl: http://cmrxrtos.org/
 star: 129
-version: 0.2.1
+version: v0.2.1
 lastUpdated: '2026-09-26'
 components:
 - Scheduler
@@ -23,7 +23,7 @@ platforms:
 licenses:
 - MIT
 createdAt: '2026-10-01'
-createdAt: '2026-10-01'
+updatedAt: '2026-10-02'
 ---
 
 ### Features

@@ -28,9 +28,9 @@ relatedProjects:
 - human-following-robot
 - 16-ir-array-pid-line-follower-robot-using-esp32
 - noeticmaze
+- 4wd-arduino-robot-car
 - autonomous-racing-robot-stm32-ros1
 - eva-rt-robotracer
-- mobile-mecanum-4wd-robot
 ---
 
 The Wall-Following Robot is an autonomous vehicle designed to navigate through a maze by maintaining a centered position between corridor walls. Beyond simple navigation, the robot tracks every turn it makes and transmits the final sequence to a PC via WiFi once it reaches the finish line. The system relies on a combination of proportional-derivative (PD) control for path smoothing and a robust finite state machine to handle complex environmental scenarios like junctions, dead ends, and open gaps.

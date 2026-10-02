@@ -33,8 +33,8 @@ relatedProjects:
 - esp32-mqtt-motor-control
 - homeiot-smart-home-automation-system
 - room-control-system
+- sensorstation3
 - esp32-freertos-examples
-- berbel-bfb-6bt-ble-remote-control-emulator
 ---
 
 ## Overview

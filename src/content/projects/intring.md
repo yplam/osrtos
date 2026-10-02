@@ -26,6 +26,13 @@ topics:
 isShow: true
 createdAt: '2026-09-01T00:27:03+00:00'
 updatedAt: '2026-09-01T00:27:03+00:00'
+relatedProjects:
+- airmouses3
+- gesture-detecting-macro-keyboard
+- onechuk-machine-learning-powered-wii-nunchuk
+- magic-wand-on-mbed
+- smart-sign-language-glove-translator
+- openhoop
 ---
 
 Intring is an innovative smart interactive ring project built around the ESP32-C3 microcontroller. It serves as a multi-functional input device, integrating a physical trackball, touch-sensitive keys, and sophisticated motion sensing to provide air mouse and gesture-based control. Designed for modern computing environments, it is particularly well-suited for AR/VR/MR glasses, tablets, and presentation control. 

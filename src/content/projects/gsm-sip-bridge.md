@@ -31,6 +31,13 @@ topics:
 isShow: false
 createdAt: '2026-08-12T13:59:15+00:00'
 updatedAt: '2026-08-12T13:59:15+00:00'
+relatedProjects:
+- sms-server
+- mbed-cellular-boilerplate
+- sistema-de-apertura-de-port-n-con-m-dulo-gsm
+- quectel-gsm-lte-modem-driver
+- pocket-dial
+- obd2-to-mqtt-for-home-assistant
 ---
 
 The GSM-SIP Bridge is a sophisticated middleware solution designed to interface cellular audio and signaling with modern VoIP systems. Written in Rust for performance and memory safety, it allows users to route incoming cellular calls to a SIP extension, effectively turning physical SIM cards into manageable SIP trunks. Whether the carrier delivers the call over traditional circuit-switched networks, VoWiFi (Wi-Fi Calling), or VoLTE, this bridge handles the translation to SIP and RTP seamlessly.

@@ -21,7 +21,7 @@ relatedProjects:
 - lua2rtt
 - micropython-port-for-rt-thread
 - donut-for-rt-thread
-- freertos-port-for-teensy-3-6-4-0-4-1
+- vtos-a-terminal-based-hobby-firmware
 ---
 
 ## Overview

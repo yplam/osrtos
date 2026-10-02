@@ -27,6 +27,13 @@ topics:
 isShow: true
 createdAt: '2026-08-02T06:43:28+00:00'
 updatedAt: '2026-08-02T06:43:28+00:00'
+relatedProjects:
+- adaspace3d
+- openhoop
+- diy-portrait-mode-gamepad
+- openrover-robotic-platform
+- fpv-drone-stm32f411-flight-controller
+- stm32-quadcopter-low-cost-quadcopter-design
 ---
 
 The HackMan3D Orbit Controller is a sophisticated, open-source hardware project that brings professional-grade 3D navigation to the desktop of any maker or engineer. By utilizing an Arduino Pro Micro and a clever arrangement of Hall-effect joysticks, this controller provides six degrees of freedom (6-DOF), allowing users to pan, zoom, and rotate 3D models simultaneously in CAD environments. It serves as a powerful, customizable alternative to commercial 3D mice, designed specifically for the needs of the 3D printing and design community.

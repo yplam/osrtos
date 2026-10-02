@@ -26,11 +26,11 @@ createdAt: '2026-07-31T01:36:39+00:00'
 updatedAt: '2026-07-31T01:36:39+00:00'
 relatedProjects:
 - esp32berry
+- loadout-for-m5stack-tab5
 - saturn
 - unigeek-firmware
 - poseidon
 - bruce-firmware
-- m5apps
 ---
 
 Purplx is a full-featured cyberdeck firmware specifically engineered for the M5Stack Cardputer ADV. Rather than focusing on a single utility, Purplx aims to be a complete "cyberpunk operating system," providing a cohesive environment for security research, off-grid survival, and everyday digital utilities. Built on the ESP32-S3 platform, it leverages the dual-core capabilities of the chip and FreeRTOS for task management, ensuring a responsive user experience across its diverse application suite.

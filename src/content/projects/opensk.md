@@ -31,9 +31,9 @@ relatedProjects:
 - esp32-u2f-security-key
 - open-authenticator-app
 - smartlock-for-disco-l475vg-iot01a
+- cyberkey
 - securegen
 - pinetime-tock
-- esp32-mfa-authenticator
 ---
 
 ## Overview

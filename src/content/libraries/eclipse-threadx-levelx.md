@@ -9,12 +9,12 @@ slug: eclipse-threadx-levelx
 codeUrl: https://github.com/eclipse-threadx/levelx
 star: 153
 version: v6.5.1.202602_rel
-lastUpdated: '2026-06-30'
+lastUpdated: '2026-09-25'
 licenses:
 - MIT
 libraryType: FileSystem
 createdAt: '2025-12-29'
-updatedAt: '2026-07-02'
+updatedAt: '2026-10-02'
 ---
 
 ### Features

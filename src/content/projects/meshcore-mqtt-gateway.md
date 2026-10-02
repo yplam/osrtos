@@ -19,10 +19,10 @@ updatedAt: '2026-01-23'
 relatedProjects:
 - esp32-reticulum-network-stack-gateway-node
 - losant-mqtt-mongoose-os-example
+- zigbee-gateway-esp32-c6
 - esp32-mesh-control
 - meshtnc
 - mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
-- losant-mqtt-example-for-mongoose-os
 ---
 
 ## Overview

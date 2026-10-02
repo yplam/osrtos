@@ -34,12 +34,12 @@ image: /202603/Mecanumrobot.webp
 createdAt: '2026-03-04'
 updatedAt: '2026-03-04'
 relatedProjects:
+- 4wd-arduino-robot-car
 - andino-open-source-ros-2-educational-robot
 - openrover-robotic-platform
 - voice-controlled-ground-and-aerial-robot
 - quadruped-robot
 - cybergear-ros2-controller
-- stm32f103-quadruped-robot
 ---
 
 ## Overview

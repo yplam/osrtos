@@ -39,10 +39,10 @@ updatedAt: '2026-07-02T08:30:26+00:00'
 relatedProjects:
 - m5paper-buddy
 - clawdmeter-plus
+- esp32-ai-mini-screen
 - clawdmeter
 - deskpet-for-m5stack-cardputer
 - agentdeck
-- deskpet
 ---
 
 The AI Desk Card is an innovative project that bridges the gap between digital AI agents and physical ambient displays. Designed specifically for the M5Paper V1.1—a 4.7-inch e-ink device—it serves as a dedicated "Skill" for agents like Claude Code, Codex, and Cursor. Instead of forcing users to manage firmware updates or manual configuration, the project leverages the power of AI agents to handle the entire lifecycle, from compiling code via PlatformIO to configuring Wi-Fi credentials.

@@ -28,8 +28,8 @@ relatedProjects:
 - seeed-home-assistant-discovery
 - tinycore-esp32-s3-learning-platform
 - swarmsense-iot-platform-with-mongoose-os
+- poom-multitool-platform
 - esphome-tesla-ble
-- matter-esp32-modbus-adapter
 ---
 
 VMflow is an open-source IoT platform designed to modernize vending machine management. By leveraging the ESP32 platform, it transforms traditional vending machines into connected, cashless, and remotely managed devices. The project provides a bridge between the machine's internal protocols and modern cloud services, allowing for real-time monitoring and advanced payment integrations.

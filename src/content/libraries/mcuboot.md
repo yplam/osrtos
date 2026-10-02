@@ -8,9 +8,9 @@ summary: MCUboot is a secure, OS-independent bootloader for 32-bit microcontroll
   across multiple RTOS platforms and architectures.
 codeUrl: https://github.com/mcu-tools/mcuboot
 siteUrl: http://mcuboot.com/
-star: 2008
+star: 2140
 version: v2.4.0
-lastUpdated: '2026-07-29'
+lastUpdated: '2026-09-30'
 components:
 - Bootloader
 - SecureBoot
@@ -30,7 +30,7 @@ licenses:
 - Apache-2.0
 libraryType: Bootloader
 createdAt: '2025-12-12'
-updatedAt: '2026-08-01'
+updatedAt: '2026-10-02'
 ---
 
 ### Features

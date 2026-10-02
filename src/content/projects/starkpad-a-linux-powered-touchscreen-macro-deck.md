@@ -30,7 +30,7 @@ relatedProjects:
 - esp32berry
 - piokmbox-high-performance-usb-hid-passthrough-for-rp2350
 - lumen
-- deck
+- vtos-a-terminal-based-hobby-firmware
 ---
 
 ## Overview

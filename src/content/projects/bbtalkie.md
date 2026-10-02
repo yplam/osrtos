@@ -25,8 +25,8 @@ relatedProjects:
 - wally-c-version
 - starmoon-open-source-conversational-ai-device
 - nebaura-labs-mote
+- rfsqueak-mk1
 - opentoys
-- espri-esp-radio-interface
 ---
 
 ## Overview

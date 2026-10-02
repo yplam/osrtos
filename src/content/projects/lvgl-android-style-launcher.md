@@ -20,10 +20,10 @@ updatedAt: '2025-12-29'
 relatedProjects:
 - m5pi-launcher
 - tab5-launcher
+- loadout-for-m5stack-tab5
 - lvgl-for-android
 - 100ask-linux-lvgl-desktop
 - lvgl-demo-embarcadores
-- lvgl-port-for-raspberry-pi-pico-mdk-arm
 ---
 
 ## Overview

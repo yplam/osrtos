@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-08-02T06:46:17+00:00'
 updatedAt: '2026-08-02T06:46:17+00:00'
+relatedProjects:
+- cortex-m33-trustzone-experiments-on-qemu-an505
+- mtower-trusted-execution-environment
+- risc-v-security-analysis-and-attacks
+- rtic-scope
+- rauk-rtic-analysis-using-klee
+- multizone-security-tee-for-risc-v
 ---
 
 ## Precision Side-Channel Analysis for the Secure World

@@ -40,6 +40,13 @@ topics:
 isShow: true
 createdAt: '2026-08-02T06:40:49+00:00'
 updatedAt: '2026-08-02T06:40:49+00:00'
+relatedProjects:
+- volna-2bw42-weather-station-firmware
+- inkwatchy
+- desk-weather-clock-geekmagic-s3
+- flightportrait-firmware
+- esphome-e-ink-4-color-dashboard
+- weather-micro-station-for-t-display-s3
 ---
 
 InkCast is a specialized firmware designed to turn an ESP32-S3 and a large e-paper display into a sophisticated, low-power weather dashboard. Unlike many simple weather displays, InkCast focuses on information density and long-term autonomy, providing a comprehensive view of current conditions, hourly trends, and multi-day forecasts while maintaining a battery life that can exceed a year on a single charge.

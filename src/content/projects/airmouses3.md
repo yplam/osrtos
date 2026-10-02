@@ -24,10 +24,10 @@ updatedAt: '2026-06-02T23:22:09+00:00'
 relatedProjects:
 - m5-keyboard-and-mouse-emulator
 - nimble-hid-keyboard-and-mouse-example-for-esp32
+- intring
 - gesture-detecting-macro-keyboard
 - esp32-nimble-hid-client
 - esp32-s3-usb-to-ble-keyboard-bridge
-- micropython-human-interface-device-library
 ---
 
 ## About the AirMouseS3

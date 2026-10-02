@@ -25,9 +25,9 @@ relatedProjects:
 - plane-radar
 - flightradar24-ttgo
 - esp32-flight-tracker
-- cardputer-gps-info
-- openlap
-- papersat
+- esp32flight
+- overhead
+- flightportrait-firmware
 ---
 
 # nearPlane: A Portable ADSB Tracker for Aviation Enthusiasts

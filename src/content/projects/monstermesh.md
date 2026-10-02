@@ -43,9 +43,9 @@ relatedProjects:
 - cardputer-game-station
 - purplx-cyberdeck-os-for-m5stack-cardputer-adv
 - m5stack-tab5-game-watch-emulator
+- holocubic-nes-dynamic-module
 - picopeanutgb-game-boy-emulator-for-rp2350
 - meshtnc
-- lvgl-game-boy-advance-emulator
 ---
 
 ## Turning Mesh Networking into a Living Game World

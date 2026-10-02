@@ -31,6 +31,13 @@ topics:
 isShow: true
 createdAt: '2026-08-12T14:11:29+00:00'
 updatedAt: '2026-08-12T14:11:29+00:00'
+relatedProjects:
+- duet
+- papyrix-reader
+- crumble
+- zereader
+- webscreen-software
+- sha2017-badge-firmware
 ---
 
 ## Introduction to Midad

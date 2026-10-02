@@ -31,10 +31,10 @@ updatedAt: '2026-06-02T23:25:07+00:00'
 relatedProjects:
 - deskpet-for-m5stack-cardputer
 - clawputer
+- tamagooshi
 - clawy
 - clawdmeter
 - m5paper-buddy
-- clawdmeter-plus
 ---
 
 Bringing AI agents out of the terminal and into the physical world, DeskPet is a dedicated hardware companion for Claude Code. Originally a port of the Claude Desktop Buddy, this implementation is tailored specifically for the M5Stack Cardputer, leveraging its landscape display and full physical keyboard to create an interactive pixel-art mascot that reacts to live coding sessions.

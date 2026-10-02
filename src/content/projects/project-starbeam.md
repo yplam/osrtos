@@ -24,7 +24,7 @@ relatedProjects:
 - esp-hack-fw
 - esp32-bluejammer
 - marauder-centauri
-- beamstalker
+- poom-multitool-platform
 ---
 
 Project Starbeam is an innovative signal intelligence (SIGINT) platform designed for security professionals, researchers, and hardware enthusiasts. At its core, the project leverages the ESP32-WROOM-32D microcontroller to coordinate a complex array of radio frequency modules, enabling advanced signal analysis, generation, and manipulation. By combining cost-effective open-source hardware with a custom 4-layer PCB, Starbeam provides a versatile toolset for exploring and securing the wireless spectrum.

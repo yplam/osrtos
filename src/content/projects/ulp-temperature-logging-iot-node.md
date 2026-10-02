@@ -27,8 +27,8 @@ relatedProjects:
 - mongoose-os-esp8266-pir-monitor
 - esp-temperature-to-losant-using-mongoose-os
 - mongoose-os-environment-logger
+- esp32-c3-environmental-monitoring-node
 - coffee-bin-mqtt
-- esp8266-mlx90614-temperature-monitor
 ---
 
 # Ultra-Low Power Temperature Logging with ESP8266

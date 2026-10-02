@@ -37,8 +37,8 @@ relatedProjects:
 - esp32-bit-pirate
 - esp-hack-fw
 - unigeek-firmware
+- poom-multitool-platform
 - bruce-firmware
-- eez-bench-box-3-bb3-modular-power-supply-platform
 ---
 
 HydraBus is a versatile open-source multi-tool hardware platform designed for developers, security researchers, and hobbyists. At its core, HydraBus is intended to be a flexible "Swiss Army knife" for hardware hacking, providing a powerful and extensible interface for interacting with electronic components and sniffing various communication protocols.

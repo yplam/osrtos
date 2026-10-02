@@ -30,9 +30,9 @@ relatedProjects:
 - rt-thread-for-picorv32-on-lichee-tang
 - fwrisc-featherweight-risc-v-core
 - picorv32-rt-thread-on-lichee-tang-eg4s20
+- ostomachion
 - fazyrv-a-scalable-risc-v-core
 - microlink-tailscale-vpn-for-esp32
-- hbird-e203-rt-thread-on-lichee-tang
 ---
 
 ## Overview

@@ -30,7 +30,7 @@ relatedProjects:
 - wt32-sc01-plus-smart-desk-companion
 - echokit-firmware
 - highboy-firmware
-- lumifur-controller
+- awtrix-ng
 ---
 
 ## Overview

@@ -28,6 +28,13 @@ topics:
 isShow: true
 createdAt: '2026-08-12T13:59:42+00:00'
 updatedAt: '2026-08-12T13:59:42+00:00'
+relatedProjects:
+- esp-graber
+- espri-esp-radio-interface
+- esp32-64-band-audio-spectrum-analyser
+- esp32-morse-keyer
+- k3ng-cw-keyer-for-esp32-and-pico-2w
+- bbtalkie
 ---
 
 RFSqueak-MK1 is an open-source project developed by Roman Kalyna, designed for real-time RF spectrum analysis and Morse code communication. This portable device combines the processing power of the ESP32 with the versatility of the CC1101 radio transceiver, creating a compact tool for hobbyists and RF enthusiasts to monitor sub-1GHz frequencies and communicate using traditional Morse code.

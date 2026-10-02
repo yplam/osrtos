@@ -26,6 +26,13 @@ topics:
 isShow: false
 createdAt: '2026-08-12T13:57:33+00:00'
 updatedAt: '2026-08-12T13:57:33+00:00'
+relatedProjects:
+- jc3248w535-lvgl-v9-test-project
+- jc4827w543-lvgl-v9-implementation
+- lvgl-8-on-wt32-sc01-with-arduino
+- esp32-smartdisplay
+- esp32-8048s050c-with-lvgl-9-4-and-freertos
+- lvgl-display-and-touchpad-drivers-for-esp32
 ---
 
 The JC3248W535 is a specialized 3.5-inch IPS touchscreen display module that integrates an ESP32-S3-WROOM-1 microcontroller. This driver provides a clean, minimal interface to harness the module's capabilities, specifically focusing on high-speed display updates and responsive touch interaction. By leveraging the ESP32-S3's Quad SPI (QSPI) peripheral and dedicated I2C bus, the driver enables fluid graphical user interfaces on the 320x480 resolution panel.

@@ -27,10 +27,10 @@ updatedAt: '2026-07-18T14:32:12+00:00'
 relatedProjects:
 - plane-radar
 - flightradar24-ttgo
+- esp32flight
 - nearplane-adsb-tracker
+- overhead
 - pons-pilot-oriented-navigation-system-for-human-powered-aircraft
-- flock-detector-3-0
-- weather-micro-station-for-t-display-s3
 ---
 
 ## Real-Time Flight Tracking on the ESP32-S3

@@ -25,6 +25,13 @@ topics:
 isShow: false
 createdAt: '2026-08-06T11:22:51+00:00'
 updatedAt: '2026-08-06T11:22:51+00:00'
+relatedProjects:
+- pixel-pets
+- deskpet
+- deskpet-for-m5stack-cardputer
+- raising-hell-cardputer-adv-edition
+- esp32-virtual-cat-project
+- tamafi-wifi-powered-virtual-pet
 ---
 
 Tamagooshi is a reimagining of the classic virtual pet for the modern developer workflow. Built specifically for M5Stack devices like the StickC Plus and StickS3, it transforms abstract data—such as Datadog metrics, PostHog events, or the activity of AI coding agents—into the mood and behavior of a pixel-art mascot. It serves as a glanceable, physical manifestation of a developer's environment and productivity.

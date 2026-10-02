@@ -22,6 +22,13 @@ topics:
 isShow: false
 createdAt: '2026-08-09T09:14:30+00:00'
 updatedAt: '2026-08-09T09:14:30+00:00'
+relatedProjects:
+- anemoia-esp32
+- esp32-s3-nes-emulator
+- anemoia-esp32-nes-emulator
+- cardputer-game-station
+- t-hmi-c64-emulator
+- pixelroot32-game-engine
 ---
 
 The Holocubic NES Dynamic Module brings classic 8-bit emulation to the Clocteck Holocubic and cubic Lua firmware ecosystem. Unlike traditional monolithic firmware, this project is built as a dynamic module (`nes.so`) that can be loaded at runtime using the ESP-ELFLoader. This architecture allows developers to extend the functionality of their ESP32-S3 based devices without re-flashing the entire system, enabling a flexible environment where Lua applications can control and interact with a high-performance C++ emulation core.

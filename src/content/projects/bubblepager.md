@@ -38,6 +38,13 @@ topics:
 isShow: true
 createdAt: '2026-08-02T06:42:51+00:00'
 updatedAt: '2026-08-02T06:42:51+00:00'
+relatedProjects:
+- lilygo-t-display-s3-boilerplate
+- readmepaper-esp32-7-color-e-paper-display-project
+- esp32-s3-mjpeg-video-player
+- esp32-p4-home-assistant-display
+- esp32-p4-grid-board
+- sonosesp-esp32-p4-sonos-controller
 ---
 
 BubblePager is a physical, receive-only pager designed specifically for Telegram. It offers a way to glance at incoming messages without the distractions of a smartphone. By focusing on Telegram's circular video notes, stickers, and short texts, the project creates a specialized communication device that feels like a modern reimagining of a classic pager.

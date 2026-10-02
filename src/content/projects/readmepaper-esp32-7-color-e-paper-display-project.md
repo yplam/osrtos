@@ -29,9 +29,9 @@ relatedProjects:
 - 7-color-e-paper-digital-photo-frame
 - open-display-firmware
 - esp-e-paper-component
+- flightportrait-firmware
 - animated-gif-on-a-320x240-lcd-display-ili9341-with-the-esp32
 - tibber-price-e-ink-display
-- e-paper-esp32-c6-firmware
 ---
 
 ## Overview

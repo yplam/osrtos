@@ -24,6 +24,13 @@ topics:
 isShow: true
 createdAt: '2026-08-12T14:02:02+00:00'
 updatedAt: '2026-08-12T14:02:02+00:00'
+relatedProjects:
+- devmonitor-for-pis
+- 100ask-linux-lvgl-desktop
+- rt-thread-fbtft-framebuffer-drivers-for-tft-lcds
+- lvgl-demo-printer-for-raspberry-pi-3
+- lumen
+- meeting-room-display-firmware
 ---
 
 Thermalright LCD Control provides an intuitive graphical interface for managing Thermalright LCD displays on Linux systems. Developed through reverse engineering of the original Windows application, this tool allows users to monitor hardware metrics and customize their cooler displays without relying on proprietary software or background root services.

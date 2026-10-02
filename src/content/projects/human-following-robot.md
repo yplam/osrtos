@@ -23,10 +23,10 @@ updatedAt: '2026-04-25T13:56:30+00:00'
 relatedProjects:
 - wall-following-robot
 - 16-ir-array-pid-line-follower-robot-using-esp32
+- 4wd-arduino-robot-car
 - eva-rt-robotracer
 - watchbot-system
 - voice-controlled-ground-and-aerial-robot
-- robart-autonomous-llm-controlled-robot
 ---
 
 ## Overview / Introduction

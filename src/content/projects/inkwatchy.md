@@ -31,11 +31,11 @@ createdAt: '2026-03-04'
 updatedAt: '2026-03-04'
 relatedProjects:
 - chronos-watchy
+- inkcast
 - dt78-esp32-firmware
 - lvgl-watch-firmware-for-open-smartwatch
 - elekstube-ips-custom-firmware
 - volna-2bw42-weather-station-firmware
-- lunokiotwatch-firmware-for-lilygo-twatch-2020
 ---
 
 InkWatchy is a comprehensive firmware solution built from the ground up for the Watchy e-paper smartwatch and its successor, the Yatchy. Designed to replace the standard Watchy library, it focuses on modularity, performance, and a dynamic user interface. The project is built on the ESP-IDF and Arduino frameworks, leveraging FreeRTOS for efficient task management and LittleFS for robust file system operations.

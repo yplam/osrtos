@@ -42,11 +42,11 @@ createdAt: '2026-02-19'
 updatedAt: '2026-02-19'
 relatedProjects:
 - esp32-marauder-for-esp32-3248s035c
+- esp32-cheap-yellow-display-cyd-wi-fi-analyzer
 - marauder-centauri
 - esp-hack-fw
 - esp32-cheap-yellow-display-micropython-lvgl
 - ghost-esp
-- unigeek-firmware
 ---
 
 ## Overview

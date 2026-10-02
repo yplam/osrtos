@@ -28,6 +28,13 @@ topics:
 isShow: false
 createdAt: '2026-08-12T14:05:57+00:00'
 updatedAt: '2026-08-12T14:05:57+00:00'
+relatedProjects:
+- esp32-mfa-authenticator
+- toothpaste
+- esp32-u2f-security-key
+- securegen
+- esp32-morse-keyer
+- open-authenticator-app
 ---
 
 CyberKey is a hardware security gadget that brings a touch of cyberpunk aesthetic to modern authentication. Built on the M5StickC Plus 2, this project transforms a compact ESP32-based development kit and a fingerprint sensor into a dedicated Time-based One-Time Password (TOTP) generator. Instead of fumbling with a smartphone app or manually typing codes, users simply touch an enrolled finger to the sensor, and the device types the 6-digit code directly into the focused field of a paired computer via Bluetooth Low Energy (BLE).

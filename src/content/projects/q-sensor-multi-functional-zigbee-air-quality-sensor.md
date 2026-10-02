@@ -33,9 +33,9 @@ relatedProjects:
 - smart-iot-sensor-with-xiao-esp32c6
 - beelight-zigbee-light-environment-sensor
 - zigbee-gas-counter
+- zigbee-gateway-esp32-c6
+- sensorstation3
 - project-aura
-- air-quality-monitor
-- mq135-air-quality-sensor
 ---
 
 ## Overview

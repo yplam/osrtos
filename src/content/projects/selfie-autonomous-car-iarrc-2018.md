@@ -25,10 +25,10 @@ updatedAt: '2026-01-04'
 relatedProjects:
 - pyespcar-micropython-esp32-wifi-car
 - autonomous-racing-robot-stm32-ros1
+- 4wd-arduino-robot-car
 - cuybot-v1-opensource-smartcar-project
 - mongoose-os-robot-car
 - watchbot-system
-- arm-control-framework-acorns-rover
 ---
 
 ## Overview

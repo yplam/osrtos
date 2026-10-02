@@ -39,7 +39,7 @@ relatedProjects:
 - smart-iot-sensor-with-xiao-esp32c6
 - tinycore-esp32-s3-learning-platform
 - dualcast
-- nrf52840-m-2-developer-kit
+- sensorstation3
 ---
 
 OpenAirScope is an advanced open-source hardware and software ecosystem designed for high-precision environmental monitoring. By combining industrial-grade processing power with a versatile array of sensors, it provides a robust solution for tracking air quality, noise pollution, and various atmospheric parameters in real-time.

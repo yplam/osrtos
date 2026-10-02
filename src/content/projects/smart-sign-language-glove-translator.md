@@ -28,9 +28,9 @@ relatedProjects:
 - echolens-ai-powered-smart-glasses
 - gesture-detecting-macro-keyboard
 - magic-wand-on-mbed
+- intring
 - nebaura-labs-mote
 - lecyborg-ai-powered-third-arm-prosthesis
-- bruxism-detector
 ---
 
 ## Bridging Communication Gaps with Wearable Tech

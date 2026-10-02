@@ -30,9 +30,9 @@ relatedProjects:
 - project-aura
 - smart-iot-sensor-with-xiao-esp32c6
 - ikea-vindriktning-air-quality-sensor-for-apache-nuttx
+- esp32-p4-home-assistant-mqtt-voice-assistant
 - engineering-diy-esp32-sensors-cameras-for-home-assistant
 - mq135-air-quality-sensor
-- q-sensor-multi-functional-zigbee-air-quality-sensor
 ---
 
 The IKEA VINDRIKTNING is a popular, affordable air quality sensor designed to measure PM2.5 particulate matter. While functional as a standalone device with its built-in LED indicator, it lacks connectivity out of the box. This project bridges that gap by using ESPHome to transform the VINDRIKTNING into a fully integrated smart home component.

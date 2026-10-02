@@ -37,9 +37,9 @@ relatedProjects:
 - kalo-esp32-voice-chat-ai-friends
 - esp32-voice-assistant
 - diy-ai-voice-assistant-for-esp32-s3
+- esp32-p4-home-assistant-mqtt-voice-assistant
 - xiaoclaw-ai-voice-assistant-with-local-agent-brain
 - claude-pocket
-- elatoai-realtime-voice-ai-on-esp32
 ---
 
 Building a functional voice assistant on a microcontroller requires a delicate balance of peripheral management, network stability, and integration with cloud-based AI services. The KALO ESP32 Voice Assistant provides a comprehensive framework for achieving this on the ESP32 platform, moving beyond simple 'offline' commands to a fully connected system capable of complex speech processing.

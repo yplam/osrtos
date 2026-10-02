@@ -23,6 +23,13 @@ topics:
 isShow: true
 createdAt: '2026-08-12T13:58:21+00:00'
 updatedAt: '2026-08-12T13:58:21+00:00'
+relatedProjects:
+- crumble
+- papyrix-reader
+- midad
+- open-display-firmware
+- zereader
+- lunokiotwatch-firmware-for-lilygo-twatch-2020
 ---
 
 Duet is an independent, open-source firmware designed specifically for the Xteink X3 and X4 e-reading devices. It offers a complete overhaul of the reading experience, focusing on privacy-centric synchronization, deep reading analytics, and a highly customizable user interface. Currently in its early alpha stage, the project is undergoing active physical-device testing to ensure stability across different hardware variants.

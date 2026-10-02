@@ -41,6 +41,13 @@ topics:
 isShow: true
 createdAt: '2026-08-06T11:21:26+00:00'
 updatedAt: '2026-08-06T11:21:26+00:00'
+relatedProjects:
+- project-aura
+- q-sensor-multi-functional-zigbee-air-quality-sensor
+- esp32-p4-home-assistant-display
+- esp32-s3-smart-home-control-panel
+- comfosense-touch-zehnder-comfoair-q350-mqtt-bridge-controller
+- espmonitor-iot-environment-monitoring-system
 ---
 
 SensorStation3 is a comprehensive environmental monitoring solution designed for the ESP32 platform, specifically optimized for the "Cheap Yellow Display" (CYD) hardware. By leveraging the latest ESP-IDF framework and FreeRTOS, the project creates a robust hub for tracking indoor climate and air quality metrics. It moves beyond simple data logging by providing a localized, interactive dashboard that makes environmental data immediately accessible without needing to open a mobile app or web browser.

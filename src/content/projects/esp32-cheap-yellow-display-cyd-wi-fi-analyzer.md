@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-08-02T06:40:03+00:00'
 updatedAt: '2026-08-02T06:40:03+00:00'
+relatedProjects:
+- esp32-marauder-for-cheap-yellow-display-cyd
+- esp32-smartdisplay
+- three-ips-displays-with-st7789
+- cyd-ansi-vt100-serial-terminal
+- esp32-cheap-yellow-display-micropython-lvgl
+- esp32-st7789v-ft6236u-arduino-lvgl-demo
 ---
 
 The ESP32 Cheap Yellow Display (CYD) Wi-Fi Analyzer is a specialized tool designed to visualize the local wireless environment. By leveraging the integrated display and Wi-Fi capabilities of the ESP32, this project provides a clear, graphical representation of network signal strength and channel usage, helping users identify interference and optimize their network setup.

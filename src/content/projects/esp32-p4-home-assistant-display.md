@@ -30,8 +30,8 @@ relatedProjects:
 - lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
 - betta-ha-panel
 - openhasp-firmware
-- geekmagic-smalltv-esp8266-firmware
-- esphome-e-ink-4-color-dashboard
+- esp32-p4-home-assistant-mqtt-voice-assistant
+- sensorstation3
 ---
 
 ## ESP32-P4 Home Assistant Display

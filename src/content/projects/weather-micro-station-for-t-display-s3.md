@@ -33,8 +33,8 @@ relatedProjects:
 - esp32-cyd-weather-station-with-3-day-forecast
 - astronomy-micro-station
 - erikaos-online-weather-station
+- inkcast
 - esp32-weatherstationrtc
-- wt32-sc01-plus-smart-desk-companion
 ---
 
 ## Overview

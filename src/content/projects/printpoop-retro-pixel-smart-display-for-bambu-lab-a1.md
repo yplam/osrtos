@@ -41,10 +41,10 @@ updatedAt: '2026-01-20'
 relatedProjects:
 - printsphere
 - bbmonitor
+- esp32-ai-mini-screen
 - clawdmeter
 - bitclock
 - advanced-filament-sensor-for-elegoo-carbon-centauri
-- p3a-pixel-art-player
 ---
 
 ## Overview

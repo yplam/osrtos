@@ -30,6 +30,13 @@ topics:
 isShow: false
 createdAt: '2026-08-02T06:46:15+00:00'
 updatedAt: '2026-08-02T06:46:15+00:00'
+relatedProjects:
+- mongoose-os-configurable-sensor-node
+- esp32-mesh-control
+- rnode-firmware-neopixel-edition
+- micropython-smarthome-node-pysmartnode
+- esp32-plc
+- riden-dongle
 ---
 
 IOnode represents a shift in how developers interact with embedded hardware. Instead of writing custom firmware for every sensor deployment or relying on heavy cloud-based IoT SDKs, IOnode turns the ESP32 into a transparent hardware gateway. By leveraging the NATS messaging protocol, every pin and sensor on the device becomes a network-reachable subject. This architecture allows users to read sensors or toggle relays from a terminal, a script, or a dashboard without writing a single line of C++ code for the node itself.

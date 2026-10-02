@@ -28,9 +28,9 @@ relatedProjects:
 - esp32-bus-expander
 - esp32-portapack-esp32pp
 - si4732-radio
+- rfsqueak-mk1
 - radiojkk32-multifunctional-internet-radio-player
 - esp32-web-radio-evo3
-- esp32fmradio
 ---
 
 ## Overview

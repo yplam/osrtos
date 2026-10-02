@@ -32,8 +32,8 @@ relatedProjects:
 - lunokiotwatch-firmware-for-lilygo-twatch-2020
 - iot-framework-for-nodemcu
 - mongoose-os-configurable-sensor-node
+- ionode
 - micropython-for-esp32-with-psram-support-lobo-port
-- lua-rtos-for-esp32
 ---
 
 ## Overview

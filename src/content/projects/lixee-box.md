@@ -26,12 +26,12 @@ image: /202602/LiXee_ZiWiFi32_face.webp
 createdAt: '2026-02-04'
 updatedAt: '2026-02-04'
 relatedProjects:
+- zigbee-gateway-esp32-c6
 - genius-gateway
 - zigbee-gas-counter
 - simplebus2-mqtt-bridge
 - q-sensor-multi-functional-zigbee-air-quality-sensor
 - energyme-home
-- beelight-zigbee-light-environment-sensor
 ---
 
 ## Overview

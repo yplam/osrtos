@@ -27,8 +27,8 @@ relatedProjects:
 - esp32-custom-hardware-synthesizer
 - esp-scope
 - esp32-i2s-microphone-stream
+- rfsqueak-mk1
 - sonosesp-esp32-p4-sonos-controller
-- esp32webscope
 ---
 
 ## Overview

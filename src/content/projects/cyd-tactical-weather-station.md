@@ -26,12 +26,12 @@ image: /202607/xXCYD-Weather-StationXx.webp
 createdAt: '2026-07-20T09:55:56+00:00'
 updatedAt: '2026-07-20T09:55:56+00:00'
 relatedProjects:
+- cyd-dashboard
+- overhead
 - esp32-cyd-weather-station-with-3-day-forecast
 - weather-micro-station-for-t-display-s3
 - esp32-weatherstationrtc
 - volna-2bw42-weather-station-firmware
-- astronomy-micro-station
-- e-paper-climate-logger-weathergotchi
 ---
 
 ## A Comprehensive Monitoring Hub for the Cheap Yellow Display

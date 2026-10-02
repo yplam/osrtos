@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-08-06T11:22:06+00:00'
 updatedAt: '2026-08-06T11:22:06+00:00'
+relatedProjects:
+- ghostesp
+- unigeek-firmware
+- esp-hack-fw
+- marauder-centauri
+- bruce-firmware
+- project-starbeam
 ---
 
 ## Overview

@@ -31,6 +31,13 @@ topics:
 isShow: false
 createdAt: '2026-08-02T06:45:56+00:00'
 updatedAt: '2026-08-02T06:45:56+00:00'
+relatedProjects:
+- mercury-transforming-drone
+- voice-controlled-ground-and-aerial-robot
+- droners
+- catpilot-autopilot-software-stack
+- magic-wand-on-mbed
+- holy-stone-h120d-drone-protocol-reverse-engineering
 ---
 
 ## Redefining Flight: Gesture-Based Drone Control

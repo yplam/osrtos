@@ -8,9 +8,9 @@ summary: SuperTinyKernel™ RTOS (STK) is a high-performance, deterministic, bar
   and FreeRTOS API compatibility, targeting ARM Cortex-M and RISC-V architectures.
 codeUrl: https://github.com/SuperTinyKernel-RTOS/stk
 siteUrl: https://supertinykernel.org
-star: 32
-version: 1.07.1
-lastUpdated: '2026-07-26'
+star: 37
+version: 1.08.0
+lastUpdated: '2026-10-01'
 components:
 - Scheduler
 - Synchronization
@@ -33,7 +33,7 @@ licenses:
 libraries:
 - SEGGER SystemView
 createdAt: '2026-04-29'
-updatedAt: '2026-08-01'
+updatedAt: '2026-10-02'
 ---
 
 ### Features

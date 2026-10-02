@@ -41,8 +41,8 @@ relatedProjects:
 - energy-consumption-monitor-energymon-c
 - tanksync
 - espmonitor-iot-environmental-monitoring-system
+- esp32-c3-environmental-monitoring-node
 - light-watcher
-- energy-consumption-monitor
 ---
 
 ## Overview

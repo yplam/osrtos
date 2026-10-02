@@ -40,6 +40,13 @@ topics:
 isShow: false
 createdAt: '2026-08-02T06:44:15+00:00'
 updatedAt: '2026-08-02T06:44:15+00:00'
+relatedProjects:
+- cyd-dashboard
+- esp32-flight-tracker
+- esp32flight
+- bbmonitor
+- cyd-tactical-weather-station
+- nearplane-adsb-tracker
 ---
 
 ## A Real-Time Window to the Cosmos

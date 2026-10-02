@@ -21,6 +21,13 @@ topics:
 isShow: false
 createdAt: '2026-08-06T11:25:04+00:00'
 updatedAt: '2026-08-06T11:25:04+00:00'
+relatedProjects:
+- picorv32-rt-thread-on-lichee-tang-eg4s20
+- hbird-e203-rt-thread-on-lichee-tang
+- rt-thread-for-picorv32-on-lichee-tang
+- wireguard-fpga
+- fwrisc-featherweight-risc-v-core
+- mos-rtos
 ---
 
 Ostomachion, named after Archimedes’ ancient dissection puzzle, is a sophisticated embedded platform designed for FPGA-based signal processing. Much like the fourteen geometric pieces of the original puzzle, this project is built from a set of composable, interlocking layers that assemble into a complete, verified FPGA RTOS platform. At its core, it combines the NEORV32 RISC-V SoC with the Zephyr RTOS, targeting the Opal Kelly XEM7310-A200 (Xilinx Artix-7) hardware.

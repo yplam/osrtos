@@ -29,9 +29,9 @@ relatedProjects:
 - open-authenticator-app
 - securegen
 - esp32-u2f-security-key
+- cyberkey
 - freebees-access-control-for-esp32
 - esp32-sram-puf-authentication
-- smartlock-for-disco-l475vg-iot01a
 ---
 
 The ESP32 MFA Authenticator is a dedicated hardware solution for generating Time-based One-Time Passwords (TOTP), providing a secure alternative to smartphone-based authentication apps. Built specifically for the ESP32-2432S028 development board—popularly known as the "Cheap Yellow Display" (CYD)—this project transforms an affordable microcontroller into a functional security gadget.

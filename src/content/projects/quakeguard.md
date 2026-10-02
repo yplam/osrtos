@@ -36,12 +36,12 @@ isShow: false
 createdAt: '2026-06-13T05:18:18+00:00'
 updatedAt: '2026-06-13T05:18:18+00:00'
 relatedProjects:
+- geoshake
 - antihunter
 - hydroponicone
 - batear
 - room-control-system
 - elatoai-realtime-voice-ai-on-esp32
-- pulse-real-time-vibration-anomaly-detection
 ---
 
 ## Turning Everyday Appliances into a Seismic Shield

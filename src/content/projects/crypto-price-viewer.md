@@ -24,10 +24,10 @@ updatedAt: '2026-06-04T00:46:28+00:00'
 relatedProjects:
 - tibber-price-e-ink-display
 - cyd-ansi-vt100-serial-terminal
+- esp32-ai-mini-screen
 - esp32-mfa-authenticator
 - esp32-remote-for-victron
-- esptimecast
-- colibri-wallet
+- esp32-cheap-yellow-display-cyd-wi-fi-analyzer
 ---
 
 The Crypto Price Viewer is a dedicated hardware project designed to provide real-time cryptocurrency market data on a standalone device. Unlike desktop widgets or phone apps, this device operates independently of a computer, housing its components in a custom 3D-printed case with a vibrant color screen.

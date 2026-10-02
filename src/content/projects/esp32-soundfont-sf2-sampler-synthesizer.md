@@ -33,7 +33,7 @@ relatedProjects:
 - esp32-s3-sd-sampler
 - esp32-custom-hardware-synthesizer
 - digital-synth-pra32-u2
-- stm32f4-digital-synthesizer
+- type-2-autonomous-polyphonic-synthesizer
 ---
 
 The ESP32 SF2 Sampler Synthesizer transforms the ESP32-S3 and ESP32-P4 microcontrollers into powerful, compact wavetable synthesizers capable of playing high-quality SoundFont 2 (SF2) instrument banks. By leveraging the expanded memory capabilities of modern ESP32 variants—specifically Octal SPI (OPI) PSRAM—this project overcomes the memory limitations that previously hindered complex sampling on the ESP32 platform.

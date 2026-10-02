@@ -44,7 +44,7 @@ relatedProjects:
 - sha2017-badge-firmware
 - colibri-wallet
 - bitcoin-card-wallet
-- micropython-for-esp32-with-psram-support-lobo-port
+- esp32-tinyllm
 ---
 
 ## Overview

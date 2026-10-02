@@ -34,8 +34,8 @@ relatedProjects:
 - stick-firmware
 - saturn
 - bruce-firmware
+- loadout-for-m5stack-tab5
 - purplx-cyberdeck-os-for-m5stack-cardputer-adv
-- highboy-firmware
 ---
 
 M5_Crystal is a versatile and extensible firmware designed specifically for the M5Stack ecosystem, targeting devices such as the M5StickCPlus2 and the Cardputer-ADV. It provides a comprehensive suite of utilities ranging from network security testing to daily productivity tools, all packed into a portable form factor.

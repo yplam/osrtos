@@ -27,6 +27,13 @@ topics:
 isShow: true
 createdAt: '2026-08-09T09:13:30+00:00'
 updatedAt: '2026-08-09T09:13:30+00:00'
+relatedProjects:
+- esp32-p4-home-assistant-display
+- xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- tuneoutdisplay
+- lvgl-esphome-firmware-for-waveshare-esp32-p4-86-panel
+- diy-ai-voice-assistant-for-esp32-s3
+- kalo-esp32-voice-assistant
 ---
 
 The ESP32-P4 Home Assistant MQTT Voice Assistant is a high-performance, local voice firmware designed for the Home Assistant ecosystem. Built natively on ESP-IDF v5.5, it targets the JC-ESP32P4-M3-DEV development board, leveraging the powerful ESP32-P4 microcontroller alongside an ESP32-C6 coprocessor to handle Wi-Fi and Bluetooth connectivity via SDIO. Unlike cloud-dependent assistants, this project focuses on privacy and speed by processing wake words and voice activity detection (VAD) locally before communicating with Home Assistant.

@@ -24,9 +24,9 @@ relatedProjects:
 - lumifur-controller
 - led-matrix-max7219-for-mongoose-os
 - esp32-32x32-rgb-matrix-controller
+- awtrix-ng
 - t-hmi-c64-emulator
 - patternflow
-- esp32-p4-grid-board
 ---
 
 ## Overview

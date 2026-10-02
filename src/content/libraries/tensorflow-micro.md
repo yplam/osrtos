@@ -8,9 +8,9 @@ summary: TensorFlow is an end-to-end open-source platform for machine learning t
   offering stable APIs in Python and C++ alongside a rich set of specialized extensions.
 codeUrl: https://github.com/tensorflow/tensorflow
 siteUrl: https://github.com/tensorflow/tensorflow/tree/master/tensorflow/lite/experimental/micro
-star: 196642
+star: 200660
 version: v2.21.0
-lastUpdated: '2026-08-01'
+lastUpdated: '2026-10-02'
 components:
 - MachineLearning
 - Graphics
@@ -31,7 +31,7 @@ licenses:
 - Apache-2.0
 libraryType: MachineLearning
 createdAt: '2025-12-25'
-updatedAt: '2026-08-01'
+updatedAt: '2026-10-02'
 ---
 
 ### Features

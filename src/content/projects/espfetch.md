@@ -30,12 +30,12 @@ isShow: false
 createdAt: '2026-04-16T03:44:27+00:00'
 updatedAt: '2026-04-16T03:44:27+00:00'
 relatedProjects:
+- esp32-ai-mini-screen
 - esp32-wifi-logger
 - bbmonitor
 - espsavecrashspiffs
 - esp-dashboardplus
 - hommie-logger
-- arduino-esp-utils
 ---
 
 ## Bringing the Neofetch Experience to ESP32 and ESP8266

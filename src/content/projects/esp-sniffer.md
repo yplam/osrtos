@@ -25,6 +25,13 @@ topics:
 isShow: true
 createdAt: '2026-08-02T06:40:09+00:00'
 updatedAt: '2026-08-02T06:40:09+00:00'
+relatedProjects:
+- linkscope-bpu-uart-analyzer
+- esp32-sniffer
+- marauder-centauri
+- esp-scope
+- periscope-os-v2-0-0-sigint
+- esp32-network-scanner
 ---
 
 ## Overview

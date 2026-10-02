@@ -27,10 +27,10 @@ updatedAt: '2026-03-19'
 relatedProjects:
 - anemoia-esp32
 - esp32-s3-nes-emulator
+- holocubic-nes-dynamic-module
 - pixelroot32-game-engine
 - pc-6001mkii-emulator-for-raspberry-pi-pico
 - cardputer-game-station
-- galagino-for-platformio
 ---
 
 Anemoia-ESP32 is a high-performance rewrite and port of the Anemoia Nintendo Entertainment System (NES) emulator, specifically designed to run on the ESP32 microcontroller. Written in C++, this project focuses on achieving native emulation speeds and full audio support without the need for external PSRAM, making it accessible for standard ESP32-WROOM-32 modules.

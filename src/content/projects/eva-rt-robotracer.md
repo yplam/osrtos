@@ -24,8 +24,8 @@ relatedProjects:
 - 16-ir-array-pid-line-follower-robot-using-esp32
 - human-following-robot
 - wall-following-robot
+- 4wd-arduino-robot-car
 - taproot
-- actonator-3d-printable-robot-actuator
 ---
 
 ## Overview

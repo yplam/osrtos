@@ -27,8 +27,8 @@ relatedProjects:
 - fileferry-click2flash
 - raccoon-flash-explorer-demo
 - esp8266-arduino-serial-uploader
+- thermalright-lcd-control
 - bugbuster
-- tockloader
 ---
 
 ## Overview

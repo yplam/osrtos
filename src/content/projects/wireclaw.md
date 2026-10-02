@@ -35,9 +35,9 @@ relatedProjects:
 - xiaoclaw-ai-voice-assistant-with-local-agent-brain
 - ottoclaw
 - zbot
+- ionode
 - elatoai-realtime-voice-ai-on-esp32
 - voice-controlled-ground-and-aerial-robot
-- opentoys
 ---
 
 WireClaw represents a fascinating shift in how we interact with embedded hardware. Instead of writing C++ code to toggle a GPIO pin or poll a sensor, WireClaw allows users to speak to their hardware in plain language. By deploying an AI agent directly onto a $5 ESP32 microcontroller, it bridges the gap between high-level intent and low-level execution, creating a system where the AI acts as the engineer and the microcontroller acts as the reliable executor.

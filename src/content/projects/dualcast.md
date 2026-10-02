@@ -25,8 +25,8 @@ relatedProjects:
 - openairscope
 - esp-hack-fw
 - esp-graber
+- poom-multitool-platform
 - ghostesp
-- esp32-bit-pirate
 ---
 
 DualCast is a comprehensive, open-source hardware and software project designed for wireless communication enthusiasts and security researchers. It functions as both a high-performance LoRa (Long Range) transceiver and a versatile 2.4GHz wireless network analyzer. By combining the processing power of the STM32H5 series with the multi-protocol wireless capabilities of the ESP32-C6, DualCast provides a portable platform for sniffing, analyzing, and transmitting across a wide array of radio frequencies.

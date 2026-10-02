@@ -29,7 +29,7 @@ relatedProjects:
 - bitclock
 - diy-weather-clock-firmware
 - noteit-uart-datalogger
-- esp32-remote-for-victron
+- inkcast
 ---
 
 ## Overview

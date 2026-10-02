@@ -29,7 +29,7 @@ relatedProjects:
 - mqboard-micropython-mqtt-micro-framework
 - iot-framework-for-nodemcu
 - nodemcu-device-lua-modules
-- seeed-home-assistant-discovery
+- ionode
 ---
 
 ## Overview

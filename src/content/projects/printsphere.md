@@ -36,7 +36,7 @@ relatedProjects:
 - flatsphere-clock
 - wt32-sc01-plus-smart-desk-companion
 - circuitpal
-- m5paper-buddy
+- sensorstation3
 ---
 
 PrintSphere is a dedicated hardware companion for Bambu Lab 3D printers, designed to provide a high-resolution, circular interface for monitoring print jobs. Utilizing the ESP32-S3 microcontroller and a vibrant AMOLED touch display, it acts as a bridge between the user and their printer, offering features like live status updates, cover art previews, and camera snapshots without requiring an intermediate server like Home Assistant.

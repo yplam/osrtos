@@ -31,8 +31,8 @@ relatedProjects:
 - nimble-hid-keyboard-and-mouse-example-for-esp32
 - esp32-s3-usb-to-ble-keyboard-bridge
 - gesture-detecting-macro-keyboard
+- rfsqueak-mk1
 - m5-keyboard-and-mouse-emulator
-- aw-1-keyboard
 ---
 
 ## Turning Dots and Dashes into Modern Keystrokes

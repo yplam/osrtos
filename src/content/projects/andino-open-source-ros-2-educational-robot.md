@@ -32,7 +32,7 @@ relatedProjects:
 - cuybot-v1-opensource-smartcar-project
 - openrover-robotic-platform
 - korobo-2-1-gen
-- tny-360-quadruped-robot
+- 4wd-arduino-robot-car
 ---
 
 # Andino: A Complete Open-Source Platform for ROS 2 Robotics

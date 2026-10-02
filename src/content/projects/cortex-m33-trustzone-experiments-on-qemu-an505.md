@@ -25,9 +25,9 @@ relatedProjects:
 - qemu-emulation-for-ti-lm3s6965-cortex-m3
 - solox-amp-rust
 - sel4-armv8-vmm-manifest
+- m-step-a-single-stepping-framework-for-side-channel-analysis-on-trustzone-m
 - lvgl-port-for-arm-cortex-m55-and-mps3-an547
 - multizone-security-tee-for-risc-v
-- mtower-trusted-execution-environment
 ---
 
 ## Overview

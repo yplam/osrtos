@@ -27,11 +27,11 @@ createdAt: '2026-03-07'
 updatedAt: '2026-03-07'
 relatedProjects:
 - esp32berry
+- vtos-a-terminal-based-hobby-firmware
 - xterminal-esp32-handheld
 - micropython-and-lvgl-firmware-for-esp32
 - tab5-launcher
 - pixlpal-m1-firmware
-- atlascube
 ---
 
 ## Overview

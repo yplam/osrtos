@@ -39,8 +39,8 @@ relatedProjects:
 - bmw-e90-can-cluster-arduino-project
 - wute-dashboard-for-formula-student-electric
 - bbmonitor
+- cyd-dashboard
 - euc-dash-esp32-dashboard
-- bmw-idrive-controller-can-bus-interpreter
 ---
 
 ## Overview

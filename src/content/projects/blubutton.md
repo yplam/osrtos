@@ -23,8 +23,8 @@ relatedProjects:
 - ruuvitag-firmware-for-zephyr-os
 - esp32-ble-ota-arduino
 - nimble-ota
+- esp32-c3-environmental-monitoring-node
 - buttfinity
-- everblu-cyble-enhanced-rf-meter-reader
 ---
 
 ## Overview

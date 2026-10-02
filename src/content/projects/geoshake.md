@@ -30,6 +30,13 @@ topics:
 isShow: true
 createdAt: '2026-08-02T06:42:58+00:00'
 updatedAt: '2026-08-02T06:42:58+00:00'
+relatedProjects:
+- quakeguard
+- project-aura
+- cyd-tactical-weather-station
+- twatch-v3-firmware-for-esp32
+- openairscope
+- motesync
 ---
 
 ## Distributed Earthquake Monitoring with GeoShake

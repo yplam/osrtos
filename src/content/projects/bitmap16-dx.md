@@ -24,7 +24,7 @@ relatedProjects:
 - p3a-pixel-art-player
 - printpoop-retro-pixel-smart-display-for-bambu-lab-a1
 - readmepaper-esp32-7-color-e-paper-display-project
-- e-os-esp32-s3-handheld-console
+- tamagooshi
 ---
 
 BitMap16 DX is a specialized pixel art sketchbook designed specifically for the M5Stack Cardputer. Channeling the aesthetic of early 2000s handheld gaming consoles, this application transforms the compact ESP32-S3-based device into a portable creative suite for low-resolution digital art.

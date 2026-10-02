@@ -25,10 +25,10 @@ updatedAt: '2025-12-27'
 relatedProjects:
 - rgblight-iot-rgb-led-controller
 - esp32-web-server-using-spiffs
+- awtrix-ng
 - esp32-remote-control-with-websocket
 - led-matrix-max7219-for-mongoose-os
 - esp32-monaco-editor-spiffs
-- readmepaper-esp32-7-color-e-paper-display-project
 ---
 
 The ESP32 32x32 RGB Matrix project is a robust firmware solution for hobbyists looking to drive high-density LED panels with the power of the ESP32. Originally designed to replace an Arduino Mega-based system, this project leverages the ESP32's dual-core capabilities and built-in WiFi to provide a much more interactive and capable display controller.

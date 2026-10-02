@@ -33,9 +33,9 @@ relatedProjects:
 - multizone-iot-sdk
 - multizone-security-tee-for-risc-v
 - fwrisc-featherweight-risc-v-core
+- m-step-a-single-stepping-framework-for-side-channel-analysis-on-trustzone-m
 - cortex-m33-trustzone-experiments-on-qemu-an505
 - mongoose-os
-- libedhoc
 ---
 
 ## Overview

@@ -23,7 +23,7 @@ relatedProjects:
 - mongoose-os-app-skeleton
 - mongoose-os-programs-and-examples
 - pyespcar-micropython-esp32-wifi-car
-- sesame-robot-micro
+- 4wd-arduino-robot-car
 ---
 
 ## Driving an Off-the-Shelf Car Robot with Mongoose OS

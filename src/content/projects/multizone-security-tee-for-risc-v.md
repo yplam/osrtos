@@ -39,9 +39,9 @@ relatedProjects:
 - multizone-iot-sdk
 - mtower-trusted-execution-environment
 - cortex-m33-trustzone-experiments-on-qemu-an505
+- m-step-a-single-stepping-framework-for-side-channel-analysis-on-trustzone-m
 - fwrisc-featherweight-risc-v-core
 - sel4-armv8-vmm-manifest
-- bpf-ebpf-for-microcontroller-compartmentalization
 ---
 
 ## Overview

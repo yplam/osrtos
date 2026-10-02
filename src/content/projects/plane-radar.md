@@ -19,9 +19,9 @@ relatedProjects:
 - esp32-flight-tracker
 - nearplane-adsb-tracker
 - flightradar24-ttgo
-- cardputer-gps-info
-- bbn-m5stack-tough-sailing-instruments
-- deck
+- esp32flight
+- overhead
+- flightportrait-firmware
 ---
 
 The Plane Radar project is a specialized embedded application that transforms an ESP32-C3 and a round display into a dedicated aviation tracking station. By utilizing live ADS-B (Automatic Dependent Surveillance–Broadcast) data, the device provides a real-time "sonar" view of the skies, specifically tailored for the circular form factor of the GC9A01 display.

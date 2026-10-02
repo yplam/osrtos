@@ -41,8 +41,8 @@ relatedProjects:
 - esp-ppb
 - ghost-esp
 - periscope-os-v2-0-0-sigint
+- esp-sniffer
 - pathshield
-- cardputer-wardriver
 ---
 
 WaveSight represents a significant shift in environmental sensing by repurposing existing Wi-Fi signals to detect human activity. While traditional motion detection often relies on PIR sensors—which can fail to detect stationary people—or cameras—which raise significant privacy concerns—WaveSight uses Wi-Fi signal jitter to monitor a space. By analyzing Channel State Information (CSI), the system can determine if a room is occupied or if movement is occurring based solely on how a human body disturbs the wireless field between the ESP32 and a Wi-Fi access point.

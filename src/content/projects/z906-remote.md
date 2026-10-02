@@ -35,8 +35,8 @@ relatedProjects:
 - electricitydisplay-mqtt-remote-control-for-esp8266-esp32
 - esp8266-home-automation
 - esp8266-sound-effects-i2s-web-trigger
+- esp32-p4-home-assistant-mqtt-voice-assistant
 - sonoff-http-firmware
-- flexispot-web-controller
 ---
 
 The Logitech Z906 has long been a staple for home theater enthusiasts seeking a THX-certified 5.1 surround sound experience. However, its physical control console lacks the modern connectivity required for a truly integrated smart home. Z906 Remote bridges this gap by utilizing an ESP8266 microcontroller to interface directly with the amplifier's hardware, adding WiFi, MQTT, and Web API capabilities to this classic audio system.

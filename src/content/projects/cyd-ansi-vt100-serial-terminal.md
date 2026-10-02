@@ -23,12 +23,12 @@ image: /202603/terminal.webp
 createdAt: '2026-03-22'
 updatedAt: '2026-03-22'
 relatedProjects:
+- esp32-cheap-yellow-display-cyd-wi-fi-analyzer
 - bbmonitor
 - crypto-price-viewer
 - micropython-library-for-the-cheap-yellow-display-cyd
+- esp32-ai-mini-screen
 - tibber-price-e-ink-display
-- smalltv-pro-esp-idf-sample-project
-- esp32-remote-for-victron
 ---
 
 ## Overview

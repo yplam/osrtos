@@ -22,6 +22,13 @@ topics:
 isShow: true
 createdAt: '2026-08-12T13:58:52+00:00'
 updatedAt: '2026-08-12T13:58:52+00:00'
+relatedProjects:
+- esp32-rtsp-microphone-for-birdnet
+- audio-stream-server-for-m5cardputer
+- esp32-rtsp-mic-for-birdnet-go
+- high-fidelity-esp32-bluetooth-audio-sink-with-premium-codecs
+- m5-keyboard-and-mouse-emulator
+- echokit-firmware
 ---
 
 m5mic is a comprehensive ecosystem that transforms an M5StickS3 into a versatile microphone. The project consists of specialized Rust firmware for the ESP32-S3 hardware and a companion macOS menu-bar application, allowing the device to function as either a standalone USB microphone or a wireless input source.

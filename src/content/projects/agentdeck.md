@@ -40,7 +40,7 @@ relatedProjects:
 - m5paper-buddy
 - esp32berry
 - deck
-- claudegauge
+- esp32-ai-mini-screen
 ---
 
 AgentDeck serves as a physical control surface designed specifically for AI coding agents, functioning much like an audio mixing console but tailored for the development workflow. Originally conceived for the Elgato Stream Deck+, the project has expanded to support 13 simultaneous display surfaces, including tablets, e-ink readers, ESP32 modules, and LED matrices. The core philosophy is to allow developers to steer their AI agents without leaving their keyboard flow.

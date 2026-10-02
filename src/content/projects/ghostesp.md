@@ -31,8 +31,8 @@ relatedProjects:
 - unigeek-firmware
 - infiltra-firmware
 - esp-hack-fw
+- poom-multitool-platform
 - bruce-firmware
-- marauder-centauri
 ---
 
 GhostESP is a powerful, versatile wireless testing tool that transforms standard ESP32 hardware into a comprehensive security auditing suite. Originally developed as a specialized firmware, this "Revival" version is a detached fork of the archived project, continuing development to support the latest Espressif hardware and security research techniques. Built on the ESP-IDF framework and powered by FreeRTOS, GhostESP leverages the full potential of the ESP32's radio capabilities to provide a portable alternative to much more expensive dedicated hardware.

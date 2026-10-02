@@ -39,9 +39,9 @@ relatedProjects:
 - nearplane-adsb-tracker
 - esp32-flight-tracker
 - plane-radar
+- esp32flight
+- flightportrait-firmware
 - elekstube-ips-custom-firmware
-- desk-weather-clock-geekmagic-s3
-- wt32-sc01-plus-smart-desk-companion
 ---
 
 FlightRadar24-TTGO is a specialized firmware designed for ESP32-based display modules, specifically the TTGO-Display and LilyGo-T-Display-S3. It provides a real-time visualization of aircraft traffic in a user-defined area without requiring a login or a dedicated account. By tapping into the FlightRadar24 API for live flight updates while maintaining an internal database of airport, aircraft, and airline metadata, the system minimizes network overhead and provides a rich graphical experience.

@@ -29,10 +29,10 @@ updatedAt: '2026-04-28T23:42:29+00:00'
 relatedProjects:
 - deskpet
 - clawputer
+- tamagooshi
 - m5paper-buddy
 - clawy
 - clawdmeter-plus
-- ai-desk-card
 ---
 
 ## Overview

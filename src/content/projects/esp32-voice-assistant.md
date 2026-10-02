@@ -30,7 +30,7 @@ relatedProjects:
 - diy-ai-voice-assistant-for-esp32-s3
 - starmoon-open-source-conversational-ai-device
 - kalo-esp32-voice-chat-ai-friends
-- xiaoclaw-ai-voice-assistant-with-local-agent-brain
+- esp32-p4-home-assistant-mqtt-voice-assistant
 ---
 
 The ESP32 Voice Assistant is a sophisticated integration of low-power embedded hardware and modern AI inference. By offloading heavy computation to a Python-based server, the project enables an ESP32 to function as a fully conversational AI agent, capable of understanding speech and responding with a natural neural voice.

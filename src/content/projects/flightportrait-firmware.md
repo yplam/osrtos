@@ -27,6 +27,13 @@ topics:
 isShow: false
 createdAt: '2026-08-09T09:13:53+00:00'
 updatedAt: '2026-08-09T09:13:53+00:00'
+relatedProjects:
+- flightradar24-ttgo
+- open-display-firmware
+- inkcast
+- readmepaper-esp32-7-color-e-paper-display-project
+- esp32flight
+- esp32-flight-tracker
 ---
 
 ## A Window into the Skies

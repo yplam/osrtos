@@ -29,8 +29,8 @@ relatedProjects:
 - bluetooth-mesh-sensor-network
 - meshcore-mqtt-gateway
 - smart-dc-maintenance
+- tamagooshi
 - crose-china-rose-lightweight-data-engine
-- codelight
 ---
 
 ## Overview

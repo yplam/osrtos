@@ -25,11 +25,11 @@ createdAt: '2026-02-04'
 updatedAt: '2026-02-04'
 relatedProjects:
 - nearplane-adsb-tracker
+- overhead
 - euc-dash-esp32-dashboard
 - avem
 - fpv-drone-stm32f411-flight-controller
 - esp32-flight-tracker
-- drone-stm32f1
 ---
 
 ## Overview

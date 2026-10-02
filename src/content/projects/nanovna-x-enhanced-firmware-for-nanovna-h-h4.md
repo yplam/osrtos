@@ -34,10 +34,10 @@ updatedAt: '2026-01-12'
 relatedProjects:
 - openscope-2c53t
 - bitcraze-crazyflie-2-0-2-1-mbed-os-firmware
+- ionode
 - stm32cuben6-mcu-firmware-package
 - highboy-firmware
 - stm32cubeh7rs-mcu-firmware-package
-- ic-705-ci-v-band-decoder-and-transverter-controller
 ---
 
 ## Overview

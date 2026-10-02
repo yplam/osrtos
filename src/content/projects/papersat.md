@@ -22,9 +22,9 @@ relatedProjects:
 - cardputer-gps-info
 - astronomy-micro-station
 - nearplane-adsb-tracker
+- overhead
+- esp32flight
 - plane-radar
-- esp32-flight-tracker
-- cyd-tactical-weather-station
 ---
 
 PaperSat is a professional-grade satellite tracking dashboard designed specifically for the M5Stack M5Paper S3. By leveraging the unique capabilities of e-ink technology, it provides a high-contrast, low-power solution for amateur radio operators (hams), visual observers, and educators who need reliable orbital data in the field. Unlike many tracking solutions that require a tethered smartphone or laptop, PaperSat is entirely self-contained, handling everything from TLE (Two-Line Element) acquisition to complex orbital mechanics on-device.

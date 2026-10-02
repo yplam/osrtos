@@ -38,6 +38,13 @@ topics:
 isShow: false
 createdAt: '2026-08-06T11:20:10+00:00'
 updatedAt: '2026-08-06T11:20:10+00:00'
+relatedProjects:
+- overhead
+- cyd-tactical-weather-station
+- esp32-cyd-weather-station-with-3-day-forecast
+- wt32-sc01-plus-smart-desk-companion
+- bbmonitor
+- sensorstation3
 ---
 
 The CYD Dashboard transforms the affordable ESP32-2432S028 module—popularly known as the "Cheap Yellow Display"—into a sophisticated, multi-functional data hub. While the project is heavily tailored toward amateur (ham) radio operators, it functions as a versatile desktop companion by integrating weather forecasts, news feeds, and financial market tracking into a single, touch-interactive interface.

@@ -25,9 +25,9 @@ relatedProjects:
 - lilygo-higrow-esp32-plant-monitoring-sensor-firmware-hardware-v1
 - smart-plant-monitoring-system
 - mongoose-os-configurable-sensor-node
+- esp32-c3-environmental-monitoring-node
 - mongoose-os-environment-logger
 - ruuvitag-firmware-for-zephyr-os
-- iotea
 ---
 
 ## Overview

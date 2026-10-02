@@ -24,9 +24,9 @@ relatedProjects:
 - esp32-soundfont-sf2-sampler-synthesizer
 - stm32f4-digital-synthesizer
 - usbsid-pico
+- type-2-autonomous-polyphonic-synthesizer
 - esp32-custom-hardware-synthesizer
 - pico2dexed
-- esp32-s3-soundfont-sf2-sampler-synthesizer
 ---
 
 ## Overview

@@ -26,7 +26,7 @@ relatedProjects:
 - esp32-bus-expander
 - xiao-debug-mate
 - ghost-esp
-- airgradient-pro-rust-firmware
+- m5mic
 ---
 
 ## Overview

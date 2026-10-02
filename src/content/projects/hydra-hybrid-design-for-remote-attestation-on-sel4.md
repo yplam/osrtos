@@ -24,9 +24,9 @@ relatedProjects:
 - the-sel4-white-paper
 - sel4-armv8-vmm-manifest
 - rust-sel4-toy-system-for-i-mx6-sabre-lite
+- m-step-a-single-stepping-framework-for-side-channel-analysis-on-trustzone-m
 - raspberry-pi-pico-w-and-pico-2-w-fota-bootloader
 - advanced-operating-system-2017-sos
-- bpf-ebpf-for-microcontroller-compartmentalization
 ---
 
 ## Overview

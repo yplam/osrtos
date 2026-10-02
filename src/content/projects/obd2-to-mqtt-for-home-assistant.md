@@ -36,8 +36,8 @@ relatedProjects:
 - everblu-cyble-enhanced-rf-meter-reader
 - mitsubishi-ecodan-air-to-water-bridge-for-cn105-to-mqtt
 - esp32-controller-for-charlton-jenrick-fireplace
+- esp32-p4-home-assistant-mqtt-voice-assistant
 - simplebus2-mqtt-bridge
-- esp32-jarolift-controller
 ---
 
 ## Overview

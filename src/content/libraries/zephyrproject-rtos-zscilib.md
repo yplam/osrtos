@@ -7,14 +7,14 @@ summary: The Zephyr Scientific Library (zscilib) is a portable C-based library d
   on the endnode rather than requiring external server-side analysis.
 slug: zephyrproject-rtos-zscilib
 codeUrl: https://github.com/zephyrproject-rtos/zscilib
-star: 165
+star: 167
 version: v0.2.0-rc1
-lastUpdated: '2025-12-11'
+lastUpdated: '2024-04-17'
 licenses:
 - Apache-2.0
 libraryType: Middleware
 createdAt: '2026-01-04'
-updatedAt: '2026-03-27'
+updatedAt: '2026-10-02'
 ---
 
 ### Features

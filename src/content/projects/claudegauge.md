@@ -35,10 +35,10 @@ updatedAt: '2026-05-20T00:13:53+00:00'
 relatedProjects:
 - clawdmeter
 - oh-my-clawd
+- esp32-ai-mini-screen
 - clawdmeter-plus
 - bbmonitor
 - m5paper-buddy
-- claude-pocket
 ---
 
 ClaudeGauge is a specialized embedded systems project that transforms a tiny desk gadget into a high-tech monitoring station for AI power users. Inspired by the LCARS interface from Star Trek, this project provides a real-time dashboard for tracking Anthropic Claude API usage, costs, and subscription limits. It is designed to run on ESP32-S3 and ESP32-C6 hardware, leveraging vibrant LCD and AMOLED displays to present complex data in an aesthetically pleasing, futuristic format.

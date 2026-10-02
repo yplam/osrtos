@@ -8,9 +8,9 @@ summary: ElenixOS is a lightweight, script-driven operating system specifically 
 slug: elenixos-elenixos
 codeUrl: https://github.com/ElenixOS/ElenixOS
 siteUrl: https://docs.elenixos.com/en
-star: 25
-version: v0.5.1-alpha
-lastUpdated: '2026-07-08'
+star: 32
+version: v0.6.0-alpha
+lastUpdated: '2026-08-25'
 components:
 - GUI
 - FileSystem
@@ -31,7 +31,7 @@ libraries:
 - cJSON
 - RemixIcon
 createdAt: '2026-06-09'
-updatedAt: '2026-08-01'
+updatedAt: '2026-10-02'
 ---
 
 ### Features

@@ -32,6 +32,13 @@ topics:
 isShow: true
 createdAt: '2026-08-09T09:12:54+00:00'
 updatedAt: '2026-08-09T09:12:54+00:00'
+relatedProjects:
+- smart-iot-sensor-with-xiao-esp32c6
+- lilygo-higrow-esp32-plant-monitoring-sensor-firmware-hardware-v1
+- espmonitor-iot-environmental-monitoring-system
+- lilygo-higrow-esp32-plant-monitoring-sensor-firmware
+- inkcast
+- espmonitor-iot-environment-monitoring-system
 ---
 
 The ESP32-C3 Environmental Monitoring Node is a purpose-built firmware designed for long-term remote sensing. Built with native **ESP-IDF v5.x** and managed via **PlatformIO**, this project avoids the overhead of the Arduino framework to achieve a lean, performant system. The device is designed to spend most of its time in a deep sleep state, waking up periodically to sample environmental data, evaluate soil moisture conditions against a configurable threshold, and dispatch alerts before returning to sleep.

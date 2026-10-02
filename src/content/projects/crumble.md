@@ -28,12 +28,12 @@ isShow: true
 createdAt: '2026-06-04T00:44:51+00:00'
 updatedAt: '2026-06-04T00:44:51+00:00'
 relatedProjects:
+- duet
 - open-display-firmware
 - papyrix-reader
 - nimble-ota
+- midad
 - highboy-firmware
-- chronos-watchy
-- bleota-esp32-ota-updates-over-ble
 ---
 
 CrumBLE is a specialized firmware fork designed for the Xteink X4 e-reader, with support for the X3 currently in development. It serves as a personal evolution of the CrossInk project, integrating features from the CrossInk Carousel while adding deep optimizations for Bluetooth connectivity, library management, and user interface responsiveness. Built for the ESP32-C3 microcontroller, it balances the device's strict RAM limitations with a feature-rich reading experience.

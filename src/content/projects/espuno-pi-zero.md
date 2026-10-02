@@ -43,9 +43,9 @@ relatedProjects:
 - cyberboard-v2
 - seeed-home-assistant-discovery
 - xiao-esp32c6-sketches
+- zigbee-gateway-esp32-c6
 - esp-e-paper-component
 - smart-iot-sensor-with-xiao-esp32c6
-- micropython-for-pandora-iot-board
 ---
 
 ## Overview

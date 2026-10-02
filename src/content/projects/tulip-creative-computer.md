@@ -30,11 +30,11 @@ createdAt: '2026-01-04'
 updatedAt: '2026-01-04'
 relatedProjects:
 - m5stack-cardputer-virtual-repl
+- vtos-a-terminal-based-hobby-firmware
 - micropython-on-the-super-nintendo
 - europi
+- type-2-autonomous-polyphonic-synthesizer
 - patternflow
-- retro-video-synthesizer-esp32-pure-data
-- purplx-cyberdeck-os-for-m5stack-cardputer-adv
 ---
 
 ## Overview

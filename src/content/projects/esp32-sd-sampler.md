@@ -30,8 +30,8 @@ relatedProjects:
 - esp32-s3-soundfont-sf2-sampler-synthesizer
 - esp32-soundfont-sf2-sampler-synthesizer
 - esp32-custom-hardware-synthesizer
+- type-2-autonomous-polyphonic-synthesizer
 - esp32-mp3
-- esp32-pcm1808-sound-recorder
 ---
 
 The ESP32 SD Sampler is a sophisticated polyphonic music synthesizer designed to overcome one of the most significant hurdles in embedded audio: memory constraints. While many micro-controller-based samplers attempt to preload audio data into RAM or PSRAM, this project takes a different approach by streaming PCM WAV samples directly from a microSD card. This architecture allows the sampler to handle massive, multi-gigabyte sample sets that would be impossible to fit into traditional memory chips.

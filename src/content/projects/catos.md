@@ -31,8 +31,8 @@ relatedProjects:
 - purplx-cyberdeck-os-for-m5stack-cardputer-adv
 - e-os-esp32-s3-handheld-console
 - esp32berry
-- esp32-s3-nes-emulator
-- lunokiotwatch-firmware-for-lilygo-twatch-2020
+- loadout-for-m5stack-tab5
+- vtos-a-terminal-based-hobby-firmware
 ---
 
 # CatOS: A Versatile Firmware for ESP32 Handheld Consoles

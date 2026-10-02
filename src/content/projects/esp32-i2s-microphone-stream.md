@@ -28,7 +28,7 @@ relatedProjects:
 - esp32-rtsp-microphone-for-birdnet
 - esp32-custom-hardware-synthesizer
 - esp32-64-band-audio-spectrum-analyser
-- esp32-remote-control-with-websocket
+- esp32-p4-home-assistant-mqtt-voice-assistant
 ---
 
 # ESP32 I2S Microphone Stream

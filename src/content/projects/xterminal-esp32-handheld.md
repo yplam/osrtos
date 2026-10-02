@@ -20,9 +20,9 @@ relatedProjects:
 - esp32berry
 - acid-drop-custom-firmware-for-lilygo-t-deck
 - esp32-custom-hardware-synthesizer
+- vtos-a-terminal-based-hobby-firmware
 - lvgl-watch-firmware-for-open-smartwatch
 - e-os-esp32-s3-handheld-console
-- esp32-st7789v-ft6236u-arduino-lvgl-demo
 ---
 
 ## Overview

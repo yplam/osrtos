@@ -21,10 +21,10 @@ updatedAt: '2026-01-17'
 relatedProjects:
 - mks-xdrive-mini-foc-driver
 - open-decabot
+- 4wd-arduino-robot-car
 - voice-controlled-ground-and-aerial-robot
 - tny-360-quadruped-robot
 - hexapod
-- winder-bldc-motor-winding-machine
 ---
 
 The Actonator project provides a complete, open-source blueprint for building high-performance robot actuators. It bridges the gap between hobbyist 3D printing and professional-grade robotics by offering a belt-driven gearbox paired with a custom Field Oriented Control (FOC) driver board.

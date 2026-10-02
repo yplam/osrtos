@@ -30,9 +30,9 @@ relatedProjects:
 - open-display-firmware
 - lilygo-t-display-s3-boilerplate
 - geekmagic-smalltv-esp8266-firmware
+- flightportrait-firmware
 - readmepaper-esp32-7-color-e-paper-display-project
 - volna-2bw42-weather-station-firmware
-- lvgl-watch-firmware-for-open-smartwatch
 ---
 
 Pixel Frame is a specialized firmware project designed for the ESP8266, aimed at creating connected, data-driven displays. By combining the affordability and Wi-Fi capabilities of the ESP8266 with versatile display support, the project allows users to build custom "smart frames" that visualize real-time information from across the web.

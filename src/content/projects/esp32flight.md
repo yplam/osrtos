@@ -27,6 +27,13 @@ topics:
 isShow: true
 createdAt: '2026-08-12T14:03:48+00:00'
 updatedAt: '2026-08-12T14:03:48+00:00'
+relatedProjects:
+- esp32-flight-tracker
+- flightradar24-ttgo
+- plane-radar
+- overhead
+- nearplane-adsb-tracker
+- flightportrait-firmware
 ---
 
 ### A Standalone Desk Flight Radar

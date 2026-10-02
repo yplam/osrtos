@@ -24,11 +24,11 @@ createdAt: '2026-03-24'
 updatedAt: '2026-03-24'
 relatedProjects:
 - multi-firmware-esp
+- loadout-for-m5stack-tab5
 - tab5-launcher
 - dual-boot-esp32-with-platformio-and-arduino
 - micropython-and-lvgl-firmware-for-esp32
 - esp32-tux
-- lvgl-port-for-esp32
 ---
 
 ## Overview

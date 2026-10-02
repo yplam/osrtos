@@ -31,7 +31,7 @@ relatedProjects:
 - opentimewatch-os
 - tinycore-esp32-s3-learning-platform
 - esp32berry
-- purplx-cyberdeck-os-for-m5stack-cardputer-adv
+- poom-multitool-platform
 ---
 
 Lilka is a DIY handheld console that bridges the gap between hobbyist electronics and portable gaming. Built around the powerful ESP32-S3-WROOM-1-N16R8 microcontroller, the project is designed with a core philosophy of accessibility and education. Unlike proprietary handhelds, Lilka is meant to be assembled from affordable, off-the-shelf modules, making it an ideal entry point for anyone interested in embedded systems and game development.
