@@ -9,8 +9,8 @@ slug: elenixos-elenixos
 codeUrl: https://github.com/ElenixOS/ElenixOS
 siteUrl: https://docs.elenixos.com/en
 star: 32
-version: v0.6.0-alpha
-lastUpdated: '2026-08-25'
+version: v0.7.0-alpha
+lastUpdated: '2026-10-13'
 components:
 - GUI
 - FileSystem
@@ -31,7 +31,7 @@ libraries:
 - cJSON
 - RemixIcon
 createdAt: '2026-06-09'
-updatedAt: '2026-10-02'
+updatedAt: '2026-10-13'
 ---
 
 ### Features

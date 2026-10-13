@@ -8,9 +8,9 @@ summary: Apache NimBLE is a feature-complete, open-source Bluetooth Low Energy (
   connection management.
 codeUrl: https://github.com/apache/mynewt-nimble
 siteUrl: http://mynewt.apache.org/latest/network/docs/index.html
-star: 892
+star: 893
 version: nimble_1_10_0_tag
-lastUpdated: '2026-08-10'
+lastUpdated: '2026-10-09'
 components:
 - Wireless
 - Bluetooth
@@ -30,7 +30,7 @@ licenses:
 - Apache-2.0
 libraryType: Wireless
 createdAt: '2025-12-20'
-updatedAt: '2026-10-02'
+updatedAt: '2026-10-13'
 ---
 
 ### Features

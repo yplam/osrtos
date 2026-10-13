@@ -10,7 +10,7 @@ codeUrl: https://github.com/SuperTinyKernel-RTOS/stk
 siteUrl: https://supertinykernel.org
 star: 37
 version: 1.08.0
-lastUpdated: '2026-10-01'
+lastUpdated: '2026-10-12'
 components:
 - Scheduler
 - Synchronization
@@ -33,7 +33,7 @@ licenses:
 libraries:
 - SEGGER SystemView
 createdAt: '2026-04-29'
-updatedAt: '2026-10-02'
+updatedAt: '2026-10-13'
 ---
 
 ### Features

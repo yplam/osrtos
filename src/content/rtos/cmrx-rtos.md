@@ -8,9 +8,9 @@ summary: CMRX is security-oriented, high-performance microkernel targeted toward
 slug: cmrx
 codeUrl: https://github.com/ventZl/cmrx
 siteUrl: http://cmrxrtos.org/
-star: 129
+star: 131
 version: v0.2.1
-lastUpdated: '2026-09-26'
+lastUpdated: '2026-10-12'
 components:
 - Scheduler
 - IPC
@@ -23,7 +23,7 @@ platforms:
 licenses:
 - MIT
 createdAt: '2026-10-01'
-updatedAt: '2026-10-02'
+updatedAt: '2026-10-13'
 ---
 
 ### Features

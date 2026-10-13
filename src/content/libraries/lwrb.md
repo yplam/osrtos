@@ -10,7 +10,7 @@ codeUrl: https://github.com/MaJerle/lwrb
 siteUrl: http://docs.majerle.eu/projects/lwrb/
 star: 1540
 version: v3.3.0
-lastUpdated: '2026-09-13'
+lastUpdated: '2026-10-08'
 components:
 - Storage
 platforms:
@@ -26,7 +26,7 @@ licenses:
 - MIT
 libraryType: Middleware
 createdAt: '2025-12-17'
-updatedAt: '2026-10-02'
+updatedAt: '2026-10-13'
 ---
 
 ### Features
