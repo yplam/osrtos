@@ -7,7 +7,7 @@ summary: Neptune OS is a microkernel-based operating system that implements a Wi
   via seL4 IPC.
 slug: cl91-neptuneos
 codeUrl: https://github.com/cl91/NeptuneOS
-star: 479
+star: 481
 version: v0.4.0004
 lastUpdated: '2026-10-03'
 components:
@@ -44,7 +44,7 @@ libraries:
 - Open Fabrics Alliance NVMe
 - LKL
 createdAt: '2025-12-31'
-updatedAt: '2026-10-13'
+updatedAt: '2026-10-27'
 ---
 
 ### Features

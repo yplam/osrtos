@@ -8,8 +8,8 @@ summary: AWTK (Toolkit AnyWhere) is a high-performance, cross-platform GUI engin
   UI designer and multi-language bindings.
 codeUrl: https://github.com/zlgopen/awtk
 siteUrl: https://awtk.zlg.cn
-star: 3322
-lastUpdated: '2026-10-13'
+star: 3324
+lastUpdated: '2026-10-27'
 components:
 - GUI
 - FileSystem
@@ -40,7 +40,8 @@ licenses:
 - LGPL-2.1
 libraryType: GUI
 createdAt: '2025-12-23'
-updatedAt: '2026-10-13'
+updatedAt: '2026-10-27'
+version: 2.0.0
 ---
 
 ### Features

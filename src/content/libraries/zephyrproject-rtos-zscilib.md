@@ -9,12 +9,12 @@ slug: zephyrproject-rtos-zscilib
 codeUrl: https://github.com/zephyrproject-rtos/zscilib
 star: 167
 version: v0.2.0-rc1
-lastUpdated: '2024-04-17'
+lastUpdated: '2026-08-11'
 licenses:
 - Apache-2.0
 libraryType: Middleware
 createdAt: '2026-01-04'
-updatedAt: '2026-10-02'
+updatedAt: '2026-10-27'
 ---
 
 ### Features

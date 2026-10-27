@@ -7,9 +7,9 @@ summary: lwIP (lightweight IP) is a widely-used, open-source TCP/IP stack design
   tens of kilobytes of free memory.
 codeUrl: https://github.com/lwip-tcpip/lwip
 siteUrl: https://savannah.nongnu.org/projects/lwip/
-star: 1763
+star: 1765
 version: start
-lastUpdated: '2026-09-01'
+lastUpdated: '2026-10-26'
 components:
 - Network
 - Wireless
@@ -40,7 +40,7 @@ licenses:
 - BSD
 libraryType: Network
 createdAt: '2025-06-09'
-updatedAt: '2026-10-13'
+updatedAt: '2026-10-27'
 ---
 
 ### Features

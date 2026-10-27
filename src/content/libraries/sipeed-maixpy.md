@@ -7,14 +7,14 @@ summary: MaixPy (v4) is a high-level Python SDK designed for rapid deployment of
   edge devices.
 slug: sipeed-maixpy
 codeUrl: https://github.com/sipeed/MaixPy
-star: 860
+star: 866
 version: v4.12.5
-lastUpdated: '2026-08-28'
+lastUpdated: '2026-10-15'
 licenses:
 - Apache-2.0
 libraryType: MachineLearning
 createdAt: '2025-12-30'
-updatedAt: '2026-10-13'
+updatedAt: '2026-10-27'
 ---
 
 ### Features

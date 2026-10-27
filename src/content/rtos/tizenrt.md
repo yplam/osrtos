@@ -9,9 +9,9 @@ summary: TizenRT is a lightweight, RTOS-based platform designed for low-end IoT 
   Linux-like developer experience.
 codeUrl: https://github.com/Samsung/TizenRT
 siteUrl: https://github.com/Samsung/TizenRT
-star: 649
+star: 654
 version: 3.0_GBM
-lastUpdated: '2026-10-13'
+lastUpdated: '2026-10-22'
 components:
 - FileSystem
 - Shell
@@ -53,7 +53,7 @@ libraries:
 - Protobuf
 - TinyAlsa
 createdAt: '2025-12-24'
-updatedAt: '2026-10-13'
+updatedAt: '2026-10-27'
 ---
 
 ### Features

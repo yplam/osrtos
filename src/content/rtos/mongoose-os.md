@@ -8,9 +8,9 @@ summary: Mongoose OS is a modular IoT firmware development framework designed fo
   with major cloud providers like AWS IoT and Google IoT Core.
 codeUrl: https://github.com/cesanta/mongoose-os
 siteUrl: https://mongoose-os.com/
-star: 2666
+star: 2671
 version: 2.20.0
-lastUpdated: '2026-09-30'
+lastUpdated: '2026-10-14'
 components:
 - OTA
 - Cryptography
@@ -59,7 +59,7 @@ libraries:
 - mJS
 - Frozen
 createdAt: '2025-12-24'
-updatedAt: '2026-10-13'
+updatedAt: '2026-10-27'
 ---
 
 ### Features

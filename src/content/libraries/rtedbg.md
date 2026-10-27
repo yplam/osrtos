@@ -9,12 +9,12 @@ slug: rtedbg-rtedbg
 codeUrl: https://github.com/RTEdbg/RTEdbg
 star: 230
 version: v1.02.00
-lastUpdated: '2026-02-16'
+lastUpdated: '2026-10-22'
 licenses:
 - MIT
 libraryType: Tracing
 createdAt: '2026-01-05'
-updatedAt: '2026-10-13'
+updatedAt: '2026-10-27'
 ---
 
 ### Features
