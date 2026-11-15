@@ -1,7 +1,7 @@
 {
   "simulator": {
     "version": "0.0.0",
-    "commit": "8b8c2423346fdb6d39129610c2d82304fcf06843",
+    "commit": "5be5bb52970b318341fdbe3245f3027f0cdd4b80",
     "dirty": false
   },
   "kernels": {
@@ -23,8 +23,11 @@
     }
   },
   "bundle": {
-    "js": "rtos-sim.6b9baa2352.js",
-    "css": "rtos-sim.8e926c3642.css"
+    "js": "rtos-sim.4f9759ef99.js",
+    "css": "rtos-sim.32e2f7e069.css",
+    "code": {
+      "freertos": "code.freertos.bdefd07ae8.json"
+    }
   },
   "scenarios": {
     "preemption": {
@@ -32,6 +35,38 @@
       "rtos": [
         "freertos",
         "zephyr"
+      ],
+      "simulated": [
+        "freertos"
+      ]
+    },
+    "time-slicing": {
+      "title": "Time slicing",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos"
+      ]
+    },
+    "blocking-idle": {
+      "title": "Blocking and the idle task",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos"
+      ]
+    },
+    "tick-overflow": {
+      "title": "Tick count overflow",
+      "rtos": [
+        "freertos"
+      ],
+      "simulated": [
+        "freertos"
       ]
     },
     "priority-inversion-mutex": {
@@ -39,23 +74,50 @@
       "rtos": [
         "freertos",
         "zephyr"
-      ]
+      ],
+      "simulated": []
+    }
+  },
+  "lessons": {
+    "freertos/priority-inheritance": {
+      "scenario": "priority-inversion-mutex",
+      "rtos": [
+        "freertos"
+      ],
+      "keyStep": {
+        "event": "PrioChange",
+        "nth": 1
+      }
     }
   },
   "events": [
+    "Tick",
     "ContextSwitch",
     "Block",
     "Unblock",
+    "TaskEnd",
     "PrioChange",
     "MutexOwner",
     "Deadlock"
   ],
   "symbols": [
+    "freertos:portable/GCC/ARM_CM3/port.c#xPortSysTickHandler",
+    "freertos:portable/GCC/ARM_CM3/port.c#xPortPendSVHandler",
+    "freertos:portable/GCC/ARM_CM3/portmacro.h#portYIELD",
+    "freertos:tasks.c#xTaskCreate",
+    "freertos:tasks.c#prvAddNewTaskToReadyList",
+    "freertos:tasks.c#vTaskStartScheduler",
     "freertos:tasks.c#xTaskIncrementTick",
     "freertos:tasks.c#taskSWITCH_DELAYED_LISTS",
+    "freertos:tasks.c#prvResetNextTaskUnblockTime",
     "freertos:tasks.c#vTaskSwitchContext",
     "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK",
     "freertos:tasks.c#prvAddTaskToReadyList",
+    "freertos:tasks.c#vTaskDelay",
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList",
+    "freertos:tasks.c#vTaskDelete",
+    "freertos:tasks.c#prvIdleTask",
+    "freertos:tasks.c#prvCheckTasksWaitingTermination",
     "freertos:tasks.c#xTaskPriorityInherit",
     "freertos:queue.c#xQueueSemaphoreTake",
     "zephyr:kernel/sched.c#next_up",
@@ -67,9 +129,59 @@
     "zephyr:kernel/mutex.c#new_prio_for_inheritance"
   ],
   "anchors": [
-    "freertos:tasks.c#xTaskIncrementTick/increment",
+    "freertos:portable/GCC/ARM_CM3/port.c#xPortSysTickHandler/tick",
+    "freertos:portable/GCC/ARM_CM3/port.c#xPortSysTickHandler/pend",
+    "freertos:portable/GCC/ARM_CM3/port.c#xPortPendSVHandler/switch",
+    "freertos:portable/GCC/ARM_CM3/port.c#xPortPendSVHandler/restore",
+    "freertos:portable/GCC/ARM_CM3/portmacro.h#portYIELD/pend",
+    "freertos:tasks.c#xTaskCreate/add",
+    "freertos:tasks.c#prvAddNewTaskToReadyList/first",
+    "freertos:tasks.c#prvAddNewTaskToReadyList/higher",
+    "freertos:tasks.c#prvAddNewTaskToReadyList/ready",
+    "freertos:tasks.c#vTaskStartScheduler/idle",
+    "freertos:tasks.c#vTaskStartScheduler/running",
+    "freertos:tasks.c#vTaskStartScheduler/tick-init",
+    "freertos:tasks.c#vTaskStartScheduler/start",
+    "freertos:tasks.c#xTaskIncrementTick/store",
     "freertos:tasks.c#xTaskIncrementTick/switch-lists",
+    "freertos:tasks.c#xTaskIncrementTick/unblock-check",
+    "freertos:tasks.c#xTaskIncrementTick/no-more",
+    "freertos:tasks.c#xTaskIncrementTick/next-unblock",
+    "freertos:tasks.c#xTaskIncrementTick/remove",
+    "freertos:tasks.c#xTaskIncrementTick/make-ready",
+    "freertos:tasks.c#xTaskIncrementTick/preempt-check",
+    "freertos:tasks.c#xTaskIncrementTick/preempt",
+    "freertos:tasks.c#xTaskIncrementTick/slice-check",
+    "freertos:tasks.c#xTaskIncrementTick/slice",
+    "freertos:tasks.c#xTaskIncrementTick/yield-pending",
+    "freertos:tasks.c#xTaskIncrementTick/return",
+    "freertos:tasks.c#taskSWITCH_DELAYED_LISTS/swap",
+    "freertos:tasks.c#taskSWITCH_DELAYED_LISTS/reset",
+    "freertos:tasks.c#prvResetNextTaskUnblockTime/empty",
+    "freertos:tasks.c#prvResetNextTaskUnblockTime/head",
     "freertos:tasks.c#vTaskSwitchContext/select",
+    "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK/top",
+    "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK/lower",
+    "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK/next",
+    "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK/store",
+    "freertos:tasks.c#prvAddTaskToReadyList/record",
+    "freertos:tasks.c#prvAddTaskToReadyList/insert",
+    "freertos:tasks.c#vTaskDelay/suspend",
+    "freertos:tasks.c#vTaskDelay/add",
+    "freertos:tasks.c#vTaskDelay/resume",
+    "freertos:tasks.c#vTaskDelay/yield",
+    "freertos:tasks.c#vTaskDelay/return",
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList/remove",
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList/wake-time",
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList/insert-overflow",
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList/insert",
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList/next-set",
+    "freertos:tasks.c#vTaskDelete/remove",
+    "freertos:tasks.c#vTaskDelete/waiting-termination",
+    "freertos:tasks.c#vTaskDelete/yield",
+    "freertos:tasks.c#prvIdleTask/check-termination",
+    "freertos:tasks.c#prvCheckTasksWaitingTermination/remove",
+    "freertos:tasks.c#prvCheckTasksWaitingTermination/delete",
     "freertos:tasks.c#xTaskPriorityInherit/compare",
     "freertos:tasks.c#xTaskPriorityInherit/raise-ready",
     "freertos:tasks.c#xTaskPriorityInherit/raise-not-ready",

@@ -18,6 +18,86 @@
     }
   },
   "symbols": {
+    "freertos:portable/GCC/ARM_CM3/port.c#xPortSysTickHandler": {
+      "rtos": "freertos",
+      "file": "portable/GCC/ARM_CM3/port.c",
+      "symbol": "xPortSysTickHandler",
+      "kind": "fn",
+      "startLine": 491,
+      "endLine": 515,
+      "code": "void xPortSysTickHandler( void )\n{\n    /* The SysTick runs at the lowest interrupt priority, so when this interrupt\n     * executes all interrupts must be unmasked.  There is therefore no need to\n     * save and then restore the interrupt mask value as its value is already\n     * known. */\n    portDISABLE_INTERRUPTS();\n    traceISR_ENTER();\n    {\n        /* Increment the RTOS tick. */\n        if( xTaskIncrementTick() != pdFALSE )\n        {\n            traceISR_EXIT_TO_SCHEDULER();\n\n            /* A context switch is required.  Context switching is performed in\n             * the PendSV interrupt.  Pend the PendSV interrupt. */\n            portNVIC_INT_CTRL_REG = portNVIC_PENDSVSET_BIT;\n        }\n        else\n        {\n            traceISR_EXIT();\n        }\n    }\n    portENABLE_INTERRUPTS();\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/portable/GCC/ARM_CM3/port.c#L491-L515"
+    },
+    "freertos:portable/GCC/ARM_CM3/port.c#xPortPendSVHandler": {
+      "rtos": "freertos",
+      "file": "portable/GCC/ARM_CM3/port.c",
+      "symbol": "xPortPendSVHandler",
+      "kind": "fn",
+      "startLine": 455,
+      "endLine": 488,
+      "code": "void xPortPendSVHandler( void )\n{\n    /* This is a naked function. */\n\n    __asm volatile\n    (\n        \"   mrs r0, psp                         \\n\"\n        \"   isb                                 \\n\"\n        \"                                       \\n\"\n        \"   ldr r3, =pxCurrentTCB               \\n\" /* Get the location of the current TCB. */\n        \"   ldr r2, [r3]                        \\n\"\n        \"                                       \\n\"\n        \"   stmdb r0!, {r4-r11}                 \\n\" /* Save the remaining registers. */\n        \"   str r0, [r2]                        \\n\" /* Save the new top of stack into the first member of the TCB. */\n        \"                                       \\n\"\n        \"   stmdb sp!, {r3, r14}                \\n\"\n        \"   mov r0, %0                          \\n\"\n        \"   msr basepri, r0                     \\n\"\n        \"   bl vTaskSwitchContext               \\n\"\n        \"   mov r0, #0                          \\n\"\n        \"   msr basepri, r0                     \\n\"\n        \"   ldmia sp!, {r3, r14}                \\n\"\n        \"                                       \\n\" /* Restore the context, including the critical nesting count. */\n        \"   ldr r1, [r3]                        \\n\"\n        \"   ldr r0, [r1]                        \\n\" /* The first item in pxCurrentTCB is the task top of stack. */\n        \"   ldmia r0!, {r4-r11}                 \\n\" /* Pop the registers. */\n        \"   msr psp, r0                         \\n\"\n        \"   isb                                 \\n\"\n        \"   bx r14                              \\n\"\n        \"                                       \\n\"\n        \"   .ltorg                              \\n\"\n        ::\"i\" ( configMAX_SYSCALL_INTERRUPT_PRIORITY )\n    );\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/portable/GCC/ARM_CM3/port.c#L455-L488"
+    },
+    "freertos:portable/GCC/ARM_CM3/portmacro.h#portYIELD": {
+      "rtos": "freertos",
+      "file": "portable/GCC/ARM_CM3/portmacro.h",
+      "symbol": "portYIELD",
+      "kind": "macro",
+      "startLine": 85,
+      "endLine": 94,
+      "code": "#define portYIELD()                                     \\\n    {                                                   \\\n        /* Set a PendSV to request a context switch. */ \\\n        portNVIC_INT_CTRL_REG = portNVIC_PENDSVSET_BIT; \\\n                                                        \\\n        /* Barriers are normally not required but do ensure the code is completely \\\n         * within the specified behaviour for the architecture. */ \\\n        __asm volatile ( \"dsb\" ::: \"memory\" );                     \\\n        __asm volatile ( \"isb\" );                                  \\\n    }",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/portable/GCC/ARM_CM3/portmacro.h#L85-L94"
+    },
+    "freertos:tasks.c#xTaskCreate": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "xTaskCreate",
+      "kind": "fn",
+      "startLine": 1729,
+      "endLine": 1763,
+      "code": "BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,\n                        const char * const pcName,\n                        const configSTACK_DEPTH_TYPE uxStackDepth,\n                        void * const pvParameters,\n                        UBaseType_t uxPriority,\n                        TaskHandle_t * const pxCreatedTask )\n{\n    TCB_t * pxNewTCB;\n    BaseType_t xReturn;\n\n    traceENTER_xTaskCreate( pxTaskCode, pcName, uxStackDepth, pvParameters, uxPriority, pxCreatedTask );\n\n    pxNewTCB = prvCreateTask( pxTaskCode, pcName, uxStackDepth, pvParameters, uxPriority, pxCreatedTask );\n\n    if( pxNewTCB != NULL )\n    {\n        #if ( ( configNUMBER_OF_CORES > 1 ) && ( configUSE_CORE_AFFINITY == 1 ) )\n        {\n            /* Set the task's affinity before scheduling it. */\n            pxNewTCB->uxCoreAffinityMask = configTASK_DEFAULT_CORE_AFFINITY;\n        }\n        #endif\n\n        prvAddNewTaskToReadyList( pxNewTCB );\n        xReturn = pdPASS;\n    }\n    else\n    {\n        xReturn = errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY;\n    }\n\n    traceRETURN_xTaskCreate( xReturn );\n\n    return xReturn;\n}",
+      "inactive": [
+        [
+          1746,
+          1749
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L1729-L1763"
+    },
+    "freertos:tasks.c#prvAddNewTaskToReadyList": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "prvAddNewTaskToReadyList",
+      "kind": "fn",
+      "startLine": 2040,
+      "endLine": 2114,
+      "code": "STATIC void prvAddNewTaskToReadyList( TCB_t * pxNewTCB )\n{\n    /* Ensure interrupts don't access the task lists while the lists are being\n     * updated. */\n    taskENTER_CRITICAL();\n    {\n        uxCurrentNumberOfTasks = ( UBaseType_t ) ( uxCurrentNumberOfTasks + 1U );\n\n        if( pxCurrentTCB == NULL )\n        {\n            /* There are no other tasks, or all the other tasks are in\n             * the suspended state - make this the current task. */\n            pxCurrentTCB = pxNewTCB;\n\n            if( uxCurrentNumberOfTasks == ( UBaseType_t ) 1 )\n            {\n                /* This is the first task to be created so do the preliminary\n                 * initialisation required.  We will not recover if this call\n                 * fails, but we will report the failure. */\n                prvInitialiseTaskLists();\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        else\n        {\n            /* If the scheduler is not already running, make this task the\n             * current task if it is the highest priority task to be created\n             * so far. */\n            if( xSchedulerRunning == pdFALSE )\n            {\n                if( pxCurrentTCB->uxPriority <= pxNewTCB->uxPriority )\n                {\n                    pxCurrentTCB = pxNewTCB;\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n\n        uxTaskNumber++;\n\n        #if ( configUSE_TRACE_FACILITY == 1 )\n        {\n            /* Add a counter into the TCB for tracing only. */\n            pxNewTCB->uxTCBNumber = uxTaskNumber;\n        }\n        #endif /* configUSE_TRACE_FACILITY */\n        traceTASK_CREATE( pxNewTCB );\n\n        prvAddTaskToReadyList( pxNewTCB );\n\n        portSETUP_TCB( pxNewTCB );\n    }\n    taskEXIT_CRITICAL();\n\n    if( xSchedulerRunning != pdFALSE )\n    {\n        /* If the created task is of a higher priority than the current task\n         * then it should run now. */\n        taskYIELD_ANY_CORE_IF_USING_PREEMPTION( pxNewTCB );\n    }\n    else\n    {\n        mtCOVERAGE_TEST_MARKER();\n    }\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L2040-L2114"
+    },
+    "freertos:tasks.c#vTaskStartScheduler": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "vTaskStartScheduler",
+      "kind": "fn",
+      "startLine": 3742,
+      "endLine": 3844,
+      "code": "void vTaskStartScheduler( void )\n{\n    BaseType_t xReturn;\n\n    traceENTER_vTaskStartScheduler();\n\n    #if ( configUSE_CORE_AFFINITY == 1 ) && ( configNUMBER_OF_CORES > 1 )\n    {\n        /* Sanity check that the UBaseType_t must have greater than or equal to\n         * the number of bits as confNUMBER_OF_CORES. */\n        configASSERT( ( sizeof( UBaseType_t ) * taskBITS_PER_BYTE ) >= configNUMBER_OF_CORES );\n    }\n    #endif /* #if ( configUSE_CORE_AFFINITY == 1 ) && ( configNUMBER_OF_CORES > 1 ) */\n\n    xReturn = prvCreateIdleTasks();\n\n    #if ( configUSE_TIMERS == 1 )\n    {\n        if( xReturn == pdPASS )\n        {\n            xReturn = xTimerCreateTimerTask();\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n    }\n    #endif /* configUSE_TIMERS */\n\n    if( xReturn == pdPASS )\n    {\n        /* freertos_tasks_c_additions_init() should only be called if the user\n         * definable macro FREERTOS_TASKS_C_ADDITIONS_INIT() is defined, as that is\n         * the only macro called by the function. */\n        #ifdef FREERTOS_TASKS_C_ADDITIONS_INIT\n        {\n            freertos_tasks_c_additions_init();\n        }\n        #endif\n\n        /* Interrupts are turned off here, to ensure a tick does not occur\n         * before or during the call to xPortStartScheduler().  The stacks of\n         * the created tasks contain a status word with interrupts switched on\n         * so interrupts will automatically get re-enabled when the first task\n         * starts to run. */\n        portDISABLE_INTERRUPTS();\n\n        #if ( configUSE_C_RUNTIME_TLS_SUPPORT == 1 )\n        {\n            /* Switch C-Runtime's TLS Block to point to the TLS\n             * block specific to the task that will run first. */\n            configSET_TLS_BLOCK( pxCurrentTCB->xTLSBlock );\n        }\n        #endif\n\n        xNextTaskUnblockTime = portMAX_DELAY;\n        xSchedulerRunning = pdTRUE;\n        xTickCount = ( TickType_t ) configINITIAL_TICK_COUNT;\n\n        /* If configGENERATE_RUN_TIME_STATS is defined then the following\n         * macro must be defined to configure the timer/counter used to generate\n         * the run time counter time base.   NOTE:  If configGENERATE_RUN_TIME_STATS\n         * is set to 0 and the following line fails to build then ensure you do not\n         * have portCONFIGURE_TIMER_FOR_RUN_TIME_STATS() defined in your\n         * FreeRTOSConfig.h file. */\n        portCONFIGURE_TIMER_FOR_RUN_TIME_STATS();\n\n        traceTASK_SWITCHED_IN();\n\n        traceSTARTING_SCHEDULER( xIdleTaskHandles );\n\n        /* Setting up the timer tick is hardware specific and thus in the\n         * portable interface. */\n\n        /* The return value for xPortStartScheduler is not required\n         * hence using a void datatype. */\n        ( void ) xPortStartScheduler();\n\n        /* In most cases, xPortStartScheduler() will not return. If it\n         * returns pdTRUE then there was not enough heap memory available\n         * to create either the Idle or the Timer task. If it returned\n         * pdFALSE, then the application called xTaskEndScheduler().\n         * Most ports don't implement xTaskEndScheduler() as there is\n         * nothing to return to. */\n    }\n    else\n    {\n        /* This line will only be reached if the kernel could not be started,\n         * because there was not enough FreeRTOS heap to create the idle task\n         * or the timer task. */\n        configASSERT( xReturn != errCOULD_NOT_ALLOCATE_REQUIRED_MEMORY );\n    }\n\n    /* Prevent compiler warnings if INCLUDE_xTaskGetIdleTaskHandle is set to 0,\n     * meaning xIdleTaskHandles are not used anywhere else. */\n    ( void ) xIdleTaskHandles;\n\n    /* OpenOCD makes use of uxTopUsedPriority for thread debugging. Prevent uxTopUsedPriority\n     * from getting optimized out as it is no longer used by the kernel. */\n    ( void ) uxTopUsedPriority;\n\n    traceRETURN_vTaskStartScheduler();\n}",
+      "inactive": [
+        [
+          3749,
+          3753
+        ],
+        [
+          3759,
+          3768
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L3742-L3844"
+    },
     "freertos:tasks.c#xTaskIncrementTick": {
       "rtos": "freertos",
       "file": "tasks.c",
@@ -36,6 +116,10 @@
           4995
         ],
         [
+          5001,
+          5012
+        ],
+        [
           5030,
           5035
         ],
@@ -46,6 +130,10 @@
         [
           5039,
           5057
+        ],
+        [
+          5069,
+          5071
         ]
       ],
       "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L4831-L5078"
@@ -56,10 +144,21 @@
       "symbol": "taskSWITCH_DELAYED_LISTS",
       "kind": "macro",
       "startLine": 267,
-      "endLine": 271,
-      "code": "#define taskSWITCH_DELAYED_LISTS()                                                \\\n    do {                                                                          \\\n        List_t * pxTemp;                                                          \\\n                                                                                  \\\n        /* The delayed tasks list should be empty when the lists are switched. */ \\",
+      "endLine": 279,
+      "code": "#define taskSWITCH_DELAYED_LISTS()                                                \\\n    do {                                                                          \\\n        List_t * pxTemp;                                                          \\\n                                                                                  \\\n        /* The delayed tasks list should be empty when the lists are switched. */ \\\n        configASSERT( ( listLIST_IS_EMPTY( pxDelayedTaskList ) ) );               \\\n                                                                                  \\\n        pxTemp = pxDelayedTaskList;                                               \\\n        pxDelayedTaskList = pxOverflowDelayedTaskList;                            \\\n        pxOverflowDelayedTaskList = pxTemp;                                       \\\n        xNumOfOverflows = ( BaseType_t ) ( xNumOfOverflows + 1 );                 \\\n        prvResetNextTaskUnblockTime();                                            \\\n    } while( 0 )",
       "inactive": [],
-      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L267-L271"
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L267-L279"
+    },
+    "freertos:tasks.c#prvResetNextTaskUnblockTime": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "prvResetNextTaskUnblockTime",
+      "kind": "fn",
+      "startLine": 6621,
+      "endLine": 6639,
+      "code": "STATIC void prvResetNextTaskUnblockTime( void )\n{\n    if( listLIST_IS_EMPTY( pxDelayedTaskList ) != pdFALSE )\n    {\n        /* The new current delayed list is empty.  Set xNextTaskUnblockTime to\n         * the maximum possible value so it is  extremely unlikely that the\n         * if( xTickCount >= xNextTaskUnblockTime ) test will pass until\n         * there is an item in the delayed list. */\n        xNextTaskUnblockTime = portMAX_DELAY;\n    }\n    else\n    {\n        /* The new current delayed list is not empty, get the value of\n         * the item at the head of the delayed list.  This is the time at\n         * which the task at the head of the delayed list should be removed\n         * from the Blocked state. */\n        xNextTaskUnblockTime = listGET_ITEM_VALUE_OF_HEAD_ENTRY( pxDelayedTaskList );\n    }\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L6621-L6639"
     },
     "freertos:tasks.c#vTaskSwitchContext": {
       "rtos": "freertos",
@@ -78,10 +177,10 @@
       "symbol": "taskSELECT_HIGHEST_PRIORITY_TASK",
       "kind": "macro",
       "startLine": 197,
-      "endLine": 201,
-      "code": "    #define taskSELECT_HIGHEST_PRIORITY_TASK()                                       \\\ndo {                                                                                 \\\n    UBaseType_t uxTopPriority = uxTopReadyPriority;                                  \\\n                                                                                     \\\n    /* Find the highest priority queue that contains ready tasks. */                 \\",
+      "endLine": 212,
+      "code": "    #define taskSELECT_HIGHEST_PRIORITY_TASK()                                       \\\ndo {                                                                                 \\\n    UBaseType_t uxTopPriority = uxTopReadyPriority;                                  \\\n                                                                                     \\\n    /* Find the highest priority queue that contains ready tasks. */                 \\\n    while( listLIST_IS_EMPTY( &( pxReadyTasksLists[ uxTopPriority ] ) ) != pdFALSE ) \\\n    {                                                                                \\\n        configASSERT( uxTopPriority );                                               \\\n        --uxTopPriority;                                                             \\\n    }                                                                                \\\n                                                                                     \\\n    /* listGET_OWNER_OF_NEXT_ENTRY indexes through the list, so the tasks of \\\n     * the  same priority get an equal share of the processor time. */                    \\\n    listGET_OWNER_OF_NEXT_ENTRY( pxCurrentTCB, &( pxReadyTasksLists[ uxTopPriority ] ) ); \\\n    uxTopReadyPriority = uxTopPriority;                                                   \\\n} while( 0 ) /* taskSELECT_HIGHEST_PRIORITY_TASK */",
       "inactive": [],
-      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L197-L201"
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L197-L212"
     },
     "freertos:tasks.c#prvAddTaskToReadyList": {
       "rtos": "freertos",
@@ -93,6 +192,101 @@
       "code": "#define prvAddTaskToReadyList( pxTCB )                                                                     \\\n    do {                                                                                                   \\\n        traceMOVED_TASK_TO_READY_STATE( pxTCB );                                                           \\\n        taskRECORD_READY_PRIORITY( ( pxTCB )->uxPriority );                                                \\\n        listINSERT_END( &( pxReadyTasksLists[ ( pxTCB )->uxPriority ] ), &( ( pxTCB )->xStateListItem ) ); \\\n        tracePOST_MOVED_TASK_TO_READY_STATE( pxTCB );                                                      \\\n    } while( 0 )",
       "inactive": [],
       "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L287-L293"
+    },
+    "freertos:tasks.c#vTaskDelay": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "vTaskDelay",
+      "kind": "fn",
+      "startLine": 2506,
+      "endLine": 2549,
+      "code": "void vTaskDelay( const TickType_t xTicksToDelay )\n{\n    BaseType_t xAlreadyYielded = pdFALSE;\n\n    traceENTER_vTaskDelay( xTicksToDelay );\n\n    /* A delay time of zero just forces a reschedule. */\n    if( xTicksToDelay > ( TickType_t ) 0U )\n    {\n        vTaskSuspendAll();\n        {\n            configASSERT( uxSchedulerSuspended == 1U );\n\n            traceTASK_DELAY();\n\n            /* A task that is removed from the event list while the\n             * scheduler is suspended will not get placed in the ready\n             * list or removed from the blocked list until the scheduler\n             * is resumed.\n             *\n             * This task cannot be in an event list as it is the currently\n             * executing task. */\n            prvAddCurrentTaskToDelayedList( xTicksToDelay, pdFALSE );\n        }\n        xAlreadyYielded = xTaskResumeAll();\n    }\n    else\n    {\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    /* Force a reschedule if xTaskResumeAll has not already done so, we may\n     * have put ourselves to sleep. */\n    if( xAlreadyYielded == pdFALSE )\n    {\n        taskYIELD_WITHIN_API();\n    }\n    else\n    {\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    traceRETURN_vTaskDelay();\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L2506-L2549"
+    },
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "prvAddCurrentTaskToDelayedList",
+      "kind": "fn",
+      "startLine": 8685,
+      "endLine": 8801,
+      "code": "STATIC void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,\n                                            const BaseType_t xCanBlockIndefinitely )\n{\n    TickType_t xTimeToWake;\n    const TickType_t xConstTickCount = xTickCount;\n    List_t * const pxDelayedList = pxDelayedTaskList;\n    List_t * const pxOverflowDelayedList = pxOverflowDelayedTaskList;\n\n    #if ( INCLUDE_xTaskAbortDelay == 1 )\n    {\n        /* About to enter a delayed list, so ensure the ucDelayAborted flag is\n         * reset to pdFALSE so it can be detected as having been set to pdTRUE\n         * when the task leaves the Blocked state. */\n        pxCurrentTCB->ucDelayAborted = ( uint8_t ) pdFALSE;\n    }\n    #endif\n\n    /* Remove the task from the ready list before adding it to the blocked list\n     * as the same list item is used for both lists. */\n    if( uxListRemove( &( pxCurrentTCB->xStateListItem ) ) == ( UBaseType_t ) 0 )\n    {\n        /* The current task must be in a ready list, so there is no need to\n         * check, and the port reset macro can be called directly. */\n        portRESET_READY_PRIORITY( pxCurrentTCB->uxPriority, uxTopReadyPriority );\n    }\n    else\n    {\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    #if ( INCLUDE_vTaskSuspend == 1 )\n    {\n        if( ( xTicksToWait == portMAX_DELAY ) && ( xCanBlockIndefinitely != pdFALSE ) )\n        {\n            /* Add the task to the suspended task list instead of a delayed task\n             * list to ensure it is not woken by a timing event.  It will block\n             * indefinitely. */\n            listINSERT_END( &xSuspendedTaskList, &( pxCurrentTCB->xStateListItem ) );\n        }\n        else\n        {\n            /* Calculate the time at which the task should be woken if the event\n             * does not occur.  This may overflow but this doesn't matter, the\n             * kernel will manage it correctly. */\n            xTimeToWake = xConstTickCount + xTicksToWait;\n\n            /* The list item will be inserted in wake time order. */\n            listSET_LIST_ITEM_VALUE( &( pxCurrentTCB->xStateListItem ), xTimeToWake );\n\n            if( xTimeToWake < xConstTickCount )\n            {\n                /* Wake time has overflowed.  Place this item in the overflow\n                 * list. */\n                traceMOVED_TASK_TO_OVERFLOW_DELAYED_LIST();\n                vListInsert( pxOverflowDelayedList, &( pxCurrentTCB->xStateListItem ) );\n            }\n            else\n            {\n                /* The wake time has not overflowed, so the current block list\n                 * is used. */\n                traceMOVED_TASK_TO_DELAYED_LIST();\n                vListInsert( pxDelayedList, &( pxCurrentTCB->xStateListItem ) );\n\n                /* If the task entering the blocked state was placed at the\n                 * head of the list of blocked tasks then xNextTaskUnblockTime\n                 * needs to be updated too. */\n                if( xTimeToWake < xNextTaskUnblockTime )\n                {\n                    xNextTaskUnblockTime = xTimeToWake;\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n        }\n    }\n    #else /* INCLUDE_vTaskSuspend */\n    {\n        /* Calculate the time at which the task should be woken if the event\n         * does not occur.  This may overflow but this doesn't matter, the kernel\n         * will manage it correctly. */\n        xTimeToWake = xConstTickCount + xTicksToWait;\n\n        /* The list item will be inserted in wake time order. */\n        listSET_LIST_ITEM_VALUE( &( pxCurrentTCB->xStateListItem ), xTimeToWake );\n\n        if( xTimeToWake < xConstTickCount )\n        {\n            traceMOVED_TASK_TO_OVERFLOW_DELAYED_LIST();\n            /* Wake time has overflowed.  Place this item in the overflow list. */\n            vListInsert( pxOverflowDelayedList, &( pxCurrentTCB->xStateListItem ) );\n        }\n        else\n        {\n            traceMOVED_TASK_TO_DELAYED_LIST();\n            /* The wake time has not overflowed, so the current block list is used. */\n            vListInsert( pxDelayedList, &( pxCurrentTCB->xStateListItem ) );\n\n            /* If the task entering the blocked state was placed at the head of the\n             * list of blocked tasks then xNextTaskUnblockTime needs to be updated\n             * too. */\n            if( xTimeToWake < xNextTaskUnblockTime )\n            {\n                xNextTaskUnblockTime = xTimeToWake;\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n\n        /* Avoid compiler warning when INCLUDE_vTaskSuspend is not 1. */\n        ( void ) xCanBlockIndefinitely;\n    }\n    #endif /* INCLUDE_vTaskSuspend */\n}",
+      "inactive": [
+        [
+          8694,
+          8699
+        ],
+        [
+          8763,
+          8799
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L8685-L8801"
+    },
+    "freertos:tasks.c#vTaskDelete": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "vTaskDelete",
+      "kind": "fn",
+      "startLine": 2212,
+      "endLine": 2358,
+      "code": "void vTaskDelete( TaskHandle_t xTaskToDelete )\n{\n    TCB_t * pxTCB;\n    BaseType_t xDeleteTCBInIdleTask = pdFALSE;\n    BaseType_t xTaskIsRunningOrYielding;\n\n    traceENTER_vTaskDelete( xTaskToDelete );\n\n    taskENTER_CRITICAL();\n    {\n        /* If null is passed in here then it is the calling task that is\n         * being deleted. */\n        pxTCB = prvGetTCBFromHandle( xTaskToDelete );\n        configASSERT( pxTCB != NULL );\n\n        /* Remove task from the ready/delayed list. */\n        if( uxListRemove( &( pxTCB->xStateListItem ) ) == ( UBaseType_t ) 0 )\n        {\n            taskRESET_READY_PRIORITY( pxTCB->uxPriority );\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n\n        /* Is the task waiting on an event also? */\n        if( listLIST_ITEM_CONTAINER( &( pxTCB->xEventListItem ) ) != NULL )\n        {\n            ( void ) uxListRemove( &( pxTCB->xEventListItem ) );\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n\n        /* Increment the uxTaskNumber also so kernel aware debuggers can\n         * detect that the task lists need re-generating.  This is done before\n         * portPRE_TASK_DELETE_HOOK() as in the Windows port that macro will\n         * not return. */\n        uxTaskNumber++;\n\n        /* Use temp variable as distinct sequence points for reading volatile\n         * variables prior to a logical operator to ensure compliance with\n         * MISRA C 2012 Rule 13.5. */\n        xTaskIsRunningOrYielding = taskTASK_IS_RUNNING_OR_SCHEDULED_TO_YIELD( pxTCB );\n\n        /* If the task is running (or yielding), we must add it to the\n         * termination list so that an idle task can delete it when it is\n         * no longer running. */\n        if( ( xSchedulerRunning != pdFALSE ) && ( xTaskIsRunningOrYielding != pdFALSE ) )\n        {\n            /* A running task or a task which is scheduled to yield is being\n             * deleted. This cannot complete when the task is still running\n             * on a core, as a context switch to another task is required.\n             * Place the task in the termination list. The idle task will check\n             * the termination list and free up any memory allocated by the\n             * scheduler for the TCB and stack of the deleted task. */\n            vListInsertEnd( &xTasksWaitingTermination, &( pxTCB->xStateListItem ) );\n\n            /* Increment the ucTasksDeleted variable so the idle task knows\n             * there is a task that has been deleted and that it should therefore\n             * check the xTasksWaitingTermination list. */\n            ++uxDeletedTasksWaitingCleanUp;\n\n            /* Call the delete hook before portPRE_TASK_DELETE_HOOK() as\n             * portPRE_TASK_DELETE_HOOK() does not return in the Win32 port. */\n            traceTASK_DELETE( pxTCB );\n\n            /* Delete the task TCB in idle task. */\n            xDeleteTCBInIdleTask = pdTRUE;\n\n            /* The pre-delete hook is primarily for the Windows simulator,\n             * in which Windows specific clean up operations are performed,\n             * after which it is not possible to yield away from this task -\n             * hence xYieldPending is used to latch that a context switch is\n             * required. */\n            #if ( configNUMBER_OF_CORES == 1 )\n                portPRE_TASK_DELETE_HOOK( pxTCB, &( xYieldPendings[ 0 ] ) );\n            #else\n                portPRE_TASK_DELETE_HOOK( pxTCB, &( xYieldPendings[ pxTCB->xTaskRunState ] ) );\n            #endif\n\n            /* In the case of SMP, it is possible that the task being deleted\n             * is running on another core. We must evict the task before\n             * exiting the critical section to ensure that the task cannot\n             * take an action which puts it back on ready/state/event list,\n             * thereby nullifying the delete operation. Once evicted, the\n             * task won't be scheduled ever as it will no longer be on the\n             * ready list. */\n            #if ( configNUMBER_OF_CORES > 1 )\n            {\n                if( taskTASK_IS_RUNNING( pxTCB ) == pdTRUE )\n                {\n                    if( pxTCB->xTaskRunState == ( BaseType_t ) portGET_CORE_ID() )\n                    {\n                        configASSERT( uxSchedulerSuspended == 0 );\n                        taskYIELD_WITHIN_API();\n                    }\n                    else\n                    {\n                        prvYieldCore( pxTCB->xTaskRunState );\n                    }\n                }\n            }\n            #endif /* #if ( configNUMBER_OF_CORES > 1 ) */\n        }\n        else\n        {\n            --uxCurrentNumberOfTasks;\n            traceTASK_DELETE( pxTCB );\n\n            /* Reset the next expected unblock time in case it referred to\n             * the task that has just been deleted. */\n            prvResetNextTaskUnblockTime();\n        }\n    }\n    taskEXIT_CRITICAL();\n\n    /* If the task is not deleting itself, call prvDeleteTCB from outside of\n     * critical section. If a task deletes itself, prvDeleteTCB is called\n     * from prvCheckTasksWaitingTermination which is called from Idle task. */\n    if( xDeleteTCBInIdleTask != pdTRUE )\n    {\n        prvDeleteTCB( pxTCB );\n    }\n\n    /* Force a reschedule if it is the currently running task that has just\n     * been deleted. */\n    #if ( configNUMBER_OF_CORES == 1 )\n    {\n        if( xSchedulerRunning != pdFALSE )\n        {\n            if( pxTCB == pxCurrentTCB )\n            {\n                configASSERT( uxSchedulerSuspended == 0 );\n                taskYIELD_WITHIN_API();\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n    }\n    #endif /* #if ( configNUMBER_OF_CORES == 1 ) */\n\n    traceRETURN_vTaskDelete();\n}",
+      "inactive": [
+        [
+          2291,
+          2291
+        ],
+        [
+          2302,
+          2315
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L2212-L2358"
+    },
+    "freertos:tasks.c#prvIdleTask": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "prvIdleTask",
+      "kind": "fn",
+      "startLine": 5908,
+      "endLine": 6040,
+      "code": "STATIC portTASK_FUNCTION( prvIdleTask,\n                          pvParameters )\n{\n    /* Stop warnings. */\n    ( void ) pvParameters;\n\n    /** THIS IS THE RTOS IDLE TASK - WHICH IS CREATED AUTOMATICALLY WHEN THE\n     * SCHEDULER IS STARTED. **/\n\n    /* In case a task that has a secure context deletes itself, in which case\n     * the idle task is responsible for deleting the task's secure context, if\n     * any. */\n    portALLOCATE_SECURE_CONTEXT( configMINIMAL_SECURE_STACK_SIZE );\n\n    #if ( configNUMBER_OF_CORES > 1 )\n    {\n        /* SMP all cores start up in the idle task. This initial yield gets the application\n         * tasks started. */\n        taskYIELD();\n    }\n    #endif /* #if ( configNUMBER_OF_CORES > 1 ) */\n\n    for( ; configCONTROL_INFINITE_LOOP(); )\n    {\n        /* See if any tasks have deleted themselves - if so then the idle task\n         * is responsible for freeing the deleted task's TCB and stack. */\n        prvCheckTasksWaitingTermination();\n\n        #if ( configUSE_PREEMPTION == 0 )\n        {\n            /* If we are not using preemption we keep forcing a task switch to\n             * see if any other task has become available.  If we are using\n             * preemption we don't need to do this as any task becoming available\n             * will automatically get the processor anyway. */\n            taskYIELD();\n        }\n        #endif /* configUSE_PREEMPTION */\n\n        #if ( ( configUSE_PREEMPTION == 1 ) && ( configIDLE_SHOULD_YIELD == 1 ) )\n        {\n            /* When using preemption tasks of equal priority will be\n             * timesliced.  If a task that is sharing the idle priority is ready\n             * to run then the idle task should yield before the end of the\n             * timeslice.\n             *\n             * A critical region is not required here as we are just reading from\n             * the list, and an occasional incorrect value will not matter.  If\n             * the ready list at the idle priority contains one more task than the\n             * number of idle tasks, which is equal to the configured numbers of cores\n             * then a task other than the idle task is ready to execute. */\n            if( listCURRENT_LIST_LENGTH( &( pxReadyTasksLists[ tskIDLE_PRIORITY ] ) ) > ( UBaseType_t ) configNUMBER_OF_CORES )\n            {\n                taskYIELD();\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        #endif /* ( ( configUSE_PREEMPTION == 1 ) && ( configIDLE_SHOULD_YIELD == 1 ) ) */\n\n        #if ( configUSE_IDLE_HOOK == 1 )\n        {\n            /* Call the user defined function from within the idle task. */\n            vApplicationIdleHook();\n        }\n        #endif /* configUSE_IDLE_HOOK */\n\n        /* This conditional compilation should use inequality to 0, not equality\n         * to 1.  This is to ensure portSUPPRESS_TICKS_AND_SLEEP() is called when\n         * user defined low power mode  implementations require\n         * configUSE_TICKLESS_IDLE to be set to a value other than 1. */\n        #if ( configUSE_TICKLESS_IDLE != 0 )\n        {\n            TickType_t xExpectedIdleTime;\n\n            /* It is not desirable to suspend then resume the scheduler on\n             * each iteration of the idle task.  Therefore, a preliminary\n             * test of the expected idle time is performed without the\n             * scheduler suspended.  The result here is not necessarily\n             * valid. */\n            xExpectedIdleTime = prvGetExpectedIdleTime();\n\n            if( xExpectedIdleTime >= ( TickType_t ) configEXPECTED_IDLE_TIME_BEFORE_SLEEP )\n            {\n                vTaskSuspendAll();\n                {\n                    /* Now the scheduler is suspended, the expected idle\n                     * time can be sampled again, and this time its value can\n                     * be used. */\n                    configASSERT( xNextTaskUnblockTime >= xTickCount );\n                    xExpectedIdleTime = prvGetExpectedIdleTime();\n\n                    /* Define the following macro to set xExpectedIdleTime to 0\n                     * if the application does not want\n                     * portSUPPRESS_TICKS_AND_SLEEP() to be called. */\n                    configPRE_SUPPRESS_TICKS_AND_SLEEP_PROCESSING( xExpectedIdleTime );\n\n                    if( xExpectedIdleTime >= ( TickType_t ) configEXPECTED_IDLE_TIME_BEFORE_SLEEP )\n                    {\n                        traceLOW_POWER_IDLE_BEGIN();\n                        portSUPPRESS_TICKS_AND_SLEEP( xExpectedIdleTime );\n                        traceLOW_POWER_IDLE_END();\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n                }\n                ( void ) xTaskResumeAll();\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        #endif /* configUSE_TICKLESS_IDLE */\n\n        #if ( ( configNUMBER_OF_CORES > 1 ) && ( configUSE_PASSIVE_IDLE_HOOK == 1 ) )\n        {\n            /* Call the user defined function from within the idle task.  This\n             * allows the application designer to add background functionality\n             * without the overhead of a separate task.\n             *\n             * This hook is intended to manage core activity such as disabling cores that go idle.\n             *\n             * NOTE: vApplicationPassiveIdleHook() MUST NOT, UNDER ANY CIRCUMSTANCES,\n             * CALL A FUNCTION THAT MIGHT BLOCK. */\n            vApplicationPassiveIdleHook();\n        }\n        #endif /* #if ( ( configNUMBER_OF_CORES > 1 ) && ( configUSE_PASSIVE_IDLE_HOOK == 1 ) ) */\n    }\n}",
+      "inactive": [
+        [
+          5923,
+          5927
+        ],
+        [
+          5937,
+          5943
+        ],
+        [
+          5981,
+          6023
+        ],
+        [
+          6027,
+          6037
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L5908-L6040"
+    },
+    "freertos:tasks.c#prvCheckTasksWaitingTermination": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "prvCheckTasksWaitingTermination",
+      "kind": "fn",
+      "startLine": 6207,
+      "endLine": 6280,
+      "code": "STATIC void prvCheckTasksWaitingTermination( void )\n{\n    /** THIS FUNCTION IS CALLED FROM THE RTOS IDLE TASK **/\n\n    #if ( INCLUDE_vTaskDelete == 1 )\n    {\n        TCB_t * pxTCB;\n\n        /* uxDeletedTasksWaitingCleanUp is used to prevent taskENTER_CRITICAL()\n         * being called too often in the idle task. */\n        while( uxDeletedTasksWaitingCleanUp > ( UBaseType_t ) 0U )\n        {\n            #if ( configNUMBER_OF_CORES == 1 )\n            {\n                taskENTER_CRITICAL();\n                {\n                    {\n                        /* MISRA Ref 11.5.3 [Void pointer assignment] */\n                        /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-115 */\n                        /* coverity[misra_c_2012_rule_11_5_violation] */\n                        pxTCB = listGET_OWNER_OF_HEAD_ENTRY( ( &xTasksWaitingTermination ) );\n                        ( void ) uxListRemove( &( pxTCB->xStateListItem ) );\n                        --uxCurrentNumberOfTasks;\n                        --uxDeletedTasksWaitingCleanUp;\n                    }\n                }\n                taskEXIT_CRITICAL();\n\n                prvDeleteTCB( pxTCB );\n            }\n            #else /* #if( configNUMBER_OF_CORES == 1 ) */\n            {\n                pxTCB = NULL;\n\n                taskENTER_CRITICAL();\n                {\n                    /* For SMP, multiple idles can be running simultaneously\n                     * and we need to check that other idles did not cleanup while we were\n                     * waiting to enter the critical section. */\n                    if( uxDeletedTasksWaitingCleanUp > ( UBaseType_t ) 0U )\n                    {\n                        /* MISRA Ref 11.5.3 [Void pointer assignment] */\n                        /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-115 */\n                        /* coverity[misra_c_2012_rule_11_5_violation] */\n                        pxTCB = listGET_OWNER_OF_HEAD_ENTRY( ( &xTasksWaitingTermination ) );\n\n                        if( pxTCB->xTaskRunState == taskTASK_NOT_RUNNING )\n                        {\n                            ( void ) uxListRemove( &( pxTCB->xStateListItem ) );\n                            --uxCurrentNumberOfTasks;\n                            --uxDeletedTasksWaitingCleanUp;\n                        }\n                        else\n                        {\n                            /* The TCB to be deleted still has not yet been switched out\n                             * by the scheduler, so we will just exit this loop early and\n                             * try again next time. */\n                            taskEXIT_CRITICAL();\n                            break;\n                        }\n                    }\n                }\n                taskEXIT_CRITICAL();\n\n                if( pxTCB != NULL )\n                {\n                    prvDeleteTCB( pxTCB );\n                }\n            }\n            #endif /* #if( configNUMBER_OF_CORES == 1 ) */\n        }\n    }\n    #endif /* INCLUDE_vTaskDelete */\n}",
+      "inactive": [
+        [
+          6238,
+          6275
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L6207-L6280"
     },
     "freertos:tasks.c#xTaskPriorityInherit": {
       "rtos": "freertos",
@@ -236,17 +430,217 @@
     }
   },
   "anchors": {
-    "freertos:tasks.c#xTaskIncrementTick/increment": {
+    "freertos:portable/GCC/ARM_CM3/port.c#xPortSysTickHandler/tick": {
+      "symbol": "freertos:portable/GCC/ARM_CM3/port.c#xPortSysTickHandler",
+      "line": 501
+    },
+    "freertos:portable/GCC/ARM_CM3/port.c#xPortSysTickHandler/pend": {
+      "symbol": "freertos:portable/GCC/ARM_CM3/port.c#xPortSysTickHandler",
+      "line": 507
+    },
+    "freertos:portable/GCC/ARM_CM3/port.c#xPortPendSVHandler/switch": {
+      "symbol": "freertos:portable/GCC/ARM_CM3/port.c#xPortPendSVHandler",
+      "line": 473
+    },
+    "freertos:portable/GCC/ARM_CM3/port.c#xPortPendSVHandler/restore": {
+      "symbol": "freertos:portable/GCC/ARM_CM3/port.c#xPortPendSVHandler",
+      "line": 481
+    },
+    "freertos:portable/GCC/ARM_CM3/portmacro.h#portYIELD/pend": {
+      "symbol": "freertos:portable/GCC/ARM_CM3/portmacro.h#portYIELD",
+      "line": 88
+    },
+    "freertos:tasks.c#xTaskCreate/add": {
+      "symbol": "freertos:tasks.c#xTaskCreate",
+      "line": 1752
+    },
+    "freertos:tasks.c#prvAddNewTaskToReadyList/first": {
+      "symbol": "freertos:tasks.c#prvAddNewTaskToReadyList",
+      "line": 2052
+    },
+    "freertos:tasks.c#prvAddNewTaskToReadyList/higher": {
+      "symbol": "freertos:tasks.c#prvAddNewTaskToReadyList",
+      "line": 2075
+    },
+    "freertos:tasks.c#prvAddNewTaskToReadyList/ready": {
+      "symbol": "freertos:tasks.c#prvAddNewTaskToReadyList",
+      "line": 2098
+    },
+    "freertos:tasks.c#vTaskStartScheduler/idle": {
+      "symbol": "freertos:tasks.c#vTaskStartScheduler",
+      "line": 3756
+    },
+    "freertos:tasks.c#vTaskStartScheduler/running": {
+      "symbol": "freertos:tasks.c#vTaskStartScheduler",
+      "line": 3798
+    },
+    "freertos:tasks.c#vTaskStartScheduler/tick-init": {
+      "symbol": "freertos:tasks.c#vTaskStartScheduler",
+      "line": 3799
+    },
+    "freertos:tasks.c#vTaskStartScheduler/start": {
+      "symbol": "freertos:tasks.c#vTaskStartScheduler",
+      "line": 3818
+    },
+    "freertos:tasks.c#xTaskIncrementTick/store": {
       "symbol": "freertos:tasks.c#xTaskIncrementTick",
-      "line": 4852
+      "line": 4856
     },
     "freertos:tasks.c#xTaskIncrementTick/switch-lists": {
       "symbol": "freertos:tasks.c#xTaskIncrementTick",
       "line": 4860
     },
+    "freertos:tasks.c#xTaskIncrementTick/unblock-check": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 4871
+    },
+    "freertos:tasks.c#xTaskIncrementTick/no-more": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 4882
+    },
+    "freertos:tasks.c#xTaskIncrementTick/next-unblock": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 4904
+    },
+    "freertos:tasks.c#xTaskIncrementTick/remove": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 4913
+    },
+    "freertos:tasks.c#xTaskIncrementTick/make-ready": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 4928
+    },
+    "freertos:tasks.c#xTaskIncrementTick/preempt-check": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 4944
+    },
+    "freertos:tasks.c#xTaskIncrementTick/preempt": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 4946
+    },
+    "freertos:tasks.c#xTaskIncrementTick/slice-check": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 4971
+    },
+    "freertos:tasks.c#xTaskIncrementTick/slice": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 4973
+    },
+    "freertos:tasks.c#xTaskIncrementTick/yield-pending": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 5022
+    },
+    "freertos:tasks.c#xTaskIncrementTick/return": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 5077
+    },
+    "freertos:tasks.c#taskSWITCH_DELAYED_LISTS/swap": {
+      "symbol": "freertos:tasks.c#taskSWITCH_DELAYED_LISTS",
+      "line": 275
+    },
+    "freertos:tasks.c#taskSWITCH_DELAYED_LISTS/reset": {
+      "symbol": "freertos:tasks.c#taskSWITCH_DELAYED_LISTS",
+      "line": 278
+    },
+    "freertos:tasks.c#prvResetNextTaskUnblockTime/empty": {
+      "symbol": "freertos:tasks.c#prvResetNextTaskUnblockTime",
+      "line": 6629
+    },
+    "freertos:tasks.c#prvResetNextTaskUnblockTime/head": {
+      "symbol": "freertos:tasks.c#prvResetNextTaskUnblockTime",
+      "line": 6637
+    },
     "freertos:tasks.c#vTaskSwitchContext/select": {
       "symbol": "freertos:tasks.c#vTaskSwitchContext",
       "line": 5273
+    },
+    "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK/top": {
+      "symbol": "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK",
+      "line": 199
+    },
+    "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK/lower": {
+      "symbol": "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK",
+      "line": 205
+    },
+    "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK/next": {
+      "symbol": "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK",
+      "line": 210
+    },
+    "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK/store": {
+      "symbol": "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK",
+      "line": 211
+    },
+    "freertos:tasks.c#prvAddTaskToReadyList/record": {
+      "symbol": "freertos:tasks.c#prvAddTaskToReadyList",
+      "line": 290
+    },
+    "freertos:tasks.c#prvAddTaskToReadyList/insert": {
+      "symbol": "freertos:tasks.c#prvAddTaskToReadyList",
+      "line": 291
+    },
+    "freertos:tasks.c#vTaskDelay/suspend": {
+      "symbol": "freertos:tasks.c#vTaskDelay",
+      "line": 2515
+    },
+    "freertos:tasks.c#vTaskDelay/add": {
+      "symbol": "freertos:tasks.c#vTaskDelay",
+      "line": 2528
+    },
+    "freertos:tasks.c#vTaskDelay/resume": {
+      "symbol": "freertos:tasks.c#vTaskDelay",
+      "line": 2530
+    },
+    "freertos:tasks.c#vTaskDelay/yield": {
+      "symbol": "freertos:tasks.c#vTaskDelay",
+      "line": 2541
+    },
+    "freertos:tasks.c#vTaskDelay/return": {
+      "symbol": "freertos:tasks.c#vTaskDelay",
+      "line": 2548
+    },
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList/remove": {
+      "symbol": "freertos:tasks.c#prvAddCurrentTaskToDelayedList",
+      "line": 8704
+    },
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList/wake-time": {
+      "symbol": "freertos:tasks.c#prvAddCurrentTaskToDelayedList",
+      "line": 8729
+    },
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList/insert-overflow": {
+      "symbol": "freertos:tasks.c#prvAddCurrentTaskToDelayedList",
+      "line": 8739
+    },
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList/insert": {
+      "symbol": "freertos:tasks.c#prvAddCurrentTaskToDelayedList",
+      "line": 8746
+    },
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList/next-set": {
+      "symbol": "freertos:tasks.c#prvAddCurrentTaskToDelayedList",
+      "line": 8753
+    },
+    "freertos:tasks.c#vTaskDelete/remove": {
+      "symbol": "freertos:tasks.c#vTaskDelete",
+      "line": 2228
+    },
+    "freertos:tasks.c#vTaskDelete/waiting-termination": {
+      "symbol": "freertos:tasks.c#vTaskDelete",
+      "line": 2269
+    },
+    "freertos:tasks.c#vTaskDelete/yield": {
+      "symbol": "freertos:tasks.c#vTaskDelete",
+      "line": 2347
+    },
+    "freertos:tasks.c#prvIdleTask/check-termination": {
+      "symbol": "freertos:tasks.c#prvIdleTask",
+      "line": 5934
+    },
+    "freertos:tasks.c#prvCheckTasksWaitingTermination/remove": {
+      "symbol": "freertos:tasks.c#prvCheckTasksWaitingTermination",
+      "line": 6228
+    },
+    "freertos:tasks.c#prvCheckTasksWaitingTermination/delete": {
+      "symbol": "freertos:tasks.c#prvCheckTasksWaitingTermination",
+      "line": 6235
     },
     "freertos:tasks.c#xTaskPriorityInherit/compare": {
       "symbol": "freertos:tasks.c#xTaskPriorityInherit",
