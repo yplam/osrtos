@@ -1,0 +1,74 @@
+---
+// Every preset scenario in one simulator. The scenario is chosen with the
+// select (or ?scenario=<id>); its parameters are changed inside the simulator.
+import Layout from '../../layouts/Layout.astro';
+import SimEmbed from '../../components/SimEmbed.astro';
+import manifest from '../../generated/sim/manifest.json';
+
+const scenarios = Object.entries(manifest.scenarios)
+  .map(([id, s]) => ({id, title: s.title, rtos: s.rtos, simulated: s.simulated}))
+  // Scenarios that no kernel model runs yet come last.
+  .sort((a, b) => Number(b.simulated.length > 0) - Number(a.simulated.length > 0));
+// A kernel without a model for the scenario shows a placeholder, so models come first.
+const order = (s: (typeof scenarios)[number]) =>
+  [...s.rtos].sort((a, b) => Number(s.simulated.includes(b)) - Number(s.simulated.includes(a)));
+const first = scenarios[0];
+---
+
+<Layout
+  title="RTOS scheduler playground - OSRTOS"
+  description="Run preset RTOS scheduling scenarios step by step on a model of the real FreeRTOS kernel, next to its source code, and change their parameters."
+>
+  <header class="max-w-4xl mx-auto">
+    <nav aria-label="Breadcrumb" class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+      <a href="/learn/" class="text-indigo-600 dark:text-indigo-400 no-underline hover:underline">Learn</a>
+      <span aria-hidden="true" class="mx-1">/</span>
+    </nav>
+    <h1 class="text-3xl md:text-4xl font-extrabold m-0 mb-4 text-gray-800 dark:text-gray-200">Scheduler playground</h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300 m-0 mb-6">
+      Pick a scenario, step through what the kernel does on every tick, and change the parameters to see what happens.
+    </p>
+    <label class="flex flex-wrap items-center gap-2 text-gray-700 dark:text-gray-300 font-medium">
+      Scenario
+      <select id="playground-scenario" class="max-w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-2 py-1 font-normal">
+        {scenarios.map(s => (
+          <option value={s.id} data-rtos={order(s).join(',')} data-svg={`/sim/svg/scenario/${s.id}.${order(s)[0]}.svg`}>
+            {s.title}{s.simulated.length === 0 ? ' (not simulated yet)' : ''}
+          </option>
+        ))}
+      </select>
+    </label>
+  </header>
+
+  <SimEmbed scenario={first.id} rtos={order(first)}/>
+
+  <p class="max-w-4xl mx-auto text-sm text-gray-500 dark:text-gray-400">
+    The simulator runs a line-by-line model of the kernel, checked against the real kernel.{' '}
+    <a href="/learn/licenses/" class="text-indigo-600 dark:text-indigo-400">Source and licenses</a>
+  </p>
+</Layout>
+
+<script>
+  const select = document.querySelector<HTMLSelectElement>('#playground-scenario');
+  const sim = document.querySelector<HTMLElement>('#rtos-sim-embed rtos-sim');
+
+  function show(id: string, updateUrl: boolean) {
+    if (!select || !sim) return;
+    const option = [...select.options].find(o => o.value === id);
+    if (!option) return;
+    select.value = id;
+    sim.setAttribute('scenario', id);
+    sim.setAttribute('rtos', option.dataset.rtos ?? '');
+    const img = sim.querySelector('img');
+    if (img && option.dataset.svg) img.src = option.dataset.svg;
+    if (updateUrl) {
+      const url = new URL(location.href);
+      url.searchParams.set('scenario', id);
+      history.replaceState(null, '', url);
+    }
+  }
+
+  const wanted = new URLSearchParams(location.search).get('scenario');
+  if (wanted) show(wanted, false);
+  select?.addEventListener('change', () => show(select.value, true));
+</script>

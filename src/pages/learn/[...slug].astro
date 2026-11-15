@@ -1,6 +1,7 @@
 ---
 import {getCollection, render} from 'astro:content';
 import LessonLayout from '../../layouts/LessonLayout.astro';
+import manifest from '../../generated/sim/manifest.json';
 
 const SECTIONS: Record<string, string> = {freertos: 'FreeRTOS', zephyr: 'Zephyr', compare: 'Compare', glossary: 'Glossary'};
 
@@ -18,6 +19,25 @@ export async function getStaticPaths() {
 }
 
 const {entry} = Astro.props;
+
+// The simulator export drew this lesson's diagram from its scenario, rtos and
+// keyStep. If they have changed since, the diagram is stale.
+if (entry.data.scenario) {
+  const exported: Record<string, {scenario: string; rtos: string[]; keyStep?: {event: string; nth: number}}> = manifest.lessons;
+  const was = exported[entry.id];
+  const now = {scenario: entry.data.scenario, rtos: entry.data.rtos, keyStep: entry.data.keyStep};
+  const same = was
+    && was.scenario === now.scenario
+    && JSON.stringify(was.rtos) === JSON.stringify(now.rtos)
+    && was.keyStep?.event === now.keyStep?.event
+    && was.keyStep?.nth === now.keyStep?.nth;
+  if (!same) {
+    throw new Error(
+      `Lesson "${entry.id}.md": scenario, rtos or keyStep changed since the simulator export (or the lesson is new). ` +
+      'Run `pnpm export:site` in the simulator repository and commit the result.',
+    );
+  }
+}
 const {Content} = await render(entry);
 const section = entry.id.includes('/') ? SECTIONS[entry.id.split('/')[0]] : undefined;
 ---
@@ -25,6 +45,7 @@ const section = entry.id.includes('/') ? SECTIONS[entry.id.split('/')[0]] : unde
 <LessonLayout
   title={entry.data.title}
   description={entry.data.description}
+  lesson={entry.id}
   scenario={entry.data.scenario}
   rtos={entry.data.rtos}
   breadcrumbs={section ? [{label: section}] : []}

@@ -14,7 +14,10 @@ const lessons = (await getCollection('lessons')).sort((a, b) => a.id.localeCompa
   <div class="prose max-w-4xl mx-auto">
     {lessons.length > 0 && (
       <h2>Interactive lessons</h2>
-      <p>Step through real kernel code and watch the scheduler make each decision.</p>
+      <p>
+        Step through real kernel code and watch the scheduler make each decision. To try the
+        scenarios on their own, open the <a href="/learn/playground/">scheduler playground</a>.
+      </p>
       <ul>
         {lessons.map(lesson => (
           <li>

@@ -1,7 +1,8 @@
 ---
 // Layout for a lesson under /learn/: breadcrumb, title, introduction, then the
 // simulator in a fixed slot (one per page, only when the lesson has a
-// scenario), then the prose.
+// scenario), then the prose. Text stays in a reading column; the simulator
+// uses the full width of the site container.
 import Layout from './Layout.astro';
 import SimEmbed from '../components/SimEmbed.astro';
 import manifest from '../generated/sim/manifest.json';
@@ -10,41 +11,45 @@ import '../styles/prose.css';
 interface Props {
   title: string;
   description: string;
+  /** The lesson's id in the collection. */
+  lesson?: string;
   scenario?: string;
   rtos?: string[];
   breadcrumbs?: {label: string; href?: string}[];
 }
 
-const {title, description, scenario, rtos = [], breadcrumbs = []} = Astro.props;
+const {title, description, lesson, scenario, rtos = [], breadcrumbs = []} = Astro.props;
 const kernels: Record<string, {name: string; version: string}> = manifest.kernels;
 const trail = [{label: 'Learn', href: '/learn/'}, ...breadcrumbs];
 ---
 
 <Layout title={`${title} - OSRTOS`} description={description}>
-  <article class="max-w-4xl mx-auto">
-    <nav aria-label="Breadcrumb" class="text-sm text-gray-500 dark:text-gray-400 mb-4">
-      {trail.map((crumb) => (
-        <span>
-          {crumb.href
-            ? <a href={crumb.href} class="text-indigo-600 dark:text-indigo-400 no-underline hover:underline">{crumb.label}</a>
-            : crumb.label}
-          <span aria-hidden="true" class="mx-1">/</span>
-        </span>
-      ))}
-    </nav>
+  <article>
+    <header class="max-w-4xl mx-auto">
+      <nav aria-label="Breadcrumb" class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+        {trail.map((crumb) => (
+          <span>
+            {crumb.href
+              ? <a href={crumb.href} class="text-indigo-600 dark:text-indigo-400 no-underline hover:underline">{crumb.label}</a>
+              : crumb.label}
+            <span aria-hidden="true" class="mx-1">/</span>
+          </span>
+        ))}
+      </nav>
 
-    <h1 class="text-3xl md:text-4xl font-extrabold m-0 mb-4 text-gray-800 dark:text-gray-200">{title}</h1>
-    <p class="text-lg text-gray-600 dark:text-gray-300 m-0">{description}</p>
+      <h1 class="text-3xl md:text-4xl font-extrabold m-0 mb-4 text-gray-800 dark:text-gray-200">{title}</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-300 m-0">{description}</p>
+    </header>
 
     {scenario && (
-      <SimEmbed scenario={scenario} rtos={rtos}/>
-      <p class="text-sm text-gray-500 dark:text-gray-400 -mt-4 mb-8">
+      <SimEmbed scenario={scenario} rtos={rtos} lesson={lesson}/>
+      <p class="max-w-4xl mx-auto text-sm text-gray-500 dark:text-gray-400 -mt-4 mb-8">
         Simulated kernel: {rtos.map(id => `${kernels[id].name} ${kernels[id].version}`).join(' and ')}.{' '}
         <a href="/learn/licenses/" class="text-indigo-600 dark:text-indigo-400">Source and licenses</a>
       </p>
     )}
 
-    <div class="prose lesson-prose">
+    <div class="prose lesson-prose max-w-4xl mx-auto">
       <slot/>
     </div>
   </article>
