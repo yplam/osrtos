@@ -43,15 +43,23 @@ const svg = lesson ? `lesson/${lesson}.${first}.svg` : `scenario/${scenario}.${f
 </noscript>
 
 <style>
-  /* The heights of the simulator's layouts: panels stacked (phone, tablet) and
-     side by side (from 1024px), measured with the tallest preset scenario. */
+  /* The heights of the simulator's layouts: tabs (phone), panels stacked
+     (tablet) and side by side (from 1024px), measured with the tallest preset
+     scenario on each kernel. */
   .sim-embed {
-    min-height: 2030px;
+    min-height: 1280px;
     margin: 2rem 0;
   }
 
   .sim-embed-placeholder {
     min-height: 700px;
+  }
+
+  /* The smallest phones: the parameters and controls wrap onto more rows. */
+  @media (max-width: 359.98px) {
+    .sim-embed:not(.sim-embed-placeholder) {
+      min-height: 1350px;
+    }
   }
 
   @media (min-width: 640px) {

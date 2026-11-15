@@ -14,11 +14,12 @@ const scenarios = Object.entries(manifest.scenarios)
 const order = (s: (typeof scenarios)[number]) =>
   [...s.rtos].sort((a, b) => Number(s.simulated.includes(b)) - Number(s.simulated.includes(a)));
 const first = scenarios[0];
+const kernels: Record<string, {name: string; version: string}> = manifest.kernels;
 ---
 
 <Layout
   title="RTOS scheduler playground - OSRTOS"
-  description="Run preset RTOS scheduling scenarios step by step on a model of the real FreeRTOS kernel, next to its source code, and change their parameters."
+  description="Run preset RTOS scheduling scenarios step by step on line-by-line models of the FreeRTOS and Zephyr kernels, next to their source code, and change the parameters."
 >
   <header class="max-w-4xl mx-auto">
     <nav aria-label="Breadcrumb" class="text-sm text-gray-500 dark:text-gray-400 mb-4">
@@ -33,7 +34,7 @@ const first = scenarios[0];
       Scenario
       <select id="playground-scenario" class="max-w-full rounded border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-2 py-1 font-normal">
         {scenarios.map(s => (
-          <option value={s.id} data-rtos={order(s).join(',')} data-svg={`/sim/svg/scenario/${s.id}.${order(s)[0]}.svg`}>
+          <option value={s.id} data-rtos={order(s).join(',')} data-svg={`/sim/svg/scenario/${s.id}.${order(s)[0]}.svg`} data-alt={`${s.title} on ${kernels[order(s)[0]].name} ${kernels[order(s)[0]].version}`}>
             {s.title}{s.simulated.length === 0 ? ' (not simulated yet)' : ''}
           </option>
         ))}
@@ -61,7 +62,10 @@ const first = scenarios[0];
     sim.setAttribute('scenario', id);
     sim.setAttribute('rtos', option.dataset.rtos ?? '');
     const img = sim.querySelector('img');
-    if (img && option.dataset.svg) img.src = option.dataset.svg;
+    if (img && option.dataset.svg) {
+      img.src = option.dataset.svg;
+      img.alt = option.dataset.alt ?? '';
+    }
     if (updateUrl) {
       const url = new URL(location.href);
       // A link to a step of another scenario (?rtos, ?step, ?p.<parameter>) no longer applies.

@@ -2,23 +2,21 @@
 import {getCollection, render} from 'astro:content';
 import LessonLayout from '../../layouts/LessonLayout.astro';
 import manifest from '../../generated/sim/manifest.json';
-
-const SECTIONS: Record<string, string> = {freertos: 'FreeRTOS', zephyr: 'Zephyr', compare: 'Compare', glossary: 'Glossary'};
+import {RESERVED, neighbours, sectionOf} from '../../collections/lesson-nav';
 
 export async function getStaticPaths() {
-  // First path segments that have their own meaning under /learn/ and cannot be
-  // used as the slug of a concept lesson.
-  const RESERVED = ['freertos', 'zephyr', 'compare', 'playground', 'glossary', 'licenses'];
   const lessons = await getCollection('lessons');
   return lessons.map(entry => {
     if (RESERVED.includes(entry.id)) {
       throw new Error(`Lesson "${entry.id}.md": "${entry.id}" is reserved under /learn/ and cannot be a lesson slug.`);
     }
-    return {params: {slug: entry.id}, props: {entry}};
+    const {prev, next} = neighbours(lessons, entry.id);
+    const link = (l?: typeof entry) => l && {href: `/learn/${l.id}/`, title: l.data.title};
+    return {params: {slug: entry.id}, props: {entry, prev: link(prev), next: link(next)}};
   });
 }
 
-const {entry} = Astro.props;
+const {entry, prev, next} = Astro.props;
 
 // The simulator export drew this lesson's diagram from its scenario, rtos and
 // keyStep. If they have changed since, the diagram is stale.
@@ -39,7 +37,7 @@ if (entry.data.scenario) {
   }
 }
 const {Content} = await render(entry);
-const section = entry.id.includes('/') ? SECTIONS[entry.id.split('/')[0]] : undefined;
+const section = sectionOf(entry.id);
 ---
 
 <LessonLayout
@@ -48,7 +46,9 @@ const section = entry.id.includes('/') ? SECTIONS[entry.id.split('/')[0]] : unde
   lesson={entry.id}
   scenario={entry.data.scenario}
   rtos={entry.data.rtos}
-  breadcrumbs={section ? [{label: section}] : []}
+  section={section.id ? section.title : undefined}
+  prev={prev}
+  next={next}
 >
   <Content/>
 </LessonLayout>

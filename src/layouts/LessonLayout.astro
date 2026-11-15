@@ -1,12 +1,17 @@
 ---
 // Layout for a lesson under /learn/: breadcrumb, title, introduction, then the
 // simulator in a fixed slot (one per page, only when the lesson has a
-// scenario), then the prose. Text stays in a reading column; the simulator
-// uses the full width of the site container.
+// scenario), then the prose and the links to the lessons around it. Text stays
+// in a reading column; the simulator uses the full width of the site container.
 import Layout from './Layout.astro';
 import SimEmbed from '../components/SimEmbed.astro';
 import manifest from '../generated/sim/manifest.json';
 import '../styles/prose.css';
+
+interface Link {
+  href: string;
+  title: string;
+}
 
 interface Props {
   title: string;
@@ -15,23 +20,75 @@ interface Props {
   lesson?: string;
   scenario?: string;
   rtos?: string[];
-  breadcrumbs?: {label: string; href?: string}[];
+  /** Title of the lesson's section, for lessons that are in one (FreeRTOS, Zephyr, Glossary). */
+  section?: string;
+  prev?: Link;
+  next?: Link;
 }
 
-const {title, description, lesson, scenario, rtos = [], breadcrumbs = []} = Astro.props;
+const {title, description, lesson, scenario, rtos = [], section, prev, next} = Astro.props;
 const kernels: Record<string, {name: string; version: string}> = manifest.kernels;
-const trail = [{label: 'Learn', href: '/learn/'}, ...breadcrumbs];
+const scenarios: Record<string, {simulated: string[]}> = manifest.scenarios;
+const trail = [{label: 'Learn', href: '/learn/'}, ...(section ? [{label: section, href: `/learn/#${section.toLowerCase()}`}] : [])];
+
+// The export draws a share image for a lesson whose scenario a model runs.
+const image = lesson && scenario && scenarios[scenario]?.simulated.includes(rtos[0])
+  ? `/sim/og/${lesson}.png`
+  : undefined;
+
+const url = new URL(Astro.url.pathname, Astro.site).href;
+const abs = (path: string) => new URL(path, Astro.site).href;
+const publisher = {'@type': 'Organization', name: 'OSRTOS', url: abs('/')};
+const jsonLd = [
+  section === 'Glossary'
+    ? {
+      '@context': 'https://schema.org',
+      '@type': 'DefinedTerm',
+      name: title,
+      description,
+      url,
+      inDefinedTermSet: {'@type': 'DefinedTermSet', name: 'RTOS glossary', url: abs('/learn/#glossary')},
+    }
+    : {
+      '@context': 'https://schema.org',
+      '@type': scenario ? ['TechArticle', 'LearningResource'] : 'TechArticle',
+      headline: title,
+      description,
+      url,
+      mainEntityOfPage: url,
+      inLanguage: 'en',
+      isAccessibleForFree: true,
+      ...(image ? {image: abs(image)} : {}),
+      ...(scenario ? {
+        learningResourceType: 'Interactive simulation',
+        about: rtos.map(id => ({'@type': 'SoftwareApplication', name: kernels[id].name, softwareVersion: kernels[id].version, applicationCategory: 'Real-time operating system'})),
+      } : {}),
+      author: publisher,
+      publisher,
+    },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [...trail, {label: title, href: Astro.url.pathname}].map((crumb, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: crumb.label,
+      item: abs(crumb.href),
+    })),
+  },
+];
+// "<" is escaped so that no text can close the script element.
+const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
 ---
 
-<Layout title={`${title} - OSRTOS`} description={description}>
+<Layout title={`${title} - OSRTOS`} description={description} image={image}>
+  <script type="application/ld+json" slot="head" is:inline set:html={jsonLdText}/>
   <article>
     <header class="max-w-4xl mx-auto">
       <nav aria-label="Breadcrumb" class="text-sm text-gray-500 dark:text-gray-400 mb-4">
         {trail.map((crumb) => (
           <span>
-            {crumb.href
-              ? <a href={crumb.href} class="text-indigo-600 dark:text-indigo-400 no-underline hover:underline">{crumb.label}</a>
-              : crumb.label}
+            <a href={crumb.href} class="text-indigo-600 dark:text-indigo-400 no-underline hover:underline">{crumb.label}</a>
             <span aria-hidden="true" class="mx-1">/</span>
           </span>
         ))}
@@ -52,6 +109,23 @@ const trail = [{label: 'Learn', href: '/learn/'}, ...breadcrumbs];
     <div class="prose lesson-prose max-w-4xl mx-auto">
       <slot/>
     </div>
+
+    {(prev || next) && (
+      <nav aria-label="Lessons" class="max-w-4xl mx-auto mt-12 pt-6 border-t border-gray-200 dark:border-gray-700 grid gap-4 sm:grid-cols-2">
+        {prev
+          ? <a href={prev.href} class="block rounded-lg border border-gray-200 dark:border-gray-700 p-4 no-underline hover:border-indigo-500">
+              <span class="block text-sm text-gray-500 dark:text-gray-400">← Previous</span>
+              <span class="font-semibold text-indigo-600 dark:text-indigo-400">{prev.title}</span>
+            </a>
+          : <span/>}
+        {next && (
+          <a href={next.href} class="block rounded-lg border border-gray-200 dark:border-gray-700 p-4 no-underline hover:border-indigo-500 sm:text-right">
+            <span class="block text-sm text-gray-500 dark:text-gray-400">Next →</span>
+            <span class="font-semibold text-indigo-600 dark:text-indigo-400">{next.title}</span>
+          </a>
+        )}
+      </nav>
+    )}
   </article>
 </Layout>
 
@@ -70,5 +144,44 @@ const trail = [{label: 'Learn', href: '/learn/'}, ...breadcrumbs];
   .lesson-prose pre {
     max-height: 32rem;
     overflow: auto;
+  }
+
+  .lesson-prose p {
+    margin: 1rem 0;
+  }
+
+  .lesson-prose li > p {
+    margin: 0;
+  }
+
+  /* Tables scroll sideways on a phone instead of widening the page. */
+  .lesson-prose table {
+    display: block;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+
+  .lesson-prose th,
+  .lesson-prose td {
+    border: 1px solid #e5e7eb;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .lesson-prose th {
+    background: #f9fafb;
+    font-weight: 600;
+  }
+
+  .dark .lesson-prose th,
+  .dark .lesson-prose td {
+    border-color: #374151;
+  }
+
+  .dark .lesson-prose th {
+    background: #1f2937;
   }
 </style>

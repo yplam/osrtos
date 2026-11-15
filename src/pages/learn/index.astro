@@ -1,31 +1,94 @@
 ---
+// The hub of /learn/: a live simulation, the lessons by section, and the list
+// of external learning resources that used to be this whole page.
 import {getCollection} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import SimEmbed from '../../components/SimEmbed.astro';
 import {Content as Resources} from './_resources.md';
+import {SECTIONS, sectionOf, sortLessons} from '../../collections/lesson-nav';
+import manifest from '../../generated/sim/manifest.json';
 import '../../styles/prose.css';
 
-const lessons = (await getCollection('lessons')).sort((a, b) => a.id.localeCompare(b.id));
+const lessons = sortLessons(await getCollection('lessons'));
+const sections = SECTIONS
+  .map(section => ({...section, lessons: lessons.filter(l => sectionOf(l.id) === section)}))
+  .filter(section => section.lessons.length > 0);
+
+// The simulation at the top: priority inheritance, on every kernel that runs it.
+const HERO = 'priority-inversion-mutex';
+const hero: {title: string; simulated: string[]} | undefined = (manifest.scenarios as Record<string, {title: string; simulated: string[]}>)[HERO];
+const kernels = Object.values(manifest.kernels as Record<string, {name: string; version: string}>);
+const kernelNames = kernels.map(k => k.name).join(' and ');
+
+const title = 'Learn RTOS: interactive lessons on real kernel code - OSRTOS';
+const description = `Learn how a real-time operating system schedules tasks. Step through ${kernelNames} line by line in a simulator checked against the real kernels: preemption, time slicing, priority inversion, priority inheritance and deadlock.`;
+const url = new URL('/learn/', Astro.site).href;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Learn RTOS',
+  description,
+  url,
+  hasPart: lessons
+    .filter(l => sectionOf(l.id).id !== 'glossary')
+    .map(l => ({'@type': 'TechArticle', headline: l.data.title, url: new URL(`/learn/${l.id}/`, Astro.site).href})),
+};
+const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
 ---
 
-<Layout
-  title="Learn RTOS - Open Source Real-Time Operating Systems"
-  description="Ultimate RTOS Learning Resources | Comprehensive Tutorials & Guides"
->
-  <div class="prose max-w-4xl mx-auto">
-    {lessons.length > 0 && (
-      <h2>Interactive lessons</h2>
-      <p>
-        Step through real kernel code and watch the scheduler make each decision. To try the
-        scenarios on their own, open the <a href="/learn/playground/">scheduler playground</a>.
+<Layout title={title} description={description}>
+  <script type="application/ld+json" slot="head" is:inline set:html={jsonLdText}/>
+
+  <header class="max-w-4xl mx-auto">
+    <h1 class="text-3xl md:text-4xl font-extrabold m-0 mb-4 text-gray-800 dark:text-gray-200">Learn how an RTOS works</h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300 m-0">
+      Watch a real-time kernel make every scheduling decision, next to the source code that makes it.
+      The simulator below runs line-by-line models of {kernelNames}, checked against the real kernels.
+      Press play, or step through it.
+    </p>
+  </header>
+
+  {hero && hero.simulated.length > 0 && <SimEmbed scenario={HERO} rtos={hero.simulated}/>}
+
+  <div class="max-w-4xl mx-auto">
+    {hero && (
+      <p class="text-sm text-gray-500 dark:text-gray-400 -mt-4 mb-10">
+        Shown: {hero.title.toLowerCase()}. A low-priority task holds a mutex that a high-priority task needs.{' '}
+        <a href="/learn/priority-inheritance/" class="text-indigo-600 dark:text-indigo-400">Read the lesson</a>, or try
+        every scenario in the <a href="/learn/playground/" class="text-indigo-600 dark:text-indigo-400">playground</a>.
       </p>
-      <ul>
-        {lessons.map(lesson => (
-          <li>
-            <a href={`/learn/${lesson.id}/`}>{lesson.data.title}</a>: {lesson.data.description}
-          </li>
-        ))}
-      </ul>
     )}
+
+    {sections.map(section => (
+      <section id={section.title.toLowerCase()} class="mb-10 scroll-mt-24">
+        <h2 class="text-2xl font-bold m-0 mb-1 text-gray-800 dark:text-gray-200">{section.title}</h2>
+        <p class="text-gray-600 dark:text-gray-400 m-0 mb-4">{section.intro}</p>
+        <ul class={`list-none p-0 m-0 grid gap-3 ${section.id === 'glossary' ? 'sm:grid-cols-3' : 'sm:grid-cols-2'}`}>
+          {section.lessons.map(lesson => (
+            <li>
+              <a
+                href={`/learn/${lesson.id}/`}
+                class="block h-full rounded-lg border border-gray-200 dark:border-gray-700 p-4 no-underline hover:border-indigo-500 transition-colors"
+              >
+                <span class="block font-semibold text-indigo-600 dark:text-indigo-400">{lesson.data.title}</span>
+                <span class="block mt-1 text-sm text-gray-600 dark:text-gray-400">{lesson.data.description}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <section class="mb-10">
+      <h2 class="text-2xl font-bold m-0 mb-1 text-gray-800 dark:text-gray-200">Playground</h2>
+      <p class="text-gray-600 dark:text-gray-400 m-0">
+        Every scenario from the lessons in one simulator, with every parameter open to change:{' '}
+        <a href="/learn/playground/" class="text-indigo-600 dark:text-indigo-400">open the scheduler playground</a>.
+      </p>
+    </section>
+  </div>
+
+  <div class="prose max-w-4xl mx-auto">
     <Resources/>
   </div>
 </Layout>

@@ -80,6 +80,10 @@
     list-style-type: disc;
 }
 
+.prose ol {
+    list-style-type: decimal;
+}
+
 .prose li {
     margin: 0.5rem 0;
 }

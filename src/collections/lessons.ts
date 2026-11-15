@@ -13,8 +13,10 @@ export const lessons = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    // Position inside the lesson's section (see lesson-nav.ts). Lessons without one come last, by title.
+    order: z.number().int().optional(),
     scenario: z.string().optional(),
-    // One RTOS, or several for compare pages.
+    // One RTOS, or several: the reader chooses with the simulator's switch.
     rtos: z.union([simRtos, z.array(simRtos).min(1)]).transform(v => Array.isArray(v) ? v : [v]).optional(),
     // The moment drawn as the static SVG (read by the simulator export).
     keyStep: z.object({
