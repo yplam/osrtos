@@ -1,7 +1,7 @@
 {
   "simulator": {
     "version": "0.0.0",
-    "commit": "5be5bb52970b318341fdbe3245f3027f0cdd4b80",
+    "commit": "fbb78499951de6a8e2f538cd30f0b0a08fc95686",
     "dirty": false
   },
   "kernels": {
@@ -23,10 +23,10 @@
     }
   },
   "bundle": {
-    "js": "rtos-sim.4f9759ef99.js",
-    "css": "rtos-sim.32e2f7e069.css",
+    "js": "rtos-sim.f87dcea428.js",
+    "css": "rtos-sim.cbbb96b5a7.css",
     "code": {
-      "freertos": "code.freertos.bdefd07ae8.json"
+      "freertos": "code.freertos.d68e941953.json"
     }
   },
   "scenarios": {
@@ -60,6 +60,56 @@
         "freertos"
       ]
     },
+    "priority-inversion": {
+      "title": "Priority inversion (binary semaphore)",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos"
+      ]
+    },
+    "priority-inversion-mutex": {
+      "title": "Priority inheritance (mutex)",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos"
+      ]
+    },
+    "nested-mutexes": {
+      "title": "Nested mutexes",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos"
+      ]
+    },
+    "mutex-timeout": {
+      "title": "Mutex with a timeout",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos"
+      ]
+    },
+    "deadlock": {
+      "title": "Deadlock (ABBA)",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos"
+      ]
+    },
     "tick-overflow": {
       "title": "Tick count overflow",
       "rtos": [
@@ -68,14 +118,6 @@
       "simulated": [
         "freertos"
       ]
-    },
-    "priority-inversion-mutex": {
-      "title": "Priority inversion and inheritance",
-      "rtos": [
-        "freertos",
-        "zephyr"
-      ],
-      "simulated": []
     }
   },
   "lessons": {
@@ -97,7 +139,9 @@
     "Unblock",
     "TaskEnd",
     "PrioChange",
-    "MutexOwner",
+    "Take",
+    "Give",
+    "Timeout",
     "Deadlock"
   ],
   "symbols": [
@@ -118,8 +162,18 @@
     "freertos:tasks.c#vTaskDelete",
     "freertos:tasks.c#prvIdleTask",
     "freertos:tasks.c#prvCheckTasksWaitingTermination",
+    "freertos:tasks.c#vTaskPlaceOnEventList",
+    "freertos:tasks.c#xTaskRemoveFromEventList",
+    "freertos:tasks.c#xTaskCheckForTimeOut",
+    "freertos:tasks.c#pvTaskIncrementMutexHeldCount",
     "freertos:tasks.c#xTaskPriorityInherit",
+    "freertos:tasks.c#xTaskPriorityDisinherit",
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout",
+    "freertos:queue.c#xQueueCreateMutex",
+    "freertos:queue.c#xQueueGenericCreate",
     "freertos:queue.c#xQueueSemaphoreTake",
+    "freertos:queue.c#xQueueGenericSend",
+    "freertos:queue.c#prvCopyDataToQueue",
     "zephyr:kernel/sched.c#next_up",
     "zephyr:kernel/sched.c#update_cache",
     "zephyr:kernel/include/kthread.h#should_preempt",
@@ -148,6 +202,7 @@
     "freertos:tasks.c#xTaskIncrementTick/no-more",
     "freertos:tasks.c#xTaskIncrementTick/next-unblock",
     "freertos:tasks.c#xTaskIncrementTick/remove",
+    "freertos:tasks.c#xTaskIncrementTick/remove-event",
     "freertos:tasks.c#xTaskIncrementTick/make-ready",
     "freertos:tasks.c#xTaskIncrementTick/preempt-check",
     "freertos:tasks.c#xTaskIncrementTick/preempt",
@@ -172,6 +227,7 @@
     "freertos:tasks.c#vTaskDelay/yield",
     "freertos:tasks.c#vTaskDelay/return",
     "freertos:tasks.c#prvAddCurrentTaskToDelayedList/remove",
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList/insert-suspended",
     "freertos:tasks.c#prvAddCurrentTaskToDelayedList/wake-time",
     "freertos:tasks.c#prvAddCurrentTaskToDelayedList/insert-overflow",
     "freertos:tasks.c#prvAddCurrentTaskToDelayedList/insert",
@@ -182,10 +238,66 @@
     "freertos:tasks.c#prvIdleTask/check-termination",
     "freertos:tasks.c#prvCheckTasksWaitingTermination/remove",
     "freertos:tasks.c#prvCheckTasksWaitingTermination/delete",
+    "freertos:tasks.c#vTaskPlaceOnEventList/insert",
+    "freertos:tasks.c#vTaskPlaceOnEventList/delay",
+    "freertos:tasks.c#xTaskRemoveFromEventList/remove-event",
+    "freertos:tasks.c#xTaskRemoveFromEventList/remove-state",
+    "freertos:tasks.c#xTaskRemoveFromEventList/make-ready",
+    "freertos:tasks.c#xTaskRemoveFromEventList/compare",
+    "freertos:tasks.c#xTaskRemoveFromEventList/yield-pending",
+    "freertos:tasks.c#xTaskCheckForTimeOut/forever",
+    "freertos:tasks.c#xTaskCheckForTimeOut/wrapped",
+    "freertos:tasks.c#xTaskCheckForTimeOut/remaining",
+    "freertos:tasks.c#xTaskCheckForTimeOut/expired",
+    "freertos:tasks.c#pvTaskIncrementMutexHeldCount/increment",
     "freertos:tasks.c#xTaskPriorityInherit/compare",
+    "freertos:tasks.c#xTaskPriorityInherit/remove",
     "freertos:tasks.c#xTaskPriorityInherit/raise-ready",
+    "freertos:tasks.c#xTaskPriorityInherit/add",
     "freertos:tasks.c#xTaskPriorityInherit/raise-not-ready",
+    "freertos:tasks.c#xTaskPriorityInherit/base-check",
+    "freertos:tasks.c#xTaskPriorityDisinherit/held",
+    "freertos:tasks.c#xTaskPriorityDisinherit/inherited-check",
+    "freertos:tasks.c#xTaskPriorityDisinherit/last-check",
+    "freertos:tasks.c#xTaskPriorityDisinherit/remove",
+    "freertos:tasks.c#xTaskPriorityDisinherit/restore",
+    "freertos:tasks.c#xTaskPriorityDisinherit/add",
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout/to-use",
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout/changed-check",
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout/only-one",
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout/set",
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout/remove",
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout/add",
+    "freertos:queue.c#xQueueCreateMutex/init",
+    "freertos:queue.c#xQueueGenericCreate/init",
+    "freertos:queue.c#xQueueSemaphoreTake/count-check",
+    "freertos:queue.c#xQueueSemaphoreTake/take",
+    "freertos:queue.c#xQueueSemaphoreTake/holder",
+    "freertos:queue.c#xQueueSemaphoreTake/return-pass",
+    "freertos:queue.c#xQueueSemaphoreTake/no-wait",
+    "freertos:queue.c#xQueueSemaphoreTake/return-empty",
+    "freertos:queue.c#xQueueSemaphoreTake/set-timeout",
+    "freertos:queue.c#xQueueSemaphoreTake/suspend",
+    "freertos:queue.c#xQueueSemaphoreTake/check-timeout",
     "freertos:queue.c#xQueueSemaphoreTake/inherit",
+    "freertos:queue.c#xQueueSemaphoreTake/place",
+    "freertos:queue.c#xQueueSemaphoreTake/resume",
+    "freertos:queue.c#xQueueSemaphoreTake/yield",
+    "freertos:queue.c#xQueueSemaphoreTake/timed-out",
+    "freertos:queue.c#xQueueSemaphoreTake/highest-waiting",
+    "freertos:queue.c#xQueueSemaphoreTake/disinherit-timeout",
+    "freertos:queue.c#xQueueSemaphoreTake/return-timeout",
+    "freertos:queue.c#xQueueGenericSend/space-check",
+    "freertos:queue.c#xQueueGenericSend/copy",
+    "freertos:queue.c#xQueueGenericSend/waiters-check",
+    "freertos:queue.c#xQueueGenericSend/remove-waiter",
+    "freertos:queue.c#xQueueGenericSend/yield-waiter",
+    "freertos:queue.c#xQueueGenericSend/yield-disinherit",
+    "freertos:queue.c#xQueueGenericSend/return-pass",
+    "freertos:queue.c#xQueueGenericSend/return-full",
+    "freertos:queue.c#prvCopyDataToQueue/disinherit",
+    "freertos:queue.c#prvCopyDataToQueue/holder",
+    "freertos:queue.c#prvCopyDataToQueue/count",
     "zephyr:kernel/sched.c#next_up/best",
     "zephyr:kernel/sched.c#next_up/pick",
     "zephyr:kernel/sched.c#update_cache/should-preempt",

@@ -288,6 +288,72 @@
       ],
       "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L6207-L6280"
     },
+    "freertos:tasks.c#vTaskPlaceOnEventList": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "vTaskPlaceOnEventList",
+      "kind": "fn",
+      "startLine": 5402,
+      "endLine": 5428,
+      "code": "void vTaskPlaceOnEventList( List_t * const pxEventList,\n                            const TickType_t xTicksToWait )\n{\n    traceENTER_vTaskPlaceOnEventList( pxEventList, xTicksToWait );\n\n    configASSERT( pxEventList );\n\n    /* THIS FUNCTION MUST BE CALLED WITH THE\n     * SCHEDULER SUSPENDED AND THE QUEUE BEING ACCESSED LOCKED. */\n\n    /* Place the event list item of the TCB in the appropriate event list.\n     * This is placed in the list in priority order so the highest priority task\n     * is the first to be woken by the event.\n     *\n     * Note: Lists are sorted in ascending order by ListItem_t.xItemValue.\n     * Normally, the xItemValue of a TCB's ListItem_t members is:\n     *      xItemValue = ( configMAX_PRIORITIES - uxPriority )\n     * Therefore, the event list is sorted in descending priority order.\n     *\n     * The queue that contains the event list is locked, preventing\n     * simultaneous access from interrupts. */\n    vListInsert( pxEventList, &( pxCurrentTCB->xEventListItem ) );\n\n    prvAddCurrentTaskToDelayedList( xTicksToWait, pdTRUE );\n\n    traceRETURN_vTaskPlaceOnEventList();\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L5402-L5428"
+    },
+    "freertos:tasks.c#xTaskRemoveFromEventList": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "xTaskRemoveFromEventList",
+      "kind": "fn",
+      "startLine": 5500,
+      "endLine": 5590,
+      "code": "BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList )\n{\n    TCB_t * pxUnblockedTCB;\n    BaseType_t xReturn;\n\n    traceENTER_xTaskRemoveFromEventList( pxEventList );\n\n    /* THIS FUNCTION MUST BE CALLED FROM A CRITICAL SECTION.  It can also be\n     * called from a critical section within an ISR. */\n\n    /* The event list is sorted in priority order, so the first in the list can\n     * be removed as it is known to be the highest priority.  Remove the TCB from\n     * the delayed list, and add it to the ready list.\n     *\n     * If an event is for a queue that is locked then this function will never\n     * get called - the lock count on the queue will get modified instead.  This\n     * means exclusive access to the event list is guaranteed here.\n     *\n     * This function assumes that a check has already been made to ensure that\n     * pxEventList is not empty. */\n    /* MISRA Ref 11.5.3 [Void pointer assignment] */\n    /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-115 */\n    /* coverity[misra_c_2012_rule_11_5_violation] */\n    pxUnblockedTCB = listGET_OWNER_OF_HEAD_ENTRY( pxEventList );\n    configASSERT( pxUnblockedTCB );\n    listREMOVE_ITEM( &( pxUnblockedTCB->xEventListItem ) );\n\n    if( uxSchedulerSuspended == ( UBaseType_t ) 0U )\n    {\n        listREMOVE_ITEM( &( pxUnblockedTCB->xStateListItem ) );\n        prvAddTaskToReadyList( pxUnblockedTCB );\n\n        #if ( configUSE_TICKLESS_IDLE != 0 )\n        {\n            /* If a task is blocked on a kernel object then xNextTaskUnblockTime\n             * might be set to the blocked task's time out time.  If the task is\n             * unblocked for a reason other than a timeout xNextTaskUnblockTime is\n             * normally left unchanged, because it is automatically reset to a new\n             * value when the tick count equals xNextTaskUnblockTime.  However if\n             * tickless idling is used it might be more important to enter sleep mode\n             * at the earliest possible time - so reset xNextTaskUnblockTime here to\n             * ensure it is updated at the earliest possible time. */\n            prvResetNextTaskUnblockTime();\n        }\n        #endif\n    }\n    else\n    {\n        /* The delayed and ready lists cannot be accessed, so hold this task\n         * pending until the scheduler is resumed. */\n        listINSERT_END( &( xPendingReadyList ), &( pxUnblockedTCB->xEventListItem ) );\n    }\n\n    #if ( configNUMBER_OF_CORES == 1 )\n    {\n        if( pxUnblockedTCB->uxPriority > pxCurrentTCB->uxPriority )\n        {\n            /* Return true if the task removed from the event list has a higher\n             * priority than the calling task.  This allows the calling task to know if\n             * it should force a context switch now. */\n            xReturn = pdTRUE;\n\n            /* Mark that a yield is pending in case the user is not using the\n             * \"xHigherPriorityTaskWoken\" parameter to an ISR safe FreeRTOS function. */\n            xYieldPendings[ 0 ] = pdTRUE;\n        }\n        else\n        {\n            xReturn = pdFALSE;\n        }\n    }\n    #else /* #if ( configNUMBER_OF_CORES == 1 ) */\n    {\n        xReturn = pdFALSE;\n\n        #if ( configUSE_PREEMPTION == 1 )\n        {\n            prvYieldForTask( pxUnblockedTCB );\n\n            if( xYieldPendings[ portGET_CORE_ID() ] != pdFALSE )\n            {\n                xReturn = pdTRUE;\n            }\n        }\n        #endif /* #if ( configUSE_PREEMPTION == 1 ) */\n    }\n    #endif /* #if ( configNUMBER_OF_CORES == 1 ) */\n\n    traceRETURN_xTaskRemoveFromEventList( xReturn );\n    return xReturn;\n}",
+      "inactive": [
+        [
+          5533,
+          5543
+        ],
+        [
+          5572,
+          5574
+        ],
+        [
+          5576,
+          5583
+        ],
+        [
+          5585,
+          5585
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L5500-L5590"
+    },
+    "freertos:tasks.c#xTaskCheckForTimeOut": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "xTaskCheckForTimeOut",
+      "kind": "fn",
+      "startLine": 5693,
+      "endLine": 5759,
+      "code": "BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,\n                                 TickType_t * const pxTicksToWait )\n{\n    BaseType_t xReturn;\n\n    traceENTER_xTaskCheckForTimeOut( pxTimeOut, pxTicksToWait );\n\n    configASSERT( pxTimeOut );\n    configASSERT( pxTicksToWait );\n\n    taskENTER_CRITICAL();\n    {\n        /* Minor optimisation.  The tick count cannot change in this block. */\n        const TickType_t xConstTickCount = xTickCount;\n        const TickType_t xElapsedTime = xConstTickCount - pxTimeOut->xTimeOnEntering;\n\n        #if ( INCLUDE_xTaskAbortDelay == 1 )\n            if( pxCurrentTCB->ucDelayAborted != ( uint8_t ) pdFALSE )\n            {\n                /* The delay was aborted, which is not the same as a time out,\n                 * but has the same result. */\n                pxCurrentTCB->ucDelayAborted = ( uint8_t ) pdFALSE;\n                xReturn = pdTRUE;\n            }\n            else\n        #endif\n\n        #if ( INCLUDE_vTaskSuspend == 1 )\n            if( *pxTicksToWait == portMAX_DELAY )\n            {\n                /* If INCLUDE_vTaskSuspend is set to 1 and the block time\n                 * specified is the maximum block time then the task should block\n                 * indefinitely, and therefore never time out. */\n                xReturn = pdFALSE;\n            }\n            else\n        #endif\n\n        if( ( xNumOfOverflows != pxTimeOut->xOverflowCount ) && ( xConstTickCount >= pxTimeOut->xTimeOnEntering ) )\n        {\n            /* The tick count is greater than the time at which\n             * vTaskSetTimeout() was called, but has also overflowed since\n             * vTaskSetTimeOut() was called.  It must have wrapped all the way\n             * around and gone past again. This passed since vTaskSetTimeout()\n             * was called. */\n            xReturn = pdTRUE;\n            *pxTicksToWait = ( TickType_t ) 0;\n        }\n        else if( xElapsedTime < *pxTicksToWait )\n        {\n            /* Not a genuine timeout. Adjust parameters for time remaining. */\n            *pxTicksToWait -= xElapsedTime;\n            vTaskInternalSetTimeOutState( pxTimeOut );\n            xReturn = pdFALSE;\n        }\n        else\n        {\n            *pxTicksToWait = ( TickType_t ) 0;\n            xReturn = pdTRUE;\n        }\n    }\n    taskEXIT_CRITICAL();\n\n    traceRETURN_xTaskCheckForTimeOut( xReturn );\n\n    return xReturn;\n}",
+      "inactive": [
+        [
+          5710,
+          5717
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L5693-L5759"
+    },
+    "freertos:tasks.c#pvTaskIncrementMutexHeldCount": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "pvTaskIncrementMutexHeldCount",
+      "kind": "fn",
+      "startLine": 7772,
+      "endLine": 7790,
+      "code": "TaskHandle_t pvTaskIncrementMutexHeldCount( void )\n{\n    TCB_t * pxTCB;\n\n    traceENTER_pvTaskIncrementMutexHeldCount();\n\n    pxTCB = pxCurrentTCB;\n\n    /* If xSemaphoreCreateMutex() is called before any tasks have been created\n     * then pxCurrentTCB will be NULL. */\n    if( pxTCB != NULL )\n    {\n        ( pxTCB->uxMutexesHeld )++;\n    }\n\n    traceRETURN_pvTaskIncrementMutexHeldCount( pxTCB );\n\n    return pxTCB;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L7772-L7790"
+    },
     "freertos:tasks.c#xTaskPriorityInherit": {
       "rtos": "freertos",
       "file": "tasks.c",
@@ -304,6 +370,65 @@
       ],
       "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L6745-L6841"
     },
+    "freertos:tasks.c#xTaskPriorityDisinherit": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "xTaskPriorityDisinherit",
+      "kind": "fn",
+      "startLine": 6848,
+      "endLine": 6935,
+      "code": "BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder )\n{\n    TCB_t * const pxTCB = pxMutexHolder;\n    BaseType_t xReturn = pdFALSE;\n\n    traceENTER_xTaskPriorityDisinherit( pxMutexHolder );\n\n    if( pxMutexHolder != NULL )\n    {\n        /* A task can only have an inherited priority if it holds the mutex.\n         * If the mutex is held by a task then it cannot be given from an\n         * interrupt, and if a mutex is given by the holding task then it must\n         * be the running state task. */\n        configASSERT( pxTCB == pxCurrentTCB );\n        configASSERT( pxTCB->uxMutexesHeld );\n        ( pxTCB->uxMutexesHeld )--;\n\n        /* Has the holder of the mutex inherited the priority of another\n         * task? */\n        if( pxTCB->uxPriority != pxTCB->uxBasePriority )\n        {\n            /* Only disinherit if no other mutexes are held. */\n            if( pxTCB->uxMutexesHeld == ( UBaseType_t ) 0 )\n            {\n                /* A task can only have an inherited priority if it holds\n                 * the mutex.  If the mutex is held by a task then it cannot be\n                 * given from an interrupt, and if a mutex is given by the\n                 * holding task then it must be the running state task.  Remove\n                 * the holding task from the ready list. */\n                if( uxListRemove( &( pxTCB->xStateListItem ) ) == ( UBaseType_t ) 0 )\n                {\n                    portRESET_READY_PRIORITY( pxTCB->uxPriority, uxTopReadyPriority );\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n\n                /* Disinherit the priority before adding the task into the\n                 * new  ready list. */\n                traceTASK_PRIORITY_DISINHERIT( pxTCB, pxTCB->uxBasePriority );\n                pxTCB->uxPriority = pxTCB->uxBasePriority;\n\n                /* Reset the event list item value.  It cannot be in use for\n                 * any other purpose if this task is running, and it must be\n                 * running to give back the mutex. */\n                listSET_LIST_ITEM_VALUE( &( pxTCB->xEventListItem ), ( TickType_t ) configMAX_PRIORITIES - ( TickType_t ) pxTCB->uxPriority );\n                prvAddTaskToReadyList( pxTCB );\n                #if ( configNUMBER_OF_CORES > 1 )\n                {\n                    /* The priority of the task is dropped. Yield the core on\n                     * which the task is running. */\n                    if( taskTASK_IS_RUNNING( pxTCB ) == pdTRUE )\n                    {\n                        prvYieldCore( pxTCB->xTaskRunState );\n                    }\n                }\n                #endif /* if ( configNUMBER_OF_CORES > 1 ) */\n\n                /* Return true to indicate that a context switch is required.\n                 * This is only actually required in the corner case whereby\n                 * multiple mutexes were held and the mutexes were given back\n                 * in an order different to that in which they were taken.\n                 * If a context switch did not occur when the first mutex was\n                 * returned, even if a task was waiting on it, then a context\n                 * switch should occur when the last mutex is returned whether\n                 * a task is waiting on it or not. */\n                xReturn = pdTRUE;\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n    }\n    else\n    {\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    traceRETURN_xTaskPriorityDisinherit( xReturn );\n\n    return xReturn;\n}",
+      "inactive": [
+        [
+          6897,
+          6904
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L6848-L6935"
+    },
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "vTaskPriorityDisinheritAfterTimeout",
+      "kind": "fn",
+      "startLine": 6942,
+      "endLine": 7055,
+      "code": "void vTaskPriorityDisinheritAfterTimeout( TaskHandle_t const pxMutexHolder,\n                                          UBaseType_t uxHighestPriorityWaitingTask )\n{\n    TCB_t * const pxTCB = pxMutexHolder;\n    UBaseType_t uxPriorityUsedOnEntry, uxPriorityToUse;\n    const UBaseType_t uxOnlyOneMutexHeld = ( UBaseType_t ) 1;\n\n    traceENTER_vTaskPriorityDisinheritAfterTimeout( pxMutexHolder, uxHighestPriorityWaitingTask );\n\n    if( pxMutexHolder != NULL )\n    {\n        /* If pxMutexHolder is not NULL then the holder must hold at least\n         * one mutex. */\n        configASSERT( pxTCB->uxMutexesHeld );\n\n        /* Determine the priority to which the priority of the task that\n         * holds the mutex should be set.  This will be the greater of the\n         * holding task's base priority and the priority of the highest\n         * priority task that is waiting to obtain the mutex. */\n        if( pxTCB->uxBasePriority < uxHighestPriorityWaitingTask )\n        {\n            uxPriorityToUse = uxHighestPriorityWaitingTask;\n        }\n        else\n        {\n            uxPriorityToUse = pxTCB->uxBasePriority;\n        }\n\n        /* Does the priority need to change? */\n        if( pxTCB->uxPriority != uxPriorityToUse )\n        {\n            /* Only disinherit if no other mutexes are held.  This is a\n             * simplification in the priority inheritance implementation.  If\n             * the task that holds the mutex is also holding other mutexes then\n             * the other mutexes may have caused the priority inheritance. */\n            if( pxTCB->uxMutexesHeld == uxOnlyOneMutexHeld )\n            {\n                /* If a task has timed out because it already holds the\n                 * mutex it was trying to obtain then it cannot of inherited\n                 * its own priority. */\n                configASSERT( pxTCB != pxCurrentTCB );\n\n                /* Disinherit the priority, remembering the previous\n                 * priority to facilitate determining the subject task's\n                 * state. */\n                traceTASK_PRIORITY_DISINHERIT( pxTCB, uxPriorityToUse );\n                uxPriorityUsedOnEntry = pxTCB->uxPriority;\n                pxTCB->uxPriority = uxPriorityToUse;\n\n                /* Only reset the event list item value if the value is not\n                 * being used for anything else. */\n                if( ( listGET_LIST_ITEM_VALUE( &( pxTCB->xEventListItem ) ) & taskEVENT_LIST_ITEM_VALUE_IN_USE ) == ( ( TickType_t ) 0U ) )\n                {\n                    listSET_LIST_ITEM_VALUE( &( pxTCB->xEventListItem ), ( TickType_t ) configMAX_PRIORITIES - ( TickType_t ) uxPriorityToUse );\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n\n                /* If the running task is not the task that holds the mutex\n                 * then the task that holds the mutex could be in either the\n                 * Ready, Blocked or Suspended states.  Only remove the task\n                 * from its current state list if it is in the Ready state as\n                 * the task's priority is going to change and there is one\n                 * Ready list per priority. */\n                if( listIS_CONTAINED_WITHIN( &( pxReadyTasksLists[ uxPriorityUsedOnEntry ] ), &( pxTCB->xStateListItem ) ) != pdFALSE )\n                {\n                    if( uxListRemove( &( pxTCB->xStateListItem ) ) == ( UBaseType_t ) 0 )\n                    {\n                        /* It is known that the task is in its ready list so\n                         * there is no need to check again and the port level\n                         * reset macro can be called directly. */\n                        portRESET_READY_PRIORITY( uxPriorityUsedOnEntry, uxTopReadyPriority );\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n\n                    prvAddTaskToReadyList( pxTCB );\n                    #if ( configNUMBER_OF_CORES > 1 )\n                    {\n                        /* The priority of the task is dropped. Yield the core on\n                         * which the task is running. */\n                        if( taskTASK_IS_RUNNING( pxTCB ) == pdTRUE )\n                        {\n                            prvYieldCore( pxTCB->xTaskRunState );\n                        }\n                    }\n                    #endif /* if ( configNUMBER_OF_CORES > 1 ) */\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n    }\n    else\n    {\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    traceRETURN_vTaskPriorityDisinheritAfterTimeout();\n}",
+      "inactive": [
+        [
+          7024,
+          7031
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L6942-L7055"
+    },
+    "freertos:queue.c#xQueueCreateMutex": {
+      "rtos": "freertos",
+      "file": "queue.c",
+      "symbol": "xQueueCreateMutex",
+      "kind": "fn",
+      "startLine": 647,
+      "endLine": 660,
+      "code": "QueueHandle_t xQueueCreateMutex( const uint8_t ucQueueType )\n{\n    QueueHandle_t xNewQueue;\n    const UBaseType_t uxMutexLength = ( UBaseType_t ) 1, uxMutexSize = ( UBaseType_t ) 0;\n\n    traceENTER_xQueueCreateMutex( ucQueueType );\n\n    xNewQueue = xQueueGenericCreate( uxMutexLength, uxMutexSize, ucQueueType );\n    prvInitialiseMutex( ( Queue_t * ) xNewQueue );\n\n    traceRETURN_xQueueCreateMutex( xNewQueue );\n\n    return xNewQueue;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L647-L660"
+    },
+    "freertos:queue.c#xQueueGenericCreate": {
+      "rtos": "freertos",
+      "file": "queue.c",
+      "symbol": "xQueueGenericCreate",
+      "kind": "fn",
+      "startLine": 502,
+      "endLine": 564,
+      "code": "QueueHandle_t xQueueGenericCreate( const UBaseType_t uxQueueLength,\n                                   const UBaseType_t uxItemSize,\n                                   const uint8_t ucQueueType )\n{\n    Queue_t * pxNewQueue = NULL;\n    size_t xQueueSizeInBytes;\n    uint8_t * pucQueueStorage;\n\n    traceENTER_xQueueGenericCreate( uxQueueLength, uxItemSize, ucQueueType );\n\n    if( ( uxQueueLength > ( UBaseType_t ) 0 ) &&\n        /* Check for multiplication overflow. */\n        ( ( SIZE_MAX / uxQueueLength ) >= uxItemSize ) &&\n        /* Check for addition overflow. */\n        /* MISRA Ref 14.3.1 [Configuration dependent invariant] */\n        /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-143. */\n        /* coverity[misra_c_2012_rule_14_3_violation] */\n        ( ( SIZE_MAX - sizeof( Queue_t ) ) >= ( size_t ) ( ( size_t ) uxQueueLength * ( size_t ) uxItemSize ) ) )\n    {\n        /* Allocate enough space to hold the maximum number of items that\n         * can be in the queue at any time.  It is valid for uxItemSize to be\n         * zero in the case the queue is used as a semaphore. */\n        xQueueSizeInBytes = ( size_t ) ( ( size_t ) uxQueueLength * ( size_t ) uxItemSize );\n\n        /* MISRA Ref 11.5.1 [Malloc memory assignment] */\n        /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-115 */\n        /* coverity[misra_c_2012_rule_11_5_violation] */\n        pxNewQueue = ( Queue_t * ) pvPortMalloc( sizeof( Queue_t ) + xQueueSizeInBytes );\n\n        if( pxNewQueue != NULL )\n        {\n            /* Jump past the queue structure to find the location of the queue\n             * storage area. */\n            pucQueueStorage = ( uint8_t * ) pxNewQueue;\n            pucQueueStorage += sizeof( Queue_t );\n\n            #if ( configSUPPORT_STATIC_ALLOCATION == 1 )\n            {\n                /* Queues can be created either statically or dynamically, so\n                 * note this task was created dynamically in case it is later\n                 * deleted. */\n                pxNewQueue->ucStaticallyAllocated = pdFALSE;\n            }\n            #endif /* configSUPPORT_STATIC_ALLOCATION */\n\n            prvInitialiseNewQueue( uxQueueLength, uxItemSize, pucQueueStorage, ucQueueType, pxNewQueue );\n        }\n        else\n        {\n            traceQUEUE_CREATE_FAILED( ucQueueType );\n            mtCOVERAGE_TEST_MARKER();\n        }\n    }\n    else\n    {\n        configASSERT( pxNewQueue );\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    traceRETURN_xQueueGenericCreate( pxNewQueue );\n\n    return pxNewQueue;\n}",
+      "inactive": [
+        [
+          539,
+          544
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L502-L564"
+    },
     "freertos:queue.c#xQueueSemaphoreTake": {
       "rtos": "freertos",
       "file": "queue.c",
@@ -314,6 +439,33 @@
       "code": "BaseType_t xQueueSemaphoreTake( QueueHandle_t xQueue,\n                                TickType_t xTicksToWait )\n{\n    BaseType_t xEntryTimeSet = pdFALSE;\n    TimeOut_t xTimeOut;\n    Queue_t * const pxQueue = xQueue;\n\n    #if ( configUSE_MUTEXES == 1 )\n        BaseType_t xInheritanceOccurred = pdFALSE;\n    #endif\n\n    traceENTER_xQueueSemaphoreTake( xQueue, xTicksToWait );\n\n    /* Check the queue pointer is not NULL. */\n    configASSERT( ( pxQueue ) );\n\n    /* Check this really is a semaphore, in which case the item size will be\n     * 0. */\n    configASSERT( pxQueue->uxItemSize == 0 );\n\n    /* Cannot block if the scheduler is suspended. */\n    #if ( ( INCLUDE_xTaskGetSchedulerState == 1 ) || ( configUSE_TIMERS == 1 ) )\n    {\n        configASSERT( !( ( xTaskGetSchedulerState() == taskSCHEDULER_SUSPENDED ) && ( xTicksToWait != 0 ) ) );\n    }\n    #endif\n\n    for( ; ; )\n    {\n        taskENTER_CRITICAL();\n        {\n            /* Semaphores are queues with an item size of 0, and where the\n             * number of messages in the queue is the semaphore's count value. */\n            const UBaseType_t uxSemaphoreCount = pxQueue->uxMessagesWaiting;\n\n            /* Is there data in the queue now?  To be running the calling task\n             * must be the highest priority task wanting to access the queue. */\n            if( uxSemaphoreCount > ( UBaseType_t ) 0 )\n            {\n                traceQUEUE_RECEIVE( pxQueue );\n\n                /* Semaphores are queues with a data size of zero and where the\n                 * messages waiting is the semaphore's count.  Reduce the count. */\n                pxQueue->uxMessagesWaiting = ( UBaseType_t ) ( uxSemaphoreCount - ( UBaseType_t ) 1 );\n\n                #if ( configUSE_MUTEXES == 1 )\n                {\n                    if( pxQueue->uxQueueType == queueQUEUE_IS_MUTEX )\n                    {\n                        /* Record the information required to implement\n                         * priority inheritance should it become necessary. */\n                        pxQueue->u.xSemaphore.xMutexHolder = pvTaskIncrementMutexHeldCount();\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n                }\n                #endif /* configUSE_MUTEXES */\n\n                /* Check to see if other tasks are blocked waiting to give the\n                 * semaphore, and if so, unblock the highest priority such task. */\n                if( listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToSend ) ) == pdFALSE )\n                {\n                    if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToSend ) ) != pdFALSE )\n                    {\n                        queueYIELD_IF_USING_PREEMPTION();\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n\n                taskEXIT_CRITICAL();\n\n                traceRETURN_xQueueSemaphoreTake( pdPASS );\n\n                return pdPASS;\n            }\n            else\n            {\n                if( xTicksToWait == ( TickType_t ) 0 )\n                {\n                    /* The semaphore count was 0 and no block time is specified\n                     * (or the block time has expired) so exit now. */\n                    taskEXIT_CRITICAL();\n\n                    traceQUEUE_RECEIVE_FAILED( pxQueue );\n                    traceRETURN_xQueueSemaphoreTake( errQUEUE_EMPTY );\n\n                    return errQUEUE_EMPTY;\n                }\n                else if( xEntryTimeSet == pdFALSE )\n                {\n                    /* The semaphore count was 0 and a block time was specified\n                     * so configure the timeout structure ready to block. */\n                    vTaskInternalSetTimeOutState( &xTimeOut );\n                    xEntryTimeSet = pdTRUE;\n                }\n                else\n                {\n                    /* Entry time was already set. */\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n        }\n        taskEXIT_CRITICAL();\n\n        /* Interrupts and other tasks can give to and take from the semaphore\n         * now the critical section has been exited. */\n\n        vTaskSuspendAll();\n        prvLockQueue( pxQueue );\n\n        /* Update the timeout state to see if it has expired yet. */\n        if( xTaskCheckForTimeOut( &xTimeOut, &xTicksToWait ) == pdFALSE )\n        {\n            /* A block time is specified and not expired.  If the semaphore\n             * count is 0 then enter the Blocked state to wait for a semaphore to\n             * become available.  As semaphores are implemented with queues the\n             * queue being empty is equivalent to the semaphore count being 0. */\n            if( prvIsQueueEmpty( pxQueue ) != pdFALSE )\n            {\n                traceBLOCKING_ON_QUEUE_RECEIVE( pxQueue );\n\n                #if ( configUSE_MUTEXES == 1 )\n                {\n                    if( pxQueue->uxQueueType == queueQUEUE_IS_MUTEX )\n                    {\n                        taskENTER_CRITICAL();\n                        {\n                            xInheritanceOccurred = xTaskPriorityInherit( pxQueue->u.xSemaphore.xMutexHolder );\n                        }\n                        taskEXIT_CRITICAL();\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n                }\n                #endif /* if ( configUSE_MUTEXES == 1 ) */\n\n                vTaskPlaceOnEventList( &( pxQueue->xTasksWaitingToReceive ), xTicksToWait );\n                prvUnlockQueue( pxQueue );\n\n                if( xTaskResumeAll() == pdFALSE )\n                {\n                    taskYIELD_WITHIN_API();\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n            else\n            {\n                /* There was no timeout and the semaphore count was not 0, so\n                 * attempt to take the semaphore again. */\n                prvUnlockQueue( pxQueue );\n                ( void ) xTaskResumeAll();\n            }\n        }\n        else\n        {\n            /* Timed out. */\n            prvUnlockQueue( pxQueue );\n            ( void ) xTaskResumeAll();\n\n            /* If the semaphore count is 0 exit now as the timeout has\n             * expired.  Otherwise return to attempt to take the semaphore that is\n             * known to be available.  As semaphores are implemented by queues the\n             * queue being empty is equivalent to the semaphore count being 0. */\n            if( prvIsQueueEmpty( pxQueue ) != pdFALSE )\n            {\n                #if ( configUSE_MUTEXES == 1 )\n                {\n                    /* xInheritanceOccurred could only have be set if\n                     * pxQueue->uxQueueType == queueQUEUE_IS_MUTEX so no need to\n                     * test the mutex type again to check it is actually a mutex. */\n                    if( xInheritanceOccurred != pdFALSE )\n                    {\n                        taskENTER_CRITICAL();\n                        {\n                            UBaseType_t uxHighestWaitingPriority;\n\n                            /* This task blocking on the mutex caused another\n                             * task to inherit this task's priority.  Now this task\n                             * has timed out the priority should be disinherited\n                             * again, but only as low as the next highest priority\n                             * task that is waiting for the same mutex. */\n                            uxHighestWaitingPriority = prvGetHighestPriorityOfWaitToReceiveList( pxQueue );\n\n                            /* vTaskPriorityDisinheritAfterTimeout uses the uxHighestWaitingPriority\n                             * parameter to index pxReadyTasksLists when adding the task holding\n                             * mutex to the ready list for its new priority. Coverity thinks that\n                             * it can result in out-of-bounds access which is not true because\n                             * uxHighestWaitingPriority, as returned by prvGetHighestPriorityOfWaitToReceiveList,\n                             * is capped at ( configMAX_PRIORITIES - 1 ). */\n                            /* coverity[overrun] */\n                            vTaskPriorityDisinheritAfterTimeout( pxQueue->u.xSemaphore.xMutexHolder, uxHighestWaitingPriority );\n                        }\n                        taskEXIT_CRITICAL();\n                    }\n                }\n                #endif /* configUSE_MUTEXES */\n\n                traceQUEUE_RECEIVE_FAILED( pxQueue );\n                traceRETURN_xQueueSemaphoreTake( errQUEUE_EMPTY );\n\n                return errQUEUE_EMPTY;\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n    }\n}",
       "inactive": [],
       "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L1659-L1881"
+    },
+    "freertos:queue.c#xQueueGenericSend": {
+      "rtos": "freertos",
+      "file": "queue.c",
+      "symbol": "xQueueGenericSend",
+      "kind": "fn",
+      "startLine": 949,
+      "endLine": 1164,
+      "code": "BaseType_t xQueueGenericSend( QueueHandle_t xQueue,\n                              const void * const pvItemToQueue,\n                              TickType_t xTicksToWait,\n                              const BaseType_t xCopyPosition )\n{\n    BaseType_t xEntryTimeSet = pdFALSE, xYieldRequired;\n    TimeOut_t xTimeOut;\n    Queue_t * const pxQueue = xQueue;\n\n    traceENTER_xQueueGenericSend( xQueue, pvItemToQueue, xTicksToWait, xCopyPosition );\n\n    configASSERT( pxQueue );\n    configASSERT( !( ( pvItemToQueue == NULL ) && ( pxQueue->uxItemSize != ( UBaseType_t ) 0U ) ) );\n    configASSERT( !( ( xCopyPosition == queueOVERWRITE ) && ( pxQueue->uxLength != 1 ) ) );\n    #if ( ( INCLUDE_xTaskGetSchedulerState == 1 ) || ( configUSE_TIMERS == 1 ) )\n    {\n        configASSERT( !( ( xTaskGetSchedulerState() == taskSCHEDULER_SUSPENDED ) && ( xTicksToWait != 0 ) ) );\n    }\n    #endif\n\n    for( ; ; )\n    {\n        taskENTER_CRITICAL();\n        {\n            /* Is there room on the queue now?  The running task must be the\n             * highest priority task wanting to access the queue.  If the head item\n             * in the queue is to be overwritten then it does not matter if the\n             * queue is full. */\n            if( ( pxQueue->uxMessagesWaiting < pxQueue->uxLength ) || ( xCopyPosition == queueOVERWRITE ) )\n            {\n                traceQUEUE_SEND( pxQueue );\n\n                #if ( configUSE_QUEUE_SETS == 1 )\n                {\n                    const UBaseType_t uxPreviousMessagesWaiting = pxQueue->uxMessagesWaiting;\n\n                    xYieldRequired = prvCopyDataToQueue( pxQueue, pvItemToQueue, xCopyPosition );\n\n                    if( pxQueue->pxQueueSetContainer != NULL )\n                    {\n                        if( ( xCopyPosition == queueOVERWRITE ) && ( uxPreviousMessagesWaiting != ( UBaseType_t ) 0 ) )\n                        {\n                            /* Do not notify the queue set as an existing item\n                             * was overwritten in the queue so the number of items\n                             * in the queue has not changed. */\n                            mtCOVERAGE_TEST_MARKER();\n                        }\n                        else if( prvNotifyQueueSetContainer( pxQueue ) != pdFALSE )\n                        {\n                            /* The queue is a member of a queue set, and posting\n                             * to the queue set caused a higher priority task to\n                             * unblock. A context switch is required. */\n                            queueYIELD_IF_USING_PREEMPTION();\n                        }\n                        else\n                        {\n                            mtCOVERAGE_TEST_MARKER();\n                        }\n                    }\n                    else\n                    {\n                        /* If there was a task waiting for data to arrive on the\n                         * queue then unblock it now. */\n                        if( listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToReceive ) ) == pdFALSE )\n                        {\n                            if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToReceive ) ) != pdFALSE )\n                            {\n                                /* The unblocked task has a priority higher than\n                                 * our own so yield immediately.  Yes it is ok to\n                                 * do this from within the critical section - the\n                                 * kernel takes care of that. */\n                                queueYIELD_IF_USING_PREEMPTION();\n                            }\n                            else\n                            {\n                                mtCOVERAGE_TEST_MARKER();\n                            }\n                        }\n                        else if( xYieldRequired != pdFALSE )\n                        {\n                            /* This path is a special case that will only get\n                             * executed if the task was holding multiple mutexes\n                             * and the mutexes were given back in an order that is\n                             * different to that in which they were taken. */\n                            queueYIELD_IF_USING_PREEMPTION();\n                        }\n                        else\n                        {\n                            mtCOVERAGE_TEST_MARKER();\n                        }\n                    }\n                }\n                #else /* configUSE_QUEUE_SETS */\n                {\n                    xYieldRequired = prvCopyDataToQueue( pxQueue, pvItemToQueue, xCopyPosition );\n\n                    /* If there was a task waiting for data to arrive on the\n                     * queue then unblock it now. */\n                    if( listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToReceive ) ) == pdFALSE )\n                    {\n                        if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToReceive ) ) != pdFALSE )\n                        {\n                            /* The unblocked task has a priority higher than\n                             * our own so yield immediately.  Yes it is ok to do\n                             * this from within the critical section - the kernel\n                             * takes care of that. */\n                            queueYIELD_IF_USING_PREEMPTION();\n                        }\n                        else\n                        {\n                            mtCOVERAGE_TEST_MARKER();\n                        }\n                    }\n                    else if( xYieldRequired != pdFALSE )\n                    {\n                        /* This path is a special case that will only get\n                         * executed if the task was holding multiple mutexes and\n                         * the mutexes were given back in an order that is\n                         * different to that in which they were taken. */\n                        queueYIELD_IF_USING_PREEMPTION();\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n                }\n                #endif /* configUSE_QUEUE_SETS */\n\n                taskEXIT_CRITICAL();\n\n                traceRETURN_xQueueGenericSend( pdPASS );\n\n                return pdPASS;\n            }\n            else\n            {\n                if( xTicksToWait == ( TickType_t ) 0 )\n                {\n                    /* The queue was full and no block time is specified (or\n                     * the block time has expired) so leave now. */\n                    taskEXIT_CRITICAL();\n\n                    /* Return to the original privilege level before exiting\n                     * the function. */\n                    traceQUEUE_SEND_FAILED( pxQueue );\n                    traceRETURN_xQueueGenericSend( errQUEUE_FULL );\n\n                    return errQUEUE_FULL;\n                }\n                else if( xEntryTimeSet == pdFALSE )\n                {\n                    /* The queue was full and a block time was specified so\n                     * configure the timeout structure. */\n                    vTaskInternalSetTimeOutState( &xTimeOut );\n                    xEntryTimeSet = pdTRUE;\n                }\n                else\n                {\n                    /* Entry time was already set. */\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n        }\n        taskEXIT_CRITICAL();\n\n        /* Interrupts and other tasks can send to and receive from the queue\n         * now the critical section has been exited. */\n\n        vTaskSuspendAll();\n        prvLockQueue( pxQueue );\n\n        /* Update the timeout state to see if it has expired yet. */\n        if( xTaskCheckForTimeOut( &xTimeOut, &xTicksToWait ) == pdFALSE )\n        {\n            if( prvIsQueueFull( pxQueue ) != pdFALSE )\n            {\n                traceBLOCKING_ON_QUEUE_SEND( pxQueue );\n                vTaskPlaceOnEventList( &( pxQueue->xTasksWaitingToSend ), xTicksToWait );\n\n                /* Unlocking the queue means queue events can effect the\n                 * event list. It is possible that interrupts occurring now\n                 * remove this task from the event list again - but as the\n                 * scheduler is suspended the task will go onto the pending\n                 * ready list instead of the actual ready list. */\n                prvUnlockQueue( pxQueue );\n\n                /* Resuming the scheduler will move tasks from the pending\n                 * ready list into the ready list - so it is feasible that this\n                 * task is already in the ready list before it yields - in which\n                 * case the yield will not cause a context switch unless there\n                 * is also a higher priority task in the pending ready list. */\n                if( xTaskResumeAll() == pdFALSE )\n                {\n                    taskYIELD_WITHIN_API();\n                }\n            }\n            else\n            {\n                /* Try again. */\n                prvUnlockQueue( pxQueue );\n                ( void ) xTaskResumeAll();\n            }\n        }\n        else\n        {\n            /* The timeout has expired. */\n            prvUnlockQueue( pxQueue );\n            ( void ) xTaskResumeAll();\n\n            traceQUEUE_SEND_FAILED( pxQueue );\n            traceRETURN_xQueueGenericSend( errQUEUE_FULL );\n\n            return errQUEUE_FULL;\n        }\n    }\n}",
+      "inactive": [
+        [
+          982,
+          1040
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L949-L1164"
+    },
+    "freertos:queue.c#prvCopyDataToQueue": {
+      "rtos": "freertos",
+      "file": "queue.c",
+      "symbol": "prvCopyDataToQueue",
+      "kind": "fn",
+      "startLine": 2395,
+      "endLine": 2475,
+      "code": "static BaseType_t prvCopyDataToQueue( Queue_t * const pxQueue,\n                                      const void * pvItemToQueue,\n                                      const BaseType_t xPosition )\n{\n    BaseType_t xReturn = pdFALSE;\n    UBaseType_t uxMessagesWaiting;\n\n    /* This function is called from a critical section. */\n\n    uxMessagesWaiting = pxQueue->uxMessagesWaiting;\n\n    if( pxQueue->uxItemSize == ( UBaseType_t ) 0 )\n    {\n        #if ( configUSE_MUTEXES == 1 )\n        {\n            if( pxQueue->uxQueueType == queueQUEUE_IS_MUTEX )\n            {\n                /* The mutex is no longer being held. */\n                xReturn = xTaskPriorityDisinherit( pxQueue->u.xSemaphore.xMutexHolder );\n                pxQueue->u.xSemaphore.xMutexHolder = NULL;\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        #endif /* configUSE_MUTEXES */\n    }\n    else if( xPosition == queueSEND_TO_BACK )\n    {\n        ( void ) memcpy( ( void * ) pxQueue->pcWriteTo, pvItemToQueue, ( size_t ) pxQueue->uxItemSize );\n        pxQueue->pcWriteTo += pxQueue->uxItemSize;\n\n        if( pxQueue->pcWriteTo >= pxQueue->u.xQueue.pcTail )\n        {\n            pxQueue->pcWriteTo = pxQueue->pcHead;\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n    }\n    else\n    {\n        ( void ) memcpy( ( void * ) pxQueue->u.xQueue.pcReadFrom, pvItemToQueue, ( size_t ) pxQueue->uxItemSize );\n        pxQueue->u.xQueue.pcReadFrom -= pxQueue->uxItemSize;\n\n        if( pxQueue->u.xQueue.pcReadFrom < pxQueue->pcHead )\n        {\n            pxQueue->u.xQueue.pcReadFrom = ( pxQueue->u.xQueue.pcTail - pxQueue->uxItemSize );\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n\n        if( xPosition == queueOVERWRITE )\n        {\n            if( uxMessagesWaiting > ( UBaseType_t ) 0 )\n            {\n                /* An item is not being added but overwritten, so subtract\n                 * one from the recorded number of items in the queue so when\n                 * one is added again below the number of recorded items remains\n                 * correct. */\n                --uxMessagesWaiting;\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n    }\n\n    pxQueue->uxMessagesWaiting = ( UBaseType_t ) ( uxMessagesWaiting + ( UBaseType_t ) 1 );\n\n    return xReturn;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L2395-L2475"
     },
     "zephyr:kernel/sched.c#next_up": {
       "rtos": "zephyr",
@@ -506,6 +658,10 @@
       "symbol": "freertos:tasks.c#xTaskIncrementTick",
       "line": 4913
     },
+    "freertos:tasks.c#xTaskIncrementTick/remove-event": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 4919
+    },
     "freertos:tasks.c#xTaskIncrementTick/make-ready": {
       "symbol": "freertos:tasks.c#xTaskIncrementTick",
       "line": 4928
@@ -602,6 +758,10 @@
       "symbol": "freertos:tasks.c#prvAddCurrentTaskToDelayedList",
       "line": 8704
     },
+    "freertos:tasks.c#prvAddCurrentTaskToDelayedList/insert-suspended": {
+      "symbol": "freertos:tasks.c#prvAddCurrentTaskToDelayedList",
+      "line": 8722
+    },
     "freertos:tasks.c#prvAddCurrentTaskToDelayedList/wake-time": {
       "symbol": "freertos:tasks.c#prvAddCurrentTaskToDelayedList",
       "line": 8729
@@ -642,21 +802,245 @@
       "symbol": "freertos:tasks.c#prvCheckTasksWaitingTermination",
       "line": 6235
     },
+    "freertos:tasks.c#vTaskPlaceOnEventList/insert": {
+      "symbol": "freertos:tasks.c#vTaskPlaceOnEventList",
+      "line": 5423
+    },
+    "freertos:tasks.c#vTaskPlaceOnEventList/delay": {
+      "symbol": "freertos:tasks.c#vTaskPlaceOnEventList",
+      "line": 5425
+    },
+    "freertos:tasks.c#xTaskRemoveFromEventList/remove-event": {
+      "symbol": "freertos:tasks.c#xTaskRemoveFromEventList",
+      "line": 5525
+    },
+    "freertos:tasks.c#xTaskRemoveFromEventList/remove-state": {
+      "symbol": "freertos:tasks.c#xTaskRemoveFromEventList",
+      "line": 5529
+    },
+    "freertos:tasks.c#xTaskRemoveFromEventList/make-ready": {
+      "symbol": "freertos:tasks.c#xTaskRemoveFromEventList",
+      "line": 5530
+    },
+    "freertos:tasks.c#xTaskRemoveFromEventList/compare": {
+      "symbol": "freertos:tasks.c#xTaskRemoveFromEventList",
+      "line": 5555
+    },
+    "freertos:tasks.c#xTaskRemoveFromEventList/yield-pending": {
+      "symbol": "freertos:tasks.c#xTaskRemoveFromEventList",
+      "line": 5564
+    },
+    "freertos:tasks.c#xTaskCheckForTimeOut/forever": {
+      "symbol": "freertos:tasks.c#xTaskCheckForTimeOut",
+      "line": 5721
+    },
+    "freertos:tasks.c#xTaskCheckForTimeOut/wrapped": {
+      "symbol": "freertos:tasks.c#xTaskCheckForTimeOut",
+      "line": 5739
+    },
+    "freertos:tasks.c#xTaskCheckForTimeOut/remaining": {
+      "symbol": "freertos:tasks.c#xTaskCheckForTimeOut",
+      "line": 5744
+    },
+    "freertos:tasks.c#xTaskCheckForTimeOut/expired": {
+      "symbol": "freertos:tasks.c#xTaskCheckForTimeOut",
+      "line": 5750
+    },
+    "freertos:tasks.c#pvTaskIncrementMutexHeldCount/increment": {
+      "symbol": "freertos:tasks.c#pvTaskIncrementMutexHeldCount",
+      "line": 7784
+    },
     "freertos:tasks.c#xTaskPriorityInherit/compare": {
       "symbol": "freertos:tasks.c#xTaskPriorityInherit",
       "line": 6759
+    },
+    "freertos:tasks.c#xTaskPriorityInherit/remove": {
+      "symbol": "freertos:tasks.c#xTaskPriorityInherit",
+      "line": 6777
     },
     "freertos:tasks.c#xTaskPriorityInherit/raise-ready": {
       "symbol": "freertos:tasks.c#xTaskPriorityInherit",
       "line": 6790
     },
+    "freertos:tasks.c#xTaskPriorityInherit/add": {
+      "symbol": "freertos:tasks.c#xTaskPriorityInherit",
+      "line": 6791
+    },
     "freertos:tasks.c#xTaskPriorityInherit/raise-not-ready": {
       "symbol": "freertos:tasks.c#xTaskPriorityInherit",
       "line": 6806
     },
+    "freertos:tasks.c#xTaskPriorityInherit/base-check": {
+      "symbol": "freertos:tasks.c#xTaskPriorityInherit",
+      "line": 6816
+    },
+    "freertos:tasks.c#xTaskPriorityDisinherit/held": {
+      "symbol": "freertos:tasks.c#xTaskPriorityDisinherit",
+      "line": 6863
+    },
+    "freertos:tasks.c#xTaskPriorityDisinherit/inherited-check": {
+      "symbol": "freertos:tasks.c#xTaskPriorityDisinherit",
+      "line": 6867
+    },
+    "freertos:tasks.c#xTaskPriorityDisinherit/last-check": {
+      "symbol": "freertos:tasks.c#xTaskPriorityDisinherit",
+      "line": 6870
+    },
+    "freertos:tasks.c#xTaskPriorityDisinherit/remove": {
+      "symbol": "freertos:tasks.c#xTaskPriorityDisinherit",
+      "line": 6877
+    },
+    "freertos:tasks.c#xTaskPriorityDisinherit/restore": {
+      "symbol": "freertos:tasks.c#xTaskPriorityDisinherit",
+      "line": 6889
+    },
+    "freertos:tasks.c#xTaskPriorityDisinherit/add": {
+      "symbol": "freertos:tasks.c#xTaskPriorityDisinherit",
+      "line": 6895
+    },
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout/to-use": {
+      "symbol": "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout",
+      "line": 6961
+    },
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout/changed-check": {
+      "symbol": "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout",
+      "line": 6971
+    },
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout/only-one": {
+      "symbol": "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout",
+      "line": 6977
+    },
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout/set": {
+      "symbol": "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout",
+      "line": 6989
+    },
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout/remove": {
+      "symbol": "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout",
+      "line": 7010
+    },
+    "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout/add": {
+      "symbol": "freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout",
+      "line": 7022
+    },
+    "freertos:queue.c#xQueueCreateMutex/init": {
+      "symbol": "freertos:queue.c#xQueueCreateMutex",
+      "line": 655
+    },
+    "freertos:queue.c#xQueueGenericCreate/init": {
+      "symbol": "freertos:queue.c#xQueueGenericCreate",
+      "line": 547
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/count-check": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1696
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/take": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1702
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/holder": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1710
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/return-pass": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1741
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/no-wait": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1745
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/return-empty": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1754
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/set-timeout": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1760
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/suspend": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1775
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/check-timeout": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1779
+    },
     "freertos:queue.c#xQueueSemaphoreTake/inherit": {
       "symbol": "freertos:queue.c#xQueueSemaphoreTake",
       "line": 1795
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/place": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1806
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/resume": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1809
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/yield": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1811
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/timed-out": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1830
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/highest-waiting": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1854
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/disinherit-timeout": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1863
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/return-timeout": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1873
+    },
+    "freertos:queue.c#xQueueGenericSend/space-check": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 977
+    },
+    "freertos:queue.c#xQueueGenericSend/copy": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1043
+    },
+    "freertos:queue.c#xQueueGenericSend/waiters-check": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1047
+    },
+    "freertos:queue.c#xQueueGenericSend/remove-waiter": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1049
+    },
+    "freertos:queue.c#xQueueGenericSend/yield-waiter": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1055
+    },
+    "freertos:queue.c#xQueueGenericSend/yield-disinherit": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1068
+    },
+    "freertos:queue.c#xQueueGenericSend/return-pass": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1081
+    },
+    "freertos:queue.c#xQueueGenericSend/return-full": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1096
+    },
+    "freertos:queue.c#prvCopyDataToQueue/disinherit": {
+      "symbol": "freertos:queue.c#prvCopyDataToQueue",
+      "line": 2413
+    },
+    "freertos:queue.c#prvCopyDataToQueue/holder": {
+      "symbol": "freertos:queue.c#prvCopyDataToQueue",
+      "line": 2414
+    },
+    "freertos:queue.c#prvCopyDataToQueue/count": {
+      "symbol": "freertos:queue.c#prvCopyDataToQueue",
+      "line": 2472
     },
     "zephyr:kernel/sched.c#next_up/best": {
       "symbol": "zephyr:kernel/sched.c#next_up",
