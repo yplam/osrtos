@@ -1,36 +1,103 @@
 ---
 title: Priority inheritance in FreeRTOS
-description: How xTaskPriorityInherit raises the priority of a mutex holder, in the real kernel source.
+description: How xTaskPriorityInherit raises a mutex holder and xTaskPriorityDisinherit lowers it again, line by line in the real kernel source.
+order: 1
 scenario: priority-inversion-mutex
 rtos: freertos
 keyStep: { event: PrioChange, nth: 1 }
 ---
 
-A low-priority task holds a mutex. A high-priority task tries to take the same mutex and has to wait.
-If a medium-priority task is ready at that moment, it runs instead of the low-priority task, and the
-high-priority task ends up waiting for work that has nothing to do with the mutex. This is priority
-inversion.
+This page follows [priority inheritance](/learn/priority-inheritance/) through the FreeRTOS source.
+In the simulator above, set the step level to **Line** and use the **Kernel** tab of the code panel
+to see each of these functions execute.
 
-FreeRTOS mutexes limit the damage with priority inheritance: while the high-priority task waits, the
-task that holds the mutex runs at the waiter's priority.
+The scenario: `Low` (priority 1) holds the mutex `M`. `Med` (priority 2) is running. At tick 2,
+`High` (priority 3) wakes and calls `xSemaphoreTake( M, portMAX_DELAY )`.
 
-## Where it happens
+## A mutex is a queue
 
-A mutex in FreeRTOS is a queue, and taking one goes through `xQueueSemaphoreTake()` in `queue.c`. When
-the mutex is already held and the caller is about to block, that function calls
-`xTaskPriorityInherit()` with the task that holds the mutex.
+FreeRTOS builds semaphores and mutexes on its queue. A mutex is a queue that can hold one item of
+size zero. "The mutex is free" means the queue holds one item (`uxMessagesWaiting` is 1); taking the
+mutex removes it. A mutex-type queue also uses one of its fields to store the task that holds it,
+`xMutexHolder`, which you can see in the simulator's kernel structures panel. That field is what a
+binary semaphore lacks.
+
+## Two priorities per task
+
+With `configUSE_MUTEXES` set to 1, each task control block has two priority fields:
+
+- `uxPriority`: the priority the scheduler uses.
+- `uxBasePriority`: the priority the application gave the task.
+
+They are equal except while the task has inherited a priority. The task also counts the mutexes it
+holds in `uxMutexesHeld`.
+
+## Raising the holder
+
+`xSemaphoreTake()` is `xQueueSemaphoreTake()` in `queue.c`. When the mutex is not available and the
+caller is willing to wait, it calls `xTaskPriorityInherit()` with the holder, before it puts the
+caller to sleep.
 
 ```kernel freertos:tasks.c#xTaskPriorityInherit
 ```
 
-## What the function does
+Reading it from the top:
 
-The function compares the holder's priority with the priority of the running task, which is the one
-asking for the mutex. It only acts when the holder's priority is lower.
+1. It acts only if the holder's priority is lower than the caller's (`pxCurrentTCB` is `High`).
+2. It updates the holder's event list item, which carries the priority used to sort lists of
+   waiting tasks, unless that value is in use for something else.
+3. If the holder is in a ready list, it must change lists, because there is one ready list per
+   priority. The holder is removed from the list of its old priority, its `uxPriority` is set to
+   the caller's, and `prvAddTaskToReadyList()` appends it to the list of the new priority. This is
+   the branch the scenario takes: `Low` was ready, preempted by `Med`.
+4. If the holder is not ready (it may be delayed, or blocked on another mutex), only `uxPriority`
+   changes. The new priority takes effect when the task becomes ready.
 
-If the holder is in a ready list, it is removed from the list for its old priority, given the new
-priority, and added to the ready list for that priority with `prvAddTaskToReadyList()`. If the holder is
-not ready (for example, it is delayed), only its priority field changes.
+`uxBasePriority` is not touched. After this function, `High` is placed on the mutex's
+`xTasksWaitingToReceive` list and a context switch runs `Low`, now the most urgent ready task.
 
-The holder's original priority stays in `uxBasePriority`, so the kernel can restore it when the mutex is
-given back.
+## Lowering it again
+
+When `Low` calls `xSemaphoreGive()`, `xQueueGenericSend()` copies the item into the queue with
+`prvCopyDataToQueue()`, which sees that the queue is a mutex and calls `xTaskPriorityDisinherit()`.
+
+```kernel freertos:tasks.c#xTaskPriorityDisinherit
+```
+
+The function decrements `uxMutexesHeld` and then restores `uxBasePriority` only if **two**
+conditions hold: the task's priority differs from its base priority, and it now holds no mutexes at
+all.
+
+The second condition is a deliberate simplification. If a task
+holds two mutexes and inherited its priority through one of them, FreeRTOS does not work out which.
+It keeps the raised priority until the last mutex is given back. The task may run at a high
+priority for longer than strictly needed, but never for less. Try the
+[nested mutexes scenario](/learn/playground/?scenario=nested-mutexes&rtos=freertos) to see `Low`
+keep priority 3 after it has released the mutex that `High` wanted.
+
+After the priority is restored, `xQueueGenericSend()` makes the most urgent waiter ready. It does
+not make it the owner; see [Mutex handoff](/learn/mutex-handoff/).
+
+## When the waiter gives up
+
+A task can wait for a mutex with a timeout. If the timeout runs out, the holder may be running at a
+priority it inherited from a task that is no longer waiting. `xQueueSemaphoreTake()` handles this
+on the waiter's way out by calling `vTaskPriorityDisinheritAfterTimeout()` with the highest priority
+among the tasks still waiting.
+
+```kernel freertos:tasks.c#vTaskPriorityDisinheritAfterTimeout
+```
+
+It lowers the holder to the greater of its base priority and that remaining waiter's priority, and
+again only if the holder holds exactly one mutex. The
+[mutex timeout scenario](/learn/playground/?scenario=mutex-timeout&rtos=freertos) runs this path:
+`High` gives up at tick 4 and `Low` drops back to priority 1 while it still holds `M`.
+
+## Limits worth knowing
+
+- Inheritance is one level deep. If the holder is itself blocked on a second mutex, the holder of
+  that one is not raised. Zephyr follows the chain; see the
+  [Zephyr walkthrough](/learn/zephyr/priority-inheritance/).
+- Mutexes must not be used from interrupt handlers: an interrupt has no task priority to lend.
+- A binary semaphore created with `xSemaphoreCreateBinary()` gets none of this. Use
+  `xSemaphoreCreateMutex()` for mutual exclusion.
