@@ -1,0 +1,284 @@
+{
+  "kernels": {
+    "freertos": {
+      "name": "FreeRTOS",
+      "version": "V11.3.3",
+      "repo": "https://github.com/FreeRTOS/FreeRTOS-Kernel",
+      "commit": "89592801dd8b73329a7583719b7e3567b50910e5",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/LICENSE.md"
+    },
+    "zephyr": {
+      "name": "Zephyr",
+      "version": "v4.5.0",
+      "repo": "https://github.com/zephyrproject-rtos/zephyr",
+      "commit": "41d10b59730406bbab4ca9f1fbbe9e96aafb4966",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/LICENSE"
+    }
+  },
+  "symbols": {
+    "freertos:tasks.c#xTaskIncrementTick": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "xTaskIncrementTick",
+      "kind": "fn",
+      "startLine": 4831,
+      "endLine": 5078,
+      "code": "BaseType_t xTaskIncrementTick( void )\n{\n    TCB_t * pxTCB;\n    TickType_t xItemValue;\n    BaseType_t xSwitchRequired = pdFALSE;\n\n    traceENTER_xTaskIncrementTick();\n\n    /* Called by the portable layer each time a tick interrupt occurs.\n     * Increments the tick then checks to see if the new tick value will cause any\n     * tasks to be unblocked. */\n    traceTASK_INCREMENT_TICK( xTickCount );\n\n    /* Tick increment should occur on every kernel timer event. Core 0 has the\n     * responsibility to increment the tick, or increment the pended ticks if the\n     * scheduler is suspended.  If pended ticks is greater than zero, the core that\n     * calls xTaskResumeAll has the responsibility to increment the tick. */\n    if( uxSchedulerSuspended == ( UBaseType_t ) 0U )\n    {\n        /* Minor optimisation.  The tick count cannot change in this\n         * block. */\n        const TickType_t xConstTickCount = xTickCount + ( TickType_t ) 1;\n\n        /* Increment the RTOS tick, switching the delayed and overflowed\n         * delayed lists if it wraps to 0. */\n        xTickCount = xConstTickCount;\n\n        if( xConstTickCount == ( TickType_t ) 0U )\n        {\n            taskSWITCH_DELAYED_LISTS();\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n\n        /* See if this tick has made a timeout expire.  Tasks are stored in\n         * the  queue in the order of their wake time - meaning once one task\n         * has been found whose block time has not expired there is no need to\n         * look any further down the list. */\n        if( xConstTickCount >= xNextTaskUnblockTime )\n        {\n            for( ; ; )\n            {\n                if( listLIST_IS_EMPTY( pxDelayedTaskList ) != pdFALSE )\n                {\n                    /* The delayed list is empty.  Set xNextTaskUnblockTime\n                     * to the maximum possible value so it is extremely\n                     * unlikely that the\n                     * if( xTickCount >= xNextTaskUnblockTime ) test will pass\n                     * next time through. */\n                    xNextTaskUnblockTime = portMAX_DELAY;\n                    break;\n                }\n                else\n                {\n                    /* The delayed list is not empty, get the value of the\n                     * item at the head of the delayed list.  This is the time\n                     * at which the task at the head of the delayed list must\n                     * be removed from the Blocked state. */\n                    /* MISRA Ref 11.5.3 [Void pointer assignment] */\n                    /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-115 */\n                    /* coverity[misra_c_2012_rule_11_5_violation] */\n                    pxTCB = listGET_OWNER_OF_HEAD_ENTRY( pxDelayedTaskList );\n                    xItemValue = listGET_LIST_ITEM_VALUE( &( pxTCB->xStateListItem ) );\n\n                    if( xConstTickCount < xItemValue )\n                    {\n                        /* It is not time to unblock this item yet, but the\n                         * item value is the time at which the task at the head\n                         * of the blocked list must be removed from the Blocked\n                         * state -  so record the item value in\n                         * xNextTaskUnblockTime. */\n                        xNextTaskUnblockTime = xItemValue;\n                        break;\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n\n                    /* It is time to remove the item from the Blocked state. */\n                    listREMOVE_ITEM( &( pxTCB->xStateListItem ) );\n\n                    /* Is the task waiting on an event also?  If so remove\n                     * it from the event list. */\n                    if( listLIST_ITEM_CONTAINER( &( pxTCB->xEventListItem ) ) != NULL )\n                    {\n                        listREMOVE_ITEM( &( pxTCB->xEventListItem ) );\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n\n                    /* Place the unblocked task into the appropriate ready\n                     * list. */\n                    prvAddTaskToReadyList( pxTCB );\n\n                    /* A task being unblocked cannot cause an immediate\n                     * context switch if preemption is turned off. */\n                    #if ( configUSE_PREEMPTION == 1 )\n                    {\n                        #if ( configNUMBER_OF_CORES == 1 )\n                        {\n                            /* Preemption is on, but a context switch should\n                             * only be performed if the unblocked task's\n                             * priority is higher than the currently executing\n                             * task.\n                             * The case of equal priority tasks sharing\n                             * processing time (which happens when both\n                             * preemption and time slicing are on) is\n                             * handled below.*/\n                            if( pxTCB->uxPriority > pxCurrentTCB->uxPriority )\n                            {\n                                xSwitchRequired = pdTRUE;\n                            }\n                            else\n                            {\n                                mtCOVERAGE_TEST_MARKER();\n                            }\n                        }\n                        #else /* #if( configNUMBER_OF_CORES == 1 ) */\n                        {\n                            prvYieldForTask( pxTCB );\n                        }\n                        #endif /* #if( configNUMBER_OF_CORES == 1 ) */\n                    }\n                    #endif /* #if ( configUSE_PREEMPTION == 1 ) */\n                }\n            }\n        }\n\n        /* Tasks of equal priority to the currently running task will share\n         * processing time (time slice) if preemption is on, and the application\n         * writer has not explicitly turned time slicing off. */\n        #if ( ( configUSE_PREEMPTION == 1 ) && ( configUSE_TIME_SLICING == 1 ) )\n        {\n            #if ( configNUMBER_OF_CORES == 1 )\n            {\n                if( listCURRENT_LIST_LENGTH( &( pxReadyTasksLists[ pxCurrentTCB->uxPriority ] ) ) > 1U )\n                {\n                    xSwitchRequired = pdTRUE;\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n            #else /* #if ( configNUMBER_OF_CORES == 1 ) */\n            {\n                BaseType_t xCoreID;\n\n                for( xCoreID = 0; xCoreID < ( ( BaseType_t ) configNUMBER_OF_CORES ); xCoreID++ )\n                {\n                    if( listCURRENT_LIST_LENGTH( &( pxReadyTasksLists[ pxCurrentTCBs[ xCoreID ]->uxPriority ] ) ) > 1U )\n                    {\n                        xYieldPendings[ xCoreID ] = pdTRUE;\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n                }\n            }\n            #endif /* #if ( configNUMBER_OF_CORES == 1 ) */\n        }\n        #endif /* #if ( ( configUSE_PREEMPTION == 1 ) && ( configUSE_TIME_SLICING == 1 ) ) */\n\n        #if ( configUSE_TICK_HOOK == 1 )\n        {\n            /* Guard against the tick hook being called when the pended tick\n             * count is being unwound (when the scheduler is being unlocked). */\n            if( xPendedTicks == ( TickType_t ) 0 )\n            {\n                vApplicationTickHook();\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        #endif /* configUSE_TICK_HOOK */\n\n        #if ( configUSE_PREEMPTION == 1 )\n        {\n            #if ( configNUMBER_OF_CORES == 1 )\n            {\n                /* For single core the core ID is always 0. */\n                if( xYieldPendings[ 0 ] != pdFALSE )\n                {\n                    xSwitchRequired = pdTRUE;\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n            #else /* #if ( configNUMBER_OF_CORES == 1 ) */\n            {\n                BaseType_t xCoreID, xCurrentCoreID;\n                xCurrentCoreID = ( BaseType_t ) portGET_CORE_ID();\n\n                for( xCoreID = 0; xCoreID < ( BaseType_t ) configNUMBER_OF_CORES; xCoreID++ )\n                {\n                    #if ( configUSE_TASK_PREEMPTION_DISABLE == 1 )\n                        if( pxCurrentTCBs[ xCoreID ]->xPreemptionDisable == pdFALSE )\n                    #endif\n                    {\n                        if( xYieldPendings[ xCoreID ] != pdFALSE )\n                        {\n                            if( xCoreID == xCurrentCoreID )\n                            {\n                                xSwitchRequired = pdTRUE;\n                            }\n                            else\n                            {\n                                prvYieldCore( xCoreID );\n                            }\n                        }\n                        else\n                        {\n                            mtCOVERAGE_TEST_MARKER();\n                        }\n                    }\n                }\n            }\n            #endif /* #if ( configNUMBER_OF_CORES == 1 ) */\n        }\n        #endif /* #if ( configUSE_PREEMPTION == 1 ) */\n    }\n    else\n    {\n        xPendedTicks += 1U;\n\n        /* The tick hook gets called at regular intervals, even if the\n         * scheduler is locked. */\n        #if ( configUSE_TICK_HOOK == 1 )\n        {\n            vApplicationTickHook();\n        }\n        #endif\n    }\n\n    traceRETURN_xTaskIncrementTick( xSwitchRequired );\n\n    return xSwitchRequired;\n}",
+      "inactive": [
+        [
+          4954,
+          4956
+        ],
+        [
+          4981,
+          4995
+        ],
+        [
+          5030,
+          5035
+        ],
+        [
+          5037,
+          5037
+        ],
+        [
+          5039,
+          5057
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L4831-L5078"
+    },
+    "freertos:tasks.c#taskSWITCH_DELAYED_LISTS": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "taskSWITCH_DELAYED_LISTS",
+      "kind": "macro",
+      "startLine": 267,
+      "endLine": 271,
+      "code": "#define taskSWITCH_DELAYED_LISTS()                                                \\\n    do {                                                                          \\\n        List_t * pxTemp;                                                          \\\n                                                                                  \\\n        /* The delayed tasks list should be empty when the lists are switched. */ \\",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L267-L271"
+    },
+    "freertos:tasks.c#vTaskSwitchContext": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "vTaskSwitchContext",
+      "kind": "fn",
+      "startLine": 5215,
+      "endLine": 5298,
+      "code": "void vTaskSwitchContext( void )\n{\n    traceENTER_vTaskSwitchContext();\n\n    if( uxSchedulerSuspended != ( UBaseType_t ) 0U )\n    {\n        /* The scheduler is currently suspended - do not allow a context\n         * switch. */\n        xYieldPendings[ 0 ] = pdTRUE;\n    }\n    else\n    {\n        xYieldPendings[ 0 ] = pdFALSE;\n        traceTASK_SWITCHED_OUT();\n\n        #if ( configGENERATE_RUN_TIME_STATS == 1 )\n        {\n            #ifdef portALT_GET_RUN_TIME_COUNTER_VALUE\n                portALT_GET_RUN_TIME_COUNTER_VALUE( ulTotalRunTime[ 0 ] );\n            #else\n                ulTotalRunTime[ 0 ] = portGET_RUN_TIME_COUNTER_VALUE();\n            #endif\n\n            /* Add the amount of time the task has been running to the\n             * accumulated time so far.  The time the task started running was\n             * stored in ulTaskSwitchedInTime.  Note that there is no overflow\n             * protection here so count values are only valid until the timer\n             * overflows.  The guard against negative values is to protect\n             * against suspect run time stat counter implementations - which\n             * are provided by the application, not the kernel. */\n            if( ulTotalRunTime[ 0 ] > ulTaskSwitchedInTime[ 0 ] )\n            {\n                pxCurrentTCB->ulRunTimeCounter += ( ulTotalRunTime[ 0 ] - ulTaskSwitchedInTime[ 0 ] );\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n\n            ulTaskSwitchedInTime[ 0 ] = ulTotalRunTime[ 0 ];\n        }\n        #endif /* configGENERATE_RUN_TIME_STATS */\n\n        /* Check for stack overflow, if configured. */\n        taskCHECK_FOR_STACK_OVERFLOW();\n\n        /* Before the currently running task is switched out, save its errno. */\n        #if ( configUSE_POSIX_ERRNO == 1 )\n        {\n            pxCurrentTCB->iTaskErrno = FreeRTOS_errno;\n        }\n        #endif\n\n        /* Select a new task to run using either the generic C or port\n         * optimised asm code. */\n        /* MISRA Ref 11.5.3 [Void pointer assignment] */\n        /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-115 */\n        /* coverity[misra_c_2012_rule_11_5_violation] */\n        taskSELECT_HIGHEST_PRIORITY_TASK();\n        traceTASK_SWITCHED_IN();\n\n        /* Macro to inject port specific behaviour immediately after\n         * switching tasks, such as setting an end of stack watchpoint\n         * or reconfiguring the MPU. */\n        portTASK_SWITCH_HOOK( pxCurrentTCB );\n\n        /* After the new task is switched in, update the global errno. */\n        #if ( configUSE_POSIX_ERRNO == 1 )\n        {\n            FreeRTOS_errno = pxCurrentTCB->iTaskErrno;\n        }\n        #endif\n\n        #if ( configUSE_C_RUNTIME_TLS_SUPPORT == 1 )\n        {\n            /* Switch C-Runtime's TLS Block to point to the TLS\n             * Block specific to this task. */\n            configSET_TLS_BLOCK( pxCurrentTCB->xTLSBlock );\n        }\n        #endif\n    }\n\n    traceRETURN_vTaskSwitchContext();\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L5215-L5298"
+    },
+    "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "taskSELECT_HIGHEST_PRIORITY_TASK",
+      "kind": "macro",
+      "startLine": 197,
+      "endLine": 201,
+      "code": "    #define taskSELECT_HIGHEST_PRIORITY_TASK()                                       \\\ndo {                                                                                 \\\n    UBaseType_t uxTopPriority = uxTopReadyPriority;                                  \\\n                                                                                     \\\n    /* Find the highest priority queue that contains ready tasks. */                 \\",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L197-L201"
+    },
+    "freertos:tasks.c#prvAddTaskToReadyList": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "prvAddTaskToReadyList",
+      "kind": "macro",
+      "startLine": 287,
+      "endLine": 293,
+      "code": "#define prvAddTaskToReadyList( pxTCB )                                                                     \\\n    do {                                                                                                   \\\n        traceMOVED_TASK_TO_READY_STATE( pxTCB );                                                           \\\n        taskRECORD_READY_PRIORITY( ( pxTCB )->uxPriority );                                                \\\n        listINSERT_END( &( pxReadyTasksLists[ ( pxTCB )->uxPriority ] ), &( ( pxTCB )->xStateListItem ) ); \\\n        tracePOST_MOVED_TASK_TO_READY_STATE( pxTCB );                                                      \\\n    } while( 0 )",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L287-L293"
+    },
+    "freertos:tasks.c#xTaskPriorityInherit": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "xTaskPriorityInherit",
+      "kind": "fn",
+      "startLine": 6745,
+      "endLine": 6841,
+      "code": "BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder )\n{\n    TCB_t * const pxMutexHolderTCB = pxMutexHolder;\n    BaseType_t xReturn = pdFALSE;\n\n    traceENTER_xTaskPriorityInherit( pxMutexHolder );\n\n    /* If the mutex is taken by an interrupt, the mutex holder is NULL. Priority\n     * inheritance is not applied in this scenario. */\n    if( pxMutexHolder != NULL )\n    {\n        /* If the holder of the mutex has a priority below the priority of\n         * the task attempting to obtain the mutex then it will temporarily\n         * inherit the priority of the task attempting to obtain the mutex. */\n        if( pxMutexHolderTCB->uxPriority < pxCurrentTCB->uxPriority )\n        {\n            /* Adjust the mutex holder state to account for its new\n             * priority.  Only reset the event list item value if the value is\n             * not being used for anything else. */\n            if( ( listGET_LIST_ITEM_VALUE( &( pxMutexHolderTCB->xEventListItem ) ) & taskEVENT_LIST_ITEM_VALUE_IN_USE ) == ( ( TickType_t ) 0U ) )\n            {\n                listSET_LIST_ITEM_VALUE( &( pxMutexHolderTCB->xEventListItem ), ( TickType_t ) configMAX_PRIORITIES - ( TickType_t ) pxCurrentTCB->uxPriority );\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n\n            /* If the task being modified is in the ready state it will need\n             * to be moved into a new list. */\n            if( listIS_CONTAINED_WITHIN( &( pxReadyTasksLists[ pxMutexHolderTCB->uxPriority ] ), &( pxMutexHolderTCB->xStateListItem ) ) != pdFALSE )\n            {\n                if( uxListRemove( &( pxMutexHolderTCB->xStateListItem ) ) == ( UBaseType_t ) 0 )\n                {\n                    /* It is known that the task is in its ready list so\n                     * there is no need to check again and the port level\n                     * reset macro can be called directly. */\n                    portRESET_READY_PRIORITY( pxMutexHolderTCB->uxPriority, uxTopReadyPriority );\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n\n                /* Inherit the priority before being moved into the new list. */\n                pxMutexHolderTCB->uxPriority = pxCurrentTCB->uxPriority;\n                prvAddTaskToReadyList( pxMutexHolderTCB );\n                #if ( configNUMBER_OF_CORES > 1 )\n                {\n                    /* The priority of the task is raised. Yield for this task\n                     * if it is not running. */\n                    if( taskTASK_IS_RUNNING( pxMutexHolderTCB ) != pdTRUE )\n                    {\n                        prvYieldForTask( pxMutexHolderTCB );\n                    }\n                }\n                #endif /* if ( configNUMBER_OF_CORES > 1 ) */\n            }\n            else\n            {\n                /* Just inherit the priority. */\n                pxMutexHolderTCB->uxPriority = pxCurrentTCB->uxPriority;\n            }\n\n            traceTASK_PRIORITY_INHERIT( pxMutexHolderTCB, pxCurrentTCB->uxPriority );\n\n            /* Inheritance occurred. */\n            xReturn = pdTRUE;\n        }\n        else\n        {\n            if( pxMutexHolderTCB->uxBasePriority < pxCurrentTCB->uxPriority )\n            {\n                /* The base priority of the mutex holder is lower than the\n                 * priority of the task attempting to take the mutex, but the\n                 * current priority of the mutex holder is not lower than the\n                 * priority of the task attempting to take the mutex.\n                 * Therefore the mutex holder must have already inherited a\n                 * priority, but inheritance would have occurred if that had\n                 * not been the case. */\n                xReturn = pdTRUE;\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n    }\n    else\n    {\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    traceRETURN_xTaskPriorityInherit( xReturn );\n\n    return xReturn;\n}",
+      "inactive": [
+        [
+          6793,
+          6800
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L6745-L6841"
+    },
+    "freertos:queue.c#xQueueSemaphoreTake": {
+      "rtos": "freertos",
+      "file": "queue.c",
+      "symbol": "xQueueSemaphoreTake",
+      "kind": "fn",
+      "startLine": 1659,
+      "endLine": 1881,
+      "code": "BaseType_t xQueueSemaphoreTake( QueueHandle_t xQueue,\n                                TickType_t xTicksToWait )\n{\n    BaseType_t xEntryTimeSet = pdFALSE;\n    TimeOut_t xTimeOut;\n    Queue_t * const pxQueue = xQueue;\n\n    #if ( configUSE_MUTEXES == 1 )\n        BaseType_t xInheritanceOccurred = pdFALSE;\n    #endif\n\n    traceENTER_xQueueSemaphoreTake( xQueue, xTicksToWait );\n\n    /* Check the queue pointer is not NULL. */\n    configASSERT( ( pxQueue ) );\n\n    /* Check this really is a semaphore, in which case the item size will be\n     * 0. */\n    configASSERT( pxQueue->uxItemSize == 0 );\n\n    /* Cannot block if the scheduler is suspended. */\n    #if ( ( INCLUDE_xTaskGetSchedulerState == 1 ) || ( configUSE_TIMERS == 1 ) )\n    {\n        configASSERT( !( ( xTaskGetSchedulerState() == taskSCHEDULER_SUSPENDED ) && ( xTicksToWait != 0 ) ) );\n    }\n    #endif\n\n    for( ; ; )\n    {\n        taskENTER_CRITICAL();\n        {\n            /* Semaphores are queues with an item size of 0, and where the\n             * number of messages in the queue is the semaphore's count value. */\n            const UBaseType_t uxSemaphoreCount = pxQueue->uxMessagesWaiting;\n\n            /* Is there data in the queue now?  To be running the calling task\n             * must be the highest priority task wanting to access the queue. */\n            if( uxSemaphoreCount > ( UBaseType_t ) 0 )\n            {\n                traceQUEUE_RECEIVE( pxQueue );\n\n                /* Semaphores are queues with a data size of zero and where the\n                 * messages waiting is the semaphore's count.  Reduce the count. */\n                pxQueue->uxMessagesWaiting = ( UBaseType_t ) ( uxSemaphoreCount - ( UBaseType_t ) 1 );\n\n                #if ( configUSE_MUTEXES == 1 )\n                {\n                    if( pxQueue->uxQueueType == queueQUEUE_IS_MUTEX )\n                    {\n                        /* Record the information required to implement\n                         * priority inheritance should it become necessary. */\n                        pxQueue->u.xSemaphore.xMutexHolder = pvTaskIncrementMutexHeldCount();\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n                }\n                #endif /* configUSE_MUTEXES */\n\n                /* Check to see if other tasks are blocked waiting to give the\n                 * semaphore, and if so, unblock the highest priority such task. */\n                if( listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToSend ) ) == pdFALSE )\n                {\n                    if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToSend ) ) != pdFALSE )\n                    {\n                        queueYIELD_IF_USING_PREEMPTION();\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n\n                taskEXIT_CRITICAL();\n\n                traceRETURN_xQueueSemaphoreTake( pdPASS );\n\n                return pdPASS;\n            }\n            else\n            {\n                if( xTicksToWait == ( TickType_t ) 0 )\n                {\n                    /* The semaphore count was 0 and no block time is specified\n                     * (or the block time has expired) so exit now. */\n                    taskEXIT_CRITICAL();\n\n                    traceQUEUE_RECEIVE_FAILED( pxQueue );\n                    traceRETURN_xQueueSemaphoreTake( errQUEUE_EMPTY );\n\n                    return errQUEUE_EMPTY;\n                }\n                else if( xEntryTimeSet == pdFALSE )\n                {\n                    /* The semaphore count was 0 and a block time was specified\n                     * so configure the timeout structure ready to block. */\n                    vTaskInternalSetTimeOutState( &xTimeOut );\n                    xEntryTimeSet = pdTRUE;\n                }\n                else\n                {\n                    /* Entry time was already set. */\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n        }\n        taskEXIT_CRITICAL();\n\n        /* Interrupts and other tasks can give to and take from the semaphore\n         * now the critical section has been exited. */\n\n        vTaskSuspendAll();\n        prvLockQueue( pxQueue );\n\n        /* Update the timeout state to see if it has expired yet. */\n        if( xTaskCheckForTimeOut( &xTimeOut, &xTicksToWait ) == pdFALSE )\n        {\n            /* A block time is specified and not expired.  If the semaphore\n             * count is 0 then enter the Blocked state to wait for a semaphore to\n             * become available.  As semaphores are implemented with queues the\n             * queue being empty is equivalent to the semaphore count being 0. */\n            if( prvIsQueueEmpty( pxQueue ) != pdFALSE )\n            {\n                traceBLOCKING_ON_QUEUE_RECEIVE( pxQueue );\n\n                #if ( configUSE_MUTEXES == 1 )\n                {\n                    if( pxQueue->uxQueueType == queueQUEUE_IS_MUTEX )\n                    {\n                        taskENTER_CRITICAL();\n                        {\n                            xInheritanceOccurred = xTaskPriorityInherit( pxQueue->u.xSemaphore.xMutexHolder );\n                        }\n                        taskEXIT_CRITICAL();\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n                }\n                #endif /* if ( configUSE_MUTEXES == 1 ) */\n\n                vTaskPlaceOnEventList( &( pxQueue->xTasksWaitingToReceive ), xTicksToWait );\n                prvUnlockQueue( pxQueue );\n\n                if( xTaskResumeAll() == pdFALSE )\n                {\n                    taskYIELD_WITHIN_API();\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n            else\n            {\n                /* There was no timeout and the semaphore count was not 0, so\n                 * attempt to take the semaphore again. */\n                prvUnlockQueue( pxQueue );\n                ( void ) xTaskResumeAll();\n            }\n        }\n        else\n        {\n            /* Timed out. */\n            prvUnlockQueue( pxQueue );\n            ( void ) xTaskResumeAll();\n\n            /* If the semaphore count is 0 exit now as the timeout has\n             * expired.  Otherwise return to attempt to take the semaphore that is\n             * known to be available.  As semaphores are implemented by queues the\n             * queue being empty is equivalent to the semaphore count being 0. */\n            if( prvIsQueueEmpty( pxQueue ) != pdFALSE )\n            {\n                #if ( configUSE_MUTEXES == 1 )\n                {\n                    /* xInheritanceOccurred could only have be set if\n                     * pxQueue->uxQueueType == queueQUEUE_IS_MUTEX so no need to\n                     * test the mutex type again to check it is actually a mutex. */\n                    if( xInheritanceOccurred != pdFALSE )\n                    {\n                        taskENTER_CRITICAL();\n                        {\n                            UBaseType_t uxHighestWaitingPriority;\n\n                            /* This task blocking on the mutex caused another\n                             * task to inherit this task's priority.  Now this task\n                             * has timed out the priority should be disinherited\n                             * again, but only as low as the next highest priority\n                             * task that is waiting for the same mutex. */\n                            uxHighestWaitingPriority = prvGetHighestPriorityOfWaitToReceiveList( pxQueue );\n\n                            /* vTaskPriorityDisinheritAfterTimeout uses the uxHighestWaitingPriority\n                             * parameter to index pxReadyTasksLists when adding the task holding\n                             * mutex to the ready list for its new priority. Coverity thinks that\n                             * it can result in out-of-bounds access which is not true because\n                             * uxHighestWaitingPriority, as returned by prvGetHighestPriorityOfWaitToReceiveList,\n                             * is capped at ( configMAX_PRIORITIES - 1 ). */\n                            /* coverity[overrun] */\n                            vTaskPriorityDisinheritAfterTimeout( pxQueue->u.xSemaphore.xMutexHolder, uxHighestWaitingPriority );\n                        }\n                        taskEXIT_CRITICAL();\n                    }\n                }\n                #endif /* configUSE_MUTEXES */\n\n                traceQUEUE_RECEIVE_FAILED( pxQueue );\n                traceRETURN_xQueueSemaphoreTake( errQUEUE_EMPTY );\n\n                return errQUEUE_EMPTY;\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n    }\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L1659-L1881"
+    },
+    "zephyr:kernel/sched.c#next_up": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "next_up",
+      "kind": "fn",
+      "startLine": 57,
+      "endLine": 158,
+      "code": "static ALWAYS_INLINE struct k_thread *next_up(void)\n{\n#ifdef CONFIG_SMP\n\tbool ipi_idle_target_rebound = false;\n\tstruct k_thread *ipi_idle_target = ipi_idle_reserved_take();\n\n\tif (z_is_thread_halting(_current)) {\n\t\t/* NULL key: scheduler context, no retry possible. _current\n\t\t * cannot have an in-flight timeout (a running thread's\n\t\t * timeout already fired and its handler returned), so the\n\t\t * abort inside halt_thread won't see -EAGAIN.\n\t\t */\n\t\thalt_thread(_current, z_is_thread_aborting(_current) ?\n\t\t\t\t      _THREAD_DEAD : _THREAD_SUSPENDED, NULL);\n\t}\n#endif /* CONFIG_SMP */\n\n\tstruct k_thread *thread = runq_best();\n\n\tthread = metairq_preempt_recover(thread);\n\n#ifndef CONFIG_SMP\n\t/* In uniprocessor mode, we can leave the current thread in\n\t * the queue (actually we have to, otherwise the assembly\n\t * context switch code for all architectures would be\n\t * responsible for putting it back in z_swap and ISR return!),\n\t * which makes this choice simple.\n\t */\n\treturn (thread != NULL) ? thread : _current_cpu->idle_thread;\n#else\n\t/* Under SMP, the \"cache\" mechanism for selecting the next\n\t * thread doesn't work, so we have more work to do to test\n\t * _current against the best choice from the queue.  Here, the\n\t * thread selected above represents \"the best thread that is\n\t * not current\".\n\t *\n\t * Subtle note on \"queued\": in SMP mode, neither _current nor\n\t * metairq_premepted live in the queue, so this isn't exactly the\n\t * same thing as \"ready\", it means \"the thread already been\n\t * added back to the queue such that we don't want to re-add it\".\n\t */\n\tbool queued = z_is_thread_queued(_current);\n\tbool active = z_is_thread_ready(_current);\n\n\tif (thread == NULL) {\n\t\tthread = _current_cpu->idle_thread;\n\t}\n\n\tif (active) {\n\t\tint32_t cmp = z_sched_prio_cmp(_current, thread);\n\n\t\t/* Ties only switch if state says we yielded */\n\t\tif ((cmp > 0) || ((cmp == 0) && !_current_cpu->swap_ok)) {\n\t\t\tthread = _current;\n\t\t}\n\n\t\tif (!should_preempt(thread, _current_cpu->swap_ok)) {\n\t\t\tthread = _current;\n\t\t}\n\t}\n\n\tif (thread != _current) {\n\t\tupdate_metairq_preempt(thread);\n\t\t/*\n\t\t * Put _current back into the queue unless it is ..\n\t\t * 1. not active (i.e., blocked, suspended, dead), or\n\t\t * 2. already queued, or\n\t\t * 3. the idle thread, or\n\t\t * 4. preempted by a MetaIRQ thread\n\t\t */\n\t\tif (active && !queued && !z_is_idle_thread_object(_current)\n\t\t    && metairq_current_requeue_allowed()) {\n\t\t\tqueue_thread(_current);\n\t\t}\n\t}\n\n\t/* Take the new _current out of the queue */\n\tif (z_is_thread_queued(thread)) {\n\t\t/* Remove or transfer the selected thread's idle CPU coverage. */\n\t\tif (ipi_idle_target != NULL &&\n\t\t    thread != ipi_idle_target &&\n\t\t    z_is_thread_queued(ipi_idle_target)) {\n\t\t\tipi_idle_target_rebound =\n\t\t\t\tipi_idle_thread_rebind(thread, ipi_idle_target);\n\t\t} else {\n\t\t\tipi_idle_thread_unreserve(thread);\n\t\t}\n\t\tdequeue_thread(thread);\n\t}\n\n\t_current_cpu->swap_ok = false;\n\n\t/* If this CPU consumed a different thread, preserve coverage for the\n\t * runnable thread covered by this CPU's reservation.\n\t */\n\tif (!ipi_idle_target_rebound &&\n\t    ipi_idle_target != NULL && z_is_thread_queued(ipi_idle_target)) {\n\t\tflag_ipi(ipi_mask_create(ipi_idle_target));\n\t}\n\treturn thread;\n#endif /* CONFIG_SMP */\n}",
+      "inactive": [
+        [
+          60,
+          71
+        ],
+        [
+          87,
+          156
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L57-L158"
+    },
+    "zephyr:kernel/sched.c#update_cache": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "update_cache",
+      "kind": "fn",
+      "startLine": 167,
+      "endLine": 193,
+      "code": "static ALWAYS_INLINE void update_cache(int preempt_ok)\n{\n#ifndef CONFIG_SMP\n\tstruct k_thread *thread = next_up();\n\n\tif (should_preempt(thread, preempt_ok)) {\n#ifdef CONFIG_TIMESLICING\n\t\tif (thread != _current) {\n\t\t\tz_time_slice_reset(thread);\n\t\t}\n#endif /* CONFIG_TIMESLICING */\n\t\tupdate_metairq_preempt(thread);\n\t\t_kernel.ready_q.cache = thread;\n\t} else {\n\t\t_kernel.ready_q.cache = _current;\n\t}\n\n#else\n\t/* The way this works is that the CPU record keeps its\n\t * \"cooperative swapping is OK\" flag until the next reschedule\n\t * call or context switch.  It doesn't need to be tracked per\n\t * thread because if the thread gets preempted for whatever\n\t * reason the scheduler will make the same decision anyway.\n\t */\n\t_current_cpu->swap_ok = preempt_ok;\n#endif /* CONFIG_SMP */\n}",
+      "inactive": [
+        [
+          185,
+          191
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L167-L193"
+    },
+    "zephyr:kernel/include/kthread.h#should_preempt": {
+      "rtos": "zephyr",
+      "file": "kernel/include/kthread.h",
+      "symbol": "should_preempt",
+      "kind": "inline",
+      "startLine": 225,
+      "endLine": 260,
+      "code": "static ALWAYS_INLINE bool should_preempt(const struct k_thread *thread,\n\t\t\t\t\t int preempt_ok)\n{\n\t/* Preemption is OK if it's being explicitly allowed by\n\t * software state (e.g. the thread called k_yield())\n\t */\n\tif (preempt_ok != 0) {\n\t\treturn true;\n\t}\n\n\t__ASSERT(_current != NULL, \"\");\n\n\t/* Or if we're pended/suspended/dummy (duh) */\n\tif (z_is_thread_prevented_from_running(_current)) {\n\t\treturn true;\n\t}\n\n\t/* Otherwise we have to be running a preemptible thread or\n\t * switching to a metairq\n\t */\n\tif (thread_is_preemptible(_current) || thread_is_metairq(thread)) {\n\t\treturn true;\n\t}\n\n\t/* Edge case on ARM where a thread can be pended out of an\n\t * interrupt handler before the \"synchronous\" swap starts\n\t * context switching.  Platforms with atomic swap can never\n\t * hit this.\n\t */\n\tif (IS_ENABLED(CONFIG_SWAP_NONATOMIC)\n\t    && z_is_thread_timeout_active(thread)) {\n\t\treturn true;\n\t}\n\n\treturn false;\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/include/kthread.h#L225-L260"
+    },
+    "zephyr:kernel/timeslicing.c#z_time_slice": {
+      "rtos": "zephyr",
+      "file": "kernel/timeslicing.c",
+      "symbol": "z_time_slice",
+      "kind": "fn",
+      "startLine": 151,
+      "endLine": 220,
+      "code": "void z_time_slice(void)\n{\n\t/*\n\t * Atomic context switches need no scheduler work until this CPU's\n\t * time slice expires. Non-atomic context switches must still take\n\t * the scheduler lock to synchronize pending_current.\n\t */\n\tif (!IS_ENABLED(CONFIG_SWAP_NONATOMIC) &&\n\t    !atomic_get(&slice_expired[_current_cpu->id])) {\n\t\treturn;\n\t}\n\n\tk_spinlock_key_t key = z_sched_spinlock_lock();\n\tstruct k_thread *curr = _current;\n\n#ifdef CONFIG_SWAP_NONATOMIC\n\tif (pending_current == curr) {\n\t\tz_time_slice_reset(curr);\n\t\tz_sched_spinlock_unlock(key);\n\t\treturn;\n\t}\n\tpending_current = NULL;\n#endif\n\n\tint slice_size = 0;\n\n\tif (atomic_get(&slice_expired[_current_cpu->id])) {\n\t\tslice_size = z_time_slice_size(curr);\n\t}\n\n\tif (slice_size != 0) {\n#ifdef CONFIG_TIMESLICE_PER_THREAD\n\t\tk_thread_timeslice_fn_t handler = curr->base.slice_expired;\n\n\t\tif (handler != NULL) {\n\t\t\tz_sched_spinlock_unlock(key);\n\t\t\thandler(curr, curr->base.slice_data);\n\t\t\tkey = z_sched_spinlock_lock();\n\n\t\t\t/* The handler ran with the lock dropped and may have\n\t\t\t * changed this thread's slice configuration, so the\n\t\t\t * cached size is stale; recompute before rearming.\n\t\t\t */\n\t\t\tslice_size = z_time_slice_size(curr);\n\t\t}\n#endif\n\t\tif (!z_is_thread_prevented_from_running(curr)) {\n\t\t\tmove_current_to_end_of_prio_q();\n\t\t\t/* If the rotation kept curr at the front (no other\n\t\t\t * runnable thread of equal-or-higher priority is\n\t\t\t * waiting), no swap will happen and we must rearm\n\t\t\t * here. Otherwise the dispatch path will rearm for\n\t\t\t * the new thread with slice_expired still set,\n\t\t\t * picking up the tick-aligned delay.\n\t\t\t */\n#ifdef CONFIG_SMP\n\t\t\tstruct k_thread *next = runq_best();\n\n\t\t\tif (next == NULL || z_is_idle_thread_object(next)) {\n\t\t\t\tslice_reset(slice_size);\n\t\t\t}\n#else\n\t\t\tif (_kernel.ready_q.cache == curr) {\n\t\t\t\tslice_reset(slice_size);\n\t\t\t}\n#endif\n\t\t}\n\t}\n\tz_sched_spinlock_unlock(key);\n}",
+      "inactive": [
+        [
+          207,
+          211
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/timeslicing.c#L151-L220"
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock": {
+      "rtos": "zephyr",
+      "file": "kernel/mutex.c",
+      "symbol": "z_impl_k_mutex_lock",
+      "kind": "fn",
+      "startLine": 202,
+      "endLine": 399,
+      "code": "int z_impl_k_mutex_lock(struct k_mutex *mutex, k_timeout_t timeout)\n{\n\tk_spinlock_key_t key;\n#if Z_MUTEX_PI_ENABLED\n\tbool resched = false;\n#endif\n\n\t__ASSERT(!arch_is_in_isr(), \"mutexes cannot be used inside ISRs\");\n\n\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_mutex, lock, mutex, timeout);\n\n\tkey = k_spin_lock(&mutex_lock);\n\n\tif (likely((mutex->lock_count == 0U) || (mutex->owner == _current))) {\n\n\t\tmutex->lock_count++;\n\t\tmutex->owner = _current;\n\n#if Z_MUTEX_PI_ENABLED\n\t\tLOG_DBG(\"%p took mutex %p, count: %d, orig prio: %d\",\n\t\t\t_current, mutex, mutex->lock_count,\n\t\t\t_current->orig_prio);\n\n\t\t/* Add to held list on first acquisition; recursive locks skip this. */\n\t\tif (mutex->lock_count == 1U) {\n\t\t\t/* Capture the thread's true pre-inheritance priority\n\t\t\t * the first time it acquires any mutex.\n\t\t\t */\n\t\t\tif (sys_slist_is_empty(&_current->held_mutexes)) {\n\t\t\t\t_current->orig_prio = _current->base.prio;\n\t\t\t}\n\t\t\tsys_slist_append(&_current->held_mutexes, &mutex->held_node);\n\t\t}\n#else\n\t\tLOG_DBG(\"%p took mutex %p, count: %d\",\n\t\t\t_current, mutex, mutex->lock_count);\n#endif\n\n\t\tk_spin_unlock(&mutex_lock, key);\n\n\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_mutex, lock, mutex, timeout, 0);\n\n\t\treturn 0;\n\t}\n\n\tif (unlikely(K_TIMEOUT_EQ(timeout, K_NO_WAIT))) {\n\t\tk_spin_unlock(&mutex_lock, key);\n\n\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_mutex, lock, mutex, timeout, -EBUSY);\n\n\t\treturn -EBUSY;\n\t}\n\n\tSYS_PORT_TRACING_OBJ_FUNC_BLOCKING(k_mutex, lock, mutex, timeout);\n\n#if Z_MUTEX_PI_ENABLED\n\t/* Record the mutex this thread is blocking on for priority inheritance. */\n\t_current->mutex_pended_on = mutex;\n\n\t/*\n\t * Walk the ownership chain, boosting each owner's priority to match\n\t * the highest-priority waiter. Detects deadlock cycles along the way.\n\t */\n\t{\n\t\tint32_t boost_prio = new_prio_for_inheritance(\n\t\t\t\t\t_current->base.prio,\n\t\t\t\t\tmutex->owner->base.prio);\n\t\tstruct k_mutex  *chain_mutex = mutex;\n\t\tstruct k_thread *chain_owner = mutex->owner;\n\t\tint hops = 0;\n#if defined(CONFIG_MUTEX_DEADLOCK_DETECT)\n\t\tbool all_forever = K_TIMEOUT_EQ(timeout, K_FOREVER);\n#endif\n\n\t\tLOG_DBG(\"chain boosting prio on mutex %p\", mutex);\n\n\t\twhile (chain_owner != NULL) {\n#if defined(CONFIG_MUTEX_DEADLOCK_DETECT)\n\t\t\t/*\n\t\t\t * Deadlock detection: only when _current and every\n\t\t\t * chain member visited so far wait forever. all_forever\n\t\t\t * is updated on every hop, so a finite timeout anywhere\n\t\t\t * in the chain -- not just at the hop that closes the\n\t\t\t * cycle -- correctly rules out a false positive.\n\t\t\t * z_is_thread_pending() guards against a stale\n\t\t\t * mutex_pended_on in a thread that timed out but has\n\t\t\t * not yet cleared the field.\n\t\t\t */\n\t\t\tall_forever = all_forever &&\n\t\t\t\t      z_is_inactive_timeout(&chain_owner->base.timeout);\n\n\t\t\tif (all_forever &&\n\t\t\t    chain_owner->mutex_pended_on != NULL &&\n\t\t\t    z_is_thread_pending(chain_owner) &&\n\t\t\t    chain_owner->mutex_pended_on->owner == _current) {\n\t\t\t\t__ASSERT(false,\n\t\t\t\t\t\"mutex deadlock: thread %p waiting on \"\n\t\t\t\t\t\"mutex %p (owner %p)\",\n\t\t\t\t\t_current, mutex, mutex->owner);\n\t\t\t\tbreak;\n\t\t\t}\n#endif /* CONFIG_MUTEX_DEADLOCK_DETECT */\n\n\t\t\tif (z_is_prio_higher(boost_prio, chain_owner->base.prio)) {\n\t\t\t\tresched = adjust_owner_prio(chain_mutex, boost_prio)\n\t\t\t\t\t  || resched;\n\t\t\t}\n\n\t\t\t/*\n\t\t\t * Stop the chain walk if the owner is not actually\n\t\t\t * pending — its mutex_pended_on may be stale (e.g. it\n\t\t\t * just timed out but has not yet cleared the field).\n\t\t\t * Always boost the current owner first, then decide\n\t\t\t * whether to continue.\n\t\t\t */\n\t\t\tif (chain_owner->mutex_pended_on == NULL ||\n\t\t\t    !z_is_thread_pending(chain_owner)) {\n\t\t\t\tbreak;\n\t\t\t}\n\n\t\t\tchain_mutex = chain_owner->mutex_pended_on;\n\t\t\t/*\n\t\t\t * Cap the walk to prevent spinning on a cycle that\n\t\t\t * does not pass through the starting mutex.\n\t\t\t * MUTEX_CHAIN_WALK_MAX_HOPS bounds walk cost under\n\t\t\t * mutex_lock; it is not a real limit on chain length.\n\t\t\t * The chain_mutex == mutex check is a fast path for\n\t\t\t * the common 2-hop cycle through the starting mutex.\n\t\t\t */\n\t\t\tif (chain_mutex == mutex ||\n\t\t\t    ++hops >= MUTEX_CHAIN_WALK_MAX_HOPS) {\n\t\t\t\tbreak;\n\t\t\t}\n\t\t\tchain_owner = chain_mutex->owner;\n\t\t}\n\t}\n#endif\n\n\tint got_mutex = z_pend_curr(&mutex_lock, key, &mutex->wait_q, timeout);\n\n\tLOG_DBG(\"on mutex %p got_mutex value: %d\", mutex, got_mutex);\n\n\tLOG_DBG(\"%p got mutex %p (y/n): %c\", _current, mutex,\n\t\tgot_mutex ? 'y' : 'n');\n\n#if Z_MUTEX_PI_ENABLED\n\tif (got_mutex == 0) {\n\t\t/* Lock granted; clear the pending mutex pointer. */\n\t\t_current->mutex_pended_on = NULL;\n\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_mutex, lock, mutex, timeout, 0);\n\t\treturn 0;\n\t}\n\n\t/* timed out */\n\n\tLOG_DBG(\"%p timeout on mutex %p\", _current, mutex);\n\n\tkey = k_spin_lock(&mutex_lock);\n\n\t/*\n\t * Clear mutex_pended_on under mutex_lock so no concurrent chain walk\n\t * can observe the stale pointer and detect a false deadlock cycle.\n\t */\n\t_current->mutex_pended_on = NULL;\n\n\t/*\n\t * Check if mutex was unlocked after this thread was unpended.\n\t * If so, skip adjusting owner's priority down.\n\t */\n\tif (likely(mutex->owner != NULL)) {\n\t\t/*\n\t\t * Recalculate the owner's priority across all mutexes it still\n\t\t * holds; another held mutex may still justify a partial boost.\n\t\t */\n\t\tint32_t new_prio = held_mutexes_highest_waiter_prio(\n\t\t\t\t\t\tmutex->owner,\n\t\t\t\t\t\tmutex->owner->orig_prio);\n\n\t\tLOG_DBG(\"adjusting prio down on mutex %p\", mutex);\n\n\t\tresched = adjust_owner_prio(mutex, new_prio) || resched;\n\t}\n\n\tif (resched) {\n\t\tz_reschedule(&mutex_lock, key);\n\t} else {\n\t\tk_spin_unlock(&mutex_lock, key);\n\t}\n\n\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_mutex, lock, mutex, timeout, -EAGAIN);\n\n\treturn -EAGAIN;\n#else\n\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_mutex, lock, mutex, timeout, got_mutex);\n\n\treturn got_mutex;\n#endif\n}",
+      "inactive": [
+        [
+          236,
+          237
+        ],
+        [
+          273,
+          273
+        ],
+        [
+          280,
+          302
+        ],
+        [
+          395,
+          397
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/mutex.c#L202-L399"
+    },
+    "zephyr:kernel/mutex.c#adjust_owner_prio": {
+      "rtos": "zephyr",
+      "file": "kernel/mutex.c",
+      "symbol": "adjust_owner_prio",
+      "kind": "fn",
+      "startLine": 159,
+      "endLine": 171,
+      "code": "static bool adjust_owner_prio(struct k_mutex *mutex, int32_t new_prio)\n{\n\tif (mutex->owner->base.prio != new_prio) {\n\n\t\tLOG_DBG(\"%p (ready (y/n): %c) prio changed to %d (was %d)\",\n\t\t\tmutex->owner, z_is_thread_ready(mutex->owner) ?\n\t\t\t'y' : 'n',\n\t\t\tnew_prio, mutex->owner->base.prio);\n\n\t\treturn z_thread_prio_set(mutex->owner, new_prio);\n\t}\n\treturn false;\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/mutex.c#L159-L171"
+    },
+    "zephyr:kernel/mutex.c#new_prio_for_inheritance": {
+      "rtos": "zephyr",
+      "file": "kernel/mutex.c",
+      "symbol": "new_prio_for_inheritance",
+      "kind": "fn",
+      "startLine": 150,
+      "endLine": 157,
+      "code": "static int32_t new_prio_for_inheritance(int32_t target, int32_t limit)\n{\n\tint new_prio = z_is_prio_higher(target, limit) ? target : limit;\n\n\tnew_prio = z_get_new_prio_with_ceiling(new_prio);\n\n\treturn new_prio;\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/mutex.c#L150-L157"
+    }
+  },
+  "anchors": {
+    "freertos:tasks.c#xTaskIncrementTick/increment": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 4852
+    },
+    "freertos:tasks.c#xTaskIncrementTick/switch-lists": {
+      "symbol": "freertos:tasks.c#xTaskIncrementTick",
+      "line": 4860
+    },
+    "freertos:tasks.c#vTaskSwitchContext/select": {
+      "symbol": "freertos:tasks.c#vTaskSwitchContext",
+      "line": 5273
+    },
+    "freertos:tasks.c#xTaskPriorityInherit/compare": {
+      "symbol": "freertos:tasks.c#xTaskPriorityInherit",
+      "line": 6759
+    },
+    "freertos:tasks.c#xTaskPriorityInherit/raise-ready": {
+      "symbol": "freertos:tasks.c#xTaskPriorityInherit",
+      "line": 6790
+    },
+    "freertos:tasks.c#xTaskPriorityInherit/raise-not-ready": {
+      "symbol": "freertos:tasks.c#xTaskPriorityInherit",
+      "line": 6806
+    },
+    "freertos:queue.c#xQueueSemaphoreTake/inherit": {
+      "symbol": "freertos:queue.c#xQueueSemaphoreTake",
+      "line": 1795
+    },
+    "zephyr:kernel/sched.c#next_up/best": {
+      "symbol": "zephyr:kernel/sched.c#next_up",
+      "line": 74
+    },
+    "zephyr:kernel/sched.c#next_up/pick": {
+      "symbol": "zephyr:kernel/sched.c#next_up",
+      "line": 85
+    },
+    "zephyr:kernel/sched.c#update_cache/should-preempt": {
+      "symbol": "zephyr:kernel/sched.c#update_cache",
+      "line": 172
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/boost": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+      "line": 306
+    }
+  }
+}

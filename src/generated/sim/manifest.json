@@ -1,0 +1,82 @@
+{
+  "simulator": {
+    "version": "0.0.0",
+    "commit": "8b8c2423346fdb6d39129610c2d82304fcf06843",
+    "dirty": false
+  },
+  "kernels": {
+    "freertos": {
+      "name": "FreeRTOS",
+      "version": "V11.3.3",
+      "repo": "https://github.com/FreeRTOS/FreeRTOS-Kernel",
+      "commit": "89592801dd8b73329a7583719b7e3567b50910e5",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/LICENSE.md"
+    },
+    "zephyr": {
+      "name": "Zephyr",
+      "version": "v4.5.0",
+      "repo": "https://github.com/zephyrproject-rtos/zephyr",
+      "commit": "41d10b59730406bbab4ca9f1fbbe9e96aafb4966",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/LICENSE"
+    }
+  },
+  "bundle": {
+    "js": "rtos-sim.6b9baa2352.js",
+    "css": "rtos-sim.8e926c3642.css"
+  },
+  "scenarios": {
+    "preemption": {
+      "title": "Preemption",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ]
+    },
+    "priority-inversion-mutex": {
+      "title": "Priority inversion and inheritance",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ]
+    }
+  },
+  "events": [
+    "ContextSwitch",
+    "Block",
+    "Unblock",
+    "PrioChange",
+    "MutexOwner",
+    "Deadlock"
+  ],
+  "symbols": [
+    "freertos:tasks.c#xTaskIncrementTick",
+    "freertos:tasks.c#taskSWITCH_DELAYED_LISTS",
+    "freertos:tasks.c#vTaskSwitchContext",
+    "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK",
+    "freertos:tasks.c#prvAddTaskToReadyList",
+    "freertos:tasks.c#xTaskPriorityInherit",
+    "freertos:queue.c#xQueueSemaphoreTake",
+    "zephyr:kernel/sched.c#next_up",
+    "zephyr:kernel/sched.c#update_cache",
+    "zephyr:kernel/include/kthread.h#should_preempt",
+    "zephyr:kernel/timeslicing.c#z_time_slice",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+    "zephyr:kernel/mutex.c#adjust_owner_prio",
+    "zephyr:kernel/mutex.c#new_prio_for_inheritance"
+  ],
+  "anchors": [
+    "freertos:tasks.c#xTaskIncrementTick/increment",
+    "freertos:tasks.c#xTaskIncrementTick/switch-lists",
+    "freertos:tasks.c#vTaskSwitchContext/select",
+    "freertos:tasks.c#xTaskPriorityInherit/compare",
+    "freertos:tasks.c#xTaskPriorityInherit/raise-ready",
+    "freertos:tasks.c#xTaskPriorityInherit/raise-not-ready",
+    "freertos:queue.c#xQueueSemaphoreTake/inherit",
+    "zephyr:kernel/sched.c#next_up/best",
+    "zephyr:kernel/sched.c#next_up/pick",
+    "zephyr:kernel/sched.c#update_cache/should-preempt",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/boost"
+  ]
+}
