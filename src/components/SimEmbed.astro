@@ -55,8 +55,15 @@ const alt = `${scenarios[scenario].title} on ${kernels[first].name} ${kernels[fi
       document.head.append(link);
     }
     // The bundle defines the <rtos-sim> custom element. If it fails to load,
-    // the static SVG simply stays.
-    if (js) import(/* @vite-ignore */ js).catch(() => {});
+    // the static SVG simply stays. It is added as a script tag, not with
+    // import(): the Vite dev server rewrites a dynamic import to `<url>?import`
+    // and then refuses to serve it, because files in public/ cannot be imported.
+    if (js && !document.querySelector(`script[src="${js}"]`)) {
+      const script = document.createElement('script');
+      script.type = 'module';
+      script.src = js;
+      document.head.append(script);
+    }
   }
 
   if ('IntersectionObserver' in window) {
