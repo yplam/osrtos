@@ -288,6 +288,94 @@
       ],
       "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L6207-L6280"
     },
+    "freertos:tasks.c#vTaskPrioritySet": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "vTaskPrioritySet",
+      "kind": "fn",
+      "startLine": 2844,
+      "endLine": 3052,
+      "code": "void vTaskPrioritySet( TaskHandle_t xTask,\n                       UBaseType_t uxNewPriority )\n{\n    TCB_t * pxTCB;\n    UBaseType_t uxCurrentBasePriority, uxPriorityUsedOnEntry;\n    BaseType_t xYieldRequired = pdFALSE;\n\n    #if ( configNUMBER_OF_CORES > 1 )\n        BaseType_t xYieldForTask = pdFALSE;\n    #endif\n\n    traceENTER_vTaskPrioritySet( xTask, uxNewPriority );\n\n    configASSERT( uxNewPriority < configMAX_PRIORITIES );\n\n    /* Ensure the new priority is valid. */\n    if( uxNewPriority >= ( UBaseType_t ) configMAX_PRIORITIES )\n    {\n        uxNewPriority = ( UBaseType_t ) configMAX_PRIORITIES - ( UBaseType_t ) 1U;\n    }\n    else\n    {\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    taskENTER_CRITICAL();\n    {\n        /* If null is passed in here then it is the priority of the calling\n         * task that is being changed. */\n        pxTCB = prvGetTCBFromHandle( xTask );\n        configASSERT( pxTCB != NULL );\n\n        traceTASK_PRIORITY_SET( pxTCB, uxNewPriority );\n\n        #if ( configUSE_MUTEXES == 1 )\n        {\n            uxCurrentBasePriority = pxTCB->uxBasePriority;\n        }\n        #else\n        {\n            uxCurrentBasePriority = pxTCB->uxPriority;\n        }\n        #endif\n\n        if( uxCurrentBasePriority != uxNewPriority )\n        {\n            /* The priority change may have readied a task of higher\n             * priority than a running task. */\n            if( uxNewPriority > uxCurrentBasePriority )\n            {\n                #if ( configNUMBER_OF_CORES == 1 )\n                {\n                    if( pxTCB != pxCurrentTCB )\n                    {\n                        /* The priority of a task other than the currently\n                         * running task is being raised.  Is the priority being\n                         * raised above that of the running task? */\n                        if( uxNewPriority > pxCurrentTCB->uxPriority )\n                        {\n                            xYieldRequired = pdTRUE;\n                        }\n                        else\n                        {\n                            mtCOVERAGE_TEST_MARKER();\n                        }\n                    }\n                    else\n                    {\n                        /* The priority of the running task is being raised,\n                         * but the running task must already be the highest\n                         * priority task able to run so no yield is required. */\n                    }\n                }\n                #else /* #if ( configNUMBER_OF_CORES == 1 ) */\n                {\n                    /* The priority of a task is being raised so\n                     * perform a yield for this task later. */\n                    xYieldForTask = pdTRUE;\n                }\n                #endif /* #if ( configNUMBER_OF_CORES == 1 ) */\n            }\n            else if( taskTASK_IS_RUNNING( pxTCB ) == pdTRUE )\n            {\n                /* Setting the priority of a running task down means\n                 * there may now be another task of higher priority that\n                 * is ready to execute. */\n                #if ( configUSE_TASK_PREEMPTION_DISABLE == 1 )\n                    if( pxTCB->xPreemptionDisable == pdFALSE )\n                #endif\n                {\n                    xYieldRequired = pdTRUE;\n                }\n            }\n            else\n            {\n                /* Setting the priority of any other task down does not\n                 * require a yield as the running task must be above the\n                 * new priority of the task being modified. */\n            }\n\n            /* Remember the ready list the task might be referenced from\n             * before its uxPriority member is changed so the\n             * taskRESET_READY_PRIORITY() macro can function correctly. */\n            uxPriorityUsedOnEntry = pxTCB->uxPriority;\n\n            #if ( configUSE_MUTEXES == 1 )\n            {\n                /* Only change the priority being used if the task is not\n                 * currently using an inherited priority or the new priority\n                 * is bigger than the inherited priority. */\n                if( ( pxTCB->uxBasePriority == pxTCB->uxPriority ) || ( uxNewPriority > pxTCB->uxPriority ) )\n                {\n                    pxTCB->uxPriority = uxNewPriority;\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n\n                /* The base priority gets set whatever. */\n                pxTCB->uxBasePriority = uxNewPriority;\n            }\n            #else /* if ( configUSE_MUTEXES == 1 ) */\n            {\n                pxTCB->uxPriority = uxNewPriority;\n            }\n            #endif /* if ( configUSE_MUTEXES == 1 ) */\n\n            /* Only reset the event list item value if the value is not\n             * being used for anything else. */\n            if( ( listGET_LIST_ITEM_VALUE( &( pxTCB->xEventListItem ) ) & taskEVENT_LIST_ITEM_VALUE_IN_USE ) == ( ( TickType_t ) 0U ) )\n            {\n                listSET_LIST_ITEM_VALUE( &( pxTCB->xEventListItem ), ( ( TickType_t ) configMAX_PRIORITIES - ( TickType_t ) uxNewPriority ) );\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n\n            /* If the task is in the blocked or suspended list we need do\n             * nothing more than change its priority variable. However, if\n             * the task is in a ready list it needs to be removed and placed\n             * in the list appropriate to its new priority. */\n            if( listIS_CONTAINED_WITHIN( &( pxReadyTasksLists[ uxPriorityUsedOnEntry ] ), &( pxTCB->xStateListItem ) ) != pdFALSE )\n            {\n                /* The task is currently in its ready list - remove before\n                 * adding it to its new ready list.  As we are in a critical\n                 * section we can do this even if the scheduler is suspended. */\n                if( uxListRemove( &( pxTCB->xStateListItem ) ) == ( UBaseType_t ) 0 )\n                {\n                    /* It is known that the task is in its ready list so\n                     * there is no need to check again and the port level\n                     * reset macro can be called directly. */\n                    portRESET_READY_PRIORITY( uxPriorityUsedOnEntry, uxTopReadyPriority );\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n\n                prvAddTaskToReadyList( pxTCB );\n            }\n            else\n            {\n                #if ( configNUMBER_OF_CORES == 1 )\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n                #else\n                {\n                    /* It's possible that xYieldForTask was already set to pdTRUE because\n                     * its priority is being raised. However, since it is not in a ready list\n                     * we don't actually need to yield for it. */\n                    xYieldForTask = pdFALSE;\n                }\n                #endif\n            }\n\n            if( xYieldRequired != pdFALSE )\n            {\n                /* The running task priority is set down. Request the task to yield. */\n                taskYIELD_TASK_CORE_IF_USING_PREEMPTION( pxTCB );\n            }\n            else\n            {\n                #if ( configNUMBER_OF_CORES > 1 )\n                    if( xYieldForTask != pdFALSE )\n                    {\n                        /* The priority of the task is being raised. If a running\n                         * task has priority lower than this task, it should yield\n                         * for this task. */\n                        taskYIELD_ANY_CORE_IF_USING_PREEMPTION( pxTCB );\n                    }\n                    else\n                #endif /* if ( configNUMBER_OF_CORES > 1 ) */\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n\n            /* Remove compiler warning about unused variables when the port\n             * optimised task selection is not being used. */\n            ( void ) uxPriorityUsedOnEntry;\n        }\n    }\n    taskEXIT_CRITICAL();\n\n    traceRETURN_vTaskPrioritySet();\n}",
+      "inactive": [
+        [
+          2852,
+          2852
+        ],
+        [
+          2883,
+          2885
+        ],
+        [
+          2918,
+          2922
+        ],
+        [
+          2931,
+          2931
+        ],
+        [
+          2967,
+          2969
+        ],
+        [
+          3013,
+          3018
+        ],
+        [
+          3030,
+          3037
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L2844-L3052"
+    },
+    "freertos:tasks.c#vTaskSuspend": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "vTaskSuspend",
+      "kind": "fn",
+      "startLine": 3197,
+      "endLine": 3353,
+      "code": "void vTaskSuspend( TaskHandle_t xTaskToSuspend )\n{\n    TCB_t * pxTCB;\n\n    traceENTER_vTaskSuspend( xTaskToSuspend );\n\n    taskENTER_CRITICAL();\n    {\n        /* If null is passed in here then it is the running task that is\n         * being suspended. */\n        pxTCB = prvGetTCBFromHandle( xTaskToSuspend );\n        configASSERT( pxTCB != NULL );\n\n        traceTASK_SUSPEND( pxTCB );\n\n        /* Remove task from the ready/delayed list and place in the\n         * suspended list. */\n        if( uxListRemove( &( pxTCB->xStateListItem ) ) == ( UBaseType_t ) 0 )\n        {\n            taskRESET_READY_PRIORITY( pxTCB->uxPriority );\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n\n        /* Is the task waiting on an event also? */\n        if( listLIST_ITEM_CONTAINER( &( pxTCB->xEventListItem ) ) != NULL )\n        {\n            ( void ) uxListRemove( &( pxTCB->xEventListItem ) );\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n\n        vListInsertEnd( &xSuspendedTaskList, &( pxTCB->xStateListItem ) );\n\n        #if ( configUSE_TASK_NOTIFICATIONS == 1 )\n        {\n            BaseType_t x;\n\n            for( x = ( BaseType_t ) 0; x < ( BaseType_t ) configTASK_NOTIFICATION_ARRAY_ENTRIES; x++ )\n            {\n                if( pxTCB->ucNotifyState[ x ] == taskWAITING_NOTIFICATION )\n                {\n                    /* The task was blocked to wait for a notification, but is\n                     * now suspended, so no notification was received. */\n                    pxTCB->ucNotifyState[ x ] = taskNOT_WAITING_NOTIFICATION;\n                }\n            }\n        }\n        #endif /* if ( configUSE_TASK_NOTIFICATIONS == 1 ) */\n\n        /* In the case of SMP, it is possible that the task being suspended\n         * is running on another core. We must evict the task before\n         * exiting the critical section to ensure that the task cannot\n         * take an action which puts it back on ready/state/event list,\n         * thereby nullifying the suspend operation. Once evicted, the\n         * task won't be scheduled before it is resumed as it will no longer\n         * be on the ready list. */\n        #if ( configNUMBER_OF_CORES > 1 )\n        {\n            if( xSchedulerRunning != pdFALSE )\n            {\n                /* Reset the next expected unblock time in case it referred to the\n                 * task that is now in the Suspended state. */\n                prvResetNextTaskUnblockTime();\n\n                if( taskTASK_IS_RUNNING( pxTCB ) == pdTRUE )\n                {\n                    if( pxTCB->xTaskRunState == ( BaseType_t ) portGET_CORE_ID() )\n                    {\n                        /* The current task has just been suspended. */\n                        configASSERT( uxSchedulerSuspended == 0 );\n                        vTaskYieldWithinAPI();\n                    }\n                    else\n                    {\n                        prvYieldCore( pxTCB->xTaskRunState );\n                    }\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        #endif /* #if ( configNUMBER_OF_CORES > 1 ) */\n    }\n    taskEXIT_CRITICAL();\n\n    #if ( configNUMBER_OF_CORES == 1 )\n    {\n        UBaseType_t uxCurrentListLength;\n\n        if( xSchedulerRunning != pdFALSE )\n        {\n            /* Reset the next expected unblock time in case it referred to the\n             * task that is now in the Suspended state. */\n            taskENTER_CRITICAL();\n            {\n                prvResetNextTaskUnblockTime();\n            }\n            taskEXIT_CRITICAL();\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n\n        if( pxTCB == pxCurrentTCB )\n        {\n            if( xSchedulerRunning != pdFALSE )\n            {\n                /* The current task has just been suspended. */\n                configASSERT( uxSchedulerSuspended == 0 );\n                portYIELD_WITHIN_API();\n            }\n            else\n            {\n                /* The scheduler is not running, but the task that was pointed\n                 * to by pxCurrentTCB has just been suspended and pxCurrentTCB\n                 * must be adjusted to point to a different task. */\n\n                /* Use a temp variable as a distinct sequence point for reading\n                 * volatile variables prior to a comparison to ensure compliance\n                 * with MISRA C 2012 Rule 13.2. */\n                uxCurrentListLength = listCURRENT_LIST_LENGTH( &xSuspendedTaskList );\n\n                if( uxCurrentListLength == uxCurrentNumberOfTasks )\n                {\n                    /* No other tasks are ready, so set pxCurrentTCB back to\n                     * NULL so when the next task is created pxCurrentTCB will\n                     * be set to point to it no matter what its relative priority\n                     * is. */\n                    pxCurrentTCB = NULL;\n                }\n                else\n                {\n                    vTaskSwitchContext();\n                }\n            }\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n    }\n    #endif /* #if ( configNUMBER_OF_CORES == 1 ) */\n\n    traceRETURN_vTaskSuspend();\n}",
+      "inactive": [
+        [
+          3259,
+          3288
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L3197-L3353"
+    },
+    "freertos:tasks.c#prvTaskIsTaskSuspended": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "prvTaskIsTaskSuspended",
+      "kind": "fn",
+      "startLine": 3360,
+      "endLine": 3423,
+      "code": "STATIC BaseType_t prvTaskIsTaskSuspended( const TaskHandle_t xTask )\n{\n    BaseType_t xReturn = pdFALSE;\n    const TCB_t * const pxTCB = xTask;\n\n    /* Accesses xPendingReadyList so must be called from a critical\n     * section. */\n\n    /* It does not make sense to check if the calling task is suspended. */\n    configASSERT( xTask );\n\n    /* Is the task being resumed actually in the suspended list? */\n    if( listIS_CONTAINED_WITHIN( &xSuspendedTaskList, &( pxTCB->xStateListItem ) ) != pdFALSE )\n    {\n        /* Has the task already been resumed from within an ISR? */\n        if( listIS_CONTAINED_WITHIN( &xPendingReadyList, &( pxTCB->xEventListItem ) ) == pdFALSE )\n        {\n            /* Is it in the suspended list because it is in the Suspended\n             * state, or because it is blocked with no timeout? */\n            if( listIS_CONTAINED_WITHIN( NULL, &( pxTCB->xEventListItem ) ) != pdFALSE )\n            {\n                #if ( configUSE_TASK_NOTIFICATIONS == 1 )\n                {\n                    BaseType_t x;\n\n                    /* The task does not appear on the event list item of\n                     * and of the RTOS objects, but could still be in the\n                     * blocked state if it is waiting on its notification\n                     * rather than waiting on an object.  If not, is\n                     * suspended. */\n                    xReturn = pdTRUE;\n\n                    for( x = ( BaseType_t ) 0; x < ( BaseType_t ) configTASK_NOTIFICATION_ARRAY_ENTRIES; x++ )\n                    {\n                        if( pxTCB->ucNotifyState[ x ] == taskWAITING_NOTIFICATION )\n                        {\n                            xReturn = pdFALSE;\n                            break;\n                        }\n                    }\n                }\n                #else /* if ( configUSE_TASK_NOTIFICATIONS == 1 ) */\n                {\n                    xReturn = pdTRUE;\n                }\n                #endif /* if ( configUSE_TASK_NOTIFICATIONS == 1 ) */\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n    }\n    else\n    {\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    return xReturn;\n}",
+      "inactive": [
+        [
+          3402,
+          3404
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L3360-L3423"
+    },
+    "freertos:tasks.c#vTaskResume": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "vTaskResume",
+      "kind": "fn",
+      "startLine": 3430,
+      "endLine": 3483,
+      "code": "void vTaskResume( TaskHandle_t xTaskToResume )\n{\n    TCB_t * const pxTCB = xTaskToResume;\n\n    traceENTER_vTaskResume( xTaskToResume );\n\n    /* It does not make sense to resume the calling task. */\n    configASSERT( xTaskToResume );\n\n    #if ( configNUMBER_OF_CORES == 1 )\n\n        /* The parameter cannot be NULL as it is impossible to resume the\n         * currently executing task. */\n        if( ( pxTCB != pxCurrentTCB ) && ( pxTCB != NULL ) )\n    #else\n\n        /* The parameter cannot be NULL as it is impossible to resume the\n         * currently executing task. It is also impossible to resume a task\n         * that is actively running on another core but it is not safe\n         * to check their run state here. Therefore, we get into a critical\n         * section and check if the task is actually suspended or not. */\n        if( pxTCB != NULL )\n    #endif\n    {\n        taskENTER_CRITICAL();\n        {\n            if( prvTaskIsTaskSuspended( pxTCB ) != pdFALSE )\n            {\n                traceTASK_RESUME( pxTCB );\n\n                /* The ready list can be accessed even if the scheduler is\n                 * suspended because this is inside a critical section. */\n                ( void ) uxListRemove( &( pxTCB->xStateListItem ) );\n                prvAddTaskToReadyList( pxTCB );\n\n                /* This yield may not cause the task just resumed to run,\n                 * but will leave the lists in the correct state for the\n                 * next yield. */\n                taskYIELD_ANY_CORE_IF_USING_PREEMPTION( pxTCB );\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        taskEXIT_CRITICAL();\n    }\n    else\n    {\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    traceRETURN_vTaskResume();\n}",
+      "inactive": [
+        [
+          3445,
+          3451
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L3430-L3483"
+    },
     "freertos:tasks.c#vTaskPlaceOnEventList": {
       "rtos": "freertos",
       "file": "tasks.c",
@@ -801,6 +889,134 @@
     "freertos:tasks.c#prvCheckTasksWaitingTermination/delete": {
       "symbol": "freertos:tasks.c#prvCheckTasksWaitingTermination",
       "line": 6235
+    },
+    "freertos:tasks.c#vTaskPrioritySet/get-tcb": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 2873
+    },
+    "freertos:tasks.c#vTaskPrioritySet/changed-check": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 2888
+    },
+    "freertos:tasks.c#vTaskPrioritySet/above-running": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 2901
+    },
+    "freertos:tasks.c#vTaskPrioritySet/yield-raised": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 2903
+    },
+    "freertos:tasks.c#vTaskPrioritySet/lower-running": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 2925
+    },
+    "freertos:tasks.c#vTaskPrioritySet/yield-lowered": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 2934
+    },
+    "freertos:tasks.c#vTaskPrioritySet/inherited-check": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 2954
+    },
+    "freertos:tasks.c#vTaskPrioritySet/set": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 2956
+    },
+    "freertos:tasks.c#vTaskPrioritySet/set-base": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 2964
+    },
+    "freertos:tasks.c#vTaskPrioritySet/event-value": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 2976
+    },
+    "freertos:tasks.c#vTaskPrioritySet/ready-check": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 2987
+    },
+    "freertos:tasks.c#vTaskPrioritySet/remove": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 2992
+    },
+    "freertos:tasks.c#vTaskPrioritySet/add": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 3004
+    },
+    "freertos:tasks.c#vTaskPrioritySet/yield": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 3025
+    },
+    "freertos:tasks.c#vTaskPrioritySet/return": {
+      "symbol": "freertos:tasks.c#vTaskPrioritySet",
+      "line": 3051
+    },
+    "freertos:tasks.c#vTaskSuspend/get-tcb": {
+      "symbol": "freertos:tasks.c#vTaskSuspend",
+      "line": 3207
+    },
+    "freertos:tasks.c#vTaskSuspend/remove": {
+      "symbol": "freertos:tasks.c#vTaskSuspend",
+      "line": 3214
+    },
+    "freertos:tasks.c#vTaskSuspend/event-check": {
+      "symbol": "freertos:tasks.c#vTaskSuspend",
+      "line": 3224
+    },
+    "freertos:tasks.c#vTaskSuspend/remove-event": {
+      "symbol": "freertos:tasks.c#vTaskSuspend",
+      "line": 3226
+    },
+    "freertos:tasks.c#vTaskSuspend/insert": {
+      "symbol": "freertos:tasks.c#vTaskSuspend",
+      "line": 3233
+    },
+    "freertos:tasks.c#vTaskSuspend/reset-unblock": {
+      "symbol": "freertos:tasks.c#vTaskSuspend",
+      "line": 3303
+    },
+    "freertos:tasks.c#vTaskSuspend/current-check": {
+      "symbol": "freertos:tasks.c#vTaskSuspend",
+      "line": 3312
+    },
+    "freertos:tasks.c#vTaskSuspend/yield": {
+      "symbol": "freertos:tasks.c#vTaskSuspend",
+      "line": 3318
+    },
+    "freertos:tasks.c#vTaskSuspend/return": {
+      "symbol": "freertos:tasks.c#vTaskSuspend",
+      "line": 3352
+    },
+    "freertos:tasks.c#prvTaskIsTaskSuspended/in-list": {
+      "symbol": "freertos:tasks.c#prvTaskIsTaskSuspended",
+      "line": 3372
+    },
+    "freertos:tasks.c#prvTaskIsTaskSuspended/event-check": {
+      "symbol": "freertos:tasks.c#prvTaskIsTaskSuspended",
+      "line": 3379
+    },
+    "freertos:tasks.c#prvTaskIsTaskSuspended/suspended": {
+      "symbol": "freertos:tasks.c#prvTaskIsTaskSuspended",
+      "line": 3390
+    },
+    "freertos:tasks.c#vTaskResume/suspended-check": {
+      "symbol": "freertos:tasks.c#vTaskResume",
+      "line": 3456
+    },
+    "freertos:tasks.c#vTaskResume/remove": {
+      "symbol": "freertos:tasks.c#vTaskResume",
+      "line": 3462
+    },
+    "freertos:tasks.c#vTaskResume/add": {
+      "symbol": "freertos:tasks.c#vTaskResume",
+      "line": 3463
+    },
+    "freertos:tasks.c#vTaskResume/yield": {
+      "symbol": "freertos:tasks.c#vTaskResume",
+      "line": 3468
+    },
+    "freertos:tasks.c#vTaskResume/return": {
+      "symbol": "freertos:tasks.c#vTaskResume",
+      "line": 3482
     },
     "freertos:tasks.c#vTaskPlaceOnEventList/insert": {
       "symbol": "freertos:tasks.c#vTaskPlaceOnEventList",

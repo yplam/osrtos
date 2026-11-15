@@ -1,7 +1,7 @@
 {
   "simulator": {
     "version": "0.0.0",
-    "commit": "fbb78499951de6a8e2f538cd30f0b0a08fc95686",
+    "commit": "4e5ad43e6bdf736267992184c4a829e2e8cbd7c9",
     "dirty": false
   },
   "kernels": {
@@ -23,10 +23,10 @@
     }
   },
   "bundle": {
-    "js": "rtos-sim.f87dcea428.js",
+    "js": "rtos-sim.d4d5ec0f3d.js",
     "css": "rtos-sim.cbbb96b5a7.css",
     "code": {
-      "freertos": "code.freertos.d68e941953.json"
+      "freertos": "code.freertos.32b7af1a7d.json"
     }
   },
   "scenarios": {
@@ -139,6 +139,8 @@
     "Unblock",
     "TaskEnd",
     "PrioChange",
+    "Suspend",
+    "Resume",
     "Take",
     "Give",
     "Timeout",
@@ -162,6 +164,10 @@
     "freertos:tasks.c#vTaskDelete",
     "freertos:tasks.c#prvIdleTask",
     "freertos:tasks.c#prvCheckTasksWaitingTermination",
+    "freertos:tasks.c#vTaskPrioritySet",
+    "freertos:tasks.c#vTaskSuspend",
+    "freertos:tasks.c#prvTaskIsTaskSuspended",
+    "freertos:tasks.c#vTaskResume",
     "freertos:tasks.c#vTaskPlaceOnEventList",
     "freertos:tasks.c#xTaskRemoveFromEventList",
     "freertos:tasks.c#xTaskCheckForTimeOut",
@@ -238,6 +244,38 @@
     "freertos:tasks.c#prvIdleTask/check-termination",
     "freertos:tasks.c#prvCheckTasksWaitingTermination/remove",
     "freertos:tasks.c#prvCheckTasksWaitingTermination/delete",
+    "freertos:tasks.c#vTaskPrioritySet/get-tcb",
+    "freertos:tasks.c#vTaskPrioritySet/changed-check",
+    "freertos:tasks.c#vTaskPrioritySet/above-running",
+    "freertos:tasks.c#vTaskPrioritySet/yield-raised",
+    "freertos:tasks.c#vTaskPrioritySet/lower-running",
+    "freertos:tasks.c#vTaskPrioritySet/yield-lowered",
+    "freertos:tasks.c#vTaskPrioritySet/inherited-check",
+    "freertos:tasks.c#vTaskPrioritySet/set",
+    "freertos:tasks.c#vTaskPrioritySet/set-base",
+    "freertos:tasks.c#vTaskPrioritySet/event-value",
+    "freertos:tasks.c#vTaskPrioritySet/ready-check",
+    "freertos:tasks.c#vTaskPrioritySet/remove",
+    "freertos:tasks.c#vTaskPrioritySet/add",
+    "freertos:tasks.c#vTaskPrioritySet/yield",
+    "freertos:tasks.c#vTaskPrioritySet/return",
+    "freertos:tasks.c#vTaskSuspend/get-tcb",
+    "freertos:tasks.c#vTaskSuspend/remove",
+    "freertos:tasks.c#vTaskSuspend/event-check",
+    "freertos:tasks.c#vTaskSuspend/remove-event",
+    "freertos:tasks.c#vTaskSuspend/insert",
+    "freertos:tasks.c#vTaskSuspend/reset-unblock",
+    "freertos:tasks.c#vTaskSuspend/current-check",
+    "freertos:tasks.c#vTaskSuspend/yield",
+    "freertos:tasks.c#vTaskSuspend/return",
+    "freertos:tasks.c#prvTaskIsTaskSuspended/in-list",
+    "freertos:tasks.c#prvTaskIsTaskSuspended/event-check",
+    "freertos:tasks.c#prvTaskIsTaskSuspended/suspended",
+    "freertos:tasks.c#vTaskResume/suspended-check",
+    "freertos:tasks.c#vTaskResume/remove",
+    "freertos:tasks.c#vTaskResume/add",
+    "freertos:tasks.c#vTaskResume/yield",
+    "freertos:tasks.c#vTaskResume/return",
     "freertos:tasks.c#vTaskPlaceOnEventList/insert",
     "freertos:tasks.c#vTaskPlaceOnEventList/delay",
     "freertos:tasks.c#xTaskRemoveFromEventList/remove-event",
