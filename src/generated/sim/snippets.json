@@ -555,6 +555,107 @@
       "inactive": [],
       "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L2395-L2475"
     },
+    "zephyr:kernel/init.c#z_init_static_threads": {
+      "rtos": "zephyr",
+      "file": "kernel/init.c",
+      "symbol": "z_init_static_threads",
+      "kind": "fn",
+      "startLine": 65,
+      "endLine": 106,
+      "code": "static void z_init_static_threads(void)\n{\n\tSTRUCT_SECTION_FOREACH(_static_thread_data, thread_data) {\n\t\tz_setup_new_thread(\n\t\t\tthread_data->init_thread,\n\t\t\tthread_data->init_stack,\n\t\t\tthread_data->init_stack_size,\n\t\t\tthread_data->init_entry,\n\t\t\tthread_data->init_p1,\n\t\t\tthread_data->init_p2,\n\t\t\tthread_data->init_p3,\n\t\t\tthread_data->init_prio,\n\t\t\tthread_data->init_options,\n\t\t\tthread_data->init_name);\n\n\t\tthread_data->init_thread->init_data = thread_data;\n\t}\n\n#ifdef CONFIG_USERSPACE\n\tSTRUCT_SECTION_FOREACH(k_object_assignment, pos) {\n\t\tfor (int i = 0; pos->objects[i] != NULL; i++) {\n\t\t\tk_object_access_grant(pos->objects[i],\n\t\t\t\t\t      pos->thread);\n\t\t}\n\t}\n#endif /* CONFIG_USERSPACE */\n\n\t/*\n\t * Static threads may be started immediately or\n\t * after a previously specified delay. Even though the\n\t * scheduler is locked, ticks can still be delivered and\n\t * processed. Take a sched lock to prevent them from running\n\t * until they are all started.\n\t */\n\tk_sched_lock();\n\tSTRUCT_SECTION_FOREACH(_static_thread_data, thread_data) {\n\t\tk_timeout_t init_delay = Z_THREAD_INIT_DELAY(thread_data);\n\n\t\tthread_schedule_new(thread_data->init_thread, init_delay);\n\t}\n\tk_sched_unlock();\n}",
+      "inactive": [
+        [
+          84,
+          89
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/init.c#L65-L106"
+    },
+    "zephyr:kernel/init.c#bg_thread_main": {
+      "rtos": "zephyr",
+      "file": "kernel/init.c",
+      "symbol": "bg_thread_main",
+      "kind": "fn",
+      "startLine": 265,
+      "endLine": 355,
+      "code": "__boot_func\nstatic void bg_thread_main(void *unused1, void *unused2, void *unused3)\n{\n\tARG_UNUSED(unused1);\n\tARG_UNUSED(unused2);\n\tARG_UNUSED(unused3);\n\n#ifdef CONFIG_MMU\n\t/* Invoked here such that backing store or eviction algorithms may\n\t * initialize kernel objects, and that all POST_KERNEL and later tasks\n\t * may perform memory management tasks (except for\n\t * k_mem_map_phys_bare() which is allowed at any time)\n\t */\n\tz_mem_manage_init();\n#endif /* CONFIG_MMU */\n\tz_sys_post_kernel = true;\n\n#if CONFIG_IRQ_OFFLOAD\n\tarch_irq_offload_init();\n#endif\n\n\t/* Run kernel post-init hooks before POST_KERNEL device init, so that\n\t * drivers initialized there may use them (e.g. submit to the system\n\t * work queue). Entries are present only for subsystems that are linked\n\t * in (pay-per-use); the walk references only the section bounds.\n\t */\n\tSTRUCT_SECTION_FOREACH(k_kernel_init_post_entry, entry) {\n\t\tentry->init_fn();\n\t}\n\n\tz_sys_init_run_level(INIT_LEVEL_POST_KERNEL);\n\n\tsoc_late_init_hook();\n\n\tboard_late_init_hook();\n\n#if defined(CONFIG_STACK_POINTER_RANDOM) && (CONFIG_STACK_POINTER_RANDOM != 0)\n\tz_stack_adjust_initialized = 1;\n#endif /* CONFIG_STACK_POINTER_RANDOM */\n\n#ifdef CONFIG_STATIC_INIT_GNU\n\tz_static_init_gnu();\n#endif /* CONFIG_STATIC_INIT_GNU */\n\n\t/* Final init level before app starts */\n\tz_sys_init_run_level(INIT_LEVEL_APPLICATION);\n\n\tz_init_static_threads();\n\n#ifdef CONFIG_KERNEL_COHERENCE\n\t__ASSERT_NO_MSG(sys_cache_is_mem_coherent(&_kernel));\n#endif /* CONFIG_KERNEL_COHERENCE */\n\n#ifdef CONFIG_SMP\n\t/* Start the secondary CPUs; CPUs whose devicetree node carries\n\t * zephyr,deferred-start are skipped and left for a run-time\n\t * k_smp_cpu_start()/k_smp_cpu_resume().\n\t */\n\tz_smp_init();\n\tz_sys_init_run_level(INIT_LEVEL_SMP);\n#endif /* CONFIG_SMP */\n\n#ifdef CONFIG_MMU\n\tz_mem_manage_boot_finish();\n#endif /* CONFIG_MMU */\n\n#ifdef CONFIG_BOOTARGS\n\textern int main(int argc, char **argv);\n\textern char **sys_boot_prepare_main_args(int *argc);\n\n\tint argc = 0;\n\tchar **argv = sys_boot_prepare_main_args(&argc);\n\t(void)main(argc, argv);\n#else\n\textern int main(void);\n\n\t(void)main();\n#endif /* CONFIG_BOOTARGS */\n\n#ifdef CONFIG_MULTITHREADING\n\t/* Mark non-essential since main() has no more work to do */\n\tz_thread_essential_clear(&z_main_thread);\n#endif\n\n#ifdef CONFIG_COVERAGE_DUMP\n\t/* Dump coverage data once the main() has exited. */\n\tgcov_coverage_dump();\n#elif defined(CONFIG_COVERAGE_SEMIHOST)\n\tgcov_coverage_semihost();\n#endif /* CONFIG_COVERAGE_DUMP */\n} /* LCOV_EXCL_LINE ... because we just dumped final coverage data */",
+      "inactive": [
+        [
+          273,
+          278
+        ],
+        [
+          315,
+          315
+        ],
+        [
+          319,
+          324
+        ],
+        [
+          328,
+          328
+        ],
+        [
+          332,
+          337
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/init.c#L265-L355"
+    },
+    "zephyr:kernel/sys/thread_entry.c#z_thread_entry": {
+      "rtos": "zephyr",
+      "file": "kernel/sys/thread_entry.c",
+      "symbol": "z_thread_entry",
+      "kind": "fn",
+      "startLine": 36,
+      "endLine": 70,
+      "code": "FUNC_NORETURN void z_thread_entry(k_thread_entry_t entry,\n\t\t\t\t void *p1, void *p2, void *p3)\n{\n/*\n * Inform the unwinder that the current return address is undefined.\n *\n * This is typically used at points in the code where execution does not\n * return like a normal function (for example, thread entry routines).\n * Marking the return address as undefined prevents stack unwinding or\n * backtrace tools from following a bogus return address, which could\n * otherwise lead to reading invalid memory and cause faults during\n * unwinding or debugging.\n */\n\tARCH_CFI_UNDEFINED_RETURN_ADDRESS();\n#ifdef CONFIG_CURRENT_THREAD_USE_TLS\n\tz_tls_current = k_sched_current_thread_query();\n#endif\n#ifdef CONFIG_STACK_CANARIES_TLS\n\tuintptr_t stack_guard;\n\n\tsys_rand_get((uint8_t *)&stack_guard, sizeof(stack_guard));\n\t__stack_chk_guard = stack_guard;\n\t__stack_chk_guard <<= 8;\n#endif\t/* CONFIG_STACK_CANARIES_TLS */\n\tentry(p1, p2, p3);\n\n\tk_thread_abort(k_current_get());\n\n\t/*\n\t * Compiler can't tell that k_thread_abort() won't return and issues a\n\t * warning unless we tell it that control never gets this far.\n\t */\n\n\tCODE_UNREACHABLE; /* LCOV_EXCL_LINE */\n}",
+      "inactive": [
+        [
+          51,
+          51
+        ],
+        [
+          54,
+          58
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sys/thread_entry.c#L36-L70"
+    },
+    "zephyr:kernel/scheduler.c#k_sched_unlock": {
+      "rtos": "zephyr",
+      "file": "kernel/scheduler.c",
+      "symbol": "k_sched_unlock",
+      "kind": "fn",
+      "startLine": 41,
+      "endLine": 51,
+      "code": "void k_sched_unlock(void)\n{\n\tSYS_PORT_TRACING_FUNC(k_thread, sched_unlock);\n\n\tk_spinlock_key_t key = z_sched_spinlock_lock();\n\n\t__ASSERT(_current->base.sched_locked != 0U, \"\");\n\t__ASSERT(!arch_is_in_isr(), \"\");\n\t++_current->base.sched_locked;\n\tz_sched_lock_reschedule(key);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/scheduler.c#L41-L51"
+    },
+    "zephyr:kernel/sched.c#z_sched_lock_reschedule": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "z_sched_lock_reschedule",
+      "kind": "fn",
+      "startLine": 421,
+      "endLine": 425,
+      "code": "void z_sched_lock_reschedule(k_spinlock_key_t key)\n{\n\tupdate_cache(0);\n\treschedule_locked(key);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L421-L425"
+    },
+    "zephyr:kernel/thread.c#z_impl_k_wakeup": {
+      "rtos": "zephyr",
+      "file": "kernel/thread.c",
+      "symbol": "z_impl_k_wakeup",
+      "kind": "fn",
+      "startLine": 1749,
+      "endLine": 1763,
+      "code": "void z_impl_k_wakeup(k_tid_t thread)\n{\n\tSYS_PORT_TRACING_OBJ_FUNC(k_thread, wakeup, thread);\n\n\tk_spinlock_key_t key = z_sched_spinlock_lock();\n\n\tif (z_is_thread_sleeping(thread)) {\n\t\t(void)z_try_abort_thread_timeout(thread);\n\t\tz_mark_thread_as_not_sleeping(thread);\n\t\tz_sched_ready_locked(thread);\n\t\tz_reschedule_locked(key);\n\t} else {\n\t\tz_sched_spinlock_unlock(key);\n\t}\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/thread.c#L1749-L1763"
+    },
     "zephyr:kernel/sched.c#next_up": {
       "rtos": "zephyr",
       "file": "kernel/sched.c",
@@ -602,6 +703,195 @@
       "inactive": [],
       "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/include/kthread.h#L225-L260"
     },
+    "zephyr:kernel/sched.c#ready_thread": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "ready_thread",
+      "kind": "fn",
+      "startLine": 218,
+      "endLine": 235,
+      "code": "static inline void ready_thread(struct k_thread *thread)\n{\n#ifdef CONFIG_KERNEL_COHERENCE\n\t__ASSERT_NO_MSG(sys_cache_is_mem_coherent(thread));\n#endif /* CONFIG_KERNEL_COHERENCE */\n\n\t/* If thread is queued already, do not try and added it to the\n\t * run queue again\n\t */\n\tif (!z_is_thread_queued(thread) && z_is_thread_ready(thread)) {\n\t\tSYS_PORT_TRACING_OBJ_FUNC(k_thread, sched_ready, thread);\n\n\t\tqueue_thread(thread);\n\t\tupdate_cache(0);\n\n\t\tflag_ipi(ipi_mask_create(thread));\n\t}\n}",
+      "inactive": [
+        [
+          221,
+          221
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L218-L235"
+    },
+    "zephyr:kernel/sched.c#unready_thread": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "unready_thread",
+      "kind": "fn",
+      "startLine": 248,
+      "endLine": 256,
+      "code": "static void unready_thread(struct k_thread *thread)\n{\n\tif (z_is_thread_queued(thread)) {\n\t\t/* Clear idle CPU coverage before removing the thread from the run queue. */\n\t\tipi_idle_thread_unreserve(thread);\n\t\tdequeue_thread(thread);\n\t}\n\tupdate_cache(thread == _current);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L248-L256"
+    },
+    "zephyr:kernel/include/priority_q.h#z_priq_simple_add": {
+      "rtos": "zephyr",
+      "file": "kernel/include/priority_q.h",
+      "symbol": "z_priq_simple_add",
+      "kind": "inline",
+      "startLine": 114,
+      "endLine": 126,
+      "code": "static ALWAYS_INLINE void z_priq_simple_add(sys_dlist_t *pq, struct k_thread *thread)\n{\n\tstruct k_thread *t;\n\n\tSYS_DLIST_FOR_EACH_CONTAINER(pq, t, base.qnode_dlist) {\n\t\tif (z_sched_prio_cmp(thread, t) > 0) {\n\t\t\tsys_dlist_insert(&t->base.qnode_dlist, &thread->base.qnode_dlist);\n\t\t\treturn;\n\t\t}\n\t}\n\n\tsys_dlist_append(pq, &thread->base.qnode_dlist);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/include/priority_q.h#L114-L126"
+    },
+    "zephyr:kernel/include/priority_q.h#z_priq_simple_yield": {
+      "rtos": "zephyr",
+      "file": "kernel/include/priority_q.h",
+      "symbol": "z_priq_simple_yield",
+      "kind": "inline",
+      "startLine": 135,
+      "endLine": 164,
+      "code": "static ALWAYS_INLINE void z_priq_simple_yield(sys_dlist_t *pq)\n{\n#ifndef CONFIG_SMP\n\tsys_dnode_t *n;\n\n\tn = sys_dlist_peek_next_no_check(pq, &_current->base.qnode_dlist);\n\n\tsys_dlist_dequeue(&_current->base.qnode_dlist);\n\n\tstruct k_thread *t;\n\n\t/*\n\t * As it is possible that the current thread was not at the head of\n\t * the run queue, start searching from the present position for where\n\t * to re-insert it.\n\t */\n\n\twhile (n != NULL) {\n\t\tt = CONTAINER_OF(n, struct k_thread, base.qnode_dlist);\n\t\tif (z_sched_prio_cmp(_current, t) > 0) {\n\t\t\tsys_dlist_insert(&t->base.qnode_dlist,\n\t\t\t\t\t &_current->base.qnode_dlist);\n\t\t\treturn;\n\t\t}\n\t\tn = sys_dlist_peek_next_no_check(pq, n);\n\t}\n\n\tsys_dlist_append(pq, &_current->base.qnode_dlist);\n#endif\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/include/priority_q.h#L135-L164"
+    },
+    "zephyr:kernel/sched.c#reschedule": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "reschedule",
+      "kind": "fn",
+      "startLine": 403,
+      "endLine": 411,
+      "code": "static void reschedule(struct k_spinlock *lock, k_spinlock_key_t key)\n{\n\tif (resched(key.key) && need_swap()) {\n\t\tz_swap(lock, key);\n\t} else {\n\t\tsignal_pending_ipi();\n\t\tk_spin_unlock(lock, key);\n\t}\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L403-L411"
+    },
+    "zephyr:kernel/sched.c#z_reschedule_irqlock": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "z_reschedule_irqlock",
+      "kind": "fn",
+      "startLine": 647,
+      "endLine": 660,
+      "code": "void z_reschedule_irqlock(uint32_t key)\n{\n\tif (resched(key) && need_swap()) {\n\t\tz_swap_irqlock(key);\n\t} else {\n\t\t/* TODO: We only hold the IRQ lock here, not the scheduler's\n\t\t * spinlock, violating the locking requirement documented in\n\t\t * signal_pending_ipi(). This can result in added delayed\n\t\t * rescheduling.\n\t\t */\n\t\tsignal_pending_ipi();\n\t\tirq_unlock(key);\n\t}\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L647-L660"
+    },
+    "zephyr:arch/posix/core/swap.c#arch_swap": {
+      "rtos": "zephyr",
+      "file": "arch/posix/core/swap.c",
+      "symbol": "arch_swap",
+      "kind": "fn",
+      "startLine": 22,
+      "endLine": 71,
+      "code": "int arch_swap(unsigned int key)\n{\n\t/*\n\t * struct k_thread * _current is the currently running thread\n\t * struct k_thread * _kernel.ready_q.cache contains the next thread to\n\t * run (cannot be NULL)\n\t *\n\t * Here a \"real\" arch would save all processor registers, stack pointer\n\t * and so forth.  But we do not need to do so because we use posix\n\t * threads => those are all nicely kept by the native OS kernel\n\t */\n#if CONFIG_INSTRUMENT_THREAD_SWITCHING\n\tz_thread_mark_switched_out();\n#endif\n\t_current->callee_saved.key = key;\n\t_current->callee_saved.retval = -EAGAIN;\n\n\t/* retval may be modified with a call to\n\t * arch_thread_return_value_set()\n\t */\n\n\tposix_thread_status_t *ready_thread_ptr =\n\t\t(posix_thread_status_t *)\n\t\t_kernel.ready_q.cache->callee_saved.thread_status;\n\n\tposix_thread_status_t *this_thread_ptr  =\n\t\t(posix_thread_status_t *)\n\t\t_current->callee_saved.thread_status;\n\n\n\tz_current_thread_set(_kernel.ready_q.cache);\n#if CONFIG_INSTRUMENT_THREAD_SWITCHING\n\tz_thread_mark_switched_in();\n#endif\n\n\t/*\n\t * Here a \"real\" arch would load all processor registers for the thread\n\t * to run. In this arch case, we just block this thread until allowed\n\t * to run later, and signal to whomever is allowed to run to\n\t * continue.\n\t */\n\tposix_swap(ready_thread_ptr->thread_idx,\n\t\tthis_thread_ptr->thread_idx);\n\n\t/* When we continue, _kernel->current points back to this thread */\n\n\tirq_unlock(_current->callee_saved.key);\n\n\treturn _current->callee_saved.retval;\n}",
+      "inactive": [
+        [
+          34,
+          34
+        ],
+        [
+          54,
+          54
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/arch/posix/core/swap.c#L22-L71"
+    },
+    "zephyr:boards/native/native_sim/irq_handler.c#posix_irq_handler": {
+      "rtos": "zephyr",
+      "file": "boards/native/native_sim/irq_handler.c",
+      "symbol": "posix_irq_handler",
+      "kind": "fn",
+      "startLine": 67,
+      "endLine": 120,
+      "code": "void posix_irq_handler(void)\n{\n\tuint64_t irq_lock;\n\tint irq_nbr;\n\tstatic int may_swap;\n\n\tirq_lock = hw_irq_ctrl_get_current_lock();\n\n\tif (irq_lock) {\n\t\t/* \"spurious\" wakes can happen with interrupts locked */\n\t\treturn;\n\t}\n\n\tirq_nbr = hw_irq_ctrl_get_highest_prio_irq();\n\n\tif (irq_nbr == -1) {\n\t\t/* This is a phony interrupt during a busy wait, no need for more */\n\t\treturn;\n\t}\n\n\tif (_kernel.cpus[0].nested == 0) {\n\t\tmay_swap = 0;\n\t}\n\n\t_kernel.cpus[0].nested++;\n\n\tdo {\n\t\tint last_current_running_prio = hw_irq_ctrl_get_cur_prio();\n\t\tint last_running_irq = currently_running_irq;\n\n\t\thw_irq_ctrl_set_cur_prio(hw_irq_ctrl_get_prio(irq_nbr));\n\t\thw_irq_ctrl_clear_irq(irq_nbr);\n\n\t\tcurrently_running_irq = irq_nbr;\n\t\tvector_to_irq(irq_nbr, &may_swap);\n\t\tcurrently_running_irq = last_running_irq;\n\n\t\thw_irq_ctrl_set_cur_prio(last_current_running_prio);\n\t} while ((irq_nbr = hw_irq_ctrl_get_highest_prio_irq()) != -1);\n\n\t_kernel.cpus[0].nested--;\n\n\t/* Call swap if all the following is true:\n\t * 1) may_swap was enabled\n\t * 2) We are not nesting irq_handler calls (interrupts)\n\t * 3) Next thread to run in the ready queue is not this thread\n\t */\n\tif (may_swap\n\t\t&& (hw_irq_ctrl_get_cur_prio() == 256)\n\t\t&& (_kernel.ready_q.cache) && (_kernel.ready_q.cache != _current)) {\n\n\t\t(void)z_swap_irqlock(irq_lock);\n\t}\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/boards/native/native_sim/irq_handler.c#L67-L120"
+    },
+    "zephyr:kernel/timeout.c#sys_clock_announce_locked": {
+      "rtos": "zephyr",
+      "file": "kernel/timeout.c",
+      "symbol": "sys_clock_announce_locked",
+      "kind": "fn",
+      "startLine": 343,
+      "endLine": 417,
+      "code": "void sys_clock_announce_locked(uint32_t ticks, k_spinlock_key_t key)\n{\n\t/* We release the lock around the callbacks below, so on SMP\n\t * systems someone might be already running the loop.  Don't\n\t * race (which will cause parallel execution of \"sequential\"\n\t * timeouts and confuse apps), just increment the tick count\n\t * and return.\n\t */\n\tif (IS_ENABLED(CONFIG_SMP) && any_cpu_announcing()) {\n\t\tannounce_remaining += ticks;\n\t\tk_spin_unlock(&timeout_lock, key);\n\t\treturn;\n\t}\n\n\tannounce_remaining = ticks;\n\tannouncing_cpu = CPU_ID;\n\n#ifdef _TIMEOUT_BACKEND_OWNS_ANNOUNCE\n\t/* The backend (timer wheel) runs the firing loop itself: its per-tick\n\t * advance is a bitmap jump over empty ticks and its sift is a\n\t * time-driven event with no single timeout to drive a generic loop.\n\t * It advances curr_tick / announce_remaining and fires handlers via\n\t * the same inflight_timeout dance as below.\n\t */\n\tkey = z_timeout_q_announce(key);\n#else\n\twhile (announce_remaining > 0) {\n\t\tstruct _timeout *t;\n\t\tint32_t dt = z_timeout_q_next_gap();\n\n\t\tif ((uint32_t)dt > announce_remaining) {\n\t\t\t/* Next event is past this announce window: advance the\n\t\t\t * backend by the residual ticks without firing anything.\n\t\t\t */\n\t\t\tdt = (int32_t)announce_remaining;\n\t\t}\n\n\t\t/* Advance curr_tick and decrement announce_remaining together\n\t\t * under the lock so non-announcing CPUs observe a consistent\n\t\t * (curr_tick + announce_remaining + sys_clock_elapsed()) ==\n\t\t * T_real even while we drop the lock around handlers. The \"we\n\t\t * are announcing\" state is carried by announcing_cpu, so\n\t\t * announce_remaining reaching 0 mid-loop is harmless: same-tick\n\t\t * handlers' z_add_timeout() still anchors via\n\t\t * this_cpu_announcing(), and another CPU's announce still folds\n\t\t * into ours via any_cpu_announcing() in the SMP early-return.\n\t\t */\n\t\tz_timeout_q_advance(dt);\n\t\tcurr_tick += dt;\n\t\tannounce_remaining -= dt;\n\n\t\t/* Drain everything due at the new curr_tick. */\n\t\twhile ((t = z_timeout_q_pop_due()) != NULL) {\n\t\t\t_timeout_func_t handler = t->fn;\n\n\t\t\tinflight_timeout = t;\n\n\t\t\tk_spin_unlock(&timeout_lock, key);\n\t\t\thandler(t);\n\t\t\tkey = k_spin_lock(&timeout_lock);\n\t\t\tinflight_timeout = NULL;\n\t\t}\n\t}\n#endif /* _TIMEOUT_BACKEND_OWNS_ANNOUNCE */\n\n\tannouncing_cpu = -1;\n\n\treprogram_next(0);\n\n\tk_spin_unlock(&timeout_lock, key);\n\n#ifdef CONFIG_TIMESLICING\n\tz_time_slice();\n#endif /* CONFIG_TIMESLICING */\n}",
+      "inactive": [
+        [
+          361,
+          367
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/timeout.c#L343-L417"
+    },
+    "zephyr:kernel/timeout.c#z_add_timeout": {
+      "rtos": "zephyr",
+      "file": "kernel/timeout.c",
+      "symbol": "z_add_timeout",
+      "kind": "fn",
+      "startLine": 176,
+      "endLine": 237,
+      "code": "k_ticks_t z_add_timeout(struct _timeout *to, _timeout_func_t fn, k_timeout_t timeout)\n{\n\tk_ticks_t ticks = 0;\n\n\tif (K_TIMEOUT_EQ(timeout, K_FOREVER)) {\n\t\treturn 0;\n\t}\n\n#ifdef CONFIG_KERNEL_COHERENCE\n\t__ASSERT_NO_MSG(sys_cache_is_mem_coherent(to));\n#endif /* CONFIG_KERNEL_COHERENCE */\n\n\t__ASSERT(z_is_inactive_timeout(to), \"\");\n\tto->fn = fn;\n\n\tK_SPINLOCK(&timeout_lock) {\n\t\tuint32_t ticks_elapsed = 0;\n\t\tbool has_elapsed = false;\n\t\tk_ticks_t dticks;\n\n\t\tif (Z_IS_TIMEOUT_RELATIVE(timeout)) {\n\t\t\tticks_elapsed = elapsed();\n\t\t\thas_elapsed = true;\n\t\t\t/*\n\t\t\t * In the general case, \"now\" may be anywhere within\n\t\t\t * the current tick. Rounding up by one tick guarantees\n\t\t\t * \"at least N ticks\" semantics -- otherwise a request\n\t\t\t * made partway through a tick would fire on the next\n\t\t\t * tick edge, yielding less than N full ticks.\n\t\t\t *\n\t\t\t * The one moment we know *this* CPU is at a tick edge\n\t\t\t * is while it is processing timeouts inside its own\n\t\t\t * sys_clock_announce_locked() loop. Periodic timers\n\t\t\t * rely on this when rescheduling themselves from the\n\t\t\t * timer ISR: the round-up would otherwise accumulate\n\t\t\t * and make every period one tick late. The check is\n\t\t\t * per-CPU: a thread on another CPU running while we\n\t\t\t * announce is *not* at a tick edge and still needs\n\t\t\t * the round-up.\n\t\t\t */\n\t\t\tdticks = timeout.ticks + ticks_elapsed +\n\t\t\t\t (this_cpu_announcing() ? 0 : 1);\n\t\t\tticks = curr_tick + dticks;\n\t\t} else {\n\t\t\tdticks = Z_TICK_ABS(timeout.ticks) - curr_tick;\n\t\t\tdticks = max(1, dticks);\n\t\t\tticks = timeout.ticks;\n\t\t}\n\n\t\tif (z_timeout_q_insert(to, dticks) && !any_cpu_announcing()) {\n\t\t\tif (!has_elapsed) {\n\t\t\t\t/* In case of absolute timeout that is first to expire\n\t\t\t\t * elapsed need to be read from the system clock.\n\t\t\t\t */\n\t\t\t\tticks_elapsed = elapsed();\n\t\t\t}\n\t\t\tsys_clock_set_timeout(next_timeout(ticks_elapsed), false);\n\t\t}\n\t}\n\n\treturn ticks;\n}",
+      "inactive": [
+        [
+          185,
+          185
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/timeout.c#L176-L237"
+    },
+    "zephyr:kernel/timeout.c#z_try_abort_timeout": {
+      "rtos": "zephyr",
+      "file": "kernel/timeout.c",
+      "symbol": "z_try_abort_timeout",
+      "kind": "fn",
+      "startLine": 239,
+      "endLine": 274,
+      "code": "int z_try_abort_timeout(struct _timeout *to)\n{\n\tint ret = -EINVAL;\n\n\tK_SPINLOCK(&timeout_lock) {\n\t\tif (!z_is_inactive_timeout(to)) {\n\t\t\tbool was_first = z_timeout_q_remove(to);\n\n\t\t\tret = 0;\n\t\t\tif (was_first) {\n\t\t\t\treprogram_next(elapsed());\n\t\t\t}\n\t\t} else if (IS_ENABLED(CONFIG_SMP) && inflight_ptr() == to &&\n\t\t\t   !this_cpu_announcing()) {\n\t\t\t/* Handler in flight on another CPU. Free-safety\n\t\t\t * callers retry on -EAGAIN to wait it out; others\n\t\t\t * rely on the superseded mark below and don't.\n\t\t\t */\n\t\t\tret = -EAGAIN;\n\t\t}\n\n\t\t/* Record that the in-flight timeout has been aborted, so a\n\t\t * handler that checks (z_timeout_inflight_superseded) can\n\t\t * tell its dispatch was overtaken.\n\t\t */\n\t\tif (inflight_ptr() == to) {\n\t\t\tinflight_mark_superseded();\n\t\t}\n\t}\n\n\tif (IS_ENABLED(CONFIG_SMP) && ret == -EAGAIN) {\n\t\tarch_spin_relax();\n\t}\n\n\treturn ret;\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/timeout.c#L239-L274"
+    },
+    "zephyr:kernel/timeout/list.h#z_timeout_q_insert": {
+      "rtos": "zephyr",
+      "file": "kernel/timeout/list.h",
+      "symbol": "z_timeout_q_insert",
+      "kind": "inline",
+      "startLine": 44,
+      "endLine": 60,
+      "code": "static inline bool z_timeout_q_insert(struct _timeout *to, k_ticks_t dticks)\n{\n\tstruct _timeout *t;\n\n\tto->dticks = dticks;\n\tfor (t = z_timeout_q_first(); t != NULL; t = z_timeout_q_next(t)) {\n\t\tif (t->dticks > to->dticks) {\n\t\t\tt->dticks -= to->dticks;\n\t\t\tsys_dlist_insert(&t->node, &to->node);\n\t\t\treturn z_timeout_q_first() == to;\n\t\t}\n\t\tto->dticks -= t->dticks;\n\t}\n\n\tsys_dlist_append(&timeout_list, &to->node);\n\treturn z_timeout_q_first() == to;\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/timeout/list.h#L44-L60"
+    },
+    "zephyr:kernel/sched.c#z_thread_timeout": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "z_thread_timeout",
+      "kind": "fn",
+      "startLine": 502,
+      "endLine": 519,
+      "code": "void z_thread_timeout(struct _timeout *timeout)\n{\n\tstruct k_thread *thread = CONTAINER_OF(timeout,\n\t\t\t\t\t       struct k_thread, base.timeout);\n\n\tZ_SCHED_SPINLOCK {\n\t\t/* A concurrent waker (e.g. a sem give on another CPU) may\n\t\t * have unpended and readied the thread, after which the\n\t\t * thread could run and re-pend elsewhere -- possibly with no\n\t\t * timeout. Such a waker aborts this timeout, flagging it\n\t\t * superseded; bail so we don't wake the thread from its new\n\t\t * wait.\n\t\t */\n\t\tif (!z_timeout_inflight_superseded(timeout)) {\n\t\t\tz_sched_wake_thread_locked(thread);\n\t\t}\n\t}\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L502-L519"
+    },
+    "zephyr:kernel/sched.c#z_sched_wake_thread_locked": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "z_sched_wake_thread_locked",
+      "kind": "fn",
+      "startLine": 484,
+      "endLine": 498,
+      "code": "void z_sched_wake_thread_locked(struct k_thread *thread)\n{\n\t/* No K_SPINLOCK: caller must hold the scheduler's spinlock when calling */\n\tbool killed = (thread->base.thread_state &\n\t\t\t(_THREAD_DEAD | _THREAD_ABORTING));\n\n\tif (!killed) {\n\t\t/* The thread is not being killed */\n\t\tif (thread->base.pended_on != NULL) {\n\t\t\tunpend_thread_no_timeout(thread);\n\t\t}\n\t\tz_mark_thread_as_not_sleeping(thread);\n\t\tready_thread(thread);\n\t}\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L484-L498"
+    },
+    "zephyr:kernel/timeslicing.c#slice_timeout": {
+      "rtos": "zephyr",
+      "file": "kernel/timeslicing.c",
+      "symbol": "slice_timeout",
+      "kind": "fn",
+      "startLine": 66,
+      "endLine": 78,
+      "code": "static void slice_timeout(struct _timeout *timeout)\n{\n\tint cpu = ARRAY_INDEX(slice_timeouts, timeout);\n\n\tatomic_set(&slice_expired[cpu], 1);\n\n\t/* We need an IPI if we just handled a timeslice expiration\n\t * for a different CPU.\n\t */\n\tif (cpu != _current_cpu->id) {\n\t\tflag_ipi(IPI_CPU_MASK(cpu));\n\t}\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/timeslicing.c#L66-L78"
+    },
     "zephyr:kernel/timeslicing.c#z_time_slice": {
       "rtos": "zephyr",
       "file": "kernel/timeslicing.c",
@@ -612,11 +902,196 @@
       "code": "void z_time_slice(void)\n{\n\t/*\n\t * Atomic context switches need no scheduler work until this CPU's\n\t * time slice expires. Non-atomic context switches must still take\n\t * the scheduler lock to synchronize pending_current.\n\t */\n\tif (!IS_ENABLED(CONFIG_SWAP_NONATOMIC) &&\n\t    !atomic_get(&slice_expired[_current_cpu->id])) {\n\t\treturn;\n\t}\n\n\tk_spinlock_key_t key = z_sched_spinlock_lock();\n\tstruct k_thread *curr = _current;\n\n#ifdef CONFIG_SWAP_NONATOMIC\n\tif (pending_current == curr) {\n\t\tz_time_slice_reset(curr);\n\t\tz_sched_spinlock_unlock(key);\n\t\treturn;\n\t}\n\tpending_current = NULL;\n#endif\n\n\tint slice_size = 0;\n\n\tif (atomic_get(&slice_expired[_current_cpu->id])) {\n\t\tslice_size = z_time_slice_size(curr);\n\t}\n\n\tif (slice_size != 0) {\n#ifdef CONFIG_TIMESLICE_PER_THREAD\n\t\tk_thread_timeslice_fn_t handler = curr->base.slice_expired;\n\n\t\tif (handler != NULL) {\n\t\t\tz_sched_spinlock_unlock(key);\n\t\t\thandler(curr, curr->base.slice_data);\n\t\t\tkey = z_sched_spinlock_lock();\n\n\t\t\t/* The handler ran with the lock dropped and may have\n\t\t\t * changed this thread's slice configuration, so the\n\t\t\t * cached size is stale; recompute before rearming.\n\t\t\t */\n\t\t\tslice_size = z_time_slice_size(curr);\n\t\t}\n#endif\n\t\tif (!z_is_thread_prevented_from_running(curr)) {\n\t\t\tmove_current_to_end_of_prio_q();\n\t\t\t/* If the rotation kept curr at the front (no other\n\t\t\t * runnable thread of equal-or-higher priority is\n\t\t\t * waiting), no swap will happen and we must rearm\n\t\t\t * here. Otherwise the dispatch path will rearm for\n\t\t\t * the new thread with slice_expired still set,\n\t\t\t * picking up the tick-aligned delay.\n\t\t\t */\n#ifdef CONFIG_SMP\n\t\t\tstruct k_thread *next = runq_best();\n\n\t\t\tif (next == NULL || z_is_idle_thread_object(next)) {\n\t\t\t\tslice_reset(slice_size);\n\t\t\t}\n#else\n\t\t\tif (_kernel.ready_q.cache == curr) {\n\t\t\t\tslice_reset(slice_size);\n\t\t\t}\n#endif\n\t\t}\n\t}\n\tz_sched_spinlock_unlock(key);\n}",
       "inactive": [
         [
+          167,
+          172
+        ],
+        [
+          183,
+          195
+        ],
+        [
           207,
           211
         ]
       ],
       "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/timeslicing.c#L151-L220"
+    },
+    "zephyr:kernel/sched.c#move_current_to_end_of_prio_q": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "move_current_to_end_of_prio_q",
+      "kind": "fn",
+      "startLine": 160,
+      "endLine": 165,
+      "code": "void move_current_to_end_of_prio_q(void)\n{\n\trunq_yield();\n\n\tupdate_cache(1);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L160-L165"
+    },
+    "zephyr:kernel/timeslicing.c#z_time_slice_reset": {
+      "rtos": "zephyr",
+      "file": "kernel/timeslicing.c",
+      "symbol": "z_time_slice_reset",
+      "kind": "fn",
+      "startLine": 103,
+      "endLine": 106,
+      "code": "void z_time_slice_reset(struct k_thread *thread)\n{\n\tslice_reset(z_time_slice_size(thread));\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/timeslicing.c#L103-L106"
+    },
+    "zephyr:kernel/timeslicing.c#slice_reset": {
+      "rtos": "zephyr",
+      "file": "kernel/timeslicing.c",
+      "symbol": "slice_reset",
+      "kind": "fn",
+      "startLine": 80,
+      "endLine": 101,
+      "code": "static void slice_reset(int slice_size)\n{\n\tint cpu = _current_cpu->id;\n\n\t/* Best-effort cancel: if the slice timeout is already in flight,\n\t * its handler only flips slice_expired[cpu] (which we clear below)\n\t * and possibly raises an IPI -- harmless either way.\n\t */\n\t(void)z_try_abort_timeout(&slice_timeouts[cpu]);\n\tif (slice_size != 0) {\n\t\t/* When invoked because the slicer just fired (this CPU or\n\t\t * via IPI from another), we're at a tick edge but past the\n\t\t * announce window, so subtract 1 to cancel z_add_timeout()'s\n\t\t * \"+1\" round-up and land at exactly slice_size ticks.\n\t\t */\n\t\tint delay = atomic_get(&slice_expired[cpu]) ? slice_size - 1 : slice_size;\n\n\t\tz_add_timeout(&slice_timeouts[cpu], slice_timeout,\n\t\t\t      K_TICKS(delay));\n\t}\n\tatomic_clear(&slice_expired[cpu]);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/timeslicing.c#L80-L101"
+    },
+    "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks": {
+      "rtos": "zephyr",
+      "file": "kernel/sleep.c",
+      "symbol": "z_impl_k_sleep_ticks",
+      "kind": "fn",
+      "startLine": 50,
+      "endLine": 103,
+      "code": "k_ticks_t z_impl_k_sleep_ticks(k_timeout_t timeout)\n{\n\tuint32_t expected_wakeup_ticks;\n\n\t__ASSERT(!arch_is_in_isr(), \"\");\n\n\tSYS_PORT_TRACING_FUNC_ENTER(k_thread, sleep_ticks, timeout);\n\n\t/* K_NO_WAIT is treated as a 'yield' */\n\tif (K_TIMEOUT_EQ(timeout, K_NO_WAIT)) {\n\t\tk_yield();\n\t\tSYS_PORT_TRACING_FUNC_EXIT(k_thread, sleep_ticks, timeout, 0);\n\t\treturn 0;\n\t}\n\n\tk_spinlock_key_t key = z_sched_spinlock_lock();\n\n#if defined(CONFIG_TIMESLICING) && defined(CONFIG_SWAP_NONATOMIC)\n\tpending_current = _current;\n#endif /* CONFIG_TIMESLICING && CONFIG_SWAP_NONATOMIC */\n\tz_sched_unready_locked(_current);\n\texpected_wakeup_ticks = (uint32_t)z_add_thread_timeout(_current, timeout);\n\tz_mark_thread_as_sleeping(_current);\n\n\t(void)z_swap_locked(key);\n\n\t/* There is no meaningful remainder to report for K_FOREVER: reaching\n\t * this point at all means a k_wakeup() cut the sleep short.\n\t */\n\tif (K_TIMEOUT_EQ(timeout, K_FOREVER)) {\n\t\tSYS_PORT_TRACING_FUNC_EXIT(k_thread, sleep_ticks, timeout, K_TICKS_FOREVER);\n\t\treturn K_TICKS_FOREVER;\n\t}\n\n\t/* We require a 32 bit unsigned subtraction to handle a wraparound.\n\t * A normal timeout-driven wakeup leaves zero (or a slightly negative)\n\t * remainder; only an early k_wakeup() yields a positive value.\n\t */\n\tuint32_t left_ticks = expected_wakeup_ticks - sys_clock_tick_get_32();\n\n\t/* Use signed comparison so past-due wakeups (negative remainder) return 0.\n\t * k_ticks_t may be uint32_t (!CONFIG_TIMEOUT_64BIT), so comparing ticks > 0\n\t * directly would be an unsigned comparison and would misinterpret a negative\n\t * remainder as a large positive value.\n\t */\n\tint32_t signed_left = (int32_t)left_ticks;\n\n\tif (signed_left < 0) {\n\t\tsigned_left = 0;\n\t}\n\n\tSYS_PORT_TRACING_FUNC_EXIT(k_thread, sleep_ticks, timeout, signed_left);\n\treturn (k_ticks_t)signed_left;\n}",
+      "inactive": [
+        [
+          68,
+          68
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sleep.c#L50-L103"
+    },
+    "zephyr:kernel/sched.c#z_sched_yield": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "z_sched_yield",
+      "kind": "fn",
+      "startLine": 427,
+      "endLine": 434,
+      "code": "void z_sched_yield(void)\n{\n\tk_spinlock_key_t key = z_sched_spinlock_lock();\n\n\trunq_yield();\n\tupdate_cache(1);\n\tz_swap_locked(key);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L427-L434"
+    },
+    "zephyr:kernel/thread.c#z_thread_abort": {
+      "rtos": "zephyr",
+      "file": "kernel/thread.c",
+      "symbol": "z_thread_abort",
+      "kind": "fn",
+      "startLine": 1774,
+      "endLine": 1790,
+      "code": "void z_thread_abort(struct k_thread *thread)\n{\n\tbool essential = z_is_thread_essential(thread);\n\tk_spinlock_key_t key = z_sched_spinlock_lock();\n\n\tif (z_is_thread_dead(thread)) {\n\t\tz_sched_spinlock_unlock(key);\n\t\treturn;\n\t}\n\n\tz_thread_halt(thread, key, true);\n\n\tif (essential) {\n\t\t__ASSERT(!essential, \"aborted essential thread %p\", thread);\n\t\tk_panic();\n\t}\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/thread.c#L1774-L1790"
+    },
+    "zephyr:kernel/sched.c#z_thread_halt": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "z_thread_halt",
+      "kind": "fn",
+      "startLine": 307,
+      "endLine": 374,
+      "code": "void z_thread_halt(struct k_thread *thread, k_spinlock_key_t key,\n\t\t\t\t\tbool terminate)\n{\n\t_wait_q_t *wq = &thread->join_queue;\n#ifdef CONFIG_SMP\n\twq = terminate ? wq : &thread->halt_queue;\n#endif\n\n\tz_metairq_preempted_clear(thread);\n\n\t/* If the target is a thread running on another CPU, flag and\n\t * poke (note that we might spin to wait, so a true\n\t * synchronous IPI is needed here, not deferred!), it will\n\t * halt itself in the IPI.  Otherwise it's unscheduled, so we\n\t * can clean it up directly.\n\t */\n\n\tstruct _cpu *cpu = thread_active_elsewhere(thread);\n\n\tif (cpu != NULL) {\n\t\tthread->base.thread_state |= (terminate ? _THREAD_ABORTING\n\t\t\t\t\t      : _THREAD_SUSPENDING);\n#if defined(CONFIG_SMP) && defined(CONFIG_SCHED_IPI_SUPPORTED)\n#ifdef CONFIG_ARCH_HAS_DIRECTED_IPIS\n\t\tarch_sched_directed_ipi(IPI_CPU_MASK(cpu->id));\n#else\n\t\tarch_sched_broadcast_ipi();\n#endif /* CONFIG_ARCH_HAS_DIRECTED_IPIS */\n#endif /* CONFIG_SMP && CONFIG_SCHED_IPI_SUPPORTED */\n\t\tif (arch_is_in_isr()) {\n\t\t\tthread_halt_spin(thread, key);\n\t\t} else  {\n\t\t\tadd_to_waitq_locked(_current, wq);\n\t\t\tz_swap_locked(key);\n\t\t}\n\t\t/* The target's next_up self-halt path passed NULL to\n\t\t * halt_thread() and could not retry on -EAGAIN; an\n\t\t * in-flight handler on a third CPU may not have run yet\n\t\t * (it is blocked on the scheduler spinlock and will only\n\t\t * acquire it after we drop it via the swap/spin above). Wait\n\t\t * now, outside any lock, before the caller may free the thread\n\t\t * storage. The handler, when it runs, sees _THREAD_DEAD /\n\t\t * _THREAD_SUSPENDED and either bails (killed check) or\n\t\t * no-ops in ready_thread() (z_is_thread_ready() rejects\n\t\t * suspended threads). After this loop returns, no further\n\t\t * dereference of thread->base will occur.\n\t\t */\n\t\twhile (z_try_abort_thread_timeout(thread) == -EAGAIN) {\n\t\t}\n\t} else {\n\t\thalt_thread(thread, terminate ? _THREAD_DEAD : _THREAD_SUSPENDED, &key);\n\t\tif ((thread == _current) && !arch_is_in_isr()) {\n\t\t\tif (z_is_thread_essential(thread)) {\n\t\t\t\tz_sched_spinlock_unlock(key);\n\t\t\t\tk_panic();\n\t\t\t\tkey = z_sched_spinlock_lock();\n\t\t\t}\n\t\t\tz_swap_locked(key);\n\t\t\t__ASSERT(!terminate, \"aborted _current back from dead\");\n\t\t} else {\n\t\t\tz_sched_spinlock_unlock(key);\n\t\t}\n\t}\n\t/* NOTE: the scheduler lock has been released.  Don't put\n\t * logic here, it's likely to be racy/deadlocky even if you\n\t * re-take the lock!\n\t */\n}",
+      "inactive": [
+        [
+          312,
+          312
+        ],
+        [
+          331,
+          331
+        ],
+        [
+          333,
+          333
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L307-L374"
+    },
+    "zephyr:kernel/sched.c#halt_thread": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "halt_thread",
+      "kind": "fn",
+      "startLine": 856,
+      "endLine": 983,
+      "code": "static ALWAYS_INLINE void halt_thread(struct k_thread *thread, uint8_t new_state,\n\t\t\t\t      k_spinlock_key_t *key)\n{\n\tbool dummify = false;\n\n\t/* We hold the lock, and the thread is known not to be running\n\t * anywhere.\n\t */\n\tif ((thread->base.thread_state & new_state) == 0U) {\n\t\tthread->base.thread_state |= new_state;\n\t\tif (z_is_thread_queued(thread)) {\n\t\t\t/* Clear idle CPU coverage before removing the thread from the run queue. */\n\t\t\tipi_idle_thread_unreserve(thread);\n\t\t\tdequeue_thread(thread);\n\t\t}\n\n\t\tif (new_state == _THREAD_DEAD) {\n\t\t\tif (thread->base.pended_on != NULL) {\n\t\t\t\tunpend_thread_no_timeout(thread);\n\t\t\t}\n\t\t\t/* Wait for any in-flight handler to complete before\n\t\t\t * we proceed: the caller may free this thread's\n\t\t\t * storage (dynamic threads), and an in-flight handler\n\t\t\t * would UAF when it eventually runs z_thread_timeout()\n\t\t\t * and dereferences thread->base. _THREAD_DEAD is\n\t\t\t * already set, so once the handler runs it bails via\n\t\t\t * z_sched_wake_thread_locked()'s killed check.\n\t\t\t *\n\t\t\t * NULL key is the next_up() self-halt path on a\n\t\t\t * running _current that has no linked timeout; there\n\t\t\t * is nothing to do here. That path is always reached\n\t\t\t * via z_thread_halt()'s IF branch, which spins on\n\t\t\t * z_try_abort_thread_timeout(thread) outside any lock\n\t\t\t * after the halt-queue wait completes, closing any\n\t\t\t * remaining in-flight window before the caller of\n\t\t\t * z_thread_halt() returns.\n\t\t\t */\n\t\t\tif (key != NULL) {\n\t\t\t\twhile (z_try_abort_thread_timeout(thread) == -EAGAIN) {\n\t\t\t\t\tz_sched_spinlock_unlock(*key);\n\t\t\t\t\t*key = z_sched_spinlock_lock();\n\t\t\t\t}\n\t\t\t}\n\t\t\tunpend_all(&thread->join_queue);\n\n\t\t\t/* Edge case: aborting _current from within an\n\t\t\t * ISR that preempted it requires clearing the\n\t\t\t * _current pointer so the upcoming context\n\t\t\t * switch doesn't clobber the now-freed\n\t\t\t * memory\n\t\t\t */\n\t\t\tif (thread == _current && arch_is_in_isr()) {\n\t\t\t\tdummify = true;\n\t\t\t}\n\t\t}\n#ifdef CONFIG_SMP\n\t\tunpend_all(&thread->halt_queue);\n#endif /* CONFIG_SMP */\n\t\tupdate_cache(1);\n\n\t\tif (new_state == _THREAD_SUSPENDED) {\n\t\t\tclear_halting(thread);\n\t\t\treturn;\n\t\t}\n\n\t\tarch_coprocessors_disable(thread);\n\n\t\tSYS_PORT_TRACING_FUNC(k_thread, sched_abort, thread);\n\n\t\tz_thread_monitor_exit(thread);\n#ifdef CONFIG_THREAD_ABORT_HOOK\n\t\tthread_abort_hook(thread);\n#endif /* CONFIG_THREAD_ABORT_HOOK */\n\n#ifdef CONFIG_OBJ_CORE_THREAD\n#ifdef CONFIG_OBJ_CORE_STATS_THREAD\n\t\tk_obj_core_stats_deregister(K_OBJ_CORE(thread));\n#endif /* CONFIG_OBJ_CORE_STATS_THREAD */\n\t\tk_obj_core_unlink(K_OBJ_CORE(thread));\n#endif /* CONFIG_OBJ_CORE_THREAD */\n\n#ifdef CONFIG_USERSPACE\n\t\tz_mem_domain_exit_thread(thread);\n\t\tk_thread_perms_all_clear(thread);\n\t\tk_object_uninit(thread->stack_obj);\n\t\tk_object_uninit(thread);\n#endif /* CONFIG_USERSPACE */\n\n#ifdef CONFIG_THREAD_ABORT_NEED_CLEANUP\n\t\tk_thread_abort_cleanup(thread);\n#endif /* CONFIG_THREAD_ABORT_NEED_CLEANUP */\n\n\t\t/* Do this \"set _current to dummy\" step last so that\n\t\t * subsystems above can rely on _current being\n\t\t * unchanged.  Disabled for posix as that arch\n\t\t * continues to use the _current pointer in its swap\n\t\t * code.  Note that we must leave a non-null switch\n\t\t * handle for any threads spinning in join() (this can\n\t\t * never be used, as our thread is flagged dead, but\n\t\t * it must not be NULL otherwise join can deadlock).\n\t\t * Use 1 as a clearly invalid but non-NULL value.\n\t\t */\n\t\tif (dummify && !IS_ENABLED(CONFIG_ARCH_POSIX)) {\n#ifdef CONFIG_USE_SWITCH\n\t\t\t_current->switch_handle = (void *)1;\n#endif\n#ifdef CONFIG_SPIN_VALIDATE\n\t\t\t/* On arches where exceptions run as ISRs (e.g. Xtensa),\n\t\t\t * the dying thread's lock tracking is never cleared via the\n\t\t\t * normal abort path.  Reset it here before _thread_dummy\n\t\t\t * takes over.  Sentinel-gated so genuine bugs still assert.\n\t\t\t */\n\t\t\tif (thread->base.swap_data ==\n\t\t\t    (void *)&z_spinlock_abort_sentinel) {\n\t\t\t\tz_spin_validate_reset(true);\n\t\t\t}\n#endif\n\t\t\tz_dummy_thread_init(&_thread_dummy);\n\n\t\t}\n\n\t\t/* Finally update the halting thread state, on which\n\t\t * other CPUs might be spinning (see\n\t\t * thread_halt_spin()).\n\t\t */\n\t\tclear_halting(thread);\n\t}\n}",
+      "inactive": [
+        [
+          912,
+          912
+        ],
+        [
+          927,
+          927
+        ],
+        [
+          932,
+          932
+        ],
+        [
+          934,
+          934
+        ],
+        [
+          938,
+          941
+        ],
+        [
+          945,
+          945
+        ],
+        [
+          960,
+          960
+        ],
+        [
+          963,
+          971
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L856-L983"
+    },
+    "zephyr:kernel/sched.c#z_pend_curr": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "z_pend_curr",
+      "kind": "fn",
+      "startLine": 522,
+      "endLine": 553,
+      "code": "int z_pend_curr(struct k_spinlock *lock, k_spinlock_key_t key,\n\t       _wait_q_t *wait_q, k_timeout_t timeout)\n{\n\t/* A blocking pend from ISR context is a programming error with no\n\t * safe recovery: it would sleep whatever thread was interrupted and,\n\t * on CONFIG_SWAP_NONATOMIC, corrupt the scheduler. Refuse it fatally\n\t * in every build rather than degrading into the corruption traced in\n\t * #111518. Placed first so the refusal performs no side effect.\n\t */\n\tif (arch_is_in_isr()) {\n\t\t__ASSERT(false, \"blocking pend from ISR context\");\n\t\tk_panic();\n\t}\n\n#if defined(CONFIG_TIMESLICING) && defined(CONFIG_SWAP_NONATOMIC)\n\tpending_current = _current;\n#endif /* CONFIG_TIMESLICING && CONFIG_SWAP_NONATOMIC */\n\t__ASSERT_NO_MSG((sizeof(struct k_spinlock) == 0) || !z_is_sched_spinlock(lock));\n\n\t/* We do a \"lock swap\" prior to calling z_swap(), such that\n\t * the caller's lock gets released as desired.  But we ensure\n\t * that we hold the scheduler lock and leave local interrupts\n\t * masked until we reach the context switch.  z_swap() itself\n\t * has similar code; the duplication is because it's a legacy\n\t * API that doesn't expect to be called with scheduler lock\n\t * held.\n\t */\n\t(void) z_sched_spinlock_lock();\n\tpend_locked(_current, wait_q, timeout);\n\tk_spin_release(lock);\n\treturn z_swap_locked(key);\n}",
+      "inactive": [
+        [
+          537,
+          537
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L522-L553"
+    },
+    "zephyr:kernel/sched.c#add_to_waitq_locked": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "add_to_waitq_locked",
+      "kind": "fn",
+      "startLine": 437,
+      "endLine": 451,
+      "code": "static void add_to_waitq_locked(struct k_thread *thread, _wait_q_t *wait_q)\n{\n\t/* A thread must not already be on a wait queue when added to a new one. */\n\t__ASSERT_NO_MSG(thread->base.pended_on == NULL);\n\n\tunready_thread(thread);\n\tz_mark_thread_as_pending(thread);\n\n\tSYS_PORT_TRACING_FUNC(k_thread, sched_pend, thread);\n\n\tif (wait_q != NULL) {\n\t\tthread->base.pended_on = wait_q;\n\t\t_priq_wait_add(&wait_q->waitq, thread);\n\t}\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L437-L451"
+    },
+    "zephyr:kernel/include/ksched.h#z_unpend_first_thread_locked": {
+      "rtos": "zephyr",
+      "file": "kernel/include/ksched.h",
+      "symbol": "z_unpend_first_thread_locked",
+      "kind": "inline",
+      "startLine": 250,
+      "endLine": 265,
+      "code": "static ALWAYS_INLINE struct k_thread *z_unpend_first_thread_locked(_wait_q_t *wait_q)\n{\n\tstruct k_thread *thread = _priq_wait_best(&wait_q->waitq);\n\n\tif (unlikely(thread != NULL)) {\n\t\tunpend_thread_no_timeout(thread);\n\t\t/* Abort the thread's timeout. If its handler is in flight on\n\t\t * another CPU it is blocked on the sched lock; the abort flags\n\t\t * it superseded, and z_thread_timeout() bails on that flag when\n\t\t * it finally runs -- so it won't wake the thread from whatever\n\t\t * it has since re-pended on. We don't wait for it here.\n\t\t */\n\t\t(void)z_try_abort_thread_timeout(thread);\n\t}\n\treturn thread;\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/include/ksched.h#L250-L265"
     },
     "zephyr:kernel/mutex.c#z_impl_k_mutex_lock": {
       "rtos": "zephyr",
@@ -646,6 +1121,17 @@
       ],
       "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/mutex.c#L202-L399"
     },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock": {
+      "rtos": "zephyr",
+      "file": "kernel/mutex.c",
+      "symbol": "z_impl_k_mutex_unlock",
+      "kind": "fn",
+      "startLine": 411,
+      "endLine": 513,
+      "code": "int z_impl_k_mutex_unlock(struct k_mutex *mutex)\n{\n\tstruct k_thread *new_owner = NULL;\n\n\t__ASSERT(!arch_is_in_isr(), \"mutexes cannot be used inside ISRs\");\n\n\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_mutex, unlock, mutex);\n\n\tCHECKIF(mutex->owner == NULL) {\n\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_mutex, unlock, mutex, -EINVAL);\n\n\t\treturn -EINVAL;\n\t}\n\t/*\n\t * The current thread does not own the mutex.\n\t */\n\tCHECKIF(mutex->owner != _current) {\n\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_mutex, unlock, mutex, -EPERM);\n\n\t\treturn -EPERM;\n\t}\n\n\t/*\n\t * Attempt to unlock a mutex which is unlocked. mutex->lock_count\n\t * cannot be zero if the current thread is equal to mutex->owner,\n\t * therefore no underflow check is required. Use assert to catch\n\t * undefined behavior.\n\t */\n\t__ASSERT_NO_MSG(mutex->lock_count > 0U);\n\n\tLOG_DBG(\"mutex %p lock_count: %d\", mutex, mutex->lock_count);\n\n\t/*\n\t * If we are the owner and count is greater than 1, then decrement\n\t * the count and return and keep current thread as the owner.\n\t */\n\tif (mutex->lock_count > 1U) {\n\t\tmutex->lock_count--;\n\t\tgoto k_mutex_unlock_return;\n\t}\n\n\tk_spinlock_key_t key = k_spin_lock(&mutex_lock);\n\n#if Z_MUTEX_PI_ENABLED\n\t/* Remove this mutex from the owner's list of held mutexes */\n\tsys_slist_find_and_remove(&_current->held_mutexes, &mutex->held_node);\n\n\t/*\n\t * If the thread's priority was boosted, recalculate it by scanning\n\t * the remaining held mutexes. The released mutex has already been\n\t * removed from held_mutexes, so it is not included in the scan.\n\t */\n\tif (_current->base.prio != _current->orig_prio) {\n\t\tint32_t new_prio = held_mutexes_highest_waiter_prio(\n\t\t\t\t\t_current, _current->orig_prio);\n\n\t\tadjust_owner_prio(mutex, new_prio);\n\t}\n#endif\n\n\t/* Pick the new owner (if any) and complete the wake atomically\n\t * under the scheduler's spinlock, so a racing in-flight timeout\n\t * handler cannot observe a half-initialized wake-up.\n\t */\n\tLOCK_SCHED_SPINLOCK {\n\t\tnew_owner = z_unpend_first_thread_locked(&mutex->wait_q);\n\t\tmutex->owner = new_owner;\n\n\t\tLOG_DBG(\"new owner of mutex %p: %p (prio: %d)\",\n\t\t\tmutex, new_owner, new_owner ? new_owner->base.prio : -1000);\n\n\t\tif (unlikely(new_owner != NULL)) {\n\t\t\t/*\n\t\t\t * new owner is already of higher or equal prio than first\n\t\t\t * waiter since the wait queue is priority-based: no need to\n\t\t\t * adjust its priority\n\t\t\t */\n#if Z_MUTEX_PI_ENABLED\n\t\t\tif (sys_slist_is_empty(&new_owner->held_mutexes)) {\n\t\t\t\tnew_owner->orig_prio = new_owner->base.prio;\n\t\t\t}\n\t\t\tsys_slist_append(&new_owner->held_mutexes, &mutex->held_node);\n\t\t\tnew_owner->mutex_pended_on = NULL;\n#endif\n\t\t\tarch_thread_return_value_set(new_owner, 0);\n\t\t\tz_sched_ready_locked(new_owner);\n\t\t} else {\n\t\t\tmutex->lock_count = 0U;\n\t\t}\n\t}\n\n\tif (unlikely(new_owner != NULL)) {\n\t\tz_reschedule(&mutex_lock, key);\n\t} else {\n\t\tk_spin_unlock(&mutex_lock, key);\n\t}\n\n\nk_mutex_unlock_return:\n\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_mutex, unlock, mutex, 0);\n\n\treturn 0;\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/mutex.c#L411-L513"
+    },
     "zephyr:kernel/mutex.c#adjust_owner_prio": {
       "rtos": "zephyr",
       "file": "kernel/mutex.c",
@@ -667,6 +1153,94 @@
       "code": "static int32_t new_prio_for_inheritance(int32_t target, int32_t limit)\n{\n\tint new_prio = z_is_prio_higher(target, limit) ? target : limit;\n\n\tnew_prio = z_get_new_prio_with_ceiling(new_prio);\n\n\treturn new_prio;\n}",
       "inactive": [],
       "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/mutex.c#L150-L157"
+    },
+    "zephyr:kernel/mutex.c#held_mutexes_highest_waiter_prio": {
+      "rtos": "zephyr",
+      "file": "kernel/mutex.c",
+      "symbol": "held_mutexes_highest_waiter_prio",
+      "kind": "fn",
+      "startLine": 177,
+      "endLine": 199,
+      "code": "static int32_t held_mutexes_highest_waiter_prio(struct k_thread *thread,\n\t\t\t\t\t\t int32_t floor_prio)\n{\n\tsys_snode_t *node;\n\tint32_t prio = floor_prio;\n\n\tLOCK_SCHED_SPINLOCK {\n\t\tSYS_SLIST_FOR_EACH_NODE(&thread->held_mutexes, node) {\n\t\t\tstruct k_mutex *m =\n\t\t\t\tCONTAINER_OF(node, struct k_mutex, held_node);\n\t\t\tstruct k_thread *waiter = z_waitq_head_locked(&m->wait_q);\n\n\t\t\tif (waiter != NULL) {\n\t\t\t\tint32_t wprio = z_get_new_prio_with_ceiling(waiter->base.prio);\n\n\t\t\t\tif (z_is_prio_higher(wprio, prio)) {\n\t\t\t\t\tprio = wprio;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\treturn prio;\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/mutex.c#L177-L199"
+    },
+    "zephyr:kernel/sched.c#z_thread_prio_set": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "z_thread_prio_set",
+      "kind": "fn",
+      "startLine": 587,
+      "endLine": 641,
+      "code": "bool z_thread_prio_set(struct k_thread *thread, int prio)\n{\n\tbool need_sched = false;\n\tint old_prio = thread->base.prio;\n\n\tZ_SCHED_SPINLOCK {\n\t\tneed_sched = z_is_thread_ready(thread);\n\n\t\tif (need_sched) {\n\t\t\tif (!IS_ENABLED(CONFIG_SMP) || z_is_thread_queued(thread)) {\n\t\t\t\tdequeue_thread(thread);\n\t\t\t\tthread->base.prio = prio;\n\t\t\t\tqueue_thread(thread);\n\n\t\t\t\tif (old_prio > prio) {\n\t\t\t\t\tflag_ipi(ipi_mask_create(thread));\n\t\t\t\t}\n\t\t\t} else {\n\t\t\t\t/*\n\t\t\t\t * This is a running thread on SMP. Update its\n\t\t\t\t * priority, but do not requeue it. An IPI is\n\t\t\t\t * needed if the priority is both being lowered\n\t\t\t\t * and it is running on another CPU.\n\t\t\t\t */\n\n\t\t\t\tthread->base.prio = prio;\n\n\t\t\t\tstruct _cpu *cpu;\n\n\t\t\t\tcpu = thread_active_elsewhere(thread);\n\t\t\t\tif ((cpu != NULL) && (old_prio < prio)) {\n\t\t\t\t\tflag_ipi(IPI_CPU_MASK(cpu->id));\n\t\t\t\t}\n\t\t\t}\n\n\t\t\tupdate_cache(1);\n\t\t} else if (z_is_thread_pending(thread)) {\n\t\t\t/* Thread is pending, remove it from the waitq\n\t\t\t * and reinsert it with the new priority to avoid\n\t\t\t * violating waitq ordering and rb assumptions.\n\t\t\t */\n\t\t\t_wait_q_t *wait_q = pended_on_thread(thread);\n\n\t\t\t_priq_wait_remove(&wait_q->waitq, thread);\n\t\t\tthread->base.prio = prio;\n\t\t\t_priq_wait_add(&wait_q->waitq, thread);\n\t\t} else {\n\t\t\tthread->base.prio = prio;\n\t\t}\n\t}\n\n\tSYS_PORT_TRACING_OBJ_FUNC(k_thread, sched_priority_set, thread, prio);\n\n\treturn need_sched;\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L587-L641"
+    },
+    "zephyr:kernel/sem.c#z_impl_k_sem_take": {
+      "rtos": "zephyr",
+      "file": "kernel/sem.c",
+      "symbol": "z_impl_k_sem_take",
+      "kind": "fn",
+      "startLine": 149,
+      "endLine": 182,
+      "code": "int z_impl_k_sem_take(struct k_sem *sem, k_timeout_t timeout)\n{\n\tstruct k_spinlock *lock = sem_spinlock_get(sem);\n\tint ret;\n\n\t__ASSERT(((arch_is_in_isr() == false) ||\n\t\t  K_TIMEOUT_EQ(timeout, K_NO_WAIT)), \"\");\n\n\tk_spinlock_key_t key = k_spin_lock(lock);\n\n\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_sem, take, sem, timeout);\n\n\tif (likely(sem->count > 0U)) {\n\t\tsem->count--;\n\t\tk_spin_unlock(lock, key);\n\t\tret = 0;\n\t\tgoto out;\n\t}\n\n\tif (K_TIMEOUT_EQ(timeout, K_NO_WAIT)) {\n\t\tk_spin_unlock(lock, key);\n\t\tret = -EBUSY;\n\t\tgoto out;\n\t}\n\n\tSYS_PORT_TRACING_OBJ_FUNC_BLOCKING(k_sem, take, sem, timeout);\n\n\tret = z_pend_curr(lock, key, &sem->wait_q, timeout);\n\nout:\n\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_sem, take, sem, timeout, ret);\n\n\treturn ret;\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sem.c#L149-L182"
+    },
+    "zephyr:kernel/sem.c#z_impl_k_sem_give": {
+      "rtos": "zephyr",
+      "file": "kernel/sem.c",
+      "symbol": "z_impl_k_sem_give",
+      "kind": "fn",
+      "startLine": 116,
+      "endLine": 138,
+      "code": "void z_impl_k_sem_give(struct k_sem *sem)\n{\n\tstruct k_spinlock *lock = sem_spinlock_get(sem);\n\tk_spinlock_key_t key = k_spin_lock(lock);\n\tbool resched;\n\n\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_sem, give, sem);\n\n\tif (z_sched_wake(&sem->wait_q, 0, NULL)) {\n\t\tresched = true;\n\t} else {\n\t\tsem->count += (sem->count != sem->limit) ? 1U : 0U;\n\t\tresched = sem_handle_poll_events(sem);\n\t}\n\n\tif (unlikely(resched)) {\n\t\tz_reschedule(lock, key);\n\t} else {\n\t\tk_spin_unlock(lock, key);\n\t}\n\n\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_sem, give, sem);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sem.c#L116-L138"
+    },
+    "zephyr:kernel/thread.c#z_impl_k_thread_priority_set": {
+      "rtos": "zephyr",
+      "file": "kernel/thread.c",
+      "symbol": "z_impl_k_thread_priority_set",
+      "kind": "fn",
+      "startLine": 1651,
+      "endLine": 1665,
+      "code": "void z_impl_k_thread_priority_set(k_tid_t thread, int prio)\n{\n\t/*\n\t * Use NULL, since we cannot know what the entry point is (we do not\n\t * keep track of it) and idle cannot change its priority.\n\t */\n\tZ_ASSERT_VALID_PRIO(prio, NULL);\n\n\tbool need_sched = z_thread_prio_set((struct k_thread *)thread, prio);\n\n\tif ((need_sched) && (IS_ENABLED(CONFIG_SMP) ||\n\t\t\t     (_current->base.sched_locked == 0U))) {\n\t\tz_reschedule_unlocked();\n\t}\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/thread.c#L1651-L1665"
+    },
+    "zephyr:kernel/thread.c#z_impl_k_thread_suspend": {
+      "rtos": "zephyr",
+      "file": "kernel/thread.c",
+      "symbol": "z_impl_k_thread_suspend",
+      "kind": "fn",
+      "startLine": 1683,
+      "endLine": 1709,
+      "code": "void z_impl_k_thread_suspend(k_tid_t thread)\n{\n\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_thread, suspend, thread);\n\n\t/* Special case \"suspend the current thread\" as it doesn't\n\t * need the async complexity below.\n\t */\n\tif (!IS_ENABLED(CONFIG_SMP) &&\n\t    likely((thread == _current) && !arch_is_in_isr())) {\n\t\tz_thread_suspend_current(thread);\n\t\treturn;\n\t}\n\n\tk_spinlock_key_t key = z_sched_spinlock_lock();\n\n\tif (unlikely(z_is_thread_suspended(thread))) {\n\n\t\t/* The target thread is already suspended. Nothing to do. */\n\n\t\tz_sched_spinlock_unlock(key);\n\t\treturn;\n\t}\n\n\tz_thread_halt(thread, key, false);\n\n\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_thread, suspend, thread);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/thread.c#L1683-L1709"
+    },
+    "zephyr:kernel/sched.c#z_thread_suspend_current": {
+      "rtos": "zephyr",
+      "file": "kernel/sched.c",
+      "symbol": "z_thread_suspend_current",
+      "kind": "fn",
+      "startLine": 985,
+      "endLine": 994,
+      "code": "void z_thread_suspend_current(struct k_thread *thread)\n{\n\tk_spinlock_key_t key = z_sched_spinlock_lock();\n\n\tz_mark_thread_as_suspended(thread);\n\tz_metairq_preempted_clear(thread);\n\tdequeue_thread(thread);\n\tupdate_cache(1);\n\tz_swap_locked(key);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sched.c#L985-L994"
+    },
+    "zephyr:kernel/thread.c#z_impl_k_thread_resume": {
+      "rtos": "zephyr",
+      "file": "kernel/thread.c",
+      "symbol": "z_impl_k_thread_resume",
+      "kind": "fn",
+      "startLine": 1720,
+      "endLine": 1738,
+      "code": "void z_impl_k_thread_resume(k_tid_t thread)\n{\n\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_thread, resume, thread);\n\n\tk_spinlock_key_t key = z_sched_spinlock_lock();\n\n\t/* Do not try to resume a thread that was not suspended */\n\tif (unlikely(!z_is_thread_suspended(thread))) {\n\t\tz_sched_spinlock_unlock(key);\n\t\treturn;\n\t}\n\n\tz_mark_thread_as_not_suspended(thread);\n\tz_sched_ready_locked(thread);\n\n\tz_reschedule_locked(key);\n\n\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_thread, resume, thread);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/thread.c#L1720-L1738"
     }
   },
   "anchors": {
@@ -1258,21 +1832,437 @@
       "symbol": "freertos:queue.c#prvCopyDataToQueue",
       "line": 2472
     },
-    "zephyr:kernel/sched.c#next_up/best": {
-      "symbol": "zephyr:kernel/sched.c#next_up",
-      "line": 74
+    "zephyr:kernel/init.c#z_init_static_threads/setup": {
+      "symbol": "zephyr:kernel/init.c#z_init_static_threads",
+      "line": 68
+    },
+    "zephyr:kernel/init.c#z_init_static_threads/lock": {
+      "symbol": "zephyr:kernel/init.c#z_init_static_threads",
+      "line": 99
+    },
+    "zephyr:kernel/init.c#z_init_static_threads/start": {
+      "symbol": "zephyr:kernel/init.c#z_init_static_threads",
+      "line": 103
+    },
+    "zephyr:kernel/init.c#z_init_static_threads/unlock": {
+      "symbol": "zephyr:kernel/init.c#z_init_static_threads",
+      "line": 105
+    },
+    "zephyr:kernel/init.c#bg_thread_main/main": {
+      "symbol": "zephyr:kernel/init.c#bg_thread_main",
+      "line": 341
+    },
+    "zephyr:kernel/sys/thread_entry.c#z_thread_entry/abort": {
+      "symbol": "zephyr:kernel/sys/thread_entry.c#z_thread_entry",
+      "line": 62
+    },
+    "zephyr:kernel/scheduler.c#k_sched_unlock/unlock": {
+      "symbol": "zephyr:kernel/scheduler.c#k_sched_unlock",
+      "line": 49
+    },
+    "zephyr:kernel/sched.c#z_sched_lock_reschedule/resched": {
+      "symbol": "zephyr:kernel/sched.c#z_sched_lock_reschedule",
+      "line": 424
+    },
+    "zephyr:kernel/thread.c#z_impl_k_wakeup/awake": {
+      "symbol": "zephyr:kernel/thread.c#z_impl_k_wakeup",
+      "line": 1757
     },
     "zephyr:kernel/sched.c#next_up/pick": {
       "symbol": "zephyr:kernel/sched.c#next_up",
       "line": 85
     },
-    "zephyr:kernel/sched.c#update_cache/should-preempt": {
+    "zephyr:kernel/sched.c#update_cache/slice": {
       "symbol": "zephyr:kernel/sched.c#update_cache",
-      "line": 172
+      "line": 175
+    },
+    "zephyr:kernel/sched.c#update_cache/set": {
+      "symbol": "zephyr:kernel/sched.c#update_cache",
+      "line": 179
+    },
+    "zephyr:kernel/sched.c#update_cache/keep": {
+      "symbol": "zephyr:kernel/sched.c#update_cache",
+      "line": 181
+    },
+    "zephyr:kernel/include/kthread.h#should_preempt/allowed": {
+      "symbol": "zephyr:kernel/include/kthread.h#should_preempt",
+      "line": 231
+    },
+    "zephyr:kernel/include/kthread.h#should_preempt/not-running": {
+      "symbol": "zephyr:kernel/include/kthread.h#should_preempt",
+      "line": 238
+    },
+    "zephyr:kernel/include/kthread.h#should_preempt/preemptible": {
+      "symbol": "zephyr:kernel/include/kthread.h#should_preempt",
+      "line": 245
+    },
+    "zephyr:kernel/include/kthread.h#should_preempt/no": {
+      "symbol": "zephyr:kernel/include/kthread.h#should_preempt",
+      "line": 259
+    },
+    "zephyr:kernel/sched.c#ready_thread/check": {
+      "symbol": "zephyr:kernel/sched.c#ready_thread",
+      "line": 227
+    },
+    "zephyr:kernel/sched.c#ready_thread/queue": {
+      "symbol": "zephyr:kernel/sched.c#ready_thread",
+      "line": 230
+    },
+    "zephyr:kernel/sched.c#unready_thread/dequeue": {
+      "symbol": "zephyr:kernel/sched.c#unready_thread",
+      "line": 253
+    },
+    "zephyr:kernel/include/priority_q.h#z_priq_simple_add/insert": {
+      "symbol": "zephyr:kernel/include/priority_q.h#z_priq_simple_add",
+      "line": 120
+    },
+    "zephyr:kernel/include/priority_q.h#z_priq_simple_add/append": {
+      "symbol": "zephyr:kernel/include/priority_q.h#z_priq_simple_add",
+      "line": 125
+    },
+    "zephyr:kernel/include/priority_q.h#z_priq_simple_yield/insert": {
+      "symbol": "zephyr:kernel/include/priority_q.h#z_priq_simple_yield",
+      "line": 155
+    },
+    "zephyr:kernel/include/priority_q.h#z_priq_simple_yield/append": {
+      "symbol": "zephyr:kernel/include/priority_q.h#z_priq_simple_yield",
+      "line": 162
+    },
+    "zephyr:kernel/sched.c#reschedule/swap": {
+      "symbol": "zephyr:kernel/sched.c#reschedule",
+      "line": 406
+    },
+    "zephyr:kernel/sched.c#reschedule/stay": {
+      "symbol": "zephyr:kernel/sched.c#reschedule",
+      "line": 409
+    },
+    "zephyr:kernel/sched.c#z_reschedule_irqlock/swap": {
+      "symbol": "zephyr:kernel/sched.c#z_reschedule_irqlock",
+      "line": 650
+    },
+    "zephyr:kernel/sched.c#z_reschedule_irqlock/stay": {
+      "symbol": "zephyr:kernel/sched.c#z_reschedule_irqlock",
+      "line": 658
+    },
+    "zephyr:arch/posix/core/swap.c#arch_swap/switch": {
+      "symbol": "zephyr:arch/posix/core/swap.c#arch_swap",
+      "line": 52
+    },
+    "zephyr:boards/native/native_sim/irq_handler.c#posix_irq_handler/irq": {
+      "symbol": "zephyr:boards/native/native_sim/irq_handler.c#posix_irq_handler",
+      "line": 101
+    },
+    "zephyr:boards/native/native_sim/irq_handler.c#posix_irq_handler/check": {
+      "symbol": "zephyr:boards/native/native_sim/irq_handler.c#posix_irq_handler",
+      "line": 114
+    },
+    "zephyr:boards/native/native_sim/irq_handler.c#posix_irq_handler/swap": {
+      "symbol": "zephyr:boards/native/native_sim/irq_handler.c#posix_irq_handler",
+      "line": 118
+    },
+    "zephyr:kernel/timeout.c#sys_clock_announce_locked/advance": {
+      "symbol": "zephyr:kernel/timeout.c#sys_clock_announce_locked",
+      "line": 391
+    },
+    "zephyr:kernel/timeout.c#sys_clock_announce_locked/handler": {
+      "symbol": "zephyr:kernel/timeout.c#sys_clock_announce_locked",
+      "line": 401
+    },
+    "zephyr:kernel/timeout.c#sys_clock_announce_locked/slice": {
+      "symbol": "zephyr:kernel/timeout.c#sys_clock_announce_locked",
+      "line": 415
+    },
+    "zephyr:kernel/timeout.c#z_add_timeout/round-up": {
+      "symbol": "zephyr:kernel/timeout.c#z_add_timeout",
+      "line": 217
+    },
+    "zephyr:kernel/timeout.c#z_try_abort_timeout/remove": {
+      "symbol": "zephyr:kernel/timeout.c#z_try_abort_timeout",
+      "line": 245
+    },
+    "zephyr:kernel/timeout/list.h#z_timeout_q_insert/before": {
+      "symbol": "zephyr:kernel/timeout/list.h#z_timeout_q_insert",
+      "line": 52
+    },
+    "zephyr:kernel/timeout/list.h#z_timeout_q_insert/append": {
+      "symbol": "zephyr:kernel/timeout/list.h#z_timeout_q_insert",
+      "line": 58
+    },
+    "zephyr:kernel/sched.c#z_thread_timeout/wake": {
+      "symbol": "zephyr:kernel/sched.c#z_thread_timeout",
+      "line": 516
+    },
+    "zephyr:kernel/sched.c#z_sched_wake_thread_locked/unpend": {
+      "symbol": "zephyr:kernel/sched.c#z_sched_wake_thread_locked",
+      "line": 493
+    },
+    "zephyr:kernel/sched.c#z_sched_wake_thread_locked/awake": {
+      "symbol": "zephyr:kernel/sched.c#z_sched_wake_thread_locked",
+      "line": 495
+    },
+    "zephyr:kernel/timeslicing.c#slice_timeout/expired": {
+      "symbol": "zephyr:kernel/timeslicing.c#slice_timeout",
+      "line": 70
+    },
+    "zephyr:kernel/timeslicing.c#z_time_slice/not-expired": {
+      "symbol": "zephyr:kernel/timeslicing.c#z_time_slice",
+      "line": 160
+    },
+    "zephyr:kernel/timeslicing.c#z_time_slice/size": {
+      "symbol": "zephyr:kernel/timeslicing.c#z_time_slice",
+      "line": 178
+    },
+    "zephyr:kernel/timeslicing.c#z_time_slice/rearm": {
+      "symbol": "zephyr:kernel/timeslicing.c#z_time_slice",
+      "line": 214
+    },
+    "zephyr:kernel/sched.c#move_current_to_end_of_prio_q/yield": {
+      "symbol": "zephyr:kernel/sched.c#move_current_to_end_of_prio_q",
+      "line": 162
+    },
+    "zephyr:kernel/timeslicing.c#z_time_slice_reset/reset": {
+      "symbol": "zephyr:kernel/timeslicing.c#z_time_slice_reset",
+      "line": 105
+    },
+    "zephyr:kernel/timeslicing.c#slice_reset/abort": {
+      "symbol": "zephyr:kernel/timeslicing.c#slice_reset",
+      "line": 88
+    },
+    "zephyr:kernel/timeslicing.c#slice_reset/add": {
+      "symbol": "zephyr:kernel/timeslicing.c#slice_reset",
+      "line": 97
+    },
+    "zephyr:kernel/timeslicing.c#slice_reset/clear": {
+      "symbol": "zephyr:kernel/timeslicing.c#slice_reset",
+      "line": 100
+    },
+    "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks/unready": {
+      "symbol": "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks",
+      "line": 70
+    },
+    "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks/sleeping": {
+      "symbol": "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks",
+      "line": 72
+    },
+    "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks/swap": {
+      "symbol": "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks",
+      "line": 74
+    },
+    "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks/return": {
+      "symbol": "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks",
+      "line": 102
+    },
+    "zephyr:kernel/sched.c#z_sched_yield/yield": {
+      "symbol": "zephyr:kernel/sched.c#z_sched_yield",
+      "line": 431
+    },
+    "zephyr:kernel/sched.c#z_sched_yield/swap": {
+      "symbol": "zephyr:kernel/sched.c#z_sched_yield",
+      "line": 433
+    },
+    "zephyr:kernel/thread.c#z_thread_abort/halt": {
+      "symbol": "zephyr:kernel/thread.c#z_thread_abort",
+      "line": 1784
+    },
+    "zephyr:kernel/sched.c#z_thread_halt/swap": {
+      "symbol": "zephyr:kernel/sched.c#z_thread_halt",
+      "line": 364
+    },
+    "zephyr:kernel/sched.c#z_thread_halt/return": {
+      "symbol": "zephyr:kernel/sched.c#z_thread_halt",
+      "line": 367
+    },
+    "zephyr:kernel/sched.c#halt_thread/state": {
+      "symbol": "zephyr:kernel/sched.c#halt_thread",
+      "line": 865
+    },
+    "zephyr:kernel/sched.c#halt_thread/dequeue": {
+      "symbol": "zephyr:kernel/sched.c#halt_thread",
+      "line": 869
+    },
+    "zephyr:kernel/sched.c#z_pend_curr/swap": {
+      "symbol": "zephyr:kernel/sched.c#z_pend_curr",
+      "line": 552
+    },
+    "zephyr:kernel/sched.c#add_to_waitq_locked/pending": {
+      "symbol": "zephyr:kernel/sched.c#add_to_waitq_locked",
+      "line": 443
+    },
+    "zephyr:kernel/sched.c#add_to_waitq_locked/add": {
+      "symbol": "zephyr:kernel/sched.c#add_to_waitq_locked",
+      "line": 449
+    },
+    "zephyr:kernel/include/ksched.h#z_unpend_first_thread_locked/none": {
+      "symbol": "zephyr:kernel/include/ksched.h#z_unpend_first_thread_locked",
+      "line": 264
+    },
+    "zephyr:kernel/include/ksched.h#z_unpend_first_thread_locked/unpend": {
+      "symbol": "zephyr:kernel/include/ksched.h#z_unpend_first_thread_locked",
+      "line": 255
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/take": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+      "line": 218
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/held": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+      "line": 233
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/busy": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+      "line": 252
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/pended-on": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+      "line": 259
     },
     "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/boost": {
       "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
       "line": 306
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/no-boost": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+      "line": 305
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/chain-next": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+      "line": 335
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/pend": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+      "line": 340
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/got": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+      "line": 350
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/timed-out": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+      "line": 365
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/recalc": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+      "line": 376
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/resched": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+      "line": 386
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/fail": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+      "line": 393
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/remove": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock",
+      "line": 456
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/recalc": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock",
+      "line": 464
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/owner": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock",
+      "line": 477
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/held": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock",
+      "line": 492
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/free": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock",
+      "line": 498
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/resched": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock",
+      "line": 503
+    },
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/return": {
+      "symbol": "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock",
+      "line": 512
+    },
+    "zephyr:kernel/mutex.c#adjust_owner_prio/same": {
+      "symbol": "zephyr:kernel/mutex.c#adjust_owner_prio",
+      "line": 170
+    },
+    "zephyr:kernel/sched.c#z_thread_prio_set/requeue": {
+      "symbol": "zephyr:kernel/sched.c#z_thread_prio_set",
+      "line": 599
+    },
+    "zephyr:kernel/sched.c#z_thread_prio_set/waitq-add": {
+      "symbol": "zephyr:kernel/sched.c#z_thread_prio_set",
+      "line": 632
+    },
+    "zephyr:kernel/sched.c#z_thread_prio_set/other": {
+      "symbol": "zephyr:kernel/sched.c#z_thread_prio_set",
+      "line": 634
+    },
+    "zephyr:kernel/sem.c#z_impl_k_sem_take/take": {
+      "symbol": "zephyr:kernel/sem.c#z_impl_k_sem_take",
+      "line": 162
+    },
+    "zephyr:kernel/sem.c#z_impl_k_sem_take/busy": {
+      "symbol": "zephyr:kernel/sem.c#z_impl_k_sem_take",
+      "line": 170
+    },
+    "zephyr:kernel/sem.c#z_impl_k_sem_take/pend": {
+      "symbol": "zephyr:kernel/sem.c#z_impl_k_sem_take",
+      "line": 176
+    },
+    "zephyr:kernel/sem.c#z_impl_k_sem_take/return": {
+      "symbol": "zephyr:kernel/sem.c#z_impl_k_sem_take",
+      "line": 181
+    },
+    "zephyr:kernel/sem.c#z_impl_k_sem_give/wake": {
+      "symbol": "zephyr:kernel/sem.c#z_impl_k_sem_give",
+      "line": 124
+    },
+    "zephyr:kernel/sem.c#z_impl_k_sem_give/count": {
+      "symbol": "zephyr:kernel/sem.c#z_impl_k_sem_give",
+      "line": 127
+    },
+    "zephyr:kernel/sem.c#z_impl_k_sem_give/resched": {
+      "symbol": "zephyr:kernel/sem.c#z_impl_k_sem_give",
+      "line": 132
+    },
+    "zephyr:kernel/thread.c#z_impl_k_thread_priority_set/set": {
+      "symbol": "zephyr:kernel/thread.c#z_impl_k_thread_priority_set",
+      "line": 1659
+    },
+    "zephyr:kernel/thread.c#z_impl_k_thread_priority_set/resched": {
+      "symbol": "zephyr:kernel/thread.c#z_impl_k_thread_priority_set",
+      "line": 1663
+    },
+    "zephyr:kernel/thread.c#z_impl_k_thread_suspend/already": {
+      "symbol": "zephyr:kernel/thread.c#z_impl_k_thread_suspend",
+      "line": 1702
+    },
+    "zephyr:kernel/thread.c#z_impl_k_thread_suspend/halt": {
+      "symbol": "zephyr:kernel/thread.c#z_impl_k_thread_suspend",
+      "line": 1706
+    },
+    "zephyr:kernel/sched.c#z_thread_suspend_current/mark": {
+      "symbol": "zephyr:kernel/sched.c#z_thread_suspend_current",
+      "line": 989
+    },
+    "zephyr:kernel/sched.c#z_thread_suspend_current/dequeue": {
+      "symbol": "zephyr:kernel/sched.c#z_thread_suspend_current",
+      "line": 991
+    },
+    "zephyr:kernel/sched.c#z_thread_suspend_current/swap": {
+      "symbol": "zephyr:kernel/sched.c#z_thread_suspend_current",
+      "line": 993
+    },
+    "zephyr:kernel/thread.c#z_impl_k_thread_resume/not-suspended": {
+      "symbol": "zephyr:kernel/thread.c#z_impl_k_thread_resume",
+      "line": 1728
+    },
+    "zephyr:kernel/thread.c#z_impl_k_thread_resume/mark": {
+      "symbol": "zephyr:kernel/thread.c#z_impl_k_thread_resume",
+      "line": 1732
+    },
+    "zephyr:kernel/thread.c#z_impl_k_thread_resume/resched": {
+      "symbol": "zephyr:kernel/thread.c#z_impl_k_thread_resume",
+      "line": 1735
     }
   }
 }

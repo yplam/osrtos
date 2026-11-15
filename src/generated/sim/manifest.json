@@ -1,7 +1,7 @@
 {
   "simulator": {
     "version": "0.0.0",
-    "commit": "4e5ad43e6bdf736267992184c4a829e2e8cbd7c9",
+    "commit": "70b0bc8014731957138a20e34085e92aeff547a8",
     "dirty": false
   },
   "kernels": {
@@ -23,10 +23,11 @@
     }
   },
   "bundle": {
-    "js": "rtos-sim.d4d5ec0f3d.js",
+    "js": "rtos-sim.cc57637a6a.js",
     "css": "rtos-sim.cbbb96b5a7.css",
     "code": {
-      "freertos": "code.freertos.32b7af1a7d.json"
+      "freertos": "code.freertos.32b7af1a7d.json",
+      "zephyr": "code.zephyr.9b0751c202.json"
     }
   },
   "scenarios": {
@@ -37,7 +38,8 @@
         "zephyr"
       ],
       "simulated": [
-        "freertos"
+        "freertos",
+        "zephyr"
       ]
     },
     "time-slicing": {
@@ -47,7 +49,8 @@
         "zephyr"
       ],
       "simulated": [
-        "freertos"
+        "freertos",
+        "zephyr"
       ]
     },
     "blocking-idle": {
@@ -57,7 +60,8 @@
         "zephyr"
       ],
       "simulated": [
-        "freertos"
+        "freertos",
+        "zephyr"
       ]
     },
     "priority-inversion": {
@@ -67,7 +71,8 @@
         "zephyr"
       ],
       "simulated": [
-        "freertos"
+        "freertos",
+        "zephyr"
       ]
     },
     "priority-inversion-mutex": {
@@ -77,7 +82,8 @@
         "zephyr"
       ],
       "simulated": [
-        "freertos"
+        "freertos",
+        "zephyr"
       ]
     },
     "nested-mutexes": {
@@ -87,7 +93,8 @@
         "zephyr"
       ],
       "simulated": [
-        "freertos"
+        "freertos",
+        "zephyr"
       ]
     },
     "mutex-timeout": {
@@ -97,7 +104,8 @@
         "zephyr"
       ],
       "simulated": [
-        "freertos"
+        "freertos",
+        "zephyr"
       ]
     },
     "deadlock": {
@@ -107,7 +115,17 @@
         "zephyr"
       ],
       "simulated": [
-        "freertos"
+        "freertos",
+        "zephyr"
+      ]
+    },
+    "cooperative-threads": {
+      "title": "Cooperative threads",
+      "rtos": [
+        "zephyr"
+      ],
+      "simulated": [
+        "zephyr"
       ]
     },
     "tick-overflow": {
@@ -180,13 +198,54 @@
     "freertos:queue.c#xQueueSemaphoreTake",
     "freertos:queue.c#xQueueGenericSend",
     "freertos:queue.c#prvCopyDataToQueue",
+    "zephyr:kernel/init.c#z_init_static_threads",
+    "zephyr:kernel/init.c#bg_thread_main",
+    "zephyr:kernel/sys/thread_entry.c#z_thread_entry",
+    "zephyr:kernel/scheduler.c#k_sched_unlock",
+    "zephyr:kernel/sched.c#z_sched_lock_reschedule",
+    "zephyr:kernel/thread.c#z_impl_k_wakeup",
     "zephyr:kernel/sched.c#next_up",
     "zephyr:kernel/sched.c#update_cache",
     "zephyr:kernel/include/kthread.h#should_preempt",
+    "zephyr:kernel/sched.c#ready_thread",
+    "zephyr:kernel/sched.c#unready_thread",
+    "zephyr:kernel/include/priority_q.h#z_priq_simple_add",
+    "zephyr:kernel/include/priority_q.h#z_priq_simple_yield",
+    "zephyr:kernel/sched.c#reschedule",
+    "zephyr:kernel/sched.c#z_reschedule_irqlock",
+    "zephyr:arch/posix/core/swap.c#arch_swap",
+    "zephyr:boards/native/native_sim/irq_handler.c#posix_irq_handler",
+    "zephyr:kernel/timeout.c#sys_clock_announce_locked",
+    "zephyr:kernel/timeout.c#z_add_timeout",
+    "zephyr:kernel/timeout.c#z_try_abort_timeout",
+    "zephyr:kernel/timeout/list.h#z_timeout_q_insert",
+    "zephyr:kernel/sched.c#z_thread_timeout",
+    "zephyr:kernel/sched.c#z_sched_wake_thread_locked",
+    "zephyr:kernel/timeslicing.c#slice_timeout",
     "zephyr:kernel/timeslicing.c#z_time_slice",
+    "zephyr:kernel/sched.c#move_current_to_end_of_prio_q",
+    "zephyr:kernel/timeslicing.c#z_time_slice_reset",
+    "zephyr:kernel/timeslicing.c#slice_reset",
+    "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks",
+    "zephyr:kernel/sched.c#z_sched_yield",
+    "zephyr:kernel/thread.c#z_thread_abort",
+    "zephyr:kernel/sched.c#z_thread_halt",
+    "zephyr:kernel/sched.c#halt_thread",
+    "zephyr:kernel/sched.c#z_pend_curr",
+    "zephyr:kernel/sched.c#add_to_waitq_locked",
+    "zephyr:kernel/include/ksched.h#z_unpend_first_thread_locked",
     "zephyr:kernel/mutex.c#z_impl_k_mutex_lock",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock",
     "zephyr:kernel/mutex.c#adjust_owner_prio",
-    "zephyr:kernel/mutex.c#new_prio_for_inheritance"
+    "zephyr:kernel/mutex.c#new_prio_for_inheritance",
+    "zephyr:kernel/mutex.c#held_mutexes_highest_waiter_prio",
+    "zephyr:kernel/sched.c#z_thread_prio_set",
+    "zephyr:kernel/sem.c#z_impl_k_sem_take",
+    "zephyr:kernel/sem.c#z_impl_k_sem_give",
+    "zephyr:kernel/thread.c#z_impl_k_thread_priority_set",
+    "zephyr:kernel/thread.c#z_impl_k_thread_suspend",
+    "zephyr:kernel/sched.c#z_thread_suspend_current",
+    "zephyr:kernel/thread.c#z_impl_k_thread_resume"
   ],
   "anchors": [
     "freertos:portable/GCC/ARM_CM3/port.c#xPortSysTickHandler/tick",
@@ -336,9 +395,113 @@
     "freertos:queue.c#prvCopyDataToQueue/disinherit",
     "freertos:queue.c#prvCopyDataToQueue/holder",
     "freertos:queue.c#prvCopyDataToQueue/count",
-    "zephyr:kernel/sched.c#next_up/best",
+    "zephyr:kernel/init.c#z_init_static_threads/setup",
+    "zephyr:kernel/init.c#z_init_static_threads/lock",
+    "zephyr:kernel/init.c#z_init_static_threads/start",
+    "zephyr:kernel/init.c#z_init_static_threads/unlock",
+    "zephyr:kernel/init.c#bg_thread_main/main",
+    "zephyr:kernel/sys/thread_entry.c#z_thread_entry/abort",
+    "zephyr:kernel/scheduler.c#k_sched_unlock/unlock",
+    "zephyr:kernel/sched.c#z_sched_lock_reschedule/resched",
+    "zephyr:kernel/thread.c#z_impl_k_wakeup/awake",
     "zephyr:kernel/sched.c#next_up/pick",
-    "zephyr:kernel/sched.c#update_cache/should-preempt",
-    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/boost"
+    "zephyr:kernel/sched.c#update_cache/slice",
+    "zephyr:kernel/sched.c#update_cache/set",
+    "zephyr:kernel/sched.c#update_cache/keep",
+    "zephyr:kernel/include/kthread.h#should_preempt/allowed",
+    "zephyr:kernel/include/kthread.h#should_preempt/not-running",
+    "zephyr:kernel/include/kthread.h#should_preempt/preemptible",
+    "zephyr:kernel/include/kthread.h#should_preempt/no",
+    "zephyr:kernel/sched.c#ready_thread/check",
+    "zephyr:kernel/sched.c#ready_thread/queue",
+    "zephyr:kernel/sched.c#unready_thread/dequeue",
+    "zephyr:kernel/include/priority_q.h#z_priq_simple_add/insert",
+    "zephyr:kernel/include/priority_q.h#z_priq_simple_add/append",
+    "zephyr:kernel/include/priority_q.h#z_priq_simple_yield/insert",
+    "zephyr:kernel/include/priority_q.h#z_priq_simple_yield/append",
+    "zephyr:kernel/sched.c#reschedule/swap",
+    "zephyr:kernel/sched.c#reschedule/stay",
+    "zephyr:kernel/sched.c#z_reschedule_irqlock/swap",
+    "zephyr:kernel/sched.c#z_reschedule_irqlock/stay",
+    "zephyr:arch/posix/core/swap.c#arch_swap/switch",
+    "zephyr:boards/native/native_sim/irq_handler.c#posix_irq_handler/irq",
+    "zephyr:boards/native/native_sim/irq_handler.c#posix_irq_handler/check",
+    "zephyr:boards/native/native_sim/irq_handler.c#posix_irq_handler/swap",
+    "zephyr:kernel/timeout.c#sys_clock_announce_locked/advance",
+    "zephyr:kernel/timeout.c#sys_clock_announce_locked/handler",
+    "zephyr:kernel/timeout.c#sys_clock_announce_locked/slice",
+    "zephyr:kernel/timeout.c#z_add_timeout/round-up",
+    "zephyr:kernel/timeout.c#z_try_abort_timeout/remove",
+    "zephyr:kernel/timeout/list.h#z_timeout_q_insert/before",
+    "zephyr:kernel/timeout/list.h#z_timeout_q_insert/append",
+    "zephyr:kernel/sched.c#z_thread_timeout/wake",
+    "zephyr:kernel/sched.c#z_sched_wake_thread_locked/unpend",
+    "zephyr:kernel/sched.c#z_sched_wake_thread_locked/awake",
+    "zephyr:kernel/timeslicing.c#slice_timeout/expired",
+    "zephyr:kernel/timeslicing.c#z_time_slice/not-expired",
+    "zephyr:kernel/timeslicing.c#z_time_slice/size",
+    "zephyr:kernel/timeslicing.c#z_time_slice/rearm",
+    "zephyr:kernel/sched.c#move_current_to_end_of_prio_q/yield",
+    "zephyr:kernel/timeslicing.c#z_time_slice_reset/reset",
+    "zephyr:kernel/timeslicing.c#slice_reset/abort",
+    "zephyr:kernel/timeslicing.c#slice_reset/add",
+    "zephyr:kernel/timeslicing.c#slice_reset/clear",
+    "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks/unready",
+    "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks/sleeping",
+    "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks/swap",
+    "zephyr:kernel/sleep.c#z_impl_k_sleep_ticks/return",
+    "zephyr:kernel/sched.c#z_sched_yield/yield",
+    "zephyr:kernel/sched.c#z_sched_yield/swap",
+    "zephyr:kernel/thread.c#z_thread_abort/halt",
+    "zephyr:kernel/sched.c#z_thread_halt/swap",
+    "zephyr:kernel/sched.c#z_thread_halt/return",
+    "zephyr:kernel/sched.c#halt_thread/state",
+    "zephyr:kernel/sched.c#halt_thread/dequeue",
+    "zephyr:kernel/sched.c#z_pend_curr/swap",
+    "zephyr:kernel/sched.c#add_to_waitq_locked/pending",
+    "zephyr:kernel/sched.c#add_to_waitq_locked/add",
+    "zephyr:kernel/include/ksched.h#z_unpend_first_thread_locked/none",
+    "zephyr:kernel/include/ksched.h#z_unpend_first_thread_locked/unpend",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/take",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/held",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/busy",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/pended-on",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/boost",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/no-boost",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/chain-next",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/pend",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/got",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/timed-out",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/recalc",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/resched",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_lock/fail",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/remove",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/recalc",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/owner",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/held",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/free",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/resched",
+    "zephyr:kernel/mutex.c#z_impl_k_mutex_unlock/return",
+    "zephyr:kernel/mutex.c#adjust_owner_prio/same",
+    "zephyr:kernel/sched.c#z_thread_prio_set/requeue",
+    "zephyr:kernel/sched.c#z_thread_prio_set/waitq-add",
+    "zephyr:kernel/sched.c#z_thread_prio_set/other",
+    "zephyr:kernel/sem.c#z_impl_k_sem_take/take",
+    "zephyr:kernel/sem.c#z_impl_k_sem_take/busy",
+    "zephyr:kernel/sem.c#z_impl_k_sem_take/pend",
+    "zephyr:kernel/sem.c#z_impl_k_sem_take/return",
+    "zephyr:kernel/sem.c#z_impl_k_sem_give/wake",
+    "zephyr:kernel/sem.c#z_impl_k_sem_give/count",
+    "zephyr:kernel/sem.c#z_impl_k_sem_give/resched",
+    "zephyr:kernel/thread.c#z_impl_k_thread_priority_set/set",
+    "zephyr:kernel/thread.c#z_impl_k_thread_priority_set/resched",
+    "zephyr:kernel/thread.c#z_impl_k_thread_suspend/already",
+    "zephyr:kernel/thread.c#z_impl_k_thread_suspend/halt",
+    "zephyr:kernel/sched.c#z_thread_suspend_current/mark",
+    "zephyr:kernel/sched.c#z_thread_suspend_current/dequeue",
+    "zephyr:kernel/sched.c#z_thread_suspend_current/swap",
+    "zephyr:kernel/thread.c#z_impl_k_thread_resume/not-suspended",
+    "zephyr:kernel/thread.c#z_impl_k_thread_resume/mark",
+    "zephyr:kernel/thread.c#z_impl_k_thread_resume/resched"
   ]
 }
