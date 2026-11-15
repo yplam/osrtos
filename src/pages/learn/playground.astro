@@ -1,6 +1,7 @@
 ---
 // Every preset scenario in one simulator. The scenario is chosen with the
-// select (or ?scenario=<id>); its parameters are changed inside the simulator.
+// select (or ?scenario=<id>); its parameters are changed inside the simulator,
+// which also reads a link to a step (?rtos, ?step, ?p.<parameter>).
 import Layout from '../../layouts/Layout.astro';
 import SimEmbed from '../../components/SimEmbed.astro';
 import manifest from '../../generated/sim/manifest.json';
@@ -63,6 +64,10 @@ const first = scenarios[0];
     if (img && option.dataset.svg) img.src = option.dataset.svg;
     if (updateUrl) {
       const url = new URL(location.href);
+      // A link to a step of another scenario (?rtos, ?step, ?p.<parameter>) no longer applies.
+      for (const key of [...url.searchParams.keys()]) {
+        if (key === 'rtos' || key === 'step' || key.startsWith('p.')) url.searchParams.delete(key);
+      }
       url.searchParams.set('scenario', id);
       history.replaceState(null, '', url);
     }
