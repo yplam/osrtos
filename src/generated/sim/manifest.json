@@ -1,7 +1,7 @@
 {
   "simulator": {
     "version": "0.0.0",
-    "commit": "70b0bc8014731957138a20e34085e92aeff547a8",
+    "commit": "26e3ed46f60d80a024755df9a8571d4b7bc86f64",
     "dirty": false
   },
   "kernels": {
@@ -23,8 +23,8 @@
     }
   },
   "bundle": {
-    "js": "rtos-sim.cc57637a6a.js",
-    "css": "rtos-sim.cbbb96b5a7.css",
+    "js": "rtos-sim.44ab6c7f50.js",
+    "css": "rtos-sim.78cd811bb9.css",
     "code": {
       "freertos": "code.freertos.32b7af1a7d.json",
       "zephyr": "code.zephyr.9b0751c202.json"
@@ -108,6 +108,17 @@
         "zephyr"
       ]
     },
+    "mutex-handoff": {
+      "title": "Mutex handoff",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos",
+        "zephyr"
+      ]
+    },
     "deadlock": {
       "title": "Deadlock (ABBA)",
       "rtos": [
@@ -139,10 +150,93 @@
     }
   },
   "lessons": {
+    "deadlock": {
+      "scenario": "deadlock",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Deadlock",
+        "nth": 1
+      }
+    },
     "freertos/priority-inheritance": {
       "scenario": "priority-inversion-mutex",
       "rtos": [
         "freertos"
+      ],
+      "keyStep": {
+        "event": "PrioChange",
+        "nth": 1
+      }
+    },
+    "mutex-handoff": {
+      "scenario": "mutex-handoff",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Give",
+        "nth": 1
+      }
+    },
+    "preemption": {
+      "scenario": "preemption",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Unblock",
+        "nth": 1
+      }
+    },
+    "priority-inheritance": {
+      "scenario": "priority-inversion-mutex",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "PrioChange",
+        "nth": 1
+      }
+    },
+    "priority-inversion": {
+      "scenario": "priority-inversion",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Block",
+        "nth": 3
+      }
+    },
+    "scheduling": {
+      "scenario": "blocking-idle",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Block",
+        "nth": 2
+      }
+    },
+    "time-slicing": {
+      "scenario": "time-slicing",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ]
+    },
+    "zephyr/priority-inheritance": {
+      "scenario": "priority-inversion-mutex",
+      "rtos": [
+        "zephyr"
       ],
       "keyStep": {
         "event": "PrioChange",
