@@ -1,0 +1,28 @@
+---
+import {getCollection} from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import {Content as Resources} from './_resources.md';
+import '../../styles/prose.css';
+
+const lessons = (await getCollection('lessons')).sort((a, b) => a.id.localeCompare(b.id));
+---
+
+<Layout
+  title="Learn RTOS - Open Source Real-Time Operating Systems"
+  description="Ultimate RTOS Learning Resources | Comprehensive Tutorials & Guides"
+>
+  <div class="prose max-w-4xl mx-auto">
+    {lessons.length > 0 && (
+      <h2>Interactive lessons</h2>
+      <p>Step through real kernel code and watch the scheduler make each decision.</p>
+      <ul>
+        {lessons.map(lesson => (
+          <li>
+            <a href={`/learn/${lesson.id}/`}>{lesson.data.title}</a>: {lesson.data.description}
+          </li>
+        ))}
+      </ul>
+    )}
+    <Resources/>
+  </div>
+</Layout>

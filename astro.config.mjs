@@ -4,6 +4,9 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from '@astrojs/sitemap';
+import { satteri } from '@astrojs/markdown-satteri';
+
+import { kernelSnippet } from './src/plugins/kernel-snippet.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,5 +16,9 @@ export default defineConfig({
   },
 
   trailingSlash: 'always',
-  integrations: [sitemap()]
+  integrations: [sitemap()],
+
+  markdown: {
+    processor: satteri({ mdastPlugins: [kernelSnippet] })
+  }
 });

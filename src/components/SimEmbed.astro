@@ -1,0 +1,74 @@
+---
+// The <rtos-sim> element with its static SVG, plus the loader that fetches the
+// simulator bundle from /sim/ when the element comes near the viewport.
+//
+// The wrapper reserves its height here (not in the bundle's stylesheet, which
+// loads late), so neither the bundle nor ads shift the page. Its id is stable
+// on purpose: it is the selector for an "excluded area" in AdSense Auto ads.
+import manifest from '../generated/sim/manifest.json';
+
+interface Props {
+  scenario: string;
+  rtos: string[];
+}
+
+const {scenario, rtos} = Astro.props;
+const kernels: Record<string, {name: string; version: string}> = manifest.kernels;
+const scenarios: Record<string, {title: string}> = manifest.scenarios;
+const first = rtos[0];
+const alt = `${scenarios[scenario].title} on ${kernels[first].name} ${kernels[first].version}`;
+---
+
+<div id="rtos-sim-embed" class="sim-embed">
+  <rtos-sim
+    scenario={scenario}
+    rtos={rtos.join(',')}
+    data-js={`/sim/${manifest.bundle.js}`}
+    data-css={`/sim/${manifest.bundle.css}`}
+  >
+    <img src={`/sim/svg/${scenario}.${first}.svg`} alt={alt} loading="lazy" decoding="async"/>
+  </rtos-sim>
+</div>
+
+<style>
+  .sim-embed {
+    min-height: 420px;
+    margin: 2rem 0;
+  }
+
+  .sim-embed img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+
+<script>
+  const elements = document.querySelectorAll<HTMLElement>('rtos-sim[data-js]');
+
+  function load(el: HTMLElement) {
+    const {js, css} = el.dataset;
+    if (css && !document.querySelector(`link[href="${css}"]`)) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = css;
+      document.head.append(link);
+    }
+    // The bundle defines the <rtos-sim> custom element. If it fails to load,
+    // the static SVG simply stays.
+    if (js) import(/* @vite-ignore */ js).catch(() => {});
+  }
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        observer.unobserve(entry.target);
+        load(entry.target as HTMLElement);
+      }
+    }, {rootMargin: '300px'});
+    elements.forEach(el => observer.observe(el));
+  } else {
+    elements.forEach(load);
+  }
+</script>

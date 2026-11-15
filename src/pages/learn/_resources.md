@@ -1,9 +1,3 @@
----
-layout: ../layouts/MarkdownLayout.astro
-title: "Learn RTOS - Open Source Real-Time Operating Systems"
-description: "Ultimate RTOS Learning Resources | Comprehensive Tutorials & Guides"
----
-
 ## Resource for learning RTOS
 
 ### RTOS 101

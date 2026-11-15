@@ -1,5 +1,6 @@
 import {defineCollection, z} from 'astro:content';
 import {glob} from 'astro/loaders';
+import {lessons} from './collections/lessons';
 
 const rtos = defineCollection({
   loader: glob({pattern: "**/*.md", base: "./src/content/rtos"}),
@@ -78,4 +79,4 @@ const projects = defineCollection({
   }),
 });
 
-export const collections = {rtos, libraries, projects};
+export const collections = {rtos, libraries, projects, lessons};

@@ -1,0 +1,69 @@
+---
+// Layout for a lesson under /learn/: breadcrumb, title, introduction, then the
+// simulator in a fixed slot (one per page, only when the lesson has a
+// scenario), then the prose.
+import Layout from './Layout.astro';
+import SimEmbed from '../components/SimEmbed.astro';
+import manifest from '../generated/sim/manifest.json';
+import '../styles/prose.css';
+
+interface Props {
+  title: string;
+  description: string;
+  scenario?: string;
+  rtos?: string[];
+  breadcrumbs?: {label: string; href?: string}[];
+}
+
+const {title, description, scenario, rtos = [], breadcrumbs = []} = Astro.props;
+const kernels: Record<string, {name: string; version: string}> = manifest.kernels;
+const trail = [{label: 'Learn', href: '/learn/'}, ...breadcrumbs];
+---
+
+<Layout title={`${title} - OSRTOS`} description={description}>
+  <article class="max-w-4xl mx-auto">
+    <nav aria-label="Breadcrumb" class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+      {trail.map((crumb) => (
+        <span>
+          {crumb.href
+            ? <a href={crumb.href} class="text-indigo-600 dark:text-indigo-400 no-underline hover:underline">{crumb.label}</a>
+            : crumb.label}
+          <span aria-hidden="true" class="mx-1">/</span>
+        </span>
+      ))}
+    </nav>
+
+    <h1 class="text-3xl md:text-4xl font-extrabold m-0 mb-4 text-gray-800 dark:text-gray-200">{title}</h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300 m-0">{description}</p>
+
+    {scenario && (
+      <SimEmbed scenario={scenario} rtos={rtos}/>
+      <p class="text-sm text-gray-500 dark:text-gray-400 -mt-4 mb-8">
+        Simulated kernel: {rtos.map(id => `${kernels[id].name} ${kernels[id].version}`).join(' and ')}.{' '}
+        <a href="/learn/licenses/" class="text-indigo-600 dark:text-indigo-400">Source and licenses</a>
+      </p>
+    )}
+
+    <div class="prose lesson-prose">
+      <slot/>
+    </div>
+  </article>
+</Layout>
+
+<style is:global>
+  /* Attribution line under a kernel source excerpt (see plugins/kernel-snippet.mjs). */
+  .lesson-prose .kernel-source {
+    margin-top: -0.75rem;
+    font-size: 0.8125rem;
+    color: #6b7280;
+  }
+
+  .dark .lesson-prose .kernel-source {
+    color: #9ca3af;
+  }
+
+  .lesson-prose pre {
+    max-height: 32rem;
+    overflow: auto;
+  }
+</style>

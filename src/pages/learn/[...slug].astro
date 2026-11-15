@@ -1,0 +1,33 @@
+---
+import {getCollection, render} from 'astro:content';
+import LessonLayout from '../../layouts/LessonLayout.astro';
+
+const SECTIONS: Record<string, string> = {freertos: 'FreeRTOS', zephyr: 'Zephyr', compare: 'Compare', glossary: 'Glossary'};
+
+export async function getStaticPaths() {
+  // First path segments that have their own meaning under /learn/ and cannot be
+  // used as the slug of a concept lesson.
+  const RESERVED = ['freertos', 'zephyr', 'compare', 'playground', 'glossary', 'licenses'];
+  const lessons = await getCollection('lessons');
+  return lessons.map(entry => {
+    if (RESERVED.includes(entry.id)) {
+      throw new Error(`Lesson "${entry.id}.md": "${entry.id}" is reserved under /learn/ and cannot be a lesson slug.`);
+    }
+    return {params: {slug: entry.id}, props: {entry}};
+  });
+}
+
+const {entry} = Astro.props;
+const {Content} = await render(entry);
+const section = entry.id.includes('/') ? SECTIONS[entry.id.split('/')[0]] : undefined;
+---
+
+<LessonLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  scenario={entry.data.scenario}
+  rtos={entry.data.rtos}
+  breadcrumbs={section ? [{label: section}] : []}
+>
+  <Content/>
+</LessonLayout>

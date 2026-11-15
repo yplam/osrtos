@@ -1,0 +1,44 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import manifest from '../../generated/sim/manifest.json';
+import '../../styles/prose.css';
+
+const kernels = Object.values(manifest.kernels);
+---
+
+<Layout
+  title="Licenses for the RTOS lessons and simulator - OSRTOS"
+  description="Licenses of the lesson text, the kernel source excerpts and the simulator used in the OSRTOS lessons."
+>
+  <div class="prose max-w-4xl mx-auto">
+    <h1 class="text-3xl md:text-4xl font-extrabold">Licenses</h1>
+
+    <h2>Lesson text</h2>
+    <p>
+      The text of the lessons is available under the
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-ShareAlike License</a>,
+      like most of the text on this site.
+    </p>
+
+    <h2>Kernel source code</h2>
+    <p>
+      The lessons show excerpts of real kernel source code, and the simulator's kernel models are ports of
+      that code. Both stay under the license of the kernel they come from, at these pinned versions:
+    </p>
+    <ul>
+      {kernels.map(kernel => (
+        <li>
+          <a href={kernel.repo} target="_blank" rel="noopener noreferrer">{kernel.name}</a> {kernel.version}:
+          <a href={kernel.licenseUrl} target="_blank" rel="noopener noreferrer">{kernel.license} license</a>
+        </li>
+      ))}
+    </ul>
+
+    <h2>Simulator</h2>
+    <p>
+      The simulator bundle and its generated data files carry their own licenses and are not covered by the
+      Creative Commons license above. The full notices are in
+      <a href="/sim/THIRD-PARTY-LICENSES.txt">THIRD-PARTY-LICENSES.txt</a>.
+    </p>
+  </div>
+</Layout>
