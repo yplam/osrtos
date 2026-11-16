@@ -1,7 +1,7 @@
 {
   "simulator": {
     "version": "0.0.0",
-    "commit": "3b4d6aa26028e58e4a46754e91e625ac461bf54e",
+    "commit": "8c97120e1d124de4e14c8d3c94e2ece81bb95aa1",
     "dirty": false
   },
   "kernels": {
@@ -23,11 +23,11 @@
     }
   },
   "bundle": {
-    "js": "rtos-sim.120113c67d.js",
-    "css": "rtos-sim.78cd811bb9.css",
+    "js": "rtos-sim.9581358d21.js",
+    "css": "rtos-sim.f89e770b3f.css",
     "code": {
-      "freertos": "code.freertos.32b7af1a7d.json",
-      "zephyr": "code.zephyr.9b0751c202.json"
+      "freertos": "code.freertos.59c45b5d4d.json",
+      "zephyr": "code.zephyr.490b9e9a72.json"
     }
   },
   "scenarios": {
@@ -214,6 +214,40 @@
         "tasks[Producer].start"
       ]
     },
+    "deferred-interrupt": {
+      "title": "Deferred interrupt handling",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos",
+        "zephyr"
+      ],
+      "tweakable": [
+        "config.yieldFromIsr",
+        "tasks[Handler].urgency",
+        "tasks[Main].urgency"
+      ]
+    },
+    "periodic-tasks": {
+      "title": "Periodic tasks and deadlines",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos",
+        "zephyr"
+      ],
+      "tweakable": [
+        "tasks[Sensor].urgency",
+        "tasks[Poll].urgency",
+        "tasks[Burst].urgency",
+        "tasks[Burst].start",
+        "tasks[Sensor].deadline"
+      ]
+    },
     "deadlock": {
       "title": "Deadlock (ABBA)",
       "rtos": [
@@ -342,6 +376,34 @@
         "#sim:event=TaskEnd:1"
       ]
     },
+    "freertos/delay-until": {
+      "scenario": "periodic-tasks",
+      "rtos": [
+        "freertos"
+      ],
+      "keyStep": {
+        "event": "Block",
+        "nth": 2
+      },
+      "links": [
+        "#sim:event=Block:2",
+        "#sim:event=DeadlineMiss:1"
+      ]
+    },
+    "freertos/interrupts": {
+      "scenario": "deferred-interrupt",
+      "rtos": [
+        "freertos"
+      ],
+      "keyStep": {
+        "event": "Interrupt",
+        "nth": 1
+      },
+      "links": [
+        "#sim:event=Interrupt:1",
+        "#sim:tick=4"
+      ]
+    },
     "freertos/priority-inheritance": {
       "scenario": "priority-inversion-mutex",
       "rtos": [
@@ -383,6 +445,23 @@
         "#sim:event=Block:2",
         "#sim:tick=6",
         "#sim:tick=8"
+      ]
+    },
+    "interrupts": {
+      "scenario": "deferred-interrupt",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Interrupt",
+        "nth": 1
+      },
+      "links": [
+        "#sim:event=Interrupt:1",
+        "#sim:event=Interrupt:2",
+        "#sim:event=Interrupt:3",
+        "#sim:event=Interrupt:4"
       ]
     },
     "mutex-handoff": {
@@ -427,6 +506,21 @@
         "#sim:rtos=freertos&tick=7",
         "#sim:rtos=freertos&event=PrioChange:2",
         "#sim:rtos=zephyr&event=PrioChange:2"
+      ]
+    },
+    "periodic-tasks": {
+      "scenario": "periodic-tasks",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "DeadlineMiss",
+        "nth": 1
+      },
+      "links": [
+        "#sim:event=Block:2",
+        "#sim:event=DeadlineMiss:1"
       ]
     },
     "preemption": {
@@ -542,6 +636,33 @@
         "#sim:tick=7"
       ]
     },
+    "zephyr/interrupts": {
+      "scenario": "deferred-interrupt",
+      "rtos": [
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Interrupt",
+        "nth": 1
+      },
+      "links": [
+        "#sim:event=Interrupt:1"
+      ]
+    },
+    "zephyr/periodic-sleep": {
+      "scenario": "periodic-tasks",
+      "rtos": [
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Block",
+        "nth": 2
+      },
+      "links": [
+        "#sim:event=Block:2",
+        "#sim:event=DeadlineMiss:1"
+      ]
+    },
     "zephyr/priority-inheritance": {
       "scenario": "priority-inversion-mutex",
       "rtos": [
@@ -582,12 +703,15 @@
     "Take",
     "Give",
     "Timeout",
-    "Deadlock"
+    "Deadlock",
+    "Interrupt",
+    "DeadlineMiss"
   ],
   "symbols": [
     "freertos:portable/GCC/ARM_CM3/port.c#xPortSysTickHandler",
     "freertos:portable/GCC/ARM_CM3/port.c#xPortPendSVHandler",
     "freertos:portable/GCC/ARM_CM3/portmacro.h#portYIELD",
+    "freertos:portable/GCC/ARM_CM3/portmacro.h#portEND_SWITCHING_ISR",
     "freertos:tasks.c#xTaskCreate",
     "freertos:tasks.c#prvAddNewTaskToReadyList",
     "freertos:tasks.c#vTaskStartScheduler",
@@ -598,6 +722,9 @@
     "freertos:tasks.c#taskSELECT_HIGHEST_PRIORITY_TASK",
     "freertos:tasks.c#prvAddTaskToReadyList",
     "freertos:tasks.c#vTaskDelay",
+    "freertos:tasks.c#xTaskDelayUntil",
+    "freertos:tasks.c#xTaskGetTickCount",
+    "freertos:tasks.c#xTaskResumeAll",
     "freertos:tasks.c#prvAddCurrentTaskToDelayedList",
     "freertos:tasks.c#vTaskDelete",
     "freertos:tasks.c#prvIdleTask",
@@ -616,6 +743,7 @@
     "freertos:queue.c#xQueueCreateMutex",
     "freertos:queue.c#xQueueGenericCreate",
     "freertos:queue.c#xQueueSemaphoreTake",
+    "freertos:queue.c#xQueueGiveFromISR",
     "freertos:queue.c#xQueueGenericSend",
     "freertos:queue.c#prvCopyDataToQueue",
     "zephyr:kernel/init.c#z_init_static_threads",
@@ -637,6 +765,8 @@
     "zephyr:boards/native/native_sim/irq_handler.c#posix_irq_handler",
     "zephyr:kernel/timeout.c#sys_clock_announce_locked",
     "zephyr:kernel/timeout.c#z_add_timeout",
+    "zephyr:kernel/timeout.c#z_impl_k_uptime_ticks",
+    "zephyr:kernel/timeout.c#sys_clock_tick_get",
     "zephyr:kernel/timeout.c#z_try_abort_timeout",
     "zephyr:kernel/timeout/list.h#z_timeout_q_insert",
     "zephyr:kernel/sched.c#z_thread_timeout",
@@ -673,6 +803,8 @@
     "freertos:portable/GCC/ARM_CM3/port.c#xPortPendSVHandler/switch",
     "freertos:portable/GCC/ARM_CM3/port.c#xPortPendSVHandler/restore",
     "freertos:portable/GCC/ARM_CM3/portmacro.h#portYIELD/pend",
+    "freertos:portable/GCC/ARM_CM3/portmacro.h#portEND_SWITCHING_ISR/check",
+    "freertos:portable/GCC/ARM_CM3/portmacro.h#portEND_SWITCHING_ISR/yield",
     "freertos:tasks.c#xTaskCreate/add",
     "freertos:tasks.c#prvAddNewTaskToReadyList/first",
     "freertos:tasks.c#prvAddNewTaskToReadyList/higher",
@@ -711,6 +843,21 @@
     "freertos:tasks.c#vTaskDelay/resume",
     "freertos:tasks.c#vTaskDelay/yield",
     "freertos:tasks.c#vTaskDelay/return",
+    "freertos:tasks.c#xTaskDelayUntil/suspend",
+    "freertos:tasks.c#xTaskDelayUntil/wake-time",
+    "freertos:tasks.c#xTaskDelayUntil/overflow-check",
+    "freertos:tasks.c#xTaskDelayUntil/wrapped-check",
+    "freertos:tasks.c#xTaskDelayUntil/delay-wrapped",
+    "freertos:tasks.c#xTaskDelayUntil/future-check",
+    "freertos:tasks.c#xTaskDelayUntil/delay",
+    "freertos:tasks.c#xTaskDelayUntil/update",
+    "freertos:tasks.c#xTaskDelayUntil/add",
+    "freertos:tasks.c#xTaskDelayUntil/resume",
+    "freertos:tasks.c#xTaskDelayUntil/yield",
+    "freertos:tasks.c#xTaskDelayUntil/return",
+    "freertos:tasks.c#xTaskGetTickCount/read",
+    "freertos:tasks.c#xTaskResumeAll/yield-check",
+    "freertos:tasks.c#xTaskResumeAll/yield",
     "freertos:tasks.c#prvAddCurrentTaskToDelayedList/remove",
     "freertos:tasks.c#prvAddCurrentTaskToDelayedList/insert-suspended",
     "freertos:tasks.c#prvAddCurrentTaskToDelayedList/wake-time",
@@ -801,9 +948,18 @@
     "freertos:queue.c#xQueueSemaphoreTake/resume",
     "freertos:queue.c#xQueueSemaphoreTake/yield",
     "freertos:queue.c#xQueueSemaphoreTake/timed-out",
+    "freertos:queue.c#xQueueSemaphoreTake/still-empty",
     "freertos:queue.c#xQueueSemaphoreTake/highest-waiting",
     "freertos:queue.c#xQueueSemaphoreTake/disinherit-timeout",
     "freertos:queue.c#xQueueSemaphoreTake/return-timeout",
+    "freertos:queue.c#xQueueGiveFromISR/enter",
+    "freertos:queue.c#xQueueGiveFromISR/space-check",
+    "freertos:queue.c#xQueueGiveFromISR/count",
+    "freertos:queue.c#xQueueGiveFromISR/waiters-check",
+    "freertos:queue.c#xQueueGiveFromISR/remove-waiter",
+    "freertos:queue.c#xQueueGiveFromISR/woken",
+    "freertos:queue.c#xQueueGiveFromISR/return-pass",
+    "freertos:queue.c#xQueueGiveFromISR/return-full",
     "freertos:queue.c#xQueueGenericSend/space-check",
     "freertos:queue.c#xQueueGenericSend/copy",
     "freertos:queue.c#xQueueGenericSend/waiters-check",
@@ -851,6 +1007,9 @@
     "zephyr:kernel/timeout.c#sys_clock_announce_locked/handler",
     "zephyr:kernel/timeout.c#sys_clock_announce_locked/slice",
     "zephyr:kernel/timeout.c#z_add_timeout/round-up",
+    "zephyr:kernel/timeout.c#z_add_timeout/absolute",
+    "zephyr:kernel/timeout.c#z_add_timeout/at-least-one",
+    "zephyr:kernel/timeout.c#sys_clock_tick_get/read",
     "zephyr:kernel/timeout.c#z_try_abort_timeout/remove",
     "zephyr:kernel/timeout/list.h#z_timeout_q_insert/before",
     "zephyr:kernel/timeout/list.h#z_timeout_q_insert/append",
