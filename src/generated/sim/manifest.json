@@ -1,7 +1,7 @@
 {
   "simulator": {
     "version": "0.0.0",
-    "commit": "26e3ed46f60d80a024755df9a8571d4b7bc86f64",
+    "commit": "37c6555d4e2fb21cf9755b6d30351cb2c62d42bd",
     "dirty": false
   },
   "kernels": {
@@ -23,7 +23,7 @@
     }
   },
   "bundle": {
-    "js": "rtos-sim.44ab6c7f50.js",
+    "js": "rtos-sim.d035561852.js",
     "css": "rtos-sim.78cd811bb9.css",
     "code": {
       "freertos": "code.freertos.32b7af1a7d.json",
@@ -40,6 +40,12 @@
       "simulated": [
         "freertos",
         "zephyr"
+      ],
+      "tweakable": [
+        "tasks[Low].urgency",
+        "tasks[High].urgency",
+        "tasks[High].start",
+        "config.preemption"
       ]
     },
     "time-slicing": {
@@ -51,6 +57,13 @@
       "simulated": [
         "freertos",
         "zephyr"
+      ],
+      "tweakable": [
+        "tasks[A].urgency",
+        "tasks[B].urgency",
+        "tasks[C].urgency",
+        "config.timeSlicing",
+        "config.timeSliceTicks"
       ]
     },
     "blocking-idle": {
@@ -62,6 +75,12 @@
       "simulated": [
         "freertos",
         "zephyr"
+      ],
+      "tweakable": [
+        "tasks[Sensor].urgency",
+        "tasks[Logger].urgency",
+        "tasks[Sensor].start",
+        "tasks[Logger].start"
       ]
     },
     "priority-inversion": {
@@ -73,6 +92,15 @@
       "simulated": [
         "freertos",
         "zephyr"
+      ],
+      "tweakable": [
+        "tasks[Low].urgency",
+        "tasks[Med].urgency",
+        "tasks[High].urgency",
+        "tasks[Low].start",
+        "tasks[Med].start",
+        "tasks[High].start",
+        "objects[S].kind"
       ]
     },
     "priority-inversion-mutex": {
@@ -84,6 +112,16 @@
       "simulated": [
         "freertos",
         "zephyr"
+      ],
+      "tweakable": [
+        "tasks[Low].urgency",
+        "tasks[Med].urgency",
+        "tasks[High].urgency",
+        "tasks[Low].start",
+        "tasks[Med].start",
+        "tasks[High].start",
+        "config.timeSlicing",
+        "objects[M].kind"
       ]
     },
     "nested-mutexes": {
@@ -95,6 +133,15 @@
       "simulated": [
         "freertos",
         "zephyr"
+      ],
+      "tweakable": [
+        "tasks[Low].urgency",
+        "tasks[Med].urgency",
+        "tasks[High].urgency",
+        "tasks[Low].start",
+        "tasks[Med].start",
+        "tasks[High].start",
+        "config.timeSlicing"
       ]
     },
     "mutex-timeout": {
@@ -106,6 +153,15 @@
       "simulated": [
         "freertos",
         "zephyr"
+      ],
+      "tweakable": [
+        "tasks[Low].urgency",
+        "tasks[Med].urgency",
+        "tasks[High].urgency",
+        "tasks[Low].start",
+        "tasks[Med].start",
+        "tasks[High].start",
+        "config.timeSlicing"
       ]
     },
     "mutex-handoff": {
@@ -117,6 +173,12 @@
       "simulated": [
         "freertos",
         "zephyr"
+      ],
+      "tweakable": [
+        "tasks[High].urgency",
+        "tasks[Med].urgency",
+        "tasks[Low].urgency",
+        "config.timeSlicing"
       ]
     },
     "deadlock": {
@@ -128,6 +190,12 @@
       "simulated": [
         "freertos",
         "zephyr"
+      ],
+      "tweakable": [
+        "tasks[Low].urgency",
+        "tasks[High].urgency",
+        "tasks[Low].start",
+        "tasks[High].start"
       ]
     },
     "cooperative-threads": {
@@ -137,6 +205,14 @@
       ],
       "simulated": [
         "zephyr"
+      ],
+      "tweakable": [
+        "tasks[Worker].urgency",
+        "tasks[High].urgency",
+        "tasks[Low].urgency",
+        "tasks[Worker].start",
+        "tasks[High].start",
+        "tasks[Low].start"
       ]
     },
     "tick-overflow": {
@@ -146,6 +222,10 @@
       ],
       "simulated": [
         "freertos"
+      ],
+      "tweakable": [
+        "tasks[Early].urgency",
+        "tasks[Late].urgency"
       ]
     }
   },
