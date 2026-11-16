@@ -1,7 +1,6 @@
 ---
 title: Ready list
 description: The kernel structure that holds the tasks able to run, organised so the most urgent one is found quickly.
-order: 3
 ---
 
 The **ready list** (or run queue) holds every task that could run right now. The scheduler's job is

@@ -3,6 +3,7 @@
 
 /** A lesson's section is the first segment of its id; a lesson without one is a concept lesson. */
 export const SECTIONS = [
+  {id: 'basics', title: 'Basics', intro: 'What an RTOS is, and the ideas every other lesson builds on. Start here if real-time kernels are new to you.'},
   {id: '', title: 'Concepts', intro: 'What a real-time kernel does, on any RTOS. Each lesson runs on the kernels you can switch between.'},
   {id: 'freertos', title: 'FreeRTOS', intro: 'How FreeRTOS does it, in its own source code.'},
   {id: 'zephyr', title: 'Zephyr', intro: 'How Zephyr does it, in its own source code.'},
@@ -10,7 +11,7 @@ export const SECTIONS = [
 ] as const;
 
 /** First path segments with a meaning of their own under /learn/: not usable as a concept lesson's slug. */
-export const RESERVED = ['freertos', 'zephyr', 'playground', 'glossary', 'licenses'];
+export const RESERVED = ['basics', 'freertos', 'zephyr', 'playground', 'glossary', 'licenses'];
 
 interface LessonLike {
   id: string;
@@ -24,7 +25,7 @@ export function sectionOf(id: string): (typeof SECTIONS)[number] {
   return section;
 }
 
-/** Section by section; inside a section by `order`, then by title. */
+/** Section by section; inside a section by `order`, then by title (the glossary has no `order`: it is alphabetical). */
 export function sortLessons<T extends LessonLike>(lessons: T[]): T[] {
   const rank = (l: T) => SECTIONS.indexOf(sectionOf(l.id));
   return [...lessons].sort((a, b) =>

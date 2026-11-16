@@ -1,7 +1,6 @@
 ---
 title: Tick
 description: The periodic timer interrupt that gives an RTOS kernel its sense of time, and the unit that delays and timeouts are counted in.
-order: 1
 ---
 
 The **tick** is a timer interrupt that fires at a fixed rate, and also the time between two of

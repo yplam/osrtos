@@ -1,7 +1,6 @@
 ---
 title: Task control block (TCB)
 description: The structure in which a kernel keeps everything it knows about one task, such as its saved stack pointer, priority and list links.
-order: 2
 ---
 
 A **task control block** is the kernel's record of one task. Everything the scheduler needs to stop

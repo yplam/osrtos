@@ -1,7 +1,7 @@
 ---
 title: Priority inversion
 description: How a medium-priority task can keep a high-priority task waiting for a lock it has nothing to do with.
-order: 4
+order: 5
 scenario: priority-inversion
 rtos: [freertos, zephyr]
 keyStep: { event: Block, nth: 3 }

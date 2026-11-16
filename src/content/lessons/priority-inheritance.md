@@ -1,7 +1,7 @@
 ---
 title: Priority inheritance
 description: How a mutex bounds priority inversion by lending the waiter's priority to the task that holds the lock.
-order: 5
+order: 6
 scenario: priority-inversion-mutex
 rtos: [freertos, zephyr]
 keyStep: { event: PrioChange, nth: 1 }

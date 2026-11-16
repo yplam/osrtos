@@ -1,7 +1,7 @@
 ---
 title: "Mutex handoff: who gets a mutex when it is unlocked"
 description: FreeRTOS frees the mutex and lets tasks compete for it; Zephyr gives it straight to the most urgent waiter. One program, two outcomes.
-order: 6
+order: 9
 scenario: mutex-handoff
 rtos: [freertos, zephyr]
 keyStep: { event: Give, nth: 1 }

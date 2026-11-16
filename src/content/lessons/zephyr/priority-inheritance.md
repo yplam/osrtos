@@ -1,7 +1,7 @@
 ---
 title: Priority inheritance in Zephyr
 description: How k_mutex_lock raises a chain of mutex owners and k_mutex_unlock works the priority out again, in the real kernel source.
-order: 1
+order: 5
 scenario: priority-inversion-mutex
 rtos: zephyr
 keyStep: { event: PrioChange, nth: 1 }

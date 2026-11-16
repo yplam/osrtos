@@ -1,7 +1,6 @@
 ---
 title: Idle task
 description: The lowest-priority task every kernel creates, which runs whenever no application task is ready.
-order: 5
 ---
 
 The **idle task** (idle thread in Zephyr) is created by the kernel itself at the lowest priority. It

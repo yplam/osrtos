@@ -1,7 +1,6 @@
 ---
 title: Context switch
 description: Saving the CPU state of one task and restoring that of another, so each task continues as if it had never stopped.
-order: 4
 ---
 
 A **context switch** is how a kernel changes which task the CPU executes. The kernel saves the

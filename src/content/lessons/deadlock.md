@@ -1,7 +1,7 @@
 ---
 title: Deadlock
 description: Two tasks, two mutexes, taken in opposite order. Why neither kernel notices, and how to design it away.
-order: 7
+order: 10
 scenario: deadlock
 rtos: [freertos, zephyr]
 keyStep: { event: Deadlock, nth: 1 }
