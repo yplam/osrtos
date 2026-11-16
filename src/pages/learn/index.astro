@@ -39,7 +39,7 @@ const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
 <Layout title={title} description={description}>
   <script type="application/ld+json" slot="head" is:inline set:html={jsonLdText}/>
 
-  <header class="max-w-4xl mx-auto">
+  <header>
     <h1 class="text-3xl md:text-4xl font-extrabold m-0 mb-4 text-gray-800 dark:text-gray-200">Learn how an RTOS works</h1>
     <p class="text-lg text-gray-600 dark:text-gray-300 m-0">
       Watch a real-time kernel make every scheduling decision, next to the source code that makes it.
@@ -50,7 +50,7 @@ const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
 
   {hero && hero.simulated.length > 0 && <SimEmbed scenario={HERO} rtos={hero.simulated}/>}
 
-  <div class="max-w-4xl mx-auto">
+  <div>
     {hero && (
       <p class="text-sm text-gray-500 dark:text-gray-400 -mt-4 mb-10">
         Shown: {hero.title.toLowerCase()}. A low-priority task holds a mutex that a high-priority task needs.{' '}
@@ -63,7 +63,7 @@ const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
       <section id={section.title.toLowerCase()} class="mb-10 scroll-mt-24">
         <h2 class="text-2xl font-bold m-0 mb-1 text-gray-800 dark:text-gray-200">{section.title}</h2>
         <p class="text-gray-600 dark:text-gray-400 m-0 mb-4">{section.intro}</p>
-        <ul class={`list-none p-0 m-0 grid gap-3 ${section.id === 'glossary' ? 'sm:grid-cols-3' : 'sm:grid-cols-2'}`}>
+        <ul class={`list-none p-0 m-0 grid gap-3 ${section.id === 'glossary' ? 'sm:grid-cols-3 lg:grid-cols-4' : 'sm:grid-cols-2 lg:grid-cols-3'}`}>
           {section.lessons.map(lesson => (
             <li>
               <a
@@ -88,7 +88,7 @@ const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
     </section>
   </div>
 
-  <div class="prose max-w-4xl mx-auto">
+  <div class="prose">
     <Resources/>
   </div>
 </Layout>

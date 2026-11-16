@@ -1,8 +1,8 @@
 ---
 // Layout for a lesson under /learn/: breadcrumb, title, introduction, then the
 // simulator in a fixed slot (one per page, only when the lesson has a
-// scenario), then the prose and the links to the lessons around it. Text stays
-// in a reading column; the simulator uses the full width of the site container.
+// scenario), then the prose and the links to the lessons around it. The text
+// and the simulator both use the full width of the site container (1280px).
 import Layout from './Layout.astro';
 import SimEmbed from '../components/SimEmbed.astro';
 import manifest from '../generated/sim/manifest.json';
@@ -84,7 +84,7 @@ const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
 <Layout title={`${title} - OSRTOS`} description={description} image={image}>
   <script type="application/ld+json" slot="head" is:inline set:html={jsonLdText}/>
   <article>
-    <header class="max-w-4xl mx-auto">
+    <header>
       <nav aria-label="Breadcrumb" class="text-sm text-gray-500 dark:text-gray-400 mb-4">
         {trail.map((crumb) => (
           <span>
@@ -100,18 +100,18 @@ const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
 
     {scenario && (
       <SimEmbed scenario={scenario} rtos={rtos} lesson={lesson}/>
-      <p class="max-w-4xl mx-auto text-sm text-gray-500 dark:text-gray-400 -mt-4 mb-8">
+      <p class="text-sm text-gray-500 dark:text-gray-400 -mt-4 mb-8">
         Simulated kernel: {rtos.map(id => `${kernels[id].name} ${kernels[id].version}`).join(' and ')}.{' '}
         <a href="/learn/licenses/" class="text-indigo-600 dark:text-indigo-400">Source and licenses</a>
       </p>
     )}
 
-    <div class="prose lesson-prose max-w-4xl mx-auto">
+    <div class="prose lesson-prose">
       <slot/>
     </div>
 
     {(prev || next) && (
-      <nav aria-label="Lessons" class="max-w-4xl mx-auto mt-12 pt-6 border-t border-gray-200 dark:border-gray-700 grid gap-4 sm:grid-cols-2">
+      <nav aria-label="Lessons" class="mt-12 pt-6 border-t border-gray-200 dark:border-gray-700 grid gap-4 sm:grid-cols-2">
         {prev
           ? <a href={prev.href} class="block rounded-lg border border-gray-200 dark:border-gray-700 p-4 no-underline hover:border-indigo-500">
               <span class="block text-sm text-gray-500 dark:text-gray-400">← Previous</span>

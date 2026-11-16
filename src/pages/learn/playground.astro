@@ -21,7 +21,7 @@ const kernels: Record<string, {name: string; version: string}> = manifest.kernel
   title="RTOS scheduler playground - OSRTOS"
   description="Run preset RTOS scheduling scenarios step by step on line-by-line models of the FreeRTOS and Zephyr kernels, next to their source code, and change the parameters."
 >
-  <header class="max-w-4xl mx-auto">
+  <header>
     <nav aria-label="Breadcrumb" class="text-sm text-gray-500 dark:text-gray-400 mb-4">
       <a href="/learn/" class="text-indigo-600 dark:text-indigo-400 no-underline hover:underline">Learn</a>
       <span aria-hidden="true" class="mx-1">/</span>
@@ -44,7 +44,7 @@ const kernels: Record<string, {name: string; version: string}> = manifest.kernel
 
   <SimEmbed scenario={first.id} rtos={order(first)}/>
 
-  <p class="max-w-4xl mx-auto text-sm text-gray-500 dark:text-gray-400">
+  <p class="text-sm text-gray-500 dark:text-gray-400">
     The simulator runs a line-by-line model of the kernel, checked against the real kernel.{' '}
     <a href="/learn/licenses/" class="text-indigo-600 dark:text-indigo-400">Source and licenses</a>
   </p>
