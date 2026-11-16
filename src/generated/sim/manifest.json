@@ -1,7 +1,7 @@
 {
   "simulator": {
     "version": "0.0.0",
-    "commit": "37c6555d4e2fb21cf9755b6d30351cb2c62d42bd",
+    "commit": "3b4d6aa26028e58e4a46754e91e625ac461bf54e",
     "dirty": false
   },
   "kernels": {
@@ -23,7 +23,7 @@
     }
   },
   "bundle": {
-    "js": "rtos-sim.d035561852.js",
+    "js": "rtos-sim.120113c67d.js",
     "css": "rtos-sim.78cd811bb9.css",
     "code": {
       "freertos": "code.freertos.32b7af1a7d.json",
@@ -31,6 +31,22 @@
     }
   },
   "scenarios": {
+    "task-states": {
+      "title": "Task states",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos",
+        "zephyr"
+      ],
+      "tweakable": [
+        "tasks[Worker].urgency",
+        "tasks[Supervisor].urgency",
+        "tasks[Supervisor].start"
+      ]
+    },
     "preemption": {
       "title": "Preemption",
       "rtos": [
@@ -181,6 +197,23 @@
         "config.timeSlicing"
       ]
     },
+    "signal-semaphore": {
+      "title": "A semaphore as a signal",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos",
+        "zephyr"
+      ],
+      "tweakable": [
+        "tasks[Handler].urgency",
+        "tasks[Producer].urgency",
+        "tasks[Handler].start",
+        "tasks[Producer].start"
+      ]
+    },
     "deadlock": {
       "title": "Deadlock (ABBA)",
       "rtos": [
@@ -230,6 +263,42 @@
     }
   },
   "lessons": {
+    "basics/superloop-vs-rtos": {
+      "scenario": "preemption",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "ContextSwitch",
+        "nth": 3
+      },
+      "links": [
+        "#sim:rtos=freertos&tick=3",
+        "#sim:event=ContextSwitch:3",
+        "#sim:rtos=zephyr&tick=4"
+      ]
+    },
+    "basics/task-states": {
+      "scenario": "task-states",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Suspend",
+        "nth": 1
+      },
+      "links": [
+        "#sim:event=ContextSwitch:3",
+        "#sim:event=Suspend:1",
+        "#sim:event=Resume:1",
+        "#sim:event=Block:3",
+        "#sim:event=Block:4",
+        "#sim:event=Give:1",
+        "#sim:event=TaskEnd:2"
+      ]
+    },
     "deadlock": {
       "scenario": "deadlock",
       "rtos": [
@@ -241,6 +310,38 @@
         "nth": 1
       }
     },
+    "freertos/choosing-the-next-task": {
+      "scenario": "time-slicing",
+      "rtos": [
+        "freertos"
+      ],
+      "keyStep": {
+        "event": "ContextSwitch",
+        "nth": 2
+      },
+      "links": [
+        "#sim:event=ContextSwitch:1",
+        "#sim:event=ContextSwitch:2",
+        "#sim:event=ContextSwitch:3",
+        "#sim:event=TaskEnd:3"
+      ]
+    },
+    "freertos/context-switch": {
+      "scenario": "preemption",
+      "rtos": [
+        "freertos"
+      ],
+      "keyStep": {
+        "event": "ContextSwitch",
+        "nth": 3
+      },
+      "links": [
+        "#sim:event=ContextSwitch:2",
+        "#sim:event=Unblock:1",
+        "#sim:event=ContextSwitch:3",
+        "#sim:event=TaskEnd:1"
+      ]
+    },
     "freertos/priority-inheritance": {
       "scenario": "priority-inversion-mutex",
       "rtos": [
@@ -250,6 +351,39 @@
         "event": "PrioChange",
         "nth": 1
       }
+    },
+    "freertos/tick-and-delay": {
+      "scenario": "blocking-idle",
+      "rtos": [
+        "freertos"
+      ],
+      "keyStep": {
+        "event": "Unblock",
+        "nth": 1
+      },
+      "links": [
+        "#sim:event=Block:1",
+        "#sim:event=Block:2",
+        "#sim:tick=2",
+        "#sim:event=Unblock:1",
+        "#sim:event=Unblock:2"
+      ]
+    },
+    "freertos/tick-overflow": {
+      "scenario": "tick-overflow",
+      "rtos": [
+        "freertos"
+      ],
+      "keyStep": {
+        "event": "Block",
+        "nth": 2
+      },
+      "links": [
+        "#sim:event=Block:1",
+        "#sim:event=Block:2",
+        "#sim:tick=6",
+        "#sim:tick=8"
+      ]
     },
     "mutex-handoff": {
       "scenario": "mutex-handoff",
@@ -261,6 +395,39 @@
         "event": "Give",
         "nth": 1
       }
+    },
+    "mutex-timeout": {
+      "scenario": "mutex-timeout",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Timeout",
+        "nth": 1
+      },
+      "links": [
+        "#sim:rtos=freertos&event=PrioChange:1",
+        "#sim:rtos=freertos&event=Timeout:1",
+        "#sim:rtos=zephyr&event=Timeout:1"
+      ]
+    },
+    "nested-mutexes": {
+      "scenario": "nested-mutexes",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Give",
+        "nth": 1
+      },
+      "links": [
+        "#sim:rtos=freertos&event=PrioChange:1",
+        "#sim:rtos=freertos&tick=7",
+        "#sim:rtos=freertos&event=PrioChange:2",
+        "#sim:rtos=zephyr&event=PrioChange:2"
+      ]
     },
     "preemption": {
       "scenario": "preemption",
@@ -306,11 +473,73 @@
         "nth": 2
       }
     },
+    "semaphores": {
+      "scenario": "signal-semaphore",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Give",
+        "nth": 1
+      },
+      "links": [
+        "#sim:event=Give:1",
+        "#sim:event=Block:2"
+      ]
+    },
     "time-slicing": {
       "scenario": "time-slicing",
       "rtos": [
         "freertos",
         "zephyr"
+      ]
+    },
+    "zephyr/choosing-the-next-task": {
+      "scenario": "time-slicing",
+      "rtos": [
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "ContextSwitch",
+        "nth": 2
+      },
+      "links": [
+        "#sim:event=Unblock:2",
+        "#sim:event=ContextSwitch:1",
+        "#sim:event=ContextSwitch:2",
+        "#sim:event=TaskEnd:1"
+      ]
+    },
+    "zephyr/context-switch": {
+      "scenario": "preemption",
+      "rtos": [
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "ContextSwitch",
+        "nth": 3
+      },
+      "links": [
+        "#sim:event=ContextSwitch:2",
+        "#sim:event=Unblock:3",
+        "#sim:event=ContextSwitch:3",
+        "#sim:event=ContextSwitch:4"
+      ]
+    },
+    "zephyr/cooperative-threads": {
+      "scenario": "cooperative-threads",
+      "rtos": [
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Unblock",
+        "nth": 5
+      },
+      "links": [
+        "#sim:tick=3",
+        "#sim:event=Unblock:5",
+        "#sim:tick=7"
       ]
     },
     "zephyr/priority-inheritance": {
@@ -322,6 +551,23 @@
         "event": "PrioChange",
         "nth": 1
       }
+    },
+    "zephyr/tick-and-delay": {
+      "scenario": "blocking-idle",
+      "rtos": [
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Unblock",
+        "nth": 3
+      },
+      "links": [
+        "#sim:event=Block:1",
+        "#sim:event=Block:2",
+        "#sim:tick=4",
+        "#sim:event=Unblock:3",
+        "#sim:tick=3"
+      ]
     }
   },
   "events": [
