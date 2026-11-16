@@ -59,7 +59,7 @@ where every wake-up is a tick later).
   outcome.
 
 The difference in when the priority drops shows with nested mutexes. In the
-[nested mutexes scenario](/learn/playground/?scenario=nested-mutexes), `Low` holds two mutexes and
+[nested mutexes lesson](/learn/nested-mutexes/), `Low` holds two mutexes and
 `High` waits for the inner one. On Zephyr, `Low` drops back as soon as it releases that one. On
 FreeRTOS it keeps the raised priority until it has released both.
 

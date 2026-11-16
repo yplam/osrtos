@@ -71,9 +71,9 @@ all.
 The second condition is a deliberate simplification. If a task
 holds two mutexes and inherited its priority through one of them, FreeRTOS does not work out which.
 It keeps the raised priority until the last mutex is given back. The task may run at a high
-priority for longer than strictly needed, but never for less. Try the
-[nested mutexes scenario](/learn/playground/?scenario=nested-mutexes&rtos=freertos) to see `Low`
-keep priority 3 after it has released the mutex that `High` wanted.
+priority for longer than strictly needed, but never for less. The
+[nested mutexes lesson](/learn/nested-mutexes/) shows `Low` keep priority 3 after it has released
+the mutex that `High` wanted.
 
 After the priority is restored, `xQueueGenericSend()` makes the most urgent waiter ready. It does
 not make it the owner; see [Mutex handoff](/learn/mutex-handoff/).
@@ -90,7 +90,7 @@ among the tasks still waiting.
 
 It lowers the holder to the greater of its base priority and that remaining waiter's priority, and
 again only if the holder holds exactly one mutex. The
-[mutex timeout scenario](/learn/playground/?scenario=mutex-timeout&rtos=freertos) runs this path:
+[mutex timeout lesson](/learn/mutex-timeout/) runs this path:
 `High` gives up at tick 4 and `Low` drops back to priority 1 while it still holds `M`.
 
 ## Limits worth knowing

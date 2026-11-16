@@ -62,7 +62,7 @@ may be a few microseconds wide and be hit once a month.
   the standard answer, and it works as long as everybody follows it.
 - **One lock.** If two resources are always used together, protect them with one mutex.
 - **A timeout.** Take the second mutex with a timeout. If it runs out, release the first mutex and
-  try again later. The [mutex timeout scenario](/learn/playground/?scenario=mutex-timeout) shows what
+  try again later. The [mutex timeout lesson](/learn/mutex-timeout/) shows what
   each kernel does with the inherited priority when a wait times out.
 - **No lock.** Give the resource to one task and let the others send it messages.
 

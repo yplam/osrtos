@@ -21,7 +21,7 @@ const kernels = Object.values(manifest.kernels as Record<string, {name: string; 
 const kernelNames = kernels.map(k => k.name).join(' and ');
 
 const title = 'Learn RTOS: interactive lessons on real kernel code - OSRTOS';
-const description = `Learn how a real-time operating system schedules tasks. Step through ${kernelNames} line by line in a simulator checked against the real kernels: preemption, time slicing, priority inversion, priority inheritance and deadlock.`;
+const description = `Learn how a real-time operating system works, from the basics up. Step through ${kernelNames} line by line in a simulator checked against the real kernels: tasks and their states, preemption, time slicing, semaphores, priority inversion, priority inheritance and deadlock.`;
 const url = new URL('/learn/', Astro.site).href;
 const jsonLd = {
   '@context': 'https://schema.org',

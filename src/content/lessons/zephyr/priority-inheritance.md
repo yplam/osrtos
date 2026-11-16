@@ -75,7 +75,7 @@ The function looks at the first waiter of every mutex the thread still holds and
 urgent priority among them, or `orig_prio` if nobody waits. So a thread that holds two mutexes
 drops exactly as far as it can when it releases one. FreeRTOS, by contrast, keeps the raised
 priority until the last mutex is released. Compare both in the
-[nested mutexes scenario](/learn/playground/?scenario=nested-mutexes&rtos=zephyr).
+[nested mutexes lesson](/learn/nested-mutexes/).
 
 One consequence was confirmed on the real kernel while this simulator was built: a priority set with
 `k_thread_priority_set()` on a thread that holds a mutex is lost when it unlocks, because the
@@ -94,7 +94,7 @@ the function continues after it. It recomputes the owner's priority with the sam
 `held_mutexes_highest_waiter_prio()` and lowers the owner if no remaining waiter justifies the
 boost. Only the direct owner is lowered. Owners further along a chain keep their raised priority
 until they unlock; the kernel documents this as a known limitation. The
-[mutex timeout scenario](/learn/playground/?scenario=mutex-timeout&rtos=zephyr) runs this path.
+[mutex timeout lesson](/learn/mutex-timeout/) runs this path.
 
 ## Deadlock detection
 

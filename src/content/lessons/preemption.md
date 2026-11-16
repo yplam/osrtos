@@ -49,10 +49,11 @@ happens when the interrupt returns.
 ```kernel zephyr:kernel/include/kthread.h#should_preempt
 ```
 
-The first test in that function is worth a look. A Zephyr thread with a negative priority is
-**cooperative**: `should_preempt()` says no for it, and it keeps the CPU until it sleeps or yields,
-whatever else becomes ready. The playground has a
-[cooperative threads scenario](/learn/playground/?scenario=cooperative-threads) that shows it.
+The third test in that function is worth a look: `thread_is_preemptible(_current)`. A Zephyr
+thread with a negative priority is **cooperative**, so for it the test fails and `should_preempt()`
+says no (unless the thread itself asked to give up the CPU, the `preempt_ok` test at the top). It
+keeps the CPU until it sleeps or yields, whatever else becomes ready. The
+[cooperative threads lesson](/learn/zephyr/cooperative-threads/) shows it.
 
 ## One tick later on Zephyr
 

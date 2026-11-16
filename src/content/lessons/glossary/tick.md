@@ -23,7 +23,7 @@ Two details that surprise people:
   *n* periods. Zephyr adds one tick so that `k_sleep()` never returns early, and lasts between *n*
   and *n* + 1. The [scheduling lesson](/learn/scheduling/) shows both.
 - **The tick count overflows.** FreeRTOS handles a 32-bit count wrapping round with two delayed
-  lists that swap roles; the [tick overflow scenario](/learn/playground/?scenario=tick-overflow)
+  lists that swap roles; the [tick overflow lesson](/learn/freertos/tick-overflow/)
   shows the swap. Zephyr counts ticks in 64 bits.
 
 A kernel can also run **tickless**: instead of interrupting at a fixed rate, it programs the timer
