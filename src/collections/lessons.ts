@@ -5,7 +5,7 @@ import simManifest from '../generated/sim/manifest.json';
 // Lessons under /learn/. `scenario`, `rtos` and `keyStep` are checked against the
 // manifest written by the simulator export, so a lesson cannot refer to
 // something the exported simulator does not have.
-const simScenarios: Record<string, {title: string; rtos: string[]}> = simManifest.scenarios;
+const simScenarios: Record<string, {title: string; rtos: string[]; tweakable: string[]}> = simManifest.scenarios;
 const simRtos = z.enum(Object.keys(simManifest.kernels) as [string, ...string[]]);
 
 export const lessons = defineCollection({
@@ -23,10 +23,13 @@ export const lessons = defineCollection({
       event: z.enum(simManifest.events as [string, ...string[]]),
       nth: z.number().int().min(1).default(1),
     }).optional(),
+    // Parameters the simulator opens with, by tweak path: { "tasks[Low].urgency": 2 }.
+    // The export checks the values by running the scenario with them.
+    params: z.record(z.string(), z.union([z.number(), z.boolean(), z.string()])).optional(),
   }).superRefine((data, ctx) => {
     if (data.scenario === undefined) {
-      if (data.rtos || data.keyStep) {
-        ctx.addIssue({code: 'custom', message: '`rtos` and `keyStep` need a `scenario`'});
+      if (data.rtos || data.keyStep || data.params) {
+        ctx.addIssue({code: 'custom', message: '`rtos`, `keyStep` and `params` need a `scenario`'});
       }
       return;
     }
@@ -38,6 +41,15 @@ export const lessons = defineCollection({
         message: `Unknown scenario "${data.scenario}". The exported simulator has: ${Object.keys(simScenarios).join(', ')}`,
       });
       return;
+    }
+    for (const path of Object.keys(data.params ?? {})) {
+      if (!scenario.tweakable.includes(path)) {
+        ctx.addIssue({
+          code: 'custom',
+          path: ['params', path],
+          message: `"${path}" is not a parameter of scenario "${data.scenario}". It has: ${scenario.tweakable.join(', ')}`,
+        });
+      }
     }
     if (!data.rtos) {
       ctx.addIssue({code: 'custom', path: ['rtos'], message: 'A lesson with a `scenario` needs `rtos`'});

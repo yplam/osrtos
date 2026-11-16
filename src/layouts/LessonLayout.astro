@@ -20,13 +20,15 @@ interface Props {
   lesson?: string;
   scenario?: string;
   rtos?: string[];
+  /** Parameters the simulator opens with (the lesson's `params`). */
+  params?: Record<string, string | number | boolean>;
   /** Title of the lesson's section, for lessons that are in one (FreeRTOS, Zephyr, Glossary). */
   section?: string;
   prev?: Link;
   next?: Link;
 }
 
-const {title, description, lesson, scenario, rtos = [], section, prev, next} = Astro.props;
+const {title, description, lesson, scenario, rtos = [], params, section, prev, next} = Astro.props;
 const kernels: Record<string, {name: string; version: string}> = manifest.kernels;
 const scenarios: Record<string, {simulated: string[]}> = manifest.scenarios;
 const trail = [{label: 'Learn', href: '/learn/'}, ...(section ? [{label: section, href: `/learn/#${section.toLowerCase()}`}] : [])];
@@ -99,7 +101,7 @@ const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
     </header>
 
     {scenario && (
-      <SimEmbed scenario={scenario} rtos={rtos} lesson={lesson}/>
+      <SimEmbed scenario={scenario} rtos={rtos} lesson={lesson} params={params}/>
       <p class="text-sm text-gray-500 dark:text-gray-400 -mt-4 mb-8">
         Simulated kernel: {rtos.map(id => `${kernels[id].name} ${kernels[id].version}`).join(' and ')}.{' '}
         <a href="/learn/licenses/" class="text-indigo-600 dark:text-indigo-400">Source and licenses</a>

@@ -2,6 +2,10 @@
 // The <rtos-sim> element with its static SVG, plus the loader that fetches the
 // simulator bundle from /sim/ when the element comes near the viewport.
 //
+// Step links in the page's text (`[tick 3](#sim:tick=3)`) are handled here too:
+// a click scrolls the simulator into view and moves it to that step, loading
+// the bundle first if needed. The address bar does not change.
+//
 // The wrapper reserves the simulator's height here (not in the bundle's
 // stylesheet, which loads late), so neither the bundle nor ads shift the page.
 // Its id is stable on purpose: it is the selector for an "excluded area" in
@@ -13,9 +17,11 @@ interface Props {
   rtos: string[];
   /** Id of the lesson the simulator belongs to: its diagram shows the lesson's key step. */
   lesson?: string;
+  /** Parameters the simulator opens with (a lesson's `params`). */
+  params?: Record<string, string | number | boolean>;
 }
 
-const {scenario, rtos, lesson} = Astro.props;
+const {scenario, rtos, lesson, params} = Astro.props;
 const kernels: Record<string, {name: string; version: string}> = manifest.kernels;
 const scenarios: Record<string, {title: string; simulated: string[]}> = manifest.scenarios;
 const first = rtos[0];
@@ -30,6 +36,7 @@ const svg = lesson ? `lesson/${lesson}.${first}.svg` : `scenario/${scenario}.${f
   <rtos-sim
     scenario={scenario}
     rtos={rtos.join(',')}
+    params={params && Object.keys(params).length > 0 ? JSON.stringify(params) : undefined}
     data-js={`/sim/${manifest.bundle.js}`}
     data-css={`/sim/${manifest.bundle.css}`}
   >
@@ -49,6 +56,8 @@ const svg = lesson ? `lesson/${lesson}.${first}.svg` : `scenario/${scenario}.${f
   .sim-embed {
     min-height: 1280px;
     margin: 2rem 0;
+    /* Below the site's sticky header when a step link scrolls to it. */
+    scroll-margin-top: 5rem;
   }
 
   .sim-embed-placeholder {
@@ -116,6 +125,31 @@ const svg = lesson ? `lesson/${lesson}.${first}.svg` : `scenario/${scenario}.${f
     link.onerror = run;
     document.head.append(link);
   }
+
+  // Step links: `<a href="#sim:…">` anywhere on the page moves the page's simulator.
+  document.addEventListener('click', (e) => {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const link = (e.target as Element | null)?.closest?.('a[href^="#sim:"]');
+    const el = elements[0];
+    if (!link || !el) return;
+    e.preventDefault();
+    const href = link.getAttribute('href') as string;
+    const embed = el.closest('.sim-embed') ?? el;
+    const top = embed.getBoundingClientRect().top;
+    const margin = parseFloat(getComputedStyle(embed).scrollMarginTop) || 0;
+    // Scroll unless the simulator's top is already in the upper part of the screen.
+    if (top < margin - 2 || top > margin + window.innerHeight / 4) {
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      embed.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'start'});
+    }
+    if (customElements.get('rtos-sim')) {
+      el.dispatchEvent(new CustomEvent('rtos-sim-goto', {detail: href}));
+    } else {
+      // The bundle reads this when it starts.
+      el.dataset.goto = href;
+      load(el);
+    }
+  });
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
