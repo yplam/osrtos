@@ -1,7 +1,7 @@
 {
   "simulator": {
     "version": "0.0.0",
-    "commit": "24834d37a35a0de50efaf7c2c3d4f8c975a9eb36",
+    "commit": "0e061fc9277909131c37196610e6a8543f3892e0",
     "dirty": false
   },
   "kernels": {
@@ -23,11 +23,11 @@
     }
   },
   "bundle": {
-    "js": "rtos-sim.28a53a35a0.js",
-    "css": "rtos-sim.f8a0cf8111.css",
+    "js": "rtos-sim.e2abfd5a21.js",
+    "css": "rtos-sim.9122f8fa18.css",
     "code": {
-      "freertos": "code.freertos.97aa4fdb21.json",
-      "zephyr": "code.zephyr.317365b9c1.json"
+      "freertos": "code.freertos.3580e5ad0a.json",
+      "zephyr": "code.zephyr.008b25f86c.json"
     }
   },
   "scenarios": {
@@ -304,6 +304,55 @@
         "tasks[Sensor].deadline"
       ]
     },
+    "software-timers": {
+      "title": "Software timers",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos",
+        "zephyr"
+      ],
+      "tweakable": [
+        "config.timerTaskUrgency",
+        "timers[Blink].period",
+        "timers[Blink].autoReload",
+        "tasks[Worker].urgency"
+      ]
+    },
+    "event-group": {
+      "title": "Event group",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos",
+        "zephyr"
+      ],
+      "tweakable": [
+        "config.timerTaskUrgency",
+        "config.yieldFromIsr",
+        "tasks[Upload].urgency",
+        "tasks[Status].urgency",
+        "tasks[Net].urgency"
+      ]
+    },
+    "task-notification": {
+      "title": "Task notification",
+      "rtos": [
+        "freertos"
+      ],
+      "simulated": [
+        "freertos"
+      ],
+      "tweakable": [
+        "config.yieldFromIsr",
+        "tasks[Handler].urgency",
+        "tasks[Main].urgency"
+      ]
+    },
     "deadlock": {
       "title": "Deadlock (ABBA)",
       "rtos": [
@@ -415,6 +464,23 @@
         "nth": 1
       }
     },
+    "event-groups": {
+      "scenario": "event-group",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "GotBits",
+        "nth": 2
+      },
+      "links": [
+        "#sim:tick=3",
+        "#sim:event=GotBits:1",
+        "#sim:event=GotBits:2",
+        "#sim:rtos=zephyr&event=GotBits:2"
+      ]
+    },
     "freertos/choosing-the-next-task": {
       "scenario": "time-slicing",
       "rtos": [
@@ -461,6 +527,20 @@
         "#sim:event=DeadlineMiss:1"
       ]
     },
+    "freertos/event-groups": {
+      "scenario": "event-group",
+      "rtos": [
+        "freertos"
+      ],
+      "keyStep": {
+        "event": "GotBits",
+        "nth": 1
+      },
+      "links": [
+        "#sim:event=GotBits:1",
+        "#sim:tick=3"
+      ]
+    },
     "freertos/interrupts": {
       "scenario": "deferred-interrupt",
       "rtos": [
@@ -496,6 +576,33 @@
       },
       "links": [
         "#sim:tick=4"
+      ]
+    },
+    "freertos/software-timers": {
+      "scenario": "software-timers",
+      "rtos": [
+        "freertos"
+      ],
+      "keyStep": {
+        "event": "TimerStop",
+        "nth": 1
+      },
+      "links": [
+        "#sim:tick=4",
+        "#sim:event=TimerStop:1"
+      ]
+    },
+    "freertos/task-notifications": {
+      "scenario": "task-notification",
+      "rtos": [
+        "freertos"
+      ],
+      "keyStep": {
+        "event": "NotifyTake",
+        "nth": 2
+      },
+      "links": [
+        "#sim:event=NotifyTake:2"
       ]
     },
     "freertos/tick-and-delay": {
@@ -694,6 +801,22 @@
         "#sim:event=Block:2"
       ]
     },
+    "software-timers": {
+      "scenario": "software-timers",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "TimerExpire",
+        "nth": 2
+      },
+      "links": [
+        "#sim:tick=4",
+        "#sim:event=TimerExpire:2",
+        "#sim:rtos=zephyr&tick=5"
+      ]
+    },
     "time-slicing": {
       "scenario": "time-slicing",
       "rtos": [
@@ -746,6 +869,20 @@
         "#sim:tick=3",
         "#sim:event=Unblock:5",
         "#sim:tick=7"
+      ]
+    },
+    "zephyr/events": {
+      "scenario": "event-group",
+      "rtos": [
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "GotBits",
+        "nth": 2
+      },
+      "links": [
+        "#sim:tick=3",
+        "#sim:event=GotBits:2"
       ]
     },
     "zephyr/interrupts": {
@@ -814,6 +951,19 @@
         "#sim:event=Unblock:3",
         "#sim:tick=3"
       ]
+    },
+    "zephyr/timers": {
+      "scenario": "software-timers",
+      "rtos": [
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "TimerExpire",
+        "nth": 1
+      },
+      "links": [
+        "#sim:tick=5"
+      ]
     }
   },
   "events": [
@@ -830,8 +980,16 @@
     "Timeout",
     "Send",
     "Receive",
+    "SetBits",
+    "ClearBits",
+    "GotBits",
+    "Notify",
+    "NotifyTake",
     "Deadlock",
     "Interrupt",
+    "TimerStart",
+    "TimerStop",
+    "TimerExpire",
     "DeadlineMiss"
   ],
   "symbols": [
@@ -875,6 +1033,41 @@
     "freertos:queue.c#xQueueReceive",
     "freertos:queue.c#xQueueGenericSendFromISR",
     "freertos:queue.c#xQueueCreateCountingSemaphore",
+    "freertos:tasks.c#vTaskPlaceOnEventListRestricted",
+    "freertos:queue.c#vQueueWaitForMessageRestricted",
+    "freertos:include/timers.h#xTimerStart",
+    "freertos:include/timers.h#xTimerReset",
+    "freertos:include/timers.h#xTimerStop",
+    "freertos:timers.c#xTimerCreate",
+    "freertos:timers.c#prvInitialiseNewTimer",
+    "freertos:timers.c#prvCheckForValidListAndQueue",
+    "freertos:timers.c#xTimerCreateTimerTask",
+    "freertos:timers.c#xTimerGenericCommandFromTask",
+    "freertos:timers.c#prvTimerTask",
+    "freertos:timers.c#prvGetNextExpireTime",
+    "freertos:timers.c#prvProcessTimerOrBlockTask",
+    "freertos:timers.c#prvSampleTimeNow",
+    "freertos:timers.c#prvProcessExpiredTimer",
+    "freertos:timers.c#prvReloadTimer",
+    "freertos:timers.c#prvInsertTimerInActiveList",
+    "freertos:timers.c#prvProcessReceivedCommands",
+    "freertos:include/task.h#xTaskNotifyGive",
+    "freertos:include/task.h#ulTaskNotifyTake",
+    "freertos:include/task.h#vTaskNotifyGiveFromISR",
+    "freertos:tasks.c#taskYIELD_ANY_CORE_IF_USING_PREEMPTION",
+    "freertos:tasks.c#xTaskGenericNotify",
+    "freertos:tasks.c#ulTaskGenericNotifyTake",
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR",
+    "freertos:event_groups.c#xEventGroupCreate",
+    "freertos:event_groups.c#xEventGroupWaitBits",
+    "freertos:event_groups.c#xEventGroupSetBits",
+    "freertos:event_groups.c#xEventGroupClearBits",
+    "freertos:event_groups.c#xEventGroupSetBitsFromISR",
+    "freertos:event_groups.c#vEventGroupSetBitsCallback",
+    "freertos:tasks.c#vTaskPlaceOnUnorderedEventList",
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList",
+    "freertos:tasks.c#uxTaskResetEventItemValue",
+    "freertos:timers.c#xTimerPendFunctionCallFromISR",
     "freertos:queue.c#prvCopyDataFromQueue",
     "freertos:queue.c#prvCopyDataToQueue",
     "zephyr:kernel/init.c#z_init_static_threads",
@@ -923,6 +1116,18 @@
     "zephyr:kernel/sched.c#z_thread_prio_set",
     "zephyr:kernel/sem.c#z_impl_k_sem_take",
     "zephyr:kernel/sem.c#z_impl_k_sem_give",
+    "zephyr:kernel/timer.c#z_impl_k_timer_start",
+    "zephyr:kernel/timer.c#z_impl_k_timer_stop",
+    "zephyr:kernel/timer.c#z_timer_expiration_handler",
+    "zephyr:kernel/events.c#z_impl_k_event_post",
+    "zephyr:kernel/events.c#z_impl_k_event_clear",
+    "zephyr:kernel/events.c#k_event_post_internal",
+    "zephyr:kernel/events.c#event_walk_op",
+    "zephyr:kernel/events.c#k_event_wait_internal",
+    "zephyr:kernel/events.c#z_impl_k_event_wait",
+    "zephyr:kernel/events.c#z_impl_k_event_wait_all",
+    "zephyr:kernel/events.c#z_impl_k_event_wait_safe",
+    "zephyr:kernel/events.c#z_impl_k_event_wait_all_safe",
     "zephyr:kernel/msg_q.c#put_msg_in_queue",
     "zephyr:kernel/msg_q.c#z_impl_k_msgq_put",
     "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
@@ -946,6 +1151,7 @@
     "freertos:tasks.c#vTaskStartScheduler/idle",
     "freertos:tasks.c#vTaskStartScheduler/running",
     "freertos:tasks.c#vTaskStartScheduler/tick-init",
+    "freertos:tasks.c#vTaskStartScheduler/timers",
     "freertos:tasks.c#vTaskStartScheduler/start",
     "freertos:tasks.c#xTaskIncrementTick/store",
     "freertos:tasks.c#xTaskIncrementTick/switch-lists",
@@ -1024,12 +1230,15 @@
     "freertos:tasks.c#vTaskSuspend/event-check",
     "freertos:tasks.c#vTaskSuspend/remove-event",
     "freertos:tasks.c#vTaskSuspend/insert",
+    "freertos:tasks.c#vTaskSuspend/notify-reset",
     "freertos:tasks.c#vTaskSuspend/reset-unblock",
     "freertos:tasks.c#vTaskSuspend/current-check",
     "freertos:tasks.c#vTaskSuspend/yield",
     "freertos:tasks.c#vTaskSuspend/return",
     "freertos:tasks.c#prvTaskIsTaskSuspended/in-list",
     "freertos:tasks.c#prvTaskIsTaskSuspended/event-check",
+    "freertos:tasks.c#prvTaskIsTaskSuspended/notify-check",
+    "freertos:tasks.c#prvTaskIsTaskSuspended/notify-waiting",
     "freertos:tasks.c#prvTaskIsTaskSuspended/suspended",
     "freertos:tasks.c#vTaskResume/suspended-check",
     "freertos:tasks.c#vTaskResume/remove",
@@ -1148,6 +1357,141 @@
     "freertos:queue.c#xQueueGenericSendFromISR/return-full",
     "freertos:queue.c#xQueueCreateCountingSemaphore/create",
     "freertos:queue.c#xQueueCreateCountingSemaphore/initial",
+    "freertos:tasks.c#vTaskPlaceOnEventListRestricted/insert",
+    "freertos:tasks.c#vTaskPlaceOnEventListRestricted/forever",
+    "freertos:tasks.c#vTaskPlaceOnEventListRestricted/delay",
+    "freertos:queue.c#vQueueWaitForMessageRestricted/lock",
+    "freertos:queue.c#vQueueWaitForMessageRestricted/empty-check",
+    "freertos:queue.c#vQueueWaitForMessageRestricted/place",
+    "freertos:queue.c#vQueueWaitForMessageRestricted/unlock",
+    "freertos:include/timers.h#xTimerStart/call",
+    "freertos:include/timers.h#xTimerReset/call",
+    "freertos:include/timers.h#xTimerStop/call",
+    "freertos:timers.c#xTimerCreate/init",
+    "freertos:timers.c#prvInitialiseNewTimer/check",
+    "freertos:timers.c#prvInitialiseNewTimer/period",
+    "freertos:timers.c#prvInitialiseNewTimer/auto-reload",
+    "freertos:timers.c#prvCheckForValidListAndQueue/lists",
+    "freertos:timers.c#prvCheckForValidListAndQueue/queue",
+    "freertos:timers.c#xTimerCreateTimerTask/check",
+    "freertos:timers.c#xTimerCreateTimerTask/create",
+    "freertos:timers.c#xTimerGenericCommandFromTask/message",
+    "freertos:timers.c#xTimerGenericCommandFromTask/running-check",
+    "freertos:timers.c#xTimerGenericCommandFromTask/send",
+    "freertos:timers.c#xTimerGenericCommandFromTask/send-no-wait",
+    "freertos:timers.c#xTimerGenericCommandFromTask/return",
+    "freertos:timers.c#prvTimerTask/next",
+    "freertos:timers.c#prvTimerTask/process",
+    "freertos:timers.c#prvTimerTask/commands",
+    "freertos:timers.c#prvGetNextExpireTime/empty",
+    "freertos:timers.c#prvGetNextExpireTime/head",
+    "freertos:timers.c#prvGetNextExpireTime/zero",
+    "freertos:timers.c#prvProcessTimerOrBlockTask/suspend",
+    "freertos:timers.c#prvProcessTimerOrBlockTask/now",
+    "freertos:timers.c#prvProcessTimerOrBlockTask/expired-check",
+    "freertos:timers.c#prvProcessTimerOrBlockTask/resume-expired",
+    "freertos:timers.c#prvProcessTimerOrBlockTask/process-expired",
+    "freertos:timers.c#prvProcessTimerOrBlockTask/overflow-check",
+    "freertos:timers.c#prvProcessTimerOrBlockTask/wait",
+    "freertos:timers.c#prvProcessTimerOrBlockTask/resume",
+    "freertos:timers.c#prvProcessTimerOrBlockTask/yield",
+    "freertos:timers.c#prvSampleTimeNow/now",
+    "freertos:timers.c#prvProcessExpiredTimer/remove",
+    "freertos:timers.c#prvProcessExpiredTimer/reload-check",
+    "freertos:timers.c#prvProcessExpiredTimer/reload",
+    "freertos:timers.c#prvProcessExpiredTimer/inactive",
+    "freertos:timers.c#prvProcessExpiredTimer/callback",
+    "freertos:timers.c#prvReloadTimer/insert",
+    "freertos:timers.c#prvReloadTimer/advance",
+    "freertos:timers.c#prvReloadTimer/callback",
+    "freertos:timers.c#prvInsertTimerInActiveList/value",
+    "freertos:timers.c#prvInsertTimerInActiveList/past-check",
+    "freertos:timers.c#prvInsertTimerInActiveList/late-check",
+    "freertos:timers.c#prvInsertTimerInActiveList/late",
+    "freertos:timers.c#prvInsertTimerInActiveList/insert",
+    "freertos:timers.c#prvProcessReceivedCommands/receive",
+    "freertos:timers.c#prvProcessReceivedCommands/pended-check",
+    "freertos:timers.c#prvProcessReceivedCommands/call",
+    "freertos:timers.c#prvProcessReceivedCommands/timer-command",
+    "freertos:timers.c#prvProcessReceivedCommands/in-list",
+    "freertos:timers.c#prvProcessReceivedCommands/remove",
+    "freertos:timers.c#prvProcessReceivedCommands/now",
+    "freertos:timers.c#prvProcessReceivedCommands/switch",
+    "freertos:timers.c#prvProcessReceivedCommands/active",
+    "freertos:timers.c#prvProcessReceivedCommands/insert",
+    "freertos:timers.c#prvProcessReceivedCommands/reload-check",
+    "freertos:timers.c#prvProcessReceivedCommands/reload",
+    "freertos:timers.c#prvProcessReceivedCommands/inactive",
+    "freertos:timers.c#prvProcessReceivedCommands/callback",
+    "freertos:timers.c#prvProcessReceivedCommands/stop",
+    "freertos:include/task.h#xTaskNotifyGive/call",
+    "freertos:include/task.h#ulTaskNotifyTake/call",
+    "freertos:include/task.h#vTaskNotifyGiveFromISR/call",
+    "freertos:tasks.c#taskYIELD_ANY_CORE_IF_USING_PREEMPTION/check",
+    "freertos:tasks.c#taskYIELD_ANY_CORE_IF_USING_PREEMPTION/yield",
+    "freertos:tasks.c#xTaskGenericNotify/state",
+    "freertos:tasks.c#xTaskGenericNotify/increment",
+    "freertos:tasks.c#xTaskGenericNotify/waiting-check",
+    "freertos:tasks.c#xTaskGenericNotify/remove",
+    "freertos:tasks.c#xTaskGenericNotify/make-ready",
+    "freertos:tasks.c#xTaskGenericNotify/yield",
+    "freertos:tasks.c#ulTaskGenericNotifyTake/zero-check",
+    "freertos:tasks.c#ulTaskGenericNotifyTake/suspend",
+    "freertos:tasks.c#ulTaskGenericNotifyTake/waiting",
+    "freertos:tasks.c#ulTaskGenericNotifyTake/block",
+    "freertos:tasks.c#ulTaskGenericNotifyTake/resume",
+    "freertos:tasks.c#ulTaskGenericNotifyTake/yield",
+    "freertos:tasks.c#ulTaskGenericNotifyTake/take",
+    "freertos:tasks.c#ulTaskGenericNotifyTake/clear",
+    "freertos:tasks.c#ulTaskGenericNotifyTake/decrement",
+    "freertos:tasks.c#ulTaskGenericNotifyTake/not-waiting",
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/state",
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/increment",
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/waiting-check",
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/suspended-check",
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/remove",
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/make-ready",
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/compare",
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/woken",
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/yield-pending",
+    "freertos:event_groups.c#xEventGroupCreate/init",
+    "freertos:event_groups.c#xEventGroupWaitBits/suspend",
+    "freertos:event_groups.c#xEventGroupWaitBits/test",
+    "freertos:event_groups.c#xEventGroupWaitBits/met",
+    "freertos:event_groups.c#xEventGroupWaitBits/clear",
+    "freertos:event_groups.c#xEventGroupWaitBits/no-wait",
+    "freertos:event_groups.c#xEventGroupWaitBits/place",
+    "freertos:event_groups.c#xEventGroupWaitBits/resume",
+    "freertos:event_groups.c#xEventGroupWaitBits/yield",
+    "freertos:event_groups.c#xEventGroupWaitBits/reset",
+    "freertos:event_groups.c#xEventGroupWaitBits/timeout-check",
+    "freertos:event_groups.c#xEventGroupWaitBits/timeout-read",
+    "freertos:event_groups.c#xEventGroupWaitBits/timeout-clear",
+    "freertos:event_groups.c#xEventGroupWaitBits/return",
+    "freertos:event_groups.c#xEventGroupSetBits/suspend",
+    "freertos:event_groups.c#xEventGroupSetBits/set",
+    "freertos:event_groups.c#xEventGroupSetBits/walk",
+    "freertos:event_groups.c#xEventGroupSetBits/any",
+    "freertos:event_groups.c#xEventGroupSetBits/all",
+    "freertos:event_groups.c#xEventGroupSetBits/to-clear",
+    "freertos:event_groups.c#xEventGroupSetBits/remove",
+    "freertos:event_groups.c#xEventGroupSetBits/clear",
+    "freertos:event_groups.c#xEventGroupSetBits/resume",
+    "freertos:event_groups.c#xEventGroupClearBits/clear",
+    "freertos:event_groups.c#xEventGroupSetBitsFromISR/pend",
+    "freertos:event_groups.c#vEventGroupSetBitsCallback/set",
+    "freertos:tasks.c#vTaskPlaceOnUnorderedEventList/value",
+    "freertos:tasks.c#vTaskPlaceOnUnorderedEventList/insert",
+    "freertos:tasks.c#vTaskPlaceOnUnorderedEventList/delay",
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList/value",
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList/remove-event",
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList/remove-state",
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList/make-ready",
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList/compare",
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList/yield-pending",
+    "freertos:tasks.c#uxTaskResetEventItemValue/reset",
+    "freertos:timers.c#xTimerPendFunctionCallFromISR/message",
+    "freertos:timers.c#xTimerPendFunctionCallFromISR/send",
     "freertos:queue.c#prvCopyDataFromQueue/read-next",
     "freertos:queue.c#prvCopyDataFromQueue/read-wrap",
     "freertos:queue.c#prvCopyDataFromQueue/copy",
@@ -1258,6 +1602,40 @@
     "zephyr:kernel/sem.c#z_impl_k_sem_give/wake",
     "zephyr:kernel/sem.c#z_impl_k_sem_give/count",
     "zephyr:kernel/sem.c#z_impl_k_sem_give/resched",
+    "zephyr:kernel/timer.c#z_impl_k_timer_start/abort",
+    "zephyr:kernel/timer.c#z_impl_k_timer_start/period",
+    "zephyr:kernel/timer.c#z_impl_k_timer_start/add",
+    "zephyr:kernel/timer.c#z_impl_k_timer_stop/abort",
+    "zephyr:kernel/timer.c#z_impl_k_timer_stop/unpend",
+    "zephyr:kernel/timer.c#z_timer_expiration_handler/periodic-check",
+    "zephyr:kernel/timer.c#z_timer_expiration_handler/next",
+    "zephyr:kernel/timer.c#z_timer_expiration_handler/add",
+    "zephyr:kernel/timer.c#z_timer_expiration_handler/status",
+    "zephyr:kernel/timer.c#z_timer_expiration_handler/expiry",
+    "zephyr:kernel/timer.c#z_timer_expiration_handler/waiters",
+    "zephyr:kernel/events.c#z_impl_k_event_post/call",
+    "zephyr:kernel/events.c#z_impl_k_event_clear/call",
+    "zephyr:kernel/events.c#k_event_post_internal/set",
+    "zephyr:kernel/events.c#k_event_post_internal/walk",
+    "zephyr:kernel/events.c#k_event_post_internal/stash",
+    "zephyr:kernel/events.c#k_event_post_internal/resched",
+    "zephyr:kernel/events.c#event_walk_op/match",
+    "zephyr:kernel/events.c#event_walk_op/store",
+    "zephyr:kernel/events.c#event_walk_op/consume",
+    "zephyr:kernel/events.c#event_walk_op/abort",
+    "zephyr:kernel/events.c#event_walk_op/retval",
+    "zephyr:kernel/events.c#event_walk_op/wake",
+    "zephyr:kernel/events.c#k_event_wait_internal/test",
+    "zephyr:kernel/events.c#k_event_wait_internal/clear",
+    "zephyr:kernel/events.c#k_event_wait_internal/no-wait",
+    "zephyr:kernel/events.c#k_event_wait_internal/save",
+    "zephyr:kernel/events.c#k_event_wait_internal/pend",
+    "zephyr:kernel/events.c#k_event_wait_internal/got",
+    "zephyr:kernel/events.c#k_event_wait_internal/return",
+    "zephyr:kernel/events.c#z_impl_k_event_wait/call",
+    "zephyr:kernel/events.c#z_impl_k_event_wait_all/call",
+    "zephyr:kernel/events.c#z_impl_k_event_wait_safe/call",
+    "zephyr:kernel/events.c#z_impl_k_event_wait_all_safe/call",
     "zephyr:kernel/msg_q.c#put_msg_in_queue/space-check",
     "zephyr:kernel/msg_q.c#put_msg_in_queue/unpend",
     "zephyr:kernel/msg_q.c#put_msg_in_queue/receiver-check",

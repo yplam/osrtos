@@ -101,10 +101,6 @@
         [
           3749,
           3753
-        ],
-        [
-          3759,
-          3768
         ]
       ],
       "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L3742-L3844"
@@ -650,6 +646,466 @@
       "code": "QueueHandle_t xQueueCreateCountingSemaphore( const UBaseType_t uxMaxCount,\n                                             const UBaseType_t uxInitialCount )\n{\n    QueueHandle_t xHandle = NULL;\n\n    traceENTER_xQueueCreateCountingSemaphore( uxMaxCount, uxInitialCount );\n\n    if( ( uxMaxCount != 0U ) &&\n        ( uxInitialCount <= uxMaxCount ) )\n    {\n        xHandle = xQueueGenericCreate( uxMaxCount, queueSEMAPHORE_QUEUE_ITEM_LENGTH, queueQUEUE_TYPE_COUNTING_SEMAPHORE );\n\n        if( xHandle != NULL )\n        {\n            ( ( Queue_t * ) xHandle )->uxMessagesWaiting = uxInitialCount;\n\n            traceCREATE_COUNTING_SEMAPHORE();\n        }\n        else\n        {\n            traceCREATE_COUNTING_SEMAPHORE_FAILED();\n        }\n    }\n    else\n    {\n        configASSERT( xHandle );\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    traceRETURN_xQueueCreateCountingSemaphore( xHandle );\n\n    return xHandle;\n}",
       "inactive": [],
       "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L912-L944"
+    },
+    "freertos:tasks.c#vTaskPlaceOnEventListRestricted": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "vTaskPlaceOnEventListRestricted",
+      "kind": "fn",
+      "startLine": 5463,
+      "endLine": 5495,
+      "code": "void vTaskPlaceOnEventListRestricted( List_t * const pxEventList,\n                                      TickType_t xTicksToWait,\n                                      const BaseType_t xWaitIndefinitely )\n{\n    traceENTER_vTaskPlaceOnEventListRestricted( pxEventList, xTicksToWait, xWaitIndefinitely );\n\n    configASSERT( pxEventList );\n\n    /* This function should not be called by application code hence the\n     * 'Restricted' in its name.  It is not part of the public API.  It is\n     * designed for use by kernel code, and has special calling requirements -\n     * it should be called with the scheduler suspended. */\n\n\n    /* Place the event list item of the TCB in the appropriate event list.\n     * In this case it is assume that this is the only task that is going to\n     * be waiting on this event list, so the faster vListInsertEnd() function\n     * can be used in place of vListInsert. */\n    listINSERT_END( pxEventList, &( pxCurrentTCB->xEventListItem ) );\n\n    /* If the task should block indefinitely then set the block time to a\n     * value that will be recognised as an indefinite delay inside the\n     * prvAddCurrentTaskToDelayedList() function. */\n    if( xWaitIndefinitely != pdFALSE )\n    {\n        xTicksToWait = portMAX_DELAY;\n    }\n\n    traceTASK_DELAY_UNTIL( ( xTickCount + xTicksToWait ) );\n    prvAddCurrentTaskToDelayedList( xTicksToWait, xWaitIndefinitely );\n\n    traceRETURN_vTaskPlaceOnEventListRestricted();\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L5463-L5495"
+    },
+    "freertos:queue.c#vQueueWaitForMessageRestricted": {
+      "rtos": "freertos",
+      "file": "queue.c",
+      "symbol": "vQueueWaitForMessageRestricted",
+      "kind": "fn",
+      "startLine": 3137,
+      "endLine": 3174,
+      "code": "void vQueueWaitForMessageRestricted( QueueHandle_t xQueue,\n                                     TickType_t xTicksToWait,\n                                     const BaseType_t xWaitIndefinitely )\n{\n    Queue_t * const pxQueue = xQueue;\n\n    traceENTER_vQueueWaitForMessageRestricted( xQueue, xTicksToWait, xWaitIndefinitely );\n\n    /* This function should not be called by application code hence the\n     * 'Restricted' in its name.  It is not part of the public API.  It is\n     * designed for use by kernel code, and has special calling requirements.\n     * It can result in vListInsert() being called on a list that can only\n     * possibly ever have one item in it, so the list will be fast, but even\n     * so it should be called with the scheduler locked and not from a critical\n     * section. */\n\n    /* Only do anything if there are no messages in the queue.  This function\n     *  will not actually cause the task to block, just place it on a blocked\n     *  list.  It will not block until the scheduler is unlocked - at which\n     *  time a yield will be performed.  If an item is added to the queue while\n     *  the queue is locked, and the calling task blocks on the queue, then the\n     *  calling task will be immediately unblocked when the queue is unlocked. */\n    prvLockQueue( pxQueue );\n\n    if( pxQueue->uxMessagesWaiting == ( UBaseType_t ) 0U )\n    {\n        /* There is nothing in the queue, block for the specified period. */\n        vTaskPlaceOnEventListRestricted( &( pxQueue->xTasksWaitingToReceive ), xTicksToWait, xWaitIndefinitely );\n    }\n    else\n    {\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    prvUnlockQueue( pxQueue );\n\n    traceRETURN_vQueueWaitForMessageRestricted();\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L3137-L3174"
+    },
+    "freertos:include/timers.h#xTimerStart": {
+      "rtos": "freertos",
+      "file": "include/timers.h",
+      "symbol": "xTimerStart",
+      "kind": "macro",
+      "startLine": 507,
+      "endLine": 508,
+      "code": "#define xTimerStart( xTimer, xTicksToWait ) \\\n    xTimerGenericCommand( ( xTimer ), tmrCOMMAND_START, ( xTaskGetTickCount() ), NULL, ( xTicksToWait ) )",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/include/timers.h#L507-L508"
+    },
+    "freertos:include/timers.h#xTimerReset": {
+      "rtos": "freertos",
+      "file": "include/timers.h",
+      "symbol": "xTimerReset",
+      "kind": "macro",
+      "startLine": 803,
+      "endLine": 804,
+      "code": "#define xTimerReset( xTimer, xTicksToWait ) \\\n    xTimerGenericCommand( ( xTimer ), tmrCOMMAND_RESET, ( xTaskGetTickCount() ), NULL, ( xTicksToWait ) )",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/include/timers.h#L803-L804"
+    },
+    "freertos:include/timers.h#xTimerStop": {
+      "rtos": "freertos",
+      "file": "include/timers.h",
+      "symbol": "xTimerStop",
+      "kind": "macro",
+      "startLine": 550,
+      "endLine": 551,
+      "code": "#define xTimerStop( xTimer, xTicksToWait ) \\\n    xTimerGenericCommand( ( xTimer ), tmrCOMMAND_STOP, 0U, NULL, ( xTicksToWait ) )",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/include/timers.h#L550-L551"
+    },
+    "freertos:timers.c#xTimerCreate": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "xTimerCreate",
+      "kind": "fn",
+      "startLine": 336,
+      "endLine": 363,
+      "code": "TimerHandle_t xTimerCreate( const char * const pcTimerName,\n                            const TickType_t xTimerPeriodInTicks,\n                            const BaseType_t xAutoReload,\n                            void * const pvTimerID,\n                            TimerCallbackFunction_t pxCallbackFunction )\n{\n    Timer_t * pxNewTimer;\n\n    traceENTER_xTimerCreate( pcTimerName, xTimerPeriodInTicks, xAutoReload, pvTimerID, pxCallbackFunction );\n\n    /* MISRA Ref 11.5.1 [Malloc memory assignment] */\n    /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-115 */\n    /* coverity[misra_c_2012_rule_11_5_violation] */\n    pxNewTimer = ( Timer_t * ) pvPortMalloc( sizeof( Timer_t ) );\n\n    if( pxNewTimer != NULL )\n    {\n        /* Status is thus far zero as the timer is not created statically\n         * and has not been started.  The auto-reload bit may get set in\n         * prvInitialiseNewTimer. */\n        pxNewTimer->ucStatus = 0x00;\n        prvInitialiseNewTimer( pcTimerName, xTimerPeriodInTicks, xAutoReload, pvTimerID, pxCallbackFunction, pxNewTimer );\n    }\n\n    traceRETURN_xTimerCreate( pxNewTimer );\n\n    return pxNewTimer;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L336-L363"
+    },
+    "freertos:timers.c#prvInitialiseNewTimer": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "prvInitialiseNewTimer",
+      "kind": "fn",
+      "startLine": 417,
+      "endLine": 445,
+      "code": "static void prvInitialiseNewTimer( const char * const pcTimerName,\n                                   const TickType_t xTimerPeriodInTicks,\n                                   const BaseType_t xAutoReload,\n                                   void * const pvTimerID,\n                                   TimerCallbackFunction_t pxCallbackFunction,\n                                   Timer_t * pxNewTimer )\n{\n    /* 0 is not a valid value for xTimerPeriodInTicks. */\n    configASSERT( ( xTimerPeriodInTicks > 0 ) );\n\n    /* Ensure the infrastructure used by the timer service task has been\n     * created/initialised. */\n    prvCheckForValidListAndQueue();\n\n    /* Initialise the timer structure members using the function\n     * parameters. */\n    pxNewTimer->pcTimerName = pcTimerName;\n    pxNewTimer->xTimerPeriodInTicks = xTimerPeriodInTicks;\n    pxNewTimer->pvTimerID = pvTimerID;\n    pxNewTimer->pxCallbackFunction = pxCallbackFunction;\n    vListInitialiseItem( &( pxNewTimer->xTimerListItem ) );\n\n    if( xAutoReload != pdFALSE )\n    {\n        pxNewTimer->ucStatus |= ( uint8_t ) tmrSTATUS_IS_AUTORELOAD;\n    }\n\n    traceTIMER_CREATE( pxNewTimer );\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L417-L445"
+    },
+    "freertos:timers.c#prvCheckForValidListAndQueue": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "prvCheckForValidListAndQueue",
+      "kind": "fn",
+      "startLine": 1116,
+      "endLine": 1164,
+      "code": "static void prvCheckForValidListAndQueue( void )\n{\n    /* Check that the list from which active timers are referenced, and the\n     * queue used to communicate with the timer service, have been\n     * initialised. */\n    taskENTER_CRITICAL();\n    {\n        if( xTimerQueue == NULL )\n        {\n            vListInitialise( &xActiveTimerList1 );\n            vListInitialise( &xActiveTimerList2 );\n            pxCurrentTimerList = &xActiveTimerList1;\n            pxOverflowTimerList = &xActiveTimerList2;\n\n            #if ( configSUPPORT_STATIC_ALLOCATION == 1 )\n            {\n                /* The timer queue is allocated statically in case\n                 * configSUPPORT_DYNAMIC_ALLOCATION is 0. */\n                PRIVILEGED_DATA static StaticQueue_t xStaticTimerQueue;\n                PRIVILEGED_DATA static uint8_t ucStaticTimerQueueStorage[ ( size_t ) configTIMER_QUEUE_LENGTH * sizeof( DaemonTaskMessage_t ) ];\n\n                xTimerQueue = xQueueCreateStatic( ( UBaseType_t ) configTIMER_QUEUE_LENGTH, ( UBaseType_t ) sizeof( DaemonTaskMessage_t ), &( ucStaticTimerQueueStorage[ 0 ] ), &xStaticTimerQueue );\n            }\n            #else\n            {\n                xTimerQueue = xQueueCreate( ( UBaseType_t ) configTIMER_QUEUE_LENGTH, ( UBaseType_t ) sizeof( DaemonTaskMessage_t ) );\n            }\n            #endif /* if ( configSUPPORT_STATIC_ALLOCATION == 1 ) */\n\n            #if ( configQUEUE_REGISTRY_SIZE > 0 )\n            {\n                if( xTimerQueue != NULL )\n                {\n                    vQueueAddToRegistry( xTimerQueue, \"TmrQ\" );\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n            #endif /* configQUEUE_REGISTRY_SIZE */\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n    }\n    taskEXIT_CRITICAL();\n}",
+      "inactive": [
+        [
+          1131,
+          1138
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L1116-L1164"
+    },
+    "freertos:timers.c#xTimerCreateTimerTask": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "xTimerCreateTimerTask",
+      "kind": "fn",
+      "startLine": 237,
+      "endLine": 331,
+      "code": "BaseType_t xTimerCreateTimerTask( void )\n{\n    BaseType_t xReturn = pdFAIL;\n\n    traceENTER_xTimerCreateTimerTask();\n\n    /* This function is called when the scheduler is started if\n     * configUSE_TIMERS is set to 1.  Check that the infrastructure used by the\n     * timer service task has been created/initialised.  If timers have already\n     * been created then the initialisation will already have been performed. */\n    prvCheckForValidListAndQueue();\n\n    if( xTimerQueue != NULL )\n    {\n        #if ( ( configNUMBER_OF_CORES > 1 ) && ( configUSE_CORE_AFFINITY == 1 ) )\n        {\n            #if ( configSUPPORT_STATIC_ALLOCATION == 1 )\n            {\n                StaticTask_t * pxTimerTaskTCBBuffer = NULL;\n                StackType_t * pxTimerTaskStackBuffer = NULL;\n                configSTACK_DEPTH_TYPE uxTimerTaskStackSize;\n\n                vApplicationGetTimerTaskMemory( &pxTimerTaskTCBBuffer, &pxTimerTaskStackBuffer, &uxTimerTaskStackSize );\n                xTimerTaskHandle = xTaskCreateStaticAffinitySet( &prvTimerTask,\n                                                                 configTIMER_SERVICE_TASK_NAME,\n                                                                 uxTimerTaskStackSize,\n                                                                 NULL,\n                                                                 ( ( UBaseType_t ) configTIMER_TASK_PRIORITY ) | portPRIVILEGE_BIT,\n                                                                 pxTimerTaskStackBuffer,\n                                                                 pxTimerTaskTCBBuffer,\n                                                                 configTIMER_SERVICE_TASK_CORE_AFFINITY );\n\n                if( xTimerTaskHandle != NULL )\n                {\n                    xReturn = pdPASS;\n                }\n            }\n            #else /* if ( configSUPPORT_STATIC_ALLOCATION == 1 ) */\n            {\n                xReturn = xTaskCreateAffinitySet( &prvTimerTask,\n                                                  configTIMER_SERVICE_TASK_NAME,\n                                                  configTIMER_TASK_STACK_DEPTH,\n                                                  NULL,\n                                                  ( ( UBaseType_t ) configTIMER_TASK_PRIORITY ) | portPRIVILEGE_BIT,\n                                                  configTIMER_SERVICE_TASK_CORE_AFFINITY,\n                                                  &xTimerTaskHandle );\n            }\n            #endif /* configSUPPORT_STATIC_ALLOCATION */\n        }\n        #else /* #if ( ( configNUMBER_OF_CORES > 1 ) && ( configUSE_CORE_AFFINITY == 1 ) ) */\n        {\n            #if ( configSUPPORT_STATIC_ALLOCATION == 1 )\n            {\n                StaticTask_t * pxTimerTaskTCBBuffer = NULL;\n                StackType_t * pxTimerTaskStackBuffer = NULL;\n                configSTACK_DEPTH_TYPE uxTimerTaskStackSize;\n\n                vApplicationGetTimerTaskMemory( &pxTimerTaskTCBBuffer, &pxTimerTaskStackBuffer, &uxTimerTaskStackSize );\n                xTimerTaskHandle = xTaskCreateStatic( &prvTimerTask,\n                                                      configTIMER_SERVICE_TASK_NAME,\n                                                      uxTimerTaskStackSize,\n                                                      NULL,\n                                                      ( ( UBaseType_t ) configTIMER_TASK_PRIORITY ) | portPRIVILEGE_BIT,\n                                                      pxTimerTaskStackBuffer,\n                                                      pxTimerTaskTCBBuffer );\n\n                if( xTimerTaskHandle != NULL )\n                {\n                    xReturn = pdPASS;\n                }\n            }\n            #else /* if ( configSUPPORT_STATIC_ALLOCATION == 1 ) */\n            {\n                xReturn = xTaskCreate( &prvTimerTask,\n                                       configTIMER_SERVICE_TASK_NAME,\n                                       configTIMER_TASK_STACK_DEPTH,\n                                       NULL,\n                                       ( ( UBaseType_t ) configTIMER_TASK_PRIORITY ) | portPRIVILEGE_BIT,\n                                       &xTimerTaskHandle );\n            }\n            #endif /* configSUPPORT_STATIC_ALLOCATION */\n        }\n        #endif /* #if ( ( configNUMBER_OF_CORES > 1 ) && ( configUSE_CORE_AFFINITY == 1 ) ) */\n    }\n    else\n    {\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    configASSERT( xReturn );\n\n    traceRETURN_xTimerCreateTimerTask( xReturn );\n\n    return xReturn;\n}",
+      "inactive": [
+        [
+          252,
+          252
+        ],
+        [
+          254,
+          273
+        ],
+        [
+          275,
+          283
+        ],
+        [
+          285,
+          285
+        ],
+        [
+          289,
+          307
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L237-L331"
+    },
+    "freertos:timers.c#xTimerGenericCommandFromTask": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "xTimerGenericCommandFromTask",
+      "kind": "fn",
+      "startLine": 448,
+      "endLine": 496,
+      "code": "BaseType_t xTimerGenericCommandFromTask( TimerHandle_t xTimer,\n                                         const BaseType_t xCommandID,\n                                         const TickType_t xOptionalValue,\n                                         BaseType_t * const pxHigherPriorityTaskWoken,\n                                         const TickType_t xTicksToWait )\n{\n    BaseType_t xReturn = pdFAIL;\n    DaemonTaskMessage_t xMessage;\n\n    ( void ) pxHigherPriorityTaskWoken;\n\n    traceENTER_xTimerGenericCommandFromTask( xTimer, xCommandID, xOptionalValue, pxHigherPriorityTaskWoken, xTicksToWait );\n\n    /* Send a message to the timer service task to perform a particular action\n     * on a particular timer definition. */\n    if( ( xTimerQueue != NULL ) && ( xTimer != NULL ) )\n    {\n        /* Send a command to the timer service task to start the xTimer timer. */\n        xMessage.xMessageID = xCommandID;\n        xMessage.u.xTimerParameters.xMessageValue = xOptionalValue;\n        xMessage.u.xTimerParameters.pxTimer = xTimer;\n\n        /* Enforce a lower bound as well as an upper bound so that only\n         * valid task-issued commands are accepted here. */\n        configASSERT( ( xCommandID >= tmrCOMMAND_START_DONT_TRACE ) && ( xCommandID < tmrFIRST_FROM_ISR_COMMAND ) );\n\n        if( ( xCommandID >= tmrCOMMAND_START_DONT_TRACE ) && ( xCommandID < tmrFIRST_FROM_ISR_COMMAND ) )\n        {\n            if( xTaskGetSchedulerState() == taskSCHEDULER_RUNNING )\n            {\n                xReturn = xQueueSendToBack( xTimerQueue, &xMessage, xTicksToWait );\n            }\n            else\n            {\n                xReturn = xQueueSendToBack( xTimerQueue, &xMessage, tmrNO_DELAY );\n            }\n        }\n\n        traceTIMER_COMMAND_SEND( xTimer, xCommandID, xOptionalValue, xReturn );\n    }\n    else\n    {\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    traceRETURN_xTimerGenericCommandFromTask( xReturn );\n\n    return xReturn;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L448-L496"
+    },
+    "freertos:timers.c#prvTimerTask": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "prvTimerTask",
+      "kind": "fn",
+      "startLine": 746,
+      "endLine": 777,
+      "code": "static portTASK_FUNCTION( prvTimerTask, pvParameters )\n{\n    TickType_t xNextExpireTime;\n    BaseType_t xListWasEmpty;\n\n    /* Just to avoid compiler warnings. */\n    ( void ) pvParameters;\n\n    #if ( configUSE_DAEMON_TASK_STARTUP_HOOK == 1 )\n    {\n        /* Allow the application writer to execute some code in the context of\n         * this task at the point the task starts executing.  This is useful if the\n         * application includes initialisation code that would benefit from\n         * executing after the scheduler has been started. */\n        vApplicationDaemonTaskStartupHook();\n    }\n    #endif /* configUSE_DAEMON_TASK_STARTUP_HOOK */\n\n    for( ; configCONTROL_INFINITE_LOOP(); )\n    {\n        /* Query the timers list to see if it contains any timers, and if so,\n         * obtain the time at which the next timer will expire. */\n        xNextExpireTime = prvGetNextExpireTime( &xListWasEmpty );\n\n        /* If a timer has expired, process it.  Otherwise, block this task\n         * until either a timer does expire, or a command is received. */\n        prvProcessTimerOrBlockTask( xNextExpireTime, xListWasEmpty );\n\n        /* Empty the command queue. */\n        prvProcessReceivedCommands();\n    }\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L746-L777"
+    },
+    "freertos:timers.c#prvGetNextExpireTime": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "prvGetNextExpireTime",
+      "kind": "fn",
+      "startLine": 842,
+      "endLine": 866,
+      "code": "static TickType_t prvGetNextExpireTime( BaseType_t * const pxListWasEmpty )\n{\n    TickType_t xNextExpireTime;\n\n    /* Timers are listed in expiry time order, with the head of the list\n     * referencing the task that will expire first.  Obtain the time at which\n     * the timer with the nearest expiry time will expire.  If there are no\n     * active timers then just set the next expire time to 0.  That will cause\n     * this task to unblock when the tick count overflows, at which point the\n     * timer lists will be switched and the next expiry time can be\n     * re-assessed.  */\n    *pxListWasEmpty = listLIST_IS_EMPTY( pxCurrentTimerList );\n\n    if( *pxListWasEmpty == pdFALSE )\n    {\n        xNextExpireTime = listGET_ITEM_VALUE_OF_HEAD_ENTRY( pxCurrentTimerList );\n    }\n    else\n    {\n        /* Ensure the task unblocks when the tick count rolls over. */\n        xNextExpireTime = ( TickType_t ) 0U;\n    }\n\n    return xNextExpireTime;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L842-L866"
+    },
+    "freertos:timers.c#prvProcessTimerOrBlockTask": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "prvProcessTimerOrBlockTask",
+      "kind": "fn",
+      "startLine": 780,
+      "endLine": 839,
+      "code": "static void prvProcessTimerOrBlockTask( const TickType_t xNextExpireTime,\n                                        BaseType_t xListWasEmpty )\n{\n    TickType_t xTimeNow;\n    BaseType_t xTimerListsWereSwitched;\n\n    vTaskSuspendAll();\n    {\n        /* Obtain the time now to make an assessment as to whether the timer\n         * has expired or not.  If obtaining the time causes the lists to switch\n         * then don't process this timer as any timers that remained in the list\n         * when the lists were switched will have been processed within the\n         * prvSampleTimeNow() function. */\n        xTimeNow = prvSampleTimeNow( &xTimerListsWereSwitched );\n\n        if( xTimerListsWereSwitched == pdFALSE )\n        {\n            /* The tick count has not overflowed, has the timer expired? */\n            if( ( xListWasEmpty == pdFALSE ) && ( xNextExpireTime <= xTimeNow ) )\n            {\n                ( void ) xTaskResumeAll();\n                prvProcessExpiredTimer( xNextExpireTime, xTimeNow );\n            }\n            else\n            {\n                /* The tick count has not overflowed, and the next expire\n                 * time has not been reached yet.  This task should therefore\n                 * block to wait for the next expire time or a command to be\n                 * received - whichever comes first.  The following line cannot\n                 * be reached unless xNextExpireTime > xTimeNow, except in the\n                 * case when the current timer list is empty. */\n                if( xListWasEmpty != pdFALSE )\n                {\n                    /* The current timer list is empty - is the overflow list\n                     * also empty? */\n                    xListWasEmpty = listLIST_IS_EMPTY( pxOverflowTimerList );\n                }\n\n                vQueueWaitForMessageRestricted( xTimerQueue, ( xNextExpireTime - xTimeNow ), xListWasEmpty );\n\n                if( xTaskResumeAll() == pdFALSE )\n                {\n                    /* Yield to wait for either a command to arrive, or the\n                     * block time to expire.  If a command arrived between the\n                     * critical section being exited and this yield then the yield\n                     * will not cause the task to block. */\n                    taskYIELD_WITHIN_API();\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n        }\n        else\n        {\n            ( void ) xTaskResumeAll();\n        }\n    }\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L780-L839"
+    },
+    "freertos:timers.c#prvSampleTimeNow": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "prvSampleTimeNow",
+      "kind": "fn",
+      "startLine": 869,
+      "endLine": 889,
+      "code": "static TickType_t prvSampleTimeNow( BaseType_t * const pxTimerListsWereSwitched )\n{\n    TickType_t xTimeNow;\n    PRIVILEGED_DATA static TickType_t xLastTime = ( TickType_t ) 0U;\n\n    xTimeNow = xTaskGetTickCount();\n\n    if( xTimeNow < xLastTime )\n    {\n        prvSwitchTimerLists();\n        *pxTimerListsWereSwitched = pdTRUE;\n    }\n    else\n    {\n        *pxTimerListsWereSwitched = pdFALSE;\n    }\n\n    xLastTime = xTimeNow;\n\n    return xTimeNow;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L869-L889"
+    },
+    "freertos:timers.c#prvProcessExpiredTimer": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "prvProcessExpiredTimer",
+      "kind": "fn",
+      "startLine": 716,
+      "endLine": 743,
+      "code": "static void prvProcessExpiredTimer( const TickType_t xNextExpireTime,\n                                    const TickType_t xTimeNow )\n{\n    /* MISRA Ref 11.5.3 [Void pointer assignment] */\n    /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-115 */\n    /* coverity[misra_c_2012_rule_11_5_violation] */\n    Timer_t * const pxTimer = ( Timer_t * ) listGET_OWNER_OF_HEAD_ENTRY( pxCurrentTimerList );\n\n    /* Remove the timer from the list of active timers.  A check has already\n     * been performed to ensure the list is not empty. */\n\n    ( void ) uxListRemove( &( pxTimer->xTimerListItem ) );\n\n    /* If the timer is an auto-reload timer then calculate the next\n     * expiry time and re-insert the timer in the list of active timers. */\n    if( ( pxTimer->ucStatus & tmrSTATUS_IS_AUTORELOAD ) != 0U )\n    {\n        prvReloadTimer( pxTimer, xNextExpireTime, xTimeNow );\n    }\n    else\n    {\n        pxTimer->ucStatus &= ( ( uint8_t ) ~tmrSTATUS_IS_ACTIVE );\n    }\n\n    /* Call the timer callback. */\n    traceTIMER_EXPIRED( pxTimer );\n    pxTimer->pxCallbackFunction( ( TimerHandle_t ) pxTimer );\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L716-L743"
+    },
+    "freertos:timers.c#prvReloadTimer": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "prvReloadTimer",
+      "kind": "fn",
+      "startLine": 697,
+      "endLine": 713,
+      "code": "static void prvReloadTimer( Timer_t * const pxTimer,\n                            TickType_t xExpiredTime,\n                            const TickType_t xTimeNow )\n{\n    /* Insert the timer into the appropriate list for the next expiry time.\n     * If the next expiry time has already passed, advance the expiry time,\n     * call the callback function, and try again. */\n    while( prvInsertTimerInActiveList( pxTimer, ( xExpiredTime + pxTimer->xTimerPeriodInTicks ), xTimeNow, xExpiredTime ) != pdFALSE )\n    {\n        /* Advance the expiry time. */\n        xExpiredTime += pxTimer->xTimerPeriodInTicks;\n\n        /* Call the timer callback. */\n        traceTIMER_EXPIRED( pxTimer );\n        pxTimer->pxCallbackFunction( ( TimerHandle_t ) pxTimer );\n    }\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L697-L713"
+    },
+    "freertos:timers.c#prvInsertTimerInActiveList": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "prvInsertTimerInActiveList",
+      "kind": "fn",
+      "startLine": 892,
+      "endLine": 933,
+      "code": "static BaseType_t prvInsertTimerInActiveList( Timer_t * const pxTimer,\n                                              const TickType_t xNextExpiryTime,\n                                              const TickType_t xTimeNow,\n                                              const TickType_t xCommandTime )\n{\n    BaseType_t xProcessTimerNow = pdFALSE;\n\n    listSET_LIST_ITEM_VALUE( &( pxTimer->xTimerListItem ), xNextExpiryTime );\n    listSET_LIST_ITEM_OWNER( &( pxTimer->xTimerListItem ), pxTimer );\n\n    if( xNextExpiryTime <= xTimeNow )\n    {\n        /* Has the expiry time elapsed between the command to start/reset a\n         * timer was issued, and the time the command was processed? */\n        if( ( ( TickType_t ) ( xTimeNow - xCommandTime ) ) >= pxTimer->xTimerPeriodInTicks )\n        {\n            /* The time between a command being issued and the command being\n             * processed actually exceeds the timers period.  */\n            xProcessTimerNow = pdTRUE;\n        }\n        else\n        {\n            vListInsert( pxOverflowTimerList, &( pxTimer->xTimerListItem ) );\n        }\n    }\n    else\n    {\n        if( ( xTimeNow < xCommandTime ) && ( xNextExpiryTime >= xCommandTime ) )\n        {\n            /* If, since the command was issued, the tick count has overflowed\n             * but the expiry time has not, then the timer must have already passed\n             * its expiry time and should be processed immediately. */\n            xProcessTimerNow = pdTRUE;\n        }\n        else\n        {\n            vListInsert( pxCurrentTimerList, &( pxTimer->xTimerListItem ) );\n        }\n    }\n\n    return xProcessTimerNow;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L892-L933"
+    },
+    "freertos:timers.c#prvProcessReceivedCommands": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "prvProcessReceivedCommands",
+      "kind": "fn",
+      "startLine": 936,
+      "endLine": 1088,
+      "code": "static void prvProcessReceivedCommands( void )\n{\n    DaemonTaskMessage_t xMessage = { 0 };\n    Timer_t * pxTimer;\n    BaseType_t xTimerListsWereSwitched;\n    TickType_t xTimeNow;\n\n    while( xQueueReceive( xTimerQueue, &xMessage, tmrNO_DELAY ) != pdFAIL )\n    {\n        #if ( INCLUDE_xTimerPendFunctionCall == 1 )\n        {\n            /* Negative commands are pended function calls rather than timer\n             * commands. */\n            if( xMessage.xMessageID < ( BaseType_t ) 0 )\n            {\n                const CallbackParameters_t * const pxCallback = &( xMessage.u.xCallbackParameters );\n\n                /* The timer uses the xCallbackParameters member to request a\n                 * callback be executed.  Check the callback is not NULL. */\n                configASSERT( pxCallback );\n\n                /* Call the function. */\n                pxCallback->pxCallbackFunction( pxCallback->pvParameter1, pxCallback->ulParameter2 );\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        #endif /* INCLUDE_xTimerPendFunctionCall */\n\n        /* Commands that are positive are timer commands rather than pended\n         * function calls. */\n        if( xMessage.xMessageID >= ( BaseType_t ) 0 )\n        {\n            /* The messages uses the xTimerParameters member to work on a\n             * software timer. */\n            pxTimer = xMessage.u.xTimerParameters.pxTimer;\n\n            if( pxTimer != NULL )\n            {\n                if( listIS_CONTAINED_WITHIN( NULL, &( pxTimer->xTimerListItem ) ) == pdFALSE )\n                {\n                    /* The timer is in a list, remove it. */\n                    ( void ) uxListRemove( &( pxTimer->xTimerListItem ) );\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n\n                traceTIMER_COMMAND_RECEIVED( pxTimer, xMessage.xMessageID, xMessage.u.xTimerParameters.xMessageValue );\n\n                /* In this case the xTimerListsWereSwitched parameter is not used, but\n                 *  it must be present in the function call.  prvSampleTimeNow() must be\n                 *  called after the message is received from xTimerQueue so there is no\n                 *  possibility of a higher priority task adding a message to the message\n                 *  queue with a time that is ahead of the timer daemon task (because it\n                 *  pre-empted the timer daemon task after the xTimeNow value was set). */\n                xTimeNow = prvSampleTimeNow( &xTimerListsWereSwitched );\n\n                switch( xMessage.xMessageID )\n                {\n                    case tmrCOMMAND_START:\n                    case tmrCOMMAND_START_FROM_ISR:\n                    case tmrCOMMAND_RESET:\n                    case tmrCOMMAND_RESET_FROM_ISR:\n                        /* Start or restart a timer. */\n                        pxTimer->ucStatus |= ( uint8_t ) tmrSTATUS_IS_ACTIVE;\n\n                        if( prvInsertTimerInActiveList( pxTimer, xMessage.u.xTimerParameters.xMessageValue + pxTimer->xTimerPeriodInTicks, xTimeNow, xMessage.u.xTimerParameters.xMessageValue ) != pdFALSE )\n                        {\n                            /* The timer expired before it was added to the active\n                             * timer list.  Process it now. */\n                            if( ( pxTimer->ucStatus & tmrSTATUS_IS_AUTORELOAD ) != 0U )\n                            {\n                                prvReloadTimer( pxTimer, xMessage.u.xTimerParameters.xMessageValue + pxTimer->xTimerPeriodInTicks, xTimeNow );\n                            }\n                            else\n                            {\n                                pxTimer->ucStatus &= ( ( uint8_t ) ~tmrSTATUS_IS_ACTIVE );\n                            }\n\n                            /* Call the timer callback. */\n                            traceTIMER_EXPIRED( pxTimer );\n                            pxTimer->pxCallbackFunction( ( TimerHandle_t ) pxTimer );\n                        }\n                        else\n                        {\n                            mtCOVERAGE_TEST_MARKER();\n                        }\n\n                        break;\n\n                    case tmrCOMMAND_STOP:\n                    case tmrCOMMAND_STOP_FROM_ISR:\n                        /* The timer has already been removed from the active list. */\n                        pxTimer->ucStatus &= ( ( uint8_t ) ~tmrSTATUS_IS_ACTIVE );\n                        break;\n\n                    case tmrCOMMAND_CHANGE_PERIOD:\n                    case tmrCOMMAND_CHANGE_PERIOD_FROM_ISR:\n                        pxTimer->ucStatus |= ( uint8_t ) tmrSTATUS_IS_ACTIVE;\n                        pxTimer->xTimerPeriodInTicks = xMessage.u.xTimerParameters.xMessageValue;\n                        configASSERT( ( pxTimer->xTimerPeriodInTicks > 0 ) );\n\n                        /* The new period does not really have a reference, and can\n                         * be longer or shorter than the old one.  The command time is\n                         * therefore set to the current time, and as the period cannot\n                         * be zero the next expiry time can only be in the future,\n                         * meaning (unlike for the xTimerStart() case above) there is\n                         * no fail case that needs to be handled here. */\n                        ( void ) prvInsertTimerInActiveList( pxTimer, ( xTimeNow + pxTimer->xTimerPeriodInTicks ), xTimeNow, xTimeNow );\n                        break;\n\n                    case tmrCOMMAND_DELETE:\n                        #if ( configSUPPORT_DYNAMIC_ALLOCATION == 1 )\n                        {\n                            /* The timer has already been removed from the active list,\n                             * just free up the memory if the memory was dynamically\n                             * allocated. */\n                            if( ( pxTimer->ucStatus & tmrSTATUS_IS_STATICALLY_ALLOCATED ) == ( uint8_t ) 0 )\n                            {\n                                vPortFree( pxTimer );\n                            }\n                            else\n                            {\n                                pxTimer->ucStatus &= ( ( uint8_t ) ~tmrSTATUS_IS_ACTIVE );\n                            }\n                        }\n                        #else /* if ( configSUPPORT_DYNAMIC_ALLOCATION == 1 ) */\n                        {\n                            /* If dynamic allocation is not enabled, the memory\n                             * could not have been dynamically allocated. So there is\n                             * no need to free the memory - just mark the timer as\n                             * \"not active\". */\n                            pxTimer->ucStatus &= ( ( uint8_t ) ~tmrSTATUS_IS_ACTIVE );\n                        }\n                        #endif /* configSUPPORT_DYNAMIC_ALLOCATION */\n                        break;\n\n                    default:\n                        /* Don't expect to get here. */\n                        break;\n                }\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n    }\n}",
+      "inactive": [
+        [
+          1067,
+          1073
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L936-L1088"
+    },
+    "freertos:include/task.h#xTaskNotifyGive": {
+      "rtos": "freertos",
+      "file": "include/task.h",
+      "symbol": "xTaskNotifyGive",
+      "kind": "macro",
+      "startLine": 3109,
+      "endLine": 3110,
+      "code": "#define xTaskNotifyGive( xTaskToNotify ) \\\n    xTaskGenericNotify( ( xTaskToNotify ), ( tskDEFAULT_INDEX_TO_NOTIFY ), ( 0 ), eIncrement, NULL )",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/include/task.h#L3109-L3110"
+    },
+    "freertos:include/task.h#ulTaskNotifyTake": {
+      "rtos": "freertos",
+      "file": "include/task.h",
+      "symbol": "ulTaskNotifyTake",
+      "kind": "macro",
+      "startLine": 3302,
+      "endLine": 3303,
+      "code": "#define ulTaskNotifyTake( xClearCountOnExit, xTicksToWait ) \\\n    ulTaskGenericNotifyTake( ( tskDEFAULT_INDEX_TO_NOTIFY ), ( xClearCountOnExit ), ( xTicksToWait ) )",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/include/task.h#L3302-L3303"
+    },
+    "freertos:include/task.h#vTaskNotifyGiveFromISR": {
+      "rtos": "freertos",
+      "file": "include/task.h",
+      "symbol": "vTaskNotifyGiveFromISR",
+      "kind": "macro",
+      "startLine": 3196,
+      "endLine": 3197,
+      "code": "#define vTaskNotifyGiveFromISR( xTaskToNotify, pxHigherPriorityTaskWoken ) \\\n    vTaskGenericNotifyGiveFromISR( ( xTaskToNotify ), ( tskDEFAULT_INDEX_TO_NOTIFY ), ( pxHigherPriorityTaskWoken ) )",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/include/task.h#L3196-L3197"
+    },
+    "freertos:tasks.c#taskYIELD_ANY_CORE_IF_USING_PREEMPTION": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "taskYIELD_ANY_CORE_IF_USING_PREEMPTION",
+      "kind": "macro",
+      "startLine": 88,
+      "endLine": 98,
+      "code": "    #define taskYIELD_ANY_CORE_IF_USING_PREEMPTION( pxTCB ) \\\ndo {                                                        \\\n    if( pxCurrentTCB->uxPriority < ( pxTCB )->uxPriority )  \\\n    {                                                       \\\n        portYIELD_WITHIN_API();                             \\\n    }                                                       \\\n    else                                                    \\\n    {                                                       \\\n        mtCOVERAGE_TEST_MARKER();                           \\\n    }                                                       \\\n} while( 0 )",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L88-L98"
+    },
+    "freertos:tasks.c#xTaskGenericNotify": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "xTaskGenericNotify",
+      "kind": "fn",
+      "startLine": 8013,
+      "endLine": 8126,
+      "code": "BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,\n                               UBaseType_t uxIndexToNotify,\n                               uint32_t ulValue,\n                               eNotifyAction eAction,\n                               uint32_t * pulPreviousNotificationValue )\n{\n    TCB_t * pxTCB;\n    BaseType_t xReturn = pdPASS;\n    uint8_t ucOriginalNotifyState;\n\n    traceENTER_xTaskGenericNotify( xTaskToNotify, uxIndexToNotify, ulValue, eAction, pulPreviousNotificationValue );\n\n    configASSERT( uxIndexToNotify < configTASK_NOTIFICATION_ARRAY_ENTRIES );\n    configASSERT( xTaskToNotify );\n    pxTCB = xTaskToNotify;\n\n    taskENTER_CRITICAL();\n    {\n        if( pulPreviousNotificationValue != NULL )\n        {\n            *pulPreviousNotificationValue = pxTCB->ulNotifiedValue[ uxIndexToNotify ];\n        }\n\n        ucOriginalNotifyState = pxTCB->ucNotifyState[ uxIndexToNotify ];\n\n        pxTCB->ucNotifyState[ uxIndexToNotify ] = taskNOTIFICATION_RECEIVED;\n\n        switch( eAction )\n        {\n            case eSetBits:\n                pxTCB->ulNotifiedValue[ uxIndexToNotify ] |= ulValue;\n                break;\n\n            case eIncrement:\n                ( pxTCB->ulNotifiedValue[ uxIndexToNotify ] )++;\n                break;\n\n            case eSetValueWithOverwrite:\n                pxTCB->ulNotifiedValue[ uxIndexToNotify ] = ulValue;\n                break;\n\n            case eSetValueWithoutOverwrite:\n\n                if( ucOriginalNotifyState != taskNOTIFICATION_RECEIVED )\n                {\n                    pxTCB->ulNotifiedValue[ uxIndexToNotify ] = ulValue;\n                }\n                else\n                {\n                    /* The value could not be written to the task. */\n                    xReturn = pdFAIL;\n                }\n\n                break;\n\n            case eNoAction:\n\n                /* The task is being notified without its notify value being\n                 * updated. */\n                break;\n\n            default:\n\n                /* Should not get here if all enums are handled.\n                 * Artificially force an assert by testing a value the\n                 * compiler can't assume is const. */\n                configASSERT( xTickCount == ( TickType_t ) 0 );\n\n                break;\n        }\n\n        traceTASK_NOTIFY( uxIndexToNotify );\n\n        /* If the task is in the blocked state specifically to wait for a\n         * notification then unblock it now. */\n        if( ucOriginalNotifyState == taskWAITING_NOTIFICATION )\n        {\n            listREMOVE_ITEM( &( pxTCB->xStateListItem ) );\n            prvAddTaskToReadyList( pxTCB );\n\n            /* The task should not have been on an event list. */\n            configASSERT( listLIST_ITEM_CONTAINER( &( pxTCB->xEventListItem ) ) == NULL );\n\n            #if ( configUSE_TICKLESS_IDLE != 0 )\n            {\n                /* If a task is blocked waiting for a notification then\n                 * xNextTaskUnblockTime might be set to the blocked task's time\n                 * out time.  If the task is unblocked for a reason other than\n                 * a timeout xNextTaskUnblockTime is normally left unchanged,\n                 * because it will automatically get reset to a new value when\n                 * the tick count equals xNextTaskUnblockTime.  However if\n                 * tickless idling is used it might be more important to enter\n                 * sleep mode at the earliest possible time - so reset\n                 * xNextTaskUnblockTime here to ensure it is updated at the\n                 * earliest possible time. */\n                prvResetNextTaskUnblockTime();\n            }\n            #endif\n\n            /* Check if the notified task has a priority above the currently\n             * executing task. */\n            taskYIELD_ANY_CORE_IF_USING_PREEMPTION( pxTCB );\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n    }\n    taskEXIT_CRITICAL();\n\n    traceRETURN_xTaskGenericNotify( xReturn );\n\n    return xReturn;\n}",
+      "inactive": [
+        [
+          8097,
+          8109
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L8013-L8126"
+    },
+    "freertos:tasks.c#ulTaskGenericNotifyTake": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "ulTaskGenericNotifyTake",
+      "kind": "fn",
+      "startLine": 7797,
+      "endLine": 7892,
+      "code": "uint32_t ulTaskGenericNotifyTake( UBaseType_t uxIndexToWaitOn,\n                                  BaseType_t xClearCountOnExit,\n                                  TickType_t xTicksToWait )\n{\n    uint32_t ulReturn;\n    BaseType_t xAlreadyYielded, xShouldBlock = pdFALSE;\n\n    traceENTER_ulTaskGenericNotifyTake( uxIndexToWaitOn, xClearCountOnExit, xTicksToWait );\n\n    configASSERT( uxIndexToWaitOn < configTASK_NOTIFICATION_ARRAY_ENTRIES );\n\n    /* If the notification count is zero, and if we are willing to wait for a\n     * notification, then block the task and wait. */\n    if( ( pxCurrentTCB->ulNotifiedValue[ uxIndexToWaitOn ] == 0U ) && ( xTicksToWait > ( TickType_t ) 0 ) )\n    {\n        /* We suspend the scheduler here as prvAddCurrentTaskToDelayedList is a\n         * non-deterministic operation. */\n        vTaskSuspendAll();\n        {\n            /* We MUST enter a critical section to atomically check if a notification\n             * has occurred and set the flag to indicate that we are waiting for\n             * a notification. If we do not do so, a notification sent from an ISR\n             * will get lost. */\n            taskENTER_CRITICAL();\n            {\n                /* Only block if the notification count is not already non-zero. */\n                if( pxCurrentTCB->ulNotifiedValue[ uxIndexToWaitOn ] == 0U )\n                {\n                    /* Mark this task as waiting for a notification. */\n                    pxCurrentTCB->ucNotifyState[ uxIndexToWaitOn ] = taskWAITING_NOTIFICATION;\n\n                    /* Arrange to wait for a notification. */\n                    xShouldBlock = pdTRUE;\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n            taskEXIT_CRITICAL();\n\n            /* We are now out of the critical section but the scheduler is still\n             * suspended, so we are safe to do non-deterministic operations such\n             * as prvAddCurrentTaskToDelayedList. */\n            if( xShouldBlock == pdTRUE )\n            {\n                traceTASK_NOTIFY_TAKE_BLOCK( uxIndexToWaitOn );\n                prvAddCurrentTaskToDelayedList( xTicksToWait, pdTRUE );\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        xAlreadyYielded = xTaskResumeAll();\n\n        /* Force a reschedule if xTaskResumeAll has not already done so. */\n        if( ( xShouldBlock == pdTRUE ) && ( xAlreadyYielded == pdFALSE ) )\n        {\n            taskYIELD_WITHIN_API();\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n    }\n\n    taskENTER_CRITICAL();\n    {\n        traceTASK_NOTIFY_TAKE( uxIndexToWaitOn );\n        ulReturn = pxCurrentTCB->ulNotifiedValue[ uxIndexToWaitOn ];\n\n        if( ulReturn != 0U )\n        {\n            if( xClearCountOnExit != pdFALSE )\n            {\n                pxCurrentTCB->ulNotifiedValue[ uxIndexToWaitOn ] = ( uint32_t ) 0U;\n            }\n            else\n            {\n                pxCurrentTCB->ulNotifiedValue[ uxIndexToWaitOn ] = ulReturn - ( uint32_t ) 1;\n            }\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n\n        pxCurrentTCB->ucNotifyState[ uxIndexToWaitOn ] = taskNOT_WAITING_NOTIFICATION;\n    }\n    taskEXIT_CRITICAL();\n\n    traceRETURN_ulTaskGenericNotifyTake( ulReturn );\n\n    return ulReturn;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L7797-L7892"
+    },
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "vTaskGenericNotifyGiveFromISR",
+      "kind": "fn",
+      "startLine": 8315,
+      "endLine": 8440,
+      "code": "void vTaskGenericNotifyGiveFromISR( TaskHandle_t xTaskToNotify,\n                                    UBaseType_t uxIndexToNotify,\n                                    BaseType_t * pxHigherPriorityTaskWoken )\n{\n    TCB_t * pxTCB;\n    uint8_t ucOriginalNotifyState;\n    UBaseType_t uxSavedInterruptStatus;\n\n    traceENTER_vTaskGenericNotifyGiveFromISR( xTaskToNotify, uxIndexToNotify, pxHigherPriorityTaskWoken );\n\n    configASSERT( xTaskToNotify );\n    configASSERT( uxIndexToNotify < configTASK_NOTIFICATION_ARRAY_ENTRIES );\n\n    /* RTOS ports that support interrupt nesting have the concept of a\n     * maximum  system call (or maximum API call) interrupt priority.\n     * Interrupts that are  above the maximum system call priority are keep\n     * permanently enabled, even when the RTOS kernel is in a critical section,\n     * but cannot make any calls to FreeRTOS API functions.  If configASSERT()\n     * is defined in FreeRTOSConfig.h then\n     * portASSERT_IF_INTERRUPT_PRIORITY_INVALID() will result in an assertion\n     * failure if a FreeRTOS API function is called from an interrupt that has\n     * been assigned a priority above the configured maximum system call\n     * priority.  Only FreeRTOS functions that end in FromISR can be called\n     * from interrupts  that have been assigned a priority at or (logically)\n     * below the maximum system call interrupt priority.  FreeRTOS maintains a\n     * separate interrupt safe API to ensure interrupt entry is as fast and as\n     * simple as possible.  More information (albeit Cortex-M specific) is\n     * provided on the following link:\n     * https://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html */\n    portASSERT_IF_INTERRUPT_PRIORITY_INVALID();\n\n    pxTCB = xTaskToNotify;\n\n    /* MISRA Ref 4.7.1 [Return value shall be checked] */\n    /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#dir-47 */\n    /* coverity[misra_c_2012_directive_4_7_violation] */\n    uxSavedInterruptStatus = ( UBaseType_t ) taskENTER_CRITICAL_FROM_ISR();\n    {\n        ucOriginalNotifyState = pxTCB->ucNotifyState[ uxIndexToNotify ];\n        pxTCB->ucNotifyState[ uxIndexToNotify ] = taskNOTIFICATION_RECEIVED;\n\n        /* 'Giving' is equivalent to incrementing a count in a counting\n         * semaphore. */\n        ( pxTCB->ulNotifiedValue[ uxIndexToNotify ] )++;\n\n        traceTASK_NOTIFY_GIVE_FROM_ISR( uxIndexToNotify );\n\n        /* If the task is in the blocked state specifically to wait for a\n         * notification then unblock it now. */\n        if( ucOriginalNotifyState == taskWAITING_NOTIFICATION )\n        {\n            /* The task should not have been on an event list. */\n            configASSERT( listLIST_ITEM_CONTAINER( &( pxTCB->xEventListItem ) ) == NULL );\n\n            if( uxSchedulerSuspended == ( UBaseType_t ) 0U )\n            {\n                listREMOVE_ITEM( &( pxTCB->xStateListItem ) );\n                prvAddTaskToReadyList( pxTCB );\n\n                #if ( configUSE_TICKLESS_IDLE != 0 )\n                {\n                    /* If a task is blocked waiting for a notification then\n                     * xNextTaskUnblockTime might be set to the blocked task's time\n                     * out time.  If the task is unblocked for a reason other than\n                     * a timeout xNextTaskUnblockTime is normally left unchanged,\n                     * because it will automatically get reset to a new value when\n                     * the tick count equals xNextTaskUnblockTime.  However if\n                     * tickless idling is used it might be more important to enter\n                     * sleep mode at the earliest possible time - so reset\n                     * xNextTaskUnblockTime here to ensure it is updated at the\n                     * earliest possible time. */\n                    prvResetNextTaskUnblockTime();\n                }\n                #endif\n            }\n            else\n            {\n                /* The delayed and ready lists cannot be accessed, so hold\n                 * this task pending until the scheduler is resumed. */\n                listINSERT_END( &( xPendingReadyList ), &( pxTCB->xEventListItem ) );\n            }\n\n            #if ( configNUMBER_OF_CORES == 1 )\n            {\n                if( pxTCB->uxPriority > pxCurrentTCB->uxPriority )\n                {\n                    /* The notified task has a priority above the currently\n                     * executing task so a yield is required. */\n                    if( pxHigherPriorityTaskWoken != NULL )\n                    {\n                        *pxHigherPriorityTaskWoken = pdTRUE;\n                    }\n\n                    /* Mark that a yield is pending in case the user is not\n                     * using the \"xHigherPriorityTaskWoken\" parameter in an ISR\n                     * safe FreeRTOS function. */\n                    xYieldPendings[ 0 ] = pdTRUE;\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n            #else /* #if ( configNUMBER_OF_CORES == 1 ) */\n            {\n                #if ( configUSE_PREEMPTION == 1 )\n                {\n                    prvYieldForTask( pxTCB );\n\n                    if( xYieldPendings[ portGET_CORE_ID() ] == pdTRUE )\n                    {\n                        if( pxHigherPriorityTaskWoken != NULL )\n                        {\n                            *pxHigherPriorityTaskWoken = pdTRUE;\n                        }\n                    }\n                }\n                #endif /* #if ( configUSE_PREEMPTION == 1 ) */\n            }\n            #endif /* #if ( configNUMBER_OF_CORES == 1 ) */\n        }\n    }\n    taskEXIT_CRITICAL_FROM_ISR( uxSavedInterruptStatus );\n\n    traceRETURN_vTaskGenericNotifyGiveFromISR();\n}",
+      "inactive": [
+        [
+          8375,
+          8387
+        ],
+        [
+          8419,
+          8419
+        ],
+        [
+          8421,
+          8431
+        ],
+        [
+          8433,
+          8433
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L8315-L8440"
+    },
+    "freertos:event_groups.c#xEventGroupCreate": {
+      "rtos": "freertos",
+      "file": "event_groups.c",
+      "symbol": "xEventGroupCreate",
+      "kind": "fn",
+      "startLine": 145,
+      "endLine": 180,
+      "code": "EventGroupHandle_t xEventGroupCreate( void )\n{\n    EventGroup_t * pxEventBits;\n\n    traceENTER_xEventGroupCreate();\n\n    /* MISRA Ref 11.5.1 [Malloc memory assignment] */\n    /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-115 */\n    /* coverity[misra_c_2012_rule_11_5_violation] */\n    pxEventBits = ( EventGroup_t * ) pvPortMalloc( sizeof( EventGroup_t ) );\n\n    if( pxEventBits != NULL )\n    {\n        pxEventBits->uxEventBits = 0;\n        vListInitialise( &( pxEventBits->xTasksWaitingForBits ) );\n\n        #if ( configSUPPORT_STATIC_ALLOCATION == 1 )\n        {\n            /* Both static and dynamic allocation can be used, so note this\n             * event group was allocated statically in case the event group is\n             * later deleted. */\n            pxEventBits->ucStaticallyAllocated = pdFALSE;\n        }\n        #endif /* configSUPPORT_STATIC_ALLOCATION */\n\n        traceEVENT_GROUP_CREATE( pxEventBits );\n    }\n    else\n    {\n        traceEVENT_GROUP_CREATE_FAILED();\n    }\n\n    traceRETURN_xEventGroupCreate( pxEventBits );\n\n    return pxEventBits;\n}",
+      "inactive": [
+        [
+          162,
+          167
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/event_groups.c#L145-L180"
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits": {
+      "rtos": "freertos",
+      "file": "event_groups.c",
+      "symbol": "xEventGroupWaitBits",
+      "kind": "fn",
+      "startLine": 312,
+      "endLine": 469,
+      "code": "EventBits_t xEventGroupWaitBits( EventGroupHandle_t xEventGroup,\n                                 const EventBits_t uxBitsToWaitFor,\n                                 const BaseType_t xClearOnExit,\n                                 const BaseType_t xWaitForAllBits,\n                                 TickType_t xTicksToWait )\n{\n    EventGroup_t * pxEventBits = xEventGroup;\n    EventBits_t uxReturn, uxControlBits = 0;\n    BaseType_t xWaitConditionMet, xAlreadyYielded;\n    BaseType_t xTimeoutOccurred = pdFALSE;\n\n    traceENTER_xEventGroupWaitBits( xEventGroup, uxBitsToWaitFor, xClearOnExit, xWaitForAllBits, xTicksToWait );\n\n    /* Check the user is not attempting to wait on the bits used by the kernel\n     * itself, and that at least one bit is being requested. */\n    configASSERT( xEventGroup );\n    configASSERT( ( uxBitsToWaitFor & eventEVENT_BITS_CONTROL_BYTES ) == 0 );\n    configASSERT( uxBitsToWaitFor != 0 );\n    #if ( ( INCLUDE_xTaskGetSchedulerState == 1 ) || ( configUSE_TIMERS == 1 ) )\n    {\n        configASSERT( !( ( xTaskGetSchedulerState() == taskSCHEDULER_SUSPENDED ) && ( xTicksToWait != 0 ) ) );\n    }\n    #endif\n\n    vTaskSuspendAll();\n    {\n        const EventBits_t uxCurrentEventBits = pxEventBits->uxEventBits;\n\n        /* Check to see if the wait condition is already met or not. */\n        xWaitConditionMet = prvTestWaitCondition( uxCurrentEventBits, uxBitsToWaitFor, xWaitForAllBits );\n\n        if( xWaitConditionMet != pdFALSE )\n        {\n            /* The wait condition has already been met so there is no need to\n             * block. */\n            uxReturn = uxCurrentEventBits;\n            xTicksToWait = ( TickType_t ) 0;\n\n            /* Clear the wait bits if requested to do so. */\n            if( xClearOnExit != pdFALSE )\n            {\n                pxEventBits->uxEventBits &= ~uxBitsToWaitFor;\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n        else if( xTicksToWait == ( TickType_t ) 0 )\n        {\n            /* The wait condition has not been met, but no block time was\n             * specified, so just return the current value. */\n            uxReturn = uxCurrentEventBits;\n            xTimeoutOccurred = pdTRUE;\n        }\n        else\n        {\n            /* The task is going to block to wait for its required bits to be\n             * set.  uxControlBits are used to remember the specified behaviour of\n             * this call to xEventGroupWaitBits() - for use when the event bits\n             * unblock the task. */\n            if( xClearOnExit != pdFALSE )\n            {\n                uxControlBits |= eventCLEAR_EVENTS_ON_EXIT_BIT;\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n\n            if( xWaitForAllBits != pdFALSE )\n            {\n                uxControlBits |= eventWAIT_FOR_ALL_BITS;\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n\n            /* Store the bits that the calling task is waiting for in the\n             * task's event list item so the kernel knows when a match is\n             * found.  Then enter the blocked state. */\n            vTaskPlaceOnUnorderedEventList( &( pxEventBits->xTasksWaitingForBits ), ( uxBitsToWaitFor | uxControlBits ), xTicksToWait );\n\n            /* This is obsolete as it will get set after the task unblocks, but\n             * some compilers mistakenly generate a warning about the variable\n             * being returned without being set if it is not done. */\n            uxReturn = 0;\n\n            traceEVENT_GROUP_WAIT_BITS_BLOCK( xEventGroup, uxBitsToWaitFor );\n        }\n    }\n    xAlreadyYielded = xTaskResumeAll();\n\n    if( xTicksToWait != ( TickType_t ) 0 )\n    {\n        if( xAlreadyYielded == pdFALSE )\n        {\n            taskYIELD_WITHIN_API();\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n\n        /* The task blocked to wait for its required bits to be set - at this\n         * point either the required bits were set or the block time expired.  If\n         * the required bits were set they will have been stored in the task's\n         * event list item, and they should now be retrieved then cleared. */\n        uxReturn = uxTaskResetEventItemValue();\n\n        if( ( uxReturn & eventUNBLOCKED_DUE_TO_BIT_SET ) == ( EventBits_t ) 0 )\n        {\n            taskENTER_CRITICAL();\n            {\n                /* The task timed out, just return the current event bit value. */\n                uxReturn = pxEventBits->uxEventBits;\n\n                /* It is possible that the event bits were updated between this\n                 * task leaving the Blocked state and running again. */\n                if( prvTestWaitCondition( uxReturn, uxBitsToWaitFor, xWaitForAllBits ) != pdFALSE )\n                {\n                    if( xClearOnExit != pdFALSE )\n                    {\n                        pxEventBits->uxEventBits &= ~uxBitsToWaitFor;\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n\n                xTimeoutOccurred = pdTRUE;\n            }\n            taskEXIT_CRITICAL();\n        }\n        else\n        {\n            /* The task unblocked because the bits were set. */\n        }\n\n        /* The task blocked so control bits may have been set. */\n        uxReturn &= ~eventEVENT_BITS_CONTROL_BYTES;\n    }\n\n    traceEVENT_GROUP_WAIT_BITS_END( xEventGroup, uxBitsToWaitFor, xTimeoutOccurred );\n\n    /* Prevent compiler warnings when trace macros are not used. */\n    ( void ) xTimeoutOccurred;\n\n    traceRETURN_xEventGroupWaitBits( uxReturn );\n\n    return uxReturn;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/event_groups.c#L312-L469"
+    },
+    "freertos:event_groups.c#xEventGroupSetBits": {
+      "rtos": "freertos",
+      "file": "event_groups.c",
+      "symbol": "xEventGroupSetBits",
+      "kind": "fn",
+      "startLine": 547,
+      "endLine": 647,
+      "code": "EventBits_t xEventGroupSetBits( EventGroupHandle_t xEventGroup,\n                                const EventBits_t uxBitsToSet )\n{\n    ListItem_t * pxListItem;\n    ListItem_t * pxNext;\n    ListItem_t const * pxListEnd;\n    List_t const * pxList;\n    EventBits_t uxBitsToClear = 0, uxBitsWaitedFor, uxControlBits, uxReturnBits;\n    EventGroup_t * pxEventBits = xEventGroup;\n    BaseType_t xMatchFound = pdFALSE;\n\n    traceENTER_xEventGroupSetBits( xEventGroup, uxBitsToSet );\n\n    /* Check the user is not attempting to set the bits used by the kernel\n     * itself. */\n    configASSERT( xEventGroup );\n    configASSERT( ( uxBitsToSet & eventEVENT_BITS_CONTROL_BYTES ) == 0 );\n\n    pxList = &( pxEventBits->xTasksWaitingForBits );\n    pxListEnd = listGET_END_MARKER( pxList );\n    vTaskSuspendAll();\n    {\n        traceEVENT_GROUP_SET_BITS( xEventGroup, uxBitsToSet );\n\n        pxListItem = listGET_HEAD_ENTRY( pxList );\n\n        /* Set the bits. */\n        pxEventBits->uxEventBits |= uxBitsToSet;\n\n        /* See if the new bit value should unblock any tasks. */\n        while( pxListItem != pxListEnd )\n        {\n            pxNext = listGET_NEXT( pxListItem );\n            uxBitsWaitedFor = listGET_LIST_ITEM_VALUE( pxListItem );\n            xMatchFound = pdFALSE;\n\n            /* Split the bits waited for from the control bits. */\n            uxControlBits = uxBitsWaitedFor & eventEVENT_BITS_CONTROL_BYTES;\n            uxBitsWaitedFor &= ~eventEVENT_BITS_CONTROL_BYTES;\n\n            if( ( uxControlBits & eventWAIT_FOR_ALL_BITS ) == ( EventBits_t ) 0 )\n            {\n                /* Just looking for single bit being set. */\n                if( ( uxBitsWaitedFor & pxEventBits->uxEventBits ) != ( EventBits_t ) 0 )\n                {\n                    xMatchFound = pdTRUE;\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n            else if( ( uxBitsWaitedFor & pxEventBits->uxEventBits ) == uxBitsWaitedFor )\n            {\n                /* All bits are set. */\n                xMatchFound = pdTRUE;\n            }\n            else\n            {\n                /* Need all bits to be set, but not all the bits were set. */\n            }\n\n            if( xMatchFound != pdFALSE )\n            {\n                /* The bits match.  Should the bits be cleared on exit? */\n                if( ( uxControlBits & eventCLEAR_EVENTS_ON_EXIT_BIT ) != ( EventBits_t ) 0 )\n                {\n                    uxBitsToClear |= uxBitsWaitedFor;\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n\n                /* Store the actual event flag value in the task's event list\n                 * item before removing the task from the event list.  The\n                 * eventUNBLOCKED_DUE_TO_BIT_SET bit is set so the task knows\n                 * that is was unblocked due to its required bits matching, rather\n                 * than because it timed out. */\n                vTaskRemoveFromUnorderedEventList( pxListItem, pxEventBits->uxEventBits | eventUNBLOCKED_DUE_TO_BIT_SET );\n            }\n\n            /* Move onto the next list item.  Note pxListItem->pxNext is not\n             * used here as the list item may have been removed from the event list\n             * and inserted into the ready/pending reading list. */\n            pxListItem = pxNext;\n        }\n\n        /* Clear any bits that matched when the eventCLEAR_EVENTS_ON_EXIT_BIT\n         * bit was set in the control word. */\n        pxEventBits->uxEventBits &= ~uxBitsToClear;\n\n        /* Snapshot resulting bits. */\n        uxReturnBits = pxEventBits->uxEventBits;\n    }\n    ( void ) xTaskResumeAll();\n\n    traceRETURN_xEventGroupSetBits( uxReturnBits );\n\n    return uxReturnBits;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/event_groups.c#L547-L647"
+    },
+    "freertos:event_groups.c#xEventGroupClearBits": {
+      "rtos": "freertos",
+      "file": "event_groups.c",
+      "symbol": "xEventGroupClearBits",
+      "kind": "fn",
+      "startLine": 472,
+      "endLine": 501,
+      "code": "EventBits_t xEventGroupClearBits( EventGroupHandle_t xEventGroup,\n                                  const EventBits_t uxBitsToClear )\n{\n    EventGroup_t * pxEventBits = xEventGroup;\n    EventBits_t uxReturn;\n\n    traceENTER_xEventGroupClearBits( xEventGroup, uxBitsToClear );\n\n    /* Check the user is not attempting to clear the bits used by the kernel\n     * itself. */\n    configASSERT( xEventGroup );\n    configASSERT( ( uxBitsToClear & eventEVENT_BITS_CONTROL_BYTES ) == 0 );\n\n    taskENTER_CRITICAL();\n    {\n        traceEVENT_GROUP_CLEAR_BITS( xEventGroup, uxBitsToClear );\n\n        /* The value returned is the event group value prior to the bits being\n         * cleared. */\n        uxReturn = pxEventBits->uxEventBits;\n\n        /* Clear the bits. */\n        pxEventBits->uxEventBits &= ~uxBitsToClear;\n    }\n    taskEXIT_CRITICAL();\n\n    traceRETURN_xEventGroupClearBits( uxReturn );\n\n    return uxReturn;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/event_groups.c#L472-L501"
+    },
+    "freertos:event_groups.c#xEventGroupSetBitsFromISR": {
+      "rtos": "freertos",
+      "file": "event_groups.c",
+      "symbol": "xEventGroupSetBitsFromISR",
+      "kind": "fn",
+      "startLine": 817,
+      "endLine": 831,
+      "code": "BaseType_t xEventGroupSetBitsFromISR( EventGroupHandle_t xEventGroup,\n                                      const EventBits_t uxBitsToSet,\n                                      BaseType_t * pxHigherPriorityTaskWoken )\n{\n    BaseType_t xReturn;\n\n    traceENTER_xEventGroupSetBitsFromISR( xEventGroup, uxBitsToSet, pxHigherPriorityTaskWoken );\n\n    traceEVENT_GROUP_SET_BITS_FROM_ISR( xEventGroup, uxBitsToSet );\n    xReturn = xTimerPendFunctionCallFromISR( &vEventGroupSetBitsCallback, ( void * ) xEventGroup, ( uint32_t ) uxBitsToSet, pxHigherPriorityTaskWoken );\n\n    traceRETURN_xEventGroupSetBitsFromISR( xReturn );\n\n    return xReturn;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/event_groups.c#L817-L831"
+    },
+    "freertos:event_groups.c#vEventGroupSetBitsCallback": {
+      "rtos": "freertos",
+      "file": "event_groups.c",
+      "symbol": "vEventGroupSetBitsCallback",
+      "kind": "fn",
+      "startLine": 748,
+      "endLine": 759,
+      "code": "void vEventGroupSetBitsCallback( void * pvEventGroup,\n                                 uint32_t ulBitsToSet )\n{\n    traceENTER_vEventGroupSetBitsCallback( pvEventGroup, ulBitsToSet );\n\n    /* MISRA Ref 11.5.4 [Callback function parameter] */\n    /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-115 */\n    /* coverity[misra_c_2012_rule_11_5_violation] */\n    ( void ) xEventGroupSetBits( pvEventGroup, ( EventBits_t ) ulBitsToSet );\n\n    traceRETURN_vEventGroupSetBitsCallback();\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/event_groups.c#L748-L759"
+    },
+    "freertos:tasks.c#vTaskPlaceOnUnorderedEventList": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "vTaskPlaceOnUnorderedEventList",
+      "kind": "fn",
+      "startLine": 5431,
+      "endLine": 5458,
+      "code": "void vTaskPlaceOnUnorderedEventList( List_t * pxEventList,\n                                     const TickType_t xItemValue,\n                                     const TickType_t xTicksToWait )\n{\n    traceENTER_vTaskPlaceOnUnorderedEventList( pxEventList, xItemValue, xTicksToWait );\n\n    configASSERT( pxEventList );\n\n    /* THIS FUNCTION MUST BE CALLED WITH THE SCHEDULER SUSPENDED.  It is used by\n     * the event groups implementation. */\n    configASSERT( uxSchedulerSuspended != ( UBaseType_t ) 0U );\n\n    /* Store the item value in the event list item.  It is safe to access the\n     * event list item here as interrupts won't access the event list item of a\n     * task that is not in the Blocked state. */\n    listSET_LIST_ITEM_VALUE( &( pxCurrentTCB->xEventListItem ), xItemValue | taskEVENT_LIST_ITEM_VALUE_IN_USE );\n\n    /* Place the event list item of the TCB at the end of the appropriate event\n     * list.  It is safe to access the event list here because it is part of an\n     * event group implementation - and interrupts don't access event groups\n     * directly (instead they access them indirectly by pending function calls to\n     * the task level). */\n    listINSERT_END( pxEventList, &( pxCurrentTCB->xEventListItem ) );\n\n    prvAddCurrentTaskToDelayedList( xTicksToWait, pdTRUE );\n\n    traceRETURN_vTaskPlaceOnUnorderedEventList();\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L5431-L5458"
+    },
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "vTaskRemoveFromUnorderedEventList",
+      "kind": "fn",
+      "startLine": 5593,
+      "endLine": 5662,
+      "code": "void vTaskRemoveFromUnorderedEventList( ListItem_t * pxEventListItem,\n                                        const TickType_t xItemValue )\n{\n    TCB_t * pxUnblockedTCB;\n\n    traceENTER_vTaskRemoveFromUnorderedEventList( pxEventListItem, xItemValue );\n\n    /* THIS FUNCTION MUST BE CALLED WITH THE SCHEDULER SUSPENDED.  It is used by\n     * the event flags implementation. */\n    configASSERT( uxSchedulerSuspended != ( UBaseType_t ) 0U );\n\n    /* Store the new item value in the event list. */\n    listSET_LIST_ITEM_VALUE( pxEventListItem, xItemValue | taskEVENT_LIST_ITEM_VALUE_IN_USE );\n\n    /* Remove the event list form the event flag.  Interrupts do not access\n     * event flags. */\n    /* MISRA Ref 11.5.3 [Void pointer assignment] */\n    /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#rule-115 */\n    /* coverity[misra_c_2012_rule_11_5_violation] */\n    pxUnblockedTCB = listGET_LIST_ITEM_OWNER( pxEventListItem );\n    configASSERT( pxUnblockedTCB );\n    listREMOVE_ITEM( pxEventListItem );\n\n    #if ( configUSE_TICKLESS_IDLE != 0 )\n    {\n        /* If a task is blocked on a kernel object then xNextTaskUnblockTime\n         * might be set to the blocked task's time out time.  If the task is\n         * unblocked for a reason other than a timeout xNextTaskUnblockTime is\n         * normally left unchanged, because it is automatically reset to a new\n         * value when the tick count equals xNextTaskUnblockTime.  However if\n         * tickless idling is used it might be more important to enter sleep mode\n         * at the earliest possible time - so reset xNextTaskUnblockTime here to\n         * ensure it is updated at the earliest possible time. */\n        prvResetNextTaskUnblockTime();\n    }\n    #endif\n\n    /* Remove the task from the delayed list and add it to the ready list.  The\n     * scheduler is suspended so interrupts will not be accessing the ready\n     * lists. */\n    listREMOVE_ITEM( &( pxUnblockedTCB->xStateListItem ) );\n    prvAddTaskToReadyList( pxUnblockedTCB );\n\n    #if ( configNUMBER_OF_CORES == 1 )\n    {\n        if( pxUnblockedTCB->uxPriority > pxCurrentTCB->uxPriority )\n        {\n            /* The unblocked task has a priority above that of the calling task, so\n             * a context switch is required.  This function is called with the\n             * scheduler suspended so xYieldPending is set so the context switch\n             * occurs immediately that the scheduler is resumed (unsuspended). */\n            xYieldPendings[ 0 ] = pdTRUE;\n        }\n    }\n    #else /* #if ( configNUMBER_OF_CORES == 1 ) */\n    {\n        #if ( configUSE_PREEMPTION == 1 )\n        {\n            taskENTER_CRITICAL();\n            {\n                prvYieldForTask( pxUnblockedTCB );\n            }\n            taskEXIT_CRITICAL();\n        }\n        #endif\n    }\n    #endif /* #if ( configNUMBER_OF_CORES == 1 ) */\n\n    traceRETURN_vTaskRemoveFromUnorderedEventList();\n}",
+      "inactive": [
+        [
+          5617,
+          5627
+        ],
+        [
+          5648,
+          5648
+        ],
+        [
+          5650,
+          5656
+        ],
+        [
+          5658,
+          5658
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L5593-L5662"
+    },
+    "freertos:tasks.c#uxTaskResetEventItemValue": {
+      "rtos": "freertos",
+      "file": "tasks.c",
+      "symbol": "uxTaskResetEventItemValue",
+      "kind": "fn",
+      "startLine": 7752,
+      "endLine": 7767,
+      "code": "TickType_t uxTaskResetEventItemValue( void )\n{\n    TickType_t uxReturn;\n\n    traceENTER_uxTaskResetEventItemValue();\n\n    uxReturn = listGET_LIST_ITEM_VALUE( &( pxCurrentTCB->xEventListItem ) );\n\n    /* Reset the event list item to its normal value - so it can be used with\n     * queues and semaphores. */\n    listSET_LIST_ITEM_VALUE( &( pxCurrentTCB->xEventListItem ), ( ( TickType_t ) configMAX_PRIORITIES - ( TickType_t ) pxCurrentTCB->uxPriority ) );\n\n    traceRETURN_uxTaskResetEventItemValue( uxReturn );\n\n    return uxReturn;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/tasks.c#L7752-L7767"
+    },
+    "freertos:timers.c#xTimerPendFunctionCallFromISR": {
+      "rtos": "freertos",
+      "file": "timers.c",
+      "symbol": "xTimerPendFunctionCallFromISR",
+      "kind": "fn",
+      "startLine": 1238,
+      "endLine": 1261,
+      "code": "BaseType_t xTimerPendFunctionCallFromISR( PendedFunction_t xFunctionToPend,\n                                          void * pvParameter1,\n                                          uint32_t ulParameter2,\n                                          BaseType_t * pxHigherPriorityTaskWoken )\n{\n    DaemonTaskMessage_t xMessage;\n    BaseType_t xReturn;\n\n    traceENTER_xTimerPendFunctionCallFromISR( xFunctionToPend, pvParameter1, ulParameter2, pxHigherPriorityTaskWoken );\n\n    /* Complete the message with the function parameters and post it to the\n     * daemon task. */\n    xMessage.xMessageID = tmrCOMMAND_EXECUTE_CALLBACK_FROM_ISR;\n    xMessage.u.xCallbackParameters.pxCallbackFunction = xFunctionToPend;\n    xMessage.u.xCallbackParameters.pvParameter1 = pvParameter1;\n    xMessage.u.xCallbackParameters.ulParameter2 = ulParameter2;\n\n    xReturn = xQueueSendFromISR( xTimerQueue, &xMessage, pxHigherPriorityTaskWoken );\n\n    tracePEND_FUNC_CALL_FROM_ISR( xFunctionToPend, pvParameter1, ulParameter2, xReturn );\n    traceRETURN_xTimerPendFunctionCallFromISR( xReturn );\n\n    return xReturn;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/timers.c#L1238-L1261"
     },
     "freertos:queue.c#prvCopyDataFromQueue": {
       "rtos": "freertos",
@@ -1338,6 +1794,148 @@
       "inactive": [],
       "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sem.c#L116-L138"
     },
+    "zephyr:kernel/timer.c#z_impl_k_timer_start": {
+      "rtos": "zephyr",
+      "file": "kernel/timer.c",
+      "symbol": "z_impl_k_timer_start",
+      "kind": "fn",
+      "startLine": 252,
+      "endLine": 280,
+      "code": "void z_impl_k_timer_start(struct k_timer *timer, k_timeout_t duration,\n\t\t\t  k_timeout_t period)\n{\n\tSYS_PORT_TRACING_OBJ_FUNC(k_timer, start, timer, duration, period);\n\n\tif (K_TIMEOUT_EQ(duration, K_FOREVER)) {\n\t\treturn;\n\t}\n\n\t/* Hold the timer lock across abort + add to serialize against a\n\t * concurrent k_timer_start on the same timer. An in-flight handler\n\t * (z_try_abort_timeout() returning non-zero) is flagged superseded\n\t * and will bail; the re-arm below also re-links the node, which\n\t * makes a not-yet-committed handler bail too. Either way we do not\n\t * wait for it.\n\t */\n\tk_spinlock_key_t key = k_spin_lock(&timer_lock);\n\n\t(void)z_try_abort_timeout(&timer->timeout);\n\n\ttimer->period = period;\n\ttimer->status = 0U;\n\n\tz_add_timeout(&timer->timeout, z_timer_expiration_handler, duration);\n\n\tz_timer_observer_on_start(timer, duration, period);\n\n\tk_spin_unlock(&timer_lock, key);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/timer.c#L252-L280"
+    },
+    "zephyr:kernel/timer.c#z_impl_k_timer_stop": {
+      "rtos": "zephyr",
+      "file": "kernel/timer.c",
+      "symbol": "z_impl_k_timer_stop",
+      "kind": "fn",
+      "startLine": 293,
+      "endLine": 336,
+      "code": "void z_impl_k_timer_stop(struct k_timer *timer)\n{\n\tSYS_PORT_TRACING_OBJ_FUNC(k_timer, stop, timer);\n\n\tk_spinlock_key_t key = k_spin_lock(&timer_lock);\n\n\tif (z_try_abort_timeout(&timer->timeout) != 0) {\n\t\t/* Not removed from the queue: either the timer was not\n\t\t * active, or its handler is in flight. In the latter case\n\t\t * z_try_abort_timeout() has flagged it superseded so the\n\t\t * handler bails; we do not wait for it. Nothing to stop here.\n\t\t */\n\t\tk_spin_unlock(&timer_lock, key);\n\t\treturn;\n\t}\n\n\tz_timer_observer_on_stop(timer);\n\n\tif (timer->stop_fn != NULL) {\n\t\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_timer, stop_fn_expiry, timer);\n\t\tk_spin_unlock(&timer_lock, key);\n\n\t\ttimer->stop_fn(timer);\n\n\t\tkey = k_spin_lock(&timer_lock);\n\n\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_timer, stop_fn_expiry, timer);\n\t}\n\n\tif (!IS_ENABLED(CONFIG_MULTITHREADING)) {\n\t\tk_spin_unlock(&timer_lock, key);\n\t\treturn;\n\n\t}\n\n\tstruct k_thread *pending_thread = z_unpend1_no_timeout(&timer->wait_q);\n\n\tif (pending_thread != NULL) {\n\t\tz_ready_thread(pending_thread);\n\t\tz_reschedule(&timer_lock, key);\n\t} else {\n\t\tk_spin_unlock(&timer_lock, key);\n\t}\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/timer.c#L293-L336"
+    },
+    "zephyr:kernel/timer.c#z_timer_expiration_handler": {
+      "rtos": "zephyr",
+      "file": "kernel/timer.c",
+      "symbol": "z_timer_expiration_handler",
+      "kind": "fn",
+      "startLine": 72,
+      "endLine": 153,
+      "code": "void z_timer_expiration_handler(struct _timeout *t)\n{\n\tstruct k_timer *timer = CONTAINER_OF(t, struct k_timer, timeout);\n\tstruct k_thread *thread;\n\tk_spinlock_key_t key = k_spin_lock(&timer_lock);\n\n\t/* A same-CPU IRQ may have raced with our dispatch between\n\t * sys_clock_announce() popping us off the queue and us taking\n\t * timer.c::lock. Two cases:\n\t *  - The timer was restarted (z_add_timeout re-queued the timeout):\n\t *    it is active again, and the new schedule fires later.\n\t *  - The timer was stopped (z_try_abort_timeout marked the\n\t *    in-flight slot superseded): bail without firing expiry_fn.\n\t */\n\tif (!z_is_inactive_timeout(t) ||\n\t    z_timeout_inflight_superseded(t)) {\n\t\tk_spin_unlock(&timer_lock, key);\n\t\treturn;\n\t}\n\n\t/*\n\t * if the timer is periodic, start it again; don't add _TICK_ALIGN\n\t * since we're already aligned to a tick boundary\n\t */\n\tif (!K_TIMEOUT_EQ(timer->period, K_NO_WAIT) &&\n\t    !K_TIMEOUT_EQ(timer->period, K_FOREVER)) {\n\t\tk_timeout_t next = timer->period;\n\n#ifdef CONFIG_TIMEOUT_64BIT\n\t\t/* Exploit the fact that uptime during a kernel\n\t\t * timeout handler reflects the time of the scheduled\n\t\t * event and not real time to get some inexpensive\n\t\t * protection against late interrupts.  If we're\n\t\t * delayed for any reason, we still end up calculating\n\t\t * the next expiration as a regular stride from where\n\t\t * we \"should\" have run.  Requires absolute timeouts.\n\t\t */\n\t\tnext = K_TIMEOUT_ABS_TICKS(k_uptime_ticks() + next.ticks);\n#endif /* CONFIG_TIMEOUT_64BIT */\n\t\tz_add_timeout(&timer->timeout, z_timer_expiration_handler,\n\t\t\t      next);\n\t}\n\n\t/* update timer's status */\n\ttimer->status += 1U;\n\n\tz_timer_observer_on_expiry(timer);\n\n\t/* invoke timer expiry function */\n\tif (timer->expiry_fn != NULL) {\n\t\tk_timer_expiry_t expiry_fn = timer->expiry_fn;\n\n\t\t/* Unlock for user handler. */\n\t\tk_spin_unlock(&timer_lock, key);\n\n\t\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_timer, expiry, timer);\n\n\t\texpiry_fn(timer);\n\n\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_timer, expiry, timer);\n\n\t\tkey = k_spin_lock(&timer_lock);\n\t}\n\n\tif (!IS_ENABLED(CONFIG_MULTITHREADING)) {\n\t\tk_spin_unlock(&timer_lock, key);\n\t\treturn;\n\t}\n\n\tLOCK_SCHED_SPINLOCK {\n\t\tthread = z_waitq_head_locked(&timer->wait_q);\n\n\t\tif (thread != NULL) {\n\t\t\tunpend_thread_no_timeout(thread);\n\t\t\tarch_thread_return_value_set(thread, 0);\n\t\t\tz_sched_ready_locked(thread);\n\t\t}\n\t}\n\n\tk_spin_unlock(&timer_lock, key);\n\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/timer.c#L72-L153"
+    },
+    "zephyr:kernel/events.c#z_impl_k_event_post": {
+      "rtos": "zephyr",
+      "file": "kernel/events.c",
+      "symbol": "z_impl_k_event_post",
+      "kind": "fn",
+      "startLine": 224,
+      "endLine": 227,
+      "code": "uint32_t z_impl_k_event_post(struct k_event *event, uint32_t events)\n{\n\treturn k_event_post_internal(event, events, events);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/events.c#L224-L227"
+    },
+    "zephyr:kernel/events.c#z_impl_k_event_clear": {
+      "rtos": "zephyr",
+      "file": "kernel/events.c",
+      "symbol": "z_impl_k_event_clear",
+      "kind": "fn",
+      "startLine": 268,
+      "endLine": 271,
+      "code": "uint32_t z_impl_k_event_clear(struct k_event *event, uint32_t events)\n{\n\treturn k_event_post_internal(event, 0, events);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/events.c#L268-L271"
+    },
+    "zephyr:kernel/events.c#k_event_post_internal": {
+      "rtos": "zephyr",
+      "file": "kernel/events.c",
+      "symbol": "k_event_post_internal",
+      "kind": "fn",
+      "startLine": 179,
+      "endLine": 222,
+      "code": "static uint32_t k_event_post_internal(struct k_event *event, uint32_t events,\n\t\t\t\t  uint32_t events_mask)\n{\n\tk_spinlock_key_t  key;\n\tstruct event_walk_data data;\n\tuint32_t previous_events;\n\n\tkey = k_spin_lock(&event->lock);\n\n\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_event, post, event, events,\n\t\t\t\t\tevents_mask);\n\n\tprevious_events = event->events & events_mask;\n\tevents = (event->events & ~events_mask) |\n\t\t (events & events_mask);\n\n\t/*\n\t * Posting an event has the potential to wake multiple pended threads.\n\t * It is desirable to wake all affected threads simultaneously. When\n\t * z_sched_waitq_walk() allows removal of nodes from the wait queue,\n\t * we wake (unpend and ready) each thread as part of the callback.\n\t * Otherwise, proceed in two steps:\n\t *\n\t * 1. Walk the waitq and create a linked list of threads to wake.\n\t * 2. Walk the resulting linked list and wake each of the threads.\n\t */\n\n#ifdef CONFIG_WAITQ_SCALABLE\n\tdata.head = NULL;\n#endif /* CONFIG_WAITQ_SCALABLE */\n\tdata.events = events;\n\tdata.clear_events = 0;\n\tz_sched_waitq_walk(&event->wait_q, event_walk_op, EVENT_POST_WALK_OP_FN, &data);\n\n\t/* stash any events not consumed */\n\tevent->events = data.events & ~data.clear_events;\n\n\tz_reschedule(&event->lock, key);\n\n\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_event, post, event, events,\n\t\t\t\t       events_mask);\n\n\treturn previous_events;\n}",
+      "inactive": [
+        [
+          207,
+          207
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/events.c#L179-L222"
+    },
+    "zephyr:kernel/events.c#event_walk_op": {
+      "rtos": "zephyr",
+      "file": "kernel/events.c",
+      "symbol": "event_walk_op",
+      "kind": "fn",
+      "startLine": 138,
+      "endLine": 177,
+      "code": "static int event_walk_op(struct k_thread *thread, void *data)\n{\n\tuint32_t match;\n\tunsigned int wait_condition;\n\tstruct event_walk_data *event_data = data;\n\n\twait_condition = thread->event_options & K_EVENT_WAIT_MASK;\n\n\tmatch = are_wait_conditions_met(thread->events, event_data->events,\n\t\t\t\t\twait_condition);\n\tif (match != 0) {\n\t\t/*\n\t\t * The wait conditions have been satisfied. Set the\n\t\t * received events then wake thread now if allowed,\n\t\t * else add it to the list of threads to unpend.\n\t\t *\n\t\t * NOTE: thread event options can consume an event\n\t\t */\n\t\tthread->events = match;\n\t\tif (thread->event_options & K_EVENT_OPTION_CLEAR) {\n\t\t\tevent_data->clear_events |= match;\n\t\t}\n\t\t(void)z_try_abort_thread_timeout(thread);\n\n#ifndef CONFIG_WAITQ_SCALABLE\n\t\t/*\n\t\t * Note: z_sched_wake_thread_locked() is safe\n\t\t * to call here because this walk_op callback\n\t\t * is invoked with the scheduler spinlock held.\n\t\t */\n\t\tarch_thread_return_value_set(thread, 0);\n\t\tz_sched_wake_thread_locked(thread);\n#else /* !CONFIG_WAITQ_SCALABLE */\n\t\tthread->next_wake_link = event_data->head;\n\t\tevent_data->head = thread;\n#endif /* !CONFIG_WAITQ_SCALABLE */\n\t}\n\n\treturn 0;\n}",
+      "inactive": [
+        [
+          171,
+          172
+        ]
+      ],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/events.c#L138-L177"
+    },
+    "zephyr:kernel/events.c#k_event_wait_internal": {
+      "rtos": "zephyr",
+      "file": "kernel/events.c",
+      "symbol": "k_event_wait_internal",
+      "kind": "fn",
+      "startLine": 282,
+      "endLine": 350,
+      "code": "static uint32_t k_event_wait_internal(struct k_event *event, uint32_t events,\n\t\t\t\t      unsigned int options, k_timeout_t timeout)\n{\n\tuint32_t  rv = 0;\n\n\t__ASSERT(((arch_is_in_isr() == false) ||\n\t\t  K_TIMEOUT_EQ(timeout, K_NO_WAIT)), \"\");\n\n\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_event, wait, event, events,\n\t\t\t\t\toptions, timeout);\n\n\tif ((events == 0U) && !(options & K_EVENT_OPTION_RESET)) {\n\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_event, wait, event, events, 0);\n\t\treturn 0;\n\t}\n\n\tk_spinlock_key_t  key = k_spin_lock(&event->lock);\n\n\tif (options & K_EVENT_OPTION_RESET) {\n\t\tevent->events = 0;\n\t}\n\n\tif (events == 0) {\n\t\tk_spin_unlock(&event->lock, key);\n\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_event, wait, event, events, 0);\n\t\treturn 0;\n\t}\n\n\tunsigned int wait_condition = options & K_EVENT_WAIT_MASK;\n\tstruct k_thread *thread = k_sched_current_thread_query();\n\n\t/* Test if the wait conditions have already been met. */\n\trv = are_wait_conditions_met(events, event->events, wait_condition);\n\tif (rv != 0) {\n\t\t/* clear the events that are matched */\n\t\tif (options & K_EVENT_OPTION_CLEAR) {\n\t\t\tevent->events &= ~rv;\n\t\t}\n\n\t\tk_spin_unlock(&event->lock, key);\n\t\tgoto out;\n\t}\n\n\tif (K_TIMEOUT_EQ(timeout, K_NO_WAIT)) {\n\t\tk_spin_unlock(&event->lock, key);\n\t\tgoto out;\n\t}\n\n\t/*\n\t * The caller must pend to wait for the match. Save the desired\n\t * set of events in the k_thread structure.\n\t */\n\n\tthread->events = events;\n\tthread->event_options = options;\n\n\tSYS_PORT_TRACING_OBJ_FUNC_BLOCKING(k_event, wait, event, events,\n\t\t\t\t\t   options, timeout);\n\n\tif (z_pend_curr(&event->lock, key, &event->wait_q, timeout) == 0) {\n\t\t/* Retrieve the set of events that woke the thread */\n\t\trv = thread->events;\n\t}\n\nout:\n\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_event, wait, event, events, rv);\n\n\treturn rv;\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/events.c#L282-L350"
+    },
+    "zephyr:kernel/events.c#z_impl_k_event_wait": {
+      "rtos": "zephyr",
+      "file": "kernel/events.c",
+      "symbol": "z_impl_k_event_wait",
+      "kind": "fn",
+      "startLine": 355,
+      "endLine": 361,
+      "code": "uint32_t z_impl_k_event_wait(struct k_event *event, uint32_t events,\n\t\t\t     bool reset, k_timeout_t timeout)\n{\n\tuint32_t options = reset ? K_EVENT_OPTION_RESET : 0;\n\n\treturn k_event_wait_internal(event, events, options, timeout);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/events.c#L355-L361"
+    },
+    "zephyr:kernel/events.c#z_impl_k_event_wait_all": {
+      "rtos": "zephyr",
+      "file": "kernel/events.c",
+      "symbol": "z_impl_k_event_wait_all",
+      "kind": "fn",
+      "startLine": 375,
+      "endLine": 382,
+      "code": "uint32_t z_impl_k_event_wait_all(struct k_event *event, uint32_t events,\n\t\t\t\t bool reset, k_timeout_t timeout)\n{\n\tuint32_t options = reset ? (K_EVENT_OPTION_RESET | K_EVENT_WAIT_ALL)\n\t\t\t\t : K_EVENT_WAIT_ALL;\n\n\treturn k_event_wait_internal(event, events, options, timeout);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/events.c#L375-L382"
+    },
+    "zephyr:kernel/events.c#z_impl_k_event_wait_safe": {
+      "rtos": "zephyr",
+      "file": "kernel/events.c",
+      "symbol": "z_impl_k_event_wait_safe",
+      "kind": "fn",
+      "startLine": 394,
+      "endLine": 401,
+      "code": "uint32_t z_impl_k_event_wait_safe(struct k_event *event, uint32_t events,\n\t\t\t\t  bool reset, k_timeout_t timeout)\n{\n\tuint32_t options = reset ? (K_EVENT_OPTION_CLEAR | K_EVENT_OPTION_RESET)\n\t\t\t\t : K_EVENT_OPTION_CLEAR;\n\n\treturn k_event_wait_internal(event, events, options, timeout);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/events.c#L394-L401"
+    },
+    "zephyr:kernel/events.c#z_impl_k_event_wait_all_safe": {
+      "rtos": "zephyr",
+      "file": "kernel/events.c",
+      "symbol": "z_impl_k_event_wait_all_safe",
+      "kind": "fn",
+      "startLine": 413,
+      "endLine": 421,
+      "code": "uint32_t z_impl_k_event_wait_all_safe(struct k_event *event, uint32_t events,\n\t\t\t\t      bool reset, k_timeout_t timeout)\n{\n\tuint32_t options = reset ? (K_EVENT_OPTION_CLEAR |\n\t\t\t\t    K_EVENT_OPTION_RESET | K_EVENT_WAIT_ALL)\n\t\t\t\t : (K_EVENT_OPTION_CLEAR | K_EVENT_WAIT_ALL);\n\n\treturn k_event_wait_internal(event, events, options, timeout);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/events.c#L413-L421"
+    },
     "zephyr:kernel/msg_q.c#put_msg_in_queue": {
       "rtos": "zephyr",
       "file": "kernel/msg_q.c",
@@ -1472,6 +2070,10 @@
     "freertos:tasks.c#vTaskStartScheduler/tick-init": {
       "symbol": "freertos:tasks.c#vTaskStartScheduler",
       "line": 3799
+    },
+    "freertos:tasks.c#vTaskStartScheduler/timers": {
+      "symbol": "freertos:tasks.c#vTaskStartScheduler",
+      "line": 3762
     },
     "freertos:tasks.c#vTaskStartScheduler/start": {
       "symbol": "freertos:tasks.c#vTaskStartScheduler",
@@ -1785,6 +2387,10 @@
       "symbol": "freertos:tasks.c#vTaskSuspend",
       "line": 3233
     },
+    "freertos:tasks.c#vTaskSuspend/notify-reset": {
+      "symbol": "freertos:tasks.c#vTaskSuspend",
+      "line": 3245
+    },
     "freertos:tasks.c#vTaskSuspend/reset-unblock": {
       "symbol": "freertos:tasks.c#vTaskSuspend",
       "line": 3303
@@ -1808,6 +2414,14 @@
     "freertos:tasks.c#prvTaskIsTaskSuspended/event-check": {
       "symbol": "freertos:tasks.c#prvTaskIsTaskSuspended",
       "line": 3379
+    },
+    "freertos:tasks.c#prvTaskIsTaskSuspended/notify-check": {
+      "symbol": "freertos:tasks.c#prvTaskIsTaskSuspended",
+      "line": 3394
+    },
+    "freertos:tasks.c#prvTaskIsTaskSuspended/notify-waiting": {
+      "symbol": "freertos:tasks.c#prvTaskIsTaskSuspended",
+      "line": 3396
     },
     "freertos:tasks.c#prvTaskIsTaskSuspended/suspended": {
       "symbol": "freertos:tasks.c#prvTaskIsTaskSuspended",
@@ -2281,6 +2895,546 @@
       "symbol": "freertos:queue.c#xQueueCreateCountingSemaphore",
       "line": 926
     },
+    "freertos:tasks.c#vTaskPlaceOnEventListRestricted/insert": {
+      "symbol": "freertos:tasks.c#vTaskPlaceOnEventListRestricted",
+      "line": 5481
+    },
+    "freertos:tasks.c#vTaskPlaceOnEventListRestricted/forever": {
+      "symbol": "freertos:tasks.c#vTaskPlaceOnEventListRestricted",
+      "line": 5488
+    },
+    "freertos:tasks.c#vTaskPlaceOnEventListRestricted/delay": {
+      "symbol": "freertos:tasks.c#vTaskPlaceOnEventListRestricted",
+      "line": 5492
+    },
+    "freertos:queue.c#vQueueWaitForMessageRestricted/lock": {
+      "symbol": "freertos:queue.c#vQueueWaitForMessageRestricted",
+      "line": 3159
+    },
+    "freertos:queue.c#vQueueWaitForMessageRestricted/empty-check": {
+      "symbol": "freertos:queue.c#vQueueWaitForMessageRestricted",
+      "line": 3161
+    },
+    "freertos:queue.c#vQueueWaitForMessageRestricted/place": {
+      "symbol": "freertos:queue.c#vQueueWaitForMessageRestricted",
+      "line": 3164
+    },
+    "freertos:queue.c#vQueueWaitForMessageRestricted/unlock": {
+      "symbol": "freertos:queue.c#vQueueWaitForMessageRestricted",
+      "line": 3171
+    },
+    "freertos:include/timers.h#xTimerStart/call": {
+      "symbol": "freertos:include/timers.h#xTimerStart",
+      "line": 508
+    },
+    "freertos:include/timers.h#xTimerReset/call": {
+      "symbol": "freertos:include/timers.h#xTimerReset",
+      "line": 804
+    },
+    "freertos:include/timers.h#xTimerStop/call": {
+      "symbol": "freertos:include/timers.h#xTimerStop",
+      "line": 551
+    },
+    "freertos:timers.c#xTimerCreate/init": {
+      "symbol": "freertos:timers.c#xTimerCreate",
+      "line": 357
+    },
+    "freertos:timers.c#prvInitialiseNewTimer/check": {
+      "symbol": "freertos:timers.c#prvInitialiseNewTimer",
+      "line": 429
+    },
+    "freertos:timers.c#prvInitialiseNewTimer/period": {
+      "symbol": "freertos:timers.c#prvInitialiseNewTimer",
+      "line": 434
+    },
+    "freertos:timers.c#prvInitialiseNewTimer/auto-reload": {
+      "symbol": "freertos:timers.c#prvInitialiseNewTimer",
+      "line": 441
+    },
+    "freertos:timers.c#prvCheckForValidListAndQueue/lists": {
+      "symbol": "freertos:timers.c#prvCheckForValidListAndQueue",
+      "line": 1127
+    },
+    "freertos:timers.c#prvCheckForValidListAndQueue/queue": {
+      "symbol": "freertos:timers.c#prvCheckForValidListAndQueue",
+      "line": 1141
+    },
+    "freertos:timers.c#xTimerCreateTimerTask/check": {
+      "symbol": "freertos:timers.c#xTimerCreateTimerTask",
+      "line": 247
+    },
+    "freertos:timers.c#xTimerCreateTimerTask/create": {
+      "symbol": "freertos:timers.c#xTimerCreateTimerTask",
+      "line": 310
+    },
+    "freertos:timers.c#xTimerGenericCommandFromTask/message": {
+      "symbol": "freertos:timers.c#xTimerGenericCommandFromTask",
+      "line": 466
+    },
+    "freertos:timers.c#xTimerGenericCommandFromTask/running-check": {
+      "symbol": "freertos:timers.c#xTimerGenericCommandFromTask",
+      "line": 476
+    },
+    "freertos:timers.c#xTimerGenericCommandFromTask/send": {
+      "symbol": "freertos:timers.c#xTimerGenericCommandFromTask",
+      "line": 478
+    },
+    "freertos:timers.c#xTimerGenericCommandFromTask/send-no-wait": {
+      "symbol": "freertos:timers.c#xTimerGenericCommandFromTask",
+      "line": 482
+    },
+    "freertos:timers.c#xTimerGenericCommandFromTask/return": {
+      "symbol": "freertos:timers.c#xTimerGenericCommandFromTask",
+      "line": 495
+    },
+    "freertos:timers.c#prvTimerTask/next": {
+      "symbol": "freertos:timers.c#prvTimerTask",
+      "line": 768
+    },
+    "freertos:timers.c#prvTimerTask/process": {
+      "symbol": "freertos:timers.c#prvTimerTask",
+      "line": 772
+    },
+    "freertos:timers.c#prvTimerTask/commands": {
+      "symbol": "freertos:timers.c#prvTimerTask",
+      "line": 775
+    },
+    "freertos:timers.c#prvGetNextExpireTime/empty": {
+      "symbol": "freertos:timers.c#prvGetNextExpireTime",
+      "line": 853
+    },
+    "freertos:timers.c#prvGetNextExpireTime/head": {
+      "symbol": "freertos:timers.c#prvGetNextExpireTime",
+      "line": 857
+    },
+    "freertos:timers.c#prvGetNextExpireTime/zero": {
+      "symbol": "freertos:timers.c#prvGetNextExpireTime",
+      "line": 862
+    },
+    "freertos:timers.c#prvProcessTimerOrBlockTask/suspend": {
+      "symbol": "freertos:timers.c#prvProcessTimerOrBlockTask",
+      "line": 786
+    },
+    "freertos:timers.c#prvProcessTimerOrBlockTask/now": {
+      "symbol": "freertos:timers.c#prvProcessTimerOrBlockTask",
+      "line": 793
+    },
+    "freertos:timers.c#prvProcessTimerOrBlockTask/expired-check": {
+      "symbol": "freertos:timers.c#prvProcessTimerOrBlockTask",
+      "line": 798
+    },
+    "freertos:timers.c#prvProcessTimerOrBlockTask/resume-expired": {
+      "symbol": "freertos:timers.c#prvProcessTimerOrBlockTask",
+      "line": 800
+    },
+    "freertos:timers.c#prvProcessTimerOrBlockTask/process-expired": {
+      "symbol": "freertos:timers.c#prvProcessTimerOrBlockTask",
+      "line": 801
+    },
+    "freertos:timers.c#prvProcessTimerOrBlockTask/overflow-check": {
+      "symbol": "freertos:timers.c#prvProcessTimerOrBlockTask",
+      "line": 815
+    },
+    "freertos:timers.c#prvProcessTimerOrBlockTask/wait": {
+      "symbol": "freertos:timers.c#prvProcessTimerOrBlockTask",
+      "line": 818
+    },
+    "freertos:timers.c#prvProcessTimerOrBlockTask/resume": {
+      "symbol": "freertos:timers.c#prvProcessTimerOrBlockTask",
+      "line": 820
+    },
+    "freertos:timers.c#prvProcessTimerOrBlockTask/yield": {
+      "symbol": "freertos:timers.c#prvProcessTimerOrBlockTask",
+      "line": 826
+    },
+    "freertos:timers.c#prvSampleTimeNow/now": {
+      "symbol": "freertos:timers.c#prvSampleTimeNow",
+      "line": 874
+    },
+    "freertos:timers.c#prvProcessExpiredTimer/remove": {
+      "symbol": "freertos:timers.c#prvProcessExpiredTimer",
+      "line": 727
+    },
+    "freertos:timers.c#prvProcessExpiredTimer/reload-check": {
+      "symbol": "freertos:timers.c#prvProcessExpiredTimer",
+      "line": 731
+    },
+    "freertos:timers.c#prvProcessExpiredTimer/reload": {
+      "symbol": "freertos:timers.c#prvProcessExpiredTimer",
+      "line": 733
+    },
+    "freertos:timers.c#prvProcessExpiredTimer/inactive": {
+      "symbol": "freertos:timers.c#prvProcessExpiredTimer",
+      "line": 737
+    },
+    "freertos:timers.c#prvProcessExpiredTimer/callback": {
+      "symbol": "freertos:timers.c#prvProcessExpiredTimer",
+      "line": 742
+    },
+    "freertos:timers.c#prvReloadTimer/insert": {
+      "symbol": "freertos:timers.c#prvReloadTimer",
+      "line": 704
+    },
+    "freertos:timers.c#prvReloadTimer/advance": {
+      "symbol": "freertos:timers.c#prvReloadTimer",
+      "line": 707
+    },
+    "freertos:timers.c#prvReloadTimer/callback": {
+      "symbol": "freertos:timers.c#prvReloadTimer",
+      "line": 711
+    },
+    "freertos:timers.c#prvInsertTimerInActiveList/value": {
+      "symbol": "freertos:timers.c#prvInsertTimerInActiveList",
+      "line": 899
+    },
+    "freertos:timers.c#prvInsertTimerInActiveList/past-check": {
+      "symbol": "freertos:timers.c#prvInsertTimerInActiveList",
+      "line": 902
+    },
+    "freertos:timers.c#prvInsertTimerInActiveList/late-check": {
+      "symbol": "freertos:timers.c#prvInsertTimerInActiveList",
+      "line": 906
+    },
+    "freertos:timers.c#prvInsertTimerInActiveList/late": {
+      "symbol": "freertos:timers.c#prvInsertTimerInActiveList",
+      "line": 910
+    },
+    "freertos:timers.c#prvInsertTimerInActiveList/insert": {
+      "symbol": "freertos:timers.c#prvInsertTimerInActiveList",
+      "line": 928
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/receive": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 943
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/pended-check": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 949
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/call": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 958
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/timer-command": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 969
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/in-list": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 977
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/remove": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 980
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/now": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 995
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/switch": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 997
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/active": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 1004
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/insert": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 1006
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/reload-check": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 1010
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/reload": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 1012
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/inactive": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 1016
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/callback": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 1021
+    },
+    "freertos:timers.c#prvProcessReceivedCommands/stop": {
+      "symbol": "freertos:timers.c#prvProcessReceivedCommands",
+      "line": 1033
+    },
+    "freertos:include/task.h#xTaskNotifyGive/call": {
+      "symbol": "freertos:include/task.h#xTaskNotifyGive",
+      "line": 3110
+    },
+    "freertos:include/task.h#ulTaskNotifyTake/call": {
+      "symbol": "freertos:include/task.h#ulTaskNotifyTake",
+      "line": 3303
+    },
+    "freertos:include/task.h#vTaskNotifyGiveFromISR/call": {
+      "symbol": "freertos:include/task.h#vTaskNotifyGiveFromISR",
+      "line": 3197
+    },
+    "freertos:tasks.c#taskYIELD_ANY_CORE_IF_USING_PREEMPTION/check": {
+      "symbol": "freertos:tasks.c#taskYIELD_ANY_CORE_IF_USING_PREEMPTION",
+      "line": 90
+    },
+    "freertos:tasks.c#taskYIELD_ANY_CORE_IF_USING_PREEMPTION/yield": {
+      "symbol": "freertos:tasks.c#taskYIELD_ANY_CORE_IF_USING_PREEMPTION",
+      "line": 92
+    },
+    "freertos:tasks.c#xTaskGenericNotify/state": {
+      "symbol": "freertos:tasks.c#xTaskGenericNotify",
+      "line": 8038
+    },
+    "freertos:tasks.c#xTaskGenericNotify/increment": {
+      "symbol": "freertos:tasks.c#xTaskGenericNotify",
+      "line": 8047
+    },
+    "freertos:tasks.c#xTaskGenericNotify/waiting-check": {
+      "symbol": "freertos:tasks.c#xTaskGenericNotify",
+      "line": 8088
+    },
+    "freertos:tasks.c#xTaskGenericNotify/remove": {
+      "symbol": "freertos:tasks.c#xTaskGenericNotify",
+      "line": 8090
+    },
+    "freertos:tasks.c#xTaskGenericNotify/make-ready": {
+      "symbol": "freertos:tasks.c#xTaskGenericNotify",
+      "line": 8091
+    },
+    "freertos:tasks.c#xTaskGenericNotify/yield": {
+      "symbol": "freertos:tasks.c#xTaskGenericNotify",
+      "line": 8114
+    },
+    "freertos:tasks.c#ulTaskGenericNotifyTake/zero-check": {
+      "symbol": "freertos:tasks.c#ulTaskGenericNotifyTake",
+      "line": 7810
+    },
+    "freertos:tasks.c#ulTaskGenericNotifyTake/suspend": {
+      "symbol": "freertos:tasks.c#ulTaskGenericNotifyTake",
+      "line": 7814
+    },
+    "freertos:tasks.c#ulTaskGenericNotifyTake/waiting": {
+      "symbol": "freertos:tasks.c#ulTaskGenericNotifyTake",
+      "line": 7826
+    },
+    "freertos:tasks.c#ulTaskGenericNotifyTake/block": {
+      "symbol": "freertos:tasks.c#ulTaskGenericNotifyTake",
+      "line": 7844
+    },
+    "freertos:tasks.c#ulTaskGenericNotifyTake/resume": {
+      "symbol": "freertos:tasks.c#ulTaskGenericNotifyTake",
+      "line": 7851
+    },
+    "freertos:tasks.c#ulTaskGenericNotifyTake/yield": {
+      "symbol": "freertos:tasks.c#ulTaskGenericNotifyTake",
+      "line": 7856
+    },
+    "freertos:tasks.c#ulTaskGenericNotifyTake/take": {
+      "symbol": "freertos:tasks.c#ulTaskGenericNotifyTake",
+      "line": 7867
+    },
+    "freertos:tasks.c#ulTaskGenericNotifyTake/clear": {
+      "symbol": "freertos:tasks.c#ulTaskGenericNotifyTake",
+      "line": 7873
+    },
+    "freertos:tasks.c#ulTaskGenericNotifyTake/decrement": {
+      "symbol": "freertos:tasks.c#ulTaskGenericNotifyTake",
+      "line": 7877
+    },
+    "freertos:tasks.c#ulTaskGenericNotifyTake/not-waiting": {
+      "symbol": "freertos:tasks.c#ulTaskGenericNotifyTake",
+      "line": 7885
+    },
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/state": {
+      "symbol": "freertos:tasks.c#vTaskGenericNotifyGiveFromISR",
+      "line": 8354
+    },
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/increment": {
+      "symbol": "freertos:tasks.c#vTaskGenericNotifyGiveFromISR",
+      "line": 8358
+    },
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/waiting-check": {
+      "symbol": "freertos:tasks.c#vTaskGenericNotifyGiveFromISR",
+      "line": 8364
+    },
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/suspended-check": {
+      "symbol": "freertos:tasks.c#vTaskGenericNotifyGiveFromISR",
+      "line": 8369
+    },
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/remove": {
+      "symbol": "freertos:tasks.c#vTaskGenericNotifyGiveFromISR",
+      "line": 8371
+    },
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/make-ready": {
+      "symbol": "freertos:tasks.c#vTaskGenericNotifyGiveFromISR",
+      "line": 8372
+    },
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/compare": {
+      "symbol": "freertos:tasks.c#vTaskGenericNotifyGiveFromISR",
+      "line": 8399
+    },
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/woken": {
+      "symbol": "freertos:tasks.c#vTaskGenericNotifyGiveFromISR",
+      "line": 8405
+    },
+    "freertos:tasks.c#vTaskGenericNotifyGiveFromISR/yield-pending": {
+      "symbol": "freertos:tasks.c#vTaskGenericNotifyGiveFromISR",
+      "line": 8411
+    },
+    "freertos:event_groups.c#xEventGroupCreate/init": {
+      "symbol": "freertos:event_groups.c#xEventGroupCreate",
+      "line": 158
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits/suspend": {
+      "symbol": "freertos:event_groups.c#xEventGroupWaitBits",
+      "line": 336
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits/test": {
+      "symbol": "freertos:event_groups.c#xEventGroupWaitBits",
+      "line": 341
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits/met": {
+      "symbol": "freertos:event_groups.c#xEventGroupWaitBits",
+      "line": 347
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits/clear": {
+      "symbol": "freertos:event_groups.c#xEventGroupWaitBits",
+      "line": 353
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits/no-wait": {
+      "symbol": "freertos:event_groups.c#xEventGroupWaitBits",
+      "line": 365
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits/place": {
+      "symbol": "freertos:event_groups.c#xEventGroupWaitBits",
+      "line": 394
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits/resume": {
+      "symbol": "freertos:event_groups.c#xEventGroupWaitBits",
+      "line": 404
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits/yield": {
+      "symbol": "freertos:event_groups.c#xEventGroupWaitBits",
+      "line": 410
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits/reset": {
+      "symbol": "freertos:event_groups.c#xEventGroupWaitBits",
+      "line": 421
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits/timeout-check": {
+      "symbol": "freertos:event_groups.c#xEventGroupWaitBits",
+      "line": 423
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits/timeout-read": {
+      "symbol": "freertos:event_groups.c#xEventGroupWaitBits",
+      "line": 428
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits/timeout-clear": {
+      "symbol": "freertos:event_groups.c#xEventGroupWaitBits",
+      "line": 436
+    },
+    "freertos:event_groups.c#xEventGroupWaitBits/return": {
+      "symbol": "freertos:event_groups.c#xEventGroupWaitBits",
+      "line": 468
+    },
+    "freertos:event_groups.c#xEventGroupSetBits/suspend": {
+      "symbol": "freertos:event_groups.c#xEventGroupSetBits",
+      "line": 567
+    },
+    "freertos:event_groups.c#xEventGroupSetBits/set": {
+      "symbol": "freertos:event_groups.c#xEventGroupSetBits",
+      "line": 574
+    },
+    "freertos:event_groups.c#xEventGroupSetBits/walk": {
+      "symbol": "freertos:event_groups.c#xEventGroupSetBits",
+      "line": 580
+    },
+    "freertos:event_groups.c#xEventGroupSetBits/any": {
+      "symbol": "freertos:event_groups.c#xEventGroupSetBits",
+      "line": 590
+    },
+    "freertos:event_groups.c#xEventGroupSetBits/all": {
+      "symbol": "freertos:event_groups.c#xEventGroupSetBits",
+      "line": 599
+    },
+    "freertos:event_groups.c#xEventGroupSetBits/to-clear": {
+      "symbol": "freertos:event_groups.c#xEventGroupSetBits",
+      "line": 614
+    },
+    "freertos:event_groups.c#xEventGroupSetBits/remove": {
+      "symbol": "freertos:event_groups.c#xEventGroupSetBits",
+      "line": 626
+    },
+    "freertos:event_groups.c#xEventGroupSetBits/clear": {
+      "symbol": "freertos:event_groups.c#xEventGroupSetBits",
+      "line": 637
+    },
+    "freertos:event_groups.c#xEventGroupSetBits/resume": {
+      "symbol": "freertos:event_groups.c#xEventGroupSetBits",
+      "line": 642
+    },
+    "freertos:event_groups.c#xEventGroupClearBits/clear": {
+      "symbol": "freertos:event_groups.c#xEventGroupClearBits",
+      "line": 494
+    },
+    "freertos:event_groups.c#xEventGroupSetBitsFromISR/pend": {
+      "symbol": "freertos:event_groups.c#xEventGroupSetBitsFromISR",
+      "line": 826
+    },
+    "freertos:event_groups.c#vEventGroupSetBitsCallback/set": {
+      "symbol": "freertos:event_groups.c#vEventGroupSetBitsCallback",
+      "line": 756
+    },
+    "freertos:tasks.c#vTaskPlaceOnUnorderedEventList/value": {
+      "symbol": "freertos:tasks.c#vTaskPlaceOnUnorderedEventList",
+      "line": 5446
+    },
+    "freertos:tasks.c#vTaskPlaceOnUnorderedEventList/insert": {
+      "symbol": "freertos:tasks.c#vTaskPlaceOnUnorderedEventList",
+      "line": 5453
+    },
+    "freertos:tasks.c#vTaskPlaceOnUnorderedEventList/delay": {
+      "symbol": "freertos:tasks.c#vTaskPlaceOnUnorderedEventList",
+      "line": 5455
+    },
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList/value": {
+      "symbol": "freertos:tasks.c#vTaskRemoveFromUnorderedEventList",
+      "line": 5605
+    },
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList/remove-event": {
+      "symbol": "freertos:tasks.c#vTaskRemoveFromUnorderedEventList",
+      "line": 5614
+    },
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList/remove-state": {
+      "symbol": "freertos:tasks.c#vTaskRemoveFromUnorderedEventList",
+      "line": 5633
+    },
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList/make-ready": {
+      "symbol": "freertos:tasks.c#vTaskRemoveFromUnorderedEventList",
+      "line": 5634
+    },
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList/compare": {
+      "symbol": "freertos:tasks.c#vTaskRemoveFromUnorderedEventList",
+      "line": 5638
+    },
+    "freertos:tasks.c#vTaskRemoveFromUnorderedEventList/yield-pending": {
+      "symbol": "freertos:tasks.c#vTaskRemoveFromUnorderedEventList",
+      "line": 5644
+    },
+    "freertos:tasks.c#uxTaskResetEventItemValue/reset": {
+      "symbol": "freertos:tasks.c#uxTaskResetEventItemValue",
+      "line": 7762
+    },
+    "freertos:timers.c#xTimerPendFunctionCallFromISR/message": {
+      "symbol": "freertos:timers.c#xTimerPendFunctionCallFromISR",
+      "line": 1250
+    },
+    "freertos:timers.c#xTimerPendFunctionCallFromISR/send": {
+      "symbol": "freertos:timers.c#xTimerPendFunctionCallFromISR",
+      "line": 1255
+    },
     "freertos:queue.c#prvCopyDataFromQueue/read-next": {
       "symbol": "freertos:queue.c#prvCopyDataFromQueue",
       "line": 2483
@@ -2720,6 +3874,142 @@
     "zephyr:kernel/sem.c#z_impl_k_sem_give/resched": {
       "symbol": "zephyr:kernel/sem.c#z_impl_k_sem_give",
       "line": 132
+    },
+    "zephyr:kernel/timer.c#z_impl_k_timer_start/abort": {
+      "symbol": "zephyr:kernel/timer.c#z_impl_k_timer_start",
+      "line": 270
+    },
+    "zephyr:kernel/timer.c#z_impl_k_timer_start/period": {
+      "symbol": "zephyr:kernel/timer.c#z_impl_k_timer_start",
+      "line": 272
+    },
+    "zephyr:kernel/timer.c#z_impl_k_timer_start/add": {
+      "symbol": "zephyr:kernel/timer.c#z_impl_k_timer_start",
+      "line": 275
+    },
+    "zephyr:kernel/timer.c#z_impl_k_timer_stop/abort": {
+      "symbol": "zephyr:kernel/timer.c#z_impl_k_timer_stop",
+      "line": 299
+    },
+    "zephyr:kernel/timer.c#z_impl_k_timer_stop/unpend": {
+      "symbol": "zephyr:kernel/timer.c#z_impl_k_timer_stop",
+      "line": 328
+    },
+    "zephyr:kernel/timer.c#z_timer_expiration_handler/periodic-check": {
+      "symbol": "zephyr:kernel/timer.c#z_timer_expiration_handler",
+      "line": 96
+    },
+    "zephyr:kernel/timer.c#z_timer_expiration_handler/next": {
+      "symbol": "zephyr:kernel/timer.c#z_timer_expiration_handler",
+      "line": 109
+    },
+    "zephyr:kernel/timer.c#z_timer_expiration_handler/add": {
+      "symbol": "zephyr:kernel/timer.c#z_timer_expiration_handler",
+      "line": 111
+    },
+    "zephyr:kernel/timer.c#z_timer_expiration_handler/status": {
+      "symbol": "zephyr:kernel/timer.c#z_timer_expiration_handler",
+      "line": 116
+    },
+    "zephyr:kernel/timer.c#z_timer_expiration_handler/expiry": {
+      "symbol": "zephyr:kernel/timer.c#z_timer_expiration_handler",
+      "line": 129
+    },
+    "zephyr:kernel/timer.c#z_timer_expiration_handler/waiters": {
+      "symbol": "zephyr:kernel/timer.c#z_timer_expiration_handler",
+      "line": 142
+    },
+    "zephyr:kernel/events.c#z_impl_k_event_post/call": {
+      "symbol": "zephyr:kernel/events.c#z_impl_k_event_post",
+      "line": 226
+    },
+    "zephyr:kernel/events.c#z_impl_k_event_clear/call": {
+      "symbol": "zephyr:kernel/events.c#z_impl_k_event_clear",
+      "line": 270
+    },
+    "zephyr:kernel/events.c#k_event_post_internal/set": {
+      "symbol": "zephyr:kernel/events.c#k_event_post_internal",
+      "line": 192
+    },
+    "zephyr:kernel/events.c#k_event_post_internal/walk": {
+      "symbol": "zephyr:kernel/events.c#k_event_post_internal",
+      "line": 211
+    },
+    "zephyr:kernel/events.c#k_event_post_internal/stash": {
+      "symbol": "zephyr:kernel/events.c#k_event_post_internal",
+      "line": 214
+    },
+    "zephyr:kernel/events.c#k_event_post_internal/resched": {
+      "symbol": "zephyr:kernel/events.c#k_event_post_internal",
+      "line": 216
+    },
+    "zephyr:kernel/events.c#event_walk_op/match": {
+      "symbol": "zephyr:kernel/events.c#event_walk_op",
+      "line": 146
+    },
+    "zephyr:kernel/events.c#event_walk_op/store": {
+      "symbol": "zephyr:kernel/events.c#event_walk_op",
+      "line": 156
+    },
+    "zephyr:kernel/events.c#event_walk_op/consume": {
+      "symbol": "zephyr:kernel/events.c#event_walk_op",
+      "line": 158
+    },
+    "zephyr:kernel/events.c#event_walk_op/abort": {
+      "symbol": "zephyr:kernel/events.c#event_walk_op",
+      "line": 160
+    },
+    "zephyr:kernel/events.c#event_walk_op/retval": {
+      "symbol": "zephyr:kernel/events.c#event_walk_op",
+      "line": 168
+    },
+    "zephyr:kernel/events.c#event_walk_op/wake": {
+      "symbol": "zephyr:kernel/events.c#event_walk_op",
+      "line": 169
+    },
+    "zephyr:kernel/events.c#k_event_wait_internal/test": {
+      "symbol": "zephyr:kernel/events.c#k_event_wait_internal",
+      "line": 314
+    },
+    "zephyr:kernel/events.c#k_event_wait_internal/clear": {
+      "symbol": "zephyr:kernel/events.c#k_event_wait_internal",
+      "line": 318
+    },
+    "zephyr:kernel/events.c#k_event_wait_internal/no-wait": {
+      "symbol": "zephyr:kernel/events.c#k_event_wait_internal",
+      "line": 325
+    },
+    "zephyr:kernel/events.c#k_event_wait_internal/save": {
+      "symbol": "zephyr:kernel/events.c#k_event_wait_internal",
+      "line": 335
+    },
+    "zephyr:kernel/events.c#k_event_wait_internal/pend": {
+      "symbol": "zephyr:kernel/events.c#k_event_wait_internal",
+      "line": 341
+    },
+    "zephyr:kernel/events.c#k_event_wait_internal/got": {
+      "symbol": "zephyr:kernel/events.c#k_event_wait_internal",
+      "line": 343
+    },
+    "zephyr:kernel/events.c#k_event_wait_internal/return": {
+      "symbol": "zephyr:kernel/events.c#k_event_wait_internal",
+      "line": 349
+    },
+    "zephyr:kernel/events.c#z_impl_k_event_wait/call": {
+      "symbol": "zephyr:kernel/events.c#z_impl_k_event_wait",
+      "line": 360
+    },
+    "zephyr:kernel/events.c#z_impl_k_event_wait_all/call": {
+      "symbol": "zephyr:kernel/events.c#z_impl_k_event_wait_all",
+      "line": 381
+    },
+    "zephyr:kernel/events.c#z_impl_k_event_wait_safe/call": {
+      "symbol": "zephyr:kernel/events.c#z_impl_k_event_wait_safe",
+      "line": 400
+    },
+    "zephyr:kernel/events.c#z_impl_k_event_wait_all_safe/call": {
+      "symbol": "zephyr:kernel/events.c#z_impl_k_event_wait_all_safe",
+      "line": 420
     },
     "zephyr:kernel/msg_q.c#put_msg_in_queue/space-check": {
       "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
