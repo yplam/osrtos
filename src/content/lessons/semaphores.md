@@ -90,8 +90,9 @@ once, the second give is lost: FreeRTOS's `xSemaphoreGive()` returns `pdFALSE`, 
 `k_sem_give()` leaves the count at its limit. The handler then sees one event where there were two.
 
 When events can arrive faster than they are handled, or when a semaphore stands for a number of
-free resources, a counting semaphore is needed. It works the same way with a larger limit, and is
-the subject of a later lesson.
+free resources, a [counting semaphore](/learn/counting-semaphores/) is needed. It works the same
+way with a larger limit. And when each signal comes with data, a [queue](/learn/queues/) carries
+both.
 
 ## What to try
 

@@ -83,6 +83,11 @@ The walkthroughs show the code: [FreeRTOS](/learn/freertos/interrupts/) and
   cannot run until `Main` has finished at tick 14. By then the interrupts at 8 and 9 have found `S`
   already given and have been lost. Deferring work to a task only works if the task is urgent
   enough.
+- Now set **S is a** to counting semaphore and try both again. A counting semaphore remembers how
+  many interrupts are pending (up to its maximum, 4 here), so with **Yield from ISR** off `Handler`
+  handles all four interrupts, though none of them in the tick it arrived. With **Handler urgency** at 1 it handles all four
+  too, one after another once `Main` has finished.
 
-Lost events are the weakness of a binary semaphore as a signal. A counting semaphore or a queue
-keeps every event, and they are the next lessons.
+Lost events are the weakness of a binary semaphore as a signal. A
+[counting semaphore](/learn/counting-semaphores/) keeps count of them, and a [queue](/learn/queues/)
+keeps the data that comes with each one.

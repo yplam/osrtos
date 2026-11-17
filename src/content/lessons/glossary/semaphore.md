@@ -10,8 +10,9 @@ the count, or wakes a waiter.
 - A **binary semaphore** counts only to 1. It is the usual way for one task, or an interrupt
   handler, to **signal** another: the waiting task takes an empty semaphore and sleeps until someone
   gives it. The [semaphores lesson](/learn/semaphores/) shows it.
-- A **counting semaphore** counts up to a maximum, for example the free slots of a pool of
-  buffers.
+- A **[counting semaphore](/learn/glossary/counting-semaphore/)** counts up to a maximum, for
+  example the free slots of a pool of buffers. The
+  [counting semaphores lesson](/learn/counting-semaphores/) shows one.
 
 A semaphore has **no owner**. Any task may give it, not only one that took it; that is exactly what
 signalling needs. The price is that the kernel cannot help when a semaphore is used as a lock: it
