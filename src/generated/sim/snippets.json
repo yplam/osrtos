@@ -613,6 +613,55 @@
       ],
       "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L949-L1164"
     },
+    "freertos:queue.c#xQueueReceive": {
+      "rtos": "freertos",
+      "file": "queue.c",
+      "symbol": "xQueueReceive",
+      "kind": "fn",
+      "startLine": 1509,
+      "endLine": 1656,
+      "code": "BaseType_t xQueueReceive( QueueHandle_t xQueue,\n                          void * const pvBuffer,\n                          TickType_t xTicksToWait )\n{\n    BaseType_t xEntryTimeSet = pdFALSE;\n    TimeOut_t xTimeOut;\n    Queue_t * const pxQueue = xQueue;\n\n    traceENTER_xQueueReceive( xQueue, pvBuffer, xTicksToWait );\n\n    /* Check the pointer is not NULL. */\n    configASSERT( ( pxQueue ) );\n\n    /* The buffer into which data is received can only be NULL if the data size\n     * is zero (so no data is copied into the buffer). */\n    configASSERT( !( ( ( pvBuffer ) == NULL ) && ( ( pxQueue )->uxItemSize != ( UBaseType_t ) 0U ) ) );\n\n    /* Cannot block if the scheduler is suspended. */\n    #if ( ( INCLUDE_xTaskGetSchedulerState == 1 ) || ( configUSE_TIMERS == 1 ) )\n    {\n        configASSERT( !( ( xTaskGetSchedulerState() == taskSCHEDULER_SUSPENDED ) && ( xTicksToWait != 0 ) ) );\n    }\n    #endif\n\n    for( ; ; )\n    {\n        taskENTER_CRITICAL();\n        {\n            const UBaseType_t uxMessagesWaiting = pxQueue->uxMessagesWaiting;\n\n            /* Is there data in the queue now?  To be running the calling task\n             * must be the highest priority task wanting to access the queue. */\n            if( uxMessagesWaiting > ( UBaseType_t ) 0 )\n            {\n                /* Data available, remove one item. */\n                prvCopyDataFromQueue( pxQueue, pvBuffer );\n                traceQUEUE_RECEIVE( pxQueue );\n                pxQueue->uxMessagesWaiting = ( UBaseType_t ) ( uxMessagesWaiting - ( UBaseType_t ) 1 );\n\n                /* There is now space in the queue, were any tasks waiting to\n                 * post to the queue?  If so, unblock the highest priority waiting\n                 * task. */\n                if( listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToSend ) ) == pdFALSE )\n                {\n                    if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToSend ) ) != pdFALSE )\n                    {\n                        queueYIELD_IF_USING_PREEMPTION();\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n\n                taskEXIT_CRITICAL();\n\n                traceRETURN_xQueueReceive( pdPASS );\n\n                return pdPASS;\n            }\n            else\n            {\n                if( xTicksToWait == ( TickType_t ) 0 )\n                {\n                    /* The queue was empty and no block time is specified (or\n                     * the block time has expired) so leave now. */\n                    taskEXIT_CRITICAL();\n\n                    traceQUEUE_RECEIVE_FAILED( pxQueue );\n                    traceRETURN_xQueueReceive( errQUEUE_EMPTY );\n\n                    return errQUEUE_EMPTY;\n                }\n                else if( xEntryTimeSet == pdFALSE )\n                {\n                    /* The queue was empty and a block time was specified so\n                     * configure the timeout structure. */\n                    vTaskInternalSetTimeOutState( &xTimeOut );\n                    xEntryTimeSet = pdTRUE;\n                }\n                else\n                {\n                    /* Entry time was already set. */\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n        }\n        taskEXIT_CRITICAL();\n\n        /* Interrupts and other tasks can send to and receive from the queue\n         * now the critical section has been exited. */\n\n        vTaskSuspendAll();\n        prvLockQueue( pxQueue );\n\n        /* Update the timeout state to see if it has expired yet. */\n        if( xTaskCheckForTimeOut( &xTimeOut, &xTicksToWait ) == pdFALSE )\n        {\n            /* The timeout has not expired.  If the queue is still empty place\n             * the task on the list of tasks waiting to receive from the queue. */\n            if( prvIsQueueEmpty( pxQueue ) != pdFALSE )\n            {\n                traceBLOCKING_ON_QUEUE_RECEIVE( pxQueue );\n                vTaskPlaceOnEventList( &( pxQueue->xTasksWaitingToReceive ), xTicksToWait );\n                prvUnlockQueue( pxQueue );\n\n                if( xTaskResumeAll() == pdFALSE )\n                {\n                    taskYIELD_WITHIN_API();\n                }\n                else\n                {\n                    mtCOVERAGE_TEST_MARKER();\n                }\n            }\n            else\n            {\n                /* The queue contains data again.  Loop back to try and read the\n                 * data. */\n                prvUnlockQueue( pxQueue );\n                ( void ) xTaskResumeAll();\n            }\n        }\n        else\n        {\n            /* Timed out.  If there is no data in the queue exit, otherwise loop\n             * back and attempt to read the data. */\n            prvUnlockQueue( pxQueue );\n            ( void ) xTaskResumeAll();\n\n            if( prvIsQueueEmpty( pxQueue ) != pdFALSE )\n            {\n                traceQUEUE_RECEIVE_FAILED( pxQueue );\n                traceRETURN_xQueueReceive( errQUEUE_EMPTY );\n\n                return errQUEUE_EMPTY;\n            }\n            else\n            {\n                mtCOVERAGE_TEST_MARKER();\n            }\n        }\n    }\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L1509-L1656"
+    },
+    "freertos:queue.c#xQueueGenericSendFromISR": {
+      "rtos": "freertos",
+      "file": "queue.c",
+      "symbol": "xQueueGenericSendFromISR",
+      "kind": "fn",
+      "startLine": 1167,
+      "endLine": 1335,
+      "code": "BaseType_t xQueueGenericSendFromISR( QueueHandle_t xQueue,\n                                     const void * const pvItemToQueue,\n                                     BaseType_t * const pxHigherPriorityTaskWoken,\n                                     const BaseType_t xCopyPosition )\n{\n    BaseType_t xReturn;\n    UBaseType_t uxSavedInterruptStatus;\n    Queue_t * const pxQueue = xQueue;\n\n    traceENTER_xQueueGenericSendFromISR( xQueue, pvItemToQueue, pxHigherPriorityTaskWoken, xCopyPosition );\n\n    configASSERT( ( pxQueue != NULL ) && !( ( pvItemToQueue == NULL ) && ( pxQueue->uxItemSize != ( UBaseType_t ) 0U ) ) );\n    configASSERT( ( pxQueue != NULL ) && !( ( xCopyPosition == queueOVERWRITE ) && ( pxQueue->uxLength != 1 ) ) );\n\n    /* RTOS ports that support interrupt nesting have the concept of a maximum\n     * system call (or maximum API call) interrupt priority.  Interrupts that are\n     * above the maximum system call priority are kept permanently enabled, even\n     * when the RTOS kernel is in a critical section, but cannot make any calls to\n     * FreeRTOS API functions.  If configASSERT() is defined in FreeRTOSConfig.h\n     * then portASSERT_IF_INTERRUPT_PRIORITY_INVALID() will result in an assertion\n     * failure if a FreeRTOS API function is called from an interrupt that has been\n     * assigned a priority above the configured maximum system call priority.\n     * Only FreeRTOS functions that end in FromISR can be called from interrupts\n     * that have been assigned a priority at or (logically) below the maximum\n     * system call interrupt priority.  FreeRTOS maintains a separate interrupt\n     * safe API to ensure interrupt entry is as fast and as simple as possible.\n     * More information (albeit Cortex-M specific) is provided on the following\n     * link: https://www.FreeRTOS.org/RTOS-Cortex-M3-M4.html */\n    portASSERT_IF_INTERRUPT_PRIORITY_INVALID();\n\n    /* Similar to xQueueGenericSend, except without blocking if there is no room\n     * in the queue.  Also don't directly wake a task that was blocked on a queue\n     * read, instead return a flag to say whether a context switch is required or\n     * not (i.e. has a task with a higher priority than us been woken by this\n     * post). */\n    /* MISRA Ref 4.7.1 [Return value shall be checked] */\n    /* More details at: https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/main/MISRA.md#dir-47 */\n    /* coverity[misra_c_2012_directive_4_7_violation] */\n    uxSavedInterruptStatus = ( UBaseType_t ) taskENTER_CRITICAL_FROM_ISR();\n    {\n        if( ( pxQueue->uxMessagesWaiting < pxQueue->uxLength ) || ( xCopyPosition == queueOVERWRITE ) )\n        {\n            const int8_t cTxLock = pxQueue->cTxLock;\n            const UBaseType_t uxPreviousMessagesWaiting = pxQueue->uxMessagesWaiting;\n\n            traceQUEUE_SEND_FROM_ISR( pxQueue );\n\n            /* Semaphores use xQueueGiveFromISR(), so pxQueue will not be a\n             *  semaphore or mutex.  That means prvCopyDataToQueue() cannot result\n             *  in a task disinheriting a priority and prvCopyDataToQueue() can be\n             *  called here even though the disinherit function does not check if\n             *  the scheduler is suspended before accessing the ready lists. */\n            ( void ) prvCopyDataToQueue( pxQueue, pvItemToQueue, xCopyPosition );\n\n            /* The event list is not altered if the queue is locked.  This will\n             * be done when the queue is unlocked later. */\n            if( cTxLock == queueUNLOCKED )\n            {\n                #if ( configUSE_QUEUE_SETS == 1 )\n                {\n                    if( pxQueue->pxQueueSetContainer != NULL )\n                    {\n                        if( ( xCopyPosition == queueOVERWRITE ) && ( uxPreviousMessagesWaiting != ( UBaseType_t ) 0 ) )\n                        {\n                            /* Do not notify the queue set as an existing item\n                             * was overwritten in the queue so the number of items\n                             * in the queue has not changed. */\n                            mtCOVERAGE_TEST_MARKER();\n                        }\n                        else if( prvNotifyQueueSetContainer( pxQueue ) != pdFALSE )\n                        {\n                            /* The queue is a member of a queue set, and posting\n                             * to the queue set caused a higher priority task to\n                             * unblock.  A context switch is required. */\n                            if( pxHigherPriorityTaskWoken != NULL )\n                            {\n                                *pxHigherPriorityTaskWoken = pdTRUE;\n                            }\n                            else\n                            {\n                                mtCOVERAGE_TEST_MARKER();\n                            }\n                        }\n                        else\n                        {\n                            mtCOVERAGE_TEST_MARKER();\n                        }\n                    }\n                    else\n                    {\n                        if( listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToReceive ) ) == pdFALSE )\n                        {\n                            if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToReceive ) ) != pdFALSE )\n                            {\n                                /* The task waiting has a higher priority so\n                                 *  record that a context switch is required. */\n                                if( pxHigherPriorityTaskWoken != NULL )\n                                {\n                                    *pxHigherPriorityTaskWoken = pdTRUE;\n                                }\n                                else\n                                {\n                                    mtCOVERAGE_TEST_MARKER();\n                                }\n                            }\n                            else\n                            {\n                                mtCOVERAGE_TEST_MARKER();\n                            }\n                        }\n                        else\n                        {\n                            mtCOVERAGE_TEST_MARKER();\n                        }\n                    }\n                }\n                #else /* configUSE_QUEUE_SETS */\n                {\n                    if( listLIST_IS_EMPTY( &( pxQueue->xTasksWaitingToReceive ) ) == pdFALSE )\n                    {\n                        if( xTaskRemoveFromEventList( &( pxQueue->xTasksWaitingToReceive ) ) != pdFALSE )\n                        {\n                            /* The task waiting has a higher priority so record that a\n                             * context switch is required. */\n                            if( pxHigherPriorityTaskWoken != NULL )\n                            {\n                                *pxHigherPriorityTaskWoken = pdTRUE;\n                            }\n                            else\n                            {\n                                mtCOVERAGE_TEST_MARKER();\n                            }\n                        }\n                        else\n                        {\n                            mtCOVERAGE_TEST_MARKER();\n                        }\n                    }\n                    else\n                    {\n                        mtCOVERAGE_TEST_MARKER();\n                    }\n\n                    /* Not used in this path. */\n                    ( void ) uxPreviousMessagesWaiting;\n                }\n                #endif /* configUSE_QUEUE_SETS */\n            }\n            else\n            {\n                /* Increment the lock count so the task that unlocks the queue\n                 * knows that data was posted while it was locked. */\n                prvIncrementQueueTxLock( pxQueue, cTxLock );\n            }\n\n            xReturn = pdPASS;\n        }\n        else\n        {\n            traceQUEUE_SEND_FROM_ISR_FAILED( pxQueue );\n            xReturn = errQUEUE_FULL;\n        }\n    }\n    taskEXIT_CRITICAL_FROM_ISR( uxSavedInterruptStatus );\n\n    traceRETURN_xQueueGenericSendFromISR( xReturn );\n\n    return xReturn;\n}",
+      "inactive": [
+        [
+          1226,
+          1282
+        ]
+      ],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L1167-L1335"
+    },
+    "freertos:queue.c#xQueueCreateCountingSemaphore": {
+      "rtos": "freertos",
+      "file": "queue.c",
+      "symbol": "xQueueCreateCountingSemaphore",
+      "kind": "fn",
+      "startLine": 912,
+      "endLine": 944,
+      "code": "QueueHandle_t xQueueCreateCountingSemaphore( const UBaseType_t uxMaxCount,\n                                             const UBaseType_t uxInitialCount )\n{\n    QueueHandle_t xHandle = NULL;\n\n    traceENTER_xQueueCreateCountingSemaphore( uxMaxCount, uxInitialCount );\n\n    if( ( uxMaxCount != 0U ) &&\n        ( uxInitialCount <= uxMaxCount ) )\n    {\n        xHandle = xQueueGenericCreate( uxMaxCount, queueSEMAPHORE_QUEUE_ITEM_LENGTH, queueQUEUE_TYPE_COUNTING_SEMAPHORE );\n\n        if( xHandle != NULL )\n        {\n            ( ( Queue_t * ) xHandle )->uxMessagesWaiting = uxInitialCount;\n\n            traceCREATE_COUNTING_SEMAPHORE();\n        }\n        else\n        {\n            traceCREATE_COUNTING_SEMAPHORE_FAILED();\n        }\n    }\n    else\n    {\n        configASSERT( xHandle );\n        mtCOVERAGE_TEST_MARKER();\n    }\n\n    traceRETURN_xQueueCreateCountingSemaphore( xHandle );\n\n    return xHandle;\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L912-L944"
+    },
+    "freertos:queue.c#prvCopyDataFromQueue": {
+      "rtos": "freertos",
+      "file": "queue.c",
+      "symbol": "prvCopyDataFromQueue",
+      "kind": "fn",
+      "startLine": 2478,
+      "endLine": 2496,
+      "code": "static void prvCopyDataFromQueue( Queue_t * const pxQueue,\n                                  void * const pvBuffer )\n{\n    if( pxQueue->uxItemSize != ( UBaseType_t ) 0 )\n    {\n        pxQueue->u.xQueue.pcReadFrom += pxQueue->uxItemSize;\n\n        if( pxQueue->u.xQueue.pcReadFrom >= pxQueue->u.xQueue.pcTail )\n        {\n            pxQueue->u.xQueue.pcReadFrom = pxQueue->pcHead;\n        }\n        else\n        {\n            mtCOVERAGE_TEST_MARKER();\n        }\n\n        ( void ) memcpy( ( void * ) pvBuffer, ( void * ) pxQueue->u.xQueue.pcReadFrom, ( size_t ) pxQueue->uxItemSize );\n    }\n}",
+      "inactive": [],
+      "url": "https://github.com/FreeRTOS/FreeRTOS-Kernel/blob/V11.3.3/queue.c#L2478-L2496"
+    },
     "freertos:queue.c#prvCopyDataToQueue": {
       "rtos": "freertos",
       "file": "queue.c",
@@ -1288,6 +1337,39 @@
       "code": "void z_impl_k_sem_give(struct k_sem *sem)\n{\n\tstruct k_spinlock *lock = sem_spinlock_get(sem);\n\tk_spinlock_key_t key = k_spin_lock(lock);\n\tbool resched;\n\n\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_sem, give, sem);\n\n\tif (z_sched_wake(&sem->wait_q, 0, NULL)) {\n\t\tresched = true;\n\t} else {\n\t\tsem->count += (sem->count != sem->limit) ? 1U : 0U;\n\t\tresched = sem_handle_poll_events(sem);\n\t}\n\n\tif (unlikely(resched)) {\n\t\tz_reschedule(lock, key);\n\t} else {\n\t\tk_spin_unlock(lock, key);\n\t}\n\n\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_sem, give, sem);\n}",
       "inactive": [],
       "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/sem.c#L116-L138"
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue": {
+      "rtos": "zephyr",
+      "file": "kernel/msg_q.c",
+      "symbol": "put_msg_in_queue",
+      "kind": "inline",
+      "startLine": 152,
+      "endLine": 272,
+      "code": "static inline int put_msg_in_queue(struct k_msgq *msgq, const void *data,\n\t\t\tk_timeout_t timeout, bool put_at_back)\n{\n\t__ASSERT(!arch_is_in_isr() || K_TIMEOUT_EQ(timeout, K_NO_WAIT), \"\");\n\n\tstruct k_thread *pending_thread = NULL;\n\tk_spinlock_key_t key;\n\tint result;\n\tbool resched = false;\n\n\tkey = k_spin_lock(&msgq->lock);\n\n\tif (put_at_back) {\n\t\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_msgq, put, msgq, timeout);\n\t} else {\n\t\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_msgq, put_front, msgq, timeout);\n\t}\n\n\tif (msgq->used_msgs < msgq->max_msgs) {\n\t\t/* message queue isn't full. Try to hand the message\n\t\t * directly to the longest-waiting receiver, atomically\n\t\t * under the scheduler's spinlock so a racing in-flight timeout\n\t\t * handler cannot wake the receiver before the message\n\t\t * has been copied into its buffer.\n\t\t */\n\t\tLOCK_SCHED_SPINLOCK {\n\t\t\tpending_thread = z_unpend_first_thread_locked(&msgq->wait_q);\n\t\t\tif (pending_thread != NULL) {\n\t\t\t\t/* copy into the receiver's buffer */\n\t\t\t\t(void)memcpy(pending_thread->base.swap_data, data,\n\t\t\t\t\t     msgq->msg_size);\n\t\t\t\tarch_thread_return_value_set(pending_thread, 0);\n\t\t\t\tz_sched_ready_locked(pending_thread);\n\t\t\t\tresched = true;\n\t\t\t}\n\t\t}\n\t\tif (pending_thread == NULL) {\n\t\t\tsize_t msg_size = msgq->msg_size;\n\t\t\tchar *slot;\n\n\t\t\t__ASSERT_NO_MSG((msgq->write_ptr >= msgq->buffer_start) &&\n\t\t\t\t\t(msgq->write_ptr <= (msgq->buffer_end - 1)) &&\n\t\t\t\t\t((size_t)(uintptr_t)(msgq->buffer_end - msgq->write_ptr) >=\n\t\t\t\t\t\tmsgq->msg_size));\n\t\t\t/*\n\t\t\t * Pick the slot and update the ring state from\n\t\t\t * registers first: the compiler cannot tell that the\n\t\t\t * copy leaves the queue fields alone, so copying last\n\t\t\t * saves it re-reading them afterwards.\n\t\t\t */\n\t\t\tif (put_at_back) {\n\t\t\t\t/*\n\t\t\t\t * to write a message to the back of the queue,\n\t\t\t\t * take the slot write_ptr points at and\n\t\t\t\t * advance write_ptr past it\n\t\t\t\t */\n\t\t\t\tchar *next;\n\n\t\t\t\tslot = msgq->write_ptr;\n\t\t\t\tnext = slot + msg_size;\n\t\t\t\tif (next == msgq->buffer_end) {\n\t\t\t\t\tnext = msgq->buffer_start;\n\t\t\t\t}\n\t\t\t\tmsgq->write_ptr = next;\n\t\t\t} else {\n\t\t\t\t/*\n\t\t\t\t * to write a message to the head of the queue,\n\t\t\t\t * first decrement the read pointer (to open\n\t\t\t\t * space at the front of the queue) then copy\n\t\t\t\t * the message to the newly created space.\n\t\t\t\t */\n\t\t\t\tslot = msgq->read_ptr;\n\t\t\t\tif (slot == msgq->buffer_start) {\n\t\t\t\t\tslot = msgq->buffer_end;\n\t\t\t\t}\n\t\t\t\tslot -= msg_size;\n\t\t\t\tmsgq->read_ptr = slot;\n\t\t\t}\n\t\t\tmsgq->used_msgs++;\n\t\t\t(void)memcpy(slot, data, msg_size);\n\t\t\tresched = msgq_handle_poll_events(msgq);\n\t\t}\n\t\tresult = 0;\n\t} else if (K_TIMEOUT_EQ(timeout, K_NO_WAIT)) {\n\t\t/* don't wait for message space to become available */\n\t\tresult = -ENOMSG;\n\t} else {\n\t\tif (put_at_back) {\n\t\t\tSYS_PORT_TRACING_OBJ_FUNC_BLOCKING(k_msgq, put, msgq, timeout);\n\t\t} else {\n\t\t\tSYS_PORT_TRACING_OBJ_FUNC_BLOCKING(k_msgq, put_front, msgq, timeout);\n\t\t}\n\n\t\t/* wait for put message success, failure, or timeout */\n\t\t_current->base.swap_data = (void *) data;\n\n\t\tresult = z_pend_curr(&msgq->lock, key, &msgq->wait_q, timeout);\n\n\t\tif (put_at_back) {\n\t\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_msgq, put, msgq, timeout, result);\n\t\t} else {\n\t\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_msgq, put_front, msgq, timeout, result);\n\t\t}\n\n\t\treturn result;\n\t}\n\n\tif (put_at_back) {\n\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_msgq, put, msgq, timeout, result);\n\t} else {\n\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_msgq, put_front, msgq, timeout, result);\n\t}\n\n\tif (resched) {\n\t\tz_reschedule(&msgq->lock, key);\n\t} else {\n\t\tk_spin_unlock(&msgq->lock, key);\n\t}\n\n\treturn result;\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/msg_q.c#L152-L272"
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_put": {
+      "rtos": "zephyr",
+      "file": "kernel/msg_q.c",
+      "symbol": "z_impl_k_msgq_put",
+      "kind": "fn",
+      "startLine": 275,
+      "endLine": 278,
+      "code": "int z_impl_k_msgq_put(struct k_msgq *msgq, const void *data, k_timeout_t timeout)\n{\n\treturn put_msg_in_queue(msgq, data, timeout, true);\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/msg_q.c#L275-L278"
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get": {
+      "rtos": "zephyr",
+      "file": "kernel/msg_q.c",
+      "symbol": "z_impl_k_msgq_get",
+      "kind": "fn",
+      "startLine": 324,
+      "endLine": 407,
+      "code": "int z_impl_k_msgq_get(struct k_msgq *msgq, void *data, k_timeout_t timeout)\n{\n\t__ASSERT(!arch_is_in_isr() || K_TIMEOUT_EQ(timeout, K_NO_WAIT), \"\");\n\n\tk_spinlock_key_t key;\n\tstruct k_thread *pending_thread;\n\tint result;\n\tbool resched = false;\n\n\tkey = k_spin_lock(&msgq->lock);\n\n\tSYS_PORT_TRACING_OBJ_FUNC_ENTER(k_msgq, get, msgq, timeout);\n\n\tif (likely(msgq->used_msgs > 0U)) {\n\t\tsize_t msg_size = msgq->msg_size;\n\t\tchar *slot = msgq->read_ptr;\n\t\tchar *next = slot + msg_size;\n\n\t\t/* drop the message from the queue, then copy it out */\n\t\tif (next == msgq->buffer_end) {\n\t\t\tnext = msgq->buffer_start;\n\t\t}\n\t\tmsgq->read_ptr = next;\n\t\tmsgq->used_msgs--;\n\n\t\t(void)memcpy(data, slot, msg_size);\n\n\t\t/* sanity-check write_ptr in case we hand the slot to a sender */\n\t\t__ASSERT_NO_MSG((msgq->write_ptr >= msgq->buffer_start) &&\n\t\t\t\t(msgq->write_ptr <= (msgq->buffer_end - 1)) &&\n\t\t\t\t((size_t)(uintptr_t)(msgq->buffer_end - msgq->write_ptr) >=\n\t\t\t\t\tmsgq->msg_size));\n\n\t\t/* handle first thread waiting to write (if any). Done\n\t\t * atomically under the scheduler's spinlock so we read the\n\t\t * sender's swap_data and complete the wake before any\n\t\t * racing in-flight timeout handler can wake the sender.\n\t\t */\n\t\tLOCK_SCHED_SPINLOCK {\n\t\t\tpending_thread = z_unpend_first_thread_locked(&msgq->wait_q);\n\t\t\tif (pending_thread != NULL) {\n\t\t\t\tSYS_PORT_TRACING_OBJ_FUNC_BLOCKING(k_msgq, get, msgq, timeout);\n\n\t\t\t\t/* add the sender's pending message to the queue */\n\t\t\t\tslot = msgq->write_ptr;\n\t\t\t\tnext = slot + msg_size;\n\t\t\t\tif (next == msgq->buffer_end) {\n\t\t\t\t\tnext = msgq->buffer_start;\n\t\t\t\t}\n\t\t\t\tmsgq->write_ptr = next;\n\t\t\t\tmsgq->used_msgs++;\n\n\t\t\t\t(void)memcpy(slot, pending_thread->base.swap_data, msg_size);\n\n\t\t\t\tarch_thread_return_value_set(pending_thread, 0);\n\t\t\t\tz_sched_ready_locked(pending_thread);\n\t\t\t\tresched = true;\n\t\t\t}\n\t\t}\n\t\tresult = 0;\n\t} else if (K_TIMEOUT_EQ(timeout, K_NO_WAIT)) {\n\t\t/* don't wait for a message to become available */\n\t\tresult = -ENOMSG;\n\t} else {\n\t\tSYS_PORT_TRACING_OBJ_FUNC_BLOCKING(k_msgq, get, msgq, timeout);\n\n\t\t/* wait for get message success or timeout */\n\t\t_current->base.swap_data = data;\n\n\t\tresult = z_pend_curr(&msgq->lock, key, &msgq->wait_q, timeout);\n\t\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_msgq, get, msgq, timeout, result);\n\t\treturn result;\n\t}\n\n\tSYS_PORT_TRACING_OBJ_FUNC_EXIT(k_msgq, get, msgq, timeout, result);\n\n\tif (resched) {\n\t\tz_reschedule(&msgq->lock, key);\n\t} else {\n\t\tk_spin_unlock(&msgq->lock, key);\n\t}\n\n\treturn result;\n}",
+      "inactive": [],
+      "url": "https://github.com/zephyrproject-rtos/zephyr/blob/v4.5.0/kernel/msg_q.c#L324-L407"
     },
     "zephyr:kernel/thread.c#z_impl_k_thread_priority_set": {
       "rtos": "zephyr",
@@ -2011,9 +2093,205 @@
       "symbol": "freertos:queue.c#xQueueGenericSend",
       "line": 1081
     },
+    "freertos:queue.c#xQueueGenericSend/no-wait": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1085
+    },
     "freertos:queue.c#xQueueGenericSend/return-full": {
       "symbol": "freertos:queue.c#xQueueGenericSend",
       "line": 1096
+    },
+    "freertos:queue.c#xQueueGenericSend/set-timeout": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1102
+    },
+    "freertos:queue.c#xQueueGenericSend/suspend": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1117
+    },
+    "freertos:queue.c#xQueueGenericSend/lock": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1118
+    },
+    "freertos:queue.c#xQueueGenericSend/check-timeout": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1121
+    },
+    "freertos:queue.c#xQueueGenericSend/full-check": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1123
+    },
+    "freertos:queue.c#xQueueGenericSend/place": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1126
+    },
+    "freertos:queue.c#xQueueGenericSend/unlock": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1133
+    },
+    "freertos:queue.c#xQueueGenericSend/resume": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1140
+    },
+    "freertos:queue.c#xQueueGenericSend/yield": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1142
+    },
+    "freertos:queue.c#xQueueGenericSend/unlock-timeout": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1155
+    },
+    "freertos:queue.c#xQueueGenericSend/timed-out": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1156
+    },
+    "freertos:queue.c#xQueueGenericSend/return-timeout": {
+      "symbol": "freertos:queue.c#xQueueGenericSend",
+      "line": 1161
+    },
+    "freertos:queue.c#xQueueReceive/count-check": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1541
+    },
+    "freertos:queue.c#xQueueReceive/copy": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1544
+    },
+    "freertos:queue.c#xQueueReceive/take": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1546
+    },
+    "freertos:queue.c#xQueueReceive/senders-check": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1551
+    },
+    "freertos:queue.c#xQueueReceive/remove-sender": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1553
+    },
+    "freertos:queue.c#xQueueReceive/yield-sender": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1555
+    },
+    "freertos:queue.c#xQueueReceive/return-pass": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1571
+    },
+    "freertos:queue.c#xQueueReceive/no-wait": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1575
+    },
+    "freertos:queue.c#xQueueReceive/return-empty": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1584
+    },
+    "freertos:queue.c#xQueueReceive/set-timeout": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1590
+    },
+    "freertos:queue.c#xQueueReceive/suspend": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1605
+    },
+    "freertos:queue.c#xQueueReceive/lock": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1606
+    },
+    "freertos:queue.c#xQueueReceive/check-timeout": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1609
+    },
+    "freertos:queue.c#xQueueReceive/empty-check": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1613
+    },
+    "freertos:queue.c#xQueueReceive/place": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1616
+    },
+    "freertos:queue.c#xQueueReceive/unlock": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1617
+    },
+    "freertos:queue.c#xQueueReceive/resume": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1619
+    },
+    "freertos:queue.c#xQueueReceive/yield": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1621
+    },
+    "freertos:queue.c#xQueueReceive/unlock-timeout": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1640
+    },
+    "freertos:queue.c#xQueueReceive/timed-out": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1641
+    },
+    "freertos:queue.c#xQueueReceive/still-empty": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1643
+    },
+    "freertos:queue.c#xQueueReceive/return-timeout": {
+      "symbol": "freertos:queue.c#xQueueReceive",
+      "line": 1648
+    },
+    "freertos:queue.c#xQueueGenericSendFromISR/enter": {
+      "symbol": "freertos:queue.c#xQueueGenericSendFromISR",
+      "line": 1205
+    },
+    "freertos:queue.c#xQueueGenericSendFromISR/space-check": {
+      "symbol": "freertos:queue.c#xQueueGenericSendFromISR",
+      "line": 1207
+    },
+    "freertos:queue.c#xQueueGenericSendFromISR/copy": {
+      "symbol": "freertos:queue.c#xQueueGenericSendFromISR",
+      "line": 1219
+    },
+    "freertos:queue.c#xQueueGenericSendFromISR/lock-check": {
+      "symbol": "freertos:queue.c#xQueueGenericSendFromISR",
+      "line": 1223
+    },
+    "freertos:queue.c#xQueueGenericSendFromISR/waiters-check": {
+      "symbol": "freertos:queue.c#xQueueGenericSendFromISR",
+      "line": 1285
+    },
+    "freertos:queue.c#xQueueGenericSendFromISR/remove-waiter": {
+      "symbol": "freertos:queue.c#xQueueGenericSendFromISR",
+      "line": 1287
+    },
+    "freertos:queue.c#xQueueGenericSendFromISR/woken": {
+      "symbol": "freertos:queue.c#xQueueGenericSendFromISR",
+      "line": 1293
+    },
+    "freertos:queue.c#xQueueGenericSendFromISR/return-pass": {
+      "symbol": "freertos:queue.c#xQueueGenericSendFromISR",
+      "line": 1322
+    },
+    "freertos:queue.c#xQueueGenericSendFromISR/return-full": {
+      "symbol": "freertos:queue.c#xQueueGenericSendFromISR",
+      "line": 1327
+    },
+    "freertos:queue.c#xQueueCreateCountingSemaphore/create": {
+      "symbol": "freertos:queue.c#xQueueCreateCountingSemaphore",
+      "line": 922
+    },
+    "freertos:queue.c#xQueueCreateCountingSemaphore/initial": {
+      "symbol": "freertos:queue.c#xQueueCreateCountingSemaphore",
+      "line": 926
+    },
+    "freertos:queue.c#prvCopyDataFromQueue/read-next": {
+      "symbol": "freertos:queue.c#prvCopyDataFromQueue",
+      "line": 2483
+    },
+    "freertos:queue.c#prvCopyDataFromQueue/read-wrap": {
+      "symbol": "freertos:queue.c#prvCopyDataFromQueue",
+      "line": 2487
+    },
+    "freertos:queue.c#prvCopyDataFromQueue/copy": {
+      "symbol": "freertos:queue.c#prvCopyDataFromQueue",
+      "line": 2494
     },
     "freertos:queue.c#prvCopyDataToQueue/disinherit": {
       "symbol": "freertos:queue.c#prvCopyDataToQueue",
@@ -2022,6 +2300,18 @@
     "freertos:queue.c#prvCopyDataToQueue/holder": {
       "symbol": "freertos:queue.c#prvCopyDataToQueue",
       "line": 2414
+    },
+    "freertos:queue.c#prvCopyDataToQueue/copy": {
+      "symbol": "freertos:queue.c#prvCopyDataToQueue",
+      "line": 2425
+    },
+    "freertos:queue.c#prvCopyDataToQueue/write-next": {
+      "symbol": "freertos:queue.c#prvCopyDataToQueue",
+      "line": 2426
+    },
+    "freertos:queue.c#prvCopyDataToQueue/write-wrap": {
+      "symbol": "freertos:queue.c#prvCopyDataToQueue",
+      "line": 2430
     },
     "freertos:queue.c#prvCopyDataToQueue/count": {
       "symbol": "freertos:queue.c#prvCopyDataToQueue",
@@ -2430,6 +2720,142 @@
     "zephyr:kernel/sem.c#z_impl_k_sem_give/resched": {
       "symbol": "zephyr:kernel/sem.c#z_impl_k_sem_give",
       "line": 132
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/space-check": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 170
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/unpend": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 178
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/receiver-check": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 179
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/copy-receiver": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 181
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/retval": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 183
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/ready": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 184
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/slot": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 210
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/write-wrap": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 213
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/write-next": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 215
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/used": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 230
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/copy": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 231
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/nomsg": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 237
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/pend": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 248
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/return": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 256
+    },
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/resched": {
+      "symbol": "zephyr:kernel/msg_q.c#put_msg_in_queue",
+      "line": 266
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_put/put": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_put",
+      "line": 277
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/used-check": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 337
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/read-next": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 346
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/read-wrap": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 344
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/used": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 347
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/copy": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 349
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/unpend": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 363
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/sender-check": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 364
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/slot": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 368
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/write-wrap": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 371
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/write-next": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 373
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/used-sender": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 374
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/copy-sender": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 376
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/retval": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 378
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/ready": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 379
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/nomsg": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 386
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/pend": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 393
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/return": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 395
+    },
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/resched": {
+      "symbol": "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
+      "line": 401
     },
     "zephyr:kernel/thread.c#z_impl_k_thread_priority_set/set": {
       "symbol": "zephyr:kernel/thread.c#z_impl_k_thread_priority_set",

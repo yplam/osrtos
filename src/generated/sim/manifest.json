@@ -1,7 +1,7 @@
 {
   "simulator": {
     "version": "0.0.0",
-    "commit": "8c97120e1d124de4e14c8d3c94e2ece81bb95aa1",
+    "commit": "24834d37a35a0de50efaf7c2c3d4f8c975a9eb36",
     "dirty": false
   },
   "kernels": {
@@ -23,11 +23,11 @@
     }
   },
   "bundle": {
-    "js": "rtos-sim.9581358d21.js",
-    "css": "rtos-sim.f89e770b3f.css",
+    "js": "rtos-sim.28a53a35a0.js",
+    "css": "rtos-sim.f8a0cf8111.css",
     "code": {
-      "freertos": "code.freertos.59c45b5d4d.json",
-      "zephyr": "code.zephyr.490b9e9a72.json"
+      "freertos": "code.freertos.97aa4fdb21.json",
+      "zephyr": "code.zephyr.317365b9c1.json"
     }
   },
   "scenarios": {
@@ -214,6 +214,61 @@
         "tasks[Producer].start"
       ]
     },
+    "counting-semaphore": {
+      "title": "A counting semaphore as a pool",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos",
+        "zephyr"
+      ],
+      "tweakable": [
+        "objects[Pool].max",
+        "tasks[A].urgency",
+        "tasks[B].urgency",
+        "tasks[C].urgency",
+        "tasks[A].start",
+        "tasks[B].start",
+        "tasks[C].start"
+      ]
+    },
+    "producer-consumer": {
+      "title": "Producer and consumer",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos",
+        "zephyr"
+      ],
+      "tweakable": [
+        "objects[Q].length",
+        "tasks[Producer].urgency",
+        "tasks[Consumer].urgency"
+      ]
+    },
+    "queue-handoff": {
+      "title": "Queue handoff",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "simulated": [
+        "freertos",
+        "zephyr"
+      ],
+      "tweakable": [
+        "tasks[Early].urgency",
+        "tasks[Late].urgency",
+        "tasks[Sender].urgency",
+        "tasks[Early].start",
+        "tasks[Late].start",
+        "tasks[Sender].start"
+      ]
+    },
     "deferred-interrupt": {
       "title": "Deferred interrupt handling",
       "rtos": [
@@ -226,6 +281,7 @@
       ],
       "tweakable": [
         "config.yieldFromIsr",
+        "objects[S].kind",
         "tasks[Handler].urgency",
         "tasks[Main].urgency"
       ]
@@ -333,6 +389,21 @@
         "#sim:event=TaskEnd:2"
       ]
     },
+    "counting-semaphores": {
+      "scenario": "counting-semaphore",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Block",
+        "nth": 3
+      },
+      "links": [
+        "#sim:event=Block:3",
+        "#sim:event=Give:1"
+      ]
+    },
     "deadlock": {
       "scenario": "deadlock",
       "rtos": [
@@ -413,6 +484,19 @@
         "event": "PrioChange",
         "nth": 1
       }
+    },
+    "freertos/queues": {
+      "scenario": "producer-consumer",
+      "rtos": [
+        "freertos"
+      ],
+      "keyStep": {
+        "event": "Block",
+        "nth": 1
+      },
+      "links": [
+        "#sim:tick=4"
+      ]
     },
     "freertos/tick-and-delay": {
       "scenario": "blocking-idle",
@@ -556,6 +640,34 @@
         "nth": 3
       }
     },
+    "queue-handoff": {
+      "scenario": "queue-handoff",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Send",
+        "nth": 1
+      },
+      "links": [
+        "#sim:event=Send:1"
+      ]
+    },
+    "queues": {
+      "scenario": "producer-consumer",
+      "rtos": [
+        "freertos",
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Block",
+        "nth": 1
+      },
+      "links": [
+        "#sim:event=Block:1"
+      ]
+    },
     "scheduling": {
       "scenario": "blocking-idle",
       "rtos": [
@@ -649,6 +761,19 @@
         "#sim:event=Interrupt:1"
       ]
     },
+    "zephyr/message-queues": {
+      "scenario": "producer-consumer",
+      "rtos": [
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Receive",
+        "nth": 1
+      },
+      "links": [
+        "#sim:tick=4"
+      ]
+    },
     "zephyr/periodic-sleep": {
       "scenario": "periodic-tasks",
       "rtos": [
@@ -703,6 +828,8 @@
     "Take",
     "Give",
     "Timeout",
+    "Send",
+    "Receive",
     "Deadlock",
     "Interrupt",
     "DeadlineMiss"
@@ -745,6 +872,10 @@
     "freertos:queue.c#xQueueSemaphoreTake",
     "freertos:queue.c#xQueueGiveFromISR",
     "freertos:queue.c#xQueueGenericSend",
+    "freertos:queue.c#xQueueReceive",
+    "freertos:queue.c#xQueueGenericSendFromISR",
+    "freertos:queue.c#xQueueCreateCountingSemaphore",
+    "freertos:queue.c#prvCopyDataFromQueue",
     "freertos:queue.c#prvCopyDataToQueue",
     "zephyr:kernel/init.c#z_init_static_threads",
     "zephyr:kernel/init.c#bg_thread_main",
@@ -792,6 +923,9 @@
     "zephyr:kernel/sched.c#z_thread_prio_set",
     "zephyr:kernel/sem.c#z_impl_k_sem_take",
     "zephyr:kernel/sem.c#z_impl_k_sem_give",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_put",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get",
     "zephyr:kernel/thread.c#z_impl_k_thread_priority_set",
     "zephyr:kernel/thread.c#z_impl_k_thread_suspend",
     "zephyr:kernel/sched.c#z_thread_suspend_current",
@@ -967,9 +1101,61 @@
     "freertos:queue.c#xQueueGenericSend/yield-waiter",
     "freertos:queue.c#xQueueGenericSend/yield-disinherit",
     "freertos:queue.c#xQueueGenericSend/return-pass",
+    "freertos:queue.c#xQueueGenericSend/no-wait",
     "freertos:queue.c#xQueueGenericSend/return-full",
+    "freertos:queue.c#xQueueGenericSend/set-timeout",
+    "freertos:queue.c#xQueueGenericSend/suspend",
+    "freertos:queue.c#xQueueGenericSend/lock",
+    "freertos:queue.c#xQueueGenericSend/check-timeout",
+    "freertos:queue.c#xQueueGenericSend/full-check",
+    "freertos:queue.c#xQueueGenericSend/place",
+    "freertos:queue.c#xQueueGenericSend/unlock",
+    "freertos:queue.c#xQueueGenericSend/resume",
+    "freertos:queue.c#xQueueGenericSend/yield",
+    "freertos:queue.c#xQueueGenericSend/unlock-timeout",
+    "freertos:queue.c#xQueueGenericSend/timed-out",
+    "freertos:queue.c#xQueueGenericSend/return-timeout",
+    "freertos:queue.c#xQueueReceive/count-check",
+    "freertos:queue.c#xQueueReceive/copy",
+    "freertos:queue.c#xQueueReceive/take",
+    "freertos:queue.c#xQueueReceive/senders-check",
+    "freertos:queue.c#xQueueReceive/remove-sender",
+    "freertos:queue.c#xQueueReceive/yield-sender",
+    "freertos:queue.c#xQueueReceive/return-pass",
+    "freertos:queue.c#xQueueReceive/no-wait",
+    "freertos:queue.c#xQueueReceive/return-empty",
+    "freertos:queue.c#xQueueReceive/set-timeout",
+    "freertos:queue.c#xQueueReceive/suspend",
+    "freertos:queue.c#xQueueReceive/lock",
+    "freertos:queue.c#xQueueReceive/check-timeout",
+    "freertos:queue.c#xQueueReceive/empty-check",
+    "freertos:queue.c#xQueueReceive/place",
+    "freertos:queue.c#xQueueReceive/unlock",
+    "freertos:queue.c#xQueueReceive/resume",
+    "freertos:queue.c#xQueueReceive/yield",
+    "freertos:queue.c#xQueueReceive/unlock-timeout",
+    "freertos:queue.c#xQueueReceive/timed-out",
+    "freertos:queue.c#xQueueReceive/still-empty",
+    "freertos:queue.c#xQueueReceive/return-timeout",
+    "freertos:queue.c#xQueueGenericSendFromISR/enter",
+    "freertos:queue.c#xQueueGenericSendFromISR/space-check",
+    "freertos:queue.c#xQueueGenericSendFromISR/copy",
+    "freertos:queue.c#xQueueGenericSendFromISR/lock-check",
+    "freertos:queue.c#xQueueGenericSendFromISR/waiters-check",
+    "freertos:queue.c#xQueueGenericSendFromISR/remove-waiter",
+    "freertos:queue.c#xQueueGenericSendFromISR/woken",
+    "freertos:queue.c#xQueueGenericSendFromISR/return-pass",
+    "freertos:queue.c#xQueueGenericSendFromISR/return-full",
+    "freertos:queue.c#xQueueCreateCountingSemaphore/create",
+    "freertos:queue.c#xQueueCreateCountingSemaphore/initial",
+    "freertos:queue.c#prvCopyDataFromQueue/read-next",
+    "freertos:queue.c#prvCopyDataFromQueue/read-wrap",
+    "freertos:queue.c#prvCopyDataFromQueue/copy",
     "freertos:queue.c#prvCopyDataToQueue/disinherit",
     "freertos:queue.c#prvCopyDataToQueue/holder",
+    "freertos:queue.c#prvCopyDataToQueue/copy",
+    "freertos:queue.c#prvCopyDataToQueue/write-next",
+    "freertos:queue.c#prvCopyDataToQueue/write-wrap",
     "freertos:queue.c#prvCopyDataToQueue/count",
     "zephyr:kernel/init.c#z_init_static_threads/setup",
     "zephyr:kernel/init.c#z_init_static_threads/lock",
@@ -1072,6 +1258,40 @@
     "zephyr:kernel/sem.c#z_impl_k_sem_give/wake",
     "zephyr:kernel/sem.c#z_impl_k_sem_give/count",
     "zephyr:kernel/sem.c#z_impl_k_sem_give/resched",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/space-check",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/unpend",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/receiver-check",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/copy-receiver",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/retval",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/ready",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/slot",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/write-wrap",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/write-next",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/used",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/copy",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/nomsg",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/pend",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/return",
+    "zephyr:kernel/msg_q.c#put_msg_in_queue/resched",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_put/put",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/used-check",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/read-next",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/read-wrap",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/used",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/copy",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/unpend",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/sender-check",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/slot",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/write-wrap",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/write-next",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/used-sender",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/copy-sender",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/retval",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/ready",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/nomsg",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/pend",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/return",
+    "zephyr:kernel/msg_q.c#z_impl_k_msgq_get/resched",
     "zephyr:kernel/thread.c#z_impl_k_thread_priority_set/set",
     "zephyr:kernel/thread.c#z_impl_k_thread_priority_set/resched",
     "zephyr:kernel/thread.c#z_impl_k_thread_suspend/already",
