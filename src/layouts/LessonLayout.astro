@@ -109,7 +109,7 @@ const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
       <SimEmbed scenario={scenario} rtos={rtos} lesson={lesson} params={params}/>
       <p class="text-sm text-gray-500 dark:text-gray-400 -mt-4 mb-8">
         Simulated kernel: {rtos.map(id => `${kernels[id].name} ${kernels[id].version}`).join(' and ')}.{' '}
-        <a href="/learn/licenses/" class="text-indigo-600 dark:text-indigo-400">Source and licenses</a>
+        <a href="/learn/licenses/" class="text-indigo-600 dark:text-indigo-400 underline">Source and licenses</a>
       </p>
     )}
 
@@ -120,12 +120,12 @@ const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
     <footer class="mt-12 text-sm text-gray-600 dark:text-gray-400">
       {kernelId && (
         <p class="m-0 mb-2">
-          More about {section}: <a href={`/rtos/${kernelId}/`} class="text-indigo-600 dark:text-indigo-400">its features, licence, supported platforms and the projects built on it</a>.
+          More about {section}: <a href={`/rtos/${kernelId}/`} class="text-indigo-600 dark:text-indigo-400 underline">its features, licence, supported platforms and the projects built on it</a>.
         </p>
       )}
       <p class="m-0">
         Found a mistake, or is something unclear?{' '}
-        <a href={feedback} rel="noopener" class="text-indigo-600 dark:text-indigo-400">Tell us in a GitHub issue</a>.
+        <a href={feedback} rel="noopener" class="text-indigo-600 dark:text-indigo-400 underline">Tell us in a GitHub issue</a>.
       </p>
     </footer>
 
