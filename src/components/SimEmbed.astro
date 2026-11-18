@@ -54,7 +54,7 @@ const svg = lesson ? `lesson/${lesson}.${first}.svg` : `scenario/${scenario}.${f
      (tablet) and side by side (from 1024px), measured with the tallest preset
      scenario on each kernel. */
   .sim-embed {
-    min-height: 1280px;
+    min-height: 1300px;
     margin: 2rem 0;
     /* Below the site's sticky header when a step link scrolls to it. */
     scroll-margin-top: 5rem;
@@ -67,13 +67,13 @@ const svg = lesson ? `lesson/${lesson}.${first}.svg` : `scenario/${scenario}.${f
   /* The smallest phones: the parameters and controls wrap onto more rows. */
   @media (max-width: 359.98px) {
     .sim-embed:not(.sim-embed-placeholder) {
-      min-height: 1350px;
+      min-height: 1380px;
     }
   }
 
   @media (min-width: 640px) {
     .sim-embed {
-      min-height: 1760px;
+      min-height: 1780px;
     }
 
     .sim-embed-placeholder {

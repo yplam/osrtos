@@ -1,7 +1,7 @@
 {
   "simulator": {
     "version": "0.0.0",
-    "commit": "0e061fc9277909131c37196610e6a8543f3892e0",
+    "commit": "58abe61f8ccb99ab0c2be070f6bbfab113245378",
     "dirty": false
   },
   "kernels": {
@@ -23,8 +23,8 @@
     }
   },
   "bundle": {
-    "js": "rtos-sim.e2abfd5a21.js",
-    "css": "rtos-sim.9122f8fa18.css",
+    "js": "rtos-sim.5b4a088495.js",
+    "css": "rtos-sim.d833be4347.css",
     "code": {
       "freertos": "code.freertos.3580e5ad0a.json",
       "zephyr": "code.zephyr.008b25f86c.json"
