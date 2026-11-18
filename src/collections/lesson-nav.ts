@@ -46,3 +46,22 @@ export function neighbours<T extends LessonLike>(lessons: T[], id: string): {pre
   const at = track.indexOf(here);
   return {prev: track[at - 1], next: track[at + 1]};
 }
+
+/** Kernels with a section of walkthroughs under /learn/ and a page of their own under /rtos/ (the ids are the same). */
+export const KERNEL_SECTIONS = ['freertos', 'zephyr'];
+
+interface SimManifest {
+  simulator: {commit: string};
+  kernels: Record<string, {name: string; version: string}>;
+}
+
+/**
+ * A new GitHub issue about a page under /learn/, with the page and the
+ * simulator version filled in (the fields of .github/ISSUE_TEMPLATE/lesson-feedback.yml).
+ */
+export function feedbackUrl(page: string, title: string, manifest: SimManifest): string {
+  const kernels = Object.values(manifest.kernels).map(k => `${k.name} ${k.version}`).join(', ');
+  const simulator = `${manifest.simulator.commit.slice(0, 7)} (${kernels})`;
+  const query = new URLSearchParams({template: 'lesson-feedback.yml', title: `[Learn] ${title}: `, page, simulator});
+  return `https://github.com/yplam/osrtos/issues/new?${query}`;
+}

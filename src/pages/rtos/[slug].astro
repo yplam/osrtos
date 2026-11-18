@@ -3,6 +3,7 @@ import {getCollection, render} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import MetadataDisplay from '../../components/MetadataDisplay.astro';
 import ProjectsList from '../../components/ProjectsList.astro';
+import {KERNEL_SECTIONS, sectionOf, sortLessons} from '../../collections/lesson-nav';
 import '../../styles/prose.css';
 
 export async function getStaticPaths() {
@@ -24,6 +25,11 @@ const relatedProjects = allProjects
     return b.data.createdAt.valueOf() - a.data.createdAt.valueOf();
   });
 const displayedProjects = relatedProjects.slice(0, 8); // Show first 9 projects
+
+// The walkthroughs of this kernel's source under /learn/ (for the kernels the simulator models).
+const walkthroughs = KERNEL_SECTIONS.includes(entry.data.slug)
+  ? sortLessons((await getCollection('lessons')).filter(l => sectionOf(l.id).id === entry.data.slug))
+  : [];
 ---
 
 <Layout title={`${entry.data.title} - Open Source RTOS`} description={entry.data.summary}>
@@ -68,6 +74,35 @@ const displayedProjects = relatedProjects.slice(0, 8); // Show first 9 projects
         />
       </aside>
     </div>
+
+    {walkthroughs.length > 0 && (
+       <section id="learn" class="mt-16 pt-12 border-t-2 border-gray-200 dark:border-gray-700 scroll-mt-24">
+         <div class="flex items-center justify-between mb-2">
+           <h2 class="text-3xl font-bold m-0 text-gray-800 dark:text-gray-100">
+             Learn how {entry.data.title} works
+           </h2>
+           <a href={`/learn/#${entry.data.slug}`}
+              class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 no-underline font-semibold text-base transition-colors">
+             All Lessons →
+           </a>
+         </div>
+         <p class="text-gray-600 dark:text-gray-400 m-0 mb-6">
+           Step through the {entry.data.title} kernel line by line in an interactive simulator, next to its source code.
+           New to real-time kernels? <a href="/learn/" class="text-primary-600 dark:text-primary-400">Start with the basics</a>.
+         </p>
+         <ul class="list-none p-0 m-0 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+           {walkthroughs.map(lesson => (
+             <li>
+               <a href={`/learn/${lesson.id}/`}
+                  class="block h-full rounded-lg border border-gray-200 dark:border-gray-700 p-4 no-underline hover:border-primary-500 transition-colors">
+                 <span class="block font-semibold text-primary-600 dark:text-primary-400">{lesson.data.title}</span>
+                 <span class="block mt-1 text-sm text-gray-600 dark:text-gray-400">{lesson.data.description}</span>
+               </a>
+             </li>
+           ))}
+         </ul>
+       </section>
+    )}
 
     {relatedProjects.length > 0 && (
        <section class="mt-16 pt-12 border-t-2 border-gray-200 dark:border-gray-700">

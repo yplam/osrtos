@@ -6,6 +6,7 @@
 import Layout from './Layout.astro';
 import SimEmbed from '../components/SimEmbed.astro';
 import manifest from '../generated/sim/manifest.json';
+import {KERNEL_SECTIONS, feedbackUrl} from '../collections/lesson-nav';
 import '../styles/prose.css';
 
 interface Link {
@@ -39,6 +40,10 @@ const image = lesson && scenario && scenarios[scenario]?.simulated.includes(rtos
   : undefined;
 
 const url = new URL(Astro.url.pathname, Astro.site).href;
+
+// A walkthrough links back to its kernel's page in the RTOS directory.
+const kernelId = KERNEL_SECTIONS.find(id => section && kernels[id]?.name === section);
+const feedback = feedbackUrl(url, title, manifest);
 const abs = (path: string) => new URL(path, Astro.site).href;
 const publisher = {'@type': 'Organization', name: 'OSRTOS', url: abs('/')};
 const jsonLd = [
@@ -112,8 +117,20 @@ const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
       <slot/>
     </div>
 
+    <footer class="mt-12 text-sm text-gray-600 dark:text-gray-400">
+      {kernelId && (
+        <p class="m-0 mb-2">
+          More about {section}: <a href={`/rtos/${kernelId}/`} class="text-indigo-600 dark:text-indigo-400">its features, licence, supported platforms and the projects built on it</a>.
+        </p>
+      )}
+      <p class="m-0">
+        Found a mistake, or is something unclear?{' '}
+        <a href={feedback} rel="noopener" class="text-indigo-600 dark:text-indigo-400">Tell us in a GitHub issue</a>.
+      </p>
+    </footer>
+
     {(prev || next) && (
-      <nav aria-label="Lessons" class="mt-12 pt-6 border-t border-gray-200 dark:border-gray-700 grid gap-4 sm:grid-cols-2">
+      <nav aria-label="Lessons" class="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700 grid gap-4 sm:grid-cols-2">
         {prev
           ? <a href={prev.href} class="block rounded-lg border border-gray-200 dark:border-gray-700 p-4 no-underline hover:border-indigo-500">
               <span class="block text-sm text-gray-500 dark:text-gray-400">← Previous</span>

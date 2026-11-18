@@ -1,0 +1,46 @@
+name: Lesson or simulator feedback
+description: Report a mistake or something unclear in a lesson under /learn/, or a problem with the RTOS simulator
+title: "[Learn] "
+labels: ["learn", "feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping to improve the lessons. The feedback link on a lesson page fills in the first two fields.
+
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address of the lesson or page
+      placeholder: https://osrtos.com/learn/priority-inheritance/
+    validations:
+      required: true
+
+  - type: input
+    id: simulator
+    attributes:
+      label: Simulator version
+      description: Filled in by the feedback link; leave it empty if you do not know it
+    validations:
+      required: false
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is it about?
+      options:
+        - The text is wrong or unclear
+        - The simulator shows something a real kernel does not do
+        - The simulator does not work or looks broken
+        - A suggestion
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What you read or saw, and what you expected. For the simulator, the "Copy link" button gives a link to the exact step; for a display problem, name your browser.
+    validations:
+      required: true

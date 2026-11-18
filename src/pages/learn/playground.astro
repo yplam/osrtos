@@ -5,6 +5,7 @@
 import Layout from '../../layouts/Layout.astro';
 import SimEmbed from '../../components/SimEmbed.astro';
 import manifest from '../../generated/sim/manifest.json';
+import {feedbackUrl} from '../../collections/lesson-nav';
 
 const scenarios = Object.entries(manifest.scenarios)
   .map(([id, s]) => ({id, title: s.title, rtos: s.rtos, simulated: s.simulated}))
@@ -15,6 +16,7 @@ const order = (s: (typeof scenarios)[number]) =>
   [...s.rtos].sort((a, b) => Number(s.simulated.includes(b)) - Number(s.simulated.includes(a)));
 const first = scenarios[0];
 const kernels: Record<string, {name: string; version: string}> = manifest.kernels;
+const feedback = feedbackUrl(new URL('/learn/playground/', Astro.site).href, 'Scheduler playground', manifest);
 ---
 
 <Layout
@@ -46,7 +48,9 @@ const kernels: Record<string, {name: string; version: string}> = manifest.kernel
 
   <p class="text-sm text-gray-500 dark:text-gray-400">
     The simulator runs a line-by-line model of the kernel, checked against the real kernel.{' '}
-    <a href="/learn/licenses/" class="text-indigo-600 dark:text-indigo-400">Source and licenses</a>
+    <a href="/learn/licenses/" class="text-indigo-600 dark:text-indigo-400">Source and licenses</a>.{' '}
+    Does it show something a real kernel does not do?{' '}
+    <a href={feedback} rel="noopener" class="text-indigo-600 dark:text-indigo-400">Tell us in a GitHub issue</a>.
   </p>
 </Layout>
 
