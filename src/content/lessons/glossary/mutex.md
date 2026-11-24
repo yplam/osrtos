@@ -4,7 +4,8 @@ description: A lock with an owner, used to give one task at a time access to a s
 ---
 
 A **mutex** (mutual exclusion) is a lock that one task at a time can hold. A task takes it before it
-touches a shared resource and gives it back afterwards; others wait meanwhile in the
+touches a shared resource and gives it back afterwards, so no other task can change the resource
+halfway (a [race condition](/learn/glossary/race-condition/)); others wait meanwhile in the
 mutex's [wait queue](/learn/glossary/wait-queue/).
 
 What sets a mutex apart from a binary [semaphore](/learn/glossary/semaphore/) is that it has an

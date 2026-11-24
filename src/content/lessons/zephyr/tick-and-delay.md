@@ -69,8 +69,10 @@ made right after a tick, so on Zephyr the sleep lasts exactly five periods.
 
 The exception is a timeout added *while* the tick is being processed. Then "now" is exactly on a
 tick edge and nothing is added. You will see both cases in the simulator's notes on the
-`round-up` line: a slice timer set up inside the tick fires one tick later, one set up from a thread
-fires two ticks later.
+`round-up` line: `Sensor`'s slice, set up while the tick wakes it at 6, gets no extra tick; a slice
+set up from a thread gets one. A slice that `z_time_slice()` starts again after the timeouts have
+run gets the extra tick too, but `slice_reset()` asks for one tick less to cancel it, so it also
+lasts exactly one tick.
 
 ## The timeout list stores differences
 

@@ -1,7 +1,7 @@
 ---
 title: Interrupts in FreeRTOS
 description: How xSemaphoreGiveFromISR wakes a task without switching, how portYIELD_FROM_ISR asks for the switch, and what xYieldPending does when the handler does not ask.
-order: 6
+order: 7
 scenario: deferred-interrupt
 rtos: freertos
 keyStep: { event: Interrupt, nth: 1 }
@@ -83,7 +83,8 @@ time-slice). There is still only one switch: PendSV runs once, after every inter
 
 Turn **Yield from ISR** off and step through tick 3 again. Everything up to the end of
 `xQueueGiveFromISR()` is the same: `Handler` is ready and `xYieldPending` is `pdTRUE` in the
-variables. But the ISR returns without setting PendSV, and `Main` carries on.
+variables (the panel's name for `xYieldPendings[ 0 ]`). But the ISR returns without setting PendSV,
+and `Main` carries on.
 
 The pending flag is not forgotten. Two places act on it:
 

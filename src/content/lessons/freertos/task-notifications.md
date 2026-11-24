@@ -1,7 +1,7 @@
 ---
 title: Task notifications in FreeRTOS
 description: How a task notification signals a task directly, without a semaphore, how the count tells the task how many signals it got, and what Zephyr offers instead.
-order: 11
+order: 13
 scenario: task-notification
 rtos: freertos
 keyStep: { event: NotifyTake, nth: 2 }
@@ -48,9 +48,10 @@ waiting tasks the way a semaphore can.
 5. Tick 9: `Handler` waits again, and `Main` runs. At tick 11 `Main` notifies `Handler` with
    `xTaskNotifyGive()`; `Handler` is more urgent and preempts it straight away.
 
-Compare the [deferred interrupt lesson](/learn/interrupts/), where a binary semaphore given twice
-before the handler took it simply stayed given: the second interrupt was lost. A notification
-taken with `pdTRUE` behaves like a binary semaphore that still says how many gives it missed.
+Compare the [deferred interrupt lesson](/learn/interrupts/) with **Yield from ISR** off, where a
+binary semaphore given twice before the handler took it simply stayed given: the second interrupt
+was lost. A notification taken with `pdTRUE` behaves like a binary semaphore that still says how
+many gives it missed.
 With `pdFALSE` it is a counting semaphore: `Handler` would wake once per notification, and take
 them one at a time.
 
@@ -64,7 +65,7 @@ its delayed or suspended list to its ready list:
 ```
 
 The wait is just as short. There is no object to lock and no waiting list to join: the task marks
-itself as waiting and goes into a delayed list.
+itself as waiting and goes into a delayed list, or with no timeout into `xSuspendedTaskList`.
 
 ```kernel freertos:tasks.c#ulTaskGenericNotifyTake
 ```

@@ -30,8 +30,8 @@ vCompute( 1 );              /* runs either way */
 ```
 
 On Zephyr, `k_mutex_lock(&M, K_TICKS(3))` returns 0 on success and `-EAGAIN` when it times out, and
-the program has the same shape. The simulator's App tab shows the code for the kernel you have
-chosen. A task that gives up skips to the line after the `if` block, so it never gives back a mutex
+the program has the same shape. The simulator's **Application** tab shows the code for the kernel
+you have chosen. A task that gives up skips to the line after the `if` block, so it never gives back a mutex
 it does not hold.
 
 The other two tasks: `Low` takes `M` at tick 0 and needs it for seven ticks of work. `Med` wakes at
@@ -91,8 +91,9 @@ its own priority.
 ## A timeout is not a deadline
 
 The timeout bounds how long `High` waits; it does not guarantee that `High` runs when it expires. The
-expired task is made ready like any other, and runs when it is the most urgent. Here it is, because
-`High` is the most urgent task. Turn time slicing off (below) to see a case where it is not.
+expired task is made ready like any other, and runs when it is the most urgent. Here it runs at once,
+but only because time slicing lets it in: `Low` still runs at the priority it borrowed from `High`,
+so the two are equal. Turn time slicing off (below) to see it wait.
 
 ## What to try
 

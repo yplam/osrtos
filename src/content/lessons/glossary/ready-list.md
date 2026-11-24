@@ -3,7 +3,7 @@ title: Ready list
 description: The kernel structure that holds the tasks able to run, organised so the most urgent one is found quickly.
 ---
 
-The **ready list** (or run queue) holds every task that could run right now. The scheduler's job is
+The **ready list** (or [run queue](/learn/glossary/run-queue/)) holds every task that could run right now. The scheduler's job is
 to pick the most urgent one from it, so it is organised to make that fast.
 
 **FreeRTOS** uses an array of lists, `pxReadyTasksLists[ configMAX_PRIORITIES ]`, one list per

@@ -1,7 +1,7 @@
 {
   "simulator": {
     "version": "0.0.0",
-    "commit": "f78fa2e6d4eba9652f6117ac764a0a8ef174ca22",
+    "commit": "f4605208417d253004acb651b56e43f51ac5b87b",
     "dirty": false
   },
   "kernels": {
@@ -23,8 +23,8 @@
     }
   },
   "bundle": {
-    "js": "rtos-sim.e0ef69f26a.js",
-    "css": "rtos-sim.0f04ebb8da.css",
+    "js": "rtos-sim.b45fa1fa83.js",
+    "css": "rtos-sim.1d9f6d2ea1.css",
     "code": {
       "freertos": "code.freertos.3580e5ad0a.json",
       "zephyr": "code.zephyr.008b25f86c.json"
@@ -33,6 +33,7 @@
   "scenarios": {
     "task-states": {
       "title": "Task states",
+      "summary": "One task goes through every state: it runs, is preempted, is suspended and resumed, sleeps, waits for a signal and ends, mostly because of a more urgent task.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -49,6 +50,7 @@
     },
     "preemption": {
       "title": "Preemption",
+      "summary": "A high-priority task wakes from a delay and takes the CPU from a low-priority task at once. Turn preemption off and it waits until the low-priority task gives up the CPU.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -66,6 +68,7 @@
     },
     "time-slicing": {
       "title": "Time slicing",
+      "summary": "Three tasks of equal priority share the CPU, one tick each, as the tick interrupt rotates them in the ready list.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -84,6 +87,7 @@
     },
     "blocking-idle": {
       "title": "Blocking and the idle task",
+      "summary": "Every task blocks in a delay, so the idle task runs. The delayed list is sorted by wake-up tick, and the tick interrupt makes each task ready again.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -101,6 +105,7 @@
     },
     "priority-inversion": {
       "title": "Priority inversion (binary semaphore)",
+      "summary": "A low-priority task holds a binary semaphore that a high-priority task needs, and a medium-priority task runs ahead of both: priority inversion.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -121,6 +126,7 @@
     },
     "priority-inversion-mutex": {
       "title": "Priority inheritance (mutex)",
+      "summary": "The same tasks with a mutex: the holder inherits the priority of the task waiting for it, so the medium-priority task can no longer get in the way.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -142,6 +148,7 @@
     },
     "nested-mutexes": {
       "title": "Nested mutexes",
+      "summary": "A task holds two mutexes and inherits a priority through one of them, then gives that one back. FreeRTOS keeps the inherited priority until the task holds no mutex at all.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -162,6 +169,7 @@
     },
     "mutex-timeout": {
       "title": "Mutex with a timeout",
+      "summary": "A high-priority task waits for a mutex for at most 3 ticks. When it gives up, the priority the holder inherited from it has to be undone.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -182,6 +190,7 @@
     },
     "mutex-handoff": {
       "title": "Mutex handoff",
+      "summary": "A mutex is given back while two tasks wait for it. FreeRTOS lets the running task take it again; Zephyr hands it straight to the most urgent waiter.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -199,6 +208,7 @@
     },
     "signal-semaphore": {
       "title": "A semaphore as a signal",
+      "summary": "A binary semaphore used as a signal: each give wakes a more urgent handler task, which preempts the task that gave it. Nobody owns the semaphore, so nothing is inherited.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -216,6 +226,7 @@
     },
     "counting-semaphore": {
       "title": "A counting semaphore as a pool",
+      "summary": "A counting semaphore as a pool of two buffers shared by three tasks. The most urgent one waits for a free buffer, and no priority is inherited.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -236,6 +247,7 @@
     },
     "producer-consumer": {
       "title": "Producer and consumer",
+      "summary": "A message queue between a fast producer and a slow consumer. The queue fills up, and from then on the producer blocks until there is room.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -252,6 +264,7 @@
     },
     "queue-handoff": {
       "title": "Queue handoff",
+      "summary": "An item is sent to a queue that a task waits on. FreeRTOS lets a more urgent receiver take it first; Zephyr copies it straight to the task that was waiting.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -271,6 +284,7 @@
     },
     "deferred-interrupt": {
       "title": "Deferred interrupt handling",
+      "summary": "An interrupt handler only gives a semaphore, and a task does the work. FreeRTOS can leave out portYIELD_FROM_ISR(): the task then runs late, and an interrupt is lost.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -288,6 +302,7 @@
     },
     "periodic-tasks": {
       "title": "Periodic tasks and deadlines",
+      "summary": "Two periodic tasks, one with delayUntil and one with delay: the first keeps its period, the second drifts, and a burst of work makes a job miss its deadline.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -306,6 +321,7 @@
     },
     "software-timers": {
       "title": "Software timers",
+      "summary": "An auto-reload software timer whose callback signals a task. FreeRTOS runs the callback in its timer service task; Zephyr runs it in the tick interrupt.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -323,6 +339,7 @@
     },
     "event-group": {
       "title": "Event group",
+      "summary": "Tasks wait on an event group, one for all of two bits and one for any of two, set from an interrupt and from a task. One bit wakes both waiters at once.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -341,6 +358,7 @@
     },
     "task-notification": {
       "title": "Task notification",
+      "summary": "A FreeRTOS task notification used as a lighter semaphore: an interrupt and a task count up the handler task's own notification value, with no kernel object.",
       "rtos": [
         "freertos"
       ],
@@ -355,6 +373,7 @@
     },
     "deadlock": {
       "title": "Deadlock (ABBA)",
+      "summary": "Two tasks take the same two mutexes in opposite order (ABBA) and wait for each other forever. The kernel does not notice; the wait-for graph shows the cycle.",
       "rtos": [
         "freertos",
         "zephyr"
@@ -372,6 +391,7 @@
     },
     "cooperative-threads": {
       "title": "Cooperative threads",
+      "summary": "A Zephyr cooperative thread is never preempted: a more urgent thread that wakes while it runs has to wait until it sleeps.",
       "rtos": [
         "zephyr"
       ],
@@ -389,6 +409,7 @@
     },
     "tick-overflow": {
       "title": "Tick count overflow",
+      "summary": "The 32-bit FreeRTOS tick count wraps to 0. One wake-up time falls after the wrap and goes into the overflow delayed list, and the two lists swap at the wrap.",
       "rtos": [
         "freertos"
       ],
@@ -403,6 +424,7 @@
   },
   "lessons": {
     "basics/superloop-vs-rtos": {
+      "title": "Main loop vs RTOS",
       "scenario": "preemption",
       "rtos": [
         "freertos",
@@ -419,6 +441,7 @@
       ]
     },
     "basics/task-states": {
+      "title": "Task states",
       "scenario": "task-states",
       "rtos": [
         "freertos",
@@ -439,6 +462,7 @@
       ]
     },
     "counting-semaphores": {
+      "title": "Counting semaphores",
       "scenario": "counting-semaphore",
       "rtos": [
         "freertos",
@@ -454,6 +478,7 @@
       ]
     },
     "deadlock": {
+      "title": "Deadlock",
       "scenario": "deadlock",
       "rtos": [
         "freertos",
@@ -465,6 +490,7 @@
       }
     },
     "event-groups": {
+      "title": "Event groups",
       "scenario": "event-group",
       "rtos": [
         "freertos",
@@ -482,6 +508,7 @@
       ]
     },
     "freertos/choosing-the-next-task": {
+      "title": "How FreeRTOS chooses the next task",
       "scenario": "time-slicing",
       "rtos": [
         "freertos"
@@ -498,6 +525,7 @@
       ]
     },
     "freertos/context-switch": {
+      "title": "The context switch in FreeRTOS",
       "scenario": "preemption",
       "rtos": [
         "freertos"
@@ -514,6 +542,7 @@
       ]
     },
     "freertos/delay-until": {
+      "title": "xTaskDelayUntil in FreeRTOS",
       "scenario": "periodic-tasks",
       "rtos": [
         "freertos"
@@ -528,6 +557,7 @@
       ]
     },
     "freertos/event-groups": {
+      "title": "Event groups in FreeRTOS",
       "scenario": "event-group",
       "rtos": [
         "freertos"
@@ -542,6 +572,7 @@
       ]
     },
     "freertos/interrupts": {
+      "title": "Interrupts in FreeRTOS",
       "scenario": "deferred-interrupt",
       "rtos": [
         "freertos"
@@ -556,6 +587,7 @@
       ]
     },
     "freertos/priority-inheritance": {
+      "title": "Priority inheritance in FreeRTOS",
       "scenario": "priority-inversion-mutex",
       "rtos": [
         "freertos"
@@ -566,6 +598,7 @@
       }
     },
     "freertos/queues": {
+      "title": "Queues in FreeRTOS",
       "scenario": "producer-consumer",
       "rtos": [
         "freertos"
@@ -578,7 +611,25 @@
         "#sim:tick=4"
       ]
     },
+    "freertos/semaphores": {
+      "title": "Semaphores in FreeRTOS",
+      "scenario": "counting-semaphore",
+      "rtos": [
+        "freertos"
+      ],
+      "keyStep": {
+        "event": "Block",
+        "nth": 3
+      },
+      "links": [
+        "#sim:event=Take:1",
+        "#sim:event=Block:3",
+        "#sim:event=Give:1",
+        "#sim:event=Take:3"
+      ]
+    },
     "freertos/software-timers": {
+      "title": "Software timers in FreeRTOS",
       "scenario": "software-timers",
       "rtos": [
         "freertos"
@@ -592,7 +643,25 @@
         "#sim:event=TimerStop:1"
       ]
     },
+    "freertos/task-lifecycle": {
+      "title": "Suspending, resuming and ending a task in FreeRTOS",
+      "scenario": "task-states",
+      "rtos": [
+        "freertos"
+      ],
+      "keyStep": {
+        "event": "Suspend",
+        "nth": 1
+      },
+      "links": [
+        "#sim:event=Suspend:1",
+        "#sim:event=Resume:1",
+        "#sim:event=TaskEnd:1",
+        "#sim:event=ContextSwitch:10"
+      ]
+    },
     "freertos/task-notifications": {
+      "title": "Task notifications in FreeRTOS",
       "scenario": "task-notification",
       "rtos": [
         "freertos"
@@ -606,6 +675,7 @@
       ]
     },
     "freertos/tick-and-delay": {
+      "title": "The tick and vTaskDelay in FreeRTOS",
       "scenario": "blocking-idle",
       "rtos": [
         "freertos"
@@ -623,6 +693,7 @@
       ]
     },
     "freertos/tick-overflow": {
+      "title": "Tick count overflow in FreeRTOS",
       "scenario": "tick-overflow",
       "rtos": [
         "freertos"
@@ -639,6 +710,7 @@
       ]
     },
     "interrupts": {
+      "title": "Interrupts and deferred handling",
       "scenario": "deferred-interrupt",
       "rtos": [
         "freertos",
@@ -656,6 +728,7 @@
       ]
     },
     "mutex-handoff": {
+      "title": "Mutex handoff: who gets a mutex when it is unlocked",
       "scenario": "mutex-handoff",
       "rtos": [
         "freertos",
@@ -667,6 +740,7 @@
       }
     },
     "mutex-timeout": {
+      "title": "Waiting for a mutex with a timeout",
       "scenario": "mutex-timeout",
       "rtos": [
         "freertos",
@@ -683,6 +757,7 @@
       ]
     },
     "nested-mutexes": {
+      "title": "Nested mutexes and when an inherited priority drops",
       "scenario": "nested-mutexes",
       "rtos": [
         "freertos",
@@ -700,6 +775,7 @@
       ]
     },
     "periodic-tasks": {
+      "title": "Periodic tasks and deadlines",
       "scenario": "periodic-tasks",
       "rtos": [
         "freertos",
@@ -715,17 +791,19 @@
       ]
     },
     "preemption": {
+      "title": "Preemption",
       "scenario": "preemption",
       "rtos": [
         "freertos",
         "zephyr"
       ],
       "keyStep": {
-        "event": "Unblock",
-        "nth": 1
+        "event": "ContextSwitch",
+        "nth": 3
       }
     },
     "priority-inheritance": {
+      "title": "Priority inheritance",
       "scenario": "priority-inversion-mutex",
       "rtos": [
         "freertos",
@@ -737,6 +815,7 @@
       }
     },
     "priority-inversion": {
+      "title": "Priority inversion",
       "scenario": "priority-inversion",
       "rtos": [
         "freertos",
@@ -748,6 +827,7 @@
       }
     },
     "queue-handoff": {
+      "title": "Queue handoff: who gets an item sent to a waiting task",
       "scenario": "queue-handoff",
       "rtos": [
         "freertos",
@@ -762,6 +842,7 @@
       ]
     },
     "queues": {
+      "title": "Queues between tasks",
       "scenario": "producer-consumer",
       "rtos": [
         "freertos",
@@ -776,6 +857,7 @@
       ]
     },
     "scheduling": {
+      "title": "How an RTOS scheduler decides what runs",
       "scenario": "blocking-idle",
       "rtos": [
         "freertos",
@@ -787,6 +869,7 @@
       }
     },
     "semaphores": {
+      "title": "Semaphores as signals",
       "scenario": "signal-semaphore",
       "rtos": [
         "freertos",
@@ -802,6 +885,7 @@
       ]
     },
     "software-timers": {
+      "title": "Software timers",
       "scenario": "software-timers",
       "rtos": [
         "freertos",
@@ -818,6 +902,7 @@
       ]
     },
     "time-slicing": {
+      "title": "Time slicing",
       "scenario": "time-slicing",
       "rtos": [
         "freertos",
@@ -825,6 +910,7 @@
       ]
     },
     "zephyr/choosing-the-next-task": {
+      "title": "How Zephyr chooses the next thread",
       "scenario": "time-slicing",
       "rtos": [
         "zephyr"
@@ -841,6 +927,7 @@
       ]
     },
     "zephyr/context-switch": {
+      "title": "The context switch in Zephyr",
       "scenario": "preemption",
       "rtos": [
         "zephyr"
@@ -857,6 +944,7 @@
       ]
     },
     "zephyr/cooperative-threads": {
+      "title": "Cooperative threads in Zephyr",
       "scenario": "cooperative-threads",
       "rtos": [
         "zephyr"
@@ -872,6 +960,7 @@
       ]
     },
     "zephyr/events": {
+      "title": "Events in Zephyr",
       "scenario": "event-group",
       "rtos": [
         "zephyr"
@@ -886,6 +975,7 @@
       ]
     },
     "zephyr/interrupts": {
+      "title": "Interrupts in Zephyr",
       "scenario": "deferred-interrupt",
       "rtos": [
         "zephyr"
@@ -899,6 +989,7 @@
       ]
     },
     "zephyr/message-queues": {
+      "title": "Message queues in Zephyr",
       "scenario": "producer-consumer",
       "rtos": [
         "zephyr"
@@ -912,6 +1003,7 @@
       ]
     },
     "zephyr/periodic-sleep": {
+      "title": "Periodic sleep in Zephyr",
       "scenario": "periodic-tasks",
       "rtos": [
         "zephyr"
@@ -926,6 +1018,7 @@
       ]
     },
     "zephyr/priority-inheritance": {
+      "title": "Priority inheritance in Zephyr",
       "scenario": "priority-inversion-mutex",
       "rtos": [
         "zephyr"
@@ -935,7 +1028,40 @@
         "nth": 1
       }
     },
+    "zephyr/semaphores": {
+      "title": "Semaphores in Zephyr",
+      "scenario": "counting-semaphore",
+      "rtos": [
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Block",
+        "nth": 3
+      },
+      "links": [
+        "#sim:event=Block:3",
+        "#sim:event=Give:1"
+      ]
+    },
+    "zephyr/thread-lifecycle": {
+      "title": "Suspending, resuming and ending a thread in Zephyr",
+      "scenario": "task-states",
+      "rtos": [
+        "zephyr"
+      ],
+      "keyStep": {
+        "event": "Suspend",
+        "nth": 1
+      },
+      "links": [
+        "#sim:event=Suspend:1",
+        "#sim:event=Resume:1",
+        "#sim:event=TaskEnd:1",
+        "#sim:event=TaskEnd:2"
+      ]
+    },
     "zephyr/tick-and-delay": {
+      "title": "The tick and k_sleep in Zephyr",
       "scenario": "blocking-idle",
       "rtos": [
         "zephyr"
@@ -953,6 +1079,7 @@
       ]
     },
     "zephyr/timers": {
+      "title": "Timers in Zephyr",
       "scenario": "software-timers",
       "rtos": [
         "zephyr"

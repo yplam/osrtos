@@ -57,8 +57,10 @@ Higher priorities still preempt. Time slicing only concerns equals.
 ## What it costs
 
 Every slice boundary is a context switch, which takes time and disturbs the CPU caches. With slicing
-on, three tasks that each need four ticks all finish late: on FreeRTOS, at ticks 10, 11 and 12.
-Without it they finish at 4, 8 and 12. The total is the same, but the average is worse with
+on, three tasks that each need four ticks all finish late: on Zephyr, at ticks 10, 11 and 12. On
+FreeRTOS their work also ends at 10, 11 and 12, but a task whose work ends exactly on a tick edge is
+sliced out before it can return, so the timeline shows all three ending at 12. Without slicing they
+finish at 4, 8 and 12. The total is the same, but the average is worse with
 slicing. What slicing buys is that no task waits long for its *first* turn, which matters when the
 tasks serve different users or devices.
 

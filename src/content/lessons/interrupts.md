@@ -55,7 +55,8 @@ into the main loop.
 
 ## Leaving the interrupt: who switches tasks?
 
-An ISR runs on whatever stack and task context it interrupted. It must not switch tasks in the
+An ISR runs in the middle of whatever task it interrupted (on a Cortex-M, on a separate interrupt
+stack). It must not switch tasks in the
 middle of itself; the switch happens on the way out. The two kernels arrange this differently, and
 you can see it in the **Kernel** code tab at tick 3.
 

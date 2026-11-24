@@ -1,36 +1,88 @@
 ---
 // Every preset scenario in one simulator. The scenario is chosen with the
-// select (or ?scenario=<id>); its parameters are changed inside the simulator,
-// which also reads a link to a step (?rtos, ?step, ?p.<parameter>).
+// select, with the list below the simulator, or with ?scenario=<id>; its
+// parameters are changed inside the simulator, which also reads a link to a
+// step (?rtos, ?step, ?p.<parameter>). The list is also the page's text for
+// search engines: what each scenario shows, and the lessons that explain it.
+import {getCollection} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import SimEmbed from '../../components/SimEmbed.astro';
 import manifest from '../../generated/sim/manifest.json';
-import {feedbackUrl} from '../../collections/lesson-nav';
+import {feedbackUrl, sortLessons} from '../../collections/lesson-nav';
 
+const kernels: Record<string, {name: string; version: string}> = manifest.kernels;
+const lessons = sortLessons(await getCollection('lessons'));
 const scenarios = Object.entries(manifest.scenarios)
-  .map(([id, s]) => ({id, title: s.title, rtos: s.rtos, simulated: s.simulated}))
+  .map(([id, s]) => ({
+    id,
+    title: s.title,
+    summary: s.summary,
+    rtos: s.rtos,
+    simulated: s.simulated,
+    lessons: lessons.filter(l => l.data.scenario === id),
+  }))
   // Scenarios that no kernel model runs yet come last.
   .sort((a, b) => Number(b.simulated.length > 0) - Number(a.simulated.length > 0));
 // A kernel without a model for the scenario shows a placeholder, so models come first.
 const order = (s: (typeof scenarios)[number]) =>
   [...s.rtos].sort((a, b) => Number(s.simulated.includes(b)) - Number(s.simulated.includes(a)));
 const first = scenarios[0];
-const kernels: Record<string, {name: string; version: string}> = manifest.kernels;
-const feedback = feedbackUrl(new URL('/learn/playground/', Astro.site).href, 'Scheduler playground', manifest);
+const kernelNames = Object.values(kernels).map(k => k.name).join(' and ');
+const kernelVersions = Object.values(kernels).map(k => `${k.name} ${k.version}`).join(' and ');
+
+const name = 'RTOS scheduler simulator';
+const title = `${name} for ${kernelNames} - OSRTOS`;
+const description = `Step through ${scenarios.length} RTOS scenarios on ${kernelNames}, next to the kernel source, and change the parameters: preemption, mutexes, semaphores, queues, timers, deadlock.`;
+const image = '/sim/og/playground.png';
+const abs = (path: string) => new URL(path, Astro.site).href;
+const url = abs('/learn/playground/');
+const feedback = feedbackUrl(url, 'Scheduler playground', manifest);
+const publisher = {'@type': 'Organization', name: 'OSRTOS', url: abs('/')};
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': ['WebApplication', 'LearningResource'],
+    name,
+    description,
+    url,
+    image: abs(image),
+    inLanguage: 'en',
+    isAccessibleForFree: true,
+    applicationCategory: 'EducationalApplication',
+    operatingSystem: 'Any',
+    browserRequirements: 'Requires JavaScript',
+    offers: {'@type': 'Offer', price: '0', priceCurrency: 'USD'},
+    learningResourceType: 'Interactive simulation',
+    teaches: scenarios.map(s => s.title),
+    about: Object.values(kernels).map(k => ({'@type': 'SoftwareApplication', name: k.name, softwareVersion: k.version, applicationCategory: 'Real-time operating system'})),
+    publisher,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [{label: 'Learn', href: '/learn/'}, {label: 'Playground', href: '/learn/playground/'}].map((crumb, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: crumb.label,
+      item: abs(crumb.href),
+    })),
+  },
+];
+// "<" is escaped so that no text can close the script element.
+const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
 ---
 
-<Layout
-  title="RTOS scheduler playground - OSRTOS"
-  description="Run preset RTOS scheduling scenarios step by step on line-by-line models of the FreeRTOS and Zephyr kernels, next to their source code, and change the parameters."
->
+<Layout title={title} description={description} image={image}>
+  <script type="application/ld+json" slot="head" is:inline set:html={jsonLdText}/>
   <header>
     <nav aria-label="Breadcrumb" class="text-sm text-gray-500 dark:text-gray-400 mb-4">
       <a href="/learn/" class="text-indigo-600 dark:text-indigo-400 no-underline hover:underline">Learn</a>
       <span aria-hidden="true" class="mx-1">/</span>
     </nav>
-    <h1 class="text-3xl md:text-4xl font-extrabold m-0 mb-4 text-gray-800 dark:text-gray-200">Scheduler playground</h1>
+    <h1 class="text-3xl md:text-4xl font-extrabold m-0 mb-4 text-gray-800 dark:text-gray-200">{name}</h1>
     <p class="text-lg text-gray-600 dark:text-gray-300 m-0 mb-6">
-      Pick a scenario, step through what the kernel does on every tick, and change the parameters to see what happens.
+      Pick one of {scenarios.length} scenarios, step through what the kernel does on every tick next to its source code,
+      and change the parameters to see what happens. It runs line-by-line models of {kernelNames}, checked against the real kernels.
     </p>
     <label class="flex flex-wrap items-center gap-2 text-gray-700 dark:text-gray-300 font-medium">
       Scenario
@@ -46,17 +98,72 @@ const feedback = feedbackUrl(new URL('/learn/playground/', Astro.site).href, 'Sc
 
   <SimEmbed scenario={first.id} rtos={order(first)}/>
 
-  <p class="text-sm text-gray-500 dark:text-gray-400">
-    The simulator runs a line-by-line model of the kernel, checked against the real kernel.{' '}
-    <a href="/learn/licenses/" class="text-indigo-600 dark:text-indigo-400 underline">Source and licenses</a>.{' '}
+  <p class="text-sm text-gray-500 dark:text-gray-400 -mt-4 mb-10">
+    The simulator and its data files are not covered by the site's CC BY-SA license; see their <a href="/sim/THIRD-PARTY-LICENSES.txt" class="text-indigo-600 dark:text-indigo-400 underline">license notices</a>.{' '}
     Does it show something a real kernel does not do?{' '}
     <a href={feedback} rel="noopener" class="text-indigo-600 dark:text-indigo-400 underline">Tell us in a GitHub issue</a>.
   </p>
+
+  <section aria-labelledby="scenarios" class="mb-10">
+    <h2 id="scenarios" class="text-2xl font-bold m-0 mb-1 text-gray-800 dark:text-gray-200">The scenarios</h2>
+    <p class="text-gray-600 dark:text-gray-400 m-0 mb-4">
+      Choose a scenario to load it into the simulator above. The lessons explain what happens in it, and why.
+    </p>
+    <ul class="list-none p-0 m-0 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {scenarios.map(s => (
+        <li class="rounded-lg border border-gray-200 dark:border-gray-700 p-4">
+          <h3 class="text-base font-semibold m-0">
+            <a
+              href={`/learn/playground/?scenario=${s.id}`}
+              data-scenario={s.id}
+              aria-current={s.id === first.id ? 'true' : undefined}
+              class="text-indigo-600 dark:text-indigo-400 underline"
+            >{s.title}</a>
+            {s.rtos.length === 1 && (
+              <span class="ml-1 text-sm font-normal text-gray-500 dark:text-gray-400">({kernels[s.rtos[0]].name} only)</span>
+            )}
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 m-0 mt-1">{s.summary}</p>
+          {s.lessons.length > 0 && (
+            <p class="text-sm text-gray-600 dark:text-gray-400 m-0 mt-2">
+              {s.lessons.length === 1 ? 'Lesson' : 'Lessons'}:{' '}
+              {s.lessons.map((l, i) => (
+                <>{i > 0 && ', '}<a href={`/learn/${l.id}/`} class="text-indigo-600 dark:text-indigo-400 underline">{l.data.title}</a></>
+              ))}
+            </p>
+          )}
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section aria-labelledby="how-it-works" class="mb-10 max-w-3xl">
+    <h2 id="how-it-works" class="text-2xl font-bold m-0 mb-3 text-gray-800 dark:text-gray-200">How the simulator works</h2>
+    <ul class="m-0 pl-5 space-y-2 text-gray-700 dark:text-gray-300">
+      <li>
+        <strong>Models of the real kernels.</strong> The simulator runs line-by-line models of {kernelVersions},
+        and shows the kernel source next to the run with the line it has reached. Every scenario also runs on the real kernels
+        (FreeRTOS under QEMU, Zephyr as a <code>native_sim</code> program), and the models must make the same scheduling decisions.
+      </li>
+      <li>
+        <strong>What you can change.</strong> Depending on the scenario: task priorities and start times, preemption and time slicing,
+        whether an object is a mutex or a semaphore, the length of a queue, a deadline. Switching the kernel keeps the current tick.
+      </li>
+      <li>
+        <strong>Keyboard.</strong> In the simulator, <kbd>Space</kbd> plays and pauses, <kbd>←</kbd> and <kbd>→</kbd> step back and forward,
+        <kbd>,</kbd> and <kbd>.</kbd> step one kernel line, <kbd>Home</kbd> starts again and <kbd>C</kbd> runs to the next event ticked under "Break on".
+      </li>
+      <li>
+        <strong>Share a moment.</strong> "Copy link" makes a link to the scenario, kernel, step and parameters on screen.
+      </li>
+    </ul>
+  </section>
 </Layout>
 
 <script>
   const select = document.querySelector<HTMLSelectElement>('#playground-scenario');
   const sim = document.querySelector<HTMLElement>('#rtos-sim-embed rtos-sim');
+  const links = document.querySelectorAll<HTMLAnchorElement>('a[data-scenario]');
 
   function show(id: string, updateUrl: boolean) {
     if (!select || !sim) return;
@@ -69,6 +176,10 @@ const feedback = feedbackUrl(new URL('/learn/playground/', Astro.site).href, 'Sc
     if (img && option.dataset.svg) {
       img.src = option.dataset.svg;
       img.alt = option.dataset.alt ?? '';
+    }
+    for (const link of links) {
+      if (link.dataset.scenario === id) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
     }
     if (updateUrl) {
       const url = new URL(location.href);
@@ -84,4 +195,15 @@ const feedback = feedbackUrl(new URL('/learn/playground/', Astro.site).href, 'Sc
   const wanted = new URLSearchParams(location.search).get('scenario');
   if (wanted) show(wanted, false);
   select?.addEventListener('change', () => show(select.value, true));
+
+  // The list below the simulator loads a scenario in place and scrolls back up to it.
+  for (const link of links) {
+    link.addEventListener('click', (e) => {
+      if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || !link.dataset.scenario) return;
+      e.preventDefault();
+      show(link.dataset.scenario, true);
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelector('#rtos-sim-embed')?.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block: 'start'});
+    });
+  }
 </script>

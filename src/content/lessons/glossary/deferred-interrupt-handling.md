@@ -23,7 +23,7 @@ Two things must be right for it to work:
   twice before the task takes it, the task sees one event. A counting semaphore or a queue keeps
   them all.
 
-The [interrupts lesson](/learn/interrupts/) shows both. Zephyr also offers work queues
-(`k_work_submit()` from the ISR), which run the deferred work in a kernel thread without a semaphore
-of your own; FreeRTOS's `xTimerPendFunctionCallFromISR()` does the same through the timer service
-task.
+The [interrupts lesson](/learn/interrupts/) shows both. Zephyr also offers
+[work queues](/learn/glossary/work-queue/) (`k_work_submit()` from the ISR), which run the deferred
+work in a kernel thread without a semaphore of your own; FreeRTOS's
+`xTimerPendFunctionCallFromISR()` does the same through the timer service task.

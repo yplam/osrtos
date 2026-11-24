@@ -1,7 +1,7 @@
 ---
 title: Message queues in Zephyr
 description: How k_msgq_put and k_msgq_get move messages through a ring buffer, and how the kernel finishes a waiting thread's call for it, so that a woken thread never has to try again.
-order: 8
+order: 10
 scenario: producer-consumer
 rtos: zephyr
 keyStep: { event: Receive, nth: 1 }

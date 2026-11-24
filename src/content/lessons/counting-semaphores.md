@@ -40,7 +40,7 @@ There are three takers and two buffers, so one of them has to wait.
 ## What happens
 
 The ticks are those of FreeRTOS. On Zephyr each start delay is one tick longer (`k_sleep()` sleeps
-at least the full ticks it is given), so every step comes one tick later; the order is the same.
+at least the full ticks it is given), so most steps come one tick later; the order is the same.
 
 1. Tick 0: `C` and `B` sleep until their start, and `A` takes `Pool`. The count goes from 2 to 1.
    The semaphore panel shows one of its two tokens left.
@@ -49,8 +49,8 @@ at least the full ticks it is given), so every step comes one tick later; the or
    so `C` blocks in the semaphore's waiting list, and `B` runs on.
 4. Tick 4: `B` gives its buffer back. `C` is waiting, so the give wakes it. `C` is more urgent than
    `B` and runs at once, with the buffer.
-5. `C` gives at tick 6 and ends; `B` and then `A` finish their work. `A` gives the last buffer back
-   at tick 10.
+5. `C` gives at tick 6, works one more tick and ends; `B` and then `A` finish their work. `A` gives
+   the last buffer back at tick 10, on both kernels.
 
 Look at the cards while `C` waits. `A` and `B` hold the buffers, yet their priorities do not
 change, and the "Who waits for whom" panel says `Pool` has no owner. A mutex records the task that

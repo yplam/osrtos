@@ -20,7 +20,7 @@ is no object, no list of waiters and no locking. The limits follow from the same
 exactly one receiver, the sender must know it, and nothing like priority inheritance is possible.
 
 The [task notifications lesson](/learn/freertos/task-notifications/) shows an interrupt notifying a
-handler task three times while it is busy, and the handler collecting all of them in one take.
+handler task twice while it is busy, and the handler collecting both in one take.
 
 **Zephyr** has no task notifications. A `k_sem` used by one thread only, a `k_event`, or a
 `k_poll_signal` does the job, as an object of its own.

@@ -1,7 +1,7 @@
 ---
 title: Events in Zephyr
 description: How k_event_wait records what a thread waits for in the thread itself, how k_event_post walks the wait queue and hands each waiter the events that satisfied it, and what the _safe variants clear.
-order: 10
+order: 12
 scenario: event-group
 rtos: zephyr
 keyStep: { event: GotBits, nth: 2 }

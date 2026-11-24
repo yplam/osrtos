@@ -105,10 +105,11 @@ stack itself, because it is still running on it; the
 
 ## What a switch costs
 
-On a Cortex-M3 a switch is a few dozen instructions plus the search in `vTaskSwitchContext()`: two
-exception entries and exits, sixteen words copied each way. Nothing in it depends on how many
-tasks exist, except the search, and with the generic selection that search is bounded by the number
-of priorities (here five). That is why an RTOS can switch tasks thousands of times a second.
+On a Cortex-M3 a switch is a few dozen instructions plus the search in `vTaskSwitchContext()`: one
+or two exception entries and exits (PendSV, after SysTick when the tick caused it), sixteen words
+copied each way. Nothing in it depends on how many tasks exist, except the search, and with the
+generic selection that search is bounded by the number of priorities (here five). That is why an
+RTOS can switch tasks thousands of times a second.
 
 Zephyr does the same job very differently on the simulated board, where each thread is a host
 thread: see [the context switch in Zephyr](/learn/zephyr/context-switch/).

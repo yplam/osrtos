@@ -19,11 +19,13 @@ give to a full queue). A waiting task is linked in by its `xEventListItem`, whos
 
 Two details that surprise people:
 
-- **A waiting task is in two lists at once.** It is in the object's wait queue, and also in the
-  structure that wakes it when its timeout ends: the [delayed list](/learn/glossary/delayed-list/)
-  in FreeRTOS, the timeout list in Zephyr. Whichever happens first, the object or the timeout,
-  removes it from both. The simulator's kernel panel shows a waiter in both places.
+- **A task that waits with a timeout is in two lists at once.** It is in the object's wait queue,
+  and also in the structure that wakes it when its timeout ends: the
+  [delayed list](/learn/glossary/delayed-list/) in FreeRTOS, the timeout list in Zephyr. Whichever
+  happens first, the object or the timeout, removes it from both. The simulator's kernel panel
+  shows a waiter in both places. (FreeRTOS also links a task that waits forever into
+  `xSuspendedTaskList`; Zephyr gives it no timeout entry.)
 - **Equal priorities wait in arrival order.** Both kernels insert a new waiter behind the ones of
   its own priority, so the first to wait is the first served among equals, but a more urgent
-  latecomer goes ahead of all of them. The [mutex handoff lesson](/learn/mutex-handoff/) has three
-  waiters.
+  latecomer goes ahead of all of them. The [mutex handoff lesson](/learn/mutex-handoff/) has two
+  waiters of different priorities.

@@ -25,14 +25,16 @@ if (links.length > 0 && !entry.data.scenario) {
 }
 
 // The simulator export drew this lesson's diagram from its scenario, rtos,
-// keyStep and params, and checked its step links against the run. If any of
-// them has changed since, the diagram is stale or a link is unchecked.
+// keyStep and params, drew its title into the share image, and checked its step
+// links against the run. If any of them has changed since, the diagram or the
+// image is stale or a link is unchecked.
 if (entry.data.scenario) {
-  type Exported = {scenario: string; rtos: string[]; keyStep?: {event: string; nth: number}; params?: Record<string, unknown>; links?: string[]};
+  type Exported = {title?: string; scenario: string; rtos: string[]; keyStep?: {event: string; nth: number}; params?: Record<string, unknown>; links?: string[]};
   const exported: Record<string, Exported> = manifest.lessons;
   const was = exported[entry.id];
   const params = (p?: Record<string, unknown>) => JSON.stringify(Object.entries(p ?? {}).sort(([a], [b]) => a.localeCompare(b)));
   const same = was
+    && was.title === entry.data.title
     && was.scenario === entry.data.scenario
     && JSON.stringify(was.rtos) === JSON.stringify(entry.data.rtos)
     && was.keyStep?.event === entry.data.keyStep?.event
@@ -41,7 +43,7 @@ if (entry.data.scenario) {
     && JSON.stringify(was.links ?? []) === JSON.stringify(links);
   if (!same) {
     throw new Error(
-      `Lesson "${entry.id}.md": scenario, rtos, keyStep, params or step links changed since the simulator export (or the lesson is new). ` +
+      `Lesson "${entry.id}.md": title, scenario, rtos, keyStep, params or step links changed since the simulator export (or the lesson is new). ` +
       'Run `pnpm export:site` in the simulator repository and commit the result.',
     );
   }

@@ -1,7 +1,7 @@
 ---
 title: Priority inheritance in FreeRTOS
 description: How xTaskPriorityInherit raises a mutex holder and xTaskPriorityDisinherit lowers it again, line by line in the real kernel source.
-order: 5
+order: 6
 scenario: priority-inversion-mutex
 rtos: freertos
 keyStep: { event: PrioChange, nth: 1 }

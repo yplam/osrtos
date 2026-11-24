@@ -76,7 +76,7 @@ K_THREAD_DEFINE(sensor, 1024 /* bytes */, sensor_thread, NULL, NULL, NULL,
 
 Here the size is in **bytes**, and a lower number is a more urgent priority. A thread can also be
 created at run time with `k_thread_create()` and a stack declared with `K_THREAD_STACK_DEFINE()`.
-On Zephyr, the **App** tab of the simulator's code panel shows the `K_THREAD_DEFINE` line of each thread.
+On Zephyr, the **Application** tab of the simulator's code panel shows the `K_THREAD_DEFINE` line of each thread.
 
 ## When the function ends
 
@@ -115,7 +115,7 @@ If a task uses more stack than it was given, it writes over whatever lies next t
 memory: another task's stack or TCB, or global variables. The program then fails somewhere else,
 often much later, which makes stack overflow one of the hardest bugs to find on a microcontroller.
 
-Both kernels can watch for it:
+Both kernels can [watch for it](/learn/glossary/stack-overflow/):
 
 - FreeRTOS: with `configCHECK_FOR_STACK_OVERFLOW` set to 1, the kernel checks at each context
   switch whether the stack pointer has gone past the end of the stack; set to 2, it also checks

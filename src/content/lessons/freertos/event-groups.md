@@ -1,7 +1,7 @@
 ---
 title: Event groups in FreeRTOS
 description: How xEventGroupWaitBits stores what a task waits for in its own list item, how xEventGroupSetBits walks every waiting task with the scheduler suspended, and why an interrupt's setBits goes through the timer service task.
-order: 10
+order: 12
 scenario: event-group
 rtos: freertos
 keyStep: { event: GotBits, nth: 1 }
@@ -70,7 +70,8 @@ At [tick 6](#sim:event=GotBits:1) `Net` sets `LINK`:
 
 It stores the group's current bits, with the flag `eventUNBLOCKED_DUE_TO_BIT_SET`, in the task's
 list item: that is what the task's call will return. Then it moves the task to its ready list. The
-scheduler is suspended, so a more urgent task cannot run yet: `xYieldPending` is set instead.
+scheduler is suspended, so a more urgent task cannot run yet: `xYieldPendings[ 0 ]` is set instead
+(`xYieldPending` in the variables).
 
 6. After the walk, `uxBitsToClear` is applied: `E` is empty again.
 7. `xTaskResumeAll()` finds the pending yield and switches to `Upload` at once.

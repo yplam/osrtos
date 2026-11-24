@@ -12,7 +12,8 @@ It usually does two things:
 - **Housekeeping.** In FreeRTOS, a task that deletes itself cannot free its own stack while it is
   still running on it. It is put on the list `xTasksWaitingTermination`, and the idle task frees it
   later. If the idle task never gets to run, that memory is never freed.
-- **Saving power.** The idle task is where the CPU is put to sleep until the next interrupt.
+- **Saving power.** The idle task is where the CPU is put to sleep until the next interrupt, and
+  with [tickless idle](/learn/glossary/tickless-idle/) for several ticks at a time.
 
 Two things follow for the application. An application task that never blocks starves the idle
 task, and every task below its own priority. And the share of time the idle task runs is a direct

@@ -21,7 +21,7 @@ and on time in the next; on average it keeps its rate. A task that sleeps for a 
 "now" accumulates every delay, and its average rate is wrong. The
 [periodic tasks lesson](/learn/periodic-tasks/) shows both.
 
-Control loops and audio are sensitive to jitter even when every deadline is met, because the
+Control loops and audio are sensitive to jitter even when every [deadline](/learn/glossary/deadline/) is met, because the
 sample is taken at the wrong moment. The usual remedy is to give the periodic task a higher
 priority, or to move the time-critical part (reading an input, writing an output) into a timer
 interrupt and leave the computation to the task.

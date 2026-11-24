@@ -19,8 +19,8 @@ An ISR runs ahead of **every** task, whatever its [priority](/learn/glossary/pri
   FreeRTOS has a separate set of them, ending in `FromISR`; Zephyr's calls take a timeout and must
   be given `K_NO_WAIT` in an ISR, and calls such as `k_sem_give()` are safe as they are.
 - **Do not switch inside it.** If the ISR wakes a more urgent task, the switch happens on the way
-  out: FreeRTOS's handler asks for it with `portYIELD_FROM_ISR()`, Zephyr's interrupt exit checks
-  every time.
+  out: FreeRTOS's handler asks for it with `portYIELD_FROM_ISR()` (on Cortex-M, by setting
+  [PendSV](/learn/glossary/pendsv/) pending), Zephyr's interrupt exit checks every time.
 
 The time from the interrupt to the moment the task that handles it starts running is the
 **interrupt-to-task latency**. With a well-written ISR and a task of high enough priority, it is

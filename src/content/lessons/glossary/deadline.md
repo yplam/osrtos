@@ -17,7 +17,9 @@ system:
 
 Neither FreeRTOS nor Zephyr knows about deadlines. Their scheduler runs the most urgent ready task;
 whether that meets every deadline is up to the priorities the designer gave the tasks. Checking it
-before the system runs is **schedulability analysis**; a running system can detect a miss itself,
+before the system runs is **schedulability analysis**
+([rate-monotonic scheduling](/learn/glossary/rate-monotonic-scheduling/) comes with a simple test);
+a running system can detect a miss itself,
 by comparing the time at the end of each job, or with a watchdog. (Zephyr has an optional
 earliest-deadline-first scheduler, `CONFIG_SCHED_DEADLINE`, which orders threads of equal priority
 by a deadline the application sets; it is off in the baseline configuration.)

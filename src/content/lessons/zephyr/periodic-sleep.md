@@ -1,7 +1,7 @@
 ---
 title: Periodic sleep in Zephyr
 description: How k_sleep with an absolute timeout keeps a periodic thread on a fixed grid, why it gets no extra tick, and what happens when the end of the period has already passed.
-order: 7
+order: 8
 scenario: periodic-tasks
 rtos: zephyr
 keyStep: { event: Block, nth: 2 }
@@ -77,4 +77,5 @@ more tick of lateness. Either way the grid survives: the application added exact
 
 The kernel does not see the missed deadline: it only sees a timeout in the past. A thread that
 needs to know can compare `k_uptime_ticks()` with `next` before it sleeps. Zephyr also has
-`k_timer`, a kernel timer that can wake a thread periodically; that is the subject of a later lesson.
+`k_timer`, a kernel timer that can wake a thread periodically; see
+[timers in Zephyr](/learn/zephyr/timers/).

@@ -1,7 +1,7 @@
 ---
 title: Timers in Zephyr
 description: How a k_timer is a timeout in the same list as every sleeping thread, how its expiry function runs inside the tick interrupt, and how its period is kept from drifting.
-order: 9
+order: 11
 scenario: software-timers
 rtos: zephyr
 keyStep: { event: TimerExpire, nth: 1 }

@@ -87,7 +87,8 @@ miss data, gets its work done first and leaves the queue to smooth things out.
 
 Like a semaphore take, `xQueueSend()`, `xQueueReceive()`, `k_msgq_put()` and `k_msgq_get()` take a
 timeout. With 0 they never wait: a send to a full queue fails at once (`errQUEUE_FULL`, `-ENOMSG`)
-and the item is not sent. A timed wait that runs out fails the same way.
+and the item is not sent. A timed wait that runs out also fails (`errQUEUE_FULL` on FreeRTOS,
+`-EAGAIN` on Zephyr).
 
 An interrupt handler may send but never wait: `xQueueSendFromISR()` on FreeRTOS, `k_msgq_put()`
 with `K_NO_WAIT` on Zephyr. If the queue is full, the item is lost. This is the usual way to pass

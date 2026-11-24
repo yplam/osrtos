@@ -18,8 +18,9 @@ Items are copied **by value**, so the sender may reuse or free its variable as s
 returns. To pass something large, send a pointer to it, and make sure the sender does not change
 the data until the receiver is done with it.
 
-The [queues lesson](/learn/queues/) shows a producer and a consumer working through a queue of
-three items, and the [queue handoff lesson](/learn/queue-handoff/) shows the two kernels deciding
+The [queues lesson](/learn/queues/) shows a
+[producer and a consumer](/learn/glossary/producer-consumer/) working through a queue of three
+items, and the [queue handoff lesson](/learn/queue-handoff/) shows the two kernels deciding
 differently which waiting task gets an item.
 
 In **FreeRTOS**: `xQueueCreate( uxLength, uxItemSize )`, `xQueueSend()`, `xQueueReceive()`, and

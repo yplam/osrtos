@@ -5,7 +5,9 @@ description: The fixed time between the starts of a periodic task's jobs, and wh
 
 A periodic task does its work again and again at a fixed rate. The time between the starts of two
 successive **jobs** is its **period**: a 1 kHz control loop has a period of 1 ms. The moment a job
-may start is its **release**.
+may start is its **release**. Under
+[rate-monotonic scheduling](/learn/glossary/rate-monotonic-scheduling/), the period also sets the
+task's priority: the shorter it is, the more urgent the task.
 
 To keep the period, the task must sleep until the next release, not for a fixed time:
 

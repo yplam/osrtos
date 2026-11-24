@@ -1,7 +1,7 @@
 ---
 title: Software timers in FreeRTOS
 description: How the timer service task keeps its list of active timers, sleeps until the next one is due, runs the callbacks and processes the commands that xTimerStart and xTimerStop send it.
-order: 9
+order: 11
 scenario: software-timers
 rtos: freertos
 keyStep: { event: TimerStop, nth: 1 }

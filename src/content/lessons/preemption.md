@@ -4,7 +4,7 @@ description: How a kernel takes the CPU from a running task the moment a more ur
 order: 2
 scenario: preemption
 rtos: [freertos, zephyr]
-keyStep: { event: Unblock, nth: 1 }
+keyStep: { event: ContextSwitch, nth: 3 }
 ---
 
 **Preemption** means the kernel stops the running task, without its cooperation, because a more
@@ -75,6 +75,7 @@ parameter is not offered when Zephyr is selected.
 
 ## What to try
 
-- Raise the urgency of `Low` to 2, the same as `High`. Nothing is preempted at tick 3: an equal
-  priority is not a higher one. What happens next is [time slicing](/learn/time-slicing/).
+- Raise the urgency of `Low` to 2, the same as `High`. `High` still gets the CPU at tick 3, but not
+  by preemption: an equal priority is not a higher one. The tick finds two ready tasks of the running
+  priority, and [time slicing](/learn/time-slicing/) takes turns between them.
 - Change the start tick of `High` and see that the preemption always lands on a tick edge.

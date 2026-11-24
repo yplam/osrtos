@@ -1,7 +1,7 @@
 ---
 title: Interrupts in Zephyr
 description: How k_sem_give behaves in an interrupt handler, why it never switches threads there, and how the interrupt exit picks the thread to run.
-order: 6
+order: 7
 scenario: deferred-interrupt
 rtos: zephyr
 keyStep: { event: Interrupt, nth: 1 }
@@ -27,9 +27,9 @@ int main(void)
 }
 ```
 
-`IRQ_CONNECT()` places the handler in the interrupt vector table when the image is built; there is
-no registration at run time. Unlike FreeRTOS, there is no separate ISR form of `k_sem_give()`: the
-same call is safe in a thread and in an ISR.
+On most hardware `IRQ_CONNECT()` places the handler in the interrupt vector table when the image is
+built; on `native_sim` it registers the handler when `main()` runs. Unlike FreeRTOS, there is no
+separate ISR form of `k_sem_give()`: the same call is safe in a thread and in an ISR.
 
 ## The interrupt loop
 
@@ -44,7 +44,8 @@ At tick 3 two interrupts are pending: the system timer and the UART. The `do …
 them in order of priority:
 
 1. `vector_to_irq()` calls the timer driver's handler, which announces the tick
-   (`sys_clock_announce()`): the tick count becomes 3 and nothing is due.
+   (`sys_clock_announce()`): the tick count becomes 3. The only entry due is `Main`'s time-slice
+   timer; no other thread of priority 13 is ready, so `Main` simply gets a new slice.
 2. The UART is still pending, so the loop goes round and calls `uart_isr()`.
 3. Each ordinary handler sets `may_swap`. After the loop, if this is the outermost interrupt and
    the scheduler's cache, `_kernel.ready_q.cache`, holds a different thread from the one that was

@@ -1,7 +1,7 @@
 ---
 title: xTaskDelayUntil in FreeRTOS
 description: How xTaskDelayUntil keeps a periodic task on a fixed grid of wake-up times, and what it does when the task overruns its period.
-order: 7
+order: 8
 scenario: periodic-tasks
 rtos: freertos
 keyStep: { event: Block, nth: 2 }

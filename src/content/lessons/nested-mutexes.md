@@ -63,7 +63,8 @@ FreeRTOS keeps very little per task: its base priority (`uxBasePriority`) and a 
 mutexes it holds (`uxMutexesHeld`). When a mutex is given back, it cannot tell which of the held
 mutexes caused the inheritance, so it plays safe and keeps the raised priority until the count is
 zero. The [FreeRTOS walkthrough](/learn/freertos/priority-inheritance/) shows the two conditions in
-`xTaskPriorityDisinherit()`. The source calls it a simplification.
+`xTaskPriorityDisinherit()`. The source calls the rule a simplification, in the comment of the
+timeout variant, `vTaskPriorityDisinheritAfterTimeout()`.
 
 Zephyr v4.5.0 keeps a list of the mutexes each thread holds. On every unlock it looks at the first
 waiter of each mutex that is still held and takes the most urgent of their priorities, or the

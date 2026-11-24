@@ -12,8 +12,10 @@ In FreeRTOS the type is `TCB_t`. The fields that matter for scheduling are:
   are saved on the task's own stack, so this one pointer is enough to restore them.
 - `uxPriority` and `uxBasePriority`: the priority the task runs at and the one the application
   gave it. They differ during [priority inheritance](/learn/freertos/priority-inheritance/).
-- `xStateListItem`: the link that places the task in exactly one of the ready, delayed or suspended
-  lists. A task's state *is* the list this item is in.
+- `xStateListItem`: the link that places the task in one of the ready, delayed, suspended or
+  waiting-termination lists. That list mostly decides the task's state; `eTaskGetState()` also
+  looks at `xEventListItem` (and the notify state) to tell a task blocked forever from a suspended
+  one.
 - `xEventListItem`: a second link, used when the task also waits for a queue, semaphore or mutex.
 
 The global `pxCurrentTCB` points at the TCB of the running task. A

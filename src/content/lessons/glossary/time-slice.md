@@ -14,9 +14,9 @@ the next task is simply the next entry in that [ready list](/learn/glossary/read
 
 **Zephyr** has `CONFIG_TIMESLICING` and a slice length, `CONFIG_TIMESLICE_SIZE`, in milliseconds.
 The kernel's default is 20 ms; the simulator uses 1 so that slices are visible in short scenarios.
-The slice is a timer of its own: `slice_timeout` is an entry in the kernel's timeout list, armed
-when a thread starts running. When it fires, `z_time_slice()` moves the running thread behind the
-others of its priority.
+The slice is a timer of its own: `slice_timeouts[cpu]` is an entry in the kernel's timeout list,
+armed when a thread starts running. When it fires, its handler `slice_timeout()` marks the slice as
+expired, and `z_time_slice()` then moves the running thread behind the others of its priority.
 
 Two details that surprise people:
 

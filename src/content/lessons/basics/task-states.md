@@ -104,7 +104,8 @@ object's list as well.
 FreeRTOS also puts a task that waits **forever** in the *suspended* list, because there is no wake-up
 time to sort it by. Step to the moment `Worker` blocks on FreeRTOS and look at the kernel panel:
 `Worker` is in `xSuspendedTaskList`. It is still blocked, not suspended. `eTaskGetState()` tells
-the two apart by checking whether the task is also waiting on an object.
+the two apart by checking whether the task is also waiting on an object (or for a task
+notification).
 
 In Zephyr, the state is a set of flags, and a thread can have more than one: a thread that is
 suspended while it waits keeps `_THREAD_PENDING` as well. The simulator shows the flags on each

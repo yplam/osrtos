@@ -30,7 +30,7 @@ one shown above, where the wait has no upper limit.
 
 `High` waited eight ticks. Three of them were for `Low` to finish with the lock, which is the price
 of sharing. The other five were for `Med`, a task of lower priority that has nothing to do with the
-lock. If `Med` had sixty ticks of work, `High` would have waited sixty-three. Nothing in the
+lock. If `Med` had sixty ticks of work, `High` would have waited sixty-two. Nothing in the
 program limits it.
 
 On Zephyr every wake-up is one tick later (see [the scheduling lesson](/learn/scheduling/#the-tick)),
@@ -60,8 +60,10 @@ gets the lock at tick 5. A mutex has an owner, and the kernel uses that knowledg
 
 ## What to try
 
-- Give `Med` an urgency of 1, the same as `Low`. The two now take turns, so `Low` releases the lock
-  sooner (at tick 7), but `High` still waits for work that is none of its business.
+- Give `Med` an urgency of 1, the same as `Low`. On FreeRTOS the two now take turns, so `Low`
+  releases the lock sooner (at tick 7), but `High` still waits for work that is none of its
+  business. On Zephyr, `Med`'s start delay only begins when it first gets a time slice, at tick 2,
+  so `Low` finishes undisturbed and releases the lock at tick 4.
 - Move the start of `Med` to tick 6, after `Low` has released the lock. The inversion needs `Med`
   to arrive while `Low` holds the lock, which is why such bugs show up rarely and are hard to
   reproduce.

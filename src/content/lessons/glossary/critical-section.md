@@ -4,8 +4,9 @@ description: A short stretch of code during which interrupts are masked, so noth
 ---
 
 A **critical section** is a stretch of code that must not be interrupted, because it reads and
-changes data that an interrupt handler or another task also uses. The kernel's own lists are the
-main example: a tick that arrived while a task was half-way through moving itself between lists
+changes data that an interrupt handler or another task also uses: an interruption halfway would be
+a [race condition](/learn/glossary/race-condition/). The kernel's own lists are the
+main example: a tick that arrived while a task was halfway through moving itself between lists
 would find them broken.
 
 On one CPU the way to make code uninterruptible is to mask interrupts, and with no interrupts there

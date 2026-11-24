@@ -100,9 +100,10 @@ The function, with the parts the configuration compiles out set aside:
 5. **Time-slice check.** If the running task's ready list holds more than one task,
    `xSwitchRequired` becomes `pdTRUE` so the next task of that priority gets a turn. This is
    [time slicing](/learn/time-slicing/), and it is checked on every tick.
-6. **A yield left pending.** If a task asked for a switch while the scheduler was suspended,
-   `vTaskSwitchContext()` recorded it in `xYieldPendings[ 0 ]`, and the tick honours it now. In the
-   simulator this never happens, because ticks never arrive inside a kernel call.
+6. **A yield left pending.** `xYieldPendings[ 0 ]` is set whenever the kernel wakes a task more
+   urgent than the running one but does not switch at once: an interrupt handler that did not call
+   `portYIELD_FROM_ISR()`, or a switch asked for while the scheduler was suspended. The tick
+   honours it now. [The interrupts walkthrough](/learn/freertos/interrupts/) shows it happen.
 
 [At tick 5](#sim:event=Unblock:1) all of it runs. The count reaches `xNextTaskUnblockTime`, the
 loop removes `Sensor` and makes it ready, and because `Sensor` (2) is more urgent than the idle

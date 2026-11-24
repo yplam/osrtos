@@ -31,4 +31,4 @@ Two details that surprise people:
   `z_init_static_threads()` between `k_sched_lock()` and `k_sched_unlock()`, so none of them runs
   before all have started. The unlock is the first moment one can.
 - **It is not a lock on data.** Interrupts still run, so data an interrupt handler touches needs a
-  critical section as well.
+  critical section as well, or a [race condition](/learn/glossary/race-condition/) remains.

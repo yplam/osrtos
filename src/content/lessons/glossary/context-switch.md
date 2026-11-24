@@ -15,7 +15,7 @@ A switch is requested in two kinds of place:
 - in an **interrupt**, most often the [tick](/learn/glossary/tick/), when it wakes a more urgent
   task. That case is [preemption](/learn/preemption/).
 
-On ARM Cortex-M, the FreeRTOS port does the switch in the PendSV interrupt. Code that wants a
+On ARM Cortex-M, the FreeRTOS port does the switch in the [PendSV](/learn/glossary/pendsv/) interrupt. Code that wants a
 switch only sets PendSV pending. The handler, `xPortPendSVHandler`, runs once no other interrupt is
 active: it pushes the registers on the outgoing task's stack, stores the stack pointer in its
 [TCB](/learn/glossary/task-control-block/), calls `vTaskSwitchContext()` to choose `pxCurrentTCB`,

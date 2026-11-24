@@ -48,13 +48,15 @@ for( ;; ) {                         for( ;; ) {
    period and works. At [tick 2](#sim:event=Block:2) it sleeps until tick 5. `Poll` works next and
    at tick 4 delays for 5 ticks.
 2. `Sensor` wakes exactly at 5 and at 10, the start of each period. Its first two jobs take 2 ticks
-   each and finish well before their deadlines, at ticks 4 and 9.
+   each and finish at ticks 2 and 7, well before their deadlines at 4 and 9.
 3. `Poll` had asked for 5 ticks of sleep, but its starts are not 5 apart: it waits behind `Sensor`
    whenever they are ready together, and it measures each delay from wherever its work ended. Over
    the run its starts drift further from any fixed grid. On Zephyr each `k_sleep` is also one tick
    longer ([the tick lesson](/learn/zephyr/tick-and-delay/) explains why), so it drifts faster.
 4. Tick 11 (tick 12 on Zephyr, where `Burst`'s own start delay is one tick longer): `Burst` wakes
-   and preempts `Sensor` in the middle of its third job.
+   and preempts `Sensor` in the middle of its third job. (On Zephyr, `Burst` arrives just as the
+   job's two ticks of work are done, before `Sensor` reaches `k_sleep()`, so the job still counts
+   as unfinished.)
 5. [Tick 14](#sim:event=DeadlineMiss:1): `Sensor`'s third job, released at 10, is not done. It has
    **missed its deadline**. The kernel does not notice: neither FreeRTOS nor Zephyr knows about
    deadlines. The simulator marks the miss in red, because a real system would have to notice it

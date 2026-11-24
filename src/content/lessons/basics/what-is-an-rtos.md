@@ -47,9 +47,10 @@ lets you split the program into **tasks** (called *threads* in Zephyr) and provi
   the response time.
 - **Time.** A periodic timer interrupt, the [tick](/learn/glossary/tick/), lets tasks sleep for a
   number of ticks or wait for something with a timeout, instead of spinning in a busy loop.
-- **Synchronisation.** [Mutexes](/learn/priority-inheritance/) protect data that several tasks
+- **Synchronisation.** [Mutexes](/learn/glossary/mutex/) protect data that several tasks
   share. [Semaphores](/learn/semaphores/) let one task, or an interrupt, signal another.
-- **Communication.** Queues pass data between tasks, and between interrupts and tasks.
+- **Communication.** [Queues](/learn/queues/) pass data between tasks, and between interrupts
+  and tasks.
 
 A task that waits for something does not use the CPU at all. The kernel sets it aside and makes it
 ready again when its event arrives. Waiting is free, which is why an RTOS program can have many
@@ -68,15 +69,32 @@ follows one task through all the ways it can wait.
 The difference with Linux is less about size than about goals. A desktop or server scheduler shares
 the CPU fairly between many programs and tries to finish as much work as possible. An RTOS
 scheduler is deliberately unfair: a high-priority task gets the CPU every time it wants it, and a
-low-priority one gets only what is left. Linux can be made far more predictable (the `PREEMPT_RT`
-work, merged into the mainline kernel in 2024), and it is a good choice when the system needs its
-drivers, file systems and networking. But it needs far more memory than a microcontroller has, and
-its timing is harder to reason about than a kernel of a few thousand lines.
+low-priority one gets only what is left. Linux can be made far more predictable (see
+[below](#what-about-real-time-linux)), and it is a good choice when the system needs its drivers,
+file systems and networking. But it needs far more memory than a microcontroller has, and its
+timing is harder to reason about than that of a kernel of a few thousand lines.
 
 An RTOS kernel is small enough to read. FreeRTOS's scheduler is a handful of C files. Zephyr is a
 larger project with drivers, networking and its own build system, but its kernel proper is still
 something you can follow function by function. That is what these lessons do: the simulator runs
 models of the real FreeRTOS and Zephyr kernels, checked against them, next to their source code.
+
+### What about real-time Linux?
+
+Linux already has fixed-priority scheduling: a thread under `SCHED_FIFO` runs whenever it is the
+highest-priority ready thread, like an RTOS task (apart from a default throttle that keeps 5% of
+each second for other threads). What spoiled the worst case was the kernel
+itself: interrupt handlers and long stretches of kernel code that could not be preempted. The
+`PREEMPT_RT` work, merged into mainline Linux in version 6.12 (2024), makes almost all of that code
+preemptible. Interrupt handlers run as threads with priorities, and most kernel locks become
+mutexes with [priority inheritance](/learn/priority-inheritance/). On suitable hardware the
+worst-case latency is often tens of microseconds. That bound is measured, with tools such as
+`cyclictest`, not worked out from the code: the kernel is far too large for that.
+
+Another approach is a **dual kernel**: a small real-time kernel such as [Xenomai](/rtos/xenomai/)
+or [RTAI](/rtos/rtai/) handles interrupts first and runs the real-time tasks, and Linux runs as its
+lowest-priority task. And many products simply split the work, as the next section describes: Linux
+on an application processor, an RTOS on a microcontroller core beside it.
 
 ## Where RTOSes are used
 

@@ -25,5 +25,6 @@ low, and a busy task delays every callback and command. The
 [software timers lesson](/learn/software-timers/) has it as a parameter, and the
 [FreeRTOS walkthrough](/learn/freertos/software-timers/) follows its loop through `timers.c`.
 
-Zephyr has no such task: a `k_timer` expiry function runs in the timer interrupt. Its *system work
-queue* thread, with `k_work_schedule()`, plays a similar role for work that must run in a thread.
+Zephyr has no such task: a `k_timer` expiry function runs in the timer interrupt. Its
+[system work queue](/learn/glossary/work-queue/) thread, with `k_work_schedule()`, plays a
+similar role for work that must run in a thread.

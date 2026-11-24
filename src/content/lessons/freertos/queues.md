@@ -1,7 +1,7 @@
 ---
 title: Queues in FreeRTOS
 description: How xQueueSend and xQueueReceive copy items through a ring of slots, how a task waits for room or for an item, and why the queue is locked while it does.
-order: 8
+order: 10
 scenario: producer-consumer
 rtos: freertos
 keyStep: { event: Block, nth: 1 }

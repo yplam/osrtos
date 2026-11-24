@@ -41,6 +41,15 @@ const image = lesson && scenario && scenarios[scenario]?.simulated.includes(rtos
 
 const url = new URL(Astro.url.pathname, Astro.site).href;
 
+// The playground opens on this lesson's scenario, its first kernel and its params.
+const playground = scenario
+  ? `/learn/playground/?${new URLSearchParams([
+    ['scenario', scenario],
+    ...(rtos[0] ? [['rtos', rtos[0]]] : []),
+    ...Object.entries(params ?? {}).map(([path, value]) => [`p.${path}`, String(value)]),
+  ])}`
+  : undefined;
+
 // A walkthrough links back to its kernel's page in the RTOS directory.
 const kernelId = KERNEL_SECTIONS.find(id => section && kernels[id]?.name === section);
 const feedback = feedbackUrl(url, title, manifest);
@@ -109,7 +118,8 @@ const jsonLdText = JSON.stringify(jsonLd).replace(/</g, '\\u003c');
       <SimEmbed scenario={scenario} rtos={rtos} lesson={lesson} params={params}/>
       <p class="text-sm text-gray-500 dark:text-gray-400 -mt-4 mb-8">
         Simulated kernel: {rtos.map(id => `${kernels[id].name} ${kernels[id].version}`).join(' and ')}.{' '}
-        <a href="/learn/licenses/" class="text-indigo-600 dark:text-indigo-400 underline">Source and licenses</a>
+        This scenario and every other one are in the <a href={playground} class="text-indigo-600 dark:text-indigo-400 underline">scheduler playground</a>.{' '}
+        The simulator and its data files are not covered by the site's CC BY-SA license; see their <a href="/sim/THIRD-PARTY-LICENSES.txt" class="text-indigo-600 dark:text-indigo-400 underline">license notices</a>.
       </p>
     )}
 

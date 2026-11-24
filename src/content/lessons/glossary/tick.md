@@ -22,10 +22,12 @@ Two details that surprise people:
   partway to the next tick edge. FreeRTOS counts edges, so `vTaskDelay(n)` lasts between *n* − 1 and
   *n* periods. Zephyr adds one tick so that `k_sleep()` never returns early, and lasts between *n*
   and *n* + 1. The [scheduling lesson](/learn/scheduling/) shows both.
-- **The tick count overflows.** FreeRTOS handles a 32-bit count wrapping round with two delayed
-  lists that swap roles; the [tick overflow lesson](/learn/freertos/tick-overflow/)
-  shows the swap. Zephyr counts ticks in 64 bits.
+- **The tick count overflows.** FreeRTOS handles a 32-bit count wrapping round with two
+  [delayed lists](/learn/glossary/delayed-list/) that swap roles; the
+  [tick overflow lesson](/learn/freertos/tick-overflow/) shows the swap. Zephyr counts ticks in 64
+  bits.
 
-A kernel can also run **tickless**: instead of interrupting at a fixed rate, it programs the timer
-for the next moment something is due, so an idle system can sleep longer. Zephyr does this by
-default; the simulator turns it off so that every tick is visible.
+A kernel can also run [**tickless**](/learn/glossary/tickless-idle/): instead of interrupting at a
+fixed rate, it programs the timer for the next moment something is due, so an idle system can
+sleep longer. Zephyr does this by default; the simulator turns it off so that every tick is
+visible.
