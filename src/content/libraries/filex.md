@@ -7,7 +7,7 @@ summary: Eclipse ThreadX FileX is a high-performance, FAT-compatible file system
   is fully integrated with the ThreadX RTOS to provide deterministic file management
   across various physical media including RAM, SD cards, and flash memory.
 codeUrl: https://github.com/eclipse-threadx/filex
-star: 64
+star: 67
 version: v6.5.2.202603_rel
 lastUpdated: '2026-10-15'
 components:
@@ -50,7 +50,7 @@ licenses:
 - MIT
 libraryType: FileSystem
 createdAt: '2025-09-29'
-updatedAt: '2026-10-27'
+updatedAt: '2026-11-24'
 ---
 
 ### Features

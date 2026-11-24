@@ -7,9 +7,9 @@ summary: Contiki-NG is an open-source, cross-platform operating system designed 
 slug: contiki-ng
 codeUrl: https://github.com/contiki-ng/contiki-ng
 siteUrl: https://github.com/contiki-ng/contiki-ng
-star: 1539
+star: 1544
 version: release/v5.2
-lastUpdated: '2026-10-25'
+lastUpdated: '2026-11-19'
 components:
 - Scheduler
 - Memory Management
@@ -48,7 +48,7 @@ libraries:
 - mbedTLS
 - CBOR
 createdAt: '2025-12-04'
-updatedAt: '2026-10-27'
+updatedAt: '2026-11-24'
 ---
 
 ### Features

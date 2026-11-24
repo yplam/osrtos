@@ -8,9 +8,9 @@ summary: FlashDB is an ultra-lightweight, high-performance embedded database opt
   wear leveling.
 codeUrl: https://github.com/armink/FlashDB
 siteUrl: https://armink.github.io/FlashDB/#/
-star: 2870
+star: 2900
 version: 2.2.0
-lastUpdated: '2026-10-27'
+lastUpdated: '2026-11-16'
 components:
 - Database
 - Storage
@@ -22,7 +22,7 @@ licenses:
 - Apache-2.0
 libraryType: Database
 createdAt: '2025-12-23'
-updatedAt: '2026-10-27'
+updatedAt: '2026-11-24'
 ---
 
 ### Features

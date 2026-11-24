@@ -6,7 +6,7 @@ codeUrl: https://github.com/TrampolineRTOS/trampoline
 siteUrl: https://github.com/TrampolineRTOS/trampoline
 date: '2017-06-11'
 lastUpdated: '2026-10-19'
-star: 755
+star: 763
 components: []
 libraries: []
 licenses:
@@ -18,7 +18,7 @@ platforms:
 summary: Trampoline is a static RTOS for small embedded systems. Its API is aligned
   with OSEK/VDX OS and AUTOSAR OS 4.2 standards.
 createdAt: '2025-09-12'
-updatedAt: '2026-10-27'
+updatedAt: '2026-11-24'
 ---
 
 ### Features

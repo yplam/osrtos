@@ -8,9 +8,9 @@ summary: QP/C is a lightweight, event-driven real-time event framework (RTEF) ba
 slug: qpc
 codeUrl: https://github.com/QuantumLeaps/qpc
 siteUrl: https://www.state-machine.com/products/qp
-star: 1389
-version: v8.1.5
-lastUpdated: '2026-10-20'
+star: 1406
+version: v8.1.6
+lastUpdated: '2026-11-17'
 components:
 - Scheduler
 - IPC
@@ -38,7 +38,7 @@ libraries:
 - QTools
 - PC-Lint-Plus
 createdAt: '2025-12-16'
-updatedAt: '2026-10-27'
+updatedAt: '2026-11-24'
 ---
 
 ### Features

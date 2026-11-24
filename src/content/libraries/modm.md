@@ -8,9 +8,9 @@ summary: modm is a modular C++23 library generator and hardware abstraction laye
   across thousands of devices.
 codeUrl: https://github.com/modm-io/modm
 siteUrl: https://modm.io/
-star: 993
+star: 1000
 version: 2026q3
-lastUpdated: '2026-10-26'
+lastUpdated: '2026-11-23'
 components:
 - Network
 - FileSystem
@@ -36,7 +36,7 @@ licenses:
 - MPL-2.0
 libraryType: HAL
 createdAt: '2025-12-23'
-updatedAt: '2026-10-27'
+updatedAt: '2026-11-24'
 ---
 
 ### Features

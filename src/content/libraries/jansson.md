@@ -7,9 +7,9 @@ summary: Jansson is a lightweight and portable C library for encoding, decoding,
   of environments from high-performance servers to resource-constrained embedded systems.
 codeUrl: https://github.com/akheron/jansson
 siteUrl: http://www.digip.org/jansson/
-star: 3372
+star: 3380
 version: v2.15.1
-lastUpdated: '2026-07-09'
+lastUpdated: '2026-11-23'
 platforms:
 - POSIX
 - Linux
@@ -19,7 +19,7 @@ licenses:
 - MIT
 libraryType: Middleware
 createdAt: '2025-07-24'
-updatedAt: '2026-10-13'
+updatedAt: '2026-11-24'
 ---
 
 ### Features

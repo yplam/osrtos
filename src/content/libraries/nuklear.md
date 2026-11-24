@@ -7,9 +7,9 @@ summary: Nuklear is a portable, single-header immediate-mode graphical user inte
   or vertex buffers rather than abstracting platform-specific rendering backends.
 codeUrl: https://github.com/Immediate-Mode-UI/Nuklear
 siteUrl: https://Immediate-Mode-UI.github.io/Nuklear/
-star: 11467
-version: v4.13.3
-lastUpdated: '2026-10-17'
+star: 11528
+version: v4.13.4
+lastUpdated: '2026-10-27'
 components:
 - GUI
 - Graphics
@@ -28,7 +28,7 @@ licenses:
 - MIT
 libraryType: GUI
 createdAt: '2025-11-16'
-updatedAt: '2026-10-27'
+updatedAt: '2026-11-24'
 ---
 
 ### Features
